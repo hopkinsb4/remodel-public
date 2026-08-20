@@ -29,7 +29,21 @@
       padding: 48px 24px 80px;
     }
 
-    .wrap { max-width: 1000px; margin: 0 auto; }
+    .wrap { max-width: 1240px; margin: 0 auto; }
+
+    .layout { display: flex; gap: 48px; align-items: flex-start; }
+    .sidebar {
+      flex: 0 0 200px;
+      position: sticky;
+      top: 24px;
+      align-self: flex-start;
+    }
+    .main-col { flex: 1; min-width: 0; }
+
+    @media (max-width: 900px) {
+      .layout { flex-direction: column; }
+      .sidebar { position: static; width: 100%; }
+    }
 
     .header {
       margin-bottom: 56px;
@@ -203,16 +217,20 @@
     }
 
     .scenario-toggle {
-      display: inline-flex; gap: 4px; background: var(--tile-white); border: 1px solid var(--border);
-      border-radius: 10px; padding: 4px; margin: 20px 0 8px;
+      display: flex; flex-direction: column; gap: 4px; background: var(--tile-white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 4px;
     }
     .scenario-toggle button {
       font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
-      padding: 9px 18px; border-radius: 7px; border: none; background: transparent;
-      color: #666; cursor: pointer; transition: all .15s ease;
+      padding: 11px 16px; border-radius: 7px; border: none; background: transparent;
+      color: #666; cursor: pointer; transition: all .15s ease; text-align: left;
     }
     .scenario-toggle button.active { background: var(--tile-black); color: #fff; }
-    .scenario-note { font-size: 12.5px; color: #999; margin-bottom: 40px; }
+    .scenario-note { font-size: 12.5px; color: #999; margin-top: 12px; line-height: 1.6; }
+    .sidebar-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase;
+      color: #999; margin-bottom: 10px;
+    }
     body[data-scenario="bunk"] .bump-only { display: none; }
     body[data-scenario="bump"] .bunk-only { display: none; }
     .scenario-badge {
@@ -236,11 +254,16 @@
     <p class="sub">A father with three kids (9, 12, 21) and a cat, making a 1,220 sq ft, 2-bedroom house work for a family of five in the house they love. Two design drivers shaped everything: cat-friendly cleanliness (carpet and laminate flooring replaced with tile throughout, for real day-to-day maintainability) and genuine sleeping/privacy for four full-size humans in a home that was never built for that. A black-and-white checkerboard floor, set on the diagonal, runs through the entire home — bedrooms, bathrooms, living room, kitchen, dining room, entryways, closets — at one consistent size throughout. The original secondary bedroom becomes the primary suite (standalone furniture) in both scenarios below. What differs is how the family gets a third bedroom: <strong>Bunk Suite</strong> converts the original primary bedroom into built-in 3-berth bunks; <strong>Bump-Out</strong> keeps that room as simple twin-bed furniture and adds a new standalone bedroom off the dining room instead. All walls throughout are finished in glossy white-gray paint for easy wipe-down durability; matte black hardware and white painted drywall ceilings round out the shower material story.</p>
   </div>
 
-  <div class="scenario-toggle" role="group" aria-label="Scenario">
-    <button id="btn-bunk" class="active" onclick="setScenario('bunk')">Bunk Suite</button>
-    <button id="btn-bump" onclick="setScenario('bump')">Bump-Out Addition</button>
-  </div>
-  <p class="scenario-note">Whole-house palette (flooring, paint, hardware) is identical in both scenarios. Toggle above to see how the third bedroom, its bath, and the powder room change.</p>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-label">Scenario</div>
+      <div class="scenario-toggle" role="group" aria-label="Scenario">
+        <button id="btn-bunk" class="active" onclick="setScenario('bunk')">Bunk Suite</button>
+        <button id="btn-bump" onclick="setScenario('bump')">Bump-Out Addition</button>
+      </div>
+      <p class="scenario-note">Whole-house palette (flooring, paint, hardware) is identical in both scenarios. Toggling switches how the third bedroom, its bath, and the powder room are shown below.</p>
+    </aside>
+    <div class="main-col">
 
   <div class="section-title">Inspiration <span>Reference — bathrooms, shower walls</span></div>
 
@@ -287,7 +310,7 @@
   <div class="section-title">By Room <span>Material callouts and specifications</span></div>
 
       <div class="app" style="margin-bottom: 48px;">
-      <span class="app-tag white">Primary Bedroom</span>
+      <span class="app-tag white">Existing Secondary</span>
       <p>The original secondary bedroom now serves as the primary suite. Checkerboard floor, gray walls in glossy finish for easy wipe-down, no bold accent color. Accepts standalone furniture — platform bed, desk, and side table, all in walnut finish. Two wall closets with matte black hardware. All interior doors and frames finished in satin black.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
         <div style="width: 110px;">
@@ -315,7 +338,7 @@
       
       </div>
     </div><div class="app" style="margin-bottom: 48px;">
-    <span class="app-tag" style="background: #3d7a4a; color: white;">Primary Bath</span>
+    <span class="app-tag" style="background: #3d7a4a; color: white;">Existing Secondary</span>
     <p>Serves the new primary suite (the original secondary bedroom). Shower-only, no tub — alcove shower base paired with hunter green tile wrapping the shower walls AND the vanity accent wall. Single 30" vanity, Acorn finish, black hardware. Checkerboard floor, gray walls, matte black faucet, medicine cabinet, toilet, shower head + handheld wand.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
       <div style="width: 110px;">
@@ -363,7 +386,7 @@
       </div>
     </div>
   </div><div class="app bunk-only" style="margin-bottom: 48px;">
-      <span class="app-tag white">Secondary Bedroom</span><span class="scenario-badge bunk">Bunk Suite</span>
+      <span class="app-tag white">Existing Primary</span><span class="scenario-badge bunk">Bunk Suite</span>
       <p>The original primary bedroom now serves as the secondary/bunk suite. Checkerboard floor, gray walls in glossy finish for easy wipe-down, no accent color. 3-berth custom built-in bunks with acoustic slat wood paneling on partitions, chosen for sound dampening between the twin bunks and parallel full bed configuration. Built-in WIC cabinetry also in acoustic slat, with task desk nook integrated into the closet layout. A built-in window seat with drawer storage sits under the crank-out window — real reading-nook seating plus soft-close drawers for toys/books, not just a bench. All hardware in matte black.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
         <div style="width: 110px;">
@@ -388,7 +411,7 @@
       </div>
       
     </div><div class="app bump-only" style="margin-bottom: 48px; display:none;">
-      <span class="app-tag white">Secondary Bedroom</span><span class="scenario-badge bump">Bump-Out</span>
+      <span class="app-tag white">Existing Primary</span><span class="scenario-badge bump">Bump-Out</span>
       <p>The original primary bedroom stays a simple bedroom for two under this scenario — no built-ins. Checkerboard floor, gray walls in glossy finish, no accent color. Two standalone Thuma twin beds with matching desks, walnut finish, all hardware in matte black. Closet openings stay as-is (walls/footprint intact), same as the Bunk Suite scenario.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
         <div style="width: 110px;">
@@ -409,7 +432,7 @@
         </div>
       </div>
     </div><div class="app" style="margin-bottom: 48px;">
-    <span class="app-tag cerulean">Secondary Bath</span><span class="scenario-badge bunk">Bunk Suite</span>
+    <span class="app-tag cerulean">Existing Primary</span><span class="scenario-badge bunk">Bunk Suite</span>
     <p>Serves the secondary bedroom (the original primary bedroom) in both scenarios — identical fixtures whether it's built-in bunks or standalone twin beds. Alcove tub/shower combo with matte black drain kit, right drain, and a curved shower curtain rod (proper 3-wall alcove, so a curtain seals cleanly). Cerulean tile wraps the shower walls AND the vanity accent wall, carrying the room's one confident color move fully through rather than a single accent. Single 36" vanity, Acorn finish, black hardware — sized down from the original 63" double to give full, unobstructed width to the tub's 60" alcove opening rather than competing with it. Checkerboard floor, gray walls, matte black faucet, medicine cabinet, toilet, shower head + handheld wand for tub use.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
       <div style="width: 110px;">
@@ -545,7 +568,7 @@
       </div>
     </div>
   </div><div class="app bump-only" style="margin-bottom: 48px; display:none;">
-    <span class="app-tag white">Bedroom Addition</span><span class="scenario-badge bump">Bump-Out</span>
+    <span class="app-tag white">Additional Bedroom</span><span class="scenario-badge bump">Bump-Out</span>
     <p>New third bedroom under this scenario — 10' x 16' addition off the dining room, dry (no plumbing), tying into the existing roofline. Same checkerboard floor and glossy gray walls carry through from the main house. Standalone Thuma king bed and pedestal side table, walnut finish. Basic closet built-in matching whole-house hardware, and a code-compliant egress door in matte black. Closet and egress door finish specifics are still open — see the Punch List.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
       <div style="width: 110px;">
@@ -628,6 +651,9 @@
 
   <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12.5px; color: #777; line-height: 1.6;">
     <b>A note on flexibility.</b> The one must-have across both scenarios is the checkerboard tile throughout. Everything else — colors, materials, fixtures, and how to get the best value — is genuinely open to the design firm's judgment. This palette is a starting reference, not a locked spec. The general aesthetic direction we're after: fresh and current, the kind of space that photographs well today, but grounded enough in timeless choices that it won't read as dated in five or ten years.
+  </div>
+
+    </div>
   </div>
 
   <footer>
