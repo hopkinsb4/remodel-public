@@ -476,11 +476,11 @@
 
       <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Primary Bedroom</span>
-      <p>Two separate twin beds give the kids who sleep here their own space, each with its own Thuma Pedestal Side Table, Walnut — the same nightstand used in the secondary bedroom. The 12-foot north wall behind both headboards is wrapped floor to ceiling in the same wood-look plank tile used on the entryway wall, run vertically in 12 columns to pull the eye up — a durable, wipeable surface right where the beds make contact. Checkerboard floor, gray walls in glossy finish elsewhere in the room. Closets stay open — doors come off, frames stay in place — fitted with built-in organizers and a built-in desktop. All hardware in matte black.</p>
+      <p>Two separate twin beds give the kids who sleep here their own space, each with its own Thuma Pedestal Side Table, Walnut — the same nightstand used in the secondary bedroom. The 9-foot stretch of north wall behind both headboards is wrapped floor to ceiling in the same wood-look plank tile used on the entryway wall, run vertically in 9 columns to pull the eye up — a durable, wipeable surface right where the beds make contact. Checkerboard floor, gray walls in glossy finish elsewhere in the room. Closets stay open — doors come off, frames stay in place — fitted with built-in organizers and a built-in desktop. All hardware in matte black.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-26 -30 212 208" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the north accent wall with a shared nightstand between them, the hall-to-hall walkway down the west side, one large open area south of the beds, and a 41 inch window on the east wall">
+      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-26 -40 212 218" role="img"
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the north accent wall with a shared nightstand between them, the hall-to-hall walkway down the west side, one large open area south of the beds, a 41 inch window on the east wall, and a 28 inch crank-out window on the north wall">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -513,6 +513,24 @@
     drops 104 sf -> 96 sf and the order drops 39 pieces / 7 boxes -> 36
     pieces / 6 boxes, which makes this wall identical to the secondary
     bedroom's.
+
+    NORTH WINDOW: 28" wide, x 6..34 (6" off the west wall). Crank-out
+    casement, so it opens outward and needs no interior swing space. It sits
+    entirely west of x = 36, so it is clear of both beds.
+
+    ...BUT IT DECIDES THE ACCENT WALL. Tiling the full 144" would punch a
+    28" hole in the fluted plane 6" from its end, which is the worst possible
+    place for one. So the tile now runs x 36..144 — 108" (9'-0"), stopping at
+    the walkway edge, which is also exactly the west bed's edge. The window
+    bay stays paint.
+      full 144"   12 columns, 2.28" slack / 11 joints = 0.207"  (hole in it)
+      108" run     9 columns, 1.71" slack /  8 joints = 0.214"  <- chosen
+      110" run     9 columns, 3.71" slack /  8 joints = 0.464"  (too open)
+    So the ~3/16" joint still holds, and the tile edge lands on a line that
+    already exists in the plan rather than an arbitrary one. That leaves a 2"
+    painted reveal between the window at x=34 and the tile at x=36 — trim it
+    with the same matte black profile used elsewhere in the house.
+    Area drops to 108 x 96 = 72 sf; 27 pieces, 5 boxes.
 
     EAST WINDOW: 41" wide, y 48..89 (48" off the north wall, 67" off the
     south). The east bed runs along that wall from y 0 to 80, so 32" of the
@@ -559,6 +577,7 @@
   <rect x="0" y="156" width="36" height="4.5" fill="#FBFAF7"/>
   <rect x="-4.5" y="67" width="4.5" height="36" fill="#FBFAF7"/>
   <rect x="144" y="48" width="4.5" height="41" fill="#FBFAF7"/>   <!-- east window -->
+  <rect x="6" y="-4.5" width="28" height="4.5" fill="#FBFAF7"/>   <!-- north window -->
 
   <!-- ============ HALL-TO-HALL WALKWAY, SW CORNER ============
        36" wide x 89" deep. The dedicated route between the two hallways:
@@ -583,23 +602,25 @@
         transform="rotate(-90 8 120)">36 x 89</text>
 
   <!-- ============ ACCENT WALL, NORTH ============
-       Zayne slat (wood-look) fluted tile, floor to ceiling, now a 12'-0" run
-       of 12 columns instead of 13. -->
-  <rect x="0" y="0" width="144" height="1.4" fill="#9C7A55"/>
+       Zayne slat (wood-look) fluted tile, floor to ceiling. Runs x 36..144 —
+       108" (9'-0"), 9 columns — stopping at the walkway edge rather than
+       crossing the north window. -->
+  <rect x="36" y="0" width="108" height="1.4" fill="#9C7A55"/>
   <g stroke="#6B4F3A" stroke-width=".18">
-    <line x1="12"  y1="0" x2="12"  y2="1.4"/> <line x1="24"  y1="0" x2="24"  y2="1.4"/>
-    <line x1="36"  y1="0" x2="36"  y2="1.4"/> <line x1="48"  y1="0" x2="48"  y2="1.4"/>
-    <line x1="60"  y1="0" x2="60"  y2="1.4"/> <line x1="72"  y1="0" x2="72"  y2="1.4"/>
-    <line x1="84"  y1="0" x2="84"  y2="1.4"/> <line x1="96"  y1="0" x2="96"  y2="1.4"/>
-    <line x1="108" y1="0" x2="108" y2="1.4"/> <line x1="120" y1="0" x2="120" y2="1.4"/>
-    <line x1="132" y1="0" x2="132" y2="1.4"/>
+    <line x1="48"  y1="0" x2="48"  y2="1.4"/> <line x1="60"  y1="0" x2="60"  y2="1.4"/>
+    <line x1="72"  y1="0" x2="72"  y2="1.4"/> <line x1="84"  y1="0" x2="84"  y2="1.4"/>
+    <line x1="96"  y1="0" x2="96"  y2="1.4"/> <line x1="108" y1="0" x2="108" y2="1.4"/>
+    <line x1="120" y1="0" x2="120" y2="1.4"/> <line x1="132" y1="0" x2="132" y2="1.4"/>
   </g>
 
   <!-- ============ ROOM OUTLINE ============ -->
-  <path class="outline" d="M0,0 H144 V48 M144,89 V156 H36 M0,156 V103 M0,67 V0"/>
-  <path class="outline" d="M-4.5,-4.5 H148.5 V48 M148.5,89 V160.5 H36 M0,160.5 H-4.5 V103 M-4.5,67 V-4.5"/>
+  <path class="outline" d="M0,0 H6 M34,0 H144 V48 M144,89 V156 H36 M0,156 V103 M0,67 V0"/>
+  <path class="outline" d="M-4.5,-4.5 H6 M34,-4.5 H148.5 V48 M148.5,89 V160.5 H36 M0,160.5 H-4.5 V103 M-4.5,67 V-4.5"/>
   <!-- glazing line, standard plan symbol -->
   <line x1="146.25" y1="48" x2="146.25" y2="89" stroke="#2F7D94" stroke-width=".3"/>
+  <line x1="6" y1="-2.25" x2="34" y2="-2.25" stroke="#2F7D94" stroke-width=".3"/>
+  <text class="teal" x="20" y="5" text-anchor="middle" font-size="2.2">WINDOW 28"</text>
+  <text class="teal" x="20" y="8.6" text-anchor="middle" font-size="2.0">crank-out</text>
   <text class="teal" x="151.5" y="68.5" text-anchor="middle" font-size="2.2"
         transform="rotate(-90 151.5 68.5)">WINDOW 41"</text>
 
@@ -635,18 +656,23 @@
   <text class="lbl-s" x="18" y="34" text-anchor="middle">36 x 67</text>
 
   <!-- ============ WALL LABELS ============ -->
-  <text class="wall-lbl" x="72" y="-2.2" text-anchor="middle">NORTH — ZAYNE SLAT ACCENT WALL (12'-0")</text>
+  <text class="wall-lbl" x="90" y="-2.2" text-anchor="middle">NORTH — ZAYNE SLAT ACCENT WALL (9'-0")</text>
   <text class="wall-lbl" x="90" y="158.3" text-anchor="middle">SOUTH WALL</text>
   <text class="wall-lbl" x="-2.2" y="33" text-anchor="middle" transform="rotate(-90 -2.2 33)">WEST WALL</text>
   <text class="wall-lbl" x="146.3" y="110" text-anchor="middle"
         transform="rotate(-90 146.3 110)">EAST WALL</text>
 
-  <!-- ============ DIMENSIONS — TOP (W-E) ============ -->
-  <line class="extline" x1="0"   y1="-6.5" x2="0"   y2="-24"/>
+  <!-- ============ DIMENSIONS — TOP (W-E) ============
+       Three chains: bed layout nearest the plan, then the north window, then
+       the overall outboard. -->
+  <line class="extline" x1="0"   y1="-6.5" x2="0"   y2="-34"/>
+  <line class="extline" x1="6"   y1="-6.5" x2="6"   y2="-24"/>
+  <line class="extline" x1="34"  y1="-6.5" x2="34"  y2="-24"/>
   <line class="extline" x1="36"  y1="-6.5" x2="36"  y2="-14"/>
   <line class="extline" x1="80"  y1="-6.5" x2="80"  y2="-14"/>
   <line class="extline" x1="100" y1="-6.5" x2="100" y2="-14"/>
-  <line class="extline" x1="144" y1="-6.5" x2="144" y2="-24"/>
+  <line class="extline" x1="144" y1="-6.5" x2="144" y2="-34"/>
+  <!-- bed layout -->
   <line class="dimline" x1="0" y1="-12" x2="144" y2="-12"/>
   <g class="tick">
     <line x1="-1.1" y1="-10.9" x2="1.1" y2="-13.1"/>
@@ -659,12 +685,24 @@
   <text class="dim-t" x="58" y="-13.6" text-anchor="middle">44"</text>
   <text class="dim-t" x="90" y="-13.6" text-anchor="middle">20"</text>
   <text class="dim-t" x="122" y="-13.6" text-anchor="middle">44"</text>
+  <!-- north window -->
   <line class="dimline" x1="0" y1="-22" x2="144" y2="-22"/>
   <g class="tick">
     <line x1="-1.1" y1="-20.9" x2="1.1" y2="-23.1"/>
+    <line x1="4.9" y1="-20.9" x2="7.1" y2="-23.1"/>
+    <line x1="32.9" y1="-20.9" x2="35.1" y2="-23.1"/>
     <line x1="142.9" y1="-20.9" x2="145.1" y2="-23.1"/>
   </g>
-  <text class="dim-big" x="72" y="-24.6" text-anchor="middle">144" (12'-0")</text>
+  <text class="dim-t" x="3" y="-23.6" text-anchor="middle">6"</text>
+  <text class="dim-t" x="20" y="-23.6" text-anchor="middle">28"</text>
+  <text class="dim-t" x="89" y="-23.6" text-anchor="middle">110"</text>
+  <!-- overall -->
+  <line class="dimline" x1="0" y1="-32" x2="144" y2="-32"/>
+  <g class="tick">
+    <line x1="-1.1" y1="-30.9" x2="1.1" y2="-33.1"/>
+    <line x1="142.9" y1="-30.9" x2="145.1" y2="-33.1"/>
+  </g>
+  <text class="dim-big" x="72" y="-34.6" text-anchor="middle">144" (12'-0")</text>
 
   <!-- ============ DIMENSIONS — RIGHT (N-S) ============ -->
   <line class="extline" x1="154.5" y1="0"   x2="180" y2="0"/>
@@ -709,10 +747,8 @@
   </g>
   <text class="dim-t" x="-15.6" y="111" text-anchor="middle" transform="rotate(-90 -15.6 111)">89"</text>
 
-  <!-- ============ OPEN QUESTIONS ============ -->
-  <text class="red-t" x="72" y="174" text-anchor="middle">ASSUMES THE CLOSET IS NOT ON THE NORTH WALL</text>
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the north wall, beds pushed east of the hall-to-hall walkway that runs down the west side and turns out through the west wall. That leaves a 20&quot; gap for one shared nightstand and, more importantly, one clear 108&quot; x 76&quot; area south of the beds rather than the awkward L the east-wall arrangement produced. The accent wall follows the headboards to the 12-foot north wall. The east window (41&quot;, 48&quot; off the north wall) runs alongside the east bed for 32&quot; of its width &mdash; below sill height, so not a clash, but blinds and opening hardware land behind a bed there. Closet position not yet recorded.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the north wall, beds pushed east of the hall-to-hall walkway that runs down the west side and turns out through the west wall. That leaves a 20&quot; gap for one shared nightstand and, more importantly, one clear 108&quot; x 76&quot; area south of the beds rather than the awkward L the east-wall arrangement produced. The accent wall follows the headboards, but stops short of the north window: it runs 108&quot; (9&rsquo;-0&quot;) from the walkway edge to the east wall rather than the full 12 feet, so the fluted plane is not punched through 6&quot; from its end. The east window runs alongside the east bed for 32&quot; of its width &mdash; below sill height, so not a clash, but blinds and opening hardware land behind a bed there.</p>
     </div>
 
       
