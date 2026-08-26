@@ -820,23 +820,20 @@
        Two, both 12" long x 3.5" deep, recessed into the wall band so nothing
        projects into the room:
 
-       SINK NOOK — NORTH wall only. It was a mirrored pair with a west-wall
-         twin; the west one is now the sink mirror instead, so only this one
-         remains. Centred on the mid-point of the sink triangle's leg: the legs
-         run 0..17.33 along each wall, so leg centre = 8.665 and a 12" nook runs
-         2.665..14.665 — centred on the basin it serves, not on the room. The
-         mirror opposite uses the same run, so the two still read as a pair
-         about the corner bisector.
-         NOTE: at 2.665 off the inside corner this lands close to the corner
-         framing — confirm stud/nailer positions on site before cutting in.
+       SINK NOOK — NORTH wall, centred over the wet-room hooks (x 19.04 / 22.38 /
+         25.71, centre 22.375), so the nook and the hooks read as one group.
+         It used to sit in the corner on the sink-leg mid-point; the corner is
+         now given over to the mirror pair, and moving the nook out also clears
+         the corner-framing conflict that placement had.
 
        SHOWER NOOK — WEST wall, centred on the rain head line (y 42.5 = 18.5"
          off the south wall), clear of the valve at y 30.08..32.
   -->
-  <!-- sink nook, centred on the sink-leg mid-point (8.665).
-       Its former west-wall twin is now the sink mirror — see below. -->
-  <rect x="2.665" y="-3.5" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
-  <text class="lbl-s" x="8.665" y="-1.75" text-anchor="middle">nook</text>
+  <!-- sink nook — centred over the wet-room hooks. They sit at x 19.04 / 22.38 /
+       25.71, so their centre is 22.375 and a 12" nook runs 16.375..28.375. Moved
+       off the corner so the mirror pair can have that corner to itself. -->
+  <rect x="16.375" y="-3.5" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
+  <text class="lbl-s" x="22.375" y="-1.75" text-anchor="middle">nook</text>
   <!-- shower nook, on the rain head line -->
   <rect x="-3.5" y="36.5" width="3.5" height="12" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="-1.75" y="42.5" text-anchor="middle"
@@ -873,19 +870,26 @@
   </g>
   <text class="lbl" x="7.2" y="2.3">corner sink</text>
 
-  <!-- ============ SINK MIRROR ============
-       Fixed surface-mount mirror on the WEST wall, over the basin. Takes the
-       place of what was the west sink nook, so it runs the same 2.665..14.665
-       — centred on the sink triangle's leg mid-point (8.665), square over the
-       basin.
-       Surface mount, NOT recessed: this wall is inside the wet zone, and cutting
-       a recess here would mean breaching the waterproofing membrane and field-
-       building a waterproofed box. Fixed rather than tilting keeps the
-       projection to about 1", so it stays clear of the walk-in path — the whole
-       reason the original 5" deep cabinet was rejected. -->
-  <rect x="0" y="2.665" width="1" height="12" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".16"/>
-  <text class="teal" x="2.3" y="8.665" text-anchor="middle" font-size=".8"
-        transform="rotate(-90 2.3 8.665)">mirror</text>
+  <!-- ============ SINK MIRRORS ============
+       A matched PAIR of fixed surface-mount mirrors, one on each wall meeting at
+       the corner, mirrored about the corner bisector y = x. Both run
+       2.665..14.665 — centred on the sink triangle's leg mid-point (8.665),
+       square over the basin.
+       Two flat mirrors meeting in the corner is the buildable way to get a
+       corner mirror here: no manufacturer makes one that mounts across a 90
+       degree corner, so a pair on the two walls is the real-world equivalent.
+       Surface mount, NOT recessed — these walls are inside the wet zone, and a
+       recess would mean breaching the waterproofing membrane and field-building
+       a waterproofed box.
+       Drawn 0.5" thick: a fixed, thin-framed mirror sits barely proud of the
+       tile. That is the whole point after the 5" deep cabinet was rejected for
+       landing where your head goes. Labels sit in the wall band so the basin
+       stays legible. -->
+  <rect x="2.665" y="0" width="12" height=".5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <text class="teal" x="8.665" y="-1.75" text-anchor="middle" font-size=".8">mirror</text>
+  <rect x="0" y="2.665" width=".5" height="12" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <text class="teal" x="-1.75" y="8.665" text-anchor="middle" font-size=".8"
+        transform="rotate(-90 -1.75 8.665)">mirror</text>
   <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
 
   <!-- ============ NORTH WALL FITTINGS ============
@@ -992,7 +996,7 @@
   <text class="lbl-s" x="61.5" y="21" text-anchor="middle" transform="rotate(-90 61.5 21)">shown half-open</text>
 
   <!-- ============ WALL LABELS ============ -->
-  <text class="wall-lbl" x="26" y="-2.1" text-anchor="middle">NORTH WALL</text>
+  <text class="wall-lbl" x="33" y="-2.1" text-anchor="middle">NORTH WALL</text>
   <text class="wall-lbl" x="46" y="63.4" text-anchor="middle">SOUTH WALL</text>
   <text class="wall-lbl" x="-2.4" y="24" text-anchor="middle" transform="rotate(-90 -2.4 24)">WEST WALL</text>
 
