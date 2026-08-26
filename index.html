@@ -756,7 +756,7 @@
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-6 -15 83 82" role="img"
-     aria-label="Downstairs bathroom floorplan, two-section wet room, drawn to scale — three recessed nooks: a pair flanking the corner sink, mirrored about the corner bisector in the north and west walls, plus a shower nook in the west wall on the rain head line">
+     aria-label="Downstairs bathroom floorplan, two-section wet room, drawn to scale — corner sink with a surface-mount mirror and a recessed nook flanking it, a shower nook on the rain head line, and a recessed medicine cabinet with towel bar on the dry north wall">
   <!--
     93 WATERMAN — DOWNSTAIRS BATHROOM FLOOR PLAN
     ============================================
@@ -817,29 +817,26 @@
   <rect x="61" y="3" width="4.5" height="28" fill="#FBFAF7"/>
 
   <!-- ============ NOOKS ============
-       Three, all 12" long x 3.5" deep, recessed into the wall band so nothing
-       projects into the room. Two groups:
+       Two, both 12" long x 3.5" deep, recessed into the wall band so nothing
+       projects into the room:
 
-       SINK PAIR — one in the NORTH wall, one in the WEST wall, mirrored about
-         the corner bisector y = x. That bisector is the corner sink's own axis
-         of symmetry, so the pair reads as flanking the basin evenly.
-         Each is centred on the mid-point of the sink triangle's leg: the legs
+       SINK NOOK — NORTH wall only. It was a mirrored pair with a west-wall
+         twin; the west one is now the sink mirror instead, so only this one
+         remains. Centred on the mid-point of the sink triangle's leg: the legs
          run 0..17.33 along each wall, so leg centre = 8.665 and a 12" nook runs
-         2.665..14.665. Centring on the basin it serves, rather than on the room.
-         Reflecting about y = x swaps the coordinates: the west nook's y-range
-         is the north nook's x-range. Keep them equal or the symmetry breaks.
-         NOTE: at 2.665 off the inside corner these land close to the corner
+         2.665..14.665 — centred on the basin it serves, not on the room. The
+         mirror opposite uses the same run, so the two still read as a pair
+         about the corner bisector.
+         NOTE: at 2.665 off the inside corner this lands close to the corner
          framing — confirm stud/nailer positions on site before cutting in.
 
        SHOWER NOOK — WEST wall, centred on the rain head line (y 42.5 = 18.5"
          off the south wall), clear of the valve at y 30.08..32.
   -->
-  <!-- sink pair, each centred on its sink-leg mid-point (8.665) -->
+  <!-- sink nook, centred on the sink-leg mid-point (8.665).
+       Its former west-wall twin is now the sink mirror — see below. -->
   <rect x="2.665" y="-3.5" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="8.665" y="-1.75" text-anchor="middle">nook</text>
-  <rect x="-3.5" y="2.665" width="3.5" height="12" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
-  <text class="lbl-s" x="-1.75" y="8.665" text-anchor="middle"
-        transform="rotate(-90 -1.75 8.665)">nook</text>
   <!-- shower nook, on the rain head line -->
   <rect x="-3.5" y="36.5" width="3.5" height="12" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="-1.75" y="42.5" text-anchor="middle"
@@ -876,10 +873,19 @@
   </g>
   <text class="lbl" x="7.2" y="2.3">corner sink</text>
 
-  <!-- The sink's nook is drawn with the other two in the NOOKS group above.
-       It replaces a surface-mount medicine cabinet: a ~5" deep box projecting
-       off the wall at face height, directly over a corner sink, lands exactly
-       where your head goes when you lean in. Mirror handled separately. -->
+  <!-- ============ SINK MIRROR ============
+       Fixed surface-mount mirror on the WEST wall, over the basin. Takes the
+       place of what was the west sink nook, so it runs the same 2.665..14.665
+       — centred on the sink triangle's leg mid-point (8.665), square over the
+       basin.
+       Surface mount, NOT recessed: this wall is inside the wet zone, and cutting
+       a recess here would mean breaching the waterproofing membrane and field-
+       building a waterproofed box. Fixed rather than tilting keeps the
+       projection to about 1", so it stays clear of the walk-in path — the whole
+       reason the original 5" deep cabinet was rejected. -->
+  <rect x="0" y="2.665" width="1" height="12" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".16"/>
+  <text class="teal" x="2.3" y="8.665" text-anchor="middle" font-size=".8"
+        transform="rotate(-90 2.3 8.665)">mirror</text>
   <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
 
   <!-- ============ NORTH WALL FITTINGS ============
@@ -889,14 +895,24 @@
          mounted, so nothing projects into the room. Putting it in the DRY
          section is what makes recessing viable: unlike the corner-sink walls
          there is no waterproofing membrane here to breach.
-       No towel bar — towels hang on the hooks (three here, plus one on the west
-       wall just outside the curtain line). -->
+       Towel bar restored below the cabinet, on the same centre.
+
+       WHERE THE MIRROR ACTUALLY IS: the cabinet BODY is recessed, so in plan the
+       box is drawn inside the wall band. The MIRROR is the cabinet door, and the
+       door face lands on the ROOM FACE at y = 0 — flush with the wall, not back
+       in the band where the box sits. The teal line at y = 0 is that mirror
+       plane, i.e. the surface you actually see yourself in. Same teal as the
+       shower glass, since both are glass in the room envelope. -->
   <circle class="blk" cx="19.04" cy=".92" r=".33"/>
   <circle class="blk" cx="22.38" cy=".92" r=".33"/>
   <circle class="blk" cx="25.71" cy=".92" r=".33"/>
   <text class="lbl-s" x="22.38" y="2.6" text-anchor="middle">hooks (3)</text>
   <rect x="37.79" y="-3.5" width="16.5" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
-  <text class="lbl-s" x="46.04" y="-1.75" text-anchor="middle">recessed med. cabinet</text>
+  <text class="lbl-s" x="46.04" y="-2.15" text-anchor="middle">medicine cabinet</text>
+  <line x1="37.79" y1="0" x2="54.29" y2="0" stroke="#2F7D94" stroke-width=".26"/>
+  <text class="teal" x="46.04" y="-.8" text-anchor="middle" font-size=".8">mirror</text>
+  <line x1="36.08" y1="1.17" x2="56" y2="1.17" stroke="#2A2A2A" stroke-width=".25"/>
+  <text class="lbl-s" x="46.04" y="3" text-anchor="middle">towel bar</text>
 
   <!-- ============ ELECTRICAL ============
        Switch bank + outlet on the north wall, east of the cabinet — i.e. by the
