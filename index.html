@@ -480,7 +480,7 @@
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-26 -30 202 208" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the east accent wall with a 68 inch gap between them holding a wall-hugger power cuddler recliner, and the hall-to-hall walkway occupying the southwest corner">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the east accent wall with a 68 inch gap between them holding a power sofa bed that slides out to a true flat third bed, and the hall-to-hall walkway occupying the southwest corner">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -620,30 +620,51 @@
   <text class="lbl" x="98" y="132" text-anchor="middle">TWIN</text>
   <text class="lbl-s" x="98" y="137" text-anchor="middle">44 x 80</text>
 
-  <!-- ============ RECLINER, IN THE 68" GAP ============
-       Living Spaces "Cruz" 51" Power Oversized Cuddler, Wallaway.
-       51"W x 41"D closed. Needs 4.33" behind it to recline, so the back sits
-       at x 139.67 and the front at x 98.67. Fully open it runs 65.35" from the
-       back, putting its footrest at x 74.32 – still 10.3" east of the bed
-       feet at x 64, so it never breaks the line of the beds. -->
-  <rect class="rec" x="74.32" y="52.5" width="65.35" height="51" rx="2"/>
-  <text class="teal" x="80.5" y="78" text-anchor="middle" font-size="2.1"
-        transform="rotate(-90 80.5 78)">reclined 65.35"</text>
-  <rect class="prop" x="98.67" y="52.5" width="41" height="51" rx="2.5"/>
-  <rect fill="#fff" stroke="#2F7D94" stroke-width=".26" x="103" y="60" width="30" height="35" rx="2"/>
-  <text class="teal" x="119" y="72" text-anchor="middle" font-size="2.6">CRUZ 51"</text>
-  <text class="teal" x="119" y="77" text-anchor="middle" font-size="2.1">power cuddler</text>
-  <text class="teal" x="119" y="82" text-anchor="middle" font-size="2.1">wallaway + USB</text>
-  <!-- 4.33" wall clearance the mechanism needs -->
-  <line class="red" x1="139.67" y1="52.5" x2="139.67" y2="103.5"/>
-  <text class="red-t" x="141.8" y="78" text-anchor="middle" font-size="1.9"
-        transform="rotate(-90 141.8 78)">4.33" clr</text>
-  <!-- the 8.5" slivers left either side: no nightstand fits -->
-  <text class="red-t" x="119" y="48.5" text-anchor="middle">8.5"</text>
-  <text class="red-t" x="119" y="107.5" text-anchor="middle">8.5"</text>
-  <line class="red" x1="64" y1="52.5" x2="64" y2="103.5"/>
-  <text class="red-t" x="69.5" y="90" text-anchor="middle" font-size="1.9"
-        transform="rotate(-90 69.5 90)">10.3" clear of bed feet</text>
+  <!-- ============ POWER SOFA BED, IN THE 68" GAP ============
+       Replaces the Cruz wallaway recliner, which was rejected: a recliner
+       stops at a lounging angle and this has to make a true flat bed.
+
+       Povison Mila power sofa bed — the same 4-in-1 mechanism as the living
+       room sleeper. CONFIRMED from povison.com for the 3-seat: 90.0" L x
+       52.0" W x 33.5" H, seating depth 32"–59", seat height 18", leg 2".
+       Extended overall depth is therefore 52 + (59 – 32) = 79".
+
+       ORIENTATION IS THE WHOLE TRICK. Sleeping along the sofa's own length
+       caps the bed at the 68" gap = 5'-8", too short for anyone but a small
+       child. Sleeping along the EXTENDED DEPTH gives 79" = 6'-7", which works
+       — and it puts the head at the accent wall, the same way round as both
+       twins. So the sofa's length is the bed's WIDTH, not its length.
+
+       SIZE: the 3-seat at 90" is far too wide for a 68" gap. The 2-seat is
+       the candidate. Its width is NOT CONFIRMED — povison.com is JS-rendered,
+       resets Playwright, and exposes only the 3-seat dimensions — so 64" here
+       is an ESTIMATE from the 3-seat less one ~26" seat module. Verify before
+       this drawing is trusted.
+
+       TWO THINGS TO CONFIRM BEFORE ORDERING, both flagged on the drawing:
+       1" of spare on 79" is not a tolerance, and 79" is derived rather than
+       published; and whether the backrest needs clearance BEHIND it to reach
+       180 degrees. If it does, it is going back against fluted tile and the
+       80" budget is gone. -->
+  <rect class="rec" x="65" y="46" width="79" height="64" rx="2"/>
+  <text class="teal" x="72" y="78" text-anchor="middle" font-size="2.2"
+        transform="rotate(-90 72 78)">FLAT: 79 deep x 64 wide</text>
+  <rect class="prop" x="92" y="46" width="52" height="64" rx="2.5"/>
+  <rect fill="#fff" stroke="#2F7D94" stroke-width=".26" x="97" y="52" width="42" height="52" rx="2"/>
+  <text class="teal" x="118" y="66" text-anchor="middle" font-size="2.6">POVISON MILA</text>
+  <text class="teal" x="118" y="71" text-anchor="middle" font-size="2.1">2-seat power sofa bed</text>
+  <text class="teal" x="118" y="76" text-anchor="middle" font-size="2.1">slides out to true flat</text>
+  <text class="red-t" x="118" y="83" text-anchor="middle" font-size="2.0">width 64" NOT CONFIRMED</text>
+  <text class="lbl-s" x="118" y="89" text-anchor="middle">closed 52" deep</text>
+  <text class="lbl-s" x="118" y="94" text-anchor="middle">head to the accent wall,</text>
+  <text class="lbl-s" x="118" y="99" text-anchor="middle">same as both twins</text>
+  <!-- 2" either side, if the 64" estimate holds -->
+  <text class="red-t" x="118" y="42.5" text-anchor="middle">2"</text>
+  <text class="red-t" x="118" y="113.5" text-anchor="middle">2"</text>
+  <!-- the 1" that is left at the foot -->
+  <line class="red" x1="64" y1="46" x2="64" y2="110"/>
+  <text class="red-t" x="60" y="78" text-anchor="middle" font-size="1.9"
+        transform="rotate(-90 60 78)">only 1" clear of bed feet</text>
 
   <!-- ============ REMAINING FLOOR ============ -->
   <!-- Usable floor is an L: the 64 x 67 zone north of the walkway, plus the
@@ -724,9 +745,9 @@
   <text class="dim-t" x="18" y="167.4" text-anchor="middle">36"</text>
 
   <!-- ============ OPEN QUESTION ============ -->
-  <text class="red-t" x="72" y="174" text-anchor="middle">WINDOW POSITIONS NOT YET RECORDED</text>
+  <text class="red-t" x="72" y="174" text-anchor="middle">CONFIRM 2-SEAT WIDTH + REAR CLEARANCE AT 180°   |   WINDOWS NOT YET RECORDED</text>
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. The hall-to-hall walkway in the southwest corner has to stay clear, which is what forces the beds onto the east wall &mdash; it is the only wall that takes two twins plus a gap. The 28&quot; band beside it is usable floor. The walkway enters from the south wall and turns left out through the west wall, so it reads as an upside-down L. Window positions not yet recorded.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. The hall-to-hall walkway in the southwest corner has to stay clear, which is what forces the beds onto the east wall &mdash; it is the only wall that takes two twins plus a gap. The 28&quot; band beside it is usable floor. The walkway enters from the south wall and turns left out through the west wall, so it reads as an upside-down L. Between the beds, a power sofa bed that slides out to a true flat third bed &mdash; sleeping along its 79&quot; extended depth, head to the accent wall like the twins, since sleeping along its own length would cap the bed at 5&rsquo;8&quot;. The 2-seat width shown is not yet confirmed. Window positions not yet recorded.</p>
     </div>
 
       
