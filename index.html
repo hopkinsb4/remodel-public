@@ -811,8 +811,12 @@
   <line x1="1.79" y1="0" x2="1.79" y2="60.4" stroke="#6B6B6B" stroke-width=".083" stroke-dasharray=".9 .7"/>
 
   <!-- ============ CORNER SINK (NW) ============
-       Triangle: along north wall to x=17, diagonal back to west wall at y=17. -->
-  <polygon class="fix" points="0,0 17,0 0,17"/>
+       Corner basin: backs into the NW corner, straight splashback along the north
+       and west walls, angled front face on the line x + y = 17.33.
+       Both ends of the angled face are eased with a ~1" fillet (quadratic, control
+       point at the sharp corner) — that softening is what reads as a basin rather
+       than a plain triangle. -->
+  <path class="fix" d="M0,0 L14.92,0 Q17.33,0 15.62,1.71 L1.71,15.62 Q0,17.33 0,14.92 Z"/>
   <circle class="blk" cx="2.33" cy="2.17" r=".33"/>
   <text class="lbl" x="3.4" y="4.6">corner sink</text>
   <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
@@ -847,9 +851,15 @@
   <text class="teal" x="27.9" y="11.75" text-anchor="middle" font-size=".85"
         transform="rotate(-90 27.9 11.75)">24&quot; opening</text>
 
-  <!-- ============ TOILET ============ -->
-  <rect class="fix" x="35.75" y="53.42" width="20.08" height="7.5"/>              <!-- tank -->
-  <path class="fix" d="M37.75,54 V39.37 a8.04,8.04 0 0 1 16.08,0 V54 Z"/>         <!-- bowl -->
+  <!-- ============ TOILET ============
+       Bowl: rim is a true circle (centre 45.79,39.01  r 7.72") that flares open at
+       the front, with straight sides tapering back and slightly outward to meet the
+       tank. Tank: rounded rect with the lid joint line across it.
+       Bowl is drawn first; the tank then overlays its foot so the sides terminate
+       cleanly on the tank's top edge. -->
+  <path class="fix" d="M36.75,54.5 L38.07,39.01 A7.72,7.72 0 0 1 53.51,39.01 L54.83,54.5 Z"/>
+  <rect class="fix" x="35.75" y="54" width="20.08" height="7" rx=".5"/>
+  <line x1="35.75" y1="55.71" x2="55.83" y2="55.71" stroke="#2A2A2A" stroke-width=".083"/>
   <text x="45.79" y="44.8" text-anchor="middle" font-size="1.35"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A">WC</text>
   <line class="red" x1="45.79" y1="5.92" x2="45.79" y2="55.75"/>
