@@ -546,22 +546,42 @@
   <rect x="-4.5" y="-4.5" width="153" height="165" fill="#C9C4B7"/>  <!-- wall band -->
   <rect x="0" y="0" width="144" height="156" fill="#FBFAF7"/>        <!-- floor -->
 
+  <!-- ============ WALL OPENINGS ============
+       Floor finish runs the full 4.5" wall thickness so each passage reads as
+       open; the room outlines further down omit those stretches. Drawn here,
+       before anything else, so nothing paints over their labels. -->
+  <rect x="0" y="156" width="36" height="4.5" fill="#FBFAF7"/>    <!-- south, to hall -->
+  <rect x="-4.5" y="67" width="4.5" height="36" fill="#FBFAF7"/>  <!-- west, to hall -->
+
+
   <!-- ============ HALL-TO-HALL WALKWAY, SW CORNER ============
        36" wide (W-E) x 89" deep (N-S). This is the dedicated route between the
        two hallways, so it is open floor that has to stay clear rather than a
        solid obstruction. Drawn as a circulation zone with a route arrow.
-       Its two openings are what connect the hallways. Their positions are not
-       recorded yet, so NO route direction is drawn — with openings possibly in
-       the west and south walls the route could turn a corner inside the zone,
-       and an arrow down the long axis would be asserting something unknown. -->
+       OPENINGS, now known: one in the SOUTH wall at the foot of the strip
+       (x 0..36), and one in the WEST wall at the strip's north end
+       (y 67..103). So the route runs north up the strip and then turns LEFT
+       out through the west wall — an upside-down L. That turn is why the whole
+       36 x 89 rectangle is reserved rather than just a 36"-wide lane: traffic
+       swings west across the top of it.
+       The strip's EAST side (x = 36) is open to the room for its full length,
+       so the bedroom itself is entered by stepping east off the route. -->
   <rect x="0" y="67" width="36" height="89" fill="#EFEDE6"/>
   <rect class="thin" x="0" y="67" width="36" height="89" stroke-dasharray="3 2.2"/>
-  <text class="lbl" x="26" y="105" text-anchor="middle"
-        transform="rotate(-90 26 105)">WALKWAY</text>
-  <text class="lbl-s" x="31" y="105" text-anchor="middle"
-        transform="rotate(-90 31 105)">hall to hall — keep clear</text>
-  <text class="lbl-s" x="8" y="105" text-anchor="middle"
-        transform="rotate(-90 8 105)">36 x 89</text>
+  <!-- Upside-down L: in from the south wall, north up the strip, then left
+       out through the west wall. Two-way, so arrowheads at both ends. -->
+  <path class="thin" d="M18,148 V85 H7" stroke="#8F8F8F" stroke-dasharray="4 3" fill="none"/>
+  <path d="M18,154 l-3.2,-6.4 h6.4 Z" fill="#8F8F8F"/>
+  <path d="M1,85 l6.4,-3.2 v6.4 Z" fill="#8F8F8F"/>
+  <text class="lbl-s" x="-2.2" y="85" text-anchor="middle"
+        transform="rotate(-90 -2.2 85)">TO HALL</text>
+  <text class="lbl-s" x="18" y="158.3" text-anchor="middle">TO HALL</text>
+  <text class="lbl" x="26" y="120" text-anchor="middle"
+        transform="rotate(-90 26 120)">WALKWAY</text>
+  <text class="lbl-s" x="31" y="120" text-anchor="middle"
+        transform="rotate(-90 31 120)">reserved — keep clear</text>
+  <text class="lbl-s" x="8" y="120" text-anchor="middle"
+        transform="rotate(-90 8 120)">36 x 89</text>
 
   <!-- ============ ACCENT WALL, EAST ============
        Zayne slat (wood-look) fluted tile, floor to ceiling, 13'-0" run.
@@ -577,9 +597,10 @@
     <line x1="142.6" y1="150" x2="144" y2="150"/>
   </g>
 
-  <!-- ============ ROOM OUTLINE ============ -->
-  <rect class="outline" x="0" y="0" width="144" height="156"/>
-  <rect class="outline" x="-4.5" y="-4.5" width="153" height="165"/>   <!-- outer wall face -->
+  <!-- ============ ROOM OUTLINE ============
+       Inner face broken at both passages; outer face likewise. -->
+  <path class="outline" d="M0,0 H144 V156 H36 M0,156 V103 M0,67 V0"/>
+  <path class="outline" d="M-4.5,-4.5 H148.5 V160.5 H36 M0,160.5 H-4.5 V103 M-4.5,67 V-4.5"/>
 
   <!-- ============ TWIN BEDS ============
        Thuma Essential Bed + Headboard, Walnut, Twin. Frame 44" x 80" overall.
@@ -703,9 +724,9 @@
   <text class="dim-t" x="18" y="167.4" text-anchor="middle">36"</text>
 
   <!-- ============ OPEN QUESTION ============ -->
-  <text class="red-t" x="72" y="174" text-anchor="middle">WALKWAY OPENINGS + WINDOW POSITIONS NOT YET RECORDED</text>
+  <text class="red-t" x="72" y="174" text-anchor="middle">WINDOW POSITIONS NOT YET RECORDED</text>
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. The hall-to-hall walkway in the southwest corner has to stay clear, which is what forces the beds onto the east wall &mdash; it is the only wall that takes two twins plus a gap. The 28&quot; band beside it is usable floor. Walkway openings and window positions not yet recorded.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. The hall-to-hall walkway in the southwest corner has to stay clear, which is what forces the beds onto the east wall &mdash; it is the only wall that takes two twins plus a gap. The 28&quot; band beside it is usable floor. The walkway enters from the south wall and turns left out through the west wall, so it reads as an upside-down L. Window positions not yet recorded.</p>
     </div>
 
       
