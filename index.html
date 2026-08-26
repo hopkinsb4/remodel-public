@@ -479,7 +479,7 @@
       <p>Two separate twin beds give the kids who sleep here their own space, sharing one Thuma Pedestal Side Table, Walnut between them — the same nightstand used in the secondary bedroom. The 9-foot stretch of north wall behind both headboards is wrapped floor to ceiling in the same wood-look plank tile used on the entryway wall, run vertically in 9 columns to pull the eye up — a durable, wipeable surface right where the beds make contact. Checkerboard floor, gray walls in glossy finish elsewhere in the room. Closets stay open — doors come off, frames stay in place — fitted with built-in organizers and a built-in desktop. The bedroom door is on the south wall and a reserved walkway runs up the west side to the two walk-in closets and the primary bath, so that route stays clear. The 56 sq ft south of the beds is left deliberately empty: clothes and homework are both housed in the WICs, which leaves this floor with no job to do but be floor. All hardware in matte black.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-112 -40 298 250" role="img"
+      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-112 -40 298 236" role="img"
      aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the north accent wall with a shared nightstand between them, open play floor south of the beds, a diagonal checkerboard floor, a 41 inch window on the east wall, a 28 inch crank-out window on the north wall, and one knocked-through walk-in closet running west of it">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
@@ -608,8 +608,9 @@
     <!-- Edward Martin Dawson 2x2 mosaic, charcoal — the primary bath floor.
          Straight-set, NOT on the diagonal: the checkerboard turns 45 degrees
          and this does not, so the threshold reads as a real change of floor
-         rather than the same tile carrying on. Only a 6" sliver of the bath is
-         drawn; its actual extent is not known and is not implied here. -->
+         rather than the same tile carrying on. Only the strip inside the door
+         opening is drawn; the bath's actual extent is not known and is not
+         implied here. -->
     <pattern id="pbed-dawson" width="2" height="2" patternUnits="userSpaceOnUse">
       <rect width="2" height="2" fill="#333130"/>
       <rect x=".09" y=".09" width="1.82" height="1.82" fill="#4A4644"/>
@@ -617,7 +618,7 @@
   </defs>
 
   <!-- ============ SHELL ============ -->
-  <rect x="-78" y="-4.5" width="78" height="191" fill="#C9C4B7"/>   <!-- closet block + 9" wall -->
+  <rect x="-78" y="-4.5" width="78" height="177" fill="#C9C4B7"/>   <!-- closet block + 9" wall -->
   <rect x="0" y="-4.5" width="148.5" height="165" fill="#C9C4B7"/>  <!-- bedroom -->
   <rect x="0" y="0" width="144" height="156" fill="url(#pbed-check)"/>
 
@@ -641,30 +642,37 @@
   <!-- ============ WALK-IN CLOSET, WEST OF THE BEDROOM ============
        ONE OPEN ROOM. The two E-W partitions that split this into WIC / passage
        / WIC are knocked out, so what was 66 + 4.5 + 41 + 4.5 + 66 is now a
-       single 182" run. Its north wall is aligned with the bedroom's, so the
-       whole 26" of difference against the bedroom's 156" falls at the SOUTH
-       end — the closet juts 26" past the bedroom's interior south face, 21.5"
-       past its outer face.
+       single 168" (14'-0") run, inside to inside. Its north wall is aligned with
+       the bedroom's, so the whole 12" of difference against the bedroom's
+       156" falls at the SOUTH end — the closet juts 12" past the bedroom,
+       measured either interior face to interior face or outer to outer.
 
        SE CORNER, which is what that overrun creates: the 9" wall between
        closet and bedroom carries on south past the bedroom to meet the
-       closet's own south wall at y 186.5. From y 160.5 down its east face is
+       closet's own south wall at y 172.5. From y 160.5 down its east face is
        an outside face against the hall rather than a shared wall — so the
        bedroom's south wall stops at x 0 and does not run west across it.
 
        Depth is 60" east-west (x -69..-9). The 9" wall at the far west
-       (x -78..-69) carries the opening to the primary bathroom, drawn 36" at
-       y 67..103 to line up with the bedroom door; its real width was given
-       only as "narrowed", so confirm it. North and south walls drawn 4.5" —
+       (x -78..-69) carries the opening to the primary bathroom, drawn at the
+       41" hall width, y 64.5..105.5, centred on the bedroom door; it was also
+       described as "narrowed" at this point, so confirm the width. North and south walls drawn 4.5" —
        their thickness was not given either. -->
-  <rect x="-69" y="0" width="60" height="182" fill="url(#pbed-check)"/>
-  <rect x="-78" y="67" width="9" height="36" fill="url(#pbed-check)"/>
-  <!-- sliver of the primary bath beyond, to show where the floor changes -->
-  <rect x="-84" y="-4.5" width="6" height="191" fill="url(#pbed-dawson)"/>
-  <rect class="outline" x="-84" y="-4.5" width="6" height="191"/>
-  <text class="lbl-s" x="-87.5" y="140" text-anchor="middle"
-        transform="rotate(-90 -87.5 140)">PRIMARY BATH — Dawson 2" charcoal</text>
-  <path class="outline" d="M-69,0 H-9 V67 M-9,103 V182 H-69 V103 M-69,67 V0"/>
+  <rect x="-69" y="0" width="60" height="168" fill="url(#pbed-check)"/>
+  <rect x="-76.37" y="64.5" width="7.37" height="41" fill="url(#pbed-check)"/>
+  <!-- THRESHOLD. The floor changes inside the door opening, not out in the
+       room: the checkerboard runs west until the west point of its last full
+       black tile, which lands at x -76.37 (the diagonal 12" module puts a
+       black diamond point there), and the bath's 2" straight-set Dawson picks
+       up from that point out to the outer face of the 9" wall at x -78. That
+       1-5/8" strip, held inside the 41" hall opening, is the whole of the bath
+       shown. Its west edge falls on a 2" module line, so one full course of
+       Dawson reads before the sliver. -->
+  <rect x="-78" y="64.5" width="1.63" height="41" fill="url(#pbed-dawson)"/>
+  <line class="thin" x1="-76.37" y1="64.5" x2="-76.37" y2="105.5"/>
+  <text class="lbl-s" x="-80.6" y="85" text-anchor="middle" font-size="1.8"
+        transform="rotate(-90 -80.6 85)">Dawson 2" charcoal</text>
+  <path class="outline" d="M-69,0 H-9 V67 M-9,103 V168 H-69 V105.5 M-69,64.5 V0"/>
   <text class="lbl-s" x="-73.5" y="85" text-anchor="middle" font-size="1.8"
         transform="rotate(-90 -73.5 85)">TO BATH</text>
 
@@ -693,7 +701,7 @@
 
   <!-- ============ ROOM OUTLINE ============ -->
   <path class="outline" d="M0,0 H144 V156 H36 M0,156 V103 M0,67 V0"/>
-  <path class="outline" d="M-78,-4.5 H148.5 V160.5 H36 M0,160.5 V186.5 H-78 V103 M-78,67 V-4.5"/>
+  <path class="outline" d="M-78,-4.5 H148.5 V160.5 H36 M0,160.5 V172.5 H-78 V105.5 M-78,64.5 V-4.5"/>
   <!-- glazing line, standard plan symbol -->
   <!-- EAST WINDOW, y 48..89. Standard plan symbol: jamb lines across the wall
        thickness at each end, glazing down the centre. The wall face runs
@@ -813,13 +821,13 @@
 
   <!-- ============ DIMENSIONS — CLOSET, LEFT (N-S) ============ -->
   <line class="extline" x1="-86" y1="0"   x2="-104" y2="0"/>
-  <line class="extline" x1="-86" y1="182" x2="-104" y2="182"/>
-  <line class="dimline" x1="-96" y1="0" x2="-96" y2="182"/>
+  <line class="extline" x1="-86" y1="168" x2="-104" y2="168"/>
+  <line class="dimline" x1="-96" y1="0" x2="-96" y2="168"/>
   <g class="tick">
     <line x1="-97.1" y1="-1.1" x2="-94.9" y2="1.1"/>
-    <line x1="-97.1" y1="180.9" x2="-94.9" y2="183.1"/>
+    <line x1="-97.1" y1="166.9" x2="-94.9" y2="169.1"/>
   </g>
-  <text class="dim-big" x="-98.6" y="91" text-anchor="middle" transform="rotate(-90 -98.6 91)">182"</text>
+  <text class="dim-big" x="-98.6" y="84" text-anchor="middle" transform="rotate(-90 -98.6 84)">168" (14'-0")</text>
 
   <!-- ============ DIMENSIONS — RIGHT (N-S) ============ -->
   <line class="extline" x1="154.5" y1="0"   x2="180" y2="0"/>
@@ -857,7 +865,7 @@
 
 
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the north wall. The bedroom door is on the south wall and the west opening leads to the two walk-in closets and the primary bath. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the two doorways carry the floor through the wall thickness; the windows get a window symbol and the wall runs continuous behind them. The plan extends west to show the walk-in closet, with the two partitions knocked out so it reads as one 60&quot; x 182&quot; room running through to the primary bath. Its north wall lines up with the bedroom&rsquo;s, so the whole 26&quot; it runs longer than the bedroom falls at the south end. That leaves a 20&quot; gap for one shared nightstand and, more importantly, one clear 108&quot; x 76&quot; area south of the beds rather than the awkward L the east-wall arrangement produced. The accent wall follows the headboards, but stops short of the north window: it runs 108&quot; (9&rsquo;-0&quot;) from the walkway edge to the east wall rather than the full 12 feet, so the fluted plane is not punched through 6&quot; from its end. The east window runs alongside the east bed for 32&quot; of its width &mdash; below sill height, so not a clash, but blinds and opening hardware land behind a bed there.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the north wall. The bedroom door is on the south wall and the west opening leads to the two walk-in closets and the primary bath. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the two doorways carry the floor through the wall thickness; the windows get a window symbol and the wall runs continuous behind them. The plan extends west to show the walk-in closet, with the two partitions knocked out so it reads as one 60&quot; x 168&quot; room running through to the primary bath. Its north wall lines up with the bedroom&rsquo;s, so the whole 12&quot; it runs longer than the bedroom falls at the south end. That leaves a 15&frac34;&quot; gap for one shared nightstand and, more importantly, one clear 108&quot; x 76&quot; area south of the beds rather than the awkward L the east-wall arrangement produced. The accent wall follows the headboards, but stops short of the north window: it runs 108&quot; (9&rsquo;-0&quot;) from the walkway edge to the east wall rather than the full 12 feet, so the fluted plane is not punched through 6&quot; from its end. The east window runs alongside the east bed for 32&quot; of its width &mdash; below sill height, so not a clash, but blinds and opening hardware land behind a bed there.</p>
     </div>
 
       
