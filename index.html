@@ -634,7 +634,7 @@
        pass through: the wall runs continuous behind them and they get a window
        symbol instead, further down. -->
   <rect x="0" y="156" width="36" height="4.5" fill="url(#pbed-check)"/>
-  <rect x="-4.5" y="67" width="4.5" height="36" fill="url(#pbed-check)"/>
+  <rect x="-4.5" y="64.5" width="4.5" height="41" fill="url(#pbed-check)"/>
 
   <!-- The two openings keep their callouts; the reserved-walkway graphic that
        drove this layout has been removed now that the layout is settled. The
@@ -659,9 +659,14 @@
        bedroom's south wall stops at x 0 and does not run west across it.
 
        Depth is 69" east-west (x -73.5..-4.5). The 4.5" wall at the far west
-       (x -78..-73.5) carries the opening to the primary bathroom, drawn at the
-       41" hall width, y 64.5..105.5, centred on the bedroom door; it was also
-       described as "narrowed" at this point, so confirm the width. North and south walls drawn 4.5" —
+       (x -78..-73.5) carries the opening to the primary bathroom, and the
+       4.5" wall at the east end carries the opening to the bedroom. BOTH are
+       drawn at the 41" hall width, y 64.5..105.5, so their jambs line up and
+       the cross-route reads as one straight 41" corridor. The bedroom end had
+       been drawn 36" to match the bedroom door, but that was an assumption,
+       not a given, and it left the two caps out of line. 41" is the one width
+       actually established here. The bath end was also described as
+       "narrowed" at this point, so confirm it. North and south walls drawn 4.5" —
        their thickness was not given either. -->
   <rect x="-73.5" y="0" width="69" height="168" fill="url(#pbed-check)"/>
   <rect x="-76.37" y="64.5" width="2.87" height="41" fill="url(#pbed-check)"/>
@@ -677,13 +682,28 @@
   <line class="thin" x1="-76.37" y1="64.5" x2="-76.37" y2="105.5"/>
   <text class="lbl-s" x="-80.6" y="85" text-anchor="middle" font-size="1.8"
         transform="rotate(-90 -80.6 85)">Dawson 2" charcoal</text>
-  <!-- END-WALL BORDER. The diagonal field dies into the two end walls in
-       triangular cuts. A 6" solid Nero band caps each end so the run reads
-       finished rather than sliced off; it is the checkerboard's own black,
-       ripped from the same 12" tile, so it adds no material. -->
-  <rect x="-73.5" y="0" width="69" height="6" fill="#262322"/>
-  <rect x="-73.5" y="162" width="69" height="6" fill="#262322"/>
-  <path class="outline" d="M-73.5,0 H-4.5 V67 M-4.5,103 V168 H-73.5 V105.5 M-73.5,64.5 V0"/>
+  <!-- END-WALL BORDER. A solid Nero band caps each end of the run so the
+       diagonal field reads finished rather than sliced off. Same black as the
+       checkerboard, ripped from the same 12" tile, so it adds no material.
+
+       THE BAND WIDTH IS NOT A FREE CHOICE. Set on the diagonal, the field's
+       course lines fall every 8.485" (half the 16.97" diagonal of a 12" tile),
+       and the two colours alternate which one comes to a point on each line.
+       A band that stops BETWEEN course lines cuts the white diamonds into
+       slivers, and since the black ones vanish into the black band all that
+       is left to see is a row of white spikes. The earlier 6" band did
+       exactly that. So each band now stops on an ODD course line, where the
+       white diamonds come to a point on the band edge and the black ones are
+       cut at their widest and merge into it:
+         north  0 .. 8.485    (course 1)  = 8-1/2"
+         south  161.22 .. 168 (course 19) = 6-3/4"
+       They differ because 168" is 19.8 courses, so the leftover 0.8 has to
+       land at one end. Keeping the field continuous through the doorway is
+       worth more than matching the two borders; if that ever reverses,
+       shifting the setout 7/8" north makes both bands 7-5/8". -->
+  <rect x="-73.5" y="0" width="69" height="8.4853" fill="#262322"/>
+  <rect x="-73.5" y="161.2203" width="69" height="6.7797" fill="#262322"/>
+  <path class="outline" d="M-73.5,0 H-4.5 V64.5 M-4.5,105.5 V168 H-73.5 V105.5 M-73.5,64.5 V0"/>
   <text class="lbl-s" x="-74.9" y="85" text-anchor="middle" font-size="1.6"
         transform="rotate(-90 -74.9 85)">TO BATH</text>
 
@@ -711,10 +731,10 @@
        Without these the wall band simply runs out into the floor. Six caps:
        both sides of the bedroom door, the bedroom-to-WIC opening, and the
        WIC-to-bath opening. -->
-  <path class="outline" d="M0,156 V160.5 M36,156 V160.5 M-4.5,67 H0 M-4.5,103 H0 M-78,64.5 H-73.5 M-78,105.5 H-73.5"/>
+  <path class="outline" d="M0,156 V160.5 M36,156 V160.5 M-4.5,64.5 H0 M-4.5,105.5 H0 M-78,64.5 H-73.5 M-78,105.5 H-73.5"/>
 
   <!-- ============ ROOM OUTLINE ============ -->
-  <path class="outline" d="M0,0 H144 V156 H36 M0,156 V103 M0,67 V0"/>
+  <path class="outline" d="M0,0 H144 V156 H36 M0,156 V105.5 M0,64.5 V0"/>
   <path class="outline" d="M-78,-4.5 H148.5 V160.5 H36 M0,160.5 V172.5 H-78 V105.5 M-78,64.5 V-4.5"/>
   <!-- glazing line, standard plan symbol -->
   <!-- EAST WINDOW, y 48..89. Standard plan symbol: jamb lines across the wall
@@ -897,7 +917,7 @@
 
 
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the east wall, one bed at each end, both tight to their end wall so all 68&quot; of slack lands in one piece in the middle — which is where the 41&quot; window is, so no headboard crosses it, and where each bed gets its own side table &mdash; long edge along the bed rail, held 12&quot; back from the headboard, taking no floor at all &mdash; 50.4&quot; stays clear between the trays and nothing comes within 16&quot; of the window wall. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the doorways carry the floor through the wall thickness, and each opening&rsquo;s cut wall end is capped; the windows get a window symbol and the wall runs continuous behind them. The accent wall follows the headboards and now runs the full 13 feet: 13 columns with no cut column and no painted reveal at either end, on essentially the same 3/16&quot; joint the earlier 9-foot run used. The window&rsquo;s north jamb lands on a joint; its south jamb falls 4.9&quot; into a column, which gets ripped. The plan extends west to show the walk-in closet, with the two partitions knocked out so it reads as one 69&quot; x 168&quot; room running through to the primary bath, each end of its floor capped with a 6&quot; solid Nero border. Its north wall lines up with the bedroom&rsquo;s, so the whole 12&quot; it runs longer than the bedroom falls at the south end — and its own 41&quot; cross-route lines up with the gap between the beds, which is what pairs each bed with the closet zone on its side.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the east wall, one bed at each end, both tight to their end wall so all 68&quot; of slack lands in one piece in the middle — which is where the 41&quot; window is, so no headboard crosses it, and where each bed gets its own side table &mdash; long edge along the bed rail, held 12&quot; back from the headboard, taking no floor at all &mdash; 50.4&quot; stays clear between the trays and nothing comes within 16&quot; of the window wall. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the doorways carry the floor through the wall thickness, and each opening&rsquo;s cut wall end is capped; the windows get a window symbol and the wall runs continuous behind them. The accent wall follows the headboards and now runs the full 13 feet: 13 columns with no cut column and no painted reveal at either end, on essentially the same 3/16&quot; joint the earlier 9-foot run used. The window&rsquo;s north jamb lands on a joint; its south jamb falls 4.9&quot; into a column, which gets ripped. The plan extends west to show the walk-in closet, with the two partitions knocked out so it reads as one 69&quot; x 168&quot; room running through to the primary bath, each end of its floor capped with a solid Nero border &mdash; 8&frac12;&quot; north, 6&frac34;&quot; south, each stopping on a diagonal course line so the white diamonds come to a point on the band instead of being cut into slivers. Its north wall lines up with the bedroom&rsquo;s, so the whole 12&quot; it runs longer than the bedroom falls at the south end — and its own 41&quot; cross-route &mdash; both openings now drawn at that width, jambs in line &mdash; lines up with the gap between the beds, which is what pairs each bed with the closet zone on its side.</p>
     </div>
 
       
