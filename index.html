@@ -476,11 +476,11 @@
 
       <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Primary Bedroom</span>
-      <p>Two separate twin beds give the kids who sleep here their own space, each with its own Thuma Pedestal Side Table, Walnut — the same nightstand used in the secondary bedroom. The 13-foot wall behind both headboards is wrapped floor to ceiling in the same wood-look plank tile used on the entryway wall, run vertically in 13 columns to pull the eye up — a durable, wipeable surface right where the beds make contact. Checkerboard floor, gray walls in glossy finish elsewhere in the room. Closets stay open — doors come off, frames stay in place — fitted with built-in organizers and a built-in desktop. All hardware in matte black.</p>
+      <p>Two separate twin beds give the kids who sleep here their own space, each with its own Thuma Pedestal Side Table, Walnut — the same nightstand used in the secondary bedroom. The 12-foot north wall behind both headboards is wrapped floor to ceiling in the same wood-look plank tile used on the entryway wall, run vertically in 12 columns to pull the eye up — a durable, wipeable surface right where the beds make contact. Checkerboard floor, gray walls in glossy finish elsewhere in the room. Closets stay open — doors come off, frames stay in place — fitted with built-in organizers and a built-in desktop. All hardware in matte black.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-26 -30 202 208" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the east accent wall with a 68 inch gap between them holding a Luonto Elfin Full XL sofa bed that opens to a true flat third bed, and the hall-to-hall walkway occupying the southwest corner">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the north accent wall with a shared nightstand between them, the hall-to-hall walkway down the west side, and one large open area south of the beds">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -490,26 +490,32 @@
     Room is 144" (12'-0") W-E  x  156" (13'-0") N-S.
     Wall band is 4.5" thick, so it spans -4.5..148.5 and -4.5..160.5.
 
-    THE SW BLOCK (x 0..36, y 67..156) IS THE HALL-TO-HALL WALKWAY.
-    It is not dead space and not an obstruction — it is the dedicated route
-    connecting the two hallways, so it carries traffic and has to stay clear.
-    For furniture planning it behaves the same as a solid block (nothing can
-    stand in it), which is why the bed logic below is unchanged.
+    HEADBOARDS ON THE NORTH WALL. Beds project 80" SOUTH.
+    The walkway takes x 0..36, so the beds start at x = 36 and the usable
+    north wall is 144 - 36 = 108". Two 44" twins = 88", leaving a 20" gap
+    between them — which is what the shared nightstand sits in. Bed A's west
+    edge lands exactly on the walkway edge, touching but not overlapping.
 
-    WHY THE BEDS ARE ON THE EAST WALL — this is forced, not chosen.
-    The walkway takes the SW corner out of play, which rules out the other
-    three walls for a two-bed-plus-gap layout:
-      WEST  156" wall, but the walkway takes 89" of it -> 67" clear, and two
-            44" twins need 88". Does not fit at all.
-      SOUTH 144" wall, walkway takes 36" -> 108" clear -> only a 20" gap.
-      NORTH 144" wall is clear, but beds project 80" south and the west bed
-            would land in the walkway from y 67 to 80.
-      EAST  156" and completely clear. 44 + 68 + 44 = 156 exactly.
-    The east wall is also the 13'-0" run the Zayne slat accent wall is
-    already sized for in the budget (13 columns x 11.81" = 153.5" of tile).
+    WHY THIS BEATS THE EAST-WALL SCHEME IT REPLACES.
+    On the east wall the beds left an awkward L of floor: a 64 x 67 zone plus
+    a 28 x 89 band squeezed between the walkway and the bed feet. Here
+    everything south of the beds is ONE clear 108 x 76 area, and the walkway
+    is pushed to the edge of the room instead of cutting through the middle
+    of the usable floor.
 
-    STILL UNKNOWN: door swing and window positions. Nothing in the design
-    book records them. They are the one thing that could still upset this.
+    THE ACCENT WALL MOVES WITH THE HEADBOARDS, and the tile layout survives
+    almost untouched:
+      east wall  13'-0" -> 13 columns x 11.81" = 153.5", 2.47" of slack over
+                 12 joints = 0.206" per joint
+      north wall 12'-0" -> 12 columns x 11.81" = 141.7", 2.28" of slack over
+                 11 joints = 0.207" per joint
+    So the ~3/16" joint the original layout depends on is unchanged. Area
+    drops 104 sf -> 96 sf and the order drops 39 pieces / 7 boxes -> 36
+    pieces / 6 boxes, which makes this wall identical to the secondary
+    bedroom's.
+
+    STILL UNKNOWN: where the closet and its built-in desktop are. This scheme
+    assumes they are NOT on the north wall. Window positions also unrecorded.
   -->
   <defs>
     <style>
@@ -521,9 +527,6 @@
       #pbed-plan .lbl-s   { font:2.1px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
       #pbed-plan .wall-lbl{ font:2.9px 'Helvetica Neue',Arial,sans-serif; fill:#8F8F8F; }
       #pbed-plan .teal    { fill:#2F7D94; }
-      /* Proposed / not yet bought, drawn in teal like the bathroom plan. */
-      #pbed-plan .prop    { fill:#EAF1F3; stroke:#2F7D94; stroke-width:.36; }
-      #pbed-plan .rec     { fill:none; stroke:#2F7D94; stroke-width:.26; stroke-dasharray:2.4 1.7; }
       #pbed-plan .red     { fill:none; stroke:#8A3B2A; stroke-width:.21; stroke-dasharray:1.6 1.2; }
       #pbed-plan .red-t   { font:2.1px 'Helvetica Neue',Arial,sans-serif; fill:#8A3B2A; }
       /* Dimensioning, architectural convention: extension lines stand off the
@@ -534,42 +537,30 @@
       #pbed-plan .tick    { stroke:#2A2A2A; stroke-width:.24; stroke-linecap:round; }
       #pbed-plan .dim-t   { font:2.6px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
       #pbed-plan .dim-big { font:3.6px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; font-weight:700; }
-      #pbed-plan .dim-s   { font:2.0px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
       #pbed-plan text     { dominant-baseline:middle; }
     </style>
-    <pattern id="pbed-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="5" stroke="#A9A296" stroke-width=".7"/>
-    </pattern>
   </defs>
 
   <!-- ============ SHELL ============ -->
-  <rect x="-4.5" y="-4.5" width="153" height="165" fill="#C9C4B7"/>  <!-- wall band -->
-  <rect x="0" y="0" width="144" height="156" fill="#FBFAF7"/>        <!-- floor -->
+  <rect x="-4.5" y="-4.5" width="153" height="165" fill="#C9C4B7"/>
+  <rect x="0" y="0" width="144" height="156" fill="#FBFAF7"/>
 
   <!-- ============ WALL OPENINGS ============
        Floor finish runs the full 4.5" wall thickness so each passage reads as
-       open; the room outlines further down omit those stretches. Drawn here,
-       before anything else, so nothing paints over their labels. -->
-  <rect x="0" y="156" width="36" height="4.5" fill="#FBFAF7"/>    <!-- south, to hall -->
-  <rect x="-4.5" y="67" width="4.5" height="36" fill="#FBFAF7"/>  <!-- west, to hall -->
-
+       open; the outlines further down omit those stretches. Drawn first so
+       nothing paints over their labels. -->
+  <rect x="0" y="156" width="36" height="4.5" fill="#FBFAF7"/>
+  <rect x="-4.5" y="67" width="4.5" height="36" fill="#FBFAF7"/>
 
   <!-- ============ HALL-TO-HALL WALKWAY, SW CORNER ============
-       36" wide (W-E) x 89" deep (N-S). This is the dedicated route between the
-       two hallways, so it is open floor that has to stay clear rather than a
-       solid obstruction. Drawn as a circulation zone with a route arrow.
-       OPENINGS, now known: one in the SOUTH wall at the foot of the strip
-       (x 0..36), and one in the WEST wall at the strip's north end
-       (y 67..103). So the route runs north up the strip and then turns LEFT
-       out through the west wall — an upside-down L. That turn is why the whole
-       36 x 89 rectangle is reserved rather than just a 36"-wide lane: traffic
-       swings west across the top of it.
-       The strip's EAST side (x = 36) is open to the room for its full length,
-       so the bedroom itself is entered by stepping east off the route. -->
+       36" wide x 89" deep. The dedicated route between the two hallways:
+       open floor that has to stay clear, not a solid obstruction. In from the
+       SOUTH wall, north up the strip, then LEFT out through the WEST wall at
+       its north end — an upside-down L. That turn is why the whole rectangle
+       is reserved rather than a 36"-wide lane. The strip's EAST side is open
+       to the room, so the bedroom is entered by stepping east off the route. -->
   <rect x="0" y="67" width="36" height="89" fill="#EFEDE6"/>
   <rect class="thin" x="0" y="67" width="36" height="89" stroke-dasharray="3 2.2"/>
-  <!-- Upside-down L: in from the south wall, north up the strip, then left
-       out through the west wall. Two-way, so arrowheads at both ends. -->
   <path class="thin" d="M18,148 V85 H7" stroke="#8F8F8F" stroke-dasharray="4 3" fill="none"/>
   <path d="M18,154 l-3.2,-6.4 h6.4 Z" fill="#8F8F8F"/>
   <path d="M1,85 l6.4,-3.2 v6.4 Z" fill="#8F8F8F"/>
@@ -583,120 +574,79 @@
   <text class="lbl-s" x="8" y="120" text-anchor="middle"
         transform="rotate(-90 8 120)">36 x 89</text>
 
-  <!-- ============ ACCENT WALL, EAST ============
-       Zayne slat (wood-look) fluted tile, floor to ceiling, 13'-0" run.
-       Shown as a thin layer on the wall face with the flute rhythm indicated. -->
-  <rect x="142.6" y="0" width="1.4" height="156" fill="#9C7A55"/>
+  <!-- ============ ACCENT WALL, NORTH ============
+       Zayne slat (wood-look) fluted tile, floor to ceiling, now a 12'-0" run
+       of 12 columns instead of 13. -->
+  <rect x="0" y="0" width="144" height="1.4" fill="#9C7A55"/>
   <g stroke="#6B4F3A" stroke-width=".18">
-    <line x1="142.6" y1="6"   x2="144" y2="6"/>   <line x1="142.6" y1="18"  x2="144" y2="18"/>
-    <line x1="142.6" y1="30"  x2="144" y2="30"/>  <line x1="142.6" y1="42"  x2="144" y2="42"/>
-    <line x1="142.6" y1="54"  x2="144" y2="54"/>  <line x1="142.6" y1="66"  x2="144" y2="66"/>
-    <line x1="142.6" y1="78"  x2="144" y2="78"/>  <line x1="142.6" y1="90"  x2="144" y2="90"/>
-    <line x1="142.6" y1="102" x2="144" y2="102"/> <line x1="142.6" y1="114" x2="144" y2="114"/>
-    <line x1="142.6" y1="126" x2="144" y2="126"/> <line x1="142.6" y1="138" x2="144" y2="138"/>
-    <line x1="142.6" y1="150" x2="144" y2="150"/>
+    <line x1="12"  y1="0" x2="12"  y2="1.4"/> <line x1="24"  y1="0" x2="24"  y2="1.4"/>
+    <line x1="36"  y1="0" x2="36"  y2="1.4"/> <line x1="48"  y1="0" x2="48"  y2="1.4"/>
+    <line x1="60"  y1="0" x2="60"  y2="1.4"/> <line x1="72"  y1="0" x2="72"  y2="1.4"/>
+    <line x1="84"  y1="0" x2="84"  y2="1.4"/> <line x1="96"  y1="0" x2="96"  y2="1.4"/>
+    <line x1="108" y1="0" x2="108" y2="1.4"/> <line x1="120" y1="0" x2="120" y2="1.4"/>
+    <line x1="132" y1="0" x2="132" y2="1.4"/>
   </g>
 
-  <!-- ============ ROOM OUTLINE ============
-       Inner face broken at both passages; outer face likewise. -->
+  <!-- ============ ROOM OUTLINE ============ -->
   <path class="outline" d="M0,0 H144 V156 H36 M0,156 V103 M0,67 V0"/>
   <path class="outline" d="M-4.5,-4.5 H148.5 V160.5 H36 M0,160.5 H-4.5 V103 M-4.5,67 V-4.5"/>
 
   <!-- ============ TWIN BEDS ============
        Thuma Essential Bed + Headboard, Walnut, Twin. Frame 44" x 80" overall.
-       Headboards against the east accent wall; beds run 80" WEST. -->
-  <!-- NORTH bed, y 0..44 -->
-  <rect x="141" y="0" width="3" height="44" fill="#6B4F3A"/>
-  <rect class="fix" x="64" y="0" width="77" height="44"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="66" y="3" width="75" height="38" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="131" y="8" width="8" height="28" rx="2"/>
-  <text class="lbl" x="98" y="20" text-anchor="middle">TWIN</text>
-  <text class="lbl-s" x="98" y="25" text-anchor="middle">44 x 80</text>
-  <!-- SOUTH bed, y 112..156 -->
-  <rect x="141" y="112" width="3" height="44" fill="#6B4F3A"/>
-  <rect class="fix" x="64" y="112" width="77" height="44"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="66" y="115" width="75" height="38" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="131" y="120" width="8" height="28" rx="2"/>
-  <text class="lbl" x="98" y="132" text-anchor="middle">TWIN</text>
-  <text class="lbl-s" x="98" y="137" text-anchor="middle">44 x 80</text>
+       WEST bed x 36..80, its west edge on the walkway edge.
+       EAST bed x 100..144, hard against the east wall. -->
+  <rect x="36" y="0" width="44" height="3" fill="#6B4F3A"/>
+  <rect class="fix" x="36" y="3" width="44" height="77"/>
+  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="39" y="4" width="38" height="75" rx="1.5"/>
+  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="42" y="6" width="32" height="8" rx="2"/>
+  <text class="lbl" x="58" y="42" text-anchor="middle">TWIN</text>
+  <text class="lbl-s" x="58" y="47" text-anchor="middle">44 x 80</text>
+  <rect x="100" y="0" width="44" height="3" fill="#6B4F3A"/>
+  <rect class="fix" x="100" y="3" width="44" height="77"/>
+  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="103" y="4" width="38" height="75" rx="1.5"/>
+  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="106" y="6" width="32" height="8" rx="2"/>
+  <text class="lbl" x="122" y="42" text-anchor="middle">TWIN</text>
+  <text class="lbl-s" x="122" y="47" text-anchor="middle">44 x 80</text>
 
-  <!-- ============ SOFA BED, IN THE 68" GAP ============
-       Third iteration of this position. A wall-hugger recliner was rejected —
-       it stops at a lounging angle and this has to make a true flat bed. The
-       Povison Mila was then rejected on size: its smallest is a 2-seat, and
-       nothing in that line comes narrow enough.
+  <!-- ============ SHARED NIGHTSTAND ============
+       Thuma Pedestal Side Table in the 20" gap. One table now reaches both
+       beds — the east-wall scheme could not fit either of them. -->
+  <circle class="fix" cx="90" cy="11" r="8.5"/>
+  <text class="lbl-s" x="90" y="10" text-anchor="middle">side</text>
+  <text class="lbl-s" x="90" y="13.4" text-anchor="middle">table</text>
+  <text class="red-t" x="90" y="25" text-anchor="middle">20" gap</text>
 
-       WHAT THE SEARCH ACTUALLY FOUND: at 68" of width, a MOTORIZED sleeper
-       does not exist. The whole power segment is sofa-scale — Luonto's only
-       power series (Belton) starts at a 73.25"-wide Queen that also wants
-       89.75" from the wall; Gio Italia's power lounge sleepers are 96"–109"
-       wide; Povison's electric sleepers are 116"+. So the choice here is a
-       manual mechanism that still opens to a genuine flat mattress.
-
-       SPECIFIED: Luonto Elfin, Full XL. Confirmed W 59" x D 40" x H 32.5"
-       closed, 85" total depth from the wall opened, "Nest" mechanism, 5" foam
-       mattress, seat height 18". Chosen over the wider Elfin Queen (64") and
-       Ethos Queen (66.25") because 4.5" of clearance each side is a real
-       tolerance for delivery and placement; those leave 2" and 0.9".
-
-       ORIENTATION, confirmed by Luonto's own numbers rather than inferred:
-       the Fantasy Cot in the same range lists a 30" W x 80" L bed at 89.75"
-       from the wall, so the bed's LENGTH runs out from the wall. Head at the
-       accent wall, feet west — the same way round as both twins.
-
-       DEPTH IS NOT THE PROBLEM IT LOOKED LIKE. Opened it reaches x 59, which
-       is 5" past the foot of the beds — but that is open floor, and it stops
-       23" short of the walkway's east edge at x 36. -->
-  <rect class="rec" x="59" y="48.5" width="85" height="59" rx="2"/>
-  <text class="teal" x="66" y="78" text-anchor="middle" font-size="2.2"
-        transform="rotate(-90 66 78)">OPEN: 85" from wall</text>
-  <rect class="prop" x="104" y="48.5" width="40" height="59" rx="2.5"/>
-  <rect fill="#fff" stroke="#2F7D94" stroke-width=".26" x="108" y="54" width="32" height="48" rx="2"/>
-  <text class="teal" x="124" y="63" text-anchor="middle" font-size="2.6">LUONTO ELFIN</text>
-  <text class="teal" x="124" y="68" text-anchor="middle" font-size="2.1">Full XL sofa bed</text>
-  <text class="teal" x="124" y="73" text-anchor="middle" font-size="2.1">opens to a true flat</text>
-  <text class="teal" x="124" y="78" text-anchor="middle" font-size="2.1">full mattress</text>
-  <text class="lbl-s" x="124" y="85" text-anchor="middle">closed 59 x 40</text>
-  <text class="red-t" x="124" y="91" text-anchor="middle" font-size="2.0">MANUAL — no motorised</text>
-  <text class="red-t" x="124" y="95.5" text-anchor="middle" font-size="2.0">sleeper exists this narrow</text>
-  <text class="lbl-s" x="124" y="101" text-anchor="middle">head to the accent wall</text>
-  <!-- 4.5" either side -->
-  <text class="red-t" x="124" y="45" text-anchor="middle">4.5"</text>
-  <text class="red-t" x="124" y="111" text-anchor="middle">4.5"</text>
-  <!-- it passes the bed feet, into free floor -->
-  <line class="red" x1="64" y1="48.5" x2="64" y2="107.5"/>
-  <text class="red-t" x="55" y="78" text-anchor="middle" font-size="1.9"
-        transform="rotate(-90 55 78)">5" past bed feet — 23" short of walkway</text>
-
-  <!-- ============ REMAINING FLOOR ============ -->
-  <!-- Usable floor is an L: the 64 x 67 zone north of the walkway, plus the
-       28 x 89 band between the walkway and the foot of the south bed. Both are
-       free floor — only the walkway itself has to stay clear. -->
-  <text class="lbl" x="32" y="30" text-anchor="middle">OPEN ZONE</text>
-  <text class="lbl-s" x="32" y="35" text-anchor="middle">64 x 67</text>
-  <text class="lbl-s" x="32" y="40" text-anchor="middle">closet + built-in desk (TBD)</text>
-  <text class="lbl" x="46" y="112" text-anchor="middle" transform="rotate(-90 46 112)">USABLE</text>
-  <text class="lbl-s" x="51" y="112" text-anchor="middle" transform="rotate(-90 51 112)">28 x 89</text>
+  <!-- ============ OPEN AREA ============ -->
+  <text class="lbl" x="90" y="112" text-anchor="middle">OPEN AREA</text>
+  <text class="lbl-s" x="90" y="117" text-anchor="middle">108 x 76 — one clear rectangle</text>
+  <text class="lbl-s" x="90" y="122" text-anchor="middle">desk, play, closet approach</text>
+  <text class="lbl-s" x="18" y="34" text-anchor="middle">36 x 67</text>
 
   <!-- ============ WALL LABELS ============ -->
-  <text class="wall-lbl" x="72" y="-2.2" text-anchor="middle">NORTH WALL</text>
-  <text class="wall-lbl" x="72" y="158.3" text-anchor="middle">SOUTH WALL</text>
+  <text class="wall-lbl" x="72" y="-2.2" text-anchor="middle">NORTH — ZAYNE SLAT ACCENT WALL (12'-0")</text>
+  <text class="wall-lbl" x="90" y="158.3" text-anchor="middle">SOUTH WALL</text>
   <text class="wall-lbl" x="-2.2" y="33" text-anchor="middle" transform="rotate(-90 -2.2 33)">WEST WALL</text>
-  <text class="wall-lbl" x="146.3" y="78" text-anchor="middle"
-        transform="rotate(-90 146.3 78)">EAST — ZAYNE SLAT ACCENT WALL</text>
+  <text class="wall-lbl" x="146.3" y="110" text-anchor="middle"
+        transform="rotate(-90 146.3 110)">EAST WALL</text>
 
   <!-- ============ DIMENSIONS — TOP (W-E) ============ -->
   <line class="extline" x1="0"   y1="-6.5" x2="0"   y2="-24"/>
-  <line class="extline" x1="64"  y1="-6.5" x2="64"  y2="-14"/>
+  <line class="extline" x1="36"  y1="-6.5" x2="36"  y2="-14"/>
+  <line class="extline" x1="80"  y1="-6.5" x2="80"  y2="-14"/>
+  <line class="extline" x1="100" y1="-6.5" x2="100" y2="-14"/>
   <line class="extline" x1="144" y1="-6.5" x2="144" y2="-24"/>
   <line class="dimline" x1="0" y1="-12" x2="144" y2="-12"/>
   <g class="tick">
     <line x1="-1.1" y1="-10.9" x2="1.1" y2="-13.1"/>
-    <line x1="62.9" y1="-10.9" x2="65.1" y2="-13.1"/>
+    <line x1="34.9" y1="-10.9" x2="37.1" y2="-13.1"/>
+    <line x1="78.9" y1="-10.9" x2="81.1" y2="-13.1"/>
+    <line x1="98.9" y1="-10.9" x2="101.1" y2="-13.1"/>
     <line x1="142.9" y1="-10.9" x2="145.1" y2="-13.1"/>
   </g>
-  <text class="dim-t" x="32" y="-13.6" text-anchor="middle">64"</text>
-  <text class="dim-t" x="104" y="-13.6" text-anchor="middle">80"</text>
+  <text class="dim-t" x="18" y="-13.6" text-anchor="middle">36"</text>
+  <text class="dim-t" x="58" y="-13.6" text-anchor="middle">44"</text>
+  <text class="dim-t" x="90" y="-13.6" text-anchor="middle">20"</text>
+  <text class="dim-t" x="122" y="-13.6" text-anchor="middle">44"</text>
   <line class="dimline" x1="0" y1="-22" x2="144" y2="-22"/>
   <g class="tick">
     <line x1="-1.1" y1="-20.9" x2="1.1" y2="-23.1"/>
@@ -706,19 +656,16 @@
 
   <!-- ============ DIMENSIONS — RIGHT (N-S) ============ -->
   <line class="extline" x1="150.5" y1="0"   x2="170" y2="0"/>
-  <line class="extline" x1="150.5" y1="44"  x2="160" y2="44"/>
-  <line class="extline" x1="150.5" y1="112" x2="160" y2="112"/>
+  <line class="extline" x1="150.5" y1="80"  x2="160" y2="80"/>
   <line class="extline" x1="150.5" y1="156" x2="170" y2="156"/>
   <line class="dimline" x1="158" y1="0" x2="158" y2="156"/>
   <g class="tick">
     <line x1="156.9" y1="-1.1" x2="159.1" y2="1.1"/>
-    <line x1="156.9" y1="42.9" x2="159.1" y2="45.1"/>
-    <line x1="156.9" y1="110.9" x2="159.1" y2="113.1"/>
+    <line x1="156.9" y1="78.9" x2="159.1" y2="81.1"/>
     <line x1="156.9" y1="154.9" x2="159.1" y2="157.1"/>
   </g>
-  <text class="dim-t" x="159.6" y="22" text-anchor="middle" transform="rotate(-90 159.6 22)">44"</text>
-  <text class="dim-t" x="159.6" y="78" text-anchor="middle" transform="rotate(-90 159.6 78)">68"</text>
-  <text class="dim-t" x="159.6" y="134" text-anchor="middle" transform="rotate(-90 159.6 134)">44"</text>
+  <text class="dim-t" x="159.6" y="40" text-anchor="middle" transform="rotate(-90 159.6 40)">80"</text>
+  <text class="dim-t" x="159.6" y="118" text-anchor="middle" transform="rotate(-90 159.6 118)">76"</text>
   <line class="dimline" x1="168" y1="0" x2="168" y2="156"/>
   <g class="tick">
     <line x1="166.9" y1="-1.1" x2="169.1" y2="1.1"/>
@@ -726,7 +673,7 @@
   </g>
   <text class="dim-big" x="170.6" y="78" text-anchor="middle" transform="rotate(-90 170.6 78)">156" (13'-0")</text>
 
-  <!-- ============ DIMENSIONS — LEFT (the block, N-S) ============ -->
+  <!-- ============ DIMENSIONS — LEFT (the walkway, N-S) ============ -->
   <line class="extline" x1="-6.5" y1="67"  x2="-16" y2="67"/>
   <line class="extline" x1="-6.5" y1="156" x2="-16" y2="156"/>
   <line class="dimline" x1="-14" y1="67" x2="-14" y2="156"/>
@@ -736,20 +683,10 @@
   </g>
   <text class="dim-t" x="-15.6" y="111" text-anchor="middle" transform="rotate(-90 -15.6 111)">89"</text>
 
-  <!-- ============ DIMENSIONS — BOTTOM (the block, W-E) ============ -->
-  <line class="extline" x1="0"  y1="162.5" x2="0"  y2="172"/>
-  <line class="extline" x1="36" y1="162.5" x2="36" y2="172"/>
-  <line class="dimline" x1="0" y1="169" x2="36" y2="169"/>
-  <g class="tick">
-    <line x1="-1.1" y1="167.9" x2="1.1" y2="170.1"/>
-    <line x1="34.9" y1="167.9" x2="37.1" y2="170.1"/>
-  </g>
-  <text class="dim-t" x="18" y="167.4" text-anchor="middle">36"</text>
-
-  <!-- ============ OPEN QUESTION ============ -->
-  <text class="red-t" x="72" y="174" text-anchor="middle">WINDOW POSITIONS NOT YET RECORDED</text>
+  <!-- ============ OPEN QUESTIONS ============ -->
+  <text class="red-t" x="72" y="174" text-anchor="middle">ASSUMES THE CLOSET IS NOT ON THE NORTH WALL   |   WINDOWS NOT YET RECORDED</text>
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. The hall-to-hall walkway in the southwest corner has to stay clear, which is what forces the beds onto the east wall &mdash; it is the only wall that takes two twins plus a gap. The 28&quot; band beside it is usable floor. The walkway enters from the south wall and turns left out through the west wall, so it reads as an upside-down L. Between the beds, a Luonto Elfin Full XL sofa bed that opens to a true flat full mattress, head to the accent wall like the twins. It is manual, not motorised &mdash; at 68&quot; of width no motorised sleeper exists, the whole power segment starting around 73&quot;. Window positions not yet recorded.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the north wall, beds pushed east of the hall-to-hall walkway that runs down the west side and turns out through the west wall. That leaves a 20&quot; gap for one shared nightstand and, more importantly, one clear 108&quot; x 76&quot; area south of the beds rather than the awkward L the east-wall arrangement produced. The accent wall follows the headboards to the 12-foot north wall. Closet position and windows not yet recorded.</p>
     </div>
 
       
