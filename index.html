@@ -480,7 +480,7 @@
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-26 -30 202 208" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the east accent wall with a 68 inch gap between them holding a wall-hugger power cuddler recliner, and an unusable 36 by 89 inch block in the southwest corner">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the east accent wall with a 68 inch gap between them holding a wall-hugger power cuddler recliner, and the hall-to-hall walkway occupying the southwest corner">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -490,14 +490,20 @@
     Room is 144" (12'-0") W-E  x  156" (13'-0") N-S.
     Wall band is 4.5" thick, so it spans -4.5..148.5 and -4.5..160.5.
 
+    THE SW BLOCK (x 0..36, y 67..156) IS THE HALL-TO-HALL WALKWAY.
+    It is not dead space and not an obstruction — it is the dedicated route
+    connecting the two hallways, so it carries traffic and has to stay clear.
+    For furniture planning it behaves the same as a solid block (nothing can
+    stand in it), which is why the bed logic below is unchanged.
+
     WHY THE BEDS ARE ON THE EAST WALL — this is forced, not chosen.
-    The unusable block in the SW corner (x 0..36, y 67..156) rules out the
-    other three walls for a two-bed-plus-gap layout:
-      WEST  156" wall, but the block eats 89" of it -> 67" clear, and two
+    The walkway takes the SW corner out of play, which rules out the other
+    three walls for a two-bed-plus-gap layout:
+      WEST  156" wall, but the walkway takes 89" of it -> 67" clear, and two
             44" twins need 88". Does not fit at all.
-      SOUTH 144" wall, block eats 36" -> 108" clear -> only a 20" gap.
+      SOUTH 144" wall, walkway takes 36" -> 108" clear -> only a 20" gap.
       NORTH 144" wall is clear, but beds project 80" south and the west bed
-            would run into the block from y 67 to 80.
+            would land in the walkway from y 67 to 80.
       EAST  156" and completely clear. 44 + 68 + 44 = 156 exactly.
     The east wall is also the 13'-0" run the Zayne slat accent wall is
     already sized for in the budget (13 columns x 11.81" = 153.5" of tile).
@@ -540,14 +546,22 @@
   <rect x="-4.5" y="-4.5" width="153" height="165" fill="#C9C4B7"/>  <!-- wall band -->
   <rect x="0" y="0" width="144" height="156" fill="#FBFAF7"/>        <!-- floor -->
 
-  <!-- ============ UNUSABLE BLOCK, SW CORNER ============
-       36" wide (W-E) x 89" deep (N-S), given as measured. What it actually is
-       has not been identified yet — stair bulkhead, closet, chase. It is drawn
-       as pure obstruction, which is the conservative reading. -->
-  <rect x="0" y="67" width="36" height="89" fill="url(#pbed-hatch)"/>
-  <rect class="outline" x="0" y="67" width="36" height="89"/>
-  <text class="lbl" x="18" y="105" text-anchor="middle">UNUSABLE</text>
-  <text class="lbl-s" x="18" y="110" text-anchor="middle">36 x 89</text>
+  <!-- ============ HALL-TO-HALL WALKWAY, SW CORNER ============
+       36" wide (W-E) x 89" deep (N-S). This is the dedicated route between the
+       two hallways, so it is open floor that has to stay clear rather than a
+       solid obstruction. Drawn as a circulation zone with a route arrow.
+       Its two openings are what connect the hallways. Their positions are not
+       recorded yet, so NO route direction is drawn — with openings possibly in
+       the west and south walls the route could turn a corner inside the zone,
+       and an arrow down the long axis would be asserting something unknown. -->
+  <rect x="0" y="67" width="36" height="89" fill="#EFEDE6"/>
+  <rect class="thin" x="0" y="67" width="36" height="89" stroke-dasharray="3 2.2"/>
+  <text class="lbl" x="26" y="105" text-anchor="middle"
+        transform="rotate(-90 26 105)">WALKWAY</text>
+  <text class="lbl-s" x="31" y="105" text-anchor="middle"
+        transform="rotate(-90 31 105)">hall to hall — keep clear</text>
+  <text class="lbl-s" x="8" y="105" text-anchor="middle"
+        transform="rotate(-90 8 105)">36 x 89</text>
 
   <!-- ============ ACCENT WALL, EAST ============
        Zayne slat (wood-look) fluted tile, floor to ceiling, 13'-0" run.
@@ -611,10 +625,14 @@
         transform="rotate(-90 69.5 90)">10.3" clear of bed feet</text>
 
   <!-- ============ REMAINING FLOOR ============ -->
+  <!-- Usable floor is an L: the 64 x 67 zone north of the walkway, plus the
+       28 x 89 band between the walkway and the foot of the south bed. Both are
+       free floor — only the walkway itself has to stay clear. -->
   <text class="lbl" x="32" y="30" text-anchor="middle">OPEN ZONE</text>
   <text class="lbl-s" x="32" y="35" text-anchor="middle">64 x 67</text>
   <text class="lbl-s" x="32" y="40" text-anchor="middle">closet + built-in desk (TBD)</text>
-  <text class="lbl-s" x="50" y="120" text-anchor="middle" transform="rotate(-90 50 120)">28" walkway</text>
+  <text class="lbl" x="46" y="112" text-anchor="middle" transform="rotate(-90 46 112)">USABLE</text>
+  <text class="lbl-s" x="51" y="112" text-anchor="middle" transform="rotate(-90 51 112)">28 x 89</text>
 
   <!-- ============ WALL LABELS ============ -->
   <text class="wall-lbl" x="72" y="-2.2" text-anchor="middle">NORTH WALL</text>
@@ -685,9 +703,9 @@
   <text class="dim-t" x="18" y="167.4" text-anchor="middle">36"</text>
 
   <!-- ============ OPEN QUESTION ============ -->
-  <text class="red-t" x="72" y="174" text-anchor="middle">DOOR SWING + WINDOW POSITIONS NOT YET RECORDED</text>
+  <text class="red-t" x="72" y="174" text-anchor="middle">WALKWAY OPENINGS + WINDOW POSITIONS NOT YET RECORDED</text>
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. The unusable 36&quot; x 89&quot; block in the southwest corner is what forces the beds onto the east wall &mdash; it is the only wall that takes two twins plus a gap. Door swing and window positions not yet recorded.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. The hall-to-hall walkway in the southwest corner has to stay clear, which is what forces the beds onto the east wall &mdash; it is the only wall that takes two twins plus a gap. The 28&quot; band beside it is usable floor. Walkway openings and window positions not yet recorded.</p>
     </div>
 
       
