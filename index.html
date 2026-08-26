@@ -871,13 +871,34 @@
        where your head goes when you lean in. Mirror handled separately. -->
   <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
 
-  <!-- ============ NORTH WALL FITTINGS ============ -->
-  <circle class="blk" cx="19.04" cy=".92" r=".33"/>
-  <circle class="blk" cx="22.38" cy=".92" r=".33"/>
-  <circle class="blk" cx="25.71" cy=".92" r=".33"/>
-  <text class="lbl-s" x="22.38" y="2.6" text-anchor="middle">hooks (3)</text>
-  <line x1="36.08" y1="1.17" x2="56" y2="1.17" stroke="#2A2A2A" stroke-width=".25"/>
-  <text class="lbl-s" x="46" y="3" text-anchor="middle">towel bar</text>
+  <!-- ============ NORTH WALL FITTINGS (dry side) ============
+       The towel bar is gone. The three hooks move here from the wet area, so
+       towels hang on the DRY side instead of inside the spray zone, and the
+       recessed medicine cabinet centres over them on the same line the towel
+       bar used to run (centre x 46.04).
+       Cabinet is recessed 3.5" — a stud bay — rather than surface mounted, so
+       nothing projects into the room. This is the dry section, so unlike the
+       corner sink wall there is no waterproofing membrane to breach. -->
+  <rect x="37.79" y="-3.5" width="16.5" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
+  <text class="lbl-s" x="46.04" y="-1.75" text-anchor="middle">recessed med. cabinet</text>
+  <circle class="blk" cx="42.7"  cy=".92" r=".33"/>
+  <circle class="blk" cx="46.04" cy=".92" r=".33"/>
+  <circle class="blk" cx="49.38" cy=".92" r=".33"/>
+  <text class="lbl-s" x="46.04" y="2.6" text-anchor="middle">hooks (3)</text>
+
+  <!-- ============ ELECTRICAL ============
+       Switch bank + outlet on the north wall, east of the cabinet — i.e. by the
+       pocket door, where you reach on entering.
+       Second outlet on the SOUTH wall for a possible future smart toilet. It
+       CANNOT go on the east wall: that run (y 31..61) is the pocket-door cavity
+       the slab slides into, so nothing may be let into it. South wall, just east
+       of the tank (tank ends x 55.83), keeps it within cord reach. -->
+  <rect class="blk" x="56.4" y="-.7" width="2.6" height=".7"/>
+  <text class="lbl-s" x="57.7" y="3.4" text-anchor="middle"
+        transform="rotate(-90 57.7 3.4)">sw + outlet</text>
+  <rect class="blk" x="57.2" y="61" width="1.8" height=".7"/>
+  <text class="lbl-s" x="58.4" y="52" text-anchor="middle"
+        transform="rotate(-90 58.4 52)">outlet (smart WC)</text>
 
   <!-- ============ SHOWER ============ -->
   <!-- 30" code circle: CPC requires a 30" dia. clear circle to fit inside the
@@ -888,6 +909,10 @@
   <!-- valve, west wall -->
   <rect class="blk" x="-.6" y="30.08" width=".6" height="1.92"/>
   <text class="lbl-s" x="-2.2" y="31.6" text-anchor="middle" transform="rotate(-90 -2.2 31.6)">valve</text>
+  <!-- single hook, west wall, just OUTSIDE the curtain line (north of it) so a
+       towel is reachable from the sink/walk-in side without being in the spray -->
+  <circle class="blk" cx=".92" cy="23.3" r=".33"/>
+  <text class="lbl-s" x="3.1" y="23.3">hook</text>
   <!-- support bar -->
   <line x1="0" y1="25" x2="30.5" y2="25" stroke="#6B6B6B" stroke-width=".133"/>
   <text class="lbl" x="14.7" y="23.7" text-anchor="middle">support bar</text>
@@ -936,7 +961,7 @@
   <text class="lbl-s" x="61.5" y="21" text-anchor="middle" transform="rotate(-90 61.5 21)">shown half-open</text>
 
   <!-- ============ WALL LABELS ============ -->
-  <text class="wall-lbl" x="46" y="-2.1" text-anchor="middle">NORTH WALL</text>
+  <text class="wall-lbl" x="26" y="-2.1" text-anchor="middle">NORTH WALL</text>
   <text class="wall-lbl" x="46" y="63.4" text-anchor="middle">SOUTH WALL</text>
   <text class="wall-lbl" x="-2.4" y="24" text-anchor="middle" transform="rotate(-90 -2.4 24)">WEST WALL</text>
 
