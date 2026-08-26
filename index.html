@@ -885,15 +885,22 @@
        Two flat mirrors meeting in the corner is the buildable way to get a
        corner mirror here: no manufacturer makes one that mounts across a 90
        degree corner, so a pair on the two walls is the real-world equivalent.
-       THE LAP AT THE CORNER: two 1/2" surface-mounted mirrors cannot both run
-       through — one has to lap the other, and the drawing shows which. The WEST
-       mirror runs through to y=0; the NORTH mirror starts at x=0.5 and butts
-       into its face. West runs through because the west wall is the wet one —
-       valve, linear drain and the rain head's fall are all on it — so the
-       uninterrupted face is the one taking the water, and the butt joint sits
-       on the drier north side. Silicone the joint rather than trying to close
-       it: no framed inside corner is truly square, and a caulked seam also
-       keeps water off the most de-silvering-prone edge in the room.
+       THE CORNER IS MITERED. Each pane is cut at 45 degrees where it reaches
+       the corner, so the two meet on the diagonal from (0,0) to (0.5,0.5) and
+       neither laps the other. That is why the pair is drawn perfectly
+       symmetrical about the corner bisector y = x — a lap would have made one
+       wall's mirror 0.5" shorter than the other's.
+       Why miter and not butt: mirror is silvered on its BACK face, so a butted
+       pane presents its raw edge across the other one's reflective surface —
+       a dark bar right where the two reflections are supposed to join. A miter
+       carries the silvering to the corner line, so the reflection turns the
+       corner unbroken. That is the whole reason for a pair here.
+       SPEC IT PROPERLY: the miter has to be cut AND polished by the glass shop
+       (a sawn miter is cloudy), and the feathered front arris is fragile, so
+       set the panes with a silicone hairline at the joint rather than glass
+       hard against glass. That also keeps water out of the most
+       de-silvering-prone edge in the room, and absorbs the fact that no framed
+       inside corner is ever truly 90 degrees.
        Surface mount, NOT recessed — these walls are inside the wet zone, and a
        recess would mean breaching the waterproofing membrane and field-building
        a waterproofed box.
@@ -901,9 +908,12 @@
        tile. That is the whole point after the 5" deep cabinet was rejected for
        landing where your head goes. Labels sit in the wall band so the basin
        stays legible. -->
-  <rect x="0.5" y="0" width="14.42" height=".5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="7.71" y="-1.75" text-anchor="middle" font-size=".8">mirror</text>
-  <rect x="0" y="0" width=".5" height="14.92" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <!-- North pane: back face on y=0 runs to the corner, front face on y=0.5
+       stops at x=0.5 — the 45 degree miter closes the gap between them. -->
+  <path d="M0,0 L14.92,0 L14.92,.5 L.5,.5 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <text class="teal" x="7.46" y="-1.75" text-anchor="middle" font-size=".8">mirror</text>
+  <!-- West pane: the same shape reflected about y = x. -->
+  <path d="M0,0 L0,14.92 L.5,14.92 L.5,.5 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
   <text class="teal" x="-1.75" y="7.46" text-anchor="middle" font-size=".8"
         transform="rotate(-90 -1.75 7.46)">mirror</text>
   <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
