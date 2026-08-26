@@ -479,8 +479,8 @@
       <p>Two separate twin beds give the kids who sleep here their own space, each with its own Thuma Pedestal Side Table, Walnut — the same nightstand used in the secondary bedroom. The 12-foot north wall behind both headboards is wrapped floor to ceiling in the same wood-look plank tile used on the entryway wall, run vertically in 12 columns to pull the eye up — a durable, wipeable surface right where the beds make contact. Checkerboard floor, gray walls in glossy finish elsewhere in the room. Closets stay open — doors come off, frames stay in place — fitted with built-in organizers and a built-in desktop. All hardware in matte black.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-26 -30 202 208" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the north accent wall with a shared nightstand between them, the hall-to-hall walkway down the west side, and one large open area south of the beds">
+      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-26 -30 212 208" role="img"
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the north accent wall with a shared nightstand between them, the hall-to-hall walkway down the west side, one large open area south of the beds, and a 41 inch window on the east wall">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -514,8 +514,15 @@
     pieces / 6 boxes, which makes this wall identical to the secondary
     bedroom's.
 
+    EAST WINDOW: 41" wide, y 48..89 (48" off the north wall, 67" off the
+    south). The east bed runs along that wall from y 0 to 80, so 32" of the
+    window sits alongside the bed and 9" spills into the open area. That is
+    normal and not a clash — a Thuma platform plus mattress tops out around
+    23", well below any sill — but it does mean blinds and the opening hardware
+    sit behind a bed on that stretch. Worth a look before it is fixed.
+
     STILL UNKNOWN: where the closet and its built-in desktop are. This scheme
-    assumes they are NOT on the north wall. Window positions also unrecorded.
+    assumes they are NOT on the north wall.
   -->
   <defs>
     <style>
@@ -551,6 +558,7 @@
        nothing paints over their labels. -->
   <rect x="0" y="156" width="36" height="4.5" fill="#FBFAF7"/>
   <rect x="-4.5" y="67" width="4.5" height="36" fill="#FBFAF7"/>
+  <rect x="144" y="48" width="4.5" height="41" fill="#FBFAF7"/>   <!-- east window -->
 
   <!-- ============ HALL-TO-HALL WALKWAY, SW CORNER ============
        36" wide x 89" deep. The dedicated route between the two hallways:
@@ -588,8 +596,12 @@
   </g>
 
   <!-- ============ ROOM OUTLINE ============ -->
-  <path class="outline" d="M0,0 H144 V156 H36 M0,156 V103 M0,67 V0"/>
-  <path class="outline" d="M-4.5,-4.5 H148.5 V160.5 H36 M0,160.5 H-4.5 V103 M-4.5,67 V-4.5"/>
+  <path class="outline" d="M0,0 H144 V48 M144,89 V156 H36 M0,156 V103 M0,67 V0"/>
+  <path class="outline" d="M-4.5,-4.5 H148.5 V48 M148.5,89 V160.5 H36 M0,160.5 H-4.5 V103 M-4.5,67 V-4.5"/>
+  <!-- glazing line, standard plan symbol -->
+  <line x1="146.25" y1="48" x2="146.25" y2="89" stroke="#2F7D94" stroke-width=".3"/>
+  <text class="teal" x="151.5" y="68.5" text-anchor="middle" font-size="2.2"
+        transform="rotate(-90 151.5 68.5)">WINDOW 41"</text>
 
   <!-- ============ TWIN BEDS ============
        Thuma Essential Bed + Headboard, Walnut, Twin. Frame 44" x 80" overall.
@@ -655,23 +667,37 @@
   <text class="dim-big" x="72" y="-24.6" text-anchor="middle">144" (12'-0")</text>
 
   <!-- ============ DIMENSIONS — RIGHT (N-S) ============ -->
-  <line class="extline" x1="150.5" y1="0"   x2="170" y2="0"/>
-  <line class="extline" x1="150.5" y1="80"  x2="160" y2="80"/>
-  <line class="extline" x1="150.5" y1="156" x2="170" y2="156"/>
+  <line class="extline" x1="154.5" y1="0"   x2="180" y2="0"/>
+  <line class="extline" x1="154.5" y1="48"  x2="160" y2="48"/>
+  <line class="extline" x1="154.5" y1="80"  x2="170" y2="80"/>
+  <line class="extline" x1="154.5" y1="89"  x2="160" y2="89"/>
+  <line class="extline" x1="154.5" y1="156" x2="180" y2="156"/>
+  <!-- window chain -->
   <line class="dimline" x1="158" y1="0" x2="158" y2="156"/>
   <g class="tick">
     <line x1="156.9" y1="-1.1" x2="159.1" y2="1.1"/>
-    <line x1="156.9" y1="78.9" x2="159.1" y2="81.1"/>
+    <line x1="156.9" y1="46.9" x2="159.1" y2="49.1"/>
+    <line x1="156.9" y1="87.9" x2="159.1" y2="90.1"/>
     <line x1="156.9" y1="154.9" x2="159.1" y2="157.1"/>
   </g>
-  <text class="dim-t" x="159.6" y="40" text-anchor="middle" transform="rotate(-90 159.6 40)">80"</text>
-  <text class="dim-t" x="159.6" y="118" text-anchor="middle" transform="rotate(-90 159.6 118)">76"</text>
+  <text class="dim-t" x="159.6" y="24" text-anchor="middle" transform="rotate(-90 159.6 24)">48"</text>
+  <text class="dim-t" x="159.6" y="68.5" text-anchor="middle" transform="rotate(-90 159.6 68.5)">41"</text>
+  <text class="dim-t" x="159.6" y="122.5" text-anchor="middle" transform="rotate(-90 159.6 122.5)">67"</text>
+  <!-- bed chain -->
   <line class="dimline" x1="168" y1="0" x2="168" y2="156"/>
   <g class="tick">
     <line x1="166.9" y1="-1.1" x2="169.1" y2="1.1"/>
+    <line x1="166.9" y1="78.9" x2="169.1" y2="81.1"/>
     <line x1="166.9" y1="154.9" x2="169.1" y2="157.1"/>
   </g>
-  <text class="dim-big" x="170.6" y="78" text-anchor="middle" transform="rotate(-90 170.6 78)">156" (13'-0")</text>
+  <text class="dim-t" x="169.6" y="40" text-anchor="middle" transform="rotate(-90 169.6 40)">80"</text>
+  <text class="dim-t" x="169.6" y="118" text-anchor="middle" transform="rotate(-90 169.6 118)">76"</text>
+  <line class="dimline" x1="178" y1="0" x2="178" y2="156"/>
+  <g class="tick">
+    <line x1="176.9" y1="-1.1" x2="179.1" y2="1.1"/>
+    <line x1="176.9" y1="154.9" x2="179.1" y2="157.1"/>
+  </g>
+  <text class="dim-big" x="180.6" y="78" text-anchor="middle" transform="rotate(-90 180.6 78)">156" (13'-0")</text>
 
   <!-- ============ DIMENSIONS — LEFT (the walkway, N-S) ============ -->
   <line class="extline" x1="-6.5" y1="67"  x2="-16" y2="67"/>
@@ -684,9 +710,9 @@
   <text class="dim-t" x="-15.6" y="111" text-anchor="middle" transform="rotate(-90 -15.6 111)">89"</text>
 
   <!-- ============ OPEN QUESTIONS ============ -->
-  <text class="red-t" x="72" y="174" text-anchor="middle">ASSUMES THE CLOSET IS NOT ON THE NORTH WALL   |   WINDOWS NOT YET RECORDED</text>
+  <text class="red-t" x="72" y="174" text-anchor="middle">ASSUMES THE CLOSET IS NOT ON THE NORTH WALL</text>
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the north wall, beds pushed east of the hall-to-hall walkway that runs down the west side and turns out through the west wall. That leaves a 20&quot; gap for one shared nightstand and, more importantly, one clear 108&quot; x 76&quot; area south of the beds rather than the awkward L the east-wall arrangement produced. The accent wall follows the headboards to the 12-foot north wall. Closet position and windows not yet recorded.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the north wall, beds pushed east of the hall-to-hall walkway that runs down the west side and turns out through the west wall. That leaves a 20&quot; gap for one shared nightstand and, more importantly, one clear 108&quot; x 76&quot; area south of the beds rather than the awkward L the east-wall arrangement produced. The accent wall follows the headboards to the 12-foot north wall. The east window (41&quot;, 48&quot; off the north wall) runs alongside the east bed for 32&quot; of its width &mdash; below sill height, so not a clash, but blinds and opening hardware land behind a bed there. Closet position not yet recorded.</p>
     </div>
 
       
