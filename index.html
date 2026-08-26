@@ -921,10 +921,13 @@
   <!-- valve, west wall -->
   <rect class="blk" x="-.6" y="30.08" width=".6" height="1.92"/>
   <text class="lbl-s" x="-2.2" y="31.6" text-anchor="middle" transform="rotate(-90 -2.2 31.6)">valve</text>
-  <!-- single hook, west wall, just OUTSIDE the curtain line (north of it) so a
-       towel is reachable from the sink/walk-in side without being in the spray -->
-  <circle class="blk" cx=".92" cy="23.3" r=".33"/>
-  <text class="lbl-s" x="3.1" y="23.3">hook</text>
+  <!-- Single hook, west wall, OUTSIDE the curtain line (north of it) so a towel
+       is reachable from the sink/walk-in side without being in the spray.
+       Centred N-S in the clear run between the sink and the curtain: the basin
+       leaves the west wall at y 14.92 and the support bar is at y 25, so the
+       midpoint is (14.92 + 25) / 2 = 19.96. -->
+  <circle class="blk" cx=".92" cy="19.96" r=".33"/>
+  <text class="lbl-s" x="3.1" y="19.96">hook</text>
   <!-- support bar -->
   <line x1="0" y1="25" x2="30.5" y2="25" stroke="#6B6B6B" stroke-width=".133"/>
   <text class="lbl" x="14.7" y="23.7" text-anchor="middle">support bar</text>
