@@ -780,6 +780,9 @@
       #dsbath-plan .teal    { fill:#2F7D94; }
       /* Items above the plan cut plane are dashed (drafting convention). */
       #dsbath-plan .over    { fill:none; stroke:#2A2A2A; stroke-width:.09; stroke-dasharray:.75 .5; }
+      /* Faint code-compliance geometry (clear-circle tests etc). */
+      #dsbath-plan .code    { fill:none; stroke:#9BA6A9; stroke-width:.07; stroke-dasharray:1.2 .9; }
+      #dsbath-plan .code-t  { font:.8px 'Helvetica Neue',Arial,sans-serif; fill:#8B979A; }
       #dsbath-plan .red     { fill:none; stroke:#8A3B2A; stroke-width:.083; stroke-dasharray:.55 .45; }
       #dsbath-plan .red-t   { font:.85px 'Helvetica Neue',Arial,sans-serif; fill:#8A3B2A; }
       /* Dimensioning, architectural convention: extension lines stand off the
@@ -842,13 +845,16 @@
   <circle class="blk" cx="2.33" cy="2.17" r=".33"/>
   <text class="lbl" x="6" y="2.3">corner sink</text>
 
-  <!-- ============ MEDICINE CABINET ============
-       West wall, above the corner sink. Centred on the 24" walk-in opening
-       (that opening runs y 0..24.08, so its centre is y 12.04), 16.5" long x 5"
-       deep. Dashed because it sits above the plan cut plane — it hangs over the
-       sink rather than standing on the floor. -->
-  <rect class="over" x="0" y="3.79" width="5" height="16.5"/>
-  <text class="lbl-s" x="6.2" y="21.7">medicine cabinet</text>
+  <!-- ============ WEST WALL NOOK (over the sink) ============
+       Replaces a surface-mount medicine cabinet: a ~5" deep box projecting off
+       the wall at face height, directly over a corner sink, lands exactly where
+       your head goes when you lean in. Recessed instead, so nothing projects
+       into the walk-in path. Same 12" x 3.5" as the other two nooks; centred on
+       the 24" walk-in opening (y 0..24.08), so centre y = 12.04.
+       Mirror is handled separately — see the design book notes. -->
+  <rect x="-3.5" y="6.04" width="3.5" height="12" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
+  <text class="lbl-s" x="-1.75" y="12.04" text-anchor="middle"
+        transform="rotate(-90 -1.75 12.04)">nook</text>
   <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
 
   <!-- ============ NORTH WALL FITTINGS ============ -->
@@ -860,6 +866,11 @@
   <text class="lbl-s" x="46" y="3" text-anchor="middle">towel bar</text>
 
   <!-- ============ SHOWER ============ -->
+  <!-- 30" code circle: CPC requires a 30" dia. clear circle to fit inside the
+       shower compartment. Drawn faint as a compliance check, concentric with the
+       rainhead. The wet section is 30.5" wide, so it clears by 1/4" a side. -->
+  <circle class="code" cx="15.25" cy="42.5" r="15"/>
+  <text class="code-t" x="15.25" y="29.4" text-anchor="middle">30&quot;</text>
   <!-- valve, west wall -->
   <rect class="blk" x="-.6" y="30.08" width=".6" height="1.92"/>
   <text class="lbl-s" x="-2.2" y="31.6" text-anchor="middle" transform="rotate(-90 -2.2 31.6)">valve</text>
@@ -871,7 +882,7 @@
   <circle class="blk" cx="15.29" cy="42.5" r=".29"/>
   <text class="lbl-s" x="15.29" y="40.9" text-anchor="middle">ceiling</text>
   <text class="lbl-s" x="15.29" y="43.9" text-anchor="middle">rainhead</text>
-  <text x="15.29" y="56.9" text-anchor="middle" font-size="1.35" font-style="italic"
+  <text x="15.29" y="59.3" text-anchor="middle" font-size="1.35" font-style="italic"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#2F6F8F">SHOWER</text>
 
   <!-- ============ FIXED GLASS ON THE SECTION LINE ============ -->
@@ -892,9 +903,15 @@
   <line x1="35.75" y1="55.71" x2="55.83" y2="55.71" stroke="#2A2A2A" stroke-width=".083"/>
   <text x="45.79" y="44.8" text-anchor="middle" font-size="1.35"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A">WC</text>
-  <line class="red" x1="45.79" y1="5.92" x2="45.79" y2="55.75"/>
-  <line class="red" x1="30.58" y1="8" x2="61" y2="8"/>
-  <text class="red-t" x="45.9" y="6.3" text-anchor="middle">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
+  <!-- CPC front-to-back clearance. Measured from the SOUTH wall, which the tank
+       backs onto: 29" toilet + 24" required clear = 53", so the limit lands at
+       y = 61 - 53 = 8. The dimension runs the full 53" down to the south wall and
+       stops dead on the limit line (a T, not a cross). -->
+  <line class="red" x1="33" y1="8" x2="58.5" y2="8"/>
+  <line class="red" x1="45.79" y1="8" x2="45.79" y2="61"/>
+  <line class="tick" stroke="#8A3B2A" x1="45.34" y1="8.45"  x2="46.24" y2="7.55"/>
+  <line class="tick" stroke="#8A3B2A" x1="45.34" y1="61.45" x2="46.24" y2="60.55"/>
+  <text class="red-t" x="45.79" y="6.5" text-anchor="middle">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
 
   <!-- ============ EAST WALL ============ -->
   <rect class="blk" x="59.75" y="35.08" width=".33" height="5.92"/>               <!-- TP holder -->
