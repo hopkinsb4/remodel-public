@@ -862,8 +862,19 @@
        point at the sharp corner) — that softening is what reads as a basin rather
        than a plain triangle. -->
   <path class="fix" d="M0,0 L14.92,0 Q17.33,0 15.62,1.71 L1.71,15.62 Q0,17.33 0,14.92 Z"/>
-  <circle class="blk" cx="2.33" cy="2.17" r=".33"/>
-  <text class="lbl" x="6" y="2.3">corner sink</text>
+  <!-- FAUCET — Kohler Elate single-handle monoblock, K-99491-4, matte black.
+       Single hole, deck mount on the basin ledge. Spout reach 4-3/16" (4.19")
+       per Kohler's spec sheet; body is a monoblock cylinder with the lever
+       handle on top, which in plan reads back over the deck toward the corner.
+       Set on the corner bisector and rotated 45 degrees so the spout throws to
+       the middle of the basin rather than at a wall. -->
+  <g fill="#2A2A2A" transform="translate(2.26,2.26) rotate(45)">
+    <rect x="-2.7" y="-.28" width="2.1" height=".56" rx=".28"/>  <!-- lever handle -->
+    <circle cx="0" cy="0" r="1.05"/>                             <!-- body -->
+    <path d="M.5,-.6 L4.19,-.4 L4.19,.4 L.5,.6 Z"/>              <!-- spout, 4-3/16" reach -->
+    <circle cx="4.19" cy="0" r=".46"/>                           <!-- aerator -->
+  </g>
+  <text class="lbl" x="7.2" y="2.3">corner sink</text>
 
   <!-- The sink's nook is drawn with the other two in the NOOKS group above.
        It replaces a surface-mount medicine cabinet: a ~5" deep box projecting
