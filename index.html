@@ -871,13 +871,29 @@
   <text class="lbl" x="7.2" y="2.3">corner sink</text>
 
   <!-- ============ SINK MIRRORS ============
-       A matched PAIR of fixed surface-mount mirrors, one on each wall meeting at
-       the corner, mirrored about the corner bisector y = x. Both run
-       2.665..14.665 — centred on the sink triangle's leg mid-point (8.665),
-       square over the basin.
+       A matched PAIR of fixed surface-mount mirrors, one on each wall, RUNNING
+       ALL THE WAY INTO THE CORNER so the two glass planes actually meet.
+       They previously stopped 2.665" short of the corner. That was a leftover:
+       2.665 was the old sink nook's coordinate, kept when the mirror replaced
+       the nook. It left a strip of bare tile in the corner, which broke the
+       reflection exactly where the pair is supposed to work — two mirrors NEAR
+       a corner instead of a corner mirror.
+       EXTENT: each now runs 0..14.92, matching the straight run of the St.
+       Tropez's rim on that same wall (the basin turns to its fillet at 14.92).
+       So both edges are now justified — the far edge dies on the sink's edge,
+       the near edge dies in the corner.
        Two flat mirrors meeting in the corner is the buildable way to get a
        corner mirror here: no manufacturer makes one that mounts across a 90
        degree corner, so a pair on the two walls is the real-world equivalent.
+       THE LAP AT THE CORNER: two 1/2" surface-mounted mirrors cannot both run
+       through — one has to lap the other, and the drawing shows which. The WEST
+       mirror runs through to y=0; the NORTH mirror starts at x=0.5 and butts
+       into its face. West runs through because the west wall is the wet one —
+       valve, linear drain and the rain head's fall are all on it — so the
+       uninterrupted face is the one taking the water, and the butt joint sits
+       on the drier north side. Silicone the joint rather than trying to close
+       it: no framed inside corner is truly square, and a caulked seam also
+       keeps water off the most de-silvering-prone edge in the room.
        Surface mount, NOT recessed — these walls are inside the wet zone, and a
        recess would mean breaching the waterproofing membrane and field-building
        a waterproofed box.
@@ -885,11 +901,11 @@
        tile. That is the whole point after the 5" deep cabinet was rejected for
        landing where your head goes. Labels sit in the wall band so the basin
        stays legible. -->
-  <rect x="2.665" y="0" width="12" height=".5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="8.665" y="-1.75" text-anchor="middle" font-size=".8">mirror</text>
-  <rect x="0" y="2.665" width=".5" height="12" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="-1.75" y="8.665" text-anchor="middle" font-size=".8"
-        transform="rotate(-90 -1.75 8.665)">mirror</text>
+  <rect x="0.5" y="0" width="14.42" height=".5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <text class="teal" x="7.71" y="-1.75" text-anchor="middle" font-size=".8">mirror</text>
+  <rect x="0" y="0" width=".5" height="14.92" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <text class="teal" x="-1.75" y="7.46" text-anchor="middle" font-size=".8"
+        transform="rotate(-90 -1.75 7.46)">mirror</text>
   <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
 
   <!-- ============ NORTH WALL FITTINGS ============
