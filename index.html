@@ -778,9 +778,18 @@
       #dsbath-plan .lbl-s   { font:.85px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
       #dsbath-plan .wall-lbl{ font:1.15px 'Helvetica Neue',Arial,sans-serif; fill:#8F8F8F; }
       #dsbath-plan .teal    { fill:#2F7D94; }
+      /* Items above the plan cut plane are dashed (drafting convention). */
+      #dsbath-plan .over    { fill:none; stroke:#2A2A2A; stroke-width:.09; stroke-dasharray:.75 .5; }
       #dsbath-plan .red     { fill:none; stroke:#8A3B2A; stroke-width:.083; stroke-dasharray:.55 .45; }
       #dsbath-plan .red-t   { font:.85px 'Helvetica Neue',Arial,sans-serif; fill:#8A3B2A; }
-      #dsbath-plan .dim     { fill:none; stroke:#2A2A2A; stroke-width:.075; }
+      /* Dimensioning, architectural convention: extension lines stand off the
+         object with a gap and overrun the outermost dimension line slightly;
+         dimension lines are unbroken with 45-degree ticks at each terminator;
+         text sits on top of the line. Extension/dimension lines are the
+         lightest weight on the drawing so they read behind the building. */
+      #dsbath-plan .extline { fill:none; stroke:#6E6A62; stroke-width:.055; }
+      #dsbath-plan .dimline { fill:none; stroke:#2A2A2A; stroke-width:.065; }
+      #dsbath-plan .tick    { stroke:#2A2A2A; stroke-width:.095; stroke-linecap:round; }
       #dsbath-plan .dim-t   { font:1.05px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
       #dsbath-plan .dim-big { font:1.45px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; font-weight:700; }
       #dsbath-plan .dim-s   { font:.8px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
@@ -793,6 +802,17 @@
   <rect x="0"  y="0" width="30.5" height="61" fill="#E8EEF0"/>      <!-- shower (wet) -->
   <rect x="30.5" y="0" width="30.5" height="61" fill="#FBFAF7"/>    <!-- toilet (dry) -->
 
+  <!-- ============ DOOR OPENING ============
+       The 28" pocket-door opening is a real break in the east wall, not just a
+       gap in a line: the floor finish runs the full 4.5" wall thickness so the
+       passage reads as open, and the room outline below omits this stretch.
+       East wall, north -> south:
+         y  0..3   3" stub at the north corner
+         y  3..31  28" OPENING  <- the door swings/slides through here
+         y 31..61  30" cavity wall the slab pockets into (it slides south)
+       Those three runs are exactly the 3"/28"/30" dimensions on the right. -->
+  <rect x="61" y="3" width="4.5" height="28" fill="#FBFAF7"/>
+
   <!-- ============ NOOKS ============
        12" long x 3.5" deep, recessed into the wall band.
        SOUTH nook: centered in the shower (shower centre x = 15.25).
@@ -802,8 +822,10 @@
   <rect x="9.25" y="-3.5" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="15.25" y="-1.75" text-anchor="middle">nook</text>
 
-  <!-- ============ ROOM OUTLINE ============ -->
-  <rect class="outline" x="0" y="0" width="61" height="61"/>
+  <!-- ============ ROOM OUTLINE ============
+       Broken on the east wall for the door opening (y 3..31). -->
+  <path class="outline" d="M0,0 H61 V3 M61,31 V61 H0 V0"/>
+  <rect class="outline" x="-4.5" y="-4.5" width="70" height="70"/>   <!-- outer wall face -->
 
   <!-- ============ SHOWER FLOOR: LINEAR DRAIN ============
        Drawn before the sink, which sits on top of it in the NW corner. -->
@@ -818,7 +840,15 @@
        than a plain triangle. -->
   <path class="fix" d="M0,0 L14.92,0 Q17.33,0 15.62,1.71 L1.71,15.62 Q0,17.33 0,14.92 Z"/>
   <circle class="blk" cx="2.33" cy="2.17" r=".33"/>
-  <text class="lbl" x="3.4" y="4.6">corner sink</text>
+  <text class="lbl" x="6" y="2.3">corner sink</text>
+
+  <!-- ============ MEDICINE CABINET ============
+       West wall, above the corner sink. Centred on the 24" walk-in opening
+       (that opening runs y 0..24.08, so its centre is y 12.04), 16.5" long x 5"
+       deep. Dashed because it sits above the plan cut plane — it hangs over the
+       sink rather than standing on the floor. -->
+  <rect class="over" x="0" y="3.79" width="5" height="16.5"/>
+  <text class="lbl-s" x="6.2" y="21.7">medicine cabinet</text>
   <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
 
   <!-- ============ NORTH WALL FITTINGS ============ -->
@@ -879,28 +909,46 @@
   <text class="wall-lbl" x="46" y="63.4" text-anchor="middle">SOUTH WALL</text>
   <text class="wall-lbl" x="-2.4" y="24" text-anchor="middle" transform="rotate(-90 -2.4 24)">WEST WALL</text>
 
-  <!-- ============ DIMENSIONS — TOP ============ -->
-  <line class="dim" x1="0" y1="-10.75" x2="61" y2="-10.75"/>
-  <line class="dim" x1="0" y1="-10.75" x2="0" y2="-4.5"/>
-  <line class="dim" x1="61" y1="-10.75" x2="61" y2="-4.5"/>
-  <line class="dim" x1="30.5" y1="-7.75" x2="30.5" y2="-4.5"/>
-  <text class="dim-t" x="15.25" y="-9.1" text-anchor="middle">30.5&quot;</text>
-  <text class="dim-t" x="45.75" y="-9.1" text-anchor="middle">30.5&quot;</text>
-  <text class="dim-big" x="30.5" y="-12.6" text-anchor="middle">61&quot;</text>
+  <!-- ============ DIMENSIONS — TOP ============
+       Chain (30.5 + 30.5) nearest the plan, overall (61) outboard of it.
+       Extension lines break 0.8" clear of the wall face and overrun the last
+       dimension line by 0.7". Ticks are 45 degrees. -->
+  <line class="extline" x1="0"    y1="-5.3" x2="0"    y2="-12.7"/>
+  <line class="extline" x1="30.5" y1="-5.3" x2="30.5" y2="-9.2"/>
+  <line class="extline" x1="61"   y1="-5.3" x2="61"   y2="-12.7"/>
 
-  <!-- ============ DIMENSIONS — RIGHT (3" / 28" / 30") ============ -->
-  <line class="dim" x1="69.7" y1="0" x2="69.7" y2="61"/>
-  <line class="dim" x1="65.5" y1="0"  x2="69.7" y2="0"/>
-  <line class="dim" x1="68.6" y1="3"  x2="69.7" y2="3"/>
-  <line class="dim" x1="68.6" y1="31" x2="69.7" y2="31"/>
-  <line class="dim" x1="65.5" y1="61" x2="69.7" y2="61"/>
-  <text class="dim-s" x="70.8" y="1.5"  text-anchor="middle" transform="rotate(-90 70.8 1.5)">3&quot;</text>
-  <text class="dim-s" x="70.8" y="17"   text-anchor="middle" transform="rotate(-90 70.8 17)">28&quot;</text>
-  <text class="dim-s" x="70.8" y="46"   text-anchor="middle" transform="rotate(-90 70.8 46)">30&quot;</text>
-  <line class="dim" x1="72.7" y1="0" x2="72.7" y2="61"/>
-  <line class="dim" x1="72.1" y1="0"  x2="73.3" y2="0"/>
-  <line class="dim" x1="72.1" y1="61" x2="73.3" y2="61"/>
-  <text class="dim-big" x="74.9" y="30.5" text-anchor="middle" transform="rotate(-90 74.9 30.5)">61&quot;</text>
+  <line class="dimline" x1="0" y1="-8.5" x2="61" y2="-8.5"/>
+  <line class="tick" x1="-.45"  y1="-8.05" x2=".45"   y2="-8.95"/>
+  <line class="tick" x1="30.05" y1="-8.05" x2="30.95" y2="-8.95"/>
+  <line class="tick" x1="60.55" y1="-8.05" x2="61.45" y2="-8.95"/>
+  <text class="dim-t" x="15.25" y="-9.35" text-anchor="middle">30.5&quot;</text>
+  <text class="dim-t" x="45.75" y="-9.35" text-anchor="middle">30.5&quot;</text>
+
+  <line class="dimline" x1="0" y1="-12" x2="61" y2="-12"/>
+  <line class="tick" x1="-.45"  y1="-11.55" x2=".45"   y2="-12.45"/>
+  <line class="tick" x1="60.55" y1="-11.55" x2="61.45" y2="-12.45"/>
+  <text class="dim-big" x="30.5" y="-13.2" text-anchor="middle">61&quot;</text>
+
+  <!-- ============ DIMENSIONS — RIGHT ============
+       Chain 3 + 28 + 30 breaks down the east wall: stub, door opening, cavity. -->
+  <line class="extline" x1="66.3" y1="0"  x2="73.4" y2="0"/>
+  <line class="extline" x1="66.3" y1="3"  x2="69.9" y2="3"/>
+  <line class="extline" x1="66.3" y1="31" x2="69.9" y2="31"/>
+  <line class="extline" x1="66.3" y1="61" x2="73.4" y2="61"/>
+
+  <line class="dimline" x1="69" y1="0" x2="69" y2="61"/>
+  <line class="tick" x1="68.55" y1=".45"   x2="69.45" y2="-.45"/>
+  <line class="tick" x1="68.55" y1="3.45"  x2="69.45" y2="2.55"/>
+  <line class="tick" x1="68.55" y1="31.45" x2="69.45" y2="30.55"/>
+  <line class="tick" x1="68.55" y1="61.45" x2="69.45" y2="60.55"/>
+  <text class="dim-s" x="68.3" y="1.5"  text-anchor="middle" transform="rotate(-90 68.3 1.5)">3&quot;</text>
+  <text class="dim-s" x="68.3" y="17"   text-anchor="middle" transform="rotate(-90 68.3 17)">28&quot;</text>
+  <text class="dim-s" x="68.3" y="46"   text-anchor="middle" transform="rotate(-90 68.3 46)">30&quot;</text>
+
+  <line class="dimline" x1="72.5" y1="0" x2="72.5" y2="61"/>
+  <line class="tick" x1="72.05" y1=".45"   x2="72.95" y2="-.45"/>
+  <line class="tick" x1="72.05" y1="61.45" x2="72.95" y2="60.55"/>
+  <text class="dim-big" x="71.5" y="30.5" text-anchor="middle" transform="rotate(-90 71.5 30.5)">61&quot;</text>
 </svg>
       <p style="font-size: 12px; color: #777; max-width: 320px; margin-top: 8px;">Proposed floor plan to fit a 3/4 bath in place of the existing 1/2 bath. 30.5" x 61" = 1861 sq in</p>
     </div>
