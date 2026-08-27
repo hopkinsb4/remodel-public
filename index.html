@@ -751,8 +751,8 @@
        same as every other doorway on this sheet. -->
   <rect x="-64.5" y="67" width="60" height="4.5" fill="#C9C4B7"/>
   <rect x="-64.5" y="112.5" width="60" height="4.5" fill="#C9C4B7"/>
-  <rect x="-60" y="67" width="28" height="4.5" fill="url(#pbed-check)"/>
-  <rect x="-60" y="112.5" width="28" height="4.5" fill="url(#pbed-check)"/>
+  <rect x="-64.5" y="67" width="28" height="4.5" fill="url(#pbed-check)"/>
+  <rect x="-64.5" y="112.5" width="28" height="4.5" fill="url(#pbed-check)"/>
   <!-- HALL THRESHOLDS. The walkway is 41" between the partitions but only
        34" where it passes through a wall: each room threshold is a 34"
        opening that widens to the full 41" once 9" inside the hall. Drawn as
@@ -768,9 +768,9 @@
        inch off the bath-end return at x -64.5. Half an inch is not a
        tolerance, it is a coincidence - measure both before framing. -->
   <rect x="-9" y="67" width="4.5" height="8" fill="#C9C4B7"/>
-  <rect x="-64.5" y="67" width="4.5" height="8" fill="#C9C4B7"/>
+  <rect x="-64.5" y="71.5" width="4.5" height="3.5" fill="#C9C4B7"/>
   <rect x="-9" y="109" width="4.5" height="8" fill="#C9C4B7"/>
-  <rect x="-64.5" y="109" width="4.5" height="8" fill="#C9C4B7"/>
+  <rect x="-64.5" y="109" width="4.5" height="3.5" fill="#C9C4B7"/>
   <rect x="-67.885" y="75" width="3.385" height="34" fill="url(#pbed-check)"/>
   <!-- THRESHOLD. The floor changes inside the door opening, not out in the
        room: the checkerboard runs west until the west point of its last full
@@ -791,10 +791,12 @@
        withdrawn - it read as rounded drywall rather than as a wall end, and
        at this scale it just softened the jambs. The continuous-run part
        stays; that was the real fix. -->
-  <path class="outline" d="M-32,71.5 V67 H-4.5 V0 H-64.5 V67 H-60 V75 H-69"/>
-  <path class="outline" d="M-32,112.5 V117 H-4.5 V174 H-64.5 V117 H-60 V109 H-69"/>
-  <path class="outline" d="M0,75 H-9 V71.5 H-32"/>
-  <path class="outline" d="M0,109 H-9 V112.5 H-32"/>
+  <path class="outline" d="M-36.5,71.5 V67 H-4.5 V0 H-64.5 V67"/>
+  <path class="outline" d="M-64.5,71.5 H-60 V75 H-69"/>
+  <path class="outline" d="M-36.5,112.5 V117 H-4.5 V174 H-64.5 V117"/>
+  <path class="outline" d="M-64.5,112.5 H-60 V109 H-69"/>
+  <path class="outline" d="M0,75 H-9 V71.5 H-36.5"/>
+  <path class="outline" d="M0,109 H-9 V112.5 H-36.5"/>
 
   <!-- ============ PRIMARY BATH ============
        Tagged onto the same sheet, same origin, same scale. The bath's east
@@ -1220,10 +1222,10 @@ SWING SETTLED, and it only works one way. Handle on the left going
        and clearance. That matters most at the WIC doors, where the west jamb
        sits hard against the pillar: framing to 28" instead of 30" gives a
        26" door. Tell the framer the rough, not the door size. -->
-  <rect class="fix" x="-60" y="39" width="1.4" height="28"/>
-  <path class="thin" fill="none" d="M-32,67 A28,28 0 0 0 -60,39"/>
-  <rect class="fix" x="-60" y="117" width="1.4" height="28"/>
-  <path class="thin" fill="none" d="M-32,117 A28,28 0 0 1 -60,145"/>
+  <rect class="fix" x="-64.5" y="39" width="1.4" height="28"/>
+  <path class="thin" fill="none" d="M-36.5,67 A28,28 0 0 0 -64.5,39"/>
+  <rect class="fix" x="-64.5" y="117" width="1.4" height="28"/>
+  <path class="thin" fill="none" d="M-36.5,117 A28,28 0 0 1 -64.5,145"/>
 
   <!-- ============ WIC DEPTHS, ON THE WEST WALL ============
        Each closet's north-south length dimensioned inside its own room,
@@ -1252,8 +1254,8 @@ SWING SETTLED, and it only works one way. Handle on the left going
        and the corner-wraparound inspiration photo: rods above, cubbies
        below, wrapping the corner of the end wall and one side wall.
 
-       THE WEST-HINGED DOORS DECIDE THE WHOLE LAYOUT. Each leaf parks 4.5"
-       off the west wall, 28" deep into the room from the partition - north
+       THE WEST-HINGED DOORS DECIDE THE WHOLE LAYOUT. Each leaf parks tight
+       to the west wall, 28" deep into the room from the partition - north
        closet y 39..67 blocked, south y 117..145 blocked. Run the swing arc
        against any west-wall casework and the door stops half-open, so the
        WEST WALL STAYS BARE in both closets, and:
