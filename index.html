@@ -647,7 +647,7 @@
        wall from 32 east. Handle on the right coming in, so the leaf hinges
        LEFT at x 4 and swings into the bedroom, standing off the west wall. -->
   <rect x="4" y="156" width="28" height="4.5" fill="url(#pbed-check)"/>
-  <rect x="-4.5" y="67" width="4.5" height="41" fill="url(#pbed-check)"/>
+  <rect x="-4.5" y="70.5" width="4.5" height="34" fill="url(#pbed-check)"/>
 
   <!-- The two openings keep their callouts; the reserved-walkway graphic that
        drove this layout has been removed now that the layout is settled. The
@@ -705,7 +705,25 @@
   <rect x="-73.5" y="108" width="69" height="4.5" fill="#C9C4B7"/>
   <rect x="-64" y="62.5" width="28" height="4.5" fill="url(#pbed-check)"/>
   <rect x="-64" y="108" width="28" height="4.5" fill="url(#pbed-check)"/>
-  <rect x="-76.37" y="67" width="2.87" height="41" fill="url(#pbed-check)"/>
+  <!-- HALL THRESHOLDS. The walkway is 41" between the partitions but only
+       34" where it passes through a wall: each room threshold is a 34"
+       opening that widens to the full 41" once 9" inside the hall. Drawn as
+       a 3.5"-deep return on both hall walls, 9" long, at each end -
+         bedroom end  x -13.5..-4.5
+         bath end     x -73.5..-64.5
+       THE 7" IS SPLIT EVENLY, 3.5" each side, because nothing said
+       otherwise. Both openings then centre on y 87.5, which is the same
+       centreline the vanity is set on, so that at least stays true. If the
+       narrowing is actually all on one side, this is wrong by 3.5" and the
+       vanity moves with it - worth one look on site.
+       NOTE ALSO: the north closet doorway's west jamb at x -64 lands half an
+       inch off the bath-end return at x -64.5. Half an inch is not a
+       tolerance, it is a coincidence - measure both before framing. -->
+  <rect x="-13.5" y="67" width="9" height="3.5" fill="#C9C4B7"/>
+  <rect x="-13.5" y="104.5" width="9" height="3.5" fill="#C9C4B7"/>
+  <rect x="-73.5" y="67" width="9" height="3.5" fill="#C9C4B7"/>
+  <rect x="-73.5" y="104.5" width="9" height="3.5" fill="#C9C4B7"/>
+  <rect x="-76.37" y="70.5" width="2.87" height="34" fill="url(#pbed-check)"/>
   <!-- THRESHOLD. The floor changes inside the door opening, not out in the
        room: the checkerboard runs west until the west point of its last full
        black tile, which lands at x -76.37 (the diagonal 12" module puts a
@@ -714,11 +732,23 @@
        1-5/8" strip, held inside the 41" hall opening, is the whole of the bath
        shown. Its west edge falls on a 2" module line, so one full course of
        Dawson reads before the sliver. -->
-  <rect x="-78" y="67" width="1.63" height="41" fill="url(#pbed-dawson)"/>
-  <line class="thin" x1="-76.37" y1="67" x2="-76.37" y2="108"/>
-  <path class="outline" d="M-73.5,0 H-4.5 V67 M-4.5,108 V168 H-73.5 V108 M-73.5,67 V0"/>
-  <path class="outline" d="M-73.5,62.5 H-64 M-36,62.5 H-4.5 M-73.5,67 H-4.5 M-73.5,108 H-4.5 M-73.5,112.5 H-64 M-36,112.5 H-4.5"/>
-  <path class="outline" d="M-64,62.5 V67 M-36,62.5 V67 M-64,108 V112.5 M-36,108 V112.5"/>
+  <rect x="-78" y="70.5" width="1.63" height="34" fill="url(#pbed-dawson)"/>
+  <line class="thin" x1="-76.37" y1="70.5" x2="-76.37" y2="104.5"/>
+  <!-- ============ WALL FACES ============
+       Drawn as CONTINUOUS runs that turn through every corner and wrap into
+       every jamb, rather than a pile of separate segments butted end to end.
+       A run breaks only where there is an actual opening, which is the only
+       place a wall face really stops.
+       OUTSIDE CORNERS GET A 1" RADIUS, inside corners stay square - the way
+       a taped drywall corner actually behaves. Every radius here is a wall
+       END: a door jamb, or the tip of a threshold return poking into the
+       hall. Every square corner is two walls meeting in a room. -->
+  <path class="outline" d="M-36,67 V63.5 A1,1 0 0 1 -35,62.5 H-4.5 V0 H-73.5 V62.5 H-65 A1,1 0 0 1 -64,63.5 V67"/>
+  <path class="outline" d="M-36,108 V111.5 A1,1 0 0 0 -35,112.5 H-4.5 V168 H-73.5 V112.5 H-65 A1,1 0 0 0 -64,111.5 V108"/>
+  <path class="outline" d="M0,70.5 H-12.5 A1,1 0 0 1 -13.5,69.5 V67 H-36"/>
+  <path class="outline" d="M-64,67 H-64.5 V69.5 A1,1 0 0 1 -65.5,70.5 H-78"/>
+  <path class="outline" d="M0,104.5 H-12.5 A1,1 0 0 0 -13.5,105.5 V108 H-36"/>
+  <path class="outline" d="M-64,108 H-64.5 V105.5 A1,1 0 0 0 -65.5,104.5 H-78"/>
 
   <!-- ============ PRIMARY BATH ============
        Tagged onto the same sheet, same origin, same scale. The bath's east
@@ -827,11 +857,11 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <rect x="-144.5" y="-4.5" width="66.5" height="167.5" fill="#C9C4B7"/>
   <rect x="-140" y="40.5" width="62" height="87.2" fill="url(#pbed-dawson)"/>
   <rect x="-110" y="36" width="28" height="4.5" fill="url(#pbed-dawson)"/>
-  <path class="outline" d="M-78,40.5 H-140 V158.5 H-78 M-78,158.5 V108 M-78,67 V40.5"/>
+  <path class="outline" d="M-78,40.5 H-140 V158.5 H-78 M-78,158.5 V104.5 M-78,70.5 V40.5"/>
   <rect x="-140" y="0" width="62" height="36" fill="url(#pbed-dawson)"/>
   <path class="outline" d="M-140,0 H-78 V36 H-82 M-110,36 H-140 V0"/>
   <path class="outline" d="M-78,-4.5 H-144.5 V163 H-78"/>
-  <path class="outline" d="M-110,36 V40.5 M-82,36 V40.5"/>
+  <path class="outline" d="M-110,40.5 V37 A1,1 0 0 1 -109,36 M-83,36 A1,1 0 0 1 -82,37 V40.5"/>
   <!-- TOILET ROOM DOOR, 28", handle on the left going in, so it hinges RIGHT
        at x -82 and swings into the toilet room, opening back to the east
        wall - away from the bowl. The leaf's closed edge at x -110 clears the
@@ -1069,16 +1099,18 @@ SWING SETTLED, and it only works one way. Handle on the left going
        east wall is the one you face - and the west wall, which you now stand
        against rather than look at, is where the desk goes.
 
-       CHAMFER, 8 x 8, on the free end of each east leg, the corner nearest
-       the door. Cut 8" back on each face; the angled face is about 11-1/4".
+       NO CHAMFERS. The corners are square. They were cut back to break the
+       hip-height corner that pointed into the 41" cross-route, but that
+       corner is gone: the free end of each leg now faces its own closet
+       doorway, inside the room, not a corridor anyone walks past.
 
        RUN, recomputed for the restored walls - the closets are shallower now
        than the single room was:
          north  end band 69" + east leg 38.5" = 107.5"
          south  end band 69" + east leg 31.5" = 100.5"
-         208" total, about 199" after the two chamfers
-       Double hung that is roughly 398" of rod, about 16-1/2 lineal feet per
-       child. Down from 18 - the partitions cost about 9" of run between
+         208" total, and with the chamfers gone all of it is usable
+       Double hung that is roughly 416" of rod, about 17.3 lineal feet per
+       child. Down from 18.1 - the partitions cost about 9" of run between
        them, and the desks are separate pieces on the west wall that take
        none of it.
 
@@ -1087,24 +1119,20 @@ SWING SETTLED, and it only works one way. Handle on the left going
 
        STOOL drawn 15" square, movable, shown only to prove the pocket takes
        one. -->
-  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-4.5,0 H-73.5 V24 H-28.5 V54.5 L-20.5,62.5 H-4.5 Z"/>
+  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-4.5,0 H-73.5 V24 H-28.5 V62.5 H-4.5 Z"/>
   <text class="lbl" x="-39" y="10.5" text-anchor="middle">ORGANIZERS</text>
   <text class="lbl-s" x="-39" y="15.0" text-anchor="middle">24" deep</text>
-  <text class="lbl-s" x="-18" y="58" text-anchor="middle" font-size="1.7">8 x 8</text>
   <!-- DESK, west wall. 20" deep rather than 24: at 24 the aisle between the
        desk front and the organiser face is 21", which is not enough to push a
        chair back. At 20 it is 25". Held clear of the doorway so you walk in
        past the desk's end rather than into it. -->
   <rect x="-73.5" y="24" width="20" height="30" fill="#D8B98A" stroke="#6B4F3A" stroke-width=".29"/>
   <text class="lbl-s" x="-63.5" y="39" text-anchor="middle" font-size="1.7" transform="rotate(-90 -63.5 39)">DESK 30 x 20</text>
-  <rect class="fix" x="-53.5" y="30" width="18" height="18" rx="4.5"/>
-  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-4.5,168 H-73.5 V144 H-28.5 V120.5 L-20.5,112.5 H-4.5 Z"/>
+  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-4.5,168 H-73.5 V144 H-28.5 V112.5 H-4.5 Z"/>
   <text class="lbl" x="-39" y="158.5" text-anchor="middle">ORGANIZERS</text>
   <text class="lbl-s" x="-39" y="163.0" text-anchor="middle">24" deep</text>
-  <text class="lbl-s" x="-18" y="117" text-anchor="middle" font-size="1.7">8 x 8</text>
   <rect x="-73.5" y="120" width="20" height="24" fill="#D8B98A" stroke="#6B4F3A" stroke-width=".29"/>
   <text class="lbl-s" x="-63.5" y="132" text-anchor="middle" font-size="1.7" transform="rotate(-90 -63.5 132)">DESK 24 x 20</text>
-  <rect class="fix" x="-53.5" y="123" width="18" height="18" rx="4.5"/>
 
   <!-- ============ ACCENT WALL, EAST ============
        Zayne slat (wood-look) fluted tile, floor to ceiling, the FULL east
@@ -1130,11 +1158,11 @@ SWING SETTLED, and it only works one way. Handle on the left going
 Without these the wall band simply runs out into the floor. Six caps:
        both jambs of the bedroom entry (now x 4 and x 32), the bedroom-to-WIC
        opening, and the WIC-to-bath opening. -->
-  <path class="outline" d="M4,156 V160.5 M32,156 V160.5 M-4.5,67 H0 M-4.5,108 H0 M-78,67 H-73.5 M-78,108 H-73.5"/>
 
   <!-- ============ ROOM OUTLINE ============ -->
-  <path class="outline" d="M0,0 H144 V156 H32 M4,156 H0 M0,156 V108 M0,67 V0"/>
-  <path class="outline" d="M-78,-4.5 H148.5 V160.5 H32 M4,160.5 H0 V172.5 H-78 V108 M-78,67 V-4.5"/>
+  <path class="outline" d="M4,160.5 V157 A1,1 0 0 0 3,156 H0 V104.5"/>
+  <path class="outline" d="M0,70.5 V0 H144 V156 H33 A1,1 0 0 0 32,157 V160.5"/>
+  <path class="outline" d="M-78,-4.5 H148.5 V160.5 H32 M4,160.5 H0 V172.5 H-78 V104.5 M-78,70.5 V-4.5"/>
   <!-- entry door leaf, shown open at 90 degrees, with its swing arc -->
   <rect class="fix" x="4" y="128" width="1.4" height="28"/>
   <path class="thin" fill="none" d="M32,156 A28,28 0 0 0 4,128"/>
@@ -1312,16 +1340,23 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-t" x="-153.6" y="117.85" text-anchor="middle" transform="rotate(-90 -153.6 117.85)" font-size="2.2">19¾"</text>
   <text class="dim-t" x="-153.6" y="143.1" text-anchor="middle" transform="rotate(-90 -153.6 143.1)">30¾"</text>
 
+  <!-- WEST WALL CHAIN. It now reads the wall as drawn - 34" of opening, not
+       41 - because the threshold is 34 and the hall only widens to 41 once
+       it is 9" past this wall. That CONTRADICTS the 67 / 41 / 60 measured
+       here earlier, which is flagged in red beside it. Both cannot be true;
+       the 34 is the later number, so it is the one drawn. -->
   <line class="dimline" x1="-160" y1="0" x2="-160" y2="168"/>
   <g class="tick">
     <line x1="-161.1" y1="-1.1" x2="-158.9" y2="1.1"/>
-    <line x1="-161.1" y1="65.9" x2="-158.9" y2="68.1"/>
-    <line x1="-161.1" y1="106.9" x2="-158.9" y2="109.1"/>
+    <line x1="-161.1" y1="69.4" x2="-158.9" y2="71.6"/>
+    <line x1="-161.1" y1="103.4" x2="-158.9" y2="105.6"/>
     <line x1="-161.1" y1="166.9" x2="-158.9" y2="169.1"/>
   </g>
-  <text class="dim-t" x="-161.6" y="33.5" text-anchor="middle" transform="rotate(-90 -161.6 33.5)">67"</text>
-  <text class="dim-t" x="-161.6" y="87.5" text-anchor="middle" transform="rotate(-90 -161.6 87.5)">41"</text>
-  <text class="dim-t" x="-161.6" y="138" text-anchor="middle" transform="rotate(-90 -161.6 138)">60"</text>
+  <text class="dim-t" x="-161.6" y="35.25" text-anchor="middle" transform="rotate(-90 -161.6 35.25)">70½"</text>
+  <text class="dim-t" x="-161.6" y="87.5" text-anchor="middle" transform="rotate(-90 -161.6 87.5)">34"</text>
+  <text class="dim-t" x="-161.6" y="136.25" text-anchor="middle" transform="rotate(-90 -161.6 136.25)">63½"</text>
+  <text class="red-t" x="-165.4" y="87.5" text-anchor="middle" font-size="1.9"
+        transform="rotate(-90 -165.4 87.5)">measured 67 / 41 / 60 here — recheck</text>
 
   <line class="dimline" x1="-168" y1="0" x2="-168" y2="168"/>
   <g class="tick">
