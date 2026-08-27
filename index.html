@@ -476,7 +476,7 @@
 
       <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Primary Bedroom</span>
-      <p>Two twin beds, headboards against the east wall, one at each end, feet pointing west. Each gets its own Thuma Floating Side Table, Walnut &mdash; 15&frac34;&quot; x 11.8&quot;, clamped to the bed rail rather than standing on the floor, so the checkerboard runs unbroken between them. Setting the beds this way pairs each with the half of the walk-in closet on its own side. The full 13-foot east wall is wrapped floor to ceiling in the same wood-look plank tile as the entryway, run vertically in 13 columns; the 41&quot; window is punched straight through it, reveals tiled to match, and lands in the 68&quot; gap between the beds. Checkerboard floor, gray walls in glossy finish elsewhere. Closets stay open &mdash; doors come off, frames stay in place &mdash; with built-in organizers &mdash; no desks in them; homework happens at the dining room&rsquo;s two desk stations. The bedroom door is on the south wall; the west opening leads to the two walk-in closets and the primary bath. The clear floor is one 62.9&quot; strip down the west side, left deliberately empty. All hardware in matte black.</p>
+      <p>Two twin beds, headboards against the east wall, one at each end, feet pointing west. Each gets its own Thuma Floating Side Table, Walnut &mdash; 15&frac34;&quot; x 11.8&quot;, clamped to the bed rail rather than standing on the floor, so the checkerboard runs unbroken between them. Setting the beds this way pairs each with the half of the walk-in closet on its own side. The full 13-foot east wall is wrapped floor to ceiling in the same wood-look plank tile as the entryway, run vertically in 13 columns; the 41&quot; window is punched straight through it, reveals tiled to match, and lands in the 68&quot; gap between the beds. Checkerboard floor, gray walls in glossy finish elsewhere. Two walk-in closets, the partition between them kept rather than knocked through, each entered off the 41&quot; passage through a 28&quot; opening pushed west. Built-in organizers wrap the end wall and the east wall of each &mdash; east because the doorway puts you at the west side as you come in, so the cabinetry is what you face. That frees the west wall for a desk, which is back at a resident&rsquo;s request: 20&quot; deep rather than 24, because at 24 the aisle left is 21&quot; and you cannot push a chair back. The bedroom door is on the south wall; the west opening leads to the two walk-in closets and the primary bath. The clear floor is one 62.9&quot; strip down the west side, left deliberately empty. All hardware in matte black.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-186 -40 372 226" role="img"
@@ -658,9 +658,12 @@
   <text class="lbl-s" x="18" y="164.5" text-anchor="middle">TO HALL (bedroom door)</text>
 
   <!-- ============ WALK-IN CLOSET, WEST OF THE BEDROOM ============
-       ONE OPEN ROOM. The two E-W partitions that split this into WIC / passage
-       / WIC are knocked out, so what was 66 + 4.5 + 41 + 4.5 + 66 is now a
-       single 168" (14'-0") run, inside to inside. Its north wall is aligned with
+       TWO CLOSETS AND A PASSAGE, AGAIN. The two E-W partitions were knocked
+       out to make one open 168" room; they are back in, and this reads as
+       62.5 + 4.5 + 41 + 4.5 + 55.5 inside to inside. The 4.5" walls come out
+       of the CLOSETS, not the hall, so the 41" passage is untouched and its
+       faces land exactly on the jambs of both openings - bedroom, hall and
+       bath all on one axis. Its north wall is aligned with
        the bedroom's, so the whole 12" of difference against the bedroom's
        156" falls at the SOUTH end — the closet juts 12" past the bedroom,
        measured either interior face to interior face or outer to outer.
@@ -675,13 +678,33 @@
        (x -78..-73.5) carries the opening to the primary bathroom, and the
        4.5" wall at the east end carries the opening to the bedroom. BOTH are
        drawn at the 41" hall width, y 67..108, so their jambs line up and
-       the cross-route reads as one straight 41" corridor. The bedroom end had
+       the cross-route reads as one straight 41" corridor. Each closet now
+       takes its own 28" doorway off that corridor, pushed WEST - east jamb
+       36" off the bedroom face of the west bedroom wall, so x -64..-36,
+       leaving 31.5" of partition east of the door and 9.5" west. The bedroom end had
        been drawn 36" to match the bedroom door, but that was an assumption,
        not a given, and it left the two caps out of line. 41" is the one width
        actually established here. The bath end was also described as
        "narrowed" at this point, so confirm it. North and south walls drawn 4.5" —
        their thickness was not given either. -->
   <rect x="-73.5" y="0" width="69" height="168" fill="url(#pbed-check)"/>
+  <!-- PARTITIONS RESTORED. The two E-W walls that make this two closets and
+       a passage go back in, faces landing exactly on the 41" hall jambs at
+       y 67 and y 108 so all three openings line up on one axis. 4.5" thick,
+       so they eat into the closets, not the hall:
+         north closet   y 0..62.5     62.5" deep
+         partition      y 62.5..67
+         passage        y 67..108     the 41" hall, unchanged
+         partition      y 108..112.5
+         south closet   y 112.5..168  55.5" deep
+       DOORWAYS 28", both pushed WEST: east jamb 36" off the bedroom face of
+       the west bedroom wall, so x -64..-36. That leaves 31.5" of partition
+       east of the door and 9.5" west. Floor carries through each opening,
+       same as every other doorway on this sheet. -->
+  <rect x="-73.5" y="62.5" width="69" height="4.5" fill="#C9C4B7"/>
+  <rect x="-73.5" y="108" width="69" height="4.5" fill="#C9C4B7"/>
+  <rect x="-64" y="62.5" width="28" height="4.5" fill="url(#pbed-check)"/>
+  <rect x="-64" y="108" width="28" height="4.5" fill="url(#pbed-check)"/>
   <rect x="-76.37" y="67" width="2.87" height="41" fill="url(#pbed-check)"/>
   <!-- THRESHOLD. The floor changes inside the door opening, not out in the
        room: the checkerboard runs west until the west point of its last full
@@ -694,8 +717,8 @@
   <rect x="-78" y="67" width="1.63" height="41" fill="url(#pbed-dawson)"/>
   <line class="thin" x1="-76.37" y1="67" x2="-76.37" y2="108"/>
   <path class="outline" d="M-73.5,0 H-4.5 V67 M-4.5,108 V168 H-73.5 V108 M-73.5,67 V0"/>
-  <text class="lbl-s" x="-74.9" y="87.5" text-anchor="middle" font-size="1.6"
-        transform="rotate(-90 -74.9 87.5)">TO BATH</text>
+  <path class="outline" d="M-73.5,62.5 H-64 M-36,62.5 H-4.5 M-73.5,67 H-4.5 M-73.5,108 H-4.5 M-73.5,112.5 H-64 M-36,112.5 H-4.5"/>
+  <path class="outline" d="M-64,62.5 V67 M-36,62.5 V67 M-64,108 V112.5 M-36,108 V112.5"/>
 
   <!-- ============ PRIMARY BATH ============
        Tagged onto the same sheet, same origin, same scale. The bath's east
@@ -1037,36 +1060,51 @@ SWING SETTLED, and it only works one way. Handle on the left going
        CAPACITY: 217" of run, double hung about 434" of rod, roughly 18
        lineal feet per child.
 
-       CHAMFER, 8 x 8, on the two sharp corners - cut back from the 12 x 12
-       first drawn. The free end of each west leg terminates at the 41"
-       cross-route with a square corner pointing straight into it - the one
-       you clip a hip on walking from the bedroom to the bath, and the only
-       corner in the room that is both sharp and in a traffic line. Cut 8"
-       back on each face; the angled face works out at about 11-1/4".
-         12 x 12   ~1.0 sf of casework gone, run 217" -> ~203"
-          8 x 8    ~0.44 sf gone,           run 217" -> ~208"
-       The 8 still breaks the corner where a hip meets it - what matters is
-       that nothing sharp points into the walking line, not how much is
-       taken - and it gives back about 5" of run and half a square foot of
-       storage across the two zones. Both sizes are inside the allowance.
+       FLIPPED ABOUT THE N-S AXIS. The L is now the end wall plus the EAST
+       wall, mirrored out of the west-wall layout it had while this was one
+       open room. Reflection is x' = -78 - x, so -49.5 becomes -28.5 and the
+       leg lands at x -28.5..-4.5.
+       The reason it moves is the doorways. Pushed west to x -64..-36, the
+       door puts you at the WEST side of each closet as you come in, so the
+       east wall is the one you face - and the west wall, which you now stand
+       against rather than look at, is where the desk goes.
+
+       CHAMFER, 8 x 8, on the free end of each east leg, the corner nearest
+       the door. Cut 8" back on each face; the angled face is about 11-1/4".
+
+       RUN, recomputed for the restored walls - the closets are shallower now
+       than the single room was:
+         north  end band 69" + east leg 38.5" = 107.5"
+         south  end band 69" + east leg 31.5" = 100.5"
+         208" total, about 199" after the two chamfers
+       Double hung that is roughly 398" of rod, about 16-1/2 lineal feet per
+       child. Down from 18 - the partitions cost about 9" of run between
+       them, and the desks are separate pieces on the west wall that take
+       none of it.
 
        Only these two. The other corners are either concave, buried in the
        wall, or out of the traffic line.
 
        STOOL drawn 15" square, movable, shown only to prove the pocket takes
        one. -->
-  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-73.5,0 H-4.5 V24 H-49.5 V59 L-57.5,67 H-73.5 Z"/>
+  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-4.5,0 H-73.5 V24 H-28.5 V54.5 L-20.5,62.5 H-4.5 Z"/>
   <text class="lbl" x="-39" y="10.5" text-anchor="middle">ORGANIZERS</text>
   <text class="lbl-s" x="-39" y="15.0" text-anchor="middle">24" deep</text>
-  <text class="lbl-s" x="-60" y="62.5" text-anchor="middle" font-size="1.7">8 x 8</text>
-  <rect class="fix" x="-20" y="37" width="15" height="15" rx="3"/>
-  <text class="lbl-s" x="-12.5" y="45.7" text-anchor="middle" font-size="1.8">stool</text>
-  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-73.5,168 H-4.5 V144 H-49.5 V116 L-57.5,108 H-73.5 Z"/>
+  <text class="lbl-s" x="-18" y="58" text-anchor="middle" font-size="1.7">8 x 8</text>
+  <!-- DESK, west wall. 20" deep rather than 24: at 24 the aisle between the
+       desk front and the organiser face is 21", which is not enough to push a
+       chair back. At 20 it is 25". Held clear of the doorway so you walk in
+       past the desk's end rather than into it. -->
+  <rect x="-73.5" y="24" width="20" height="30" fill="#D8B98A" stroke="#6B4F3A" stroke-width=".29"/>
+  <text class="lbl-s" x="-63.5" y="39" text-anchor="middle" font-size="1.7" transform="rotate(-90 -63.5 39)">DESK 30 x 20</text>
+  <rect class="fix" x="-53.5" y="30" width="18" height="18" rx="4.5"/>
+  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-4.5,168 H-73.5 V144 H-28.5 V120.5 L-20.5,112.5 H-4.5 Z"/>
   <text class="lbl" x="-39" y="158.5" text-anchor="middle">ORGANIZERS</text>
   <text class="lbl-s" x="-39" y="163.0" text-anchor="middle">24" deep</text>
-  <text class="lbl-s" x="-60" y="112.5" text-anchor="middle" font-size="1.7">8 x 8</text>
-  <rect class="fix" x="-20" y="118.5" width="15" height="15" rx="3"/>
-  <text class="lbl-s" x="-12.5" y="127.2" text-anchor="middle" font-size="1.8">stool</text>
+  <text class="lbl-s" x="-18" y="117" text-anchor="middle" font-size="1.7">8 x 8</text>
+  <rect x="-73.5" y="120" width="20" height="24" fill="#D8B98A" stroke="#6B4F3A" stroke-width=".29"/>
+  <text class="lbl-s" x="-63.5" y="132" text-anchor="middle" font-size="1.7" transform="rotate(-90 -63.5 132)">DESK 24 x 20</text>
+  <rect class="fix" x="-53.5" y="123" width="18" height="18" rx="4.5"/>
 
   <!-- ============ ACCENT WALL, EAST ============
        Zayne slat (wood-look) fluted tile, floor to ceiling, the FULL east
@@ -1093,47 +1131,6 @@ Without these the wall band simply runs out into the floor. Six caps:
        both jambs of the bedroom entry (now x 4 and x 32), the bedroom-to-WIC
        opening, and the WIC-to-bath opening. -->
   <path class="outline" d="M4,156 V160.5 M32,156 V160.5 M-4.5,67 H0 M-4.5,108 H0 M-78,67 H-73.5 M-78,108 H-73.5"/>
-
-  <!-- ============ BARN DOOR, BEDROOM TO CLOSET/BATH ============
-       45" leaf on a face-mounted track over the 41" opening at y 67..108,
-       hung on the BEDROOM side and sliding NORTH to open. Shown CLOSED, with
-       the open position ghosted and the travel arrowed.
-
-       WHY THIS OPENING AND NOT THE ONE AT THE BATH. Sliding north at x -78
-       is not buildable either way round: on the closet side the leaf runs
-       straight into the organizer box, which occupies x -73.5..-49.5 from
-       y 24; on the bath side it would have to pass through the toilet-room
-       wall at y 40.5. Sliding south there puts a fabric-and-timber door on
-       the tiled wet wall beside the tub. The bedroom opening has none of
-       those problems: the west strip of the bedroom is clear floor from the
-       west wall out to the beds at x 62.9, so the leaf parks over y 20..65
-       against a bare wall. Closing it shuts the bedroom off from the closet
-       AND the bath in one move, which is the privacy line that matters.
-
-       LEAF 45" over a 41" opening - 2" of overlap each jamb, so it covers
-       when closed rather than showing a light gap. Track runs about 90",
-       y 18..112, twice the leaf.
-
-       TWO THINGS TO CALL OUT BEFORE FRAMING:
-       HEADER. The track carries the whole leaf, 60-100 lbs, off the wall
-       above the opening. It needs a continuous backer or solid blocking
-       across the full track length - the same "do it while the wall is
-       open" item as the tub ledger and the towel hooks.
-       HEADROOM. A face-mounted track wants 5-6" of clear wall above the
-       opening head. Not measured. If the head is tight to the ceiling this
-       becomes a bypass or pocket door instead, so check it early.
-
-       LATCH: barn doors do not latch by themselves. A privacy latch on the
-       leaf's south stile, drawn as the small tick - flush teardrop or hook
-       type, matte black. -->
-  <line x1="1.9" y1="18" x2="1.9" y2="112" stroke="#6E6A62" stroke-width=".18"/>
-  <rect x="0.5" y="20" width="1.6" height="45" fill="none" stroke="#6B4F3A" stroke-width=".18" stroke-dasharray="2 1.4"/>
-  <rect x="0.5" y="65" width="1.6" height="45" fill="#C79A63" stroke="#6B4F3A" stroke-width=".29"/>
-  <rect x="2.1" y="106.5" width="0.6" height="2.4" rx=".2" fill="#2A2A2A"/>
-  <path fill="none" stroke="#6E6A62" stroke-width=".22" d="M4.4,70 V41 M3.5,44 L4.4,41 L5.3,44"/>
-  <rect x="7" y="80.5" width="27" height="9" rx="1.2" fill="#FBFAF7" stroke="#6E6A62" stroke-width=".16"/>
-  <text class="lbl" x="20.5" y="84" text-anchor="middle">BARN DOOR, 45"</text>
-  <text class="lbl-s" x="20.5" y="87.6" text-anchor="middle" font-size="1.7">slides north · privacy latch</text>
 
   <!-- ============ ROOM OUTLINE ============ -->
   <path class="outline" d="M0,0 H144 V156 H32 M4,156 H0 M0,156 V108 M0,67 V0"/>
