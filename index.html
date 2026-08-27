@@ -634,14 +634,14 @@
        pass through: the wall runs continuous behind them and they get a window
        symbol instead, further down. -->
   <rect x="0" y="156" width="36" height="4.5" fill="url(#pbed-check)"/>
-  <rect x="-4.5" y="64.5" width="4.5" height="41" fill="url(#pbed-check)"/>
+  <rect x="-4.5" y="67" width="4.5" height="41" fill="url(#pbed-check)"/>
 
   <!-- The two openings keep their callouts; the reserved-walkway graphic that
        drove this layout has been removed now that the layout is settled. The
        route it protected still exists — south door to the two WICs and the
        primary bath — and the reasoning is kept in the header comment above. -->
-  <text class="lbl-s" x="-8" y="85" text-anchor="middle"
-        transform="rotate(-90 -8 85)">TO 2 WIC + PRIMARY BATH</text>
+  <text class="lbl-s" x="-8" y="87.5" text-anchor="middle"
+        transform="rotate(-90 -8 87.5)">TO 2 WIC + PRIMARY BATH</text>
   <text class="lbl-s" x="18" y="164.5" text-anchor="middle">TO HALL (bedroom door)</text>
 
   <!-- ============ WALK-IN CLOSET, WEST OF THE BEDROOM ============
@@ -661,7 +661,7 @@
        Depth is 69" east-west (x -73.5..-4.5). The 4.5" wall at the far west
        (x -78..-73.5) carries the opening to the primary bathroom, and the
        4.5" wall at the east end carries the opening to the bedroom. BOTH are
-       drawn at the 41" hall width, y 64.5..105.5, so their jambs line up and
+       drawn at the 41" hall width, y 67..108, so their jambs line up and
        the cross-route reads as one straight 41" corridor. The bedroom end had
        been drawn 36" to match the bedroom door, but that was an assumption,
        not a given, and it left the two caps out of line. 41" is the one width
@@ -669,7 +669,7 @@
        "narrowed" at this point, so confirm it. North and south walls drawn 4.5" —
        their thickness was not given either. -->
   <rect x="-73.5" y="0" width="69" height="168" fill="url(#pbed-check)"/>
-  <rect x="-76.37" y="64.5" width="2.87" height="41" fill="url(#pbed-check)"/>
+  <rect x="-76.37" y="67" width="2.87" height="41" fill="url(#pbed-check)"/>
   <!-- THRESHOLD. The floor changes inside the door opening, not out in the
        room: the checkerboard runs west until the west point of its last full
        black tile, which lands at x -76.37 (the diagonal 12" module puts a
@@ -678,77 +678,65 @@
        1-5/8" strip, held inside the 41" hall opening, is the whole of the bath
        shown. Its west edge falls on a 2" module line, so one full course of
        Dawson reads before the sliver. -->
-  <rect x="-78" y="64.5" width="1.63" height="41" fill="url(#pbed-dawson)"/>
-  <line class="thin" x1="-76.37" y1="64.5" x2="-76.37" y2="105.5"/>
-  <text class="lbl-s" x="-80.6" y="85" text-anchor="middle" font-size="1.8"
-        transform="rotate(-90 -80.6 85)">Dawson 2" charcoal</text>
-  <path class="outline" d="M-73.5,0 H-4.5 V64.5 M-4.5,105.5 V168 H-73.5 V105.5 M-73.5,64.5 V0"/>
-  <text class="lbl-s" x="-74.9" y="85" text-anchor="middle" font-size="1.6"
-        transform="rotate(-90 -74.9 85)">TO BATH</text>
+  <rect x="-78" y="67" width="1.63" height="41" fill="url(#pbed-dawson)"/>
+  <line class="thin" x1="-76.37" y1="67" x2="-76.37" y2="108"/>
+  <text class="lbl-s" x="-80.6" y="87.5" text-anchor="middle" font-size="1.8"
+        transform="rotate(-90 -80.6 87.5)">Dawson 2" charcoal</text>
+  <path class="outline" d="M-73.5,0 H-4.5 V67 M-4.5,108 V168 H-73.5 V108 M-73.5,67 V0"/>
+  <text class="lbl-s" x="-74.9" y="87.5" text-anchor="middle" font-size="1.6"
+        transform="rotate(-90 -74.9 87.5)">TO BATH</text>
 
   <!-- ============ CLOSET CASEWORK ============
-       THE CORNER 24" IS NOT HANGING, AND CANNOT BE. An L of casework puts a
-       24 x 24 square where the end run meets the east run, and in this room
-       the DESK sits directly in front of that square. A rod there is blind:
-       you would have to lean across the desk to reach it. Its west face is
-       no better - the hanging run is against it. Its only open face is
-       SOUTH, and only above desk height.
+       DESKS ON THE END WALLS, ORGANIZERS ON THE EAST WALL. The end walls are
+       69" and 69"; the east wall is 67" and 60". So this is the only swap
+       that makes the two desks identical, and the 7" difference between the
+       zones lands on the organizers instead. One child gets 43" of hanging
+       and the other 36" - a deliberate choice, since two equal desks matter
+       more than two equal closets.
 
-       So that square is a DESK TOWER, not closet: floor-to-ceiling shelving
-       that opens south over and beside the desk and serves the desk. Below
-       desk height it is the desk's own pedestal. Nothing is lost, but it
-       stops being wardrobe.
+         north  desk       x -73.5..-4.5,  y 0..24     69 x 24
+                organizer  x -28.5..-4.5,  y 24..67    43"
+         south  organizer  x -28.5..-4.5,  y 108..144  36"
+                desk       x -73.5..-4.5,  y 144..168  69 x 24
 
-       CORRECTION TO THE CAPACITY THIS LAYOUT WAS SOLD ON. The 69" wall-to-
-       wall figure counted that blind 24" as hanging. It never was. Effective
-       hanging is 45" per zone, 90" total, double hung = 180" of rod, about
-       7.5 lineal feet per child - roughly 90 hung garments each, not the 130
-       claimed. The run on the drawing did not change; the number describing
-       it was wrong.
+       THE CORNER IS NOW DESK, WHICH SOLVES IT. Where the two runs meet, the
+       east 24" of the desk has the organizer behind it, so no chair goes
+       there - but it is continuous desk top, reachable by sliding along, and
+       the volume under it opens WEST into the knee space as a drawer
+       pedestal. Nothing is blind. That is why there is no longer a separate
+       desk tower: the corner does the same job as part of the desk.
+       Seatable desk is the western 45"; the last 24" is a return.
 
-         north  organizer  x -73.5..-28.5, y 0..24        45"  clear floor
-                tower      x -28.5..-4.5,  y 0..24        24 x 24
-                desk       x -28.5..-4.5,  y 24..64.5     40.5"
-         south  desk       x -28.5..-4.5,  y 105.5..144   38.5"
-                tower      x -28.5..-4.5,  y 144..168     24 x 24
-                organizer  x -73.5..-28.5, y 144..168     45"  clear floor
+       THE WEST WALL IS FREE AGAIN, and this is a real gain from the swap.
+       With the desk on the east wall a chair pushed back landed against the
+       west wall, which is why shelving there was ruled out. Now the chair
+       pushes SOUTH into the zone, not west, so the west wall is nobody's
+       clearance: 67" and 60" of it available for 14"-deep shelving, which
+       would still leave the pocket 31" wide. That partly offsets the
+       organizers getting shorter.
 
-       THE CHAIR OWNS THE WEST WALL. An office chair needs about 36" behind
-       the desk edge to push back and stand; 42" is comfortable. With the
-       west wall bare there is 45". Put 14" of shelving on it and that drops
-       to 31", and the chair backs into it - which is the back-to-back
-       crowding this layout has to avoid. So the west wall does NOT get
-       shelving. It gets a full-height mirror and a hook rail: 1" deep, no
-       clearance cost, and a mirror is worth more than shelves in a 69"-wide
-       windowless room anyway. The earlier note calling west-wall shelving
-       "the next move" was wrong and is withdrawn.
-
-       WHERE MORE STORAGE ACTUALLY COMES FROM, in order: a shelf over the top
-       rod, a drawer bank inside each 45" run, and the two towers. After
-       that the room is full - it is 69" wide with a doorway in the middle of
-       each long wall, and that is what it holds. -->
-  <rect fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" x="-73.5" y="0" width="45" height="24"/>
-  <text class="lbl" x="-51" y="9" text-anchor="middle">ORGANIZER</text>
-  <text class="lbl-s" x="-51" y="13" text-anchor="middle">double hang + drawers</text>
-  <text class="lbl-s" x="-51" y="17" text-anchor="middle">45 x 24</text>
-  <rect fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" x="-28.5" y="0" width="24" height="24"/>
-  <text class="lbl" x="-16.5" y="9" text-anchor="middle" font-size="2.2">DESK TOWER</text>
-  <text class="lbl-s" x="-16.5" y="13" text-anchor="middle" font-size="1.9">shelves, opens</text>
-  <text class="lbl-s" x="-16.5" y="16.5" text-anchor="middle" font-size="1.9">over the desk</text>
-  <rect class="fix" x="-28.5" y="24" width="24" height="40.5"/>
-  <text class="lbl" x="-16.5" y="42.75" text-anchor="middle">DESK</text>
-  <text class="lbl-s" x="-16.5" y="47.25" text-anchor="middle">40½ x 24</text>
-  <rect class="fix" x="-28.5" y="105.5" width="24" height="38.5"/>
-  <text class="lbl" x="-16.5" y="123.25" text-anchor="middle">DESK</text>
-  <text class="lbl-s" x="-16.5" y="127.75" text-anchor="middle">38½ x 24</text>
-  <rect fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" x="-28.5" y="144" width="24" height="24"/>
-  <text class="lbl" x="-16.5" y="153" text-anchor="middle" font-size="2.2">DESK TOWER</text>
-  <text class="lbl-s" x="-16.5" y="157" text-anchor="middle" font-size="1.9">shelves, opens</text>
-  <text class="lbl-s" x="-16.5" y="160.5" text-anchor="middle" font-size="1.9">over the desk</text>
-  <rect fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" x="-73.5" y="144" width="45" height="24"/>
-  <text class="lbl" x="-51" y="153" text-anchor="middle">ORGANIZER</text>
-  <text class="lbl-s" x="-51" y="157" text-anchor="middle">double hang + drawers</text>
-  <text class="lbl-s" x="-51" y="161" text-anchor="middle">45 x 24</text>
+       CLEARANCE: 45" x 43" pocket north, 45" x 36" south. The south one is
+       exactly the 36" a chair needs to push back and stand - fine, but it is
+       the tight one, so if a bulkier chair turns up it goes in the north
+       room. -->
+  <rect class="fix" x="-73.5" y="0" width="69" height="24"/>
+  <line class="thin" x1="-28.5" y1="0" x2="-28.5" y2="24"/>
+  <text class="lbl" x="-39" y="10" text-anchor="middle">DESK</text>
+  <text class="lbl-s" x="-39" y="14.5" text-anchor="middle">69 x 24</text>
+  <text class="lbl-s" x="-16.5" y="13" text-anchor="middle" font-size="1.7">pedestal</text>
+  <rect fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" x="-28.5" y="24" width="24" height="43"/>
+  <text class="lbl" x="-16.5" y="42.0" text-anchor="middle" font-size="2.2">ORGANIZER</text>
+  <text class="lbl-s" x="-16.5" y="45.5" text-anchor="middle" font-size="1.9">double hang</text>
+  <text class="lbl-s" x="-16.5" y="49.0" text-anchor="middle" font-size="1.9">43 x 24</text>
+  <rect fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" x="-28.5" y="108" width="24" height="36"/>
+  <text class="lbl" x="-16.5" y="122.5" text-anchor="middle" font-size="2.2">ORGANIZER</text>
+  <text class="lbl-s" x="-16.5" y="126.0" text-anchor="middle" font-size="1.9">double hang</text>
+  <text class="lbl-s" x="-16.5" y="129.5" text-anchor="middle" font-size="1.9">36 x 24</text>
+  <rect class="fix" x="-73.5" y="144" width="69" height="24"/>
+  <line class="thin" x1="-28.5" y1="144" x2="-28.5" y2="168"/>
+  <text class="lbl" x="-39" y="154" text-anchor="middle">DESK</text>
+  <text class="lbl-s" x="-39" y="158.5" text-anchor="middle">69 x 24</text>
+  <text class="lbl-s" x="-16.5" y="157" text-anchor="middle" font-size="1.7">pedestal</text>
 
   <!-- ============ ACCENT WALL, EAST ============
        Zayne slat (wood-look) fluted tile, floor to ceiling, the FULL east
@@ -774,11 +762,11 @@
        Without these the wall band simply runs out into the floor. Six caps:
        both sides of the bedroom door, the bedroom-to-WIC opening, and the
        WIC-to-bath opening. -->
-  <path class="outline" d="M0,156 V160.5 M36,156 V160.5 M-4.5,64.5 H0 M-4.5,105.5 H0 M-78,64.5 H-73.5 M-78,105.5 H-73.5"/>
+  <path class="outline" d="M0,156 V160.5 M36,156 V160.5 M-4.5,67 H0 M-4.5,108 H0 M-78,67 H-73.5 M-78,108 H-73.5"/>
 
   <!-- ============ ROOM OUTLINE ============ -->
-  <path class="outline" d="M0,0 H144 V156 H36 M0,156 V105.5 M0,64.5 V0"/>
-  <path class="outline" d="M-78,-4.5 H148.5 V160.5 H36 M0,160.5 V172.5 H-78 V105.5 M-78,64.5 V-4.5"/>
+  <path class="outline" d="M0,0 H144 V156 H36 M0,156 V108 M0,67 V0"/>
+  <path class="outline" d="M-78,-4.5 H148.5 V160.5 H36 M0,160.5 V172.5 H-78 V108 M-78,67 V-4.5"/>
   <!-- glazing line, standard plan symbol -->
   <!-- EAST WINDOW, y 48..89. Standard plan symbol: jamb lines across the wall
        thickness at each end, glazing down the centre. The wall face runs
@@ -912,20 +900,21 @@
 
   <!-- ============ DIMENSIONS — CLOSET, LEFT (N-S) ============ -->
   <!-- wall lengths: how the 168" splits either side of the 41" opening.
-       64.5 + 41 + 62.5. The two solid runs differ by 2" because the opening
-       is centred on the room, not on the two zones. -->
-  <line class="extline" x1="-86" y1="64.5"  x2="-91" y2="64.5"/>
-  <line class="extline" x1="-86" y1="105.5" x2="-91" y2="105.5"/>
+       67 + 41 + 60, measured on site. The opening is NOT centred on the run:
+       it sits 7" further north of centre than south, so the north zone is 7"
+       deeper than the south. -->
+  <line class="extline" x1="-86" y1="67"  x2="-91" y2="67"/>
+  <line class="extline" x1="-86" y1="108" x2="-91" y2="108"/>
   <line class="dimline" x1="-89" y1="0" x2="-89" y2="168"/>
   <g class="tick">
     <line x1="-90.1" y1="-1.1" x2="-87.9" y2="1.1"/>
-    <line x1="-90.1" y1="63.4" x2="-87.9" y2="65.6"/>
-    <line x1="-90.1" y1="104.4" x2="-87.9" y2="106.6"/>
+    <line x1="-90.1" y1="65.9" x2="-87.9" y2="68.1"/>
+    <line x1="-90.1" y1="106.9" x2="-87.9" y2="109.1"/>
     <line x1="-90.1" y1="166.9" x2="-87.9" y2="169.1"/>
   </g>
-  <text class="dim-t" x="-90.6" y="32.25" text-anchor="middle" transform="rotate(-90 -90.6 32.25)">64½"</text>
-  <text class="dim-t" x="-90.6" y="85" text-anchor="middle" transform="rotate(-90 -90.6 85)">41"</text>
-  <text class="dim-t" x="-90.6" y="136.75" text-anchor="middle" transform="rotate(-90 -90.6 136.75)">62½"</text>
+  <text class="dim-t" x="-90.6" y="33.5" text-anchor="middle" transform="rotate(-90 -90.6 33.5)">67"</text>
+  <text class="dim-t" x="-90.6" y="87.5" text-anchor="middle" transform="rotate(-90 -90.6 87.5)">41"</text>
+  <text class="dim-t" x="-90.6" y="138" text-anchor="middle" transform="rotate(-90 -90.6 138)">60"</text>
   <line class="extline" x1="-86" y1="0"   x2="-104" y2="0"/>
   <line class="extline" x1="-86" y1="168" x2="-104" y2="168"/>
   <line class="dimline" x1="-96" y1="0" x2="-96" y2="168"/>
@@ -975,7 +964,7 @@
 
 
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the east wall, one bed at each end, both tight to their end wall so all 68&quot; of slack lands in the middle &mdash; where the 41&quot; window is, and where each bed&rsquo;s side table clamps to its rail. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the doorways carry the floor through the wall thickness, and each cut wall end is capped; windows get a window symbol with the wall running continuous behind. The accent wall runs the full 13 feet &mdash; 13 columns, no cut column, no painted reveal at either end. The plan extends west to show the walk-in closet, the two partitions knocked out so it reads as one 69&quot; x 168&quot; room running through to the primary bath, organizers wall to wall on the north and south walls and desks down the east. Its 41&quot; cross-route lines up with the gap between the beds, which is what pairs each bed with the closet zone on its side.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the east wall, one bed at each end, both tight to their end wall so all 68&quot; of slack lands in the middle &mdash; where the 41&quot; window is, and where each bed&rsquo;s side table clamps to its rail. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the doorways carry the floor through the wall thickness, and each cut wall end is capped; windows get a window symbol with the wall running continuous behind. The accent wall runs the full 13 feet &mdash; 13 columns, no cut column, no painted reveal at either end. The plan extends west to show the walk-in closet, the two partitions knocked out so it reads as one 69&quot; x 168&quot; room running through to the primary bath, with a 69&quot; desk across each end wall and the organizer down the east wall beside it. The west chain splits the 168&quot; as measured on site: 67&quot; of wall, the 41&quot; opening, then 60&quot;. Its cross-route lines up with the gap between the beds, which is what pairs each bed with the closet zone on its side.</p>
     </div>
 
       
@@ -1023,7 +1012,7 @@
 
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag white">Primary Bedroom Walk-In Closet</span>
-    <p>The two walk-in closets are knocked through into one 69&quot; x 168&quot; room. Organizers run wall to wall across the north and south walls &mdash; 69&quot; each, 24&quot; deep &mdash; with the desks down the east wall, 40&frac12;&quot; north and 38&frac12;&quot; south, topped in Absolute Black granite from the dining room&rsquo;s order. The end walls beat the west wall: they are exactly equal at 69&quot; where the west wall would be 64&frac12;&quot; and 62&frac12;&quot;, and they put the hanging on the wall you face walking in. Of each run, 45&quot; is hanging with clear floor in front; the last 24&quot; sits behind the desk where a rod would be blind, so it becomes a desk tower &mdash; floor-to-ceiling shelving opening over the desk. That is 90&quot; of hanging, 180&quot; of rod, about 7&frac12; lineal feet per child, plus a tower each. The west wall belongs to the chair &mdash; 45&quot; behind the desk edge, down to 31&quot; if anything is built on it &mdash; so it gets a full-height mirror and hooks instead. Cabinetry in wood-grain veneer stained to Zayne&rsquo;s tone rather than white melamine, keeping the bed&rsquo;s walnut distinct. Doors come off, frames stay in place. Each closet gets its own light fixture. Checkerboard floor, gray walls in glossy finish, matte black hardware.</p>
+    <p>The two walk-in closets are knocked through into one 69&quot; x 168&quot; room. A 69&quot; desk runs wall to wall across each end wall, topped in Absolute Black granite from the dining room&rsquo;s order, with the organizer down the east wall beside it &mdash; 43&quot; in the north zone, 36&quot; in the south. The end walls are the only two runs in the room that are exactly equal, so putting the desks there is what makes the two children&rsquo;s desks identical; the 7&quot; difference between the zones lands on the organizers instead, one child getting less hanging than the other. Equal desks were judged to matter more than equal closets. Only the western 45&quot; of each desk is seatable &mdash; the last 24&quot; is a return over a drawer pedestal that opens into the knee space. Hanging is 158&quot; of rod double hung, about 6&frac12; and 5&frac12; lineal feet. The west wall is free, 67&quot; and 60&quot; of it: with the chair now pushing south rather than west, 14&quot;-deep shelving there is available and still leaves the pocket 31&quot; wide. Cabinetry in wood-grain veneer stained to Zayne&rsquo;s tone rather than white melamine, keeping the bed&rsquo;s walnut distinct. Doors come off, frames stay in place. Each closet gets its own light fixture. Checkerboard floor, gray walls in glossy finish, matte black hardware.</p>
 
     <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
       <div style="width: 110px;">
