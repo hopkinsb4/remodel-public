@@ -476,7 +476,7 @@
 
       <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Primary Bedroom</span>
-      <p>Two twin beds, headboards against the east wall, one at each end, feet pointing west. Each gets its own Thuma Floating Side Table, Walnut &mdash; 15&frac34;&quot; x 11.8&quot;, clamped to the bed rail rather than standing on the floor, so the checkerboard runs unbroken between them. Setting the beds this way pairs each with the half of the walk-in closet on its own side. The full 13-foot east wall is wrapped floor to ceiling in the same wood-look plank tile as the entryway, run vertically in 13 columns; the 41&quot; window is punched straight through it, reveals tiled to match, and lands in the 68&quot; gap between the beds. Checkerboard floor, gray walls in glossy finish elsewhere. Two walk-in closets, the partition between them kept rather than knocked through, each entered off the 41&quot; passage through a 28&quot; opening pushed west. Built-in organizers wrap the end wall and the east wall of each, following the corner-wraparound inspiration &mdash; rods above, cubbies below, the leg running to the partition with its free end at the doorway. The west wall stays bare, because each west-hinged door parks its leaf against it; that is also why the desk lives <em>in</em> the end band rather than on a wall of its own &mdash; a 36&quot; x 24&quot; knee-space section in each closet, granite top, storage continuing above and beside, running exactly to the corner cubby over the leg. The bedroom door is on the south wall; the west opening leads to the two walk-in closets and the primary bath. The clear floor is one 62.9&quot; strip down the west side, left deliberately empty. All hardware in matte black.</p>
+      <p>Two twin beds, headboards against the east wall, one at each end, feet pointing west. Each gets its own Thuma Floating Side Table, Walnut &mdash; 15&frac34;&quot; x 11.8&quot;, clamped to the bed rail rather than standing on the floor, so the checkerboard runs unbroken between them. Setting the beds this way pairs each with the half of the walk-in closet on its own side. The full 13-foot east wall is wrapped floor to ceiling in the same wood-look plank tile as the entryway, run vertically in 13 columns; the 41&quot; window is punched straight through it, reveals tiled to match, and lands in the 68&quot; gap between the beds. Checkerboard floor, gray walls in glossy finish elsewhere. Two walk-in closets, the partition between them kept rather than knocked through, each entered off the 41&quot; passage through a 28&quot; opening pushed west. Built-in organizers wrap the end wall and the east wall of each, following the corner-wraparound inspiration &mdash; rods above, cubbies below, the leg running to the partition with its free end at the doorway. The west wall stays bare, because each west-hinged door parks its leaf against it; that is also why the desk lives <em>in</em> the end band rather than on a wall of its own &mdash; a 36&quot; x 24&quot; knee-space section in each closet, granite top, storage continuing above and beside, running exactly to the corner cubby over the leg. One found condition: a 24&quot; x 16&quot; chase in the south closet&rsquo;s SE corner eats that corner there &mdash; the leg runs past it to the chase face and the shelving over it goes shallow. The bedroom door is on the south wall; the west opening leads to the two walk-in closets and the primary bath. The clear floor is one 62.9&quot; strip down the west side, left deliberately empty. All hardware in matte black.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-154 -40 341 226" role="img"
@@ -1286,10 +1286,13 @@ SWING SETTLED, and it only works one way. Handle on the left going
        wall, exactly the inspiration photo's corner: the leg runs from the
        band to the partition and its free end faces the doorway, clear of
        the swing (arc tops out at x -32; leg face is x -28.5).
-         north  band 60" (y 0..24)   + leg 43" (y 24..67)   = 103"
-         south  band 60" (y 150..174)+ leg 33" (y 117..150) =  93"
-       Aisle between the west wall and the leg face: 36". No chamfers - the
-       free ends face their own doorways, not a corridor.
+         north  band 60" (y 0..24)   + leg 43" (y 24..67)
+         south  band 36" (the desk) + leg 41" (y 117..158) - the SE-corner
+                chase eats the band's east 24", and the leg runs past it to
+                the chase face instead of stopping at the band
+       Wardrobe run 108" (67 north + 41 south) after the desks take their
+       72". Aisle between the west wall and the leg face: 36". No chamfers -
+       the free ends face their own doorways, not a corridor.
 
        DESK, the piece the west doors evicted from the west wall, MOVES INTO
        THE END BAND as a knee-space section - counter at desk height, open
@@ -1314,7 +1317,18 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <text class="lbl-s" x="-46.5" y="13.5" text-anchor="middle" font-size="1.7">36 x 24</text>
   <text class="lbl-s" x="-18.5" y="45.5" text-anchor="middle" transform="rotate(-90 -18.5 45.5)">ORGANIZERS</text>
   <text class="lbl-s" x="-14.2" y="45.5" text-anchor="middle" font-size="1.7" transform="rotate(-90 -14.2 45.5)">24" deep</text>
-  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-64.5,174 H-4.5 V117 H-28.5 V150 H-64.5 Z"/>
+  <!-- SE-CORNER PROTRUSION, south WIC: 24" E-W x 16" N-S (x -28.5..-4.5,
+       y 158..174), reported from the house - most likely a duct chase or a
+       framing box; purpose unconfirmed. It consumes the organizer's corner
+       section in this closet, so the L reshapes around it: the east leg
+       runs PAST it to the protrusion's face (y 117..158, 41" instead of
+       33"), and the corner over the protrusion goes to shallow shelving -
+       8" deep in front of the box - or stays open, the designer's call. -->
+  <rect x="-28.5" y="158" width="24" height="16" fill="#C9C4B7"/>
+  <path class="outline" d="M-28.5,174 V158 H-4.5"/>
+  <text class="lbl-s" x="-16.5" y="164.6" text-anchor="middle" font-size="1.7">chase</text>
+  <text class="lbl-s" x="-16.5" y="168" text-anchor="middle" font-size="1.7">24 x 16</text>
+  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-64.5,174 H-28.5 V158 H-4.5 V117 H-28.5 V150 H-64.5 Z"/>
   <rect x="-64.5" y="150" width="36" height="24" fill="#D8B98A" stroke="#6B4F3A" stroke-width=".29"/>
   <text class="lbl-s" x="-46.5" y="159.5" text-anchor="middle">DESK</text>
   <text class="lbl-s" x="-46.5" y="163.5" text-anchor="middle" font-size="1.7">36 x 24</text>
