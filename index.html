@@ -479,7 +479,7 @@
       <p>Two twin beds, headboards against the east wall, one at each end, feet pointing west. Each gets its own Thuma Floating Side Table, Walnut &mdash; 15&frac34;&quot; x 11.8&quot;, clamped to the bed rail rather than standing on the floor, so the checkerboard runs unbroken between them. Setting the beds this way pairs each with the half of the walk-in closet on its own side. The full 13-foot east wall is wrapped floor to ceiling in the same wood-look plank tile as the entryway, run vertically in 13 columns; the 41&quot; window is punched straight through it, reveals tiled to match, and lands in the 68&quot; gap between the beds. Checkerboard floor, gray walls in glossy finish elsewhere. Closets stay open &mdash; doors come off, frames stay in place &mdash; with built-in organizers &mdash; no desks in them; homework happens at the dining room&rsquo;s two desk stations. The bedroom door is on the south wall; the west opening leads to the two walk-in closets and the primary bath. The clear floor is one 62.9&quot; strip down the west side, left deliberately empty. All hardware in matte black.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-180 -40 366 236" role="img"
+      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-186 -40 372 226" role="img"
      aria-label="Primary bedroom floorplan, drawn to scale — two twin beds headboard to the east accent wall, one at each end, each with a floating side table cantilevered off its bed rail, the 41 inch east window clear in the 68 inch gap between them, open floor west of the beds, a diagonal checkerboard floor, a 28 inch crank-out window on the north wall, and one knocked-through walk-in closet running west of the room">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
@@ -691,8 +691,9 @@
 
        MEASURED FROM THE DOORWAY, and read off the JAMBS, not the centreline:
          62" west          -> west interior face at x -140
-         50" to the left   -> from the south jamb (y 108) to the shower's
-                              near wall at y 158
+         50½" to the left  -> from the south jamb (y 108) to the DRYWALL at
+                              y 158.5. The 50" first given was to the face of
+                              the fiberglass, which stands ½" proud of it.
          27" to the right  -> from the north jamb (y 67) to the wall with the
                               toilet-room door, at y 40
        That makes the open bath 62" x 118". If you meant those measured from
@@ -701,9 +702,25 @@
        is there so it can be checked at a glance.
 
        TOILET ROOM 62 x 36, north of the door wall: interior y -0.5..35.5,
-       the full 62" width. NOT measured, so not drawn: how far the shower runs
-       south of y 158. Its partition is drawn at 4.5" and the space beyond is
-       left open with a dashed edge rather than invented.
+       the full 62" width.
+
+       TUB ALCOVE, the lower 36" OF the room, not beyond it: y 122.5..158.5,
+       full 62" width. So the 50½" from the south jamb breaks 14½" of clear
+       floor then 36" of tub. It matches the 60 x 36 alcove the budget's
+       shower-wall line was already written against, and the 2" left over
+       across the 62" is the same 2" build-up that line calls out.
+
+       DROPPED IN: the Kohler Underscore 60 x 32 replacing the fiberglass,
+       with Lilah Opal on the three surround walls. The tub sits tight to the
+       tiled south and east faces.
+
+       4" TO RESOLVE. The alcove is 36" deep and the Underscore is 32". An
+       alcove is normally framed to the tub, so either the opening gets
+       furred down 4" or the tub gets a tiled deck across the front. It is a
+       framing decision, so it is flagged on the drawing rather than drawn
+       one way.
+
+       That closes the footprint: -0.5 to 158.5, 159" north to south.
 
        ITS NORTH WALL COMES OUT FLUSH with the bedroom's and the closet's.
        36" back from y 35.5 lands at y -0.5, half an inch off the closet's
@@ -741,18 +758,28 @@
        way - it is a decision, and the plan should not pretend otherwise.
 
        Walls drawn 4.5" throughout. -->
-  <rect x="-144.5" y="-5" width="66.5" height="167.5" fill="#C9C4B7"/>
-  <rect x="-140" y="40" width="62" height="118" fill="url(#pbed-dawson)"/>
+  <rect x="-144.5" y="-5" width="66.5" height="168" fill="#C9C4B7"/>
+  <rect x="-140" y="40" width="62" height="82.5" fill="url(#pbed-dawson)"/>
   <rect x="-110" y="35.5" width="28" height="4.5" fill="url(#pbed-dawson)"/>
-  <path class="outline" d="M-78,40 H-140 V158 H-78 M-78,158 V108 M-78,67 V40"/>
+  <path class="outline" d="M-78,40 H-140 V158.5 H-78 M-78,158.5 V108 M-78,67 V40"/>
   <rect x="-140" y="-0.5" width="62" height="36" fill="url(#pbed-dawson)"/>
   <path class="outline" d="M-140,-0.5 H-78 V35.5 H-82 M-110,35.5 H-140 V-0.5"/>
-  <path class="outline" d="M-78,-5 H-144.5 V162.5 H-78"/>
+  <path class="outline" d="M-78,-5 H-144.5 V163 H-78"/>
   <path class="outline" d="M-110,35.5 V40 M-82,35.5 V40"/>
+  <!-- TUB ALCOVE, the lower 36" of the room: y 122.5..158.5, full 62" width.
+       Lilah Opal on the three surround walls, drawn as an 0.8" band; the
+       Kohler Underscore 60 x 32 set tight to the tiled south and east faces. -->
+  <rect class="fix" x="-140" y="122.5" width="62" height="36"/>
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="-140" y="157.7" width="62" height="0.8"/>
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="-140" y="122.5" width="0.8" height="36"/>
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="-78.8" y="122.5" width="0.8" height="36"/>
+  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".29" x="-138.8" y="125.7" width="60" height="32" rx="2.4"/>
+  <text class="lbl" x="-109" y="139" text-anchor="middle">KOHLER UNDERSCORE</text>
+  <text class="lbl-s" x="-109" y="143.5" text-anchor="middle">alcove tub 60 x 32</text>
+  <text class="lbl-s" x="-109" y="148" text-anchor="middle" font-size="1.8">Lilah Opal, 3-wall surround</text>
+  <text class="red-t" x="-109" y="153" text-anchor="middle" font-size="1.8">alcove is 36" deep, tub is 32" — 4" to resolve</text>
   <text class="wall-lbl" x="-109" y="102" text-anchor="middle" fill="#CFC9BE">PRIMARY BATH</text>
-  <text class="lbl-s" x="-109" y="107" text-anchor="middle" fill="#C7C1B6">62 x 118, Dawson 2" charcoal</text>
-  <text class="lbl-s" x="-109" y="167" text-anchor="middle" font-size="1.9">FIBERGLASS SHOWER &#8595;  extent not measured</text>
-  <line class="red" x1="-144.5" y1="164.5" x2="-73.5" y2="164.5"/>
+  <text class="lbl-s" x="-109" y="107" text-anchor="middle" fill="#C7C1B6">62 x 118½, Dawson 2" charcoal</text>
   <text class="wall-lbl" x="-109" y="15" text-anchor="middle" fill="#CFC9BE">TOILET ROOM</text>
   <text class="lbl-s" x="-109" y="19.5" text-anchor="middle" fill="#C7C1B6">62 x 36</text>
   <text x="-109" y="25" text-anchor="middle" font-size="1.9" fill="#E0917A" font-family="'Helvetica Neue',Arial,sans-serif">toilet against the WEST wall, facing east</text>
@@ -971,37 +998,38 @@
   <text class="dim-big" x="-39" y="-24.6" text-anchor="middle">78"</text>
 
   <!-- ============ DIMENSIONS — WEST (N-S) ============
-       Moved outboard of the bath, which now occupies where these used to sit.
-       Three stacked chains, all measured off the same run:
-         inner   36 / 4½ / 27 / 41 / 50  the bath complex, north to south
-         middle  67 / 41 / 60            the closet's west wall
-         outer   168" overall
-       The 27 / 41 / 50 is the reading of your doorway measurements: 27" from
-       the NORTH jamb to the toilet-room wall, the 41" opening, 50" from the
-       SOUTH jamb to the shower wall. If those were taken from the centre of
-       the opening instead, this chain is what will look wrong first. -->
-  <line class="extline" x1="-148" y1="-0.5" x2="-155" y2="-0.5"/>
+       Four stacked chains, outboard of the bath:
+         36 / 4½ / 27 / 41 / 14½ / 36  the bath complex, north to south
+         67 / 41 / 60                  the closet's west wall
+         168"                          closet overall
+         159"                          bath complex overall
+       The 50½" you measured from the south jamb is the last two together:
+       14½" of clear floor, then the 36" the tub fills. -->
   <line class="extline" x1="-148" y1="35.5" x2="-155" y2="35.5"/>
   <line class="extline" x1="-148" y1="40" x2="-155" y2="40"/>
-  <line class="extline" x1="-148" y1="158" x2="-155" y2="158"/>
+  <line class="extline" x1="-148" y1="122.5" x2="-155" y2="122.5"/>
+  <line class="extline" x1="-148" y1="-0.5" x2="-180" y2="-0.5"/>
+  <line class="extline" x1="-148" y1="158.5" x2="-180" y2="158.5"/>
   <line class="extline" x1="-148" y1="0" x2="-172" y2="0"/>
   <line class="extline" x1="-148" y1="67" x2="-172" y2="67"/>
   <line class="extline" x1="-148" y1="108" x2="-172" y2="108"/>
   <line class="extline" x1="-148" y1="168" x2="-172" y2="168"/>
-  <line class="dimline" x1="-152" y1="-0.5" x2="-152" y2="158"/>
+  <line class="dimline" x1="-152" y1="-0.5" x2="-152" y2="158.5"/>
   <g class="tick">
-    <line x1="-153.1" y1="-1.6" x2="-150.9" y2="0.6000000000000001"/>
+    <line x1="-153.1" y1="-1.6" x2="-150.9" y2="0.6"/>
     <line x1="-153.1" y1="34.4" x2="-150.9" y2="36.6"/>
     <line x1="-153.1" y1="38.9" x2="-150.9" y2="41.1"/>
     <line x1="-153.1" y1="65.9" x2="-150.9" y2="68.1"/>
     <line x1="-153.1" y1="106.9" x2="-150.9" y2="109.1"/>
-    <line x1="-153.1" y1="156.9" x2="-150.9" y2="159.1"/>
+    <line x1="-153.1" y1="121.4" x2="-150.9" y2="123.6"/>
+    <line x1="-153.1" y1="157.4" x2="-150.9" y2="159.6"/>
   </g>
   <text class="dim-t" x="-153.6" y="17.5" text-anchor="middle" transform="rotate(-90 -153.6 17.5)">36"</text>
   <text class="dim-t" x="-153.6" y="37.75" text-anchor="middle" transform="rotate(-90 -153.6 37.75)" font-size="2">4½"</text>
   <text class="dim-t" x="-153.6" y="53.5" text-anchor="middle" transform="rotate(-90 -153.6 53.5)">27"</text>
   <text class="dim-t" x="-153.6" y="87.5" text-anchor="middle" transform="rotate(-90 -153.6 87.5)">41"</text>
-  <text class="dim-t" x="-153.6" y="133" text-anchor="middle" transform="rotate(-90 -153.6 133)">50"</text>
+  <text class="dim-t" x="-153.6" y="115.25" text-anchor="middle" transform="rotate(-90 -153.6 115.25)" font-size="2.2">14½"</text>
+  <text class="dim-t" x="-153.6" y="140.5" text-anchor="middle" transform="rotate(-90 -153.6 140.5)">36"</text>
 
   <line class="dimline" x1="-160" y1="0" x2="-160" y2="168"/>
   <g class="tick">
@@ -1019,7 +1047,14 @@
     <line x1="-169.1" y1="-1.1" x2="-166.9" y2="1.1"/>
     <line x1="-169.1" y1="166.9" x2="-166.9" y2="169.1"/>
   </g>
-  <text class="dim-big" x="-170.6" y="84" text-anchor="middle" transform="rotate(-90 -170.6 84)">168" (14'-0")</text>
+  <text class="dim-t" x="-169.6" y="84" text-anchor="middle" transform="rotate(-90 -169.6 84)">168" closet</text>
+
+  <line class="dimline" x1="-176" y1="-0.5" x2="-176" y2="158.5"/>
+  <g class="tick">
+    <line x1="-177.1" y1="-1.6" x2="-174.9" y2="0.6"/>
+    <line x1="-177.1" y1="157.4" x2="-174.9" y2="159.6"/>
+  </g>
+  <text class="dim-big" x="-178.6" y="79" text-anchor="middle" transform="rotate(-90 -178.6 79)">159" bath</text>
 
   <!-- ============ DIMENSIONS — BATH, BOTTOM (W-E) ============ -->
   <line class="extline" x1="-140" y1="165" x2="-140" y2="178"/>
@@ -1071,7 +1106,7 @@
 
 
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the east wall, one bed at each end, both tight to their end wall so all 68&quot; of slack lands in the middle &mdash; where the 41&quot; window is, and where each bed&rsquo;s side table clamps to its rail. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the doorways carry the floor through the wall thickness, and each cut wall end is capped; windows get a window symbol with the wall running continuous behind. The accent wall runs the full 13 feet &mdash; 13 columns, no cut column, no painted reveal at either end. The plan now runs west past the closet into the primary bath &mdash; 62&quot; x 118&quot; with a 62&quot; x 36&quot; toilet room off its north end, both in Dawson 2&quot; charcoal; the shower south of it is drawn only as a boundary because it has not been measured. It extends west to show the walk-in closet, the two partitions knocked out so it reads as one 69&quot; x 168&quot; room running through to the primary bath, fitted as one L-shaped run in each zone &mdash; the end wall plus the west wall, 24&quot; deep, following the corner-wraparound reference. West rather than east because the door into the closet is in the east wall: that is the wall you stand in and cannot see, so putting the cabinetry opposite it is what you look at coming in from the bedroom. The run is the same length either way. The internal make-up is left to the closet designer. That leaves a 45&quot; x 43&quot; pocket north and 45&quot; x 36&quot; south &mdash; room to stand, open a drawer, and keep a stool for putting shoes on. The free end of each west leg is chamfered 12&quot; x 12&quot; where it meets the cross-route &mdash; the one sharp corner in the room that sits in a traffic line. A third leg down the remaining wall would drop the aisle to 21&quot;, which is not a walk-in. The west chain splits the 168&quot; as measured on site: 67&quot; of wall, the 41&quot; opening, then 60&quot;. Its cross-route lines up with the gap between the beds, which is what pairs each bed with the closet zone on its side.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the east wall, one bed at each end, both tight to their end wall so all 68&quot; of slack lands in the middle &mdash; where the 41&quot; window is, and where each bed&rsquo;s side table clamps to its rail. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the doorways carry the floor through the wall thickness, and each cut wall end is capped; windows get a window symbol with the wall running continuous behind. The accent wall runs the full 13 feet &mdash; 13 columns, no cut column, no painted reveal at either end. The plan now runs west past the closet into the primary bath &mdash; 62&quot; x 159&quot; overall, with a 62&quot; x 36&quot; toilet room off the north end and the tub alcove filling the lower 36&quot;, the Kohler Underscore dropped in with Lilah Opal on its three surround walls. Floor is Dawson 2&quot; charcoal. It extends west to show the walk-in closet, the two partitions knocked out so it reads as one 69&quot; x 168&quot; room running through to the primary bath, fitted as one L-shaped run in each zone &mdash; the end wall plus the west wall, 24&quot; deep, following the corner-wraparound reference. West rather than east because the door into the closet is in the east wall: that is the wall you stand in and cannot see, so putting the cabinetry opposite it is what you look at coming in from the bedroom. The run is the same length either way. The internal make-up is left to the closet designer. That leaves a 45&quot; x 43&quot; pocket north and 45&quot; x 36&quot; south &mdash; room to stand, open a drawer, and keep a stool for putting shoes on. The free end of each west leg is chamfered 12&quot; x 12&quot; where it meets the cross-route &mdash; the one sharp corner in the room that sits in a traffic line. A third leg down the remaining wall would drop the aisle to 21&quot;, which is not a walk-in. The west chain splits the 168&quot; as measured on site: 67&quot; of wall, the 41&quot; opening, then 60&quot;. Its cross-route lines up with the gap between the beds, which is what pairs each bed with the closet zone on its side.</p>
     </div>
 
       
