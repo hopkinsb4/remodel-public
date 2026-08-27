@@ -1454,18 +1454,17 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-big" x="-150.1" y="79.75" text-anchor="middle" transform="rotate(-90 -150.1 79.75)">159½" bath</text>
 
   <!-- ============ DIMENSIONS — BEDROOM, BOTTOM (W-E) ============
-       The south wall carried no dimension of its own — the 144" overall
-       was only ever shown up top, against the north wall. Same room,
-       same rectangular shell (x 0..144 both walls), so the number is
-       identical; shown again here so the south wall isn't bare. -->
-  <line class="extline" x1="0"   y1="161" x2="0"   y2="174"/>
+       Not the whole 144" wall (that's already dimensioned up top,
+       against the north wall) - just the bare run of south wall east
+       of the door opening, jamb to the SE corner: x 32..144 = 112". -->
+  <line class="extline" x1="32"  y1="161" x2="32"  y2="174"/>
   <line class="extline" x1="144" y1="161" x2="144" y2="174"/>
-  <line class="dimline" x1="0" y1="170" x2="144" y2="170"/>
+  <line class="dimline" x1="32" y1="170" x2="144" y2="170"/>
   <g class="tick">
-    <line x1="-1.1" y1="168.9" x2="1.1" y2="171.1"/>
+    <line x1="30.9" y1="168.9" x2="33.1" y2="171.1"/>
     <line x1="142.9" y1="168.9" x2="145.1" y2="171.1"/>
   </g>
-  <text class="dim-big" x="72" y="168.4" text-anchor="middle">144" (12'-0")</text>
+  <text class="dim-big" x="88" y="168.4" text-anchor="middle">112"</text>
 
   <!-- ============ DIMENSIONS — BATH, BOTTOM (W-E) ============ -->
   <line class="extline" x1="-135.5" y1="165" x2="-135.5" y2="178"/>
