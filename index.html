@@ -631,7 +631,7 @@
   </defs>
 
   <!-- ============ SHELL ============ -->
-  <rect x="-78" y="-4.5" width="78" height="177" fill="#C9C4B7"/>   <!-- closet block + west wall -->
+  <rect x="-69" y="-4.5" width="69" height="177" fill="#C9C4B7"/>   <!-- closet block + west wall -->
   <rect x="0" y="-4.5" width="148.5" height="165" fill="#C9C4B7"/>  <!-- bedroom -->
   <rect x="0" y="0" width="144" height="156" fill="url(#pbed-check)"/>
 
@@ -674,20 +674,28 @@
        an outside face against the hall rather than a shared wall — so the
        bedroom's south wall stops at x 0 and does not run west across it.
 
-       WIDTH IS 60" EAST-WEST (x -64.5..-4.5), not the 69" this was drawn at.
-       The 69 came from taking out a 9" thickness on the west side that was
-       called "fake"; the 60" measurement says it is there whatever it is
-       made of, so the wall between closet and bath is drawn 13.5" - a 4.5"
-       wall with 9" of build-out on the closet face. The BATH DOES NOT MOVE:
-       its own 62" was measured from this face, and nothing about it changes.
+       WIDTH IS 60" EAST-WEST (x -64.5..-4.5), not the 69" this was drawn at,
+       and the WEST WALL IS NOMINAL 4.5" (x -69..-64.5). The 9" that was
+       taken out of this wall as "fake" is not wall thickness at all - it is
+       the PILLAR at the hall threshold, 9" overall east-west including the
+       wall it grows out of, not 9" on top of it. So the wall goes back to
+       4.5" and THE WHOLE BATH MOVES 9" EAST to suit: east face -78 -> -69,
+       outer face -144.5 -> -135.5. Nothing inside the bath changes.
 
-       AND THE 60 EXPLAINS "WEST ALIGNED". The doorways were given as 28"
-       with the east jamb 36" off the bedroom face of the west bedroom wall.
-       At 69" wide that left a 9.5" strip of wall west of the door and the
-       word "aligned" made no sense. At 60" the west jamb lands within half
-       an inch of the west wall - the doors ARE hard against it. Drawn that
-       way, x -64.5..-36.5, which puts the east jamb at 36.5 rather than 36.
-       Half an inch, the same slop as everywhere else in this chain.
+       THE PILLARS. Both hall thresholds are necked to 34" by a pillar 9"
+       deep east-west: 4.5" of wall plus 4.5" projecting into the hall, on
+       each side of the opening. Bedroom end x -9..0, bath end x -69..-60.
+       Past them the hall opens to its full 41".
+
+       WHICH MOVES THE CLOSET DOORWAYS. They were drawn hard against the west
+       wall at x -64.5..-36.5, on the reading that "west aligned" plus the
+       28" width plus an east jamb 36" off the bedroom face all agreed. The
+       bath-end pillar occupies x -64.5..-60 in front of that, so the door
+       and the pillar wanted the same 4.5". The doors are drawn hard against
+       the PILLAR instead, x -60..-32, which is what west-aligned has to mean
+       once the pillar exists. That puts the east jamb 32" off the bedroom
+       face rather than 36 - a 4" difference, and the one number in this
+       chain still to settle.
 
        TWO THINGS THAT DO NOT CLOSE, both left visible rather than smoothed:
 
@@ -739,8 +747,8 @@
        same as every other doorway on this sheet. -->
   <rect x="-64.5" y="62.5" width="60" height="4.5" fill="#C9C4B7"/>
   <rect x="-64.5" y="108" width="60" height="4.5" fill="#C9C4B7"/>
-  <rect x="-64.5" y="62.5" width="28" height="4.5" fill="url(#pbed-check)"/>
-  <rect x="-64.5" y="108" width="28" height="4.5" fill="url(#pbed-check)"/>
+  <rect x="-60" y="62.5" width="28" height="4.5" fill="url(#pbed-check)"/>
+  <rect x="-60" y="108" width="28" height="4.5" fill="url(#pbed-check)"/>
   <!-- HALL THRESHOLDS. The walkway is 41" between the partitions but only
        34" where it passes through a wall: each room threshold is a 34"
        opening that widens to the full 41" once 9" inside the hall. Drawn as
@@ -755,9 +763,11 @@
        NOTE ALSO: the north closet doorway's west jamb at x -64 lands half an
        inch off the bath-end return at x -64.5. Half an inch is not a
        tolerance, it is a coincidence - measure both before framing. -->
-  <rect x="-13.5" y="67" width="9" height="3.5" fill="#C9C4B7"/>
-  <rect x="-13.5" y="104.5" width="9" height="3.5" fill="#C9C4B7"/>
-  <rect x="-76.37" y="70.5" width="11.87" height="34" fill="url(#pbed-check)"/>
+  <rect x="-9" y="67" width="4.5" height="3.5" fill="#C9C4B7"/>
+  <rect x="-64.5" y="67" width="4.5" height="3.5" fill="#C9C4B7"/>
+  <rect x="-9" y="104.5" width="4.5" height="3.5" fill="#C9C4B7"/>
+  <rect x="-64.5" y="104.5" width="4.5" height="3.5" fill="#C9C4B7"/>
+  <rect x="-67.885" y="70.5" width="3.385" height="34" fill="url(#pbed-check)"/>
   <!-- THRESHOLD. The floor changes inside the door opening, not out in the
        room: the checkerboard runs west until the west point of its last full
        black tile, which lands at x -76.37 (the diagonal 12" module puts a
@@ -766,23 +776,23 @@
        1-5/8" strip, held inside the 41" hall opening, is the whole of the bath
        shown. Its west edge falls on a 2" module line, so one full course of
        Dawson reads before the sliver. -->
-  <rect x="-78" y="70.5" width="1.63" height="34" fill="url(#pbed-dawson)"/>
-  <line class="thin" x1="-76.37" y1="70.5" x2="-76.37" y2="104.5"/>
+  <rect x="-69" y="70.5" width="1.115" height="34" fill="url(#pbed-dawson)"/>
+  <line class="thin" x1="-67.885" y1="70.5" x2="-67.885" y2="104.5"/>
   <!-- ============ WALL FACES ============
        Drawn as CONTINUOUS runs that turn through every corner and wrap into
        every jamb, rather than a pile of separate segments butted end to end.
        A run breaks only where there is an actual opening, which is the only
        place a wall face really stops.
-       OUTSIDE CORNERS GET A 1" RADIUS, inside corners stay square - the way
-       a taped drywall corner actually behaves. Every radius here is a wall
-       END: a door jamb, or the tip of a threshold return poking into the
-       hall. Every square corner is two walls meeting in a room. -->
-  <path class="outline" d="M-36.5,67 V63.5 A1,1 0 0 1 -35.5,62.5 H-4.5 V0 H-64.5 V67"/>
-  <path class="outline" d="M-36.5,108 V111.5 A1,1 0 0 0 -35.5,112.5 H-4.5 V168 H-64.5 V108"/>
-  <path class="outline" d="M0,70.5 H-12.5 A1,1 0 0 1 -13.5,69.5 V67 H-36.5"/>
-  <path class="outline" d="M-64.5,67 V70.5 H-78"/>
-  <path class="outline" d="M0,104.5 H-12.5 A1,1 0 0 0 -13.5,105.5 V108 H-36.5"/>
-  <path class="outline" d="M-64.5,108 V104.5 H-78"/>
+       ALL CORNERS SQUARE. The 1" radius on outside corners was tried and
+       withdrawn - it read as rounded drywall rather than as a wall end, and
+       at this scale it just softened the jambs. The continuous-run part
+       stays; that was the real fix. -->
+  <path class="outline" d="M-32,67 V62.5 H-4.5 V0 H-64.5 V62.5 H-60 V67"/>
+  <path class="outline" d="M-32,108 V112.5 H-4.5 V168 H-64.5 V112.5 H-60 V108"/>
+  <path class="outline" d="M0,70.5 H-9 V67 H-32"/>
+  <path class="outline" d="M-60,67 H-64.5 V70.5 H-69"/>
+  <path class="outline" d="M0,104.5 H-9 V108 H-32"/>
+  <path class="outline" d="M-60,108 H-64.5 V104.5 H-69"/>
 
   <!-- ============ PRIMARY BATH ============
        Tagged onto the same sheet, same origin, same scale. The bath's east
@@ -888,6 +898,14 @@ SWING SETTLED, and it only works one way. Handle on the left going
        projection before hanging the door.
 
        Walls drawn 4.5" throughout. -->
+  <!-- ============ THE WHOLE BATH, SHIFTED 9" EAST ============
+       The WIC's west wall goes back to a nominal 4.5" (x -69..-64.5)
+       instead of the 13.5" it briefly carried, and the bath moves east to
+       suit: its east interior face -78 -> -69, its outer face -144.5 ->
+       -135.5. Nothing INSIDE the bath changes - it is 62" wide and 158.5"
+       deep either way, and every fixture holds its position relative to
+       the room. Done as one translate so nothing can drift. -->
+  <g transform="translate(9,0)">
   <rect x="-144.5" y="-4.5" width="66.5" height="167.5" fill="#C9C4B7"/>
   <rect x="-140" y="40.5" width="62" height="87.2" fill="url(#pbed-dawson)"/>
   <rect x="-110" y="36" width="28" height="4.5" fill="url(#pbed-dawson)"/>
@@ -895,7 +913,7 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <rect x="-140" y="0" width="62" height="36" fill="url(#pbed-dawson)"/>
   <path class="outline" d="M-140,0 H-78 V36 H-82 M-110,36 H-140 V0"/>
   <path class="outline" d="M-78,-4.5 H-144.5 V163 H-78"/>
-  <path class="outline" d="M-110,40.5 V37 A1,1 0 0 1 -109,36 M-83,36 A1,1 0 0 1 -82,37 V40.5"/>
+  <path class="outline" d="M-110,40.5 V36 M-82,36 V40.5"/>
   <!-- TOILET ROOM DOOR, 28", handle on the left going in, so it hinges RIGHT
        at x -82 and swings into the toilet room, opening back to the east
        wall - away from the bowl. The leaf's closed edge at x -110 clears the
@@ -1048,7 +1066,7 @@ SWING SETTLED, and it only works one way. Handle on the left going
        IT STANDS ON 6.75" LEGS, open underneath, so the Dawson runs right
        under it and the Lilah shows below the drawer box. Nothing about the
        floor or wall tile stops at the cabinet. -->
-  <line x1="-116.7" y1="87.5" x2="-76" y2="87.5" stroke="#8A8375" stroke-width=".16" stroke-dasharray="4 1.6 1 1.6"/>
+  <line x1="-116.7" y1="87.5" x2="-73.5" y2="87.5" stroke="#8A8375" stroke-width=".16" stroke-dasharray="4 1.6 1 1.6"/>
   <path fill="#fff" stroke="#2A2A2A" stroke-width=".29"
         d="M-139.2,69.5 H-120.7 A4,4 0 0 1 -116.7,73.5 V101.5 A4,4 0 0 1 -120.7,105.5 H-139.2 Z"/>
   <ellipse fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".21" cx="-127.45" cy="87.5" rx="7.75" ry="9.3"/>
@@ -1097,6 +1115,8 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <rect x="-103.3" y="1.1" width="6" height="0.6" rx=".3" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16"/>
   <text class="lbl-s on-dark" x="-100.3" y="5.2" text-anchor="middle" font-size="1.7" >TP holder</text>
   <text class="lbl-s on-dark" x="-96" y="44.5" text-anchor="middle" font-size="1.7" >door 28"</text>
+  </g>
+
 
   <!-- ============ CLOSET FIT-OUT — CLEARED, NOT FORGOTTEN ============
        The organizers and the desks are OFF THE DRAWING while the closet
@@ -1163,9 +1183,9 @@ Without these the wall band simply runs out into the floor. Six caps:
        opening, and the WIC-to-bath opening. -->
 
   <!-- ============ ROOM OUTLINE ============ -->
-  <path class="outline" d="M4,160.5 V157 A1,1 0 0 0 3,156 H0 V104.5"/>
-  <path class="outline" d="M0,70.5 V0 H144 V156 H33 A1,1 0 0 0 32,157 V160.5"/>
-  <path class="outline" d="M-78,-4.5 H148.5 V160.5 H32 M4,160.5 H0 V172.5 H-78 V104.5 M-78,70.5 V-4.5"/>
+  <path class="outline" d="M4,160.5 V156 H0 V104.5"/>
+  <path class="outline" d="M0,70.5 V0 H144 V156 H32 V160.5"/>
+  <path class="outline" d="M-69,-4.5 H148.5 V160.5 H32 M4,160.5 H0 V172.5 H-69 V104.5 M-69,70.5 V-4.5"/>
   <!-- entry door leaf, shown open at 90 degrees, with its swing arc -->
   <rect class="fix" x="4" y="128" width="1.4" height="28"/>
   <path class="thin" fill="none" d="M32,156 A28,28 0 0 0 4,128"/>
@@ -1281,25 +1301,25 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-big" x="72" y="-34.6" text-anchor="middle">144" (12'-0")</text>
 
   <!-- ============ DIMENSIONS — CLOSET, TOP (W-E) ============ -->
-  <line class="extline" x1="-78" y1="-6.5" x2="-78" y2="-24"/>
-  <line class="extline" x1="-73.5" y1="-6.5" x2="-73.5" y2="-14"/>
+  <line class="extline" x1="-69" y1="-6.5" x2="-69" y2="-24"/>
+  <line class="extline" x1="-64.5" y1="-6.5" x2="-64.5" y2="-14"/>
   <line class="extline" x1="-4.5" y1="-6.5" x2="-4.5" y2="-14"/>
-  <line class="dimline" x1="-78" y1="-12" x2="0" y2="-12"/>
+  <line class="dimline" x1="-69" y1="-12" x2="0" y2="-12"/>
   <g class="tick">
-    <line x1="-79.1" y1="-10.9" x2="-76.9" y2="-13.1"/>
-    <line x1="-74.6" y1="-10.9" x2="-72.4" y2="-13.1"/>
+    <line x1="-70.1" y1="-10.9" x2="-67.9" y2="-13.1"/>
+    <line x1="-65.6" y1="-10.9" x2="-63.4" y2="-13.1"/>
     <line x1="-5.6" y1="-10.9" x2="-3.4" y2="-13.1"/>
     <line x1="-1.1" y1="-10.9" x2="1.1" y2="-13.1"/>
   </g>
-  <text class="dim-t" x="-75.75" y="-13.6" text-anchor="middle" font-size="2.2">4½"</text>
-  <text class="dim-t" x="-39" y="-13.6" text-anchor="middle">69"</text>
+  <text class="dim-t" x="-66.75" y="-13.6" text-anchor="middle" font-size="2.2">4½"</text>
+  <text class="dim-t" x="-34.5" y="-13.6" text-anchor="middle">60"</text>
   <text class="dim-t" x="-2.25" y="-13.6" text-anchor="middle" font-size="2.2">4½"</text>
-  <line class="dimline" x1="-78" y1="-22" x2="0" y2="-22"/>
+  <line class="dimline" x1="-69" y1="-22" x2="0" y2="-22"/>
   <g class="tick">
-    <line x1="-79.1" y1="-20.9" x2="-76.9" y2="-23.1"/>
+    <line x1="-70.1" y1="-20.9" x2="-67.9" y2="-23.1"/>
     <line x1="-1.1" y1="-20.9" x2="1.1" y2="-23.1"/>
   </g>
-  <text class="dim-big" x="-39" y="-24.6" text-anchor="middle">78"</text>
+  <text class="dim-big" x="-34.5" y="-24.6" text-anchor="middle">69"</text>
 
   <!-- ============ DIMENSIONS — WEST (N-S) ============
        Four stacked chains, outboard of the bath:
@@ -1376,14 +1396,14 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-big" x="-178.6" y="79.25" text-anchor="middle" transform="rotate(-90 -178.6 79.25)">158½" bath</text>
 
   <!-- ============ DIMENSIONS — BATH, BOTTOM (W-E) ============ -->
-  <line class="extline" x1="-140" y1="165" x2="-140" y2="178"/>
-  <line class="extline" x1="-78"  y1="165" x2="-78"  y2="178"/>
-  <line class="dimline" x1="-140" y1="174" x2="-78" y2="174"/>
+  <line class="extline" x1="-131" y1="165" x2="-131" y2="178"/>
+  <line class="extline" x1="-69"  y1="165" x2="-69"  y2="178"/>
+  <line class="dimline" x1="-131" y1="174" x2="-69" y2="174"/>
   <g class="tick">
-    <line x1="-141.1" y1="172.9" x2="-138.9" y2="175.1"/>
-    <line x1="-79.1" y1="172.9" x2="-76.9" y2="175.1"/>
+    <line x1="-132.1" y1="172.9" x2="-129.9" y2="175.1"/>
+    <line x1="-70.1" y1="172.9" x2="-67.9" y2="175.1"/>
   </g>
-  <text class="dim-t" x="-109" y="172.4" text-anchor="middle">62"</text>
+  <text class="dim-t" x="-100" y="172.4" text-anchor="middle">62"</text>
 
   <!-- ============ DIMENSIONS — RIGHT (N-S) ============ -->
   <line class="extline" x1="154.5" y1="0"   x2="180" y2="0"/>
