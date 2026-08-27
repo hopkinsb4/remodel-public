@@ -1117,22 +1117,36 @@ SWING SETTLED, and it only works one way. Handle on the left going
 
 
   <!-- ============ WIC DOORS ============
-       28" leaves in the partition openings at x -60..-32, BOTH HINGED ON THE
-       LEFT as you walk up to them and both swinging INTO the closet. Left is
-       read from the hall, so the hinges land on opposite ends:
-         north WIC  you face north, left is WEST  - hinge x -60
-         south WIC  you face south, left is EAST  - hinge x -32
+       28" leaves in the partition openings at x -60..-32. BOTH HINGE ON THE
+       WEST, x -60, and both swing INTO the closet.
+       So they are the SAME HAND, not mirrored - the north leaf opens north
+       along the west side, the south leaf opens south along the west side,
+       both against the pillar end of their opening. Read from the hall that
+       makes the north one a left-hand door and the south one a right-hand
+       door; specify them by the drawing, not by "left".
        Shown open at 90 degrees with the swing arc, same convention as the
        bedroom entry and the toilet-room door.
-       Each leaf parks 4.5" off the closet's west or east wall - it stands in
-       the room rather than lying flat against anything, which is normal for
-       a jamb-hinged door and worth remembering when the organizers go back
-       in: the first 28" of the hinge-side wall cannot take a full-depth box
-       unless the door is allowed to foul it. -->
+       Each leaf parks 4.5" off the west wall - it stands in the room rather
+       than lying flat against anything, which is normal for a jamb-hinged
+       door and worth remembering when the organizers go back in: the first
+       28" of the WEST wall in each closet cannot take a full-depth box
+       unless the door is allowed to foul it. Both closets, same wall.
+
+       EVERY DOOR ON THIS SHEET IS 28", checked against the drawing rather
+       than assumed:
+         bedroom entry     opening x 4..32,       leaf 28, arc r28
+         north WIC         opening x -60..-32,    leaf 28, arc r28
+         south WIC         opening x -60..-32,    leaf 28, arc r28
+         toilet room       opening x -110..-82,   leaf 28, arc r28
+       THE 28 IS THE SLAB AND THE FINISHED OPENING, which is what a plan
+       shows. The ROUGH opening is bigger - allow about 30" for jambs, shims
+       and clearance. That matters most at the WIC doors, where the west jamb
+       sits hard against the pillar: framing to 28" instead of 30" gives a
+       26" door. Tell the framer the rough, not the door size. -->
   <rect class="fix" x="-60" y="34.5" width="1.4" height="28"/>
   <path class="thin" fill="none" d="M-32,62.5 A28,28 0 0 0 -60,34.5"/>
-  <rect class="fix" x="-33.4" y="112.5" width="1.4" height="28"/>
-  <path class="thin" fill="none" d="M-60,112.5 A28,28 0 0 0 -32,140.5"/>
+  <rect class="fix" x="-60" y="112.5" width="1.4" height="28"/>
+  <path class="thin" fill="none" d="M-32,112.5 A28,28 0 0 1 -60,140.5"/>
 
   <!-- ============ WIC DEPTHS, ON THE WEST WALL ============
        Each closet's north-south length dimensioned inside its own room,
