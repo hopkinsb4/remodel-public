@@ -687,49 +687,54 @@
         transform="rotate(-90 -74.9 87.5)">TO BATH</text>
 
   <!-- ============ CLOSET CASEWORK ============
-       THE ORGANIZER IS ONE L-SHAPED BOX per zone, drawn as a single piece
-       because that is how it builds - the corner is not a separate unit
-       butted between two runs.
+       THE OPEN SHELVES ARE THE L. A 29 x 29 block with a 5 x 5 corner cut
+       out of it: the 24 x 24 corner square plus a 5" protrusion into each
+       leg. It steps 5" west of the hanging run's face and 5" south of the
+       desk's, so it reads and reaches as one corner piece rather than a
+       square wedged between two runs.
 
-         north  desk       x -73.5..-33.5, y 0..24                40 x 24
-                organizer  x -33.5..-4.5 y 0..24 + x -28.5..-4.5 y 24..67
-         south  organizer  x -28.5..-4.5 y 108..144 + x -33.5..-4.5 y 144..168
-                desk       x -73.5..-33.5, y 144..168             40 x 24
+       THE MISSING 5 x 5 IS THE POINT, not a detail. Without it the shelves
+       would bulge into the walk-in space and the clear floor would be a
+       notched polygon; with it the pocket stays a clean 45 x 43 rectangle.
 
-       IT WRAPS PAST THE CORNER. The desk comes down from 45" to 40", which
-       gives the end-wall arm 29" instead of 24" - so the shelving projects
-       5" west of the hanging run's face, the way the reference photo's
-       corner unit steps out. That 5" strip of the corner's south face is
-       the only part open to the pocket, and it is what makes the corner
-       shelves reachable rather than boxed in.
+         north  desk     x -73.5..-33.5, y 0..24     40 x 24
+                shelves  x -33.5..-4.5,  y 0..29     29 x 29 less a 5 x 5
+                hanging  x -28.5..-4.5,  y 29..67    38 x 24
+         south  hanging  x -28.5..-4.5,  y 108..139  31 x 24
+                shelves  x -33.5..-4.5,  y 139..168  29 x 29 less a 5 x 5
+                desk     x -73.5..-33.5, y 144..168  40 x 24
 
-       Corner is OPEN SHELVES, not rod: shelves tolerate a corner reach, a
-       hanging rod does not. 29 x 24 each. Hanging stays 43" and 36".
+       Hanging is 38" and 31" - the 5" the shelves take out of each leg
+       comes off the rod, and the 7" difference between the zones stays
+       where it was. Both desks 40", identical.
 
-       Both desks 40", identical. The end walls are 69"; the 7" difference
-       between the zones falls on the hanging arm, not the desk.
+       FOOTPRINT IS UNCHANGED by the L: 816 + 912 = 1,728 sq in per zone,
+       exactly what the straight-run version used. Measured along the walls
+       it now reads 207" rather than 217", because 5" of each leg has folded
+       into the corner rather than disappearing. The cabinetry allowance
+       does not move.
 
-       CLEARANCE: 45" x 43" pocket north, 45" x 36" south, measured back
-       from the desk edge. West wall free: 43" and 36". -->
+       CLEARANCE: 45" x 43" pocket north, 45" x 36" south. West wall free:
+       43" and 36". -->
   <rect class="fix" x="-73.5" y="0" width="40" height="24"/>
   <text class="lbl" x="-53.5" y="10" text-anchor="middle">DESK</text>
   <text class="lbl-s" x="-53.5" y="14.5" text-anchor="middle">40 x 24</text>
   <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29"
-        d="M-33.5,0 H-4.5 V67 H-28.5 V24 H-33.5 Z"/>
-  <line class="thin" x1="-33.5" y1="24" x2="-4.5" y2="24"/>
+        d="M-33.5,0 H-4.5 V29 H-28.5 V24 H-33.5 Z"/>
   <text class="lbl" x="-19" y="10.5" text-anchor="middle" font-size="2.1">OPEN SHELVES</text>
-  <text class="lbl-s" x="-19" y="14.5" text-anchor="middle" font-size="1.8">corner, 29 x 24</text>
-  <text class="lbl" x="-16.5" y="41" text-anchor="middle" font-size="2.2">ORGANIZER</text>
-  <text class="lbl-s" x="-16.5" y="44.5" text-anchor="middle" font-size="1.9">double hang</text>
-  <text class="lbl-s" x="-16.5" y="48" text-anchor="middle" font-size="1.9">43 x 24</text>
+  <text class="lbl-s" x="-19" y="14.5" text-anchor="middle" font-size="1.8">corner L, 29 x 29</text>
+  <rect fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" x="-28.5" y="29" width="24" height="38"/>
+  <text class="lbl" x="-16.5" y="44.5" text-anchor="middle" font-size="2.2">ORGANIZER</text>
+  <text class="lbl-s" x="-16.5" y="48.0" text-anchor="middle" font-size="1.9">double hang</text>
+  <text class="lbl-s" x="-16.5" y="51.5" text-anchor="middle" font-size="1.9">38 x 24</text>
+  <rect fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" x="-28.5" y="108" width="24" height="31"/>
+  <text class="lbl" x="-16.5" y="120.0" text-anchor="middle" font-size="2.2">ORGANIZER</text>
+  <text class="lbl-s" x="-16.5" y="123.5" text-anchor="middle" font-size="1.9">double hang</text>
+  <text class="lbl-s" x="-16.5" y="127.0" text-anchor="middle" font-size="1.9">31 x 24</text>
   <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29"
-        d="M-33.5,168 H-4.5 V108 H-28.5 V144 H-33.5 Z"/>
-  <line class="thin" x1="-33.5" y1="144" x2="-4.5" y2="144"/>
+        d="M-33.5,168 H-4.5 V139 H-28.5 V144 H-33.5 Z"/>
   <text class="lbl" x="-19" y="154.5" text-anchor="middle" font-size="2.1">OPEN SHELVES</text>
-  <text class="lbl-s" x="-19" y="158.5" text-anchor="middle" font-size="1.8">corner, 29 x 24</text>
-  <text class="lbl" x="-16.5" y="122.5" text-anchor="middle" font-size="2.2">ORGANIZER</text>
-  <text class="lbl-s" x="-16.5" y="126" text-anchor="middle" font-size="1.9">double hang</text>
-  <text class="lbl-s" x="-16.5" y="129.5" text-anchor="middle" font-size="1.9">36 x 24</text>
+  <text class="lbl-s" x="-19" y="158.5" text-anchor="middle" font-size="1.8">corner L, 29 x 29</text>
   <rect class="fix" x="-73.5" y="144" width="40" height="24"/>
   <text class="lbl" x="-53.5" y="154" text-anchor="middle">DESK</text>
   <text class="lbl-s" x="-53.5" y="158.5" text-anchor="middle">40 x 24</text>
@@ -960,7 +965,7 @@
 
 
 </svg>
-      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the east wall, one bed at each end, both tight to their end wall so all 68&quot; of slack lands in the middle &mdash; where the 41&quot; window is, and where each bed&rsquo;s side table clamps to its rail. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the doorways carry the floor through the wall thickness, and each cut wall end is capped; windows get a window symbol with the wall running continuous behind. The accent wall runs the full 13 feet &mdash; 13 columns, no cut column, no painted reveal at either end. The plan extends west to show the walk-in closet, the two partitions knocked out so it reads as one 69&quot; x 168&quot; room running through to the primary bath, with a 40&quot; desk on each end wall and the organizer as one L-shaped box taking the rest of it and turning down the east wall, its inside corners open shelving rather than rod. The west chain splits the 168&quot; as measured on site: 67&quot; of wall, the 41&quot; opening, then 60&quot;. Its cross-route lines up with the gap between the beds, which is what pairs each bed with the closet zone on its side.</p>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Floor plan, to scale. Headboards on the east wall, one bed at each end, both tight to their end wall so all 68&quot; of slack lands in the middle &mdash; where the 41&quot; window is, and where each bed&rsquo;s side table clamps to its rail. Leona checkerboard set on the diagonal in its real colours, Calacatta against Nero Marquina. Only the doorways carry the floor through the wall thickness, and each cut wall end is capped; windows get a window symbol with the wall running continuous behind. The accent wall runs the full 13 feet &mdash; 13 columns, no cut column, no painted reveal at either end. The plan extends west to show the walk-in closet, the two partitions knocked out so it reads as one 69&quot; x 168&quot; room running through to the primary bath, with a 40&quot; desk on each end wall, an L-shaped open-shelf corner &mdash; 29&quot; x 29&quot; less a 5&quot; x 5&quot; notch, stepping 5&quot; into each leg &mdash; and double hang down the east wall beyond it. The west chain splits the 168&quot; as measured on site: 67&quot; of wall, the 41&quot; opening, then 60&quot;. Its cross-route lines up with the gap between the beds, which is what pairs each bed with the closet zone on its side.</p>
     </div>
 
       
