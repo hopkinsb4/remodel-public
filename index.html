@@ -476,7 +476,7 @@
 
       <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Primary Bedroom</span>
-      <p>Two twin beds parallel on the north wall, close together, one clearing the window on its west side and one flush to the east wall, with a canopy-style curtain hanging from the ceiling between them. Checkerboard floor, glossy gray walls, matte black hardware. Off the west passage: one open walk-in closet with matching organizer L&rsquo;s at each end &mdash; the south one boxed out around the duct chase, which disappears into it &mdash; a white curtain closing off each end for changing instead of a door, and the primary bath beyond it behind a matte black split barn door. Closet designer to work a task desk and chair into the organizer layout. The floor plan below carries the layout and dimensions.</p>
+      <p>Two twin beds parallel on the north wall, close together, one clearing the window on its west side and one flush to the east wall, with a canopy-style curtain hanging from the ceiling between them. Checkerboard floor, glossy gray walls, matte black hardware. Off the west passage: one open walk-in closet with matching organizer L&rsquo;s at each end &mdash; the south one boxed out around the duct chase, which disappears into it &mdash; a white curtain closing off each end for changing instead of a door, and the primary bath beyond it behind a matte black single-panel barn door. Closet designer to work a task desk and chair into the organizer layout. The floor plan below carries the layout and dimensions.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-160 -40 347 226" role="img"
@@ -1147,32 +1147,31 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <text class="dim-t" x="-86.5" y="118.35" text-anchor="middle" transform="rotate(-90 -86.5 118.35)">18.7"</text>
   </g>
 
-  <!-- ============ BATH DOORS, SPLIT BARN, AT THE THRESHOLD ============
-       Two 17" panels close the 34" opening at the Dawson-to-Leona line -
-       the actual wet/dry boundary between the bath and the closet. L & R
-       SPLIT rather than one 34" slab, so each panel needs only 17" of
-       parking wall: the north panel slides onto the toilet-room wall
-       (34.5" available), the south panel onto the bath wall south of the
-       opening (50.5" available, and where the SE-corner hooks used to be -
-       see below). Track mounted on the HALL-side face, x -77.3, clear of
-       the opening's tiled jambs on the bath side.
-       Shown CLOSED, spanning the opening; each panel's open/parked position
-       is ghosted dashed on its own side.
+  <!-- ============ BATH DOOR, SINGLE BARN PANEL, AT THE THRESHOLD ============
+       SIMPLIFIED from the L&R split (two 17" panels) to one 34" slab -
+       same 34" coverage, one panel instead of two. Slides SOUTH: closed
+       it spans the opening exactly (y 75..109); fully open it parks
+       y 109..143, clear of the opening (the south wall has 50.5"
+       available against the panel's 34", a real margin - the north
+       side's 34.5" would have left only half an inch to spare).
+       SHOWN HALF-OPEN, same convention as the downstairs bath's pocket
+       door: the panel drawn at its halfway position, y 92..126, so half
+       of it (92..109) still crosses the opening and half (109..126)
+       has already slid past it onto the south wall.
        DRAWN HERE, after the bath group closes, so it paints on top of the
        bath's own background rect - drawn earlier (before the bath section)
        it was sitting under that fill and never actually showing. -->
-  <rect x="-77.9" y="75" width="1.2" height="17" fill="#F7F6F3" stroke="#2A2A2A" stroke-width=".18"/>
-  <rect x="-77.9" y="92" width="1.2" height="17" fill="#F7F6F3" stroke="#2A2A2A" stroke-width=".18"/>
-  <rect x="-77.3" y="41" width="0.5" height="17" fill="none" stroke="#6E6A62" stroke-width=".14" stroke-dasharray="1.2 1"/>
-  <rect x="-77.3" y="126" width="0.5" height="17" fill="none" stroke="#6E6A62" stroke-width=".14" stroke-dasharray="1.2 1"/>
-  <!-- towel hooks, on the room-facing side of the south panel, so they read
-       the same whether the panel is open or closed. -->
+  <rect x="-77.9" y="92" width="1.2" height="34" fill="#F7F6F3" stroke="#2A2A2A" stroke-width=".18"/>
+  <!-- towel hooks, mounted ON THE PANEL ITSELF, so they move with it -
+       drawn at its half-open position here, same as the panel. -->
   <g fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16">
-    <circle cx="-77.3" cy="105.5" r=".8"/>
-    <circle cx="-77.3" cy="110.5" r=".8"/>
-    <circle cx="-77.3" cy="115.5" r=".8"/>
+    <circle cx="-77.3" cy="104" r=".8"/>
+    <circle cx="-77.3" cy="109" r=".8"/>
+    <circle cx="-77.3" cy="114" r=".8"/>
   </g>
-  <text class="lbl-s on-dark" x="-75" y="110.5" text-anchor="start" font-size="1.7">hooks (3), on door</text>
+  <text class="lbl-s on-dark" x="-75" y="109" text-anchor="start" font-size="1.7">hooks (3), on door</text>
+  <text class="lbl-s" x="-65" y="90" text-anchor="middle" font-size="1.5" transform="rotate(-90 -65 90)">barn door, slides south</text>
+  <text class="lbl-s" x="-65" y="106" text-anchor="middle" font-size="1.5" transform="rotate(-90 -65 106)">shown half-open</text>
 
   <!-- ============ WIC CURTAINS, ONE ACROSS EACH ZONE'S OPENING ============
        Not a single curtain at the bedroom doorway - that only ever screened
