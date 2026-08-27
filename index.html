@@ -2003,14 +2003,13 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- valve, west wall -->
   <rect class="blk" x="-.6" y="30.08" width=".6" height="1.92"/>
   <text class="lbl-s" x="-2.2" y="31.6" text-anchor="middle" transform="rotate(-90 -2.2 31.6)">valve</text>
-  <!-- West wall hooks: mirrored off the north three about the sink's own
-       corner bisector (y = x), same as the sink mirror pair above - (19.04,
-       22.38, 25.71) on the north wall becomes (22.38, 19.04, 25.71) here,
-       i.e. cy 19.04 / 22.38 / 25.71 at cx .92, wall face to wall face. -->
+  <!-- West wall hook: was three, mirrored off the north three about the
+       sink's own corner bisector - but the two southernmost (22.38, 25.71)
+       crashed into the support bar/curtain line at y 25, one nearly on top
+       of it. Dropped both; the remaining hook at 19.04 is clear of the bar
+       and still the one reachable from inside the shower. -->
   <circle class="blk" cx=".92" cy="19.04" r=".33"/>
-  <circle class="blk" cx=".92" cy="22.38" r=".33"/>
-  <circle class="blk" cx=".92" cy="25.71" r=".33"/>
-  <text class="lbl-s" x="2.6" y="22.38" text-anchor="middle" transform="rotate(-90 2.6 22.38)">hooks (3)</text>
+  <text class="lbl-s" x="2.6" y="19.04" text-anchor="middle" transform="rotate(-90 2.6 19.04)">hook</text>
   <!-- support bar -->
   <line x1="0" y1="25" x2="30.5" y2="25" stroke="#6B6B6B" stroke-width=".133"/>
   <text class="lbl" x="14.7" y="23.7" text-anchor="middle">support bar</text>
