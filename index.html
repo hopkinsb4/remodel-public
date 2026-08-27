@@ -1237,42 +1237,47 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <rect x="-68.3" y="141" width="3.6" height="9" rx="1" fill="#FBFAF7"/>
   <text class="dim-t" x="-66.5" y="145.5" text-anchor="middle" transform="rotate(-90 -66.5 145.5)">57"</text>
 
-  <!-- ============ CLOSET FIT-OUT — ONE OPEN ROOM, ORGANIZERS ONLY ============
-       No partition, no desks - back to the pre-wall-restoration design, on
-       the settled shell (60 wide, 174 long) and the corner-wraparound
-       inspiration photo: rods above, cubbies below, wrapping the corner of
-       each end wall and the west wall.
+  <!-- ============ CLOSET FIT-OUT — ONE OPEN ROOM ============
+       Rods and cubbies wrapping the north end wall + west wall, on the
+       settled shell (60 wide, 174 long), per the corner-wraparound
+       inspiration photo.
 
-       ONE L PER END, 24" deep, drawn as a single outline each - the
-       internal make-up is the closet designer's. END WALL plus WEST WALL,
-       the leg running south (north zone) or north (south zone) from the
-       band to the room's open middle, flush with the door jambs at y 75
-       and y 109 - nothing intrudes into the through-path, so no chamfer is
-       needed at the free end.
-         north  band 60" (y 0..24)    + leg 51" (y 24..75)
-         south  band, chase-limited   + leg 41" (y 109..150)
-       Wardrobe run 231", double hung about 462" of rod, roughly 19-1/4
-       lineal feet per child - up from the 10.3 lf the desk version gave,
-       since the whole run is wardrobe again.
+       NORTH ZONE stays a plain L, 24" deep: end band (y 0..24, full 60"
+       width) + west leg (y 24..75, 24" wide). No chase here, so the inside
+       corner is a normal cabinetry corner, not a dead one.
 
-       SOUTH ZONE ROUTES AROUND THE SE-CORNER CHASE, 24 x 16, the same real
-       protrusion found in the house regardless of what the closet's
-       internal layout is: the band is full width at y 150..158, then only
-       36" wide (west of the chase) at y 158..174; the chase's east 24" gets
-       shallow shelving in front of it, or stays open. -->
+       SOUTH ZONE SPLITS IN TWO, because the chase changes the problem
+       rather than just eating a corner of it. A wrapped L here would still
+       need its inside corner to work as storage - the same blind-corner
+       cabinet that is awkward everywhere it appears - and the chase sits
+       exactly on top of that corner anyway, so trying to wrap through it
+       buys nothing. Split into two STRAIGHT runs that only butt at x -45
+       instead of wrapping:
+         WEST LEG    organizer, 24" deep, full length y 109..174 (65" - no
+                     band, no corner, straight run to the south wall)
+         SOUTH BAND  desk, 36" x 24", x -45..-9, built around the chase -
+                     the chase's 24 x 16 sits inside the desk's own
+                     footprint at its SE corner, doing the job a leg or a
+                     modesty panel would anyway. A desk does not need full
+                     depth at the back; the chase costs it nothing.
+       Wardrobe run: north 111" + south leg 65" = 176", about 14.7 lf. -->
   <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-69,0 H-9 V24 H-45 V75 H-69 Z"/>
   <text class="lbl-s" x="-23" y="45.5" text-anchor="middle" transform="rotate(-90 -23 45.5)">ORGANIZERS</text>
   <text class="lbl-s" x="-18.7" y="45.5" text-anchor="middle" font-size="1.7" transform="rotate(-90 -18.7 45.5)">24" deep</text>
-  <!-- SE-CORNER PROTRUSION, south WIC: 24" E-W x 16" N-S (x -33..-9,
-       y 158..174), reported from the house - most likely a duct chase or a
-       framing box; purpose unconfirmed. -->
-  <rect x="-33" y="158" width="24" height="16" fill="#C9C4B7"/>
-  <path class="outline" d="M-33,174 V158 H-9"/>
-  <text class="lbl-s" x="-21" y="164.6" text-anchor="middle" font-size="1.7">chase</text>
-  <text class="lbl-s" x="-21" y="168" text-anchor="middle" font-size="1.7">24 x 16</text>
-  <path fill="#C79A63" stroke="#6B4F3A" stroke-width=".29" d="M-9,109 H-45 V150 H-69 V174 H-33 V158 H-9 Z"/>
-  <text class="lbl-s" x="-23" y="141.5" text-anchor="middle" transform="rotate(-90 -23 141.5)">ORGANIZERS</text>
-  <text class="lbl-s" x="-18.7" y="141.5" text-anchor="middle" font-size="1.7" transform="rotate(-90 -18.7 141.5)">24" deep</text>
+
+  <rect x="-69" y="109" width="24" height="65" fill="#C79A63" stroke="#6B4F3A" stroke-width=".29"/>
+  <text class="lbl-s" x="-57" y="141.5" text-anchor="middle" transform="rotate(-90 -57 141.5)">ORGANIZERS</text>
+  <text class="lbl-s" x="-52.7" y="141.5" text-anchor="middle" font-size="1.7" transform="rotate(-90 -52.7 141.5)">24" deep</text>
+
+  <!-- SOUTH DESK, built around the SE-corner chase. Chase: 24 x 16
+       (x -33..-9, y 158..174), the same real protrusion reported from the
+       house regardless of layout - drawn first, desk on top/around it. -->
+  <rect x="-45" y="150" width="36" height="24" fill="#D8B98A" stroke="#6B4F3A" stroke-width=".29"/>
+  <rect x="-33" y="158" width="24" height="16" fill="#C9C4B7" stroke="#6B4F3A" stroke-width=".16"/>
+  <text class="lbl-s" x="-27" y="164.6" text-anchor="middle" font-size="1.6">chase</text>
+  <text class="lbl-s" x="-27" y="168" text-anchor="middle" font-size="1.6">24 x 16</text>
+  <text class="lbl-s" x="-39" y="153.7" text-anchor="middle">DESK</text>
+  <text class="lbl-s" x="-39" y="156.9" text-anchor="middle" font-size="1.6">36 x 24</text>
 
     <!-- ============ ACCENT WALL, EAST ============
        Zayne slat (wood-look) fluted tile, floor to ceiling, the FULL east
