@@ -476,11 +476,11 @@
 
       <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Primary Bedroom</span>
-      <p>Two twin beds in opposite corners, headboards perpendicular to each other &mdash; one against the west wall, one against the north &mdash; each with a narrow gap to the next wall and a Thuma Floating Side Table clamped to its inner rail. The accent tile moves with them: the same wood-look plank tile as the entryway, floor to ceiling, now behind both headboards on the west and north walls instead of one run on the east. Checkerboard floor, glossy gray walls, matte black hardware. Off the west passage: one open walk-in closet with matching organizer L&rsquo;s at each end &mdash; the south one boxed out around the duct chase, which disappears into it &mdash; a white curtain closing off each end for changing instead of a door, and the primary bath beyond it behind a matte black split barn door. Closet designer to work a task desk and chair into the organizer layout. The floor plan below carries the layout and dimensions.</p>
+      <p>Two twin beds in opposite corners, headboards perpendicular to each other &mdash; one against the west wall, one against the north &mdash; each flush into its corner, touching both walls, with a Thuma Floating Side Table clamped to its inner rail. The accent tile moves with them: the same wood-look plank tile as the entryway, floor to ceiling, now behind both headboards on the west and north walls instead of one run on the east. Checkerboard floor, glossy gray walls, matte black hardware. Off the west passage: one open walk-in closet with matching organizer L&rsquo;s at each end &mdash; the south one boxed out around the duct chase, which disappears into it &mdash; a white curtain closing off each end for changing instead of a door, and the primary bath beyond it behind a matte black split barn door. Closet designer to work a task desk and chair into the organizer layout. The floor plan below carries the layout and dimensions.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-160 -40 357 226" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds in opposite corners, one headboard against the west wall in the NW corner with a narrow gap to the north wall, one headboard against the north wall in the NE corner with a narrow gap to the east wall, each with a floating side table cantilevered off its inner rail, Zayne accent tile behind both headboards on the west and north walls, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch crank-out window on the north wall, a 41 inch window on the east wall, and one knocked-through walk-in closet running west of the room">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds flush in opposite corners, one headboard against the west wall in the NW corner touching the north wall too, one headboard against the north wall in the NE corner touching the east wall too, each with a floating side table cantilevered off its inner rail, Zayne accent tile behind both headboards on the west and north walls, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch crank-out window on the north wall, a 41 inch window on the east wall, and one knocked-through walk-in closet running west of the room">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -519,13 +519,12 @@
     east-wall pairing (both headboards on the east wall, one at each end)
     and the north-wall scheme before that.
 
-    WEST BED: NW corner, headboard against the WEST wall, running 80" east.
-    Held off the north wall by a 12" gap (ASSUMED — no field number given;
-    just enough to slip past, not a real walking aisle) so the window trim
-    and the corner both stay reachable.
+    WEST BED: NW corner, headboard against the WEST wall, running 80" east,
+    flush against the north wall too — no gap. The narrow gap tried
+    earlier is gone; the bed sits in the corner touching both walls.
 
     NORTH BED: NE corner, headboard against the NORTH wall, running 80"
-    south. Held off the east wall by the same assumed 12" gap.
+    south, flush against the east wall too, same reasoning.
 
     Each bed keeps ownership of the WIC zone it's nearest: the west bed
     to the closet's own west-facing side of the suite, the north bed
@@ -1330,31 +1329,32 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="teal" x="151.5" y="68.5" text-anchor="middle" font-size="2.2"
         transform="rotate(-90 151.5 68.5)">WINDOW 41"</text>
 
-  <!-- ============ TWIN BEDS, TWO CORNERS ============
+  <!-- ============ TWIN BEDS, TWO CORNERS, FLUSH ============
        Thuma Essential Bed + Headboard, Walnut, Twin. Frame 44" x 80" overall,
        same unit as before, now in two perpendicular corners instead of
-       paired on one wall.
+       paired on one wall. The assumed 12" gaps are gone — both beds sit
+       tight in their corner, touching both walls.
 
        WEST BED: headboard leg on the west tile face (x 1.1), frame running
-       east to x 81.1, held off the north wall by a 12" gap (y 12..56).
+       east to x 81.1, tight to the north wall (y 0..44).
 
        NORTH BED: headboard leg on the north tile face (y 1.1), frame
-       running south to y 81.1, held off the east wall by the same 12" gap
-       (x 88..132). This one is drawn rotated 90°: everything about it is
-       the west bed's geometry turned a quarter turn, headboard-to-headboard. -->
-  <rect x="1.1" y="12" width="3" height="44" fill="#4A3626"/>
-  <rect class="fix" x="4.1" y="12" width="77" height="44"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="4.1" y="15" width="75" height="38" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="4.1" y="18" width="8" height="32" rx="2"/>
-  <text class="lbl" x="46" y="33" text-anchor="middle">TWIN</text>
-  <text class="lbl-s" x="46" y="38" text-anchor="middle">44 x 80</text>
+       running south to y 81.1, tight to the east wall (x 100..144). This
+       one is drawn rotated 90°: everything about it is the west bed's
+       geometry turned a quarter turn, headboard-to-headboard. -->
+  <rect x="1.1" y="0" width="3" height="44" fill="#4A3626"/>
+  <rect class="fix" x="4.1" y="0" width="77" height="44"/>
+  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="4.1" y="3" width="75" height="38" rx="1.5"/>
+  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="4.1" y="6" width="8" height="32" rx="2"/>
+  <text class="lbl" x="46" y="21" text-anchor="middle">TWIN</text>
+  <text class="lbl-s" x="46" y="26" text-anchor="middle">44 x 80</text>
 
-  <rect x="88" y="1.1" width="44" height="3" fill="#4A3626"/>
-  <rect class="fix" x="88" y="4.1" width="44" height="77"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="91" y="4.1" width="38" height="75" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="94" y="4.1" width="32" height="8" rx="2"/>
-  <text class="lbl" x="111" y="46" text-anchor="middle" transform="rotate(-90 111 46)">TWIN</text>
-  <text class="lbl-s" x="106" y="46" text-anchor="middle" transform="rotate(-90 106 46)">44 x 80</text>
+  <rect x="100" y="1.1" width="44" height="3" fill="#4A3626"/>
+  <rect class="fix" x="100" y="4.1" width="44" height="77"/>
+  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="103" y="4.1" width="38" height="75" rx="1.5"/>
+  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="106" y="4.1" width="32" height="8" rx="2"/>
+  <text class="lbl" x="123" y="46" text-anchor="middle" transform="rotate(-90 123 46)">TWIN</text>
+  <text class="lbl-s" x="118" y="46" text-anchor="middle" transform="rotate(-90 118 46)">44 x 80</text>
 
   <!-- ============ NIGHTSTANDS, ONE PER BED ============
        Thuma FLOATING Side Table, Walnut — 15.75" W x 11.8" D x 4" H. A
@@ -1365,20 +1365,21 @@ Without these the wall band simply runs out into the floor. Six caps:
        foot, 3" of rail clamped and 8.8" cantilevered clear beyond the
        frame's own edge.
 
-       WEST BED: inner rail is the SOUTH long edge (away from the north-wall
-       gap), so the tray cantilevers south of the frame.
-       NORTH BED: inner rail is the WEST long edge (away from the east-wall
-       gap), so the tray cantilevers west of the frame — drawn rotated 90°,
-       long edge now running north-south along the rail. -->
-  <rect class="fix" x="16.1" y="53" width="15.75" height="11.8" rx="1.6"/>
-  <rect fill="none" stroke="#2A2A2A" stroke-width=".16" x="16.875" y="53.775" width="14.2" height="10.25" rx="1.2"/>
-  <text class="lbl-s" x="23.975" y="57.9" text-anchor="middle" font-size="1.9">float</text>
-  <text class="lbl-s" x="23.975" y="61.1" text-anchor="middle" font-size="1.9">15¾ x 11.8</text>
+       WEST BED: inner rail is the SOUTH long edge (away from the north
+       wall it's now flush against), so the tray cantilevers south of the
+       frame.
+       NORTH BED: inner rail is the WEST long edge (away from the east wall
+       it's now flush against), so the tray cantilevers west of the frame —
+       drawn rotated 90°, long edge now running north-south along the rail. -->
+  <rect class="fix" x="16.1" y="41" width="15.75" height="11.8" rx="1.6"/>
+  <rect fill="none" stroke="#2A2A2A" stroke-width=".16" x="16.875" y="41.775" width="14.2" height="10.25" rx="1.2"/>
+  <text class="lbl-s" x="23.975" y="45.9" text-anchor="middle" font-size="1.9">float</text>
+  <text class="lbl-s" x="23.975" y="49.1" text-anchor="middle" font-size="1.9">15¾ x 11.8</text>
 
-  <rect class="fix" x="79.2" y="16.1" width="11.8" height="15.75" rx="1.6"/>
-  <rect fill="none" stroke="#2A2A2A" stroke-width=".16" x="79.975" y="16.875" width="10.25" height="14.2" rx="1.2"/>
-  <text class="lbl-s" x="86.1" y="23.975" text-anchor="middle" font-size="1.9" transform="rotate(-90 86.1 23.975)">float</text>
-  <text class="lbl-s" x="82.9" y="23.975" text-anchor="middle" font-size="1.9" transform="rotate(-90 82.9 23.975)">15¾ x 11.8</text>
+  <rect class="fix" x="91.2" y="16.1" width="11.8" height="15.75" rx="1.6"/>
+  <rect fill="none" stroke="#2A2A2A" stroke-width=".16" x="91.975" y="16.875" width="10.25" height="14.2" rx="1.2"/>
+  <text class="lbl-s" x="98.1" y="23.975" text-anchor="middle" font-size="1.9" transform="rotate(-90 98.1 23.975)">float</text>
+  <text class="lbl-s" x="94.9" y="23.975" text-anchor="middle" font-size="1.9" transform="rotate(-90 94.9 23.975)">15¾ x 11.8</text>
 
   <!-- ============ WALL LABELS ============ -->
   <text class="wall-lbl" x="72" y="-2.2" text-anchor="middle">NORTH — ZAYNE ACCENT WALL (12'-0")</text>
@@ -1395,22 +1396,19 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="extline" x1="6"   y1="-6.5" x2="6"   y2="-24"/>
   <line class="extline" x1="34"  y1="-6.5" x2="34"  y2="-24"/>
   <line class="extline" x1="81.1"  y1="-6.5" x2="81.1"  y2="-14"/>
-  <line class="extline" x1="88"  y1="-6.5" x2="88"  y2="-14"/>
-  <line class="extline" x1="132" y1="-6.5" x2="132" y2="-14"/>
-  <!-- west bed's own depth, the sliver of open floor between the two beds,
-       the north bed's width, then its 12" gap to the east wall -->
+  <line class="extline" x1="100"  y1="-6.5" x2="100"  y2="-14"/>
+  <!-- west bed's own depth, the open floor between the two beds, then the
+       north bed's width flush to the east wall -->
   <line class="dimline" x1="0" y1="-12" x2="144" y2="-12"/>
   <g class="tick">
     <line x1="-1.1" y1="-10.9" x2="1.1" y2="-13.1"/>
     <line x1="80" y1="-10.9" x2="82.2" y2="-13.1"/>
-    <line x1="86.9" y1="-10.9" x2="89.1" y2="-13.1"/>
-    <line x1="130.9" y1="-10.9" x2="133.1" y2="-13.1"/>
+    <line x1="98.9" y1="-10.9" x2="101.1" y2="-13.1"/>
     <line x1="141.8" y1="-10.9" x2="144" y2="-13.1"/>
   </g>
   <text class="dim-t" x="40.55" y="-13.6" text-anchor="middle">80" WEST BED</text>
-  <text class="dim-t" x="84.5" y="-13.6" text-anchor="middle" font-size="1.6">6.9"</text>
-  <text class="dim-t" x="110" y="-13.6" text-anchor="middle">44" NORTH BED</text>
-  <text class="dim-t" x="138" y="-13.6" text-anchor="middle" font-size="1.7">12"</text>
+  <text class="dim-t" x="90.55" y="-13.6" text-anchor="middle" font-size="1.6">18.9"</text>
+  <text class="dim-t" x="122" y="-13.6" text-anchor="middle">44" NORTH BED</text>
   <!-- north window -->
   <line class="dimline" x1="0" y1="-22" x2="144" y2="-22"/>
   <g class="tick">
@@ -1491,8 +1489,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ============ DIMENSIONS — RIGHT (N-S) ============ -->
   <line class="extline" x1="154.5" y1="0"   x2="190" y2="0"/>
   <line class="extline" x1="154.5" y1="48"  x2="160" y2="48"/>
-  <line class="extline" x1="154.5" y1="12"    x2="170" y2="12"/>
-  <line class="extline" x1="154.5" y1="56"    x2="170" y2="56"/>
+  <line class="extline" x1="154.5" y1="44"    x2="170" y2="44"/>
   <line class="extline" x1="154.5" y1="81.1"   x2="180" y2="81.1"/>
   <line class="extline" x1="154.5" y1="89"  x2="160" y2="89"/>
   <line class="extline" x1="154.5" y1="156" x2="190" y2="156"/>
@@ -1507,17 +1504,17 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-t" x="159.6" y="24" text-anchor="middle" transform="rotate(-90 159.6 24)">48"</text>
   <text class="dim-t" x="159.6" y="68.5" text-anchor="middle" transform="rotate(-90 159.6 68.5)">41"</text>
   <text class="dim-t" x="159.6" y="122.5" text-anchor="middle" transform="rotate(-90 159.6 122.5)">67"</text>
-  <!-- west bed chain: its 12" gap off the north wall, then its own 44"
-       width. The table hangs off the rail and takes no part of this run. -->
+  <!-- west bed chain: its own 44" width flush to the north wall, then the
+       open floor south of it. The table hangs off the rail and takes no
+       part of this run. -->
   <line class="dimline" x1="168" y1="0" x2="168" y2="156"/>
   <g class="tick">
     <line x1="166.9" y1="-1.1" x2="169.1" y2="1.1"/>
-    <line x1="166.9" y1="10.9" x2="169.1" y2="13.1"/>
-    <line x1="166.9" y1="54.9" x2="169.1" y2="57.1"/>
+    <line x1="166.9" y1="42.9" x2="169.1" y2="45.1"/>
     <line x1="166.9" y1="154.9" x2="169.1" y2="157.1"/>
   </g>
-  <text class="dim-t" x="169.6" y="6" text-anchor="middle" font-size="1.7" transform="rotate(-90 169.6 6)">12"</text>
-  <text class="dim-t" x="169.6" y="34" text-anchor="middle" transform="rotate(-90 169.6 34)">44" WEST BED</text>
+  <text class="dim-t" x="169.6" y="22" text-anchor="middle" transform="rotate(-90 169.6 22)">44" WEST BED</text>
+  <text class="dim-t" x="169.6" y="100" text-anchor="middle" font-size="1.7" transform="rotate(-90 169.6 100)">112"</text>
   <!-- north bed chain: its own 80" depth off the north tile face, then the
        open floor south of it. -->
   <line class="dimline" x1="178" y1="0" x2="178" y2="156"/>
