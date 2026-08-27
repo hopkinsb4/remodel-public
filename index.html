@@ -480,7 +480,7 @@
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-160 -40 347 226" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the north wall, one clearing the 28 inch window on its west side, one flush to the east wall, a 22 inch gap and a freestanding folding screen between them, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 41 inch window on the east wall, and one knocked-through walk-in closet running west of the room">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the north wall, one clearing the 28 inch window on its west side, one flush to the east wall, a 16 inch gap and a freestanding folding screen between them, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 41 inch window on the east wall, and one knocked-through walk-in closet running west of the room">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -519,16 +519,15 @@
     perpendicular-corners scheme, which itself superseded the east-wall
     pairing.
 
-    WEST BED: x 34..78, headboard on the north wall, left edge held at
-    the window's east jamb (x 34) so it clears the 28" window (x 6..34)
-    with no overlap.
+    WEST BED: x 40..84, headboard on the north wall, shifted 6" right of
+    the window's east jamb (x 34) rather than sitting flush on it — clears
+    the 28" window (x 6..34) with room to spare.
 
     NORTH BED: unchanged, x 100..144, headboard on the north wall, flush
     to the east wall.
 
-    GAP BETWEEN THEM: 22" (x 78..100) — as close together as two 44"-wide
-    beds get once one clears the window and the other stays flush to its
-    wall. A freestanding screen sits in the open part of that gap.
+    GAP BETWEEN THEM: 16" (x 84..100), tighter than the 22" the beds had
+    before the west one shifted right. A freestanding screen sits in it.
 
     THE OPEN FLOOR IS NOW EVERYTHING SOUTH OF THE TWO BEDS (y 80..156)
     PLUS THE STRIP WEST OF THE WEST BED (x 0..34) — no closet, no desk,
@@ -1294,22 +1293,20 @@ Without these the wall band simply runs out into the floor. Six caps:
        both headboards on the north wall now — the west bed rotated a
        quarter turn off the west wall to match the north bed's orientation.
 
-       WEST BED: left edge at x 34, clearing the 28" window (x 6..34) with
-       no overlap. Runs x 34..78, headboard leg on the raw north wall
-       (y 0..3), frame to y 80.
+       WEST BED: left edge at x 40, shifted 6" right of the window's east
+       jamb (x 34) instead of sitting flush on it. Runs x 40..84,
+       headboard leg on the raw north wall (y 0..3), frame to y 80.
 
        NORTH BED: unchanged, x 100..144, flush to the east wall.
 
-       GAP BETWEEN THEM: 22" (x 78..100) — as close as the two 44"-wide
-       beds get once the west one clears the window and the east one
-       stays flush to its wall; both are assumed constraints, not field
-       numbers. -->
-  <rect x="34" y="0" width="44" height="3" fill="#4A3626"/>
-  <rect class="fix" x="34" y="3" width="44" height="77"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="37" y="3" width="38" height="75" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="40" y="3" width="32" height="8" rx="2"/>
-  <text class="lbl" x="55" y="44.9" text-anchor="middle" transform="rotate(-90 55 44.9)">TWIN</text>
-  <text class="lbl-s" x="60" y="44.9" text-anchor="middle" transform="rotate(-90 60 44.9)">44 x 80</text>
+       GAP BETWEEN THEM: 16" (x 84..100), down from 22" now that the west
+       bed moved toward it. -->
+  <rect x="40" y="0" width="44" height="3" fill="#4A3626"/>
+  <rect class="fix" x="40" y="3" width="44" height="77"/>
+  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="43" y="3" width="38" height="75" rx="1.5"/>
+  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="46" y="3" width="32" height="8" rx="2"/>
+  <text class="lbl" x="61" y="44.9" text-anchor="middle" transform="rotate(-90 61 44.9)">TWIN</text>
+  <text class="lbl-s" x="66" y="44.9" text-anchor="middle" transform="rotate(-90 66 44.9)">44 x 80</text>
 
   <rect x="100" y="0" width="44" height="3" fill="#4A3626"/>
   <rect class="fix" x="100" y="3" width="44" height="77"/>
@@ -1320,13 +1317,13 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- ============ FREESTANDING SCREEN ============
        3-panel folding screen, freestanding — not fixed to a wall or track.
-       No nightstands in this room now, so it runs the length of the 22"
-       gap between the two beds (x 78..100), centred at x 89. White panels,
+       No nightstands in this room now, so it runs the length of the 16"
+       gap between the two beds (x 84..100), centred at x 92. White panels,
        black border: drawn as a black ribbon with a narrower white one on
        top, since a zigzag centreline has no fill area of its own. -->
-  <path fill="none" stroke="#2A2A2A" stroke-width="1.6" stroke-linejoin="round" d="M84,5 L94,22 L84,39 L94,56 L84,73"/>
-  <path fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linejoin="round" d="M84,5 L94,22 L84,39 L94,56 L84,73"/>
-  <text class="lbl-s" x="89" y="78" text-anchor="middle" font-size="1.7">freestanding screen</text>
+  <path fill="none" stroke="#2A2A2A" stroke-width="1.6" stroke-linejoin="round" d="M87,5 L97,22 L87,39 L97,56 L87,73"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linejoin="round" d="M87,5 L97,22 L87,39 L97,56 L87,73"/>
+  <text class="lbl-s" x="92" y="78" text-anchor="middle" font-size="1.7">freestanding screen</text>
 
   <!-- ============ WALL LABELS ============ -->
   <text class="wall-lbl" x="72" y="-2.2" text-anchor="middle">NORTH WALL</text>
@@ -1342,19 +1339,22 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="extline" x1="0"   y1="-6.5" x2="0"   y2="-34"/>
   <line class="extline" x1="6"   y1="-6.5" x2="6"   y2="-24"/>
   <line class="extline" x1="34"  y1="-6.5" x2="34"  y2="-24"/>
-  <line class="extline" x1="78"  y1="-6.5" x2="78"  y2="-14"/>
+  <line class="extline" x1="40"  y1="-6.5" x2="40"  y2="-14"/>
+  <line class="extline" x1="84"  y1="-6.5" x2="84"  y2="-14"/>
   <line class="extline" x1="100"  y1="-6.5" x2="100"  y2="-14"/>
-  <!-- west bed's width (clearing the window), the gap between the two
-       beds, then the north bed's width flush to the east wall -->
+  <!-- 6" clearance off the window, west bed's width, the gap between the
+       two beds, then the north bed's width flush to the east wall -->
   <line class="dimline" x1="34" y1="-12" x2="144" y2="-12"/>
   <g class="tick">
     <line x1="32.9" y1="-10.9" x2="35.1" y2="-13.1"/>
-    <line x1="76.9" y1="-10.9" x2="79.1" y2="-13.1"/>
+    <line x1="38.9" y1="-10.9" x2="41.1" y2="-13.1"/>
+    <line x1="82.9" y1="-10.9" x2="85.1" y2="-13.1"/>
     <line x1="98.9" y1="-10.9" x2="101.1" y2="-13.1"/>
     <line x1="141.8" y1="-10.9" x2="144" y2="-13.1"/>
   </g>
-  <text class="dim-t" x="56" y="-13.6" text-anchor="middle">44" WEST BED</text>
-  <text class="dim-t" x="89" y="-13.6" text-anchor="middle" font-size="1.6">22"</text>
+  <text class="dim-t" x="37" y="-13.6" text-anchor="middle" font-size="1.4">6"</text>
+  <text class="dim-t" x="62" y="-13.6" text-anchor="middle">44" WEST BED</text>
+  <text class="dim-t" x="92" y="-13.6" text-anchor="middle" font-size="1.6">16"</text>
   <text class="dim-t" x="122" y="-13.6" text-anchor="middle">44" NORTH BED</text>
   <!-- north window -->
   <line class="dimline" x1="0" y1="-22" x2="144" y2="-22"/>
