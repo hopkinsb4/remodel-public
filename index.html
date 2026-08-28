@@ -1827,7 +1827,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-6 -140 246 207" role="img"
-     aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a shower nook on the rain head line, and a recessed medicine cabinet on the dry north wall; a small hallway pocket where the bathroom's east-facing pocket door and the closet's north-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a calculated zero at the back, fitted with a matte black clothes rod at 43 inches, and accompanied by a projected side view showing the rod and hanging clothes against the stringer slope">
+     aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a shower nook on the rain head line, and a recessed medicine cabinet on the dry north wall; a small hallway pocket where the bathroom's east-facing pocket door and the closet's north-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a calculated zero at the back, fitted with a matte black clothes rod at 43 inches and an oak shelf bank just inside the door on the east wall, keeping a 28 inch clear aisle, and accompanied by a projected side view showing the rod, hanging clothes and stepped shelves against the stringer slope">
   <!--
     93 WATERMAN — DOWNSTAIRS BATHROOM + UNDER-STAIRS CLOSET FLOOR PLAN
     ====================================================================
@@ -2299,6 +2299,31 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s" x="85.5" y="-53.6" text-anchor="middle" font-size=".85">rod @ 43&quot; AFF, matte black &#8212; tees ~6&quot;, jeans ~13&quot; off floor</text>
   <text class="lbl-s" x="85.5" y="-52" text-anchor="middle" font-size=".75" fill="#8B979A">dashed: hanger sweep, rod &#177;10&quot;</text>
 
+  <!-- ============ CLOSET FIT-OUT: EAST-WALL SHELF BANK ============
+       Open oak shelving just inside the door, after the under-stairs
+       reference photo (shanty-2-chic) restyled to the house mood: the
+       same Thuma Oak tone (#B6986D) as the bedroom organizers, matte
+       black accents implied by the house hardware standard.
+       12" deep on the east wall, running from the door wall (y=-10)
+       north to y=-46, where the rod's hanger sweep begins - flush to
+       it, no collision. WALKWAY: 40" - 12" leaves a 28" clear aisle,
+       above the 24" industry minimum for a closet passage.
+       Heights live in the section view: fixed shelves at 14/28/42/56"
+       run the full 36"; the 70" and 84" shelves shorten as the
+       stringer comes down (each runs while shelf height + 2" clears
+       the ceiling, d <= (91-h) x 9/8), the stepped look of the
+       reference photo. -->
+  <rect x="93.5" y="-46" width="12" height="36" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
+  <text class="lbl-s" x="98.2" y="-28" text-anchor="middle" font-size="1.05" transform="rotate(-90 98.2 -28)">OAK SHELVES</text>
+  <text class="lbl-s" x="101.4" y="-28" text-anchor="middle" font-size=".85" transform="rotate(-90 101.4 -28)">12&quot; deep, stepped</text>
+
+  <!-- aisle clearance check, west wall to shelf face -->
+  <line class="dimline" x1="65.5" y1="-28" x2="93.5" y2="-28"/>
+  <line class="tick" x1="65.05" y1="-28.45" x2="65.95" y2="-27.55"/>
+  <line class="tick" x1="93.05" y1="-28.45" x2="93.95" y2="-27.55"/>
+  <rect x="74.3" y="-30.4" width="10.4" height="1.9" rx=".6" fill="#FBFAF7"/>
+  <text class="dim-s" x="79.5" y="-29.4" text-anchor="middle">28&quot; clear aisle</text>
+
   <!-- headroom contour lines, dashed, every 3 stair steps (27" of depth = 24" of drop) -->
   <line class="code" x1="65.5" y1="-37" x2="105.5" y2="-37"/>
   <text class="code-t" x="106.3" y="-37" font-size=".85">69&quot; headroom (27&quot; in)</text>
@@ -2352,6 +2377,20 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="162" y="-56" width="20" height="36" fill="#EDF1F2" stroke="#6E6A62" stroke-width=".09" stroke-dasharray=".75 .5"/>
   <text class="lbl-s" x="172" y="-30.5" text-anchor="middle" font-size=".8">tees, bottoms ~6&quot;</text>
   <text class="lbl-s" x="172" y="-27.5" text-anchor="middle" font-size=".75" fill="#8B979A">(jeans draped: ~13&quot;)</text>
+
+  <!-- east-wall shelf bank, ghosted — it sits on the NEAR side of this
+       looking-west view, between the viewer and the rod, so it's drawn
+       light with a dashed edge rather than solid. Sloped top parallels
+       the stringer at 2" clearance; the 70" and 84" shelves step
+       shorter as the ceiling comes down, like the reference photo. -->
+  <path d="M126,-105 L162,-73 L162,-14 L126,-14 Z" fill="#B6986D" fill-opacity=".18" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="126" y1="-28" x2="162" y2="-28" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="126" y1="-42" x2="162" y2="-42" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="126" y1="-56" x2="162" y2="-56" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="126" y1="-70" x2="162" y2="-70" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="126" y1="-84" x2="149.6" y2="-84" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="126" y1="-98" x2="133.9" y2="-98" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <text class="lbl-s" x="144" y="-17.8" text-anchor="middle" font-size=".8" fill="#624E40">oak shelf bank, east wall (near side &#8212; ghosted)</text>
 
   <!-- the rod, end-on: white with black border, matte black in the real spec -->
   <circle cx="172" cy="-57" r=".9" fill="#fff" stroke="#2A2A2A" stroke-width=".12"/>
