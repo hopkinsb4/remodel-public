@@ -2254,7 +2254,12 @@ Without these the wall band simply runs out into the floor. Six caps:
        tapers, shown here as headroom contour lines rather than as a
        tapered floor outline. -->
   <!-- wall band -->
-  <rect x="61"   y="-119.125" width="4.5" height="109.125" fill="#C9C4B7"/>  <!-- west wall -->
+  <!-- west wall runs down to y=-4.5, not just to y=-10 at the hallway
+       corner — it overlaps the top of the bath's own wall band there,
+       closing what was otherwise a thin undrawn gap between the two
+       (the bath's wall band starts at y=-4.5; this wall used to stop at
+       y=-10, 5.5" short of it). -->
+  <rect x="61"   y="-119.125" width="4.5" height="114.625" fill="#C9C4B7"/>  <!-- west wall -->
   <rect x="105.5" y="-119.125" width="4.5" height="109.125" fill="#C9C4B7"/> <!-- east wall -->
   <rect x="61" y="-119.125" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall -->
   <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, west stub -->
