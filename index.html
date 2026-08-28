@@ -2332,18 +2332,6 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect class="blk" x="105.5" y="-39.3" width=".7" height="2.6"/>
   <rect class="blk" x="105.5" y="-49.3" width=".7" height="2.6"/>
   <text class="lbl-s" x="107.6" y="-43.5" text-anchor="middle" font-size=".7" transform="rotate(-90 107.6 -43.5)">outlets</text>
-  <!-- vanity mirror — moved to the EAST wall, over the counter: a
-       20" x 18" mirror, d 2..22 at the tall front end (same depth band
-       as the west-wall version it replaces), top at 72", bottom 54" —
-       the 54-72" band puts both a 5' user (eye ~56") and a 6' user
-       (eye ~68", head-top 72") in the glass for hair drying, and 20" of
-       width is as far as the stringer allows at that top height:
-       ceiling at d=22 is 73.4", so the deep top corner clears by 1.4".
-       Mounted on the wall above the counter's 47" top, clear of the
-       chamfered entry corner below it. Surface mount, drawn 0.5" proud
-       in the same teal-glass convention as the bath mirrors. -->
-  <rect x="105" y="-32" width=".5" height="20" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="107.1" y="-22" text-anchor="middle" font-size=".8" transform="rotate(-90 107.1 -22)">mirror</text>
 
   <!-- light switch, west wall just inside the door -->
   <rect class="blk" x="64.8" y="-15.5" width=".7" height="2.6"/>
@@ -2390,6 +2378,22 @@ Without these the wall band simply runs out into the floor. Six caps:
        the bank below it and the rod below it re-draw dashed (hidden)
        on top of the slab. -->
   <path d="M99.5,-10 L93.5,-16 V-40 L87.5,-46 H65.5 V-63 H105.5 V-10 Z" fill="#4A4644" stroke="#EDE8DD" stroke-width=".35"/>
+  <!-- vanity mirror — EAST wall, over the counter: a 20" x 18" mirror,
+       d 2..22 at the tall front end, top at 72", bottom 54" — the
+       54-72" band puts both a 5' user (eye ~56") and a 6' user (eye
+       ~68", head-top 72") in the glass for hair drying, and 20" of
+       width is as far as the stringer allows at that top height:
+       ceiling at d=22 is 73.4", so the deep top corner clears by 1.4".
+       Mounted on the wall above the counter's 47" top, clear of the
+       chamfered entry corner below it. Surface mount, drawn 0.5" proud
+       in the same teal-glass convention as the bath mirrors.
+       DRAWN AFTER the granite counter fill above (rather than with the
+       other wall devices near the door) so its swatch isn't painted
+       over by the counter's opaque fill, which spans the same x range
+       at this depth — the counter is the top surface, but a wall-
+       mounted mirror above it still needs to render on top in plan. -->
+  <rect x="105" y="-32" width=".5" height="20" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <text class="teal" x="107.1" y="-22" text-anchor="middle" font-size=".8" transform="rotate(-90 107.1 -22)">mirror</text>
   <!-- vertical back (upstand) on the counter at d=45 -->
   <line x1="65.5" y1="-55" x2="105.5" y2="-55" stroke="#EDE8DD" stroke-width=".3"/>
   <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
