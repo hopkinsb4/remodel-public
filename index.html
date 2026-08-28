@@ -1826,7 +1826,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <p>Powder room converted to a full bath: a curbless wet room split evenly into two 30.5" sections — shower to the west, toilet kept dry behind fixed glass to the east. Opal color tile runs floor-to-ceiling on three walls with black grout; only the pocket-door wall stays paint. A ceiling-mount rain head (no handheld wand — rain heads throw the least spray), the corner sink with a matte black single hole faucet and a pair of flat mirrors meeting in the corner above it, the same Kingston toilet as elsewhere, and a 28" white pocket door, for night visibility of open/closed. A rigid support bar from the west wall braces the glass panel and doubles as the curtain rod — the curtain screens the sink and walk-in from spray when drawn. The medicine cabinet sits recessed on the dry north wall, and the trap and supply stops left exposed under the wall-hung sink are dark PVD rather than chrome. The floor plan below also carries the small hallway pocket the bathroom shares with the under-stairs closet, and the closet's own layout.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-7 -129 134 197" role="img"
+      <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-7 -112 125 180" role="img"
      aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a shower nook on the rain head line, and a recessed medicine cabinet on the dry north wall; a small hallway pocket where the bathroom's east-facing pocket door and the closet's north-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a calculated zero at the back, fitted with a matte black clothes rod at 43 inches and an oak shelf bank just inside the door on the east wall, keeping a 28 inch clear aisle, and accompanied by a front view from the doorway and a projected side view showing the rod, hanging clothes and stepped shelves against the stringer slope">
   <!--
     93 WATERMAN — DOWNSTAIRS BATHROOM + UNDER-STAIRS CLOSET FLOOR PLAN
@@ -2242,24 +2242,28 @@ Without these the wall band simply runs out into the floor. Six caps:
        gap is ordinary field-recollection variance, same tolerance this
        plan set already gives other numbers that don't perfectly nest.
 
-       CEILING / DEPTH, CALCULATED: no floor measurement was possible
-       (a built-in desk still occupies it — see demo line in the
-       budget), but the ceiling is a straight slope under the stair
-       stringer, so depth follows from just two numbers: 93" of height
-       right inside the door, and the slope itself. Per instruction,
-       used "standard 2001-era" residential stair proportions — 8" rise
-       / 9" run, the pre-IRC UBC allowance for private dwelling
-       stairways (the later, stricter IRC figure is 7.75"/10" instead).
-       Slope = 8/9 = .889" of ceiling drop per 1" of depth.
-       Depth to the THEORETICAL zero-height point: 93 / (8/9)
-       = 93 x 9/8 = 104.625" = 104⅝". That is the full physical
-       envelope, drawn as the room's true back wall — it really is
-       that deep. Headroom below about 24" (past 77⅝" in) is flagged
-       with the dashed contour lines below as the throwaway zone
-       mentioned in the brief: too low to be usable storage, but still
-       real floor, so it's not cut from the drawing.
+       CEILING / DEPTH, FIELD-MEASURED: the closet dead-ends at 87" of
+       depth, 31" high there — a real measurement, not the calculated
+       104⅝"/0" theoretical envelope this drawing carried before. That
+       old figure assumed a textbook "2001-era" 8"/9" rise/run stair
+       slope run out to a theoretical zero-height point; the actual
+       stringer is shallower than that assumption, and it doesn't taper
+       to nothing anyway — it dead-ends at a real 31" of headroom, most
+       likely where the stringer lands on framing/a wall beyond.
+       SLOPE, RECOMPUTED FROM THE TWO REAL POINTS: 93" at the door
+       (d=0) and 31" at the dead end (d=87) give a measured slope of
+       (93-31)/87 = 62/87 = .713" of ceiling drop per 1" of depth —
+       shallower than the old assumed 8/9 (.889"/"), so headroom at any
+       given depth is actually MORE generous than this drawing
+       previously showed. Ceiling height at depth d: H(d) = 93 -
+       (62/87)d, valid 0..87 (real dead end, not a projection).
+       NO THROWAWAY ZONE: the old ~24"-headroom cutoff, below which
+       floor was flagged as too low to be usable, never occurs here —
+       the closet dead-ends at 31" of headroom, already above that
+       threshold, so the whole 87" of depth stays counted as real
+       storage.
        WEDGE IS A SECTION-VIEW SHAPE, NOT A PLAN ONE: in plan the floor
-       is a plain 40"x104⅝" rectangle — it's the ceiling overhead that
+       is a plain 40"x87" rectangle — it's the ceiling overhead that
        tapers, shown here as headroom contour lines rather than as a
        tapered floor outline. -->
   <!-- wall band -->
@@ -2268,15 +2272,15 @@ Without these the wall band simply runs out into the floor. Six caps:
        closing what was otherwise a thin undrawn gap between the two
        (the bath's wall band starts at y=-4.5; this wall used to stop at
        y=-10, 5.5" short of it). -->
-  <rect x="61"   y="-119.125" width="4.5" height="114.625" fill="#C9C4B7"/>  <!-- west wall -->
-  <rect x="105.5" y="-119.125" width="4.5" height="109.125" fill="#C9C4B7"/> <!-- east wall -->
-  <rect x="61" y="-119.125" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall -->
+  <rect x="61"   y="-101.5" width="4.5" height="97" fill="#C9C4B7"/>  <!-- west wall -->
+  <rect x="105.5" y="-101.5" width="4.5" height="91.5" fill="#C9C4B7"/> <!-- east wall -->
+  <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall (real dead-end wall) -->
   <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, west stub -->
   <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, east stub -->
 
   <!-- interior floor + outline (door opening left as a break, x 71.5..99.5) -->
-  <rect x="65.5" y="-114.625" width="40" height="104.625" fill="url(#dsbath-check)"/>
-  <path class="outline" d="M71.5,-10 H65.5 V-114.625 H105.5 V-10 H99.5"/>
+  <rect x="65.5" y="-97" width="40" height="87" fill="url(#dsbath-check)"/>
+  <path class="outline" d="M71.5,-10 H65.5 V-97 H105.5 V-10 H99.5"/>
 
   <!-- door: hinge at the east jamb, handle on the west, out-swing (opens
        south, into the hallway) -->
@@ -2296,11 +2300,14 @@ Without these the wall band simply runs out into the floor. Six caps:
        clearance for the hanging clothes: tees on hangers drop 36-38"
        (bottoms ~5-7" up), jeans draped over the hanger bar drop ~30"
        (bottoms ~13" up).
-       CEILING CHECK: on an E-W rod the hangers point north into the
-       slope, so the far shoulder of each garment rides ~10" deeper than
-       the rod, under a ceiling ~9" lower — max rod height at rod-plane
-       depth d is 86 - (8/9)d. At d=46 that's 45.1", so 43" clears with
-       ~2" to spare. The dashed envelope is the hanger sweep (rod +-10"),
+       CEILING CHECK, RECOMPUTED against the field-measured 62/87 slope
+       (see the depth note above — shallower than the old assumed 8/9):
+       on an E-W rod the hangers point north into the slope, so the far
+       shoulder of each garment rides ~10" deeper than the rod — max rod
+       height at rod-plane depth d is 86 - (62/87)d. At d=46 that's
+       53.2", so 43" clears with ~10" to spare (was a tight ~2" under
+       the old, steeper assumed slope). The dashed envelope is the
+       hanger sweep (rod +-10"),
        drawn per the same overhead-dashed convention as elsewhere. -->
   <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#6E6A62" stroke-width=".09" stroke-dasharray=".75 .5"/>
 
@@ -2347,15 +2354,17 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ============ CLOSET FIT-OUT: WRAPPING OAK COUNTER ============
        The bank now STOPS AT COUNTER HEIGHT instead of running to the
        ceiling, and a 1.5" oak counter slab caps it and wraps the
-       corner to run full-width over the rod zone, dying into the
-       stringer where the two planes meet.
+       corner to run full-width over the rod zone.
        HEIGHTS: counter top 47", underside 45.5". The rod stays at 43",
        now hung 2.5" below the counter's underside on under-counter
        brackets — the textbook rod-under-shelf spec — which preserves
        the agreed 6" floor clearance for the hanging clothes.
-       NORTH EDGE: the underside meets the ceiling at
-       d = (93-45.5) x 9/8 = 53.4"; the slab is drawn to d=53 (y=-63),
-       just past the rod plane at 46.
+       NORTH EDGE, RECOMPUTED against the field-measured 62/87 slope:
+       the underside (45.5") wouldn't meet the ceiling until
+       d = (93-45.5) x 87/62 = 66.65" — well past where the slab
+       actually stops. The slab is drawn to d=53 (y=-63) by choice,
+       just past the rod plane at 46, not because the ceiling forces it
+       there.
        MATERIAL: honed charcoal granite (a remnant-size job), tying to
        the matte black hardware standard and the Dawson/Nero tones —
        drawn #4A4644, the Dawson field tone, with light dashes for the
@@ -2367,11 +2376,10 @@ Without these the wall band simply runs out into the floor. Six caps:
        only, tapering the 28" clear to 22" for that 6" run; floor-level
        passage is unchanged.
        NO BACK STOP: the granite back stop that used to close the
-       tapering wedge at d=45 (where the counter top meets the sloping
-       ceiling) has been removed — the slab simply dies into the
-       stringer at its north edge with nothing capping the wedge above
-       it. That upper wedge (d 45..53, too low to be usable anyway) is
-       open rather than boxed in.
+       wedge at d=45 has been removed. With the corrected slope that
+       wedge isn't even low headroom — ceiling there runs 61" (d=45) to
+       55" (d=53), plenty to stand under — so it's simply left open
+       above the counter, no cabinetry or cap needed.
        LIGHTING: an under-counter LED strip runs on the slab's
        underside just south of the rod, washing the hanging clothes.
        DRAFTING: the counter is the top surface, so it draws solid;
@@ -2381,9 +2389,14 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- vanity mirror — EAST wall, over the counter: a 20" x 18" mirror,
        d 2..22 at the tall front end, top at 72", bottom 54" — the
        54-72" band puts both a 5' user (eye ~56") and a 6' user (eye
-       ~68", head-top 72") in the glass for hair drying, and 20" of
-       width is as far as the stringer allows at that top height:
-       ceiling at d=22 is 73.4", so the deep top corner clears by 1.4".
+       ~68", head-top 72") in the glass for hair drying. Sized to 20"
+       when the slope was assumed steeper; RECOMPUTED against the
+       field-measured 62/87 slope, ceiling at d=22 is now 77.3" (was
+       calculated at 73.4"), clearing the 72" top by 5.3" instead of
+       the original 1.4" — there's room to go wider (the 72" ceiling
+       line now falls around d=29 instead of d=22) if a wider mirror is
+       ever wanted, but 20" is left as drawn since nothing requires
+       changing it.
        Mounted on the wall above the counter's 47" top, clear of the
        chamfered entry corner below it. Surface mount, drawn 0.5" proud
        in the same teal-glass convention as the bath mirrors.
@@ -2406,19 +2419,22 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s" x="85.5" y="-52" text-anchor="middle" font-size=".85">granite counter @ 47&quot; &#8212; wraps the bank, 6&quot; inside chamfer</text>
   <text class="lbl-s" x="85.5" y="-50.4" text-anchor="middle" font-size=".75" fill="#8B979A">rod @ 43&quot; below + under-counter LED &#8212; tees ~6&quot; off floor</text>
 
-  <!-- headroom contour lines, dashed, every 3 stair steps (27" of depth = 24" of drop) -->
+  <!-- headroom contour lines, dashed, at the same two depth checkpoints
+       this drawing has always used (27" and 54" in) — heights
+       recomputed against the field-measured 62/87 slope, both higher
+       than the old calculated figures since the real stringer is
+       shallower than the old assumed 8/9. -->
   <line class="code" x1="65.5" y1="-37" x2="105.5" y2="-37"/>
-  <text class="code-t" x="106.3" y="-37" font-size=".85">69&quot; headroom (27&quot; in)</text>
+  <text class="code-t" x="106.3" y="-37" font-size=".85">73&#190;&quot; headroom (27&quot; in)</text>
 
   <line class="code" x1="65.5" y1="-64" x2="105.5" y2="-64"/>
-  <text class="code-t" x="106.3" y="-64" font-size=".85">45&quot; headroom (54&quot; in)</text>
+  <text class="code-t" x="106.3" y="-64" font-size=".85">54&#189;&quot; headroom (54&quot; in)</text>
 
-  <!-- practical cutoff: below ~24" of headroom, called out as the throwaway zone -->
-  <line class="red" x1="65.5" y1="-87.625" x2="105.5" y2="-87.625"/>
-  <text class="red-t" x="106.3" y="-87.625" font-size=".85">~24&quot; hd &#8212; usable storage ends about here</text>
-
-  <rect x="72" y="-113.1" width="27" height="2.2" rx="1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="85.5" y="-112" text-anchor="middle" font-size=".85">0&quot; headroom (theoretical) &#8212; under the stringer</text>
+  <!-- NO THROWAWAY ZONE: the old ~24"-headroom cutoff never occurs —
+       the closet dead-ends at 87" deep with 31" of headroom, already
+       above that threshold, so the full depth stays real storage. -->
+  <rect x="68" y="-96" width="34" height="2.2" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="85" y="-95" text-anchor="middle" font-size=".85">31&quot; headroom &#8212; closet dead-ends here (measured)</text>
 
   <rect x="73" y="-21.6" width="25" height="3.2" rx="1" fill="#FBFAF7"/>
   <text x="85.5" y="-20" text-anchor="middle" font-size="2" font-style="italic"
@@ -2446,21 +2462,24 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-s" x="85.5" y="-4.75" text-anchor="middle">28&quot;</text>
   <text class="dim-s" x="102.5" y="-4.75" text-anchor="middle">6&quot;</text>
 
-  <!-- dimension: overall width, north of the wall -->
-  <line class="extline" x1="65.5"  y1="-118" x2="65.5"  y2="-124.5"/>
-  <line class="extline" x1="105.5" y1="-118" x2="105.5" y2="-124.5"/>
-  <line class="dimline" x1="65.5" y1="-123.5" x2="105.5" y2="-123.5"/>
-  <line class="tick" x1="65.05"  y1="-123.95" x2="65.95"  y2="-123.05"/>
-  <line class="tick" x1="105.05" y1="-123.95" x2="105.95" y2="-123.05"/>
-  <text class="dim-big" x="85.5" y="-126.5" text-anchor="middle">40&quot;</text>
+  <!-- dimension: overall width, north of the wall (shifted in from the
+       old -118/-124.5 positions now that the back wall moved from
+       -119.125 to -101.5 with the measured 87" depth) -->
+  <line class="extline" x1="65.5"  y1="-100.5" x2="65.5"  y2="-107"/>
+  <line class="extline" x1="105.5" y1="-100.5" x2="105.5" y2="-107"/>
+  <line class="dimline" x1="65.5" y1="-106" x2="105.5" y2="-106"/>
+  <line class="tick" x1="65.05"  y1="-106.45" x2="65.95"  y2="-105.55"/>
+  <line class="tick" x1="105.05" y1="-106.45" x2="105.95" y2="-105.55"/>
+  <text class="dim-big" x="85.5" y="-109" text-anchor="middle">40&quot;</text>
 
-  <!-- dimension: overall depth, east side -->
-  <line class="extline" x1="106.3" y1="-10"      x2="113.4" y2="-10"/>
-  <line class="extline" x1="106.3" y1="-114.625" x2="113.4" y2="-114.625"/>
-  <line class="dimline" x1="112" y1="-10" x2="112" y2="-114.625"/>
-  <line class="tick" x1="111.55" y1="-10.45"      x2="112.45" y2="-9.55"/>
-  <line class="tick" x1="111.55" y1="-115.075"    x2="112.45" y2="-114.175"/>
-  <text class="dim-big" x="114" y="-62.3" text-anchor="middle" transform="rotate(-90 114 -62.3)">104&#8541;&quot; (calculated)</text>
+  <!-- dimension: overall depth, east side — 87" measured, replacing
+       the old 104⅝" calculated figure -->
+  <line class="extline" x1="106.3" y1="-10" x2="113.4" y2="-10"/>
+  <line class="extline" x1="106.3" y1="-97" x2="113.4" y2="-97"/>
+  <line class="dimline" x1="112" y1="-10" x2="112" y2="-97"/>
+  <line class="tick" x1="111.55" y1="-10.45" x2="112.45" y2="-9.55"/>
+  <line class="tick" x1="111.55" y1="-97.45" x2="112.45" y2="-96.55"/>
+  <text class="dim-big" x="114" y="-53.5" text-anchor="middle" transform="rotate(-90 114 -53.5)">87&quot; (measured)</text>
 </svg>
       <p style="font-size: 12px; color: #777; max-width: 320px; margin-top: 8px;">Proposed floor plan to fit a 3/4 bath in place of the existing 1/2 bath. 30.5" x 61" = 1861 sq in</p>
     </div>
@@ -2544,7 +2563,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag white">Under-Stairs Walk-In Closet</span>
-    <p>An under-stairs clothes closet, fitted out in the house materials: a matte black rod at 43" (46" into the closet, hung below the counter), a 12"-deep oak shelf bank inside the door with a 6" chamfered entry corner, and a honed charcoal granite counter at 47" that caps the bank and wraps full-width over the rod, dying into the stringer — with an under-counter LED strip washing the hanging clothes and no back stop where counter meets stringer, leaving that upper wedge open rather than boxed in. The bank sits freestanding on the tile with an anti-tip cleat only, removable later without flooring scars, running the full 36" to the door with its chamfered entry corner. Two outlet gangs sit in the east side wall's drywall above the counter, with the light switch at the door, and a vanity mirror (~20"x18", spanning 54"-72" so 5' to 6' users can dry hair standing) on that same east wall, over the counter. Plus a dedicated light fixture. Checkerboard floor, gray walls in glossy finish, matte black hardware. A wedge-shaped space under the stair stringer — 93" of headroom right inside the north-facing door, sloping down to a calculated zero at the back, with the lowest ~24" of headroom called out as unusable throwaway volume rather than working storage. Drawn with the downstairs bathroom's floor plan (Downstairs Bathroom, above), which the closet shares a small hallway pocket with.</p>
+    <p>An under-stairs clothes closet, fitted out in the house materials: a matte black rod at 43" (46" into the closet, hung below the counter), a 12"-deep oak shelf bank inside the door with a 6" chamfered entry corner, and a honed charcoal granite counter at 47" that caps the bank and wraps full-width over the rod — with an under-counter LED strip washing the hanging clothes and no back stop above it, leaving that wedge open rather than boxed in. The bank sits freestanding on the tile with an anti-tip cleat only, removable later without flooring scars, running the full 36" to the door with its chamfered entry corner. Two outlet gangs sit in the east side wall's drywall above the counter, with the light switch at the door, and a vanity mirror (~20"x18", spanning 54"-72" so 5' to 6' users can dry hair standing) on that same east wall, over the counter. Plus a dedicated light fixture. Checkerboard floor, gray walls in glossy finish, matte black hardware. A wedge-shaped space under the stair stringer — 93" of headroom right inside the north-facing door, sloping down to a field-measured dead end at 87" deep, 31" high (the real stringer runs shallower than this drawing's original calculated assumption, so headroom throughout is more generous than first shown, and the closet's full depth counts as usable storage). Drawn with the downstairs bathroom's floor plan (Downstairs Bathroom, above), which the closet shares a small hallway pocket with.</p>
     
     
     <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
