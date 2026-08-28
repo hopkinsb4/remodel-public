@@ -2276,6 +2276,25 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="77.5" y="-3.6" width="16" height="2.2" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="85.5" y="-2.5" text-anchor="middle" font-size=".85">closet door, 28&quot;, out-swing</text>
 
+  <!-- ============ CLOSET FIT-OUT: OAK CLOTHES ROD ============
+       One east-west rod, full 40" width, side-mounted wall to wall.
+       PLANE: 46" into the closet (y=-56) — the "halfway in" mark of the
+       usable zone. HEIGHT: 44" AFF, sized so everything a casual
+       wardrobe hangs stays off the floor: tees on hangers drop 36-38"
+       (bottoms ~6-8" up), jeans draped over the hanger bar drop ~30"
+       (bottoms ~14" up).
+       CEILING CHECK: on an E-W rod the hangers point north into the
+       slope, so the far shoulder of each garment rides ~10" deeper than
+       the rod, under a ceiling ~9" lower — max rod height at rod-plane
+       depth d is 86 - (8/9)d. At d=46 that's 45.1", so 44" clears with
+       ~1" to spare. The dashed envelope is the hanger sweep (rod +-10"),
+       drawn per the same overhead-dashed convention as elsewhere. -->
+  <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#6E6A62" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="65.5" y1="-56" x2="105.5" y2="-56" stroke="#624E40" stroke-width=".45"/>
+  <rect x="74" y="-55" width="23" height="3.6" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="85.5" y="-53.6" text-anchor="middle" font-size=".85">oak rod @ 44&quot; AFF &#8212; tees ~7&quot;, jeans ~14&quot; off floor</text>
+  <text class="lbl-s" x="85.5" y="-52" text-anchor="middle" font-size=".75" fill="#8B979A">dashed: hanger sweep, rod &#177;10&quot;</text>
+
   <!-- headroom contour lines, dashed, every 3 stair steps (27" of depth = 24" of drop) -->
   <line class="code" x1="65.5" y1="-37" x2="105.5" y2="-37"/>
   <text class="code-t" x="106.3" y="-37" font-size=".85">69&quot; headroom (27&quot; in)</text>
