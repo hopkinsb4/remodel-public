@@ -2128,6 +2128,12 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ============ EAST WALL ============ -->
   <rect class="blk" x="59.75" y="35.08" width=".33" height="5.92"/>               <!-- TP holder -->
   <text class="lbl-s" x="58.6" y="38" text-anchor="middle" transform="rotate(-90 58.6 38)">TP holder</text>
+  <!-- the pocket itself — the full 30" cavity the slab retracts into — drawn
+       dashed at full depth, independent of wherever the leaf below happens
+       to be illustrated. Without this, showing the leaf "half-open" reads
+       as the door only having that much travel, rather than a snapshot of
+       a door that slides the full cavity. -->
+  <rect x="62.58" y="31" width="1.42" height="30" fill="none" stroke="#6E6A62" stroke-width=".08" stroke-dasharray=".6 .5"/>
   <rect x="62.58" y="17.08" width="1.42" height="27.92" fill="#fff" stroke="#2A2A2A" stroke-width=".1"/> <!-- pocket door, white slab per spec -->
   <text class="lbl-s" x="58.9" y="12.5" text-anchor="middle" transform="rotate(-90 58.9 12.5)">28&quot;</text>
   <text class="lbl-s" x="60.2" y="21" text-anchor="middle" transform="rotate(-90 60.2 21)">pocket door, slides south</text>
@@ -2282,23 +2288,27 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text x="85.5" y="-20" text-anchor="middle" font-size="2" font-style="italic"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#6B5B47">UNDER-STAIRS CLOSET</text>
 
-  <!-- dimensions: door-wall breakdown (6/28/6), kept INSIDE the wall band
-       itself (y -10..-5.5, solid tan) rather than south of it — the
-       hallway floor there is the same stark black/white checkerboard
-       used in the primary bedroom plan, which that file's own notes
-       flag as illegible for text once it crosses a dark square. -->
-  <line class="extline" x1="65.5"  y1="-10" x2="65.5"  y2="-7.2"/>
-  <line class="extline" x1="71.5"  y1="-10" x2="71.5"  y2="-7.2"/>
-  <line class="extline" x1="99.5"  y1="-10" x2="99.5"  y2="-7.2"/>
-  <line class="extline" x1="105.5" y1="-10" x2="105.5" y2="-7.2"/>
-  <line class="dimline" x1="65.5" y1="-7.75" x2="105.5" y2="-7.75"/>
-  <line class="tick" x1="65.05"  y1="-8.2" x2="65.95"  y2="-7.3"/>
-  <line class="tick" x1="71.05"  y1="-8.2" x2="71.95"  y2="-7.3"/>
-  <line class="tick" x1="99.05"  y1="-8.2" x2="99.95"  y2="-7.3"/>
-  <line class="tick" x1="105.05" y1="-8.2" x2="105.95" y2="-7.3"/>
-  <text class="dim-s" x="68.5" y="-8.65" text-anchor="middle">6&quot;</text>
-  <text class="dim-s" x="85.5" y="-8.65" text-anchor="middle">28&quot;</text>
-  <text class="dim-s" x="102.5" y="-8.65" text-anchor="middle">6&quot;</text>
+  <!-- dimensions: door-wall breakdown (6/28/6), south of the wall, in the
+       hallway. (Previously drawn inside the wall band itself — but a
+       dimline spanning the full wall face read as a black border boxing
+       in the wall rather than the wall looking continuous. Soft plates
+       behind the numbers keep them legible over the checkerboard here,
+       same fix used for the "closet door" label just below.) -->
+  <rect x="67"   y="-5.3" width="3"   height="1.1" rx=".4" fill="#FBFAF7"/>
+  <rect x="83.3" y="-5.3" width="4.4" height="1.1" rx=".4" fill="#FBFAF7"/>
+  <rect x="101"  y="-5.3" width="3"   height="1.1" rx=".4" fill="#FBFAF7"/>
+  <line class="extline" x1="65.5"  y1="-5.5" x2="65.5"  y2="-4.5"/>
+  <line class="extline" x1="71.5"  y1="-5.5" x2="71.5"  y2="-4.5"/>
+  <line class="extline" x1="99.5"  y1="-5.5" x2="99.5"  y2="-4.5"/>
+  <line class="extline" x1="105.5" y1="-5.5" x2="105.5" y2="-4.5"/>
+  <line class="dimline" x1="65.5" y1="-4.15" x2="105.5" y2="-4.15"/>
+  <line class="tick" x1="65.05"  y1="-4.5" x2="65.95"  y2="-3.8"/>
+  <line class="tick" x1="71.05"  y1="-4.5" x2="71.95"  y2="-3.8"/>
+  <line class="tick" x1="99.05"  y1="-4.5" x2="99.95"  y2="-3.8"/>
+  <line class="tick" x1="105.05" y1="-4.5" x2="105.95" y2="-3.8"/>
+  <text class="dim-s" x="68.5" y="-4.75" text-anchor="middle">6&quot;</text>
+  <text class="dim-s" x="85.5" y="-4.75" text-anchor="middle">28&quot;</text>
+  <text class="dim-s" x="102.5" y="-4.75" text-anchor="middle">6&quot;</text>
 
   <!-- dimension: overall width, north of the wall -->
   <line class="extline" x1="65.5"  y1="-118" x2="65.5"  y2="-124.5"/>
