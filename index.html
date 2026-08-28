@@ -1823,19 +1823,23 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag" style="background: #3f6e6b; color: white;">Downstairs Bathroom</span>
-    <p>Powder room converted to a full bath: a curbless wet room split evenly into two 30.5" sections — shower to the west, toilet kept dry behind fixed glass to the east. Opal color tile runs floor-to-ceiling on three walls with black grout; only the pocket-door wall stays paint. A ceiling-mount rain head (no handheld wand — rain heads throw the least spray), the corner sink with a matte black single hole faucet and a pair of flat mirrors meeting in the corner above it, the same Kingston toilet as elsewhere, and a 28" white pocket door, for night visibility of open/closed. A rigid support bar from the west wall braces the glass panel and doubles as the curtain rod — the curtain screens the sink and walk-in from spray when drawn. The medicine cabinet sits recessed on the dry north wall, and the trap and supply stops left exposed under the wall-hung sink are dark PVD rather than chrome.</p>
+    <p>Powder room converted to a full bath: a curbless wet room split evenly into two 30.5" sections — shower to the west, toilet kept dry behind fixed glass to the east. Opal color tile runs floor-to-ceiling on three walls with black grout; only the pocket-door wall stays paint. A ceiling-mount rain head (no handheld wand — rain heads throw the least spray), the corner sink with a matte black single hole faucet and a pair of flat mirrors meeting in the corner above it, the same Kingston toilet as elsewhere, and a 28" white pocket door, for night visibility of open/closed. A rigid support bar from the west wall braces the glass panel and doubles as the curtain rod — the curtain screens the sink and walk-in from spray when drawn. The medicine cabinet sits recessed on the dry north wall, and the trap and supply stops left exposed under the wall-hung sink are dark PVD rather than chrome. The floor plan below also carries the small hallway pocket the bathroom shares with the under-stairs closet, and the closet's own layout.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-6 -15 83 82" role="img"
-     aria-label="Downstairs bathroom floorplan, two-section wet room, drawn to scale — corner sink with a surface-mount mirror and a recessed nook flanking it, a shower nook on the rain head line, and a recessed medicine cabinet with towel bar on the dry north wall">
+      <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-6 -140 126 207" role="img"
+     aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a shower nook on the rain head line, and a recessed medicine cabinet on the dry north wall; a small hallway pocket where the bathroom's east-facing pocket door and the closet's north-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a calculated zero at the back">
   <!--
-    93 WATERMAN — DOWNSTAIRS BATHROOM FLOOR PLAN
-    ============================================
+    93 WATERMAN — DOWNSTAIRS BATHROOM + UNDER-STAIRS CLOSET FLOOR PLAN
+    ====================================================================
     EDITABLE SOURCE. All coordinates are in INCHES.
-    Origin (0,0) = the NORTHWEST interior corner of the room.
-    +x runs EAST, +y runs SOUTH.  Room is 61" x 61".
-    Wall band is 4.5" thick, so it spans -4.5 .. 65.5 on both axes.
-    Shower (wet) section = x 0..30.5   |   Toilet (dry) section = x 30.5..61
+    Origin (0,0) = the NORTHWEST interior corner of the BATHROOM.
+    +x runs EAST, +y runs SOUTH, for BOTH rooms — one shared frame.
+    Bathroom: room is 61" x 61". Wall band is 4.5" thick, so it spans
+      -4.5 .. 65.5 on both axes. Shower (wet) = x 0..30.5, toilet (dry)
+      section = x 30.5..61.
+    Hallway + closet: added below (negative y = north of the bathroom).
+      See the "HALLWAY CONNECTOR" and "UNDER-STAIRS WALK-IN CLOSET"
+      sections further down for their own geometry notes.
     To move a fixture, just change its x/y. No re-rendering step needed.
   -->
   <defs>
@@ -1869,6 +1873,16 @@ Without these the wall band simply runs out into the floor. Six caps:
       #dsbath-plan .dim-s   { font:.8px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
       #dsbath-plan text     { dominant-baseline:middle; }
     </style>
+    <!-- Leona checkerboard, Calacatta + Nero Marquina, on the diagonal —
+         the same whole-house floor and pattern module as the primary
+         bedroom plan, reused here for the hallway pocket and the closet
+         (both are whole-house flooring, not bathroom mosaic). -->
+    <pattern id="dsbath-check" width="24" height="24" patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <rect width="24" height="24" fill="#F1EEE7"/>
+      <rect x="0"  y="0"  width="12" height="12" fill="#262322"/>
+      <rect x="12" y="12" width="12" height="12" fill="#262322"/>
+    </pattern>
   </defs>
 
   <!-- ============ SHELL ============ -->
@@ -2146,6 +2160,137 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="72.05" y1=".45"   x2="72.95" y2="-.45"/>
   <line class="tick" x1="72.05" y1="61.45" x2="72.95" y2="60.55"/>
   <text class="dim-big" x="71.5" y="30.5" text-anchor="middle" transform="rotate(-90 71.5 30.5)">61&quot;</text>
+
+  <!-- ================================================================
+       HALLWAY CONNECTOR — SCHEMATIC, WIDTH NOT FIELD-MEASURED
+       ================================================================
+       The bath and the under-stairs closet meet at a small hallway
+       pocket, at 90 degrees to each other: the bath's pocket door opens
+       EAST into it (see the 28" opening on the east wall, above); the
+       closet's door opens NORTH out of it. Only two numbers here came
+       from the field: 13" from the bath door's north edge (y=3) to the
+       turn (y=-10), and the 6"/28"/6" run along the closet's south
+       (door) wall, below. The hallway's own WIDTH was never measured,
+       so it's drawn at a schematic 36" — just enough to read as a
+       passage. Its open (unmeasured) edges are dashed, not solid walls:
+       don't scale off them, and don't take this as the true hallway
+       layout beyond the two doors it actually connects. -->
+  <path d="M65.5,-10 H105.5 V26 H101.5 V31 H65.5 Z" fill="url(#dsbath-check)"/>
+  <path d="M105.5,-10 V26 H101.5 V31 H65.5" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.3 1"/>
+  <!-- soft plate behind the label — same fix the primary bedroom plan
+       uses for any text that has to sit on the checkerboard itself. -->
+  <rect x="69.5" y="27" width="28" height="2" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="83.5" y="28" text-anchor="middle" fill="#8B979A" font-size=".8">hallway (schematic width — continues to rest of house)</text>
+
+  <!-- 13" jog, west side -->
+  <line class="extline" x1="65.5" y1="3"   x2="56"  y2="3"/>
+  <line class="extline" x1="65.5" y1="-10" x2="56"  y2="-10"/>
+  <line class="dimline" x1="58" y1="3" x2="58" y2="-10"/>
+  <line class="tick" x1="57.55" y1="2.55"   x2="58.45" y2="3.45"/>
+  <line class="tick" x1="57.55" y1="-10.45" x2="58.45" y2="-9.55"/>
+  <text class="dim-t" x="56.4" y="-3.5" text-anchor="middle" transform="rotate(-90 56.4 -3.5)">13&quot;</text>
+
+  <!-- ================================================================
+       UNDER-STAIRS WALK-IN CLOSET (WIC) — budget section 13
+       ================================================================
+       DOOR WALL (south wall, at y=-10): 6" stub + 28" out-swing door +
+       6" stub = 40", as given, measured at the hallway face. Anchored
+       to the bath's east wall line (x=65.5) at the hallway corner.
+       A separately recalled "38" interior width" doesn't quite nest
+       with that 40" at plain wall thickness — used the 40" run as
+       drawn (it's the more granular, three-part measurement, anchored
+       to a real corner) rather than force the two to reconcile; the ~2"
+       gap is ordinary field-recollection variance, same tolerance this
+       plan set already gives other numbers that don't perfectly nest.
+
+       CEILING / DEPTH, CALCULATED: no floor measurement was possible
+       (a built-in desk still occupies it — see demo line in the
+       budget), but the ceiling is a straight slope under the stair
+       stringer, so depth follows from just two numbers: 93" of height
+       right inside the door, and the slope itself. Per instruction,
+       used "standard 2001-era" residential stair proportions — 8" rise
+       / 9" run, the pre-IRC UBC allowance for private dwelling
+       stairways (the later, stricter IRC figure is 7.75"/10" instead).
+       Slope = 8/9 = .889" of ceiling drop per 1" of depth.
+       Depth to the THEORETICAL zero-height point: 93 / (8/9)
+       = 93 x 9/8 = 104.625" = 104⅝". That is the full physical
+       envelope, drawn as the room's true back wall — it really is
+       that deep. Headroom below about 24" (past 77⅝" in) is flagged
+       with the dashed contour lines below as the throwaway zone
+       mentioned in the brief: too low to be usable storage, but still
+       real floor, so it's not cut from the drawing.
+       WEDGE IS A SECTION-VIEW SHAPE, NOT A PLAN ONE: in plan the floor
+       is a plain 40"x104⅝" rectangle — it's the ceiling overhead that
+       tapers, shown here as headroom contour lines rather than as a
+       tapered floor outline. -->
+  <!-- wall band -->
+  <rect x="61"   y="-119.125" width="4.5" height="109.125" fill="#C9C4B7"/>  <!-- west wall -->
+  <rect x="105.5" y="-119.125" width="4.5" height="109.125" fill="#C9C4B7"/> <!-- east wall -->
+  <rect x="61" y="-119.125" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall -->
+  <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, west stub -->
+  <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, east stub -->
+
+  <!-- interior floor + outline (door opening left as a break, x 71.5..99.5) -->
+  <rect x="65.5" y="-114.625" width="40" height="104.625" fill="url(#dsbath-check)"/>
+  <path class="outline" d="M71.5,-10 H65.5 V-114.625 H105.5 V-10 H99.5"/>
+
+  <!-- door: hinge at the west jamb, out-swing (opens south, into the hallway) -->
+  <line x1="71.5" y1="-10" x2="71.5" y2="18" stroke="#2A2A2A" stroke-width=".18"/>
+  <path d="M99.5,-10 A28,28 0 0,1 71.5,18" fill="none" stroke="#2A2A2A" stroke-width=".1"/>
+  <rect x="77.5" y="-3.6" width="16" height="2.2" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="85.5" y="-2.5" text-anchor="middle" font-size=".85">closet door, 28&quot;, out-swing</text>
+
+  <!-- headroom contour lines, dashed, every 3 stair steps (27" of depth = 24" of drop) -->
+  <line class="code" x1="65.5" y1="-37" x2="105.5" y2="-37"/>
+  <text class="code-t" x="106.3" y="-37" font-size=".85">69&quot; headroom (27&quot; in)</text>
+
+  <line class="code" x1="65.5" y1="-64" x2="105.5" y2="-64"/>
+  <text class="code-t" x="106.3" y="-64" font-size=".85">45&quot; headroom (54&quot; in)</text>
+
+  <!-- practical cutoff: below ~24" of headroom, called out as the throwaway zone -->
+  <line class="red" x1="65.5" y1="-87.625" x2="105.5" y2="-87.625"/>
+  <text class="red-t" x="106.3" y="-87.625" font-size=".85">~24&quot; hd &#8212; usable storage ends about here</text>
+
+  <rect x="72" y="-113.1" width="27" height="2.2" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="85.5" y="-112" text-anchor="middle" font-size=".85">0&quot; headroom (theoretical) &#8212; under the stringer</text>
+
+  <rect x="73" y="-21.6" width="25" height="3.2" rx="1" fill="#FBFAF7"/>
+  <text x="85.5" y="-20" text-anchor="middle" font-size="2" font-style="italic"
+        font-family="'Helvetica Neue',Arial,sans-serif" fill="#6B5B47">UNDER-STAIRS CLOSET</text>
+
+  <!-- dimensions: door-wall breakdown (6/28/6), kept INSIDE the wall band
+       itself (y -10..-5.5, solid tan) rather than south of it — the
+       hallway floor there is the same stark black/white checkerboard
+       used in the primary bedroom plan, which that file's own notes
+       flag as illegible for text once it crosses a dark square. -->
+  <line class="extline" x1="65.5"  y1="-10" x2="65.5"  y2="-7.2"/>
+  <line class="extline" x1="71.5"  y1="-10" x2="71.5"  y2="-7.2"/>
+  <line class="extline" x1="99.5"  y1="-10" x2="99.5"  y2="-7.2"/>
+  <line class="extline" x1="105.5" y1="-10" x2="105.5" y2="-7.2"/>
+  <line class="dimline" x1="65.5" y1="-7.75" x2="105.5" y2="-7.75"/>
+  <line class="tick" x1="65.05"  y1="-8.2" x2="65.95"  y2="-7.3"/>
+  <line class="tick" x1="71.05"  y1="-8.2" x2="71.95"  y2="-7.3"/>
+  <line class="tick" x1="99.05"  y1="-8.2" x2="99.95"  y2="-7.3"/>
+  <line class="tick" x1="105.05" y1="-8.2" x2="105.95" y2="-7.3"/>
+  <text class="dim-s" x="68.5" y="-8.65" text-anchor="middle">6&quot;</text>
+  <text class="dim-s" x="85.5" y="-8.65" text-anchor="middle">28&quot;</text>
+  <text class="dim-s" x="102.5" y="-8.65" text-anchor="middle">6&quot;</text>
+
+  <!-- dimension: overall width, north of the wall -->
+  <line class="extline" x1="65.5"  y1="-118" x2="65.5"  y2="-124.5"/>
+  <line class="extline" x1="105.5" y1="-118" x2="105.5" y2="-124.5"/>
+  <line class="dimline" x1="65.5" y1="-123.5" x2="105.5" y2="-123.5"/>
+  <line class="tick" x1="65.05"  y1="-123.95" x2="65.95"  y2="-123.05"/>
+  <line class="tick" x1="105.05" y1="-123.95" x2="105.95" y2="-123.05"/>
+  <text class="dim-big" x="85.5" y="-126.5" text-anchor="middle">40&quot;</text>
+
+  <!-- dimension: overall depth, east side -->
+  <line class="extline" x1="106.3" y1="-10"      x2="113.4" y2="-10"/>
+  <line class="extline" x1="106.3" y1="-114.625" x2="113.4" y2="-114.625"/>
+  <line class="dimline" x1="112" y1="-10" x2="112" y2="-114.625"/>
+  <line class="tick" x1="111.55" y1="-10.45"      x2="112.45" y2="-9.55"/>
+  <line class="tick" x1="111.55" y1="-115.075"    x2="112.45" y2="-114.175"/>
+  <text class="dim-big" x="114" y="-62.3" text-anchor="middle" transform="rotate(-90 114 -62.3)">104&#8541;&quot; (calculated)</text>
 </svg>
       <p style="font-size: 12px; color: #777; max-width: 320px; margin-top: 8px;">Proposed floor plan to fit a 3/4 bath in place of the existing 1/2 bath. 30.5" x 61" = 1861 sq in</p>
     </div>
@@ -2229,7 +2374,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag white">Under-Stairs Walk-In Closet</span>
-    <p>An empty under-stairs closet, fitted out with a mix of hanging rods and open shelving, a wall-mounted vacuum charging dock, and a dedicated light fixture. General-purpose storage. Checkerboard floor, gray walls in glossy finish, matte black hardware.</p>
+    <p>An empty under-stairs closet, fitted out with a mix of hanging rods and open shelving, a wall-mounted vacuum charging dock, and a dedicated light fixture. General-purpose storage. Checkerboard floor, gray walls in glossy finish, matte black hardware. A wedge-shaped space under the stair stringer — 93" of headroom right inside the north-facing door, sloping down to a calculated zero at the back, with the lowest ~24" of headroom called out as unusable throwaway volume rather than working storage. Drawn with the downstairs bathroom's floor plan (Downstairs Bathroom, above), which the closet shares a small hallway pocket with.</p>
     
     
     <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
