@@ -2294,10 +2294,6 @@ Without these the wall band simply runs out into the floor. Six caps:
        ~2" to spare. The dashed envelope is the hanger sweep (rod +-10"),
        drawn per the same overhead-dashed convention as elsewhere. -->
   <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#6E6A62" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <rect x="65.5" y="-56.85" width="40" height="1.2" fill="#fff" stroke="#2A2A2A" stroke-width=".1"/>
-  <rect x="74" y="-55" width="23" height="3.6" rx="1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="85.5" y="-53.6" text-anchor="middle" font-size=".85">rod @ 43&quot; AFF, matte black &#8212; tees ~6&quot;, jeans ~13&quot; off floor</text>
-  <text class="lbl-s" x="85.5" y="-52" text-anchor="middle" font-size=".75" fill="#8B979A">dashed: hanger sweep, rod &#177;10&quot;</text>
 
   <!-- ============ CLOSET FIT-OUT: EAST-WALL SHELF BANK ============
        Open oak shelving just inside the door, after the under-stairs
@@ -2308,11 +2304,11 @@ Without these the wall band simply runs out into the floor. Six caps:
        north to y=-46, where the rod's hanger sweep begins - flush to
        it, no collision. WALKWAY: 40" - 12" leaves a 28" clear aisle,
        above the 24" industry minimum for a closet passage.
-       Heights live in the section view: fixed shelves at 14/28/42/56"
-       run the full 36"; the 70" and 84" shelves shorten as the
-       stringer comes down (each runs while shelf height + 2" clears
-       the ceiling, d <= (91-h) x 9/8), the stepped look of the
-       reference photo.
+       Heights live in the section view: a counter-height unit now —
+       carcass to 45.5" with fixed shelves at 14" and 28", capped by
+       the wrapping oak counter (see the counter block below). The
+       original to-the-ceiling stepped bank was cut down when the
+       counter was added.
        CHAMFERED ENTRY CORNER: the bank's face sits 6" proud of the
        door's east jamb (x=99.5), so its south corner would be the
        first thing a shoulder clips stepping in. A 6"x6" 45-degree
@@ -2321,8 +2317,6 @@ Without these the wall band simply runs out into the floor. Six caps:
        jamb line at (99.5,-10): entering, the cabinet meets you as a
        taper, not a corner. -->
   <path d="M93.5,-46 H105.5 V-10 H99.5 L93.5,-16 Z" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
-  <text class="lbl-s" x="98.2" y="-28" text-anchor="middle" font-size="1.05" transform="rotate(-90 98.2 -28)">OAK SHELVES</text>
-  <text class="lbl-s" x="101.4" y="-28" text-anchor="middle" font-size=".85" transform="rotate(-90 101.4 -28)">12&quot; deep, stepped</text>
 
   <!-- aisle clearance check, west wall to shelf face -->
   <line class="dimline" x1="65.5" y1="-28" x2="93.5" y2="-28"/>
@@ -2330,6 +2324,32 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="93.05" y1="-28.45" x2="93.95" y2="-27.55"/>
   <rect x="74.3" y="-30.4" width="10.4" height="1.9" rx=".6" fill="#FBFAF7"/>
   <text class="dim-s" x="79.5" y="-29.4" text-anchor="middle">28&quot; clear aisle</text>
+
+  <!-- ============ CLOSET FIT-OUT: WRAPPING OAK COUNTER ============
+       The bank now STOPS AT COUNTER HEIGHT instead of running to the
+       ceiling, and a 1.5" oak counter slab caps it and wraps the
+       corner to run full-width over the rod zone, dying into the
+       stringer where the two planes meet.
+       HEIGHTS: counter top 47", underside 45.5". The rod stays at 43",
+       now hung 2.5" below the counter's underside on under-counter
+       brackets — the textbook rod-under-shelf spec — which preserves
+       the agreed 6" floor clearance for the hanging clothes.
+       NORTH EDGE: the underside meets the ceiling at
+       d = (93-45.5) x 9/8 = 53.4"; the slab is drawn to d=53 (y=-63),
+       just past the rod plane at 46.
+       DRAFTING: the counter is the top surface, so it draws solid;
+       the bank below it and the rod below it re-draw dashed (hidden)
+       on top of the slab. -->
+  <path d="M99.5,-10 L93.5,-16 V-46 H65.5 V-63 H105.5 V-10 Z" fill="#D3BC97" stroke="#624E40" stroke-width=".29"/>
+  <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
+  <path d="M99.5,-10 L93.5,-16 V-46" fill="none" stroke="#624E40" stroke-width=".18" stroke-dasharray=".75 .5"/>
+  <line x1="65.5" y1="-56.25" x2="105.5" y2="-56.25" stroke="#2A2A2A" stroke-width=".15" stroke-dasharray=".75 .5"/>
+  <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#6E6A62" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <text class="lbl-s" x="98.2" y="-28" text-anchor="middle" font-size="1.05" transform="rotate(-90 98.2 -28)">OAK SHELVES</text>
+  <text class="lbl-s" x="101.4" y="-28" text-anchor="middle" font-size=".85" transform="rotate(-90 101.4 -28)">12&quot; deep, below counter</text>
+  <rect x="72.5" y="-52.6" width="26" height="3.6" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="85.5" y="-51.2" text-anchor="middle" font-size=".85">oak counter @ 47&quot; &#8212; wraps the bank, dies into the stringer</text>
+  <text class="lbl-s" x="85.5" y="-49.6" text-anchor="middle" font-size=".75" fill="#8B979A">rod @ 43&quot; hung below it (dashed) &#8212; tees ~6&quot; off floor</text>
 
   <!-- headroom contour lines, dashed, every 3 stair steps (27" of depth = 24" of drop) -->
   <line class="code" x1="65.5" y1="-37" x2="105.5" y2="-37"/>
@@ -2371,18 +2391,20 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- room frame at the door plane -->
   <rect class="outline" x="122" y="-107" width="40" height="93"/>
 
-  <!-- shelf bank, south end: chamfer face (lighter, turned away) + end panel -->
-  <rect x="150" y="-105" width="6" height="91" fill="#CBB08A" stroke="#624E40" stroke-width=".2"/>
-  <rect x="156" y="-105" width="6" height="91" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
-  <text class="lbl-s" x="153.4" y="-88" text-anchor="middle" font-size=".75" transform="rotate(-90 153.4 -88)">chamfer</text>
-  <text class="lbl-s" x="159.4" y="-88" text-anchor="middle" font-size=".75" transform="rotate(-90 159.4 -88)">oak bank</text>
+  <!-- shelf bank, south end: chamfer face (lighter, turned away) + end
+       panel — both stop at the counter underside (45.5") now -->
+  <rect x="150" y="-59.5" width="6" height="45.5" fill="#CBB08A" stroke="#624E40" stroke-width=".2"/>
+  <rect x="156" y="-59.5" width="6" height="45.5" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
+  <text class="lbl-s" x="153.4" y="-36.5" text-anchor="middle" font-size=".75" transform="rotate(-90 153.4 -36.5)">chamfer</text>
+  <text class="lbl-s" x="159.4" y="-36.5" text-anchor="middle" font-size=".75" transform="rotate(-90 159.4 -36.5)">oak bank</text>
   <!-- shelves hidden behind the end panel -->
   <line x1="150" y1="-28" x2="162" y2="-28" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
   <line x1="150" y1="-42" x2="162" y2="-42" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="150" y1="-56" x2="162" y2="-56" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="150" y1="-70" x2="162" y2="-70" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="150" y1="-84" x2="162" y2="-84" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="150" y1="-98" x2="162" y2="-98" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <!-- the wrapping oak counter, face-on: one continuous band at 45.5-47"
+       (near edge over the bank, far run over the rod zone — same height,
+       so it reads as one) -->
+  <rect x="122" y="-61" width="40" height="1.5" fill="#D3BC97" stroke="#624E40" stroke-width=".2"/>
+  <text class="lbl-s" x="134" y="-62.7" text-anchor="middle" font-size=".75" fill="#624E40">oak counter, top 47&quot;</text>
 
   <!-- hanging clothes on the visible run of the rod -->
   <rect x="122" y="-56" width="28" height="36" fill="#EDF1F2" stroke="#6E6A62" stroke-width=".09" stroke-dasharray=".75 .5"/>
@@ -2440,21 +2462,22 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- east-wall shelf bank, ghosted — it sits on the NEAR side of this
        looking-west view, between the viewer and the rod, so it's drawn
-       light with a dashed edge rather than solid. Sloped top parallels
-       the stringer at 2" clearance; the 70" and 84" shelves step
-       shorter as the ceiling comes down, like the reference photo. -->
-  <path d="M126,-105 L162,-73 L162,-14 L126,-14 Z" fill="#B6986D" fill-opacity=".18" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+       light with a dashed edge rather than solid. Now stops at counter
+       height (45.5" carcass) instead of running to the ceiling. -->
+  <path d="M126,-59.5 H162 V-14 H126 Z" fill="#B6986D" fill-opacity=".18" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
   <line x1="126" y1="-28" x2="162" y2="-28" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
   <line x1="126" y1="-42" x2="162" y2="-42" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="126" y1="-56" x2="162" y2="-56" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="126" y1="-70" x2="162" y2="-70" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="126" y1="-84" x2="149.6" y2="-84" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="126" y1="-98" x2="133.9" y2="-98" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
   <text class="lbl-s" x="144" y="-17.8" text-anchor="middle" font-size=".8" fill="#624E40">oak shelf bank, east wall (near side &#8212; ghosted)</text>
 
-  <!-- the rod, end-on: white with black border, matte black in the real spec -->
+  <!-- oak counter slab, cut through: top 47", underside 45.5", north end
+       tapering with the stringer where the two planes meet (~d 52-53) -->
+  <path d="M126,-61 H177.75 L179.4,-59.5 H126 Z" fill="#D3BC97" stroke="#624E40" stroke-width=".2"/>
+  <text class="lbl-s" x="150" y="-62.6" text-anchor="middle" font-size=".8" fill="#624E40">oak counter, top 47&quot; &#8212; dies into the stringer</text>
+
+  <!-- the rod, end-on: white with black border, matte black in the real
+       spec — hung 2.5" below the counter underside -->
   <circle cx="172" cy="-57" r=".9" fill="#fff" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s" x="172" y="-60.4" text-anchor="middle" font-size=".85">rod</text>
+  <text class="lbl-s" x="170.4" y="-57" text-anchor="end" font-size=".85">rod</text>
 
   <!-- dims: rod height 43" (left), rod plane 46" deep (below floor) -->
   <line class="extline" x1="125.2" y1="-57" x2="122.4" y2="-57"/>
