@@ -2316,7 +2316,16 @@ Without these the wall band simply runs out into the floor. Six caps:
        corners — runs the face from (93.5,-16) down to exactly the
        jamb line at (99.5,-10): entering, the cabinet meets you as a
        taper, not a corner. -->
-  <path d="M93.5,-46 H105.5 V-10 H99.5 L93.5,-16 Z" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
+  <path d="M93.5,-46 H105.5 V-22 H99.5 L93.5,-28 Z" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
+  <!-- Dyson dock + its outlet in the 12" setback zone the bank vacated,
+       on the east wall just inside the door (dock ~6" proud, vac ~9" wide) -->
+  <rect x="99.5" y="-21" width="6" height="9" fill="#fff" stroke="#2A2A2A" stroke-width=".12"/>
+  <text class="lbl-s" x="102.5" y="-16.5" text-anchor="middle" font-size=".8" transform="rotate(-90 102.5 -16.5)">vac dock</text>
+  <rect class="blk" x="105.5" y="-18" width=".7" height="2.6"/>
+  <text class="lbl-s" x="107.6" y="-16.7" text-anchor="middle" font-size=".7" transform="rotate(-90 107.6 -16.7)">outlet</text>
+  <!-- light switch, west wall just inside the door -->
+  <rect class="blk" x="64.8" y="-15.5" width=".7" height="2.6"/>
+  <text class="lbl-s" x="63.7" y="-14.2" text-anchor="middle" font-size=".7" transform="rotate(-90 63.7 -14.2)">sw</text>
 
   <!-- aisle clearance check, west wall to shelf face -->
   <line class="dimline" x1="65.5" y1="-28" x2="93.5" y2="-28"/>
@@ -2358,17 +2367,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        DRAFTING: the counter is the top surface, so it draws solid;
        the bank below it and the rod below it re-draw dashed (hidden)
        on top of the slab. -->
-  <path d="M99.5,-10 L93.5,-16 V-40 L87.5,-46 H65.5 V-63 H105.5 V-10 Z" fill="#4A4644" stroke="#EDE8DD" stroke-width=".35"/>
+  <path d="M99.5,-22 L93.5,-28 V-40 L87.5,-46 H65.5 V-63 H105.5 V-22 Z" fill="#4A4644" stroke="#EDE8DD" stroke-width=".35"/>
   <!-- vertical back (upstand) on the counter at d=45 -->
   <line x1="65.5" y1="-55" x2="105.5" y2="-55" stroke="#EDE8DD" stroke-width=".3"/>
   <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
-  <path d="M99.5,-10 L93.5,-16 V-40" fill="none" stroke="#EDE8DD" stroke-width=".16" stroke-dasharray=".75 .5"/>
+  <path d="M99.5,-22 L93.5,-28 V-40" fill="none" stroke="#EDE8DD" stroke-width=".16" stroke-dasharray=".75 .5"/>
   <line x1="65.5" y1="-56.25" x2="105.5" y2="-56.25" stroke="#F6F3ED" stroke-width=".18" stroke-dasharray=".75 .5"/>
   <!-- under-counter LED strip, just south of the rod -->
   <line x1="66.5" y1="-54" x2="104.5" y2="-54" stroke="#E8C97A" stroke-width=".3" stroke-dasharray=".9 .6"/>
   <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#A9A49B" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <text class="lbl-s" x="98.2" y="-28" text-anchor="middle" font-size="1.05" style="fill:#F6F3ED" transform="rotate(-90 98.2 -28)">OAK SHELVES</text>
-  <text class="lbl-s" x="101.4" y="-28" text-anchor="middle" font-size=".85" style="fill:#EDE8DD" transform="rotate(-90 101.4 -28)">12&quot; deep, below counter</text>
+  <text class="lbl-s" x="98.2" y="-34" text-anchor="middle" font-size="1.05" style="fill:#F6F3ED" transform="rotate(-90 98.2 -34)">OAK SHELVES</text>
+  <text class="lbl-s" x="101.4" y="-34" text-anchor="middle" font-size=".85" style="fill:#EDE8DD" transform="rotate(-90 101.4 -34)">12&quot; deep, below counter</text>
   <rect x="70.5" y="-53.4" width="30" height="5.2" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="85.5" y="-52" text-anchor="middle" font-size=".85">granite counter @ 47&quot; &#8212; wraps the bank, 6&quot; inside chamfer</text>
   <text class="lbl-s" x="85.5" y="-50.4" text-anchor="middle" font-size=".75" fill="#8B979A">rod @ 43&quot; below + under-counter LED &#8212; tees ~6&quot; off floor</text>
@@ -2413,13 +2422,16 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- room frame at the door plane -->
   <rect class="outline" x="122" y="-107" width="40" height="93"/>
+  <!-- the doorway itself — it's in the wall BEHIND the viewer, so it
+       ghosts in dashed: 28" opening, standard 80" head -->
+  <rect x="128" y="-94" width="28" height="80" fill="none" stroke="#9BA6A9" stroke-width=".12" stroke-dasharray="1.2 .9"/>
+  <text class="lbl-s" x="142" y="-96.2" text-anchor="middle" font-size=".75" fill="#8B979A">doorway 28&quot; x 80&quot; &#8212; behind viewer</text>
 
   <!-- shelf bank, south end: chamfer face (lighter, turned away) + end
        panel — both stop at the counter underside (45.5") now -->
   <rect x="150" y="-59.5" width="6" height="45.5" fill="#CBB08A" stroke="#624E40" stroke-width=".2"/>
   <rect x="156" y="-59.5" width="6" height="45.5" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
-  <text class="lbl-s" x="153.4" y="-36.5" text-anchor="middle" font-size=".75" transform="rotate(-90 153.4 -36.5)">chamfer</text>
-  <text class="lbl-s" x="159.4" y="-36.5" text-anchor="middle" font-size=".75" transform="rotate(-90 159.4 -36.5)">oak bank</text>
+  <text class="lbl-s" x="156" y="-16.2" text-anchor="middle" font-size=".7">oak bank (beyond)</text>
   <!-- shelves hidden behind the end panel -->
   <line x1="150" y1="-28" x2="162" y2="-28" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
   <line x1="150" y1="-42" x2="162" y2="-42" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
@@ -2429,10 +2441,19 @@ Without these the wall band simply runs out into the floor. Six caps:
        47-53" behind it (at d=45) and the under-counter LED strip on
        the underside washing the clothes below -->
   <rect x="122" y="-67" width="40" height="6" fill="#4A4644" fill-opacity=".45" stroke="#1E1C1B" stroke-width=".15"/>
-  <text class="lbl-s" x="142" y="-64" text-anchor="middle" font-size=".75" fill="#3A3836">vertical back (at 45&quot; deep)</text>
+  <rect x="130" y="-64.7" width="2.2" height="1.4" fill="#fff" stroke="#2A2A2A" stroke-width=".1"/>
+  <rect x="141" y="-64.7" width="2.2" height="1.4" fill="#fff" stroke="#2A2A2A" stroke-width=".1"/>
+  <text class="lbl-s" x="136.6" y="-65.9" text-anchor="middle" font-size=".75" fill="#3A3836">vertical back (45&quot; deep) &#8212; outlet gangs</text>
   <rect x="122" y="-61" width="40" height="1.5" fill="#4A4644" stroke="#1E1C1B" stroke-width=".2"/>
   <rect x="122" y="-59.5" width="28" height=".35" fill="#E8C97A"/>
   <text class="lbl-s" x="124.6" y="-58.55" font-size=".7" style="fill:#C79436">LED</text>
+  <rect x="122" y="-63.5" width=".9" height="3" fill="#2A2A2A"/>
+  <text class="lbl-s" x="123.7" y="-65.4" font-size=".7">switch</text>
+  <!-- Dyson dock + docked vac, east wall in the 12" setback the bank
+       vacated — nearer the viewer than the bank's end panel, so it
+       paints over it. Dock head ~46", wand down to ~4". -->
+  <rect x="154" y="-64" width="5" height="46" fill="#fff" stroke="#2A2A2A" stroke-width=".12"/>
+  <text class="lbl-s" x="156.6" y="-40" text-anchor="middle" font-size=".75" transform="rotate(-90 156.6 -40)">vac + dock</text>
 
   <!-- hanging clothes on the visible run of the rod -->
   <rect x="122" y="-56" width="28" height="36" fill="#EDF1F2" stroke="#6E6A62" stroke-width=".09" stroke-dasharray=".75 .5"/>
@@ -2492,10 +2513,10 @@ Without these the wall band simply runs out into the floor. Six caps:
        looking-west view, between the viewer and the rod, so it's drawn
        light with a dashed edge rather than solid. Now stops at counter
        height (45.5" carcass) instead of running to the ceiling. -->
-  <path d="M126,-59.5 H162 V-14 H126 Z" fill="#B6986D" fill-opacity=".18" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="126" y1="-28" x2="162" y2="-28" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <line x1="126" y1="-42" x2="162" y2="-42" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <text class="lbl-s" x="144" y="-17.8" text-anchor="middle" font-size=".8" fill="#624E40">oak shelf bank, east wall (near side &#8212; ghosted)</text>
+  <path d="M138,-59.5 H162 V-14 H138 Z" fill="#B6986D" fill-opacity=".18" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="138" y1="-28" x2="162" y2="-28" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <line x1="138" y1="-42" x2="162" y2="-42" stroke="#624E40" stroke-width=".09" stroke-dasharray=".75 .5"/>
+  <text class="lbl-s" x="150" y="-17.8" text-anchor="middle" font-size=".8" fill="#624E40">oak shelf bank, east wall (near side &#8212; ghosted)</text>
 
   <!-- granite counter slab, cut through: top 47", underside 45.5",
        north end tapering with the stringer where the two planes meet
@@ -2649,7 +2670,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag white">Under-Stairs Walk-In Closet</span>
-    <p>An under-stairs clothes closet, fitted out in the house materials: a matte black rod at 43" (46" into the closet, hung below the counter), a 12"-deep oak shelf bank inside the door with a 6" chamfered entry corner, and a honed charcoal granite counter at 47" that caps the bank and wraps full-width over the rod, dying into the stringer — with an under-counter LED strip washing the hanging clothes and a short vertical back where counter meets stringer so nothing slides into the wedge. The bank sits freestanding on the tile with an anti-tip cleat only, removable later without flooring scars. Plus a wall-mounted vacuum charging dock and a dedicated light fixture. Checkerboard floor, gray walls in glossy finish, matte black hardware. A wedge-shaped space under the stair stringer — 93" of headroom right inside the north-facing door, sloping down to a calculated zero at the back, with the lowest ~24" of headroom called out as unusable throwaway volume rather than working storage. Drawn with the downstairs bathroom's floor plan (Downstairs Bathroom, above), which the closet shares a small hallway pocket with — in plan, front view, and section.</p>
+    <p>An under-stairs clothes closet, fitted out in the house materials: a matte black rod at 43" (46" into the closet, hung below the counter), a 12"-deep oak shelf bank inside the door with a 6" chamfered entry corner, and a honed charcoal granite counter at 47" that caps the bank and wraps full-width over the rod, dying into the stringer — with an under-counter LED strip washing the hanging clothes and a short vertical back where counter meets stringer so nothing slides into the wedge. The bank sits freestanding on the tile with an anti-tip cleat only, removable later without flooring scars, and is set back 12" from the door so the wall-mounted vacuum charging dock and its outlet get clear east-wall space just inside. Two outlet gangs sit in the vertical back above the counter, with the light switch at the door. Plus a dedicated light fixture. Checkerboard floor, gray walls in glossy finish, matte black hardware. A wedge-shaped space under the stair stringer — 93" of headroom right inside the north-facing door, sloping down to a calculated zero at the back, with the lowest ~24" of headroom called out as unusable throwaway volume rather than working storage. Drawn with the downstairs bathroom's floor plan (Downstairs Bathroom, above), which the closet shares a small hallway pocket with — in plan, front view, and section.</p>
     
     
     <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
