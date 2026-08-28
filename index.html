@@ -2012,9 +2012,13 @@ Without these the wall band simply runs out into the floor. Six caps:
        crashed into the support bar/curtain line at y 25, one nearly on top
        of it. Dropped both. The remaining hook is re-centred in the clear
        run between the sink and the bar, not left at its old mirrored
-       position: the basin leaves the west wall at y 14.92 and the support
-       bar is at y 25, so the midpoint is (14.92 + 25) / 2 = 19.96. -->
-  <circle class="blk" cx=".92" cy="19.96" r=".33"/>
+       position - and not at the basin's wall-tangent point (14.92) either,
+       which is a rounding artifact: the fillet curve back to the wall
+       bulges out past that point, so the sink's actual corner - the end of
+       its straight diagonal front face, at (1.71, 15.62) - reads as where
+       it really stops. Support bar is at y 25, so the midpoint is
+       (15.62 + 25) / 2 = 20.31. -->
+  <circle class="blk" cx=".92" cy="20.31" r=".33"/>
   <!-- support bar -->
   <line x1="0" y1="25" x2="30.5" y2="25" stroke="#6B6B6B" stroke-width=".133"/>
   <text class="lbl" x="14.7" y="23.7" text-anchor="middle">support bar</text>
