@@ -1872,6 +1872,11 @@ Without these the wall band simply runs out into the floor. Six caps:
       #dsbath-plan .dim-big { font:1.45px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; font-weight:700; }
       #dsbath-plan .dim-s   { font:.8px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
       #dsbath-plan text     { dominant-baseline:middle; }
+      /* On-dark variants for the Dawson-floored bath: same roles as the
+         base classes, lightened so they read on the charcoal mosaic. */
+      #dsbath-plan .on-dark { fill:#F0EDE6; }
+      #dsbath-plan .red-lt  { fill:none; stroke:#C97B63; stroke-width:.083; stroke-dasharray:.55 .45; }
+      #dsbath-plan .thin-lt { fill:none; stroke:#D8D3C8; stroke-width:.083; }
     </style>
     <!-- Leona checkerboard, Calacatta + Nero Marquina, on the diagonal —
          the same whole-house floor and pattern module as the primary
@@ -1895,8 +1900,12 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- ============ SHELL ============ -->
   <rect x="-4.5" y="-4.5" width="70" height="70" fill="#C9C4B7"/>   <!-- wall band -->
-  <rect x="0"  y="0" width="30.5" height="61" fill="#E8EEF0"/>      <!-- shower (wet) -->
-  <rect x="30.5" y="0" width="30.5" height="61" fill="#FBFAF7"/>    <!-- toilet (dry) -->
+  <!-- Dawson mosaic rendered across the whole bath floor — the wet/dry
+       split reads from the glass line, drain and labels rather than a
+       tint change. Labels and linework that sit on the floor use the
+       .on-dark / .red-lt / .thin-lt variants so they stay legible. -->
+  <rect x="0"  y="0" width="30.5" height="61" fill="url(#dsbath-dawson)"/>  <!-- shower (wet) -->
+  <rect x="30.5" y="0" width="30.5" height="61" fill="url(#dsbath-dawson)"/><!-- toilet (dry) -->
 
   <!-- ============ DOOR OPENING ============
        The 28" pocket-door opening is a real break in the east wall, not just a
@@ -1949,8 +1958,8 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- ============ SHOWER FLOOR: LINEAR DRAIN ============
        Drawn before the sink, which sits on top of it in the NW corner. -->
-  <rect class="thin" x=".67" y="0" width="2.25" height="60.4"/>
-  <line x1="1.79" y1="0" x2="1.79" y2="60.4" stroke="#6B6B6B" stroke-width=".083" stroke-dasharray=".9 .7"/>
+  <rect class="thin-lt" x=".67" y="0" width="2.25" height="60.4"/>
+  <line x1="1.79" y1="0" x2="1.79" y2="60.4" stroke="#C9C4B7" stroke-width=".083" stroke-dasharray=".9 .7"/>
 
   <!-- ============ CORNER SINK (NW) ============
        Corner basin: backs into the NW corner, straight splashback along the north
@@ -2019,7 +2028,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path d="M0,0 L0,14.92 L.5,14.92 L.5,.5 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
   <text class="teal" x="-1.75" y="7.46" text-anchor="middle" font-size=".8"
         transform="rotate(-90 -1.75 7.46)">mirror</text>
-  <text class="lbl-s" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
+  <text class="lbl-s on-dark" x="4.25" y="29.7" text-anchor="middle" transform="rotate(-90 4.25 29.7)">linear drain</text>
 
   <!-- ============ NORTH WALL FITTINGS ============
        WET SIDE — the three hooks stay in the shower section, by the walk-in.
@@ -2036,10 +2045,10 @@ Without these the wall band simply runs out into the floor. Six caps:
        in the band where the box sits. The teal line at y = 0 is that mirror
        plane, i.e. the surface you actually see yourself in. Same teal as the
        shower glass, since both are glass in the room envelope. -->
-  <circle class="blk" cx="19.04" cy=".92" r=".33"/>
-  <circle class="blk" cx="22.38" cy=".92" r=".33"/>
-  <circle class="blk" cx="25.71" cy=".92" r=".33"/>
-  <text class="lbl-s" x="22.38" y="2.6" text-anchor="middle">towel hooks</text>
+  <circle cx="19.04" cy=".92" r=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
+  <circle cx="22.38" cy=".92" r=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
+  <circle cx="25.71" cy=".92" r=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
+  <text class="lbl-s on-dark" x="22.38" y="2.6" text-anchor="middle">towel hooks</text>
   <rect x="37.79" y="-3.5" width="16.5" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="46.04" y="-2.15" text-anchor="middle">medicine cabinet</text>
   <line x1="37.79" y1="0" x2="54.29" y2="0" stroke="#2F7D94" stroke-width=".26"/>
@@ -2048,8 +2057,8 @@ Without these the wall band simply runs out into the floor. Six caps:
        Narrowed from the 18" nominal (19.92" overall) it was: at that length it
        ran wider than the 16.5" cabinet above it and crowded the switch bank at
        x 56.4. At 12" it tucks inside the cabinet's width on both sides. -->
-  <line x1="39.29" y1="1.17" x2="52.79" y2="1.17" stroke="#2A2A2A" stroke-width=".25"/>
-  <text class="lbl-s" x="46.04" y="3" text-anchor="middle">towel bar</text>
+  <line x1="39.29" y1="1.17" x2="52.79" y2="1.17" stroke="#F0EDE6" stroke-width=".25"/>
+  <text class="lbl-s on-dark" x="46.04" y="3" text-anchor="middle">towel bar</text>
 
   <!-- ============ ELECTRICAL ============
        Switch bank + outlet on the north wall, east of the cabinet — i.e. by the
@@ -2059,10 +2068,10 @@ Without these the wall band simply runs out into the floor. Six caps:
        the slab slides into, so nothing may be let into it. South wall, just east
        of the tank (tank ends x 55.83), keeps it within cord reach. -->
   <rect class="blk" x="56.4" y="-.7" width="2.6" height=".7"/>
-  <text class="lbl-s" x="57.7" y="3.4" text-anchor="middle"
+  <text class="lbl-s on-dark" x="57.7" y="3.4" text-anchor="middle"
         transform="rotate(-90 57.7 3.4)">sw + outlet</text>
   <rect class="blk" x="57.2" y="61" width="1.8" height=".7"/>
-  <text class="lbl-s" x="58.4" y="52" text-anchor="middle"
+  <text class="lbl-s on-dark" x="58.4" y="52" text-anchor="middle"
         transform="rotate(-90 58.4 52)">outlet (smart WC)</text>
 
   <!-- ============ SHOWER ============ -->
@@ -2070,7 +2079,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        shower compartment. Drawn faint as a compliance check, concentric with the
        rainhead. The wet section is 30.5" wide, so it clears by 1/4" a side. -->
   <circle class="code" cx="15.25" cy="42.5" r="15"/>
-  <text class="code-t" x="15.25" y="29.4" text-anchor="middle">30&quot;</text>
+  <text class="code-t" x="15.25" y="29.4" text-anchor="middle" style="fill:#B9C4C7">30&quot;</text>
   <!-- valve, west wall -->
   <rect class="blk" x="-.6" y="30.08" width=".6" height="1.92"/>
   <text class="lbl-s" x="-2.2" y="31.6" text-anchor="middle" transform="rotate(-90 -2.2 31.6)">valve</text>
@@ -2085,23 +2094,23 @@ Without these the wall band simply runs out into the floor. Six caps:
        its straight diagonal front face, at (1.71, 15.62) - reads as where
        it really stops. Support bar is at y 25, so the midpoint is
        (15.62 + 25) / 2 = 20.31. -->
-  <circle class="blk" cx=".92" cy="20.31" r=".33"/>
+  <circle cx=".92" cy="20.31" r=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
   <!-- support bar -->
-  <line x1="0" y1="25" x2="30.5" y2="25" stroke="#6B6B6B" stroke-width=".133"/>
-  <text class="lbl" x="14.7" y="23.7" text-anchor="middle">support bar</text>
+  <line x1="0" y1="25" x2="30.5" y2="25" stroke="#C9C4B7" stroke-width=".133"/>
+  <text class="lbl on-dark" x="14.7" y="23.7" text-anchor="middle">support bar</text>
   <!-- ceiling rainhead, 12" dia, centred 18.5" off the south wall -->
-  <circle class="thin" cx="15.29" cy="42.5" r="6"/>
-  <circle class="blk" cx="15.29" cy="42.5" r=".29"/>
-  <text class="lbl-s" x="15.29" y="40.9" text-anchor="middle">ceiling</text>
-  <text class="lbl-s" x="15.29" y="43.9" text-anchor="middle">rainhead</text>
+  <circle class="thin-lt" cx="15.29" cy="42.5" r="6"/>
+  <circle cx="15.29" cy="42.5" r=".29" fill="#F0EDE6"/>
+  <text class="lbl-s on-dark" x="15.29" y="40.9" text-anchor="middle">ceiling</text>
+  <text class="lbl-s on-dark" x="15.29" y="43.9" text-anchor="middle">rainhead</text>
   <text x="15.29" y="59.3" text-anchor="middle" font-size="1.35" font-style="italic"
-        font-family="'Helvetica Neue',Arial,sans-serif" fill="#2F6F8F">SHOWER</text>
+        font-family="'Helvetica Neue',Arial,sans-serif" fill="#8FCBE0">SHOWER</text>
 
   <!-- ============ FIXED GLASS ON THE SECTION LINE ============ -->
-  <line x1="30.5" y1="24.08" x2="30.5" y2="61" stroke="#2F7D94" stroke-width=".33"/>
-  <text class="teal" x="29.3" y="42.5" text-anchor="middle" font-size=".85"
+  <line x1="30.5" y1="24.08" x2="30.5" y2="61" stroke="#5FB2CC" stroke-width=".33"/>
+  <text class="teal" x="29.3" y="42.5" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
         transform="rotate(-90 29.3 42.5)">37&quot; fixed glass</text>
-  <text class="teal" x="27.9" y="11.75" text-anchor="middle" font-size=".85"
+  <text class="teal" x="27.9" y="11.75" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
         transform="rotate(-90 27.9 11.75)">24&quot; opening</text>
 
   <!-- ============ TOILET ============
@@ -2119,15 +2128,15 @@ Without these the wall band simply runs out into the floor. Six caps:
        backs onto: 29" toilet + 24" required clear = 53", so the limit lands at
        y = 61 - 53 = 8. The dimension runs the full 53" down to the south wall and
        stops dead on the limit line (a T, not a cross). -->
-  <line class="red" x1="33" y1="8" x2="58.5" y2="8"/>
-  <line class="red" x1="45.79" y1="8" x2="45.79" y2="61"/>
+  <line class="red-lt" x1="33" y1="8" x2="58.5" y2="8"/>
+  <line class="red-lt" x1="45.79" y1="8" x2="45.79" y2="61"/>
   <line class="tick" stroke="#8A3B2A" x1="45.34" y1="8.45"  x2="46.24" y2="7.55"/>
   <line class="tick" stroke="#8A3B2A" x1="45.34" y1="61.45" x2="46.24" y2="60.55"/>
-  <text class="red-t" x="45.79" y="6.5" text-anchor="middle">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
+  <text class="red-t" x="45.79" y="6.5" text-anchor="middle" style="fill:#D98D75">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
 
   <!-- ============ EAST WALL ============ -->
-  <rect class="blk" x="59.75" y="35.08" width=".33" height="5.92"/>               <!-- TP holder -->
-  <text class="lbl-s" x="58.6" y="38" text-anchor="middle" transform="rotate(-90 58.6 38)">TP holder</text>
+  <rect x="59.75" y="35.08" width=".33" height="5.92" fill="#fff" stroke="#2A2A2A" stroke-width=".07"/>               <!-- TP holder -->
+  <text class="lbl-s on-dark" x="58.6" y="38" text-anchor="middle" transform="rotate(-90 58.6 38)">TP holder</text>
   <!-- the pocket itself — the full 30" cavity the slab retracts into — drawn
        dashed at full depth, independent of wherever the leaf below happens
        to be illustrated. Without this, showing the leaf "half-open" reads
@@ -2135,9 +2144,9 @@ Without these the wall band simply runs out into the floor. Six caps:
        a door that slides the full cavity. -->
   <rect x="62.58" y="31" width="1.42" height="30" fill="none" stroke="#6E6A62" stroke-width=".08" stroke-dasharray=".6 .5"/>
   <rect x="62.58" y="17.08" width="1.42" height="27.92" fill="#fff" stroke="#2A2A2A" stroke-width=".1"/> <!-- pocket door, white slab per spec -->
-  <text class="lbl-s" x="58.9" y="12.5" text-anchor="middle" transform="rotate(-90 58.9 12.5)">28&quot;</text>
-  <text class="lbl-s" x="60.2" y="21" text-anchor="middle" transform="rotate(-90 60.2 21)">pocket door, slides south</text>
-  <text class="lbl-s" x="61.5" y="21" text-anchor="middle" transform="rotate(-90 61.5 21)">shown half-open</text>
+  <text class="lbl-s on-dark" x="58.9" y="12.5" text-anchor="middle" transform="rotate(-90 58.9 12.5)">28&quot;</text>
+  <text class="lbl-s on-dark" x="60.2" y="21" text-anchor="middle" transform="rotate(-90 60.2 21)">pocket door, slides south</text>
+  <text class="lbl-s on-dark" x="61.5" y="21" text-anchor="middle" transform="rotate(-90 61.5 21)">shown half-open</text>
 
   <!-- ============ WALL LABELS ============ -->
   <text class="wall-lbl" x="33" y="-2.1" text-anchor="middle">NORTH WALL</text>
