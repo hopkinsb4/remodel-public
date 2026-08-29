@@ -1903,7 +1903,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
       <div style="margin: 16px 0 8px; width: 100%;">
         <svg xmlns="http://www.w3.org/2000/svg" id="mainfloor-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-44.5 -44.5 330 258" role="img"
-     aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch open stairway at the west end, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa drawn in its seated position, 126 by 52 inches, with rounded rear corners. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall, then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. Kitchen and dining room have not been drawn yet.">
+     aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch open stairway at the west end, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa drawn in its seated position, 126 by 52 inches, with rounded corners. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall, then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. Kitchen and dining room have not been drawn yet.">
   <!--
     93 WATERMAN — MAIN FLOOR PLAN (KITCHEN / DINING ROOM / LIVING ROOM / ENTRYWAY / STAIRS)
     ========================================================================================
@@ -2123,9 +2123,11 @@ Without these the wall band simply runs out into the floor. Six caps:
        wall (x=45-171) rather than centered exactly on the cabinet's
        own midline (x=109) — center lands at x=108, 1" off, rather
        than let it run 1" past the wall.
-       Shape: plain rectangle with 10" radii on the two REAR corners
-       only (SE and SW — the wraparound bolster ends); the front
-       corners stay square.
+       Shape: rectangle with 10" radii on the two REAR corners (SE and
+       SW — the wraparound bolster ends) and representative 8" radii
+       on the FRONT arm corners (NW and NE) — the NE one shows how the
+       arm curves away from the 9"-thick arch wall, whose 50" archway
+       (y=71..121) is open right where that corner meets it (y=117).
        Seams: back-bolster/seat seam at y=149 (~20" bolster); 12" arms
        at each end (x=45..57, x=159..171); three 34"-wide seat cushions
        between them (34 x 3 = 102 = 126 - 2x12), seams at x=91, x=125.
@@ -2136,7 +2138,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        cushion seams continued through the extended zone. Drawn as a
        stroke in the sofa's own green (#5F5D3C) over-struck by a
        thinner white one, giving a green/white/green sandwich. -->
-  <path class="sofa" d="M 45,117 L 171,117 L 171,159 A 10,10 0 0 1 161,169 L 55,169 A 10,10 0 0 1 45,159 Z"/>
+  <path class="sofa" d="M 53,117 L 163,117 A 8,8 0 0 1 171,125 L 171,159 A 10,10 0 0 1 161,169 L 55,169 A 10,10 0 0 1 45,159 L 45,125 A 8,8 0 0 1 53,117 Z"/>
   <line class="sofa-seam" x1="50" y1="149" x2="166" y2="149"/>
   <line class="sofa-seam" x1="57" y1="117" x2="57" y2="149"/>
   <line class="sofa-seam" x1="159" y1="117" x2="159" y2="149"/>
