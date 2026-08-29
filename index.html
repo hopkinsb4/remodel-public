@@ -2124,15 +2124,12 @@ Without these the wall band simply runs out into the floor. Six caps:
        it's pushed flush to the room's east wall (x=45-171) rather than
        centered exactly on the cabinet's own midline (x=109) — center
        lands at x=108, 1" off, rather than let it run 1" past the wall.
-       Shape: traced from the manufacturer's own top-down
-       bed-configuration photo rather than a uniform corner radius —
-       the profile is ASYMMETRIC: the BACK (south, y=169, against the
-       wall — the bolster/pillow end in the photo) has large,
-       near-semicircular rounded corners blending into a gently convex
-       edge, while the FRONT (north, y=90, facing the room/TV — the
-       open seat edge in the photo) is comparatively flat with only a
-       modest corner radius. (Corrected 180° from the first pass, which
-       had the bolster facing the room instead of the wall.)
+       Shape: a plain 126"x79" rectangle, per explicit instruction —
+       the earlier pass traced a rounded/asymmetric silhouette off the
+       product photo, but a fresh trace over the same photo (mouse-
+       drawn bounding box around the mattress area) came back
+       essentially rectilinear, so the rounded corners are dropped
+       entirely rather than re-fit.
        Cushion seams: 2 vertical (full depth) splitting the 3-seat/
        3-back-cushion width into thirds, 1 horizontal separating the
        back bolster zone from the seat zone — matching the seam layout
@@ -2141,19 +2138,10 @@ Without these the wall band simply runs out into the floor. Six caps:
        spec) measured from the same fixed back/wall — i.e. where the
        sofa's front edge sits before it's pulled out into the bed
        shown here. -->
-  <path class="sofa" d="M 59,90
-    L 157,90
-    A 14,14 0 0 1 171,104
-    L 171,131
-    A 38,38 0 0 1 133,169
-    Q 108,172 83,169
-    A 38,38 0 0 1 45,131
-    L 45,104
-    A 14,14 0 0 1 59,90
-    Z"/>
+  <rect class="sofa" x="45" y="90" width="126" height="79"/>
   <line class="sofa-seam" x1="87" y1="90" x2="87" y2="169"/>
   <line class="sofa-seam" x1="129" y1="90" x2="129" y2="169"/>
-  <path class="sofa-seam" d="M64,144 Q108,147 152,144"/>
+  <line class="sofa-seam" x1="46" y1="144" x2="170" y2="144"/>
   <line x1="46" y1="117" x2="170" y2="117" stroke="#000" stroke-width=".22" stroke-dasharray="1.4 1"/>
   <text class="dim-onsofa" x="108" y="121" text-anchor="middle" font-size="1.6">52&quot; seated depth</text>
   <line class="extline" x1="45" y1="86" x2="45" y2="83"/>
