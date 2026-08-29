@@ -2044,30 +2044,52 @@ Without these the wall band simply runs out into the floor. Six caps:
        Confirmed: both cross walls (living room/entryway and
        entryway/kitchen) are 9" thick, entryway is 56" wide E-W, its
        south wall has a 32" entry door, and there's a second 50" arch
-       matching the first, leading on to the kitchen.
-       ASSUMED (not yet confirmed, flagged): the entryway's own N-S
-       footprint is drawn matching the 71-121 archway band (50" deep)
-       since nothing else fixes it, so the second archway lines up with
-       the first in a straight sightline through both — this matches
-       the reference photo. The door's position within the 56" south
-       wall run is assumed centered. Anything north of y=71 or south of
-       y=121 in the entryway itself is unknown and left undrawn. -->
-  <rect x="180" y="71" width="56" height="50" fill="url(#mainfloor-check)"/>  <!-- entryway floor -->
+       matching the first, leading on to the kitchen. Also confirmed:
+       facing the entryway from the living room (looking east), the
+       wall steps back 2" to the north and 7" to the south right past
+       the archway — so the entryway itself is 59" N-S (69 to 128), 9"
+       wider than the raw 50" archway opening through the wall. Drawn
+       as a small return/jog at the x=180 face.
+       ASSUMED (not yet confirmed, flagged): the entryway holds this
+       same 69-128 width for its full 56" depth, and the second archway
+       (to the kitchen) mirrors the first at the same 71-121 band —
+       reasonable given the straight sightline in the reference photo,
+       but the far (kitchen-side) jamb hasn't itself been measured, so
+       no matching flare is drawn there. The door's position within the
+       56" south wall run is assumed centered. -->
+  <rect x="180" y="69" width="56" height="59" fill="url(#mainfloor-check)"/>  <!-- entryway floor -->
 
-  <!-- Entryway south wall, 4.5" (standard), with a 32" door centered
-       in the 56" run — position assumed, not confirmed. -->
-  <rect x="180" y="121" width="12" height="4.5" fill="#C9C4B7"/>
-  <rect x="224" y="121" width="12" height="4.5" fill="#C9C4B7"/>
-  <line class="outline" x1="192" y1="121" x2="192" y2="125.5"/>
-  <line class="outline" x1="224" y1="121" x2="224" y2="125.5"/>
-  <!-- door leaf + swing arc, hinged west, swinging north into the entryway -->
-  <line class="thin" x1="192" y1="121" x2="192" y2="89"/>
-  <path class="thin" d="M192,89 A32,32 0 0 1 224,121" fill="none"/>
-  <rect class="plate" x="184" y="128" width="44" height="7" rx="1"/>
-  <text class="tbd-t" x="206" y="131.5" text-anchor="middle" font-size="1.5">32&quot; door, position assumed</text>
+  <!-- Step/jog at the living-room-side wall face: the entryway's own
+       walls set back from the 71-121 archway line by 2" (north) and 7"
+       (south) — both confirmed measurements. -->
+  <rect x="180" y="69" width="4.5" height="2" fill="#C9C4B7"/>
+  <rect x="180" y="121" width="4.5" height="7" fill="#C9C4B7"/>
+  <line class="outline" x1="180" y1="69" x2="184.5" y2="69"/>
+  <line class="outline" x1="180" y1="128" x2="184.5" y2="128"/>
+  <rect class="plate" x="185" y="66.5" width="16" height="5" rx="1"/>
+  <text class="dim-s" x="193" y="69" text-anchor="middle" font-size="1.3">2&quot; setback</text>
+  <rect class="plate" x="185" y="123.5" width="16" height="5" rx="1"/>
+  <text class="dim-s" x="193" y="126" text-anchor="middle" font-size="1.3">7&quot; setback</text>
+
+  <!-- Entryway south wall, 4.5" (standard), with the 32" front entry
+       door centered in the 56" run — position assumed, not confirmed.
+       Confirmed: hinged on the east side. Drawn closed, as a white slab
+       (matching the closed-door convention used on the other plans),
+       not an open leaf/swing — so the hinge side doesn't change the
+       drawing, just the note. -->
+  <rect x="180" y="128" width="12" height="4.5" fill="#C9C4B7"/>
+  <rect x="224" y="128" width="12" height="4.5" fill="#C9C4B7"/>
+  <line class="outline" x1="192" y1="128" x2="192" y2="132.5"/>
+  <line class="outline" x1="224" y1="128" x2="224" y2="132.5"/>
+  <rect class="fix" x="192" y="129.55" width="32" height="1.4"/>
+  <rect class="plate" x="184" y="135" width="44" height="11" rx="1"/>
+  <text class="tbd-t" x="206" y="138.5" text-anchor="middle" font-size="1.5">32&quot; front door, hinged E</text>
+  <text class="tbd-t" x="206" y="142" text-anchor="middle" font-size="1.5">(closed; position assumed)</text>
 
   <!-- Second 9"-thick wall, entryway to kitchen, with its own 50" arch
-       (assumed aligned with the first at y 71-121 — flagged). -->
+       (assumed aligned with the first at y 71-121 — flagged; the
+       kitchen-side jamb itself hasn't been measured for a matching
+       flare, so none is drawn here). -->
   <line class="outline" x1="236" y1="71" x2="245" y2="71"/>
   <line class="outline" x1="236" y1="121" x2="245" y2="121"/>
   <rect class="plate" x="238" y="92" width="24" height="8" rx="1"/>
