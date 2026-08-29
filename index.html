@@ -2555,14 +2555,19 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="105" y="-30.35" width=".5" height="16.5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
   <text class="teal" x="107.1" y="-22.1" text-anchor="middle" font-size=".8" transform="rotate(-90 107.1 -22.1)">medicine cabinet</text>
 
-  <!-- vanity sconces — one in each clear zone the cabinet leaves on the
-       36" leg: south zone is only 3.85" (d 0..3.85, centre d=1.93,
-       y=-11.93) since the cabinet sits toward the door; north zone is
-       15.65" (d 20.35..36, centre d=28.18, y=-38.18). -->
+  <!-- vanity sconces — flanking the cabinet symmetrically, not just
+       dropped in the middle of whatever clear zone each side has (the
+       south zone is only 3.85" since the cabinet sits toward the
+       door, the north zone is 15.65" — centering independently in
+       each would put them off-center from the cabinet). Both sit
+       1.93" off the cabinet's near edge instead: south at d=1.93
+       (y=-11.93), north at d=22.28 (y=-32.28) — symmetric about the
+       cabinet's own centre, d=12.1. The north zone has slack left over
+       past its sconce; that's fine, it's not required to fill it. -->
   <rect x="105" y="-12.93" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
   <text class="lbl-s" x="107.1" y="-11.93" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -11.93)" style="fill:#C79436">sconce</text>
-  <rect x="105" y="-39.18" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s" x="107.1" y="-38.18" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -38.18)" style="fill:#C79436">sconce</text>
+  <rect x="105" y="-33.28" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
+  <text class="lbl-s" x="107.1" y="-32.28" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -32.28)" style="fill:#C79436">sconce</text>
 
   <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
   <path d="M99.5,-10 L93.5,-16 V-40" fill="none" stroke="#EDE8DD" stroke-width=".16" stroke-dasharray=".75 .5"/>
