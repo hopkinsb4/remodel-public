@@ -1031,20 +1031,16 @@ SWING SETTLED, and it only works one way. Handle on the left going
        rather than butting a caulk joint to it. Set the ledger and the tub
        BEFORE the backer and tile go on - a flanged tub cannot be dropped
        into a finished alcove. -->
-  <!-- Lilah tile face, drawn as a zero-depth line at the wall face, not a
-       filled strip with real depth — same schematic convention as the
-       mirror and glass planes elsewhere in this file. A 6"x6" glazed
-       ceramic tile actually runs about 5/16"-3/8" thick over backer
-       board, but that's not drawn here: the wall face (x=-140/-78,
-       y=159.5) already IS the finished tiled surface in this
-       drawing's dimensions, so giving the callout visible depth would
-       read as extra material eating into the room. (Downstairs bath's
-       matching callout was a filled 0.8" rect until it was caught
-       visually overlapping that room's 30" CPC clear circle — fixed
-       there and here for the same reason.) -->
-  <line x1="-140" y1="159.5" x2="-78" y2="159.5" stroke="#6E8A84" stroke-width=".22"/>
-  <line x1="-140" y1="40.5" x2="-140" y2="159.5" stroke="#6E8A84" stroke-width=".22"/>
-  <line x1="-78" y1="109" x2="-78" y2="159.5" stroke="#6E8A84" stroke-width=".22"/>
+  <!-- Lilah tile face, drawn at real depth, 0.375" (3/8"), the
+       thickness of a 6"x6" glazed ceramic tile plus thinset over
+       backer board. x=-140/-78/y=159.5 is the ROUGH wall face (the
+       framed wall band); the tile sits proud of it into the room, same
+       as it would on site. The tub's integral flange tucks in behind
+       this tiled face per the tub note above, with the tub body itself
+       set back slightly further for a normal caulk reveal. -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-140" y="159.125" width="62" height=".375"/>
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-140" y="40.5" width=".375" height="119"/>
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-78.375" y="109" width=".375" height="50.5"/>
   <g transform="translate(-108.8,143.7) rotate(180)" fill="none" stroke="#2A2A2A">
     <rect fill="#F3F0EA" stroke-width=".29" x="-30" y="-15" width="60" height="30" rx="1"/>
     <rect stroke-width=".26" x="-26" y="-13" width="52" height="24" rx="3"/>
@@ -1984,24 +1980,25 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ============ LILAH TILE FACE, NORTH/WEST/SOUTH WALLS ============
        Opal color tile runs floor-to-ceiling on three walls; only the
        east wall (pocket door) stays paint.
-       DRAWN AS A ZERO-DEPTH LINE AT THE WALL FACE, not a filled strip
-       with real depth — same schematic convention already used for
-       mirror and glass planes in this file (e.g. the sink mirrors,
-       the medicine-cabinet door). A 6"x6" glazed ceramic tile like
-       Lilah actually runs about 5/16"-3/8" thick over backer board,
-       but that's not drawn here for the same reason the mirrors'
-       real 0.5" glass isn't: the wall face at x=0/y=0/y=61 already
-       IS the finished (tiled) surface in this drawing's dimensions,
-       so adding visible depth on top of it would read as extra
-       material eating into the room. That's what the first version of
-       this callout got wrong — drawn as a filled 0.8" rect, it visibly
-       overlapped the shower's 30" CPC clear circle (centred 15.25,
-       42.5 r=15, clearing the walls by design at just 1/4" a side),
-       making a code-compliant clearance look violated. A line has no
-       such footprint. -->
-  <line x1="0" y1="0" x2="61" y2="0" stroke="#6E8A84" stroke-width=".22"/>   <!-- north -->
-  <line x1="0" y1="0" x2="0" y2="61" stroke="#6E8A84" stroke-width=".22"/>   <!-- west -->
-  <line x1="0" y1="61" x2="61" y2="61" stroke="#6E8A84" stroke-width=".22"/> <!-- south -->
+       DRAWN AT REAL DEPTH, 0.375" (3/8"), the thickness of a 6"x6"
+       glazed ceramic tile like Lilah plus thinset over backer board —
+       not a zero-depth callout line. x=0/y=0/y=61 is the ROUGH wall
+       face (the framed 4.5" band), and the tile sits proud of it into
+       the room, same as it would on site.
+       CONSEQUENCE, LEFT VISIBLE RATHER THAN HIDDEN: the shower's 30"
+       CPC clear circle (centred 15.25, 42.5, r=15) was drawn clearing
+       the west wall by only 1/4" (its edge sits at x=0.25, assuming
+       x=0 is the finished face). At real tile depth the finished west
+       wall face is actually at x=0.375, so the circle now reads as
+       0.125" short of clear on that side. That's not a drafting error
+       to paper over — it's what tiling that wall actually costs the
+       code clearance, and it should stay visible so it gets resolved
+       for real (e.g. re-check the circle against the framed dimension
+       plus tile, or confirm the 30" minimum still has slack once the
+       real wall finishes are in). -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="0" y="0" width="61" height=".375"/>    <!-- north -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="0" y="0" width=".375" height="61"/>    <!-- west -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="0" y="60.625" width="61" height=".375"/> <!-- south -->
 
   <!-- ============ SHOWER FLOOR: LINEAR DRAIN ============
        Drawn before the sink, which sits on top of it in the NW corner. -->
