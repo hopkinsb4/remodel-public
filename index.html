@@ -2276,23 +2276,28 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="105.5" y="-101.5" width="4.5" height="91.5" fill="#C9C4B7"/> <!-- east wall -->
 
   <!-- GARAGE ENTRY DOOR — new field info: a 30"-wide door with its
-       hinge 4" south of the closet door's own hinge (99.5,-10),
-       "hinges close together." Placed on the closet's own east wall
-       (x=105.5) continuing south past the closet doorway, into the
-       hallway — the nearest real wall already in this drawing, and
-       the most direct reading of "close together." FLAG THIS
-       ASSUMPTION: if the real wall is elsewhere (a different jamb,
-       not a continuation of this one), move it — nothing south of
-       here is otherwise documented, so the wall run past the door
-       (below) is schematic, not a measured length.
-       Shown CLOSED per instruction: no swing arc, just the slab lying
-       flush in its opening, in the same white-with-black-border
-       convention as the closet door. Hinge at (105.5,-6); opening
-       spans y=-6..24 (30"). -->
-  <rect x="105.5" y="-10" width="4.5" height="4" fill="#C9C4B7"/>
-  <rect x="105.5" y="24" width="4.5" height="6" fill="#C9C4B7"/>
-  <rect x="105.9" y="-6" width="3.2" height="30" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
-  <text class="lbl-s" x="112" y="9" text-anchor="middle" font-size=".85" transform="rotate(-90 112 9)">garage entry door, 30&quot;, closed</text>
+       hinge 4" south of the closet door's own hinge. The closet door's
+       hinge is now at y=-5.5 (the wall's outside/hallway face — see
+       the door note below), so the garage door's hinge lands at
+       y=-5.5+4 = -1.5, not the y=-6 this line used when the closet
+       hinge was still (wrongly) drawn at the inside face. "Hinges
+       close together" read as both being on this same wall (x=105.5),
+       the nearest real wall already in this drawing — FLAG THIS
+       ASSUMPTION: if the real wall is elsewhere, move it; nothing
+       south of here is otherwise documented, so the wall run past the
+       door is schematic, not a measured length.
+       Shown CLOSED: slab lies flush in its opening, same slab
+       thickness as the closet door (1.4", centered in the 4.5" wall)
+       rather than nearly filling the wall — the wall's own outline is
+       broken here (gap in the "outline" path below) so the opening
+       actually reads as an opening, not continuous wall with a slab
+       laid over it. Opening spans y=-1.5..28.5 (30"). -->
+  <rect x="105.5" y="-10" width="4.5" height="8.5" fill="#C9C4B7"/>
+  <rect x="105.5" y="28.5" width="4.5" height="6" fill="#C9C4B7"/>
+  <path class="outline" d="M105.5,-10 V-1.5"/>
+  <path class="outline" d="M105.5,28.5 V34.5"/>
+  <rect x="107.05" y="-1.5" width="1.4" height="30" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
+  <text class="lbl-s" x="112" y="13.5" text-anchor="middle" font-size=".85" transform="rotate(-90 112 13.5)">garage entry door, 30&quot;, closed</text>
   <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall (real dead-end wall) -->
   <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, west stub -->
   <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, east stub -->
@@ -2301,15 +2306,19 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="65.5" y="-97" width="40" height="87" fill="url(#dsbath-check)"/>
   <path class="outline" d="M71.5,-10 H65.5 V-97 H105.5 V-10 H99.5"/>
 
-  <!-- door: hinge at the east jamb (99.5,-10), handle on the west,
-       out-swing (opens south, into the hallway). Swing arc dashed
-       (the reference envelope, not a real edge); the slab itself drawn
-       solid at 45 degrees open — tip = hinge + 28x(cos135,sin135) =
-       (79.7,9.8) — in the same white-with-black-border convention as
-       the pocket door slab, rather than left unrepresented. -->
-  <path d="M71.5,-10 A28,28 0 0,0 99.5,18" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.2 .9"/>
-  <line x1="99.5" y1="-10" x2="79.7" y2="9.8" stroke="#2A2A2A" stroke-width="1.6" stroke-linecap="square"/>
-  <line x1="99.5" y1="-10" x2="79.7" y2="9.8" stroke="#fff" stroke-width="1.2" stroke-linecap="square"/>
+  <!-- door: hinge at the east jamb, on the OUTSIDE (hallway) face of
+       the wall — y=-5.5, the wall's south face, not y=-10 (the
+       closet-interior face) where it was first drawn. An out-swing
+       door hinges on the face it swings toward, so the hinge belongs
+       on the hallway side of the jamb, not the closet side.
+       Handle on the west, out-swing (opens south, into the hallway).
+       Swing arc dashed (the reference envelope, not a real edge); the
+       slab itself drawn solid at 45 degrees open — tip = hinge +
+       28x(cos135,sin135) = (79.7,14.3) — in the same
+       white-with-black-border convention as the pocket door slab. -->
+  <path d="M71.5,-5.5 A28,28 0 0,0 99.5,22.5" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.2 .9"/>
+  <line x1="99.5" y1="-5.5" x2="79.7" y2="14.3" stroke="#2A2A2A" stroke-width="1.6" stroke-linecap="square"/>
+  <line x1="99.5" y1="-5.5" x2="79.7" y2="14.3" stroke="#fff" stroke-width="1.2" stroke-linecap="square"/>
   <rect x="77.5" y="-3.6" width="18" height="2.2" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="86.5" y="-2.5" text-anchor="middle" font-size=".85">closet door, 28&quot;x80&quot;, out-swing</text>
 
