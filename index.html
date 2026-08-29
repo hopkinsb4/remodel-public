@@ -2017,28 +2017,22 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="outline" x1="171" y1="71" x2="180" y2="71"/>
   <line class="outline" x1="171" y1="121" x2="180" y2="121"/>
 
-  <!-- East wall dimension stack, drawn INSIDE the living room (the
-       entryway now occupies the margin east of the wall), covering the
-       146" of wall south of the built-in: 48 / 50 (archway) / 48. The
-       built-in's own 23" depth is already called out on the cabinet
-       label above, so it isn't repeated here — drawing it here would
-       also sit underneath the (opaque) cabinet rect below and be
-       invisible. -->
-  <line class="extline" x1="171" y1="23" x2="163" y2="23"/>
-  <line class="extline" x1="171" y1="71" x2="163" y2="71"/>
-  <line class="extline" x1="171" y1="121" x2="163" y2="121"/>
-  <line class="extline" x1="171" y1="169" x2="163" y2="169"/>
-  <line class="dimline" x1="165" y1="23" x2="165" y2="169"/>
-  <line class="tick" x1="163.8" y1="21.8" x2="166.2" y2="24.2"/>
-  <line class="tick" x1="163.8" y1="69.8" x2="166.2" y2="72.2"/>
-  <line class="tick" x1="163.8" y1="119.8" x2="166.2" y2="122.2"/>
-  <line class="tick" x1="163.8" y1="167.8" x2="166.2" y2="170.2"/>
-  <rect class="plate" x="140" y="43" width="21" height="8" rx="1"/>
-  <text class="dim-s" x="159" y="47" text-anchor="end">48&quot;</text>
-  <rect class="plate" x="122" y="92" width="39" height="8" rx="1"/>
-  <text class="dim-s" x="159" y="96" text-anchor="end">50&quot; archway</text>
-  <rect class="plate" x="140" y="122" width="21" height="7" rx="1"/>
-  <text class="dim-s" x="159" y="125.5" text-anchor="end">48&quot;</text>
+  <!-- East wall dimension stack, drawn OUTSIDE the living room (in the
+       margin east of the 9" wall), covering the 146" of wall south of
+       the built-in: 48 / 50 (archway) / 48. The built-in's own 23"
+       depth is already called out on the cabinet label above, so it
+       isn't repeated here. -->
+  <line class="extline" x1="180" y1="23" x2="189" y2="23"/>
+  <line class="extline" x1="180" y1="71" x2="189" y2="71"/>
+  <line class="extline" x1="180" y1="121" x2="189" y2="121"/>
+  <line class="extline" x1="180" y1="169" x2="189" y2="169"/>
+  <line class="dimline" x1="187" y1="23" x2="187" y2="169"/>
+  <line class="tick" x1="185.8" y1="21.8" x2="188.2" y2="24.2"/>
+  <line class="tick" x1="185.8" y1="69.8" x2="188.2" y2="72.2"/>
+  <line class="tick" x1="185.8" y1="119.8" x2="188.2" y2="122.2"/>
+  <line class="tick" x1="185.8" y1="167.8" x2="188.2" y2="170.2"/>
+  <text class="dim-s" x="190" y="47" text-anchor="start">48&quot;</text>
+  <text class="dim-s" x="190" y="145" text-anchor="start">48&quot;</text>
 
   <!-- ============ ENTRYWAY (east of the living room) ============
        Confirmed: both cross walls (living room/entryway and
@@ -2058,12 +2052,14 @@ Without these the wall band simply runs out into the floor. Six caps:
        no matching flare is drawn there. The door's position within the
        56" south wall run is assumed centered. -->
   <rect x="180" y="69" width="56" height="59" fill="url(#mainfloor-check)"/>  <!-- entryway floor -->
+  <rect class="plate" x="188" y="92" width="39" height="8" rx="1"/>
+  <text class="dim-s" x="190" y="96" text-anchor="start">50&quot; archway</text>
 
   <!-- Step/jog at the living-room-side wall face: the entryway's own
        walls set back from the 71-121 archway line by 2" (north) and 7"
-       (south) — both confirmed measurements. -->
-  <rect x="180" y="69" width="4.5" height="2" fill="#C9C4B7"/>
-  <rect x="180" y="121" width="4.5" height="7" fill="#C9C4B7"/>
+       (south) — both confirmed measurements. Shown as jamb lines only
+       (no filled wall-color block — the return itself isn't drawn
+       since its own depth into the wall isn't specified). -->
   <line class="outline" x1="180" y1="69" x2="184.5" y2="69"/>
   <line class="outline" x1="180" y1="128" x2="184.5" y2="128"/>
   <rect class="plate" x="185" y="66.5" width="16" height="5" rx="1"/>
@@ -2103,12 +2099,6 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect class="plate" x="78.5" y="10.5" width="60" height="8" rx="1"/>
   <text class="lbl" x="108.5" y="13.7" text-anchor="middle">built-in entertainment center</text>
   <text class="lbl-s" x="108.5" y="17.2" text-anchor="middle">existing, kept — 23&quot; deep, full wall run</text>
-
-  <!-- Room title + scope note, in the clear floor south of the built-in. -->
-  <rect class="plate" x="20" y="40" width="131" height="14" rx="1"/>
-  <text class="lbl" x="85.5" y="45.2" text-anchor="middle" font-weight="700">LIVING ROOM</text>
-  <text class="lbl-s" x="85.5" y="49.8" text-anchor="middle">Kitchen, dining room and the stair run</text>
-  <text class="lbl-s" x="85.5" y="53.2" text-anchor="middle">itself still to come — see the entryway, right.</text>
 
   <!-- Sleeper sofa, south wall — Povison Mila Power Sofa Bed, 3-seat.
        88"W x 39"D estimated footprint, centered on the wall, back to
@@ -2153,14 +2143,16 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-s" x="208" y="-23.5" text-anchor="middle">56&quot; entryway</text>
   <text class="dim-s" x="240.5" y="-23.5" text-anchor="middle" font-size="1.5">9&quot;</text>
 
-  <!-- Depth, 169" total (the full room, not just the clear floor south
-       of the built-in), along the west side. -->
-  <line class="extline" x1="-4.5" y1="-4.5" x2="-24" y2="-4.5"/>
+  <!-- Depth, 146", from the south face of the entertainment center
+       (y=23) to the south wall — the clear-floor dimension, not the
+       full 169" room (the built-in's own 23" depth is called out
+       separately on the cabinet label). -->
+  <line class="extline" x1="-4.5" y1="23" x2="-24" y2="23"/>
   <line class="extline" x1="-4.5" y1="173.5" x2="-24" y2="173.5"/>
-  <line class="dimline" x1="-20" y1="-4.5" x2="-20" y2="173.5"/>
-  <line class="tick" x1="-21.2" y1="-5.7" x2="-18.8" y2="-3.3"/>
+  <line class="dimline" x1="-20" y1="23" x2="-20" y2="173.5"/>
+  <line class="tick" x1="-21.2" y1="21.8" x2="-18.8" y2="24.2"/>
   <line class="tick" x1="-21.2" y1="172.3" x2="-18.8" y2="174.7"/>
-  <text class="dim-big" x="-23.5" y="84.5" text-anchor="middle" transform="rotate(-90 -23.5 84.5)">169&quot;</text>
+  <text class="dim-big" x="-23.5" y="98.25" text-anchor="middle" transform="rotate(-90 -23.5 98.25)">146&quot;</text>
 
   <!-- Stair opening width, 40", called out along the north wall itself. -->
   <text class="dim-s" x="20" y="-1.8" text-anchor="middle">40&quot; opening</text>
