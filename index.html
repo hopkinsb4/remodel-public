@@ -1826,7 +1826,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <p>Powder room converted to a full bath: a curbless wet room split evenly into two 30.5" sections — shower to the west, toilet kept dry behind fixed glass to the east. Opal color tile runs floor-to-ceiling on three walls with black grout; only the pocket-door wall stays paint. A ceiling-mount rain head (no handheld wand — rain heads throw the least spray), the corner sink with a matte black single hole faucet and a pair of flat mirrors meeting in the corner above it, the same Kingston toilet as elsewhere, and a 28" white pocket door, for night visibility of open/closed. A rigid support bar from the west wall braces the glass panel and doubles as the curtain rod — the curtain screens the sink and walk-in from spray when drawn. The medicine cabinet sits recessed on the dry north wall, and the trap and supply stops left exposed under the wall-hung sink are dark PVD rather than chrome. The floor plan below also carries the small hallway pocket the bathroom shares with the under-stairs closet, and the closet's own layout.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-7 -112 133 180" role="img"
+      <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-7 -112 124 180" role="img"
      aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a shower nook on the rain head line, and a recessed medicine cabinet on the dry north wall; a small hallway pocket where the bathroom's east-facing pocket door and the closet's north-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a field-measured dead end at 87 inches deep and 31 inches high, fitted with a matte black clothes rod at 42 inches and an oak shelf bank capped by a granite counter just inside the door on the east wall, a vanity mirror centered on that same east leg, and keeping a 28 inch clear aisle, drawn in plan view">
   <!--
     93 WATERMAN — DOWNSTAIRS BATHROOM + UNDER-STAIRS CLOSET FLOOR PLAN
@@ -2434,7 +2434,9 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s" x="85.5" y="-50.4" text-anchor="middle" font-size=".75" fill="#8B979A">rod @ 42&quot; below + under-counter LED &#8212; tees 6&quot; off floor (measured)</text>
 
   <!-- headroom contour lines, dashed, at four key depths rather than
-       arbitrary round numbers — each tied to an actual feature.
+       arbitrary round numbers — each tied to an actual feature. Labels
+       moved to the WEST side (were east) and share one format now,
+       "X" @ Y" in — description", the dead-end included.
        Heights all computed against the field-measured 62/87 slope:
        H(d) = 93 - (62/87)d.
        1) MIRROR CENTER, d=18 (the mirror's own centerline, d 8..28):
@@ -2448,23 +2450,22 @@ Without these the wall band simply runs out into the floor. Six caps:
        3) BACK OF COUNTERTOP, d=60 (the slab's rear edge): H(60) =
           50.24" = 50&#188;" — coincides with the counter's own north
           edge line.
-       4) FULL DEPTH, d=87: the field-measured dead end at 31", called
-          out separately below since it's a real measured hard stop,
-          not a calculated contour. -->
+       4) FULL DEPTH, d=87: the field-measured dead end at 31" — a real
+          measurement, not a calculated contour, called out as such. -->
   <line class="code" x1="65.5" y1="-28" x2="105.5" y2="-28"/>
-  <text class="code-t" x="110" y="-28" font-size=".85">80&#8539;&quot; @ 18&quot; in &#8212; mirror center</text>
+  <text class="code-t" x="60.5" y="-28" text-anchor="end" font-size=".85">80&#8539;&quot; @ 18&quot; in &#8212; mirror center</text>
 
   <line class="code" x1="65.5" y1="-39.5" x2="105.5" y2="-39.5"/>
-  <text class="code-t" x="106.3" y="-39.5" font-size=".85">72&quot; @ 29&#189;&quot; in &#8212; standing limit</text>
+  <text class="code-t" x="60.5" y="-39.5" text-anchor="end" font-size=".85">72&quot; @ 29&#189;&quot; in &#8212; standing limit</text>
 
   <line class="code" x1="65.5" y1="-70" x2="105.5" y2="-70"/>
-  <text class="code-t" x="106.3" y="-70" font-size=".85">50&#188;&quot; @ 60&quot; in &#8212; back of counter</text>
+  <text class="code-t" x="60.5" y="-70" text-anchor="end" font-size=".85">50&#188;&quot; @ 60&quot; in &#8212; back of counter</text>
 
-  <!-- NO THROWAWAY ZONE: the old ~24"-headroom cutoff never occurs —
-       the closet dead-ends at 87" deep with 31" of headroom, already
-       above that threshold, so the full depth stays real storage. -->
-  <rect x="68" y="-96" width="34" height="2.2" rx="1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="85" y="-95" text-anchor="middle" font-size=".85">31&quot; headroom &#8212; closet dead-ends here (measured)</text>
+  <!-- FULL DEPTH — the field-measured dead end, same label format as
+       the calculated checkpoints above (was a standalone soft-plate
+       callout; now a "code" line + code-t label like the others). -->
+  <line class="code" x1="65.5" y1="-96.5" x2="105.5" y2="-96.5"/>
+  <text class="code-t" x="60.5" y="-96.5" text-anchor="end" font-size=".85">31&quot; @ 87&quot; in &#8212; full depth (measured)</text>
 
   <rect x="73" y="-21.6" width="25" height="3.2" rx="1" fill="#FBFAF7"/>
   <text x="85.5" y="-20" text-anchor="middle" font-size="2" font-style="italic"
