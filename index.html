@@ -2298,13 +2298,18 @@ Without these the wall band simply runs out into the floor. Six caps:
        convention as the closet door, whose hinge is drawn on the face
        it swings toward. Shown swung OPEN 45&#176;. Drawn as a true
        point-to-point leaf, not a thick stroke on a centerline: the
-       near-hinge corner sits exactly on the jamb point (105.5,-1.5),
-       the far corner traces the swing radius (door width = 30") to
-       (84.29,19.71), and the leaf's 1.4" thickness is carried
-       perpendicular to the leaf (thickness-axis angle = leaf-axis
-       angle + 90&#176;, rotating rigidly with the leaf, same as it would
-       when closed against the jamb) rather than via stroke width,
-       so the corner-to-corner fit is exact instead of approximated.
+       corner closest to the wall sits exactly on the jamb point
+       (105.5,-1.5), with the leaf's 1.4" thickness carried toward the
+       WALL side (recessed into the opening depth, same side the door
+       occupies when closed and flush with the interior face) rather
+       than toward the hallway — the earlier version put the
+       thickness on the hallway side instead, which meant the leaf's
+       true near corner sat 1.4" out past the jamb into the room
+       instead of flush at it. The far corner traces the swing radius
+       (door width = 30") from the jamb to (84.29,19.71) and then
+       offsets by that same 1.4" toward the wall side to close the
+       rectangle, matching the closet door's leaf technique but with
+       the thickness on the correct side for this wall's orientation.
        The wall FILL is cut at the hallway wall band above (the rect
        that used to run solid the full 75.5" hallway depth) rather
        than just drawn over — a wall stub placed on top of a still-
@@ -2314,7 +2319,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path class="outline" d="M105.5,-10 V-1.5"/>
   <path class="outline" d="M105.5,28.5 V65.5"/>
   <path d="M105.5,28.5 A30,30 0 0,1 75.5,-1.5" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.2 .9"/>
-  <path d="M105.5,-1.5 L84.29,19.71 L83.30,18.72 L104.51,-2.49 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
+  <path d="M106.49,-0.51 L85.28,20.70 L84.29,19.71 L105.5,-1.5 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
   <rect x="86" y="24.5" width="19" height="2.2" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="95.5" y="25.6" text-anchor="middle" font-size=".85">garage entry door, 30&quot;, open 45&#176;</text>
   <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall (real dead-end wall) -->
