@@ -2126,12 +2126,33 @@ Without these the wall band simply runs out into the floor. Six caps:
        Shape: plain rectangle with 10" radii on the two REAR corners
        only (SE and SW — the wraparound bolster ends); the front
        corners stay square.
-       Seams: back-bolster/seat seam at y=149 (~20" bolster), plus two
-       vertical seams splitting the seat into its 3 cushions. -->
+       Seams: back-bolster/seat seam at y=149 (~20" bolster); 12" arms
+       at each end (x=45..57, x=159..171); three 34"-wide seat cushions
+       between them (34 x 3 = 102 = 126 - 2x12), seams at x=91, x=125.
+       Green/white/green striped outline in front of the sofa: where
+       those three 34" cushions land when the power seat extends from
+       its 32" minimum to its 59" maximum depth — 59-32 = 27" of
+       travel past the seated front edge (y=117 out to y=90), with the
+       cushion seams continued through the extended zone. Drawn as a
+       green stroke over-struck by a thinner white one, giving the
+       green/white/green sandwich. -->
   <path class="sofa" d="M 45,117 L 171,117 L 171,159 A 10,10 0 0 1 161,169 L 55,169 A 10,10 0 0 1 45,159 Z"/>
   <line class="sofa-seam" x1="50" y1="149" x2="166" y2="149"/>
-  <line class="sofa-seam" x1="87" y1="117" x2="87" y2="149"/>
-  <line class="sofa-seam" x1="129" y1="117" x2="129" y2="149"/>
+  <line class="sofa-seam" x1="57" y1="117" x2="57" y2="149"/>
+  <line class="sofa-seam" x1="159" y1="117" x2="159" y2="149"/>
+  <line class="sofa-seam" x1="91" y1="117" x2="91" y2="149"/>
+  <line class="sofa-seam" x1="125" y1="117" x2="125" y2="149"/>
+  <g stroke="#2FA043" stroke-width="1" fill="none" stroke-linecap="butt">
+    <path d="M 57,117 L 57,90 L 159,90 L 159,117"/>
+    <line x1="91" y1="90" x2="91" y2="117"/>
+    <line x1="125" y1="90" x2="125" y2="117"/>
+  </g>
+  <g stroke="#FFFFFF" stroke-width=".34" fill="none" stroke-linecap="butt">
+    <path d="M 57,117 L 57,90 L 159,90 L 159,117"/>
+    <line x1="91" y1="90" x2="91" y2="117"/>
+    <line x1="125" y1="90" x2="125" y2="117"/>
+  </g>
+  <text class="dim-onsofa" x="108" y="131" text-anchor="middle" font-size="1.6">34&quot; x 3 cushions extend 27&quot; (32&quot;&#8594;59&quot; depth)</text>
   <line class="extline" x1="45" y1="113" x2="45" y2="110"/>
   <line class="extline" x1="171" y1="113" x2="171" y2="110"/>
   <line class="dimline" x1="45" y1="112" x2="171" y2="112"/>
