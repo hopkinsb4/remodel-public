@@ -2336,13 +2336,13 @@ Without these the wall band simply runs out into the floor. Six caps:
        jamb line at (99.5,-10): entering, the cabinet meets you as a
        taper, not a corner. -->
   <path d="M93.5,-46 H105.5 V-10 H99.5 L93.5,-16 Z" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
-  <!-- counter outlet gangs — in the east side wall's drywall above the
-       counter, shifted deeper again (d 33/43) to clear the mirror now
-       that it's recentered on the east leg (see the mirror note below)
-       and reaches deeper, to d=28, than its old d=22 edge. -->
-  <rect class="blk" x="105.5" y="-43" width=".7" height="2.6"/>
+  <!-- counter outlet gangs — moved off the east leg entirely and onto
+       the north-most L of the counter (the full-width run over the
+       rod, d 36..60), d 43/53, clear of the mirror and its new
+       flanking sconces on the east leg below. -->
   <rect class="blk" x="105.5" y="-53" width=".7" height="2.6"/>
-  <text class="lbl-s" x="107.6" y="-46.7" text-anchor="middle" font-size=".7" transform="rotate(-90 107.6 -46.7)">outlets</text>
+  <rect class="blk" x="105.5" y="-63" width=".7" height="2.6"/>
+  <text class="lbl-s" x="107.6" y="-56.7" text-anchor="middle" font-size=".7" transform="rotate(-90 107.6 -56.7)">outlets</text>
 
   <!-- light switch, west wall just inside the door -->
   <rect class="blk" x="64.8" y="-15.5" width=".7" height="2.6"/>
@@ -2399,11 +2399,10 @@ Without these the wall band simply runs out into the floor. Six caps:
        RECENTERED on the east leg's own run (the bank/counter along the
        east wall, y=-10 to -46, 36" long) rather than pinned to the
        door end: d 8..28, centered on d=18. That leaves an even 8" of
-       wall clear on each side within the 36" leg — room to fit two
-       sconces flanking the mirror later, which is the point of
-       centering it. Top at 72", bottom 54" — the 54-72" band puts both
-       a 5' user (eye ~56") and a 6' user (eye ~68", head-top 72") in
-       the glass for hair drying.
+       wall clear on each side within the 36" leg, which is exactly
+       where the two flanking sconces below now sit. Top at 72", bottom
+       54" — the 54-72" band puts both a 5' user (eye ~56") and a 6'
+       user (eye ~68", head-top 72") in the glass for hair drying.
        CEILING CHECK, TIGHTER NOW: centering pushes the mirror's deep
        edge from d=22 to d=28 — ceiling there is 93-(62/87)x28 = 73.0"
        (was 77.3" at d=22), clearing the 72" top by just 1.0" instead
@@ -2420,6 +2419,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        mounted mirror above it still needs to render on top in plan. -->
   <rect x="105" y="-38" width=".5" height="20" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
   <text class="teal" x="107.1" y="-28" text-anchor="middle" font-size=".8" transform="rotate(-90 107.1 -28)">mirror</text>
+
+  <!-- vanity sconces — beauty lights flanking the mirror, one in each
+       8" clear zone the centered mirror leaves on the east leg: south
+       at d=4 (y=-14), north at d=32 (y=-42). Matte black fixture body
+       with a warm lamp face, same gold accent as the closet's other
+       fixtures (the under-counter LED, the "LED" label text). -->
+  <rect x="105" y="-15" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
+  <text class="lbl-s" x="107.1" y="-14" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -14)" style="fill:#C79436">sconce</text>
+  <rect x="105" y="-43" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
+  <text class="lbl-s" x="107.1" y="-42" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -42)" style="fill:#C79436">sconce</text>
+
   <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
   <path d="M99.5,-10 L93.5,-16 V-40" fill="none" stroke="#EDE8DD" stroke-width=".16" stroke-dasharray=".75 .5"/>
   <line x1="65.5" y1="-56.25" x2="105.5" y2="-56.25" stroke="#F6F3ED" stroke-width=".18" stroke-dasharray=".75 .5"/>
@@ -2431,14 +2441,23 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s" x="101.4" y="-34" text-anchor="middle" font-size=".85" style="fill:#EDE8DD" transform="rotate(-90 101.4 -34)">12&quot; deep, below counter</text>
   <rect x="70.5" y="-53.4" width="30" height="5.2" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="85.5" y="-52" text-anchor="middle" font-size=".85">granite counter @ 46&quot; &#8212; wraps the bank, 6&quot; inside chamfer</text>
-  <text class="lbl-s" x="85.5" y="-50.4" text-anchor="middle" font-size=".75" fill="#8B979A">rod @ 42&quot; below + under-counter LED &#8212; tees 6&quot; off floor (measured)</text>
+  <text class="lbl-s" x="85.5" y="-50.4" text-anchor="middle" font-size=".75" fill="#8B979A">rod @ 42&quot; below + under-counter LED &#8212; tees 6&quot; off floor</text>
 
-  <!-- headroom contour lines, dashed, at four key depths rather than
+  <!-- headroom contour lines, dashed, at five key depths rather than
        arbitrary round numbers — each tied to an actual feature. Labels
-       moved to the WEST side (were east) and share one format now,
+       sit on the WEST side and share one format,
        "X" @ Y" in — description", the dead-end included.
        Heights all computed against the field-measured 62/87 slope:
        H(d) = 93 - (62/87)d.
+       0) ENTRY DOOR, d=0 (the door plane, y=-10): not a computed
+          headroom figure but the standard interior door height, 80",
+          shown for scale against the ceiling right there (93", already
+          called out elsewhere as the field-measured figure at the
+          door) — 13" of clearance above the door head before the
+          slope even starts. Label text sits at y=-20, clear of the
+          bathroom's own 61" width dimension crossing this same margin
+          around y=-12/-13; the dashed line itself is still drawn at
+          the accurate d=0 (y=-10).
        1) MIRROR CENTER, d=18 (the mirror's own centerline, d 8..28):
           H(18) = 80.17" = 80&#8539;".
        2) STANDING LIMIT, MOVED to d=36 (y=-46) — the next counter edge
@@ -2453,6 +2472,9 @@ Without these the wall band simply runs out into the floor. Six caps:
           edge line.
        4) FULL DEPTH, d=87: the field-measured dead end at 31" — a real
           measurement, not a calculated contour, called out as such. -->
+  <line class="code" x1="65.5" y1="-10" x2="105.5" y2="-10"/>
+  <text class="code-t" x="60.5" y="-20" text-anchor="end" font-size=".85">80&quot; @ 0&quot; in &#8212; entry door height (standard)</text>
+
   <line class="code" x1="65.5" y1="-28" x2="105.5" y2="-28"/>
   <text class="code-t" x="60.5" y="-28" text-anchor="end" font-size=".85">80&#8539;&quot; @ 18&quot; in &#8212; mirror center</text>
 
@@ -2466,7 +2488,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        the calculated checkpoints above (was a standalone soft-plate
        callout; now a "code" line + code-t label like the others). -->
   <line class="code" x1="65.5" y1="-96.5" x2="105.5" y2="-96.5"/>
-  <text class="code-t" x="60.5" y="-96.5" text-anchor="end" font-size=".85">31&quot; @ 87&quot; in &#8212; full depth (measured)</text>
+  <text class="code-t" x="60.5" y="-96.5" text-anchor="end" font-size=".85">31&quot; @ 87&quot; in &#8212; full depth</text>
 
   <rect x="73" y="-21.6" width="25" height="3.2" rx="1" fill="#FBFAF7"/>
   <text x="85.5" y="-20" text-anchor="middle" font-size="2" font-style="italic"
@@ -2511,7 +2533,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="dimline" x1="112" y1="-10" x2="112" y2="-97"/>
   <line class="tick" x1="111.55" y1="-10.45" x2="112.45" y2="-9.55"/>
   <line class="tick" x1="111.55" y1="-97.45" x2="112.45" y2="-96.55"/>
-  <text class="dim-big" x="114" y="-53.5" text-anchor="middle" transform="rotate(-90 114 -53.5)">87&quot; (measured)</text>
+  <text class="dim-big" x="114" y="-53.5" text-anchor="middle" transform="rotate(-90 114 -53.5)">87&quot;</text>
 </svg>
       <p style="font-size: 12px; color: #777; max-width: 320px; margin-top: 8px;">Proposed floor plan to fit a 3/4 bath in place of the existing 1/2 bath. 30.5" x 61" = 1861 sq in</p>
     </div>
@@ -2595,7 +2617,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag white">Under-Stairs Walk-In Closet</span>
-    <p>An under-stairs clothes closet, fitted out in the house materials: a matte black rod at 42" (46" into the closet, hung below the counter — dropped 1" once the rod-to-clothes drop was field-measured at 36", tightening the floor clearance to exactly the intended 6"), a 12"-deep oak shelf bank inside the door with a 6" chamfered entry corner, and a honed charcoal granite counter at 46" that caps the bank and wraps full-width over the rod, its rear edge extended further toward the sloped ceiling than before — with an under-counter LED strip hidden at the counter's south edge, aimed down at the front of the hanging clothes rather than lighting them from overhead, and no back stop above it, leaving that wedge open rather than boxed in. The bank sits freestanding on the tile with an anti-tip cleat only, removable later without flooring scars, running the full 36" to the door with its chamfered entry corner. Two outlet gangs sit in the east side wall's drywall above the counter, with the light switch at the door, and a vanity mirror (~20"x18", spanning 54"-72" so 5' to 6' users can dry hair standing) centered on that same east leg, leaving room on each side for a future pair of sconces. Plus a dedicated light fixture. Checkerboard floor, gray walls in glossy finish, matte black hardware. A wedge-shaped space under the stair stringer — 93" of headroom right inside the north-facing door, sloping down to a field-measured dead end at 87" deep, 31" high (the real stringer runs shallower than this drawing's original calculated assumption, so headroom throughout is more generous than first shown, and the closet's full depth counts as usable storage). Drawn with the downstairs bathroom's floor plan (Downstairs Bathroom, above), which the closet shares a small hallway pocket with.</p>
+    <p>An under-stairs clothes closet, fitted out in the house materials: a matte black rod at 42" (46" into the closet, hung below the counter — dropped 1" once the rod-to-clothes drop was field-measured at 36", tightening the floor clearance to exactly the intended 6"), a 12"-deep oak shelf bank inside the door with a 6" chamfered entry corner, and a honed charcoal granite counter at 46" that caps the bank and wraps full-width over the rod, its rear edge extended further toward the sloped ceiling than before — with an under-counter LED strip hidden at the counter's south edge, aimed down at the front of the hanging clothes rather than lighting them from overhead, and no back stop above it, leaving that wedge open rather than boxed in. The bank sits freestanding on the tile with an anti-tip cleat only, removable later without flooring scars, running the full 36" to the door with its chamfered entry corner. Two outlet gangs sit in the east wall's drywall over the counter's north-most L (the full-width run over the rod), with the light switch at the door, and a vanity mirror (~20"x18", spanning 54"-72" so 5' to 6' users can dry hair standing) centered on the east leg with a pair of matte black beauty-light sconces flanking it. Plus a dedicated light fixture. Checkerboard floor, gray walls in glossy finish, matte black hardware. A wedge-shaped space under the stair stringer — 93" of headroom right inside the north-facing door, sloping down to a field-measured dead end at 87" deep, 31" high (the real stringer runs shallower than this drawing's original calculated assumption, so headroom throughout is more generous than first shown, and the closet's full depth counts as usable storage). Drawn with the downstairs bathroom's floor plan (Downstairs Bathroom, above), which the closet shares a small hallway pocket with.</p>
     
     
     <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
