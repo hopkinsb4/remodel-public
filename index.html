@@ -2441,16 +2441,13 @@ Without these the wall band simply runs out into the floor. Six caps:
        H(d) = 93 - (62/87)d.
        1) MIRROR CENTER, d=18 (the mirror's own centerline, d 8..28):
           H(18) = 80.17" = 80&#8539;".
-       2) STANDING LIMIT, d=29.5: the deepest point that still clears
-          the 72" head-top this drawing already uses as its "6' user"
-          reference for the mirror — H(29.5) = 72.0". Past this depth
-          a 6' person has to duck; it lands just past the mirror's own
-          deep edge (d=28), which is why that edge was cutting it close
-          to begin with. Label text sits at y=-46 — the next counter
-          edge north (the south edge of the wide, rod-covering run,
-          not the rear edge below) — rather than at its own d=29.5
-          line, for clearer spacing; the dashed line itself is still
-          drawn at the correct d=29.5.
+       2) STANDING LIMIT, MOVED to d=36 (y=-46) — the next counter edge
+          north of the original d=29.5 (72"-headroom) point: the south
+          edge of the wide, rod-covering run, where the LED sits.
+          H(36) = 93 - (62/87)x36 = 67.34", rounded to 67&#8540;".
+          Past this point the counter's own footprint starts at full
+          width, so it doubles as "how much headroom is left where you
+          actually stand at the wide part of the counter."
        3) BACK OF COUNTERTOP, d=60 (the slab's rear edge): H(60) =
           50.24" = 50&#188;" — coincides with the counter's own north
           edge line.
@@ -2459,8 +2456,8 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="code" x1="65.5" y1="-28" x2="105.5" y2="-28"/>
   <text class="code-t" x="60.5" y="-28" text-anchor="end" font-size=".85">80&#8539;&quot; @ 18&quot; in &#8212; mirror center</text>
 
-  <line class="code" x1="65.5" y1="-39.5" x2="105.5" y2="-39.5"/>
-  <text class="code-t" x="60.5" y="-46" text-anchor="end" font-size=".85">72&quot; @ 29&#189;&quot; in &#8212; standing limit</text>
+  <line class="code" x1="65.5" y1="-46" x2="105.5" y2="-46"/>
+  <text class="code-t" x="60.5" y="-46" text-anchor="end" font-size=".85">67&#8540;&quot; @ 36&quot; in &#8212; standing limit</text>
 
   <line class="code" x1="65.5" y1="-70" x2="105.5" y2="-70"/>
   <text class="code-t" x="60.5" y="-70" text-anchor="end" font-size=".85">50&#188;&quot; @ 60&quot; in &#8212; back of counter</text>
