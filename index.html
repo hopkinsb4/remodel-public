@@ -1859,11 +1859,10 @@ Without these the wall band simply runs out into the floor. Six caps:
       shifted 6" west, x=0 to x=-6, on the design firm's read that it's
       non-load-bearing — see the WEST WALL MOVE note near the shell
       below. Wall band is 4.5" thick, so it spans -10.5 .. 65.5 in x and
-      -4.5 .. 65.5 in y. Shower (wet) = x -6..27.5, toilet (dry) section
-      = x 27.5..61 — back to an even split (each side +3" over its
-      original 30.5" half) now that the wall move gives both zones room
-      to spare, instead of the 30.88/30.12 split that borrowed space
-      from the toilet for the shower's real-depth tile clearance.
+      -4.5 .. 65.5 in y. Shower (wet) = x -6..29, toilet (dry) section
+      = x 29..61 — toilet narrowed to 32" (was the even 33.5"/33.5"
+      split), giving the shower the other 3" (35" wide) as room to
+      spare on top of what the wall move already gave it.
     Hallway + closet: added below (negative y = north of the bathroom).
       See the "HALLWAY CONNECTOR" and "UNDER-STAIRS WALK-IN CLOSET"
       sections further down for their own geometry notes.
@@ -1938,8 +1937,8 @@ Without these the wall band simply runs out into the floor. Six caps:
        split reads from the glass line, drain and labels rather than a
        tint change. Labels and linework that sit on the floor use the
        .on-dark / .red-lt / .thin-lt variants so they stay legible. -->
-  <rect x="-6"  y="0" width="33.5" height="61" fill="url(#dsbath-dawson)"/>  <!-- shower (wet) -->
-  <rect x="27.5" y="0" width="33.5" height="61" fill="url(#dsbath-dawson)"/><!-- toilet (dry) -->
+  <rect x="-6"  y="0" width="35" height="61" fill="url(#dsbath-dawson)"/>  <!-- shower (wet) -->
+  <rect x="29" y="0" width="32" height="61" fill="url(#dsbath-dawson)"/><!-- toilet (dry) -->
 
   <!-- ============ DOOR OPENING ============
        The 28" pocket-door opening is a real break in the east wall, not just a
@@ -1980,7 +1979,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        19.71, centre 16.375), so the nook and hooks keep the same
        relationship to each other and to the sink/mirrors they're grouped
        with — otherwise the nook would land past the new (also-shifted-
-       west) shower/toilet split line at x=27.5. -->
+       west) shower/toilet split line, now at x=29. -->
   <rect x="10.375" y="-3.5" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="16.375" y="-1.75" text-anchor="middle">nook</text>
   <!-- shower nook, on the rain head line. Shifted 6" west with the west
@@ -2148,15 +2147,15 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- 30" code circle: CPC requires a 30" dia. clear circle to fit inside the
        shower compartment. Drawn faint as a compliance check, concentric with the
        rainhead. Re-centred again now that the west wall moved 6" west and the
-       shower/toilet split went back to an even line at x=27.5: available
-       width between the real-depth tile face (x=-5.625) and the glass
-       (27.5) is 33.125", a full 3.125" more than the 30" circle needs — a
-       comfortable ~1.56" margin each side, instead of the earlier 1/4"
-       (itself a fix for a 0.125" shortfall). No more razor-thin margins on
+       shower/toilet split moved to x=29 (toilet narrowed to 32", giving
+       the shower the extra 1.5"): available width between the real-depth
+       tile face (x=-5.625) and the glass (29) is 34.625", a full 4.625"
+       more than the 30" circle needs — a comfortable ~2.31" margin each
+       side, up from ~1.56" at the even split. No more razor-thin margins on
        either the tile or the toilet's own clearance — see the TOILET
        section below. -->
-  <circle class="code" cx="10.94" cy="42.5" r="15"/>
-  <text class="code-t" x="10.94" y="29.4" text-anchor="middle" style="fill:#B9C4C7">30&quot;</text>
+  <circle class="code" cx="11.69" cy="42.5" r="15"/>
+  <text class="code-t" x="11.69" y="29.4" text-anchor="middle" style="fill:#B9C4C7">30&quot;</text>
   <!-- valve, west wall. Shifted 6" west with the wall. -->
   <rect class="blk" x="-6.6" y="30.08" width=".6" height="1.92"/>
   <text class="lbl-s" x="-8.2" y="31.6" text-anchor="middle" transform="rotate(-90 -8.2 31.6)">valve</text>
@@ -2172,67 +2171,62 @@ Without these the wall band simply runs out into the floor. Six caps:
        it really stops. Support bar is at y 25, so the midpoint is
        (15.62 + 25) / 2 = 20.31. Shifted 6" west with the sink/wall group. -->
   <circle cx="-5.08" cy="20.31" r=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
-  <!-- support bar: west end moved to the new wall (x=-6), east end to the
-       new (even) split line (x=27.5, was 30.88). -->
-  <line x1="-6" y1="25" x2="27.5" y2="25" stroke="#C9C4B7" stroke-width=".133"/>
-  <text class="lbl on-dark" x="10.01" y="23.7" text-anchor="middle">support bar</text>
+  <!-- support bar: west end at the wall (x=-6), east end to the split
+       line, now x=29 (was the even 27.5). -->
+  <line x1="-6" y1="25" x2="29" y2="25" stroke="#C9C4B7" stroke-width=".133"/>
+  <text class="lbl on-dark" x="11.5" y="23.7" text-anchor="middle">support bar</text>
   <!-- ceiling rainhead, 12" dia, centred 18.5" off the south wall. Re-centred
-       x to sit concentric with the 30" code circle at its new 10.94 centre,
+       x to sit concentric with the 30" code circle at its new 11.69 centre,
        per the circle note above. -->
-  <circle class="thin-lt" cx="10.94" cy="42.5" r="6"/>
-  <circle cx="10.94" cy="42.5" r=".29" fill="#F0EDE6"/>
-  <text class="lbl-s on-dark" x="10.94" y="40.9" text-anchor="middle">ceiling</text>
-  <text class="lbl-s on-dark" x="10.94" y="43.9" text-anchor="middle">rainhead</text>
-  <text x="10.94" y="59.3" text-anchor="middle" font-size="1.35" font-style="italic"
+  <circle class="thin-lt" cx="11.69" cy="42.5" r="6"/>
+  <circle cx="11.69" cy="42.5" r=".29" fill="#F0EDE6"/>
+  <text class="lbl-s on-dark" x="11.69" y="40.9" text-anchor="middle">ceiling</text>
+  <text class="lbl-s on-dark" x="11.69" y="43.9" text-anchor="middle">rainhead</text>
+  <text x="11.69" y="59.3" text-anchor="middle" font-size="1.35" font-style="italic"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#8FCBE0">SHOWER</text>
 
   <!-- ============ FIXED GLASS ON THE SECTION LINE ============
-       Back to x=27.5, the even split of the new 67"-wide room (33.5/33.5,
-       each half +3" over its original 30.5") — the west wall move gave
-       both zones room, so the glass no longer needs to sit off-centre to
-       give the shower clearance around its real-depth tile (that had
-       pushed it to x=30.88, tightening the toilet's own clearance to
-       about 1/16"). Both zones now have real margin — see the 30" code
-       circle note and the TOILET section below. -->
-  <line x1="27.5" y1="24.08" x2="27.5" y2="61" stroke="#5FB2CC" stroke-width=".33"/>
-  <text class="teal" x="26.3" y="42.5" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
-        transform="rotate(-90 26.3 42.5)">37&quot; fixed glass</text>
-  <text class="teal" x="24.9" y="11.75" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
-        transform="rotate(-90 24.9 11.75)">24&quot; opening</text>
+       Moved to x=29 — the toilet section narrowed to 32" (was the even
+       33.5"/33.5" split), giving the shower the freed 1.5" (35" wide).
+       Both zones still have real margin — see the 30" code circle note
+       and the TOILET section below. -->
+  <line x1="29" y1="24.08" x2="29" y2="61" stroke="#5FB2CC" stroke-width=".33"/>
+  <text class="teal" x="27.8" y="42.5" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
+        transform="rotate(-90 27.8 42.5)">37&quot; fixed glass</text>
+  <text class="teal" x="26.4" y="11.75" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
+        transform="rotate(-90 26.4 11.75)">24&quot; opening</text>
 
   <!-- ============ TOILET ============
-       Bowl: rim is a true circle (centre 44.25,39.01  r 7.72") that flares open at
+       Bowl: rim is a true circle (centre 45,39.01  r 7.72") that flares open at
        the front, with straight sides tapering back and slightly outward to meet the
        tank. Tank: rounded rect with the lid joint line across it.
        Bowl is drawn first; the tank then overlays its foot so the sides terminate
        cleanly on the tank's top edge.
-       RE-CENTRED to 44.25, the midpoint of the new (even) toilet section
-       27.5..61 — the west wall move plus going back to a 50/50 split moved
-       the section's own midpoint west of where it's been all session
-       (45.79 originally, 45.94 with the interim uneven split). CPC 402.5
-       side clearance is now 16.75" each side of centreline, well past the
-       15" minimum — real margin, not the ~1/16" the uneven split left it.
+       RE-CENTRED to 45, the midpoint of the toilet section, now 29..61
+       (narrowed to 32" wide, was the even 33.5"/33.5" split at 44.25).
+       CPC 402.5 side clearance is 16" each side of centreline (32/2),
+       still well past the 15" minimum.
        STILL 0.375" NORTH of the rough wall: the tank backs onto the south
        wall, which is real-depth Lilah tile (finished face at y=60.625).
        The tank mounts against the finished wall, so the whole fixture —
        and its 53" front-to-back clearance check, measured from that same
        wall — stays shifted north as one rigid unit; the 53" figure itself
        doesn't change, only where it's measured from. -->
-  <path class="fix" d="M35.21,54.125 L36.53,38.635 A7.72,7.72 0 0 1 51.97,38.635 L53.29,54.125 Z"/>
-  <rect class="fix" x="34.21" y="53.625" width="20.08" height="7" rx=".5"/>
-  <line x1="34.21" y1="55.335" x2="54.29" y2="55.335" stroke="#2A2A2A" stroke-width=".083"/>
-  <text x="44.25" y="44.425" text-anchor="middle" font-size="1.35"
+  <path class="fix" d="M35.96,54.125 L37.28,38.635 A7.72,7.72 0 0 1 52.72,38.635 L54.04,54.125 Z"/>
+  <rect class="fix" x="34.96" y="53.625" width="20.08" height="7" rx=".5"/>
+  <line x1="34.96" y1="55.335" x2="55.04" y2="55.335" stroke="#2A2A2A" stroke-width=".083"/>
+  <text x="45" y="44.425" text-anchor="middle" font-size="1.35"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A">WC</text>
   <!-- CPC front-to-back clearance. Measured from the SOUTH wall's finished
        (tiled) face, y=60.625: 29" toilet + 24" required clear = 53", so the
        limit lands at y = 60.625 - 53 = 7.625. The dimension runs the full
        53" down to the finished south wall and stops dead on the limit line
        (a T, not a cross). -->
-  <line class="red-lt" x1="31.46" y1="7.625" x2="56.96" y2="7.625"/>
-  <line class="red-lt" x1="44.25" y1="7.625" x2="44.25" y2="60.625"/>
-  <line class="tick" stroke="#8A3B2A" x1="43.80" y1="8.075"  x2="44.70" y2="7.175"/>
-  <line class="tick" stroke="#8A3B2A" x1="43.80" y1="61.075" x2="44.70" y2="60.175"/>
-  <text class="red-t" x="44.25" y="6.5" text-anchor="middle" style="fill:#D98D75">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
+  <line class="red-lt" x1="32.21" y1="7.625" x2="57.71" y2="7.625"/>
+  <line class="red-lt" x1="45" y1="7.625" x2="45" y2="60.625"/>
+  <line class="tick" stroke="#8A3B2A" x1="44.55" y1="8.075"  x2="45.45" y2="7.175"/>
+  <line class="tick" stroke="#8A3B2A" x1="44.55" y1="61.075" x2="45.45" y2="60.175"/>
+  <text class="red-t" x="45" y="6.5" text-anchor="middle" style="fill:#D98D75">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
 
   <!-- ============ EAST WALL ============ -->
   <!-- TP holder: bar-style, roll axis parallel to the wall. Moved from
@@ -2253,30 +2247,30 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s on-dark" x="61.5" y="21" text-anchor="middle" transform="rotate(-90 61.5 21)">shown half-open</text>
 
   <!-- ============ WALL LABELS ============
-       Repositioned to track the room's new proportions after the west
-       wall moved 6" west and the shower/toilet split returned to an
-       even line at x=27.5 (was x=33/46, roughly offset from the old
-       30.5/45.75-ish midpoints; same offsets applied to the new ones). -->
+       SOUTH WALL tracks the toilet section's centreline (45, was 44.25
+       under the even split). NORTH WALL isn't zone-tracking — it just
+       sits clear of the fixtures on that wall — so it's untouched. -->
   <text class="wall-lbl" x="30" y="-2.1" text-anchor="middle">NORTH WALL</text>
-  <text class="wall-lbl" x="44.25" y="63.4" text-anchor="middle">SOUTH WALL</text>
+  <text class="wall-lbl" x="45" y="63.4" text-anchor="middle">SOUTH WALL</text>
   <text class="wall-lbl" x="-8.4" y="24" text-anchor="middle" transform="rotate(-90 -8.4 24)">WEST WALL</text>
 
   <!-- ============ DIMENSIONS — TOP ============
-       Chain (33.5 + 33.5) nearest the plan, overall (67", was 61") outboard
-       of it — west wall moved 6" west to x=-6, and the shower/toilet split
-       returned to an even line at x=27.5 (each half +3" over its original
-       30.5"). Extension lines break 0.8" clear of the wall face and overrun
-       the last dimension line by 0.7". Ticks are 45 degrees. -->
+       Chain (35 + 32) nearest the plan, overall (67") outboard of it —
+       toilet section narrowed to 32" (was the even 33.5"/33.5" split at
+       x=27.5), moving the split to x=29 and giving the shower the
+       freed 1.5" (35" wide). Extension lines break 0.8" clear of the
+       wall face and overrun the last dimension line by 0.7". Ticks are
+       45 degrees. -->
   <line class="extline" x1="-6"    y1="-5.3" x2="-6"    y2="-12.7"/>
-  <line class="extline" x1="27.5"  y1="-5.3" x2="27.5"  y2="-9.2"/>
+  <line class="extline" x1="29"    y1="-5.3" x2="29"    y2="-9.2"/>
   <line class="extline" x1="61"    y1="-5.3" x2="61"    y2="-12.7"/>
 
   <line class="dimline" x1="-6" y1="-8.5" x2="61" y2="-8.5"/>
   <line class="tick" x1="-6.45" y1="-8.05" x2="-5.55" y2="-8.95"/>
-  <line class="tick" x1="27.05" y1="-8.05" x2="27.95" y2="-8.95"/>
+  <line class="tick" x1="28.55" y1="-8.05" x2="29.45" y2="-8.95"/>
   <line class="tick" x1="60.55" y1="-8.05" x2="61.45" y2="-8.95"/>
-  <text class="dim-t" x="10.75" y="-9.35" text-anchor="middle">33.5&quot;</text>
-  <text class="dim-t" x="44.25" y="-9.35" text-anchor="middle">33.5&quot;</text>
+  <text class="dim-t" x="11.5" y="-9.35" text-anchor="middle">35&quot;</text>
+  <text class="dim-t" x="45" y="-9.35" text-anchor="middle">32&quot;</text>
 
   <line class="dimline" x1="-6" y1="-12" x2="61" y2="-12"/>
   <line class="tick" x1="-6.45" y1="-11.55" x2="-5.55" y2="-12.45"/>
