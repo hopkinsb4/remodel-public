@@ -1031,9 +1031,20 @@ SWING SETTLED, and it only works one way. Handle on the left going
        rather than butting a caulk joint to it. Set the ledger and the tub
        BEFORE the backer and tile go on - a flanged tub cannot be dropped
        into a finished alcove. -->
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="-140" y="158.7" width="62" height="0.8"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="-140" y="40.5" width="0.8" height="119"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="-78.8" y="109" width="0.8" height="50.5"/>
+  <!-- Lilah tile face, drawn as a zero-depth line at the wall face, not a
+       filled strip with real depth — same schematic convention as the
+       mirror and glass planes elsewhere in this file. A 6"x6" glazed
+       ceramic tile actually runs about 5/16"-3/8" thick over backer
+       board, but that's not drawn here: the wall face (x=-140/-78,
+       y=159.5) already IS the finished tiled surface in this
+       drawing's dimensions, so giving the callout visible depth would
+       read as extra material eating into the room. (Downstairs bath's
+       matching callout was a filled 0.8" rect until it was caught
+       visually overlapping that room's 30" CPC clear circle — fixed
+       there and here for the same reason.) -->
+  <line x1="-140" y1="159.5" x2="-78" y2="159.5" stroke="#6E8A84" stroke-width=".22"/>
+  <line x1="-140" y1="40.5" x2="-140" y2="159.5" stroke="#6E8A84" stroke-width=".22"/>
+  <line x1="-78" y1="109" x2="-78" y2="159.5" stroke="#6E8A84" stroke-width=".22"/>
   <g transform="translate(-108.8,143.7) rotate(180)" fill="none" stroke="#2A2A2A">
     <rect fill="#F3F0EA" stroke-width=".29" x="-30" y="-15" width="60" height="30" rx="1"/>
     <rect stroke-width=".26" x="-26" y="-13" width="52" height="24" rx="3"/>
@@ -1972,14 +1983,25 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- ============ LILAH TILE FACE, NORTH/WEST/SOUTH WALLS ============
        Opal color tile runs floor-to-ceiling on three walls; only the
-       east wall (pocket door) stays paint. Same convention as the
-       primary bath plan: a thin 0.8"-deep strip along the interior
-       wall face, not a full wall-band recolor — same fill/stroke pair
-       used there (#9FBDB6 / #6E8A84) for a consistent tile callout
-       across both bath plans. -->
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="0" y="0" width="61" height="0.8"/>    <!-- north -->
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="0" y="0" width="0.8" height="61"/>    <!-- west -->
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="0" y="60.2" width="61" height="0.8"/> <!-- south -->
+       east wall (pocket door) stays paint.
+       DRAWN AS A ZERO-DEPTH LINE AT THE WALL FACE, not a filled strip
+       with real depth — same schematic convention already used for
+       mirror and glass planes in this file (e.g. the sink mirrors,
+       the medicine-cabinet door). A 6"x6" glazed ceramic tile like
+       Lilah actually runs about 5/16"-3/8" thick over backer board,
+       but that's not drawn here for the same reason the mirrors'
+       real 0.5" glass isn't: the wall face at x=0/y=0/y=61 already
+       IS the finished (tiled) surface in this drawing's dimensions,
+       so adding visible depth on top of it would read as extra
+       material eating into the room. That's what the first version of
+       this callout got wrong — drawn as a filled 0.8" rect, it visibly
+       overlapped the shower's 30" CPC clear circle (centred 15.25,
+       42.5 r=15, clearing the walls by design at just 1/4" a side),
+       making a code-compliant clearance look violated. A line has no
+       such footprint. -->
+  <line x1="0" y1="0" x2="61" y2="0" stroke="#6E8A84" stroke-width=".22"/>   <!-- north -->
+  <line x1="0" y1="0" x2="0" y2="61" stroke="#6E8A84" stroke-width=".22"/>   <!-- west -->
+  <line x1="0" y1="61" x2="61" y2="61" stroke="#6E8A84" stroke-width=".22"/> <!-- south -->
 
   <!-- ============ SHOWER FLOOR: LINEAR DRAIN ============
        Drawn before the sink, which sits on top of it in the NW corner. -->
@@ -2091,16 +2113,11 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ============ ELECTRICAL ============
        Switch bank + outlet on the north wall, east of the cabinet — i.e. by the
        pocket door, where you reach on entering.
-       Second outlet on the SOUTH wall for a possible future smart toilet. It
-       CANNOT go on the east wall: that run (y 31..61) is the pocket-door cavity
-       the slab slides into, so nothing may be let into it. South wall, just east
-       of the tank (tank ends x 55.83), keeps it within cord reach. -->
+       The second outlet this room used to carry on the south wall, for a
+       possible future smart toilet, is cut — not needed. -->
   <rect class="blk" x="56.4" y="-.7" width="2.6" height=".7"/>
   <text class="lbl-s on-dark" x="57.7" y="3.4" text-anchor="middle"
         transform="rotate(-90 57.7 3.4)">sw + outlet</text>
-  <rect class="blk" x="57.2" y="61" width="1.8" height=".7"/>
-  <text class="lbl-s on-dark" x="58.4" y="52" text-anchor="middle"
-        transform="rotate(-90 58.4 52)">outlet (smart WC)</text>
 
   <!-- ============ SHOWER ============ -->
   <!-- 30" code circle: CPC requires a 30" dia. clear circle to fit inside the
@@ -2328,19 +2345,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        Hinge (north jamb) sits flush with the interior/hallway-facing
        wall surface at x=105.5, not centered in the 4.5" wall — same
        convention as the closet door, whose hinge is drawn on the face
-       it swings toward. Shown swung OPEN 15&#176; (closed = leaf flush
-       in the opening, along y=-1.5..28.5; fully open 90&#176; = leaf flat
-       against the wall at (75.5,-1.5); leaf angle = 90 + open-degrees).
-       Drawn as a true point-to-point leaf, not a thick stroke on a
-       centerline: the corner closest to the wall sits exactly on the
-       jamb point (105.5,-1.5), with the leaf's 1.4" thickness carried
-       toward the WALL side (recessed into the opening depth, same side
-       the door occupies when closed and flush with the interior face)
-       rather than toward the hallway — the earlier version put the
+       it swings toward. Shown swung OPEN 45&#176;. Drawn as a true
+       point-to-point leaf, not a thick stroke on a centerline: the
+       corner closest to the wall sits exactly on the jamb point
+       (105.5,-1.5), with the leaf's 1.4" thickness carried toward the
+       WALL side (recessed into the opening depth, same side the door
+       occupies when closed and flush with the interior face) rather
+       than toward the hallway — the earlier version put the
        thickness on the hallway side instead, which meant the leaf's
        true near corner sat 1.4" out past the jamb into the room
        instead of flush at it. The far corner traces the swing radius
-       (door width = 30") from the jamb to (97.74,27.48) and then
+       (door width = 30") from the jamb to (84.29,19.71) and then
        offsets by that same 1.4" toward the wall side to close the
        rectangle, matching the closet door's leaf technique but with
        the thickness on the correct side for this wall's orientation.
@@ -2353,9 +2368,9 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path class="outline" d="M105.5,-10 V-1.5"/>
   <path class="outline" d="M105.5,28.5 V65.5"/>
   <path d="M105.5,28.5 A30,30 0 0,1 75.5,-1.5" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.2 .9"/>
-  <path d="M106.85,-1.14 L99.09,27.84 L97.74,27.48 L105.5,-1.5 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
+  <path d="M106.49,-0.51 L85.28,20.70 L84.29,19.71 L105.5,-1.5 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
   <rect x="86" y="24.5" width="19" height="2.2" rx="1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="95.5" y="25.6" text-anchor="middle" font-size=".85">garage entry door, 30&quot;, open 15&#176;</text>
+  <text class="lbl-s" x="95.5" y="25.6" text-anchor="middle" font-size=".85">garage entry door, 30&quot;, open 45&#176;</text>
   <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall (real dead-end wall) -->
   <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, west stub -->
   <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, east stub -->
