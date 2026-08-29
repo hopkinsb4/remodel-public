@@ -1903,7 +1903,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
       <div style="margin: 16px 0 8px; width: 100%;">
         <svg xmlns="http://www.w3.org/2000/svg" id="mainfloor-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-44.5 -44.5 330 258" role="img"
-     aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch open stairway at the west end, a 6 inch pony wall, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa centered on the entertainment center. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall, then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. Kitchen and dining room have not been drawn yet.">
+     aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch open stairway at the west end, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa centered on the entertainment center. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall, then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. Kitchen and dining room have not been drawn yet.">
   <!--
     93 WATERMAN — MAIN FLOOR PLAN (KITCHEN / DINING ROOM / LIVING ROOM / ENTRYWAY / STAIRS)
     ========================================================================================
@@ -1920,12 +1920,13 @@ Without these the wall band simply runs out into the floor. Six caps:
 
     NORTH WALL, west to east:
       x   0..40   OPEN — 40" wide stairway opening (confirmed, cased).
-      x  40..46   6" pony wall, running N-S, the stair guard visible in
-                  the reference photo as the capped half-wall next to the
-                  built-in. Field measurement: projects ~30" south, with
-                  a small 1" N-S notch at its SE corner (against the
-                  cabinet) rather than a flush square corner.
-      x  46..171  solid wall, entirely covered by the built-in
+      x  40..47   7" pony wall, the stair guard visible in the reference
+                  photo as the capped half-wall next to the built-in —
+                  a simple rectangle, flush with the cabinet on its east
+                  face, extending 1" south of the cabinet's own south
+                  face (cabinet ends at y=23, wall at y=24). Nothing
+                  fancier than that — no notch, no gap.
+      x  47..171  solid wall, entirely covered by the built-in
                   entertainment center (see below) — "covers the whole
                   wall" is exact here, not a figure of speech.
 
@@ -1940,12 +1941,11 @@ Without these the wall band simply runs out into the floor. Six caps:
     the entertainment center's own midline (x=108.5) rather than the
     room's midline, so it faces the TV squarely. No side tables.
 
-    Built-in entertainment center: 46" to 171" (125" wide, the entire
+    Built-in entertainment center: 47" to 171" (124" wide, the entire
     solid run of the north wall east of the pony wall) x 23" deep — both
     confirmed measurements, not estimates.
 
-    Sofa/side-table footprints are still estimated pending confirmed
-    spec sheets — flagged in their own labels below.
+    Sofa footprint is still estimated pending a confirmed spec sheet.
 
     SCALE NOTE: viewBox is exactly 2x the downstairs-bath/primary-bedroom
     plans' viewBox width, and every stroke-width/font-size below is
@@ -2003,17 +2003,17 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- South wall: solid, 146" south of the built-in. -->
   <rect x="-4.5" y="169" width="180" height="4.5" fill="#C9C4B7"/>
 
-  <!-- North wall: 40" stair opening (x0-40, open), 6" pony wall
-       (x40-46), then solid wall carrying the built-in (x46-175.5). -->
+  <!-- North wall: 40" stair opening (x0-40, open), 7" pony wall
+       (x40-47), then solid wall carrying the built-in (x47-175.5). -->
   <rect x="-4.5" y="-4.5" width="4.5" height="4.5" fill="#C9C4B7"/>  <!-- NW corner fill -->
-  <rect x="46" y="-4.5" width="129.5" height="4.5" fill="#C9C4B7"/>
+  <rect x="47" y="-4.5" width="128.5" height="4.5" fill="#C9C4B7"/>
   <line class="outline" x1="0" y1="-4.5" x2="0" y2="0"/>
   <line class="outline" x1="40" y1="-4.5" x2="40" y2="0"/>
-  <rect x="40" y="-4.5" width="5" height="34.5" fill="#C9C4B7"/>
-  <rect x="45" y="-4.5" width="1" height="33.5" fill="#C9C4B7"/>  <!-- 1" N-S notch at the SE corner, against the cabinet -->
-  <line class="outline" x1="40" y1="30" x2="45" y2="30"/>
-  <line class="outline" x1="45" y1="29" x2="45" y2="30"/>
-  <line class="outline" x1="45" y1="29" x2="46" y2="29"/>
+  <!-- Pony wall: a simple 7" thick rectangle, flush with the
+       entertainment center (x40-47), extending 1" south of the
+       cabinet's own south face (cabinet ends at y=23, wall at y=24). -->
+  <rect x="40" y="-4.5" width="7" height="28.5" fill="#C9C4B7"/>
+  <line class="outline" x1="40" y1="24" x2="47" y2="24"/>
 
   <!-- East wall, 9" thick (not the standard 4.5" — confirmed, this is
        the thicker wall that carries the archway to the entryway).
@@ -2090,12 +2090,12 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="outline" x1="236" y1="71" x2="245" y2="71"/>
   <line class="outline" x1="236" y1="121" x2="245" y2="121"/>
 
-  <!-- Built-in entertainment center, north wall — confirmed 46"-171"
-       (125" wide, the whole solid run east of the pony wall), 23" deep,
-       flush against the pony wall (no gap/reveal there). Thin dark bar
-       near the wall face stands for a wall-mounted TV. -->
-  <rect class="cab" x="46" y="0" width="125" height="23"/>
-  <rect class="blk" x="76" y="1.5" width="65" height="2.4"/>
+  <!-- Built-in entertainment center, north wall — 47"-171" (124" wide,
+       the whole solid run east of the 7" pony wall), 23" deep, flush
+       against the pony wall (no gap/reveal). Thin dark bar near the
+       wall face stands for a wall-mounted TV. -->
+  <rect class="cab" x="47" y="0" width="124" height="23"/>
+  <rect class="blk" x="76.5" y="1.5" width="65" height="2.4"/>
 
   <!-- Sleeper sofa, south wall — Povison Mila Power Sofa Bed, 3-seat,
        Dark Olive Green chenille. 88"W x 39"D estimated footprint,
