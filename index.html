@@ -1181,8 +1181,10 @@ SWING SETTLED, and it only works one way. Handle on the left going
 
   <!-- ============ TP HOLDER ============
        Same symbol as the downstairs bath: a bar-style holder, so in plan it
-       is a ~6" bar sitting about an inch off the wall face, roll axis
-       parallel to the wall.
+       is a ~6" bar sitting about 3" off the wall face, roll axis parallel to
+       the wall — bumped from ~1" off the wall, which read as sitting right
+       on it rather than a real bar-style holder's post reach (same fix on
+       both bath plans).
 
        NORTH WALL, centred on x -100.3. That is 10" forward of the bowl front
        at x -110.29, in the middle of the 8-12" the fixture wants. It cannot
@@ -1197,8 +1199,8 @@ SWING SETTLED, and it only works one way. Handle on the left going
        both sides (15.5 / 20.5) and brings the holder to a 15.5" reach. Not
        drawn that way - the bowl is centred, and moving it is a call, not a
        correction. -->
-  <rect x="-103.3" y="1.1" width="6" height="0.6" rx=".3" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16"/>
-  <text class="lbl-s on-dark" x="-100.3" y="5.2" text-anchor="middle" font-size="1.7" >TP holder</text>
+  <rect x="-103.3" y="2.7" width="6" height="0.6" rx=".3" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16"/>
+  <text class="lbl-s on-dark" x="-100.3" y="6.8" text-anchor="middle" font-size="1.7" >TP holder</text>
   <text class="lbl-s on-dark" x="-96" y="44.5" text-anchor="middle" font-size="1.7" >door 28"</text>
 
   <!-- ============ DIMENSIONS INSIDE THE ROOMS ============
@@ -1911,17 +1913,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   </defs>
 
   <!-- ============ SHELL ============ -->
-  <!-- Wall band split into 4 segments so the Lilah-tiled walls can be
-       tinted separately from the one wall that stays paint: Opal color
-       tile runs floor-to-ceiling on the north, west, and south walls;
-       only the east wall (which carries the pocket door) stays paint,
-       so it keeps the plain wall-band tone. Tint color #6C827C matches
-       Lilah's own swatch dot on the bathrooms reflectance chart. -->
-  <rect x="-4.5" y="-4.5" width="70" height="4.5" fill="#6C827C"/>   <!-- north wall band, Lilah tile -->
-  <rect x="-4.5" y="61"   width="70" height="4.5" fill="#6C827C"/>   <!-- south wall band, Lilah tile -->
-  <rect x="-4.5" y="0"    width="4.5" height="61" fill="#6C827C"/>   <!-- west wall band, Lilah tile -->
-  <rect x="61"   y="0"    width="4.5" height="3"  fill="#C9C4B7"/>   <!-- east wall band, paint — north stub, above the pocket door -->
-  <rect x="61"   y="31"   width="4.5" height="30" fill="#C9C4B7"/>   <!-- east wall band, paint — south stub, below the pocket door -->
+  <rect x="-4.5" y="-4.5" width="70" height="70" fill="#C9C4B7"/>   <!-- wall band -->
   <!-- Dawson mosaic rendered across the whole bath floor — the wet/dry
        split reads from the glass line, drain and labels rather than a
        tint change. Labels and linework that sit on the floor use the
@@ -1977,6 +1969,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        Broken on the east wall for the door opening (y 3..31). -->
   <path class="outline" d="M0,0 H61 V3 M61,31 V61 H0 V0"/>
   <rect class="outline" x="-4.5" y="-4.5" width="70" height="70"/>   <!-- outer wall face -->
+
+  <!-- ============ LILAH TILE FACE, NORTH/WEST/SOUTH WALLS ============
+       Opal color tile runs floor-to-ceiling on three walls; only the
+       east wall (pocket door) stays paint. Same convention as the
+       primary bath plan: a thin 0.8"-deep strip along the interior
+       wall face, not a full wall-band recolor — same fill/stroke pair
+       used there (#9FBDB6 / #6E8A84) for a consistent tile callout
+       across both bath plans. -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="0" y="0" width="61" height="0.8"/>    <!-- north -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="0" y="0" width="0.8" height="61"/>    <!-- west -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".16" x="0" y="60.2" width="61" height="0.8"/> <!-- south -->
 
   <!-- ============ SHOWER FLOOR: LINEAR DRAIN ============
        Drawn before the sink, which sits on top of it in the NW corner. -->
@@ -2078,9 +2081,12 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- Towel bar: 12" nominal, ~13.5" overall with the posts, centred on 46.04.
        Narrowed from the 18" nominal (19.92" overall) it was: at that length it
        ran wider than the 16.5" cabinet above it and crowded the switch bank at
-       x 56.4. At 12" it tucks inside the cabinet's width on both sides. -->
-  <line x1="39.29" y1="1.17" x2="52.79" y2="1.17" stroke="#F0EDE6" stroke-width=".25"/>
-  <text class="lbl-s on-dark" x="46.04" y="3" text-anchor="middle">towel bar</text>
+       x 56.4. At 12" it tucks inside the cabinet's width on both sides.
+       PROJECTION off the wall face (y=0) moved from 1.17" to 3" — closer to a
+       real bar-style towel bar's post reach, enough for a folded towel to
+       clear the wall behind it; 1.17" read as barely off the wall. -->
+  <line x1="39.29" y1="3" x2="52.79" y2="3" stroke="#F0EDE6" stroke-width=".25"/>
+  <text class="lbl-s on-dark" x="46.04" y="4.8" text-anchor="middle">towel bar</text>
 
   <!-- ============ ELECTRICAL ============
        Switch bank + outlet on the north wall, east of the cabinet — i.e. by the
@@ -2157,8 +2163,12 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="red-t" x="45.79" y="6.5" text-anchor="middle" style="fill:#D98D75">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
 
   <!-- ============ EAST WALL ============ -->
-  <rect x="59.75" y="35.08" width=".33" height="5.92" fill="#fff" stroke="#2A2A2A" stroke-width=".07"/>               <!-- TP holder -->
-  <text class="lbl-s on-dark" x="58.6" y="38" text-anchor="middle" transform="rotate(-90 58.6 38)">TP holder</text>
+  <!-- TP holder: bar-style, roll axis parallel to the wall. Moved from
+       ~1" off the wall face (x=61) to ~3", the same fix and the same
+       reasoning as the primary bath's holder — 1" read as sitting right
+       on the wall rather than a real bar-style holder's post reach. -->
+  <rect x="57.84" y="35.08" width=".33" height="5.92" fill="#fff" stroke="#2A2A2A" stroke-width=".07"/>               <!-- TP holder -->
+  <text class="lbl-s on-dark" x="56.69" y="38" text-anchor="middle" transform="rotate(-90 56.69 38)">TP holder</text>
   <!-- the pocket itself — the full 30" cavity the slab retracts into — drawn
        dashed at full depth, independent of wherever the leaf below happens
        to be illustrated. Without this, showing the leaf "half-open" reads
