@@ -2331,13 +2331,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        door hinges on the face it swings toward, so the hinge belongs
        on the hallway side of the jamb, not the closet side.
        Handle on the west, out-swing (opens south, into the hallway).
-       Swing arc dashed (the reference envelope, not a real edge); the
-       slab itself drawn solid at 45 degrees open — tip = hinge +
-       28x(cos135,sin135) = (79.7,14.3) — in the same
-       white-with-black-border convention as the pocket door slab. -->
+       Swing arc dashed (the reference envelope, not a real edge). The
+       leaf itself is a true point-to-point rectangle, not a thick
+       stroke on a centerline: the near-hinge corner sits exactly on
+       the jamb point (99.5,-5.5), the far corner traces the swing
+       radius (door width = 28") to (79.70,14.30), and the leaf's
+       1.4" thickness is carried perpendicular to the leaf
+       (thickness-axis angle = leaf-axis angle + 90&#176;, rotating
+       rigidly with the leaf) rather than via stroke width — same
+       convention now used for the garage door. -->
   <path d="M71.5,-5.5 A28,28 0 0,0 99.5,22.5" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.2 .9"/>
-  <line x1="99.5" y1="-5.5" x2="79.7" y2="14.3" stroke="#2A2A2A" stroke-width="1.6" stroke-linecap="square"/>
-  <line x1="99.5" y1="-5.5" x2="79.7" y2="14.3" stroke="#fff" stroke-width="1.2" stroke-linecap="square"/>
+  <path d="M99.5,-5.5 L79.70,14.30 L78.71,13.31 L98.51,-6.49 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
   <rect x="77.5" y="-3.6" width="18" height="2.2" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="86.5" y="-2.5" text-anchor="middle" font-size=".85">closet door, 28&quot;x80&quot;, out-swing</text>
 
