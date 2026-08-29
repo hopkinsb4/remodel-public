@@ -2133,19 +2133,24 @@ Without these the wall band simply runs out into the floor. Six caps:
        those three 34" cushions land when the power seat extends from
        its 32" minimum to its 59" maximum depth — 59-32 = 27" of
        travel past the seated front edge (y=117 out to y=90), with the
-       cushion seams continued through the extended zone. Drawn as
-       three black-filled 34x27 rects, one per cushion, each with a
-       thin white outline. -->
+       cushion seams continued through the extended zone. Drawn as a
+       white stroke over-struck by a thinner black one, giving a
+       white/black/white sandwich. -->
   <path class="sofa" d="M 45,117 L 171,117 L 171,159 A 10,10 0 0 1 161,169 L 55,169 A 10,10 0 0 1 45,159 Z"/>
   <line class="sofa-seam" x1="50" y1="149" x2="166" y2="149"/>
   <line class="sofa-seam" x1="57" y1="117" x2="57" y2="149"/>
   <line class="sofa-seam" x1="159" y1="117" x2="159" y2="149"/>
   <line class="sofa-seam" x1="91" y1="117" x2="91" y2="149"/>
   <line class="sofa-seam" x1="125" y1="117" x2="125" y2="149"/>
-  <g fill="#000000" stroke="#FFFFFF" stroke-width=".3">
-    <rect x="57" y="90" width="34" height="27"/>
-    <rect x="91" y="90" width="34" height="27"/>
-    <rect x="125" y="90" width="34" height="27"/>
+  <g stroke="#FFFFFF" stroke-width="1" fill="none" stroke-linecap="butt">
+    <path d="M 57,117 L 57,90 L 159,90 L 159,117"/>
+    <line x1="91" y1="90" x2="91" y2="117"/>
+    <line x1="125" y1="90" x2="125" y2="117"/>
+  </g>
+  <g stroke="#000000" stroke-width=".34" fill="none" stroke-linecap="butt">
+    <path d="M 57,117 L 57,90 L 159,90 L 159,117"/>
+    <line x1="91" y1="90" x2="91" y2="117"/>
+    <line x1="125" y1="90" x2="125" y2="117"/>
   </g>
   <text class="dim-onsofa" x="108" y="131" text-anchor="middle" font-size="1.6">34&quot; x 3 cushions extend 27&quot; (32&quot;&#8594;59&quot; depth)</text>
   <line class="extline" x1="45" y1="113" x2="45" y2="110"/>
