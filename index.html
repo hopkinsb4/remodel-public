@@ -2274,6 +2274,25 @@ Without these the wall band simply runs out into the floor. Six caps:
        y=-10, 5.5" short of it). -->
   <rect x="61"   y="-101.5" width="4.5" height="97" fill="#C9C4B7"/>  <!-- west wall -->
   <rect x="105.5" y="-101.5" width="4.5" height="91.5" fill="#C9C4B7"/> <!-- east wall -->
+
+  <!-- GARAGE ENTRY DOOR — new field info: a 30"-wide door with its
+       hinge 4" south of the closet door's own hinge (99.5,-10),
+       "hinges close together." Placed on the closet's own east wall
+       (x=105.5) continuing south past the closet doorway, into the
+       hallway — the nearest real wall already in this drawing, and
+       the most direct reading of "close together." FLAG THIS
+       ASSUMPTION: if the real wall is elsewhere (a different jamb,
+       not a continuation of this one), move it — nothing south of
+       here is otherwise documented, so the wall run past the door
+       (below) is schematic, not a measured length.
+       Shown CLOSED per instruction: no swing arc, just the slab lying
+       flush in its opening, in the same white-with-black-border
+       convention as the closet door. Hinge at (105.5,-6); opening
+       spans y=-6..24 (30"). -->
+  <rect x="105.5" y="-10" width="4.5" height="4" fill="#C9C4B7"/>
+  <rect x="105.5" y="24" width="4.5" height="6" fill="#C9C4B7"/>
+  <rect x="105.9" y="-6" width="3.2" height="30" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
+  <text class="lbl-s" x="112" y="9" text-anchor="middle" font-size=".85" transform="rotate(-90 112 9)">garage entry door, 30&quot;, closed</text>
   <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall (real dead-end wall) -->
   <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, west stub -->
   <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, east stub -->
@@ -2282,12 +2301,17 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="65.5" y="-97" width="40" height="87" fill="url(#dsbath-check)"/>
   <path class="outline" d="M71.5,-10 H65.5 V-97 H105.5 V-10 H99.5"/>
 
-  <!-- door: hinge at the east jamb, handle on the west, out-swing (opens
-       south, into the hallway) -->
-  <line x1="99.5" y1="-10" x2="99.5" y2="18" stroke="#2A2A2A" stroke-width=".18"/>
-  <path d="M71.5,-10 A28,28 0 0,0 99.5,18" fill="none" stroke="#2A2A2A" stroke-width=".1"/>
-  <rect x="77.5" y="-3.6" width="16" height="2.2" rx="1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="85.5" y="-2.5" text-anchor="middle" font-size=".85">closet door, 28&quot;, out-swing</text>
+  <!-- door: hinge at the east jamb (99.5,-10), handle on the west,
+       out-swing (opens south, into the hallway). Swing arc dashed
+       (the reference envelope, not a real edge); the slab itself drawn
+       solid at 45 degrees open — tip = hinge + 28x(cos135,sin135) =
+       (79.7,9.8) — in the same white-with-black-border convention as
+       the pocket door slab, rather than left unrepresented. -->
+  <path d="M71.5,-10 A28,28 0 0,0 99.5,18" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.2 .9"/>
+  <line x1="99.5" y1="-10" x2="79.7" y2="9.8" stroke="#2A2A2A" stroke-width="1.6" stroke-linecap="square"/>
+  <line x1="99.5" y1="-10" x2="79.7" y2="9.8" stroke="#fff" stroke-width="1.2" stroke-linecap="square"/>
+  <rect x="77.5" y="-3.6" width="18" height="2.2" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="86.5" y="-2.5" text-anchor="middle" font-size=".85">closet door, 28&quot;x80&quot;, out-swing</text>
 
   <!-- ============ CLOSET FIT-OUT: CLOTHES ROD ============
        Matte black hardware in the real spec (the house hardware
@@ -2443,21 +2467,15 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s" x="85.5" y="-52" text-anchor="middle" font-size=".85">granite counter @ 46&quot; &#8212; wraps the bank, 6&quot; inside chamfer</text>
   <text class="lbl-s" x="85.5" y="-50.4" text-anchor="middle" font-size=".75" fill="#8B979A">rod @ 42&quot; below + under-counter LED &#8212; tees 6&quot; off floor</text>
 
-  <!-- headroom contour lines, dashed, at five key depths rather than
+  <!-- headroom contour lines, dashed, at four key depths rather than
        arbitrary round numbers — each tied to an actual feature. Labels
        sit on the WEST side and share one format,
-       "X" @ Y" in — description", the dead-end included.
+       "X" @ Y" in — description", the dead-end included. (The door's
+       own 80" standard height is called out with the "closet door"
+       label near the door itself, not here — it's a fixed door-slab
+       spec, not a computed ceiling headroom figure like these four.)
        Heights all computed against the field-measured 62/87 slope:
        H(d) = 93 - (62/87)d.
-       0) ENTRY DOOR, d=0 (the door plane, y=-10): not a computed
-          headroom figure but the standard interior door height, 80",
-          shown for scale against the ceiling right there (93", already
-          called out elsewhere as the field-measured figure at the
-          door) — 13" of clearance above the door head before the
-          slope even starts. Label text sits at y=-20, clear of the
-          bathroom's own 61" width dimension crossing this same margin
-          around y=-12/-13; the dashed line itself is still drawn at
-          the accurate d=0 (y=-10).
        1) MIRROR CENTER, d=18 (the mirror's own centerline, d 8..28):
           H(18) = 80.17" = 80&#8539;".
        2) STANDING LIMIT, MOVED to d=36 (y=-46) — the next counter edge
@@ -2472,9 +2490,6 @@ Without these the wall band simply runs out into the floor. Six caps:
           edge line.
        4) FULL DEPTH, d=87: the field-measured dead end at 31" — a real
           measurement, not a calculated contour, called out as such. -->
-  <line class="code" x1="65.5" y1="-10" x2="105.5" y2="-10"/>
-  <text class="code-t" x="60.5" y="-20" text-anchor="end" font-size=".85">80&quot; @ 0&quot; in &#8212; entry door height (standard)</text>
-
   <line class="code" x1="65.5" y1="-28" x2="105.5" y2="-28"/>
   <text class="code-t" x="60.5" y="-28" text-anchor="end" font-size=".85">80&#8539;&quot; @ 18&quot; in &#8212; mirror center</text>
 
