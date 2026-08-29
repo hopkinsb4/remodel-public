@@ -1923,8 +1923,9 @@ Without these the wall band simply runs out into the floor. Six caps:
       x  40..46   6" pony wall, running N-S, the stair guard visible in
                   the reference photo as the capped half-wall next to the
                   built-in. Its projection south into the room isn't
-                  measured yet, so it's drawn to an estimated 34" and
-                  flagged — everything else on this wall is confirmed.
+                  measured yet, so it's drawn to an estimated 34" (as a
+                  real wall now, not a placeholder outline) — everything
+                  else on this wall is confirmed.
       x  46..171  solid wall, entirely covered by the built-in
                   entertainment center (see below) — "covers the whole
                   wall" is exact here, not a figure of speech.
@@ -2001,12 +2002,8 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="46" y="-4.5" width="129.5" height="4.5" fill="#C9C4B7"/>
   <line class="outline" x1="0" y1="-4.5" x2="0" y2="0"/>
   <line class="outline" x1="40" y1="-4.5" x2="40" y2="0"/>
-  <rect class="tbd" x="40" y="0" width="6" height="34" fill="none"/>
-  <line class="tbd" x1="43" y1="34" x2="43" y2="21"/>
-  <line class="tbd" x1="43" y1="21" x2="40" y2="21"/>
-  <rect class="plate" x="6" y="14" width="34" height="14" rx="1"/>
-  <text class="tbd-t" x="23" y="18.5" text-anchor="middle" font-size="1.5">pony wall, 6&quot; thick</text>
-  <text class="tbd-t" x="23" y="22.5" text-anchor="middle" font-size="1.5">length est. (34&quot;)</text>
+  <rect x="40" y="0" width="6" height="34" fill="#C9C4B7"/>
+  <line class="outline" x1="40" y1="34" x2="46" y2="34"/>
 
   <!-- East wall, 9" thick (not the standard 4.5" — confirmed, this is
        the thicker wall that carries the archway to the entryway).
@@ -2052,8 +2049,12 @@ Without these the wall band simply runs out into the floor. Six caps:
        no matching flare is drawn there. The door's position within the
        56" south wall run is assumed centered. -->
   <rect x="180" y="69" width="56" height="59" fill="url(#mainfloor-check)"/>  <!-- entryway floor -->
-  <rect class="plate" x="188" y="92" width="39" height="8" rx="1"/>
-  <text class="dim-s" x="190" y="96" text-anchor="start">50&quot; archway</text>
+
+  <!-- Entryway north wall — its own thickness/extent wasn't separately
+       measured, so drawn at the standard 4.5" (matching the assumed
+       south wall) for the full 56" run, closing off the room instead of
+       leaving it open to nothing. -->
+  <rect x="180" y="64.5" width="56" height="4.5" fill="#C9C4B7"/>
 
   <!-- Step/jog at the living-room-side wall face: the entryway's own
        walls set back from the 71-121 archway line by 2" (north) and 7"
@@ -2062,10 +2063,6 @@ Without these the wall band simply runs out into the floor. Six caps:
        since its own depth into the wall isn't specified). -->
   <line class="outline" x1="180" y1="69" x2="184.5" y2="69"/>
   <line class="outline" x1="180" y1="128" x2="184.5" y2="128"/>
-  <rect class="plate" x="185" y="66.5" width="16" height="5" rx="1"/>
-  <text class="dim-s" x="193" y="69" text-anchor="middle" font-size="1.3">2&quot; setback</text>
-  <rect class="plate" x="185" y="123.5" width="16" height="5" rx="1"/>
-  <text class="dim-s" x="193" y="126" text-anchor="middle" font-size="1.3">7&quot; setback</text>
 
   <!-- Entryway south wall, 4.5" (standard), with the 32" front entry
        door centered in the 56" run — position assumed, not confirmed.
@@ -2078,9 +2075,11 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="outline" x1="192" y1="128" x2="192" y2="132.5"/>
   <line class="outline" x1="224" y1="128" x2="224" y2="132.5"/>
   <rect class="fix" x="192" y="129.55" width="32" height="1.4"/>
-  <rect class="plate" x="184" y="135" width="44" height="11" rx="1"/>
-  <text class="tbd-t" x="206" y="138.5" text-anchor="middle" font-size="1.5">32&quot; front door, hinged E</text>
-  <text class="tbd-t" x="206" y="142" text-anchor="middle" font-size="1.5">(closed; position assumed)</text>
+  <!-- Swing sweep, hinged east (x=224): leaf shown open, pivoted 90°
+       into the entryway, with the arc tracing back to the closed
+       position at the west jamb (matching the closed slab above). -->
+  <line class="thin" x1="224" y1="128" x2="224" y2="96"/>
+  <path class="thin" d="M224,96 A32,32 0 0 0 192,128" fill="none"/>
 
   <!-- Second 9"-thick wall, entryway to kitchen, with its own 50" arch
        (assumed aligned with the first at y 71-121 — flagged; the
@@ -2088,17 +2087,12 @@ Without these the wall band simply runs out into the floor. Six caps:
        flare, so none is drawn here). -->
   <line class="outline" x1="236" y1="71" x2="245" y2="71"/>
   <line class="outline" x1="236" y1="121" x2="245" y2="121"/>
-  <rect class="plate" x="238" y="92" width="24" height="8" rx="1"/>
-  <text class="lbl-s" x="250" y="96" text-anchor="start">to kitchen</text>
 
   <!-- Built-in entertainment center, north wall — confirmed 46"-171"
        (125" wide, the whole solid run east of the pony wall), 23" deep.
        Thin dark bar near the wall face stands for a wall-mounted TV. -->
   <rect class="cab" x="46" y="0" width="125" height="23"/>
   <rect class="blk" x="76" y="1.5" width="65" height="2.4"/>
-  <rect class="plate" x="78.5" y="10.5" width="60" height="8" rx="1"/>
-  <text class="lbl" x="108.5" y="13.7" text-anchor="middle">built-in entertainment center</text>
-  <text class="lbl-s" x="108.5" y="17.2" text-anchor="middle">existing, kept — 23&quot; deep, full wall run</text>
 
   <!-- Sleeper sofa, south wall — Povison Mila Power Sofa Bed, 3-seat.
        88"W x 39"D estimated footprint, centered on the wall, back to
@@ -2106,22 +2100,12 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect class="fix" x="41.5" y="130" width="88" height="39" rx="3"/>
   <line class="thin" x1="70.83" y1="130" x2="70.83" y2="169"/>
   <line class="thin" x1="100.17" y1="130" x2="100.17" y2="169"/>
-  <rect class="plate" x="55.5" y="140" width="60" height="12" rx="1"/>
-  <text class="lbl" x="85.5" y="143.7" text-anchor="middle">sleeper sofa</text>
-  <text class="lbl-s" x="85.5" y="147.2" text-anchor="middle">Povison Mila, power recliner</text>
-  <text class="lbl-s" x="85.5" y="150.4" text-anchor="middle" font-style="italic">(footprint estimated, pending spec)</text>
 
   <!-- Side tables flanking the sofa — West Elm Ellington, round marble
        top on a fluted wood drum base, ~18" dia x 20"H. Flush to the
        south wall, 3" clear of the sofa's arms either side. -->
   <circle class="fix" cx="29.5" cy="159" r="9"/>
   <circle class="fix" cx="141.5" cy="159" r="9"/>
-  <rect class="plate" x="12" y="141.5" width="35" height="10" rx="1"/>
-  <text class="lbl-s" x="29.5" y="145" text-anchor="middle">Ellington side table</text>
-  <text class="lbl-s" x="29.5" y="148.3" text-anchor="middle" font-style="italic">(~18&quot; dia, approx.)</text>
-  <rect class="plate" x="124" y="141.5" width="35" height="10" rx="1"/>
-  <text class="lbl-s" x="141.5" y="145" text-anchor="middle">Ellington side table</text>
-  <text class="lbl-s" x="141.5" y="148.3" text-anchor="middle" font-style="italic">(~18&quot; dia, approx.)</text>
 
   <!-- ============ OVERALL DIMENSIONS ============ -->
   <!-- Width, along the north side: 171" living room / 9" wall / 56"
@@ -2154,10 +2138,6 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="-21.2" y1="172.3" x2="-18.8" y2="174.7"/>
   <text class="dim-big" x="-23.5" y="98.25" text-anchor="middle" transform="rotate(-90 -23.5 98.25)">146&quot;</text>
 
-  <!-- Stair opening width, 40", called out along the north wall itself. -->
-  <text class="dim-s" x="20" y="-1.8" text-anchor="middle">40&quot; opening</text>
-  <rect class="plate" x="8" y="3" width="24" height="7" rx="1"/>
-  <text class="lbl-s" x="20" y="6.8" text-anchor="middle">stairway</text>
 </svg>
         <p style="font-size: 12px; color: #777; max-width: 320px; margin-top: 8px;">Main floor plan, first pass — only the living room is drawn to scale so far (171" x 147"). Kitchen, dining room, entryway and stairs will get their own wings added here in later passes.</p>
       </div>
