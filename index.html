@@ -2124,24 +2124,23 @@ Without these the wall band simply runs out into the floor. Six caps:
        it's pushed flush to the room's east wall (x=45-171) rather than
        centered exactly on the cabinet's own midline (x=109) — center
        lands at x=108, 1" off, rather than let it run 1" past the wall.
-       Shape: a plain 126"x79" rectangle, per explicit instruction —
-       the earlier pass traced a rounded/asymmetric silhouette off the
-       product photo, but a fresh trace over the same photo (mouse-
-       drawn bounding box around the mattress area) came back
-       essentially rectilinear, so the rounded corners are dropped
-       entirely rather than re-fit.
-       Cushion seams: 2 vertical (full depth) splitting the 3-seat/
-       3-back-cushion width into thirds, 1 horizontal separating the
-       back bolster zone from the seat zone — matching the seam layout
-       visible in the reference photos, not just the outer envelope.
+       Shape: rectilinear composite traced from the user's green boxes
+       on the manufacturer's top-down bed photo (no rounded corners):
+         - mattress deck, ~100" x 59", front and center (y=90..149);
+         - back rail across the full 126" behind it (y=149..169);
+         - arm/bolster caps, ~13" wide at each end, wrapping forward
+           from the back but stopping ~18" short of the front edge
+           (y=108..169).
+       Drawn as the union outline (8-corner polygon) with seam lines
+       where the component boxes meet.
        Dashed black line: the UPRIGHT SEATED depth (52", confirmed
        spec) measured from the same fixed back/wall — i.e. where the
        sofa's front edge sits before it's pulled out into the bed
        shown here. -->
-  <rect class="sofa" x="45" y="90" width="126" height="79"/>
-  <line class="sofa-seam" x1="87" y1="90" x2="87" y2="169"/>
-  <line class="sofa-seam" x1="129" y1="90" x2="129" y2="169"/>
-  <line class="sofa-seam" x1="46" y1="144" x2="170" y2="144"/>
+  <path class="sofa" d="M 58,90 L 158,90 L 158,108 L 171,108 L 171,169 L 45,169 L 45,108 L 58,108 Z"/>
+  <line class="sofa-seam" x1="58" y1="108" x2="58" y2="169"/>
+  <line class="sofa-seam" x1="158" y1="108" x2="158" y2="169"/>
+  <line class="sofa-seam" x1="58" y1="149" x2="158" y2="149"/>
   <line x1="46" y1="117" x2="170" y2="117" stroke="#000" stroke-width=".22" stroke-dasharray="1.4 1"/>
   <text class="dim-onsofa" x="108" y="121" text-anchor="middle" font-size="1.6">52&quot; seated depth</text>
   <line class="extline" x1="45" y1="86" x2="45" y2="83"/>
