@@ -1903,7 +1903,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
       <div style="margin: 16px 0 8px; width: 100%;">
         <svg xmlns="http://www.w3.org/2000/svg" id="mainfloor-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-44.5 -44.5 330 258" role="img"
-     aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch open stairway at the west end, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa centered on the entertainment center. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall, then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. Kitchen and dining room have not been drawn yet.">
+     aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch open stairway at the west end, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa drawn in its extended sleeping position, 126 by 79 inches. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall, then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. Kitchen and dining room have not been drawn yet.">
   <!--
     93 WATERMAN — MAIN FLOOR PLAN (KITCHEN / DINING ROOM / LIVING ROOM / ENTRYWAY / STAIRS)
     ========================================================================================
@@ -1937,15 +1937,17 @@ Without these the wall band simply runs out into the floor. Six caps:
       y 121..169  solid, 48"
       (23 + 48 + 50 + 48 = 169.)
 
-    SOUTH WALL, 146" south of the built-in: sleeper sofa, centered on
-    the entertainment center's own midline (x=108.5) rather than the
-    room's midline, so it faces the TV squarely. No side tables.
+    SOUTH WALL, 146" south of the built-in: sleeper sofa, drawn in its
+    sleeping position (126"x79", confirmed spec), pushed flush to the
+    east wall since it's 2" wider than the cabinet. No side tables.
 
     Built-in entertainment center: 47" to 171" (124" wide, the entire
     solid run of the north wall east of the pony wall) x 23" deep — both
     confirmed measurements, not estimates.
 
-    Sofa footprint is still estimated pending a confirmed spec sheet.
+    Sofa: Povison Mila Power Sofa Bed, confirmed manufacturer spec —
+    126.0"L x 52.0"W seated, 126.0"L x 79.0"W extended (sleeping
+    position, drawn here).
 
     SCALE NOTE: viewBox is exactly 2x the downstairs-bath/primary-bedroom
     plans' viewBox width, and every stroke-width/font-size below is
@@ -1963,10 +1965,10 @@ Without these the wall band simply runs out into the floor. Six caps:
          sampled from the actual product photo. */
       #mainfloor-plan .sofa    { fill:#5F5D3C; stroke:#3A3924; stroke-width:.28; }
       #mainfloor-plan .sofa-seam { fill:none; stroke:#3A3924; stroke-width:.22; }
-      /* Sofa-bed extended footprint — dashed outline, same family as
-         the sofa's own fabric tone, since it's an alternate state of
-         the same piece rather than separate/unresolved geometry. */
-      #mainfloor-plan .sofa-bed { fill:none; stroke:#5F5D3C; stroke-width:.2; stroke-dasharray:1.3 1; }
+      /* Dimension text placed over the sofa's own dark fill needs a
+         light color to stay legible, same idea as the bath plans'
+         on-dark label variant. */
+      #mainfloor-plan .dim-onsofa { font:1.9px 'Helvetica Neue',Arial,sans-serif; fill:#EDE9DD; }
       #mainfloor-plan .blk     { fill:#2A2A2A; }
       #mainfloor-plan .lbl     { font:1.9px 'Helvetica Neue',Arial,sans-serif; fill:#3A3A3A; }
       #mainfloor-plan .lbl-s   { font:1.7px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
@@ -2025,12 +2027,25 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="outline" x1="171" y1="71" x2="180" y2="71"/>
   <line class="outline" x1="171" y1="121" x2="180" y2="121"/>
 
-  <!-- East wall's two 48" solid segments — labeled directly inside the
-       9" wall cavity (x=175.5, its centerline) rather than a full
-       dimension chain in the margin; the wall is wide enough to carry
-       the rotated text on its own. -->
-  <text class="dim-s" x="175.5" y="47" text-anchor="middle" transform="rotate(-90 175.5 47)">48&quot;</text>
-  <text class="dim-s" x="175.5" y="145" text-anchor="middle" transform="rotate(-90 175.5 145)">48&quot;</text>
+  <!-- East wall's two 48" solid segments — full dimension lines (extension
+       lines + ticked dimension line) in the margin east of the wall,
+       drawn to the same scale/convention as every other dimension on
+       this sheet. Labeled with which corner each one sits at: the
+       northern segment runs down from the cabinet's own SE corner, the
+       southern segment runs up to the room's actual SE corner. -->
+  <line class="extline" x1="180" y1="23" x2="189" y2="23"/>
+  <line class="extline" x1="180" y1="71" x2="189" y2="71"/>
+  <line class="dimline" x1="187" y1="23" x2="187" y2="71"/>
+  <line class="tick" x1="185.8" y1="21.8" x2="188.2" y2="24.2"/>
+  <line class="tick" x1="185.8" y1="69.8" x2="188.2" y2="72.2"/>
+  <text class="dim-s" x="190" y="47" text-anchor="middle" transform="rotate(-90 190 47)">48&quot; (cabinet's SE corner)</text>
+
+  <line class="extline" x1="180" y1="121" x2="189" y2="121"/>
+  <line class="extline" x1="180" y1="169" x2="189" y2="169"/>
+  <line class="dimline" x1="187" y1="121" x2="187" y2="169"/>
+  <line class="tick" x1="185.8" y1="119.8" x2="188.2" y2="122.2"/>
+  <line class="tick" x1="185.8" y1="167.8" x2="188.2" y2="170.2"/>
+  <text class="dim-s" x="190" y="145" text-anchor="middle" transform="rotate(-90 190 145)">48&quot; (room's SE corner)</text>
 
   <!-- ============ ENTRYWAY (east of the living room) ============
        Confirmed: both cross walls (living room/entryway and
@@ -2098,37 +2113,35 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect class="blk" x="76.5" y="1.5" width="65" height="2.4"/>
 
   <!-- Sleeper sofa, south wall — Povison Mila Power Sofa Bed, 3-seat,
-       Dark Olive Green chenille. 88"W x 39"D estimated footprint,
-       centered on the built-in entertainment center's own midline
-       (x=108.5) rather than the room's midline (x=85.5), so it sits
-       directly in front of the TV.
-       BACK is against the south wall (the rear ~13", y 156-169) — the
-       tall back cushions sit against the wall, same as any sofa; SEAT
-       cushions face north into the room (the front ~26", y 130-156),
-       toward the TV. (Previously drawn reversed, back cushions facing
-       the room — fixed.)
-       Styled off the actual product photo: a rounded, pillowy "cloud
-       sofa" silhouette (large corner radius, not a hard-edged box) —
-       3 plump seat cushions, 3 matching back cushions whose seams line
-       up with the seat cushions below, and thick rounded bolster arms
-       at both ends (the wide corner radius stands in for those without
-       a separate shape). -->
-  <rect class="sofa" x="64.5" y="130" width="88" height="39" rx="11"/>
-  <line class="sofa-seam" x1="93.83" y1="130" x2="93.83" y2="169"/>
-  <line class="sofa-seam" x1="123.17" y1="130" x2="123.17" y2="169"/>
-  <path class="sofa-seam" d="M69,156 Q108.5,153 148,156"/>
-
-  <!-- Sofa-bed, extended — per the manufacturer's own top-down photo,
-       the bed surface runs 59" front-to-back (vs. 39" seated), pulling
-       out 20" further north; width unchanged at 88". Back stays fixed
-       at the wall, so the extension is drawn growing into the room. -->
-  <rect class="sofa-bed" x="64.5" y="110" width="88" height="59" rx="11"/>
-  <line class="extline" x1="60" y1="110" x2="56" y2="110"/>
-  <line class="extline" x1="60" y1="169" x2="56" y2="169"/>
-  <line class="dimline" x1="58" y1="110" x2="58" y2="169"/>
-  <line class="tick" x1="56.8" y1="108.8" x2="59.2" y2="111.2"/>
-  <line class="tick" x1="56.8" y1="167.8" x2="59.2" y2="170.2"/>
-  <text class="dim-s" x="55" y="139.5" text-anchor="middle" transform="rotate(-90 55 139.5)">59&quot; bed, extended</text>
+       Dark Olive Green chenille. Manufacturer spec (confirmed):
+         Overall (seated):  126.0"L x 52.0"W x 33.5"H, legs 2", seat
+                             height 18", seat depth adjusts 32"-59".
+         Overall (extended, sleeping position): 126.0"L x 79.0"W.
+       Drawn here in the SLEEPING position (the full 126x79 envelope),
+       not the seated 126x52 — this is the footprint that actually
+       needs to clear the room. Back stays fixed at the south wall;
+       126" wide is 2" more than the 124"-wide entertainment center, so
+       it's pushed flush to the room's east wall (x=45-171) rather than
+       centered exactly on the cabinet's own midline (x=109) — center
+       lands at x=108, 1" off, rather than let it run 1" past the wall.
+       Shape: a large corner radius on all four corners for the actual
+       product's rounded, pillowy "cloud sofa" silhouette (bulbous ends,
+       not a hard-edged box), traced from the manufacturer's own
+       top-down bed-configuration photo. Whole envelope shaded solid —
+       no separate cushion divisions in this configuration. -->
+  <rect class="sofa" x="45" y="90" width="126" height="79" rx="36"/>
+  <line class="extline" x1="45" y1="86" x2="45" y2="83"/>
+  <line class="extline" x1="171" y1="86" x2="171" y2="83"/>
+  <line class="dimline" x1="45" y1="85" x2="171" y2="85"/>
+  <line class="tick" x1="43.8" y1="83.8" x2="46.2" y2="86.2"/>
+  <line class="tick" x1="169.8" y1="83.8" x2="172.2" y2="86.2"/>
+  <text class="dim-onsofa" x="108" y="99" text-anchor="middle">126&quot; (sleeping position)</text>
+  <line class="extline" x1="41" y1="90" x2="38" y2="90"/>
+  <line class="extline" x1="41" y1="169" x2="38" y2="169"/>
+  <line class="dimline" x1="39" y1="90" x2="39" y2="169"/>
+  <line class="tick" x1="37.8" y1="88.8" x2="40.2" y2="91.2"/>
+  <line class="tick" x1="37.8" y1="167.8" x2="40.2" y2="170.2"/>
+  <text class="dim-onsofa" x="52" y="129.5" text-anchor="middle" transform="rotate(-90 52 129.5)">79&quot; extended</text>
 
   <!-- ============ OVERALL DIMENSIONS ============ -->
   <!-- Width, along the north side: 171" living room (wall-to-wall
