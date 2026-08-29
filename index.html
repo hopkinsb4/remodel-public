@@ -1960,6 +1960,10 @@ Without these the wall band simply runs out into the floor. Six caps:
       #mainfloor-plan .thin    { fill:none; stroke:#2A2A2A; stroke-width:.166; }
       #mainfloor-plan .fix     { fill:#fff; stroke:#2A2A2A; stroke-width:.234; }
       #mainfloor-plan .cab     { fill:#EAE6DC; stroke:#2A2A2A; stroke-width:.234; }
+      /* Sleeper sofa — dark olive green chenille (Povison Mila),
+         sampled from the actual product photo. */
+      #mainfloor-plan .sofa    { fill:#5F5D3C; stroke:#3A3924; stroke-width:.28; }
+      #mainfloor-plan .sofa-seam { fill:none; stroke:#3A3924; stroke-width:.22; }
       #mainfloor-plan .blk     { fill:#2A2A2A; }
       #mainfloor-plan .lbl     { font:1.9px 'Helvetica Neue',Arial,sans-serif; fill:#3A3A3A; }
       #mainfloor-plan .lbl-s   { font:1.7px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
@@ -2096,14 +2100,22 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect class="cab" x="46" y="0" width="125" height="23"/>
   <rect class="blk" x="76" y="1.5" width="65" height="2.4"/>
 
-  <!-- Sleeper sofa, south wall — Povison Mila Power Sofa Bed, 3-seat.
-       88"W x 39"D estimated footprint, back to the wall, centered on
-       the built-in entertainment center's own midline (x=108.5) rather
-       than the room's midline (x=85.5), so it sits directly in front
-       of the TV; two seam lines suggest a 3-cushion back. -->
-  <rect class="fix" x="64.5" y="130" width="88" height="39" rx="3"/>
-  <line class="thin" x1="93.83" y1="130" x2="93.83" y2="169"/>
-  <line class="thin" x1="123.17" y1="130" x2="123.17" y2="169"/>
+  <!-- Sleeper sofa, south wall — Povison Mila Power Sofa Bed, 3-seat,
+       Dark Olive Green chenille. 88"W x 39"D estimated footprint, back
+       to the wall, centered on the built-in entertainment center's own
+       midline (x=108.5) rather than the room's midline (x=85.5), so it
+       sits directly in front of the TV.
+       Styled off the actual product photo: a rounded, pillowy "cloud
+       sofa" silhouette (large corner radius, not a hard-edged box) —
+       3 plump seat cushions in the front ~26", 3 matching back
+       cushions in the rear ~13" (their seams line up with the seat
+       cushions below, per the photo), and thick rounded bolster arms
+       at both ends (the wide corner radius stands in for those without
+       a separate shape). -->
+  <rect class="sofa" x="64.5" y="130" width="88" height="39" rx="11"/>
+  <line class="sofa-seam" x1="93.83" y1="130" x2="93.83" y2="169"/>
+  <line class="sofa-seam" x1="123.17" y1="130" x2="123.17" y2="169"/>
+  <path class="sofa-seam" d="M69,143 Q108.5,146 148,143"/>
 
   <!-- ============ OVERALL DIMENSIONS ============ -->
   <!-- Width, along the north side: 171" living room / 9" wall / 56"
