@@ -1856,8 +1856,10 @@ Without these the wall band simply runs out into the floor. Six caps:
     Origin (0,0) = the NORTHWEST interior corner of the BATHROOM.
     +x runs EAST, +y runs SOUTH, for BOTH rooms — one shared frame.
     Bathroom: room is 61" x 61". Wall band is 4.5" thick, so it spans
-      -4.5 .. 65.5 on both axes. Shower (wet) = x 0..30.5, toilet (dry)
-      section = x 30.5..61.
+      -4.5 .. 65.5 on both axes. Shower (wet) = x 0..30.88, toilet (dry)
+      section = x 30.88..61 — moved off the even 30.5/30.5 split to give
+      the shower the room the real-depth Lilah tile costs it on the
+      west wall; see the FIXED GLASS section below.
     Hallway + closet: added below (negative y = north of the bathroom).
       See the "HALLWAY CONNECTOR" and "UNDER-STAIRS WALK-IN CLOSET"
       sections further down for their own geometry notes.
@@ -1925,8 +1927,8 @@ Without these the wall band simply runs out into the floor. Six caps:
        split reads from the glass line, drain and labels rather than a
        tint change. Labels and linework that sit on the floor use the
        .on-dark / .red-lt / .thin-lt variants so they stay legible. -->
-  <rect x="0"  y="0" width="30.5" height="61" fill="url(#dsbath-dawson)"/>  <!-- shower (wet) -->
-  <rect x="30.5" y="0" width="30.5" height="61" fill="url(#dsbath-dawson)"/><!-- toilet (dry) -->
+  <rect x="0"  y="0" width="30.88" height="61" fill="url(#dsbath-dawson)"/>  <!-- shower (wet) -->
+  <rect x="30.88" y="0" width="30.12" height="61" fill="url(#dsbath-dawson)"/><!-- toilet (dry) -->
 
   <!-- ============ DOOR OPENING ============
        The 28" pocket-door opening is a real break in the east wall, not just a
@@ -1985,17 +1987,14 @@ Without these the wall band simply runs out into the floor. Six caps:
        not a zero-depth callout line. x=0/y=0/y=61 is the ROUGH wall
        face (the framed 4.5" band), and the tile sits proud of it into
        the room, same as it would on site.
-       CONSEQUENCE, LEFT VISIBLE RATHER THAN HIDDEN: the shower's 30"
-       CPC clear circle (centred 15.25, 42.5, r=15) was drawn clearing
-       the west wall by only 1/4" (its edge sits at x=0.25, assuming
-       x=0 is the finished face). At real tile depth the finished west
-       wall face is actually at x=0.375, so the circle now reads as
-       0.125" short of clear on that side. That's not a drafting error
-       to paper over — it's what tiling that wall actually costs the
-       code clearance, and it should stay visible so it gets resolved
-       for real (e.g. re-check the circle against the framed dimension
-       plus tile, or confirm the 30" minimum still has slack once the
-       real wall finishes are in). -->
+       RESOLVED: drawing this at real depth exposed a genuine shortfall
+       against the shower's 30" CPC clear circle — at x=0.375 finished
+       face, the circle (then centred 15.25) was 0.125" short of clear
+       on the west side. Fixed by moving the shower/toilet section line
+       (the fixed glass) east from x=30.5 to x=30.88 and re-centring the
+       circle at x=15.63, restoring a comfortable ~1/4" margin on both
+       the tile face and the glass — see the FIXED GLASS section below
+       for the full trade-off (the toilet section gives up the room). -->
   <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="0" y="0" width="61" height=".375"/>    <!-- north -->
   <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="0" y="0" width=".375" height="61"/>    <!-- west -->
   <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="0" y="60.625" width="61" height=".375"/> <!-- south -->
@@ -2010,21 +2009,28 @@ Without these the wall band simply runs out into the floor. Six caps:
        and west walls, angled front face on the line x + y = 17.33.
        Both ends of the angled face are eased with a ~1" fillet (quadratic, control
        point at the sharp corner) — that softening is what reads as a basin rather
-       than a plain triangle. -->
-  <path class="fix" d="M0,0 L14.92,0 Q17.33,0 15.62,1.71 L1.71,15.62 Q0,17.33 0,14.92 Z"/>
+       than a plain triangle.
+       SHIFTED +0.375" SOUTH AND EAST: it's a corner-mount fixture bearing on
+       BOTH the north and west walls, which are now real-depth Lilah tile
+       (finished face at x=0.375/y=0.375, not the rough wall at 0/0). The
+       sink mounts against those finished faces, so the whole fixture — bowl,
+       faucet, and label — moves off the rough corner as one unit. Without
+       this the basin's own two straight edges simply overlapped the tile and
+       hid it. -->
+  <path class="fix" d="M0.375,0.375 L15.295,0.375 Q17.705,0.375 15.995,2.085 L2.085,15.995 Q0.375,17.705 0.375,15.295 Z"/>
   <!-- FAUCET — Kohler Elate single-handle monoblock, K-99491-4, matte black.
        Single hole, deck mount on the basin ledge. Spout reach 4-3/16" (4.19")
        per Kohler's spec sheet; body is a monoblock cylinder with the lever
        handle on top, which in plan reads back over the deck toward the corner.
        Set on the corner bisector and rotated 45 degrees so the spout throws to
        the middle of the basin rather than at a wall. -->
-  <g fill="#2A2A2A" transform="translate(2.26,2.26) rotate(45)">
+  <g fill="#2A2A2A" transform="translate(2.635,2.635) rotate(45)">
     <rect x="-2.7" y="-.28" width="2.1" height=".56" rx=".28"/>  <!-- lever handle -->
     <circle cx="0" cy="0" r="1.05"/>                             <!-- body -->
     <path d="M.5,-.6 L4.19,-.4 L4.19,.4 L.5,.6 Z"/>              <!-- spout, 4-3/16" reach -->
     <circle cx="4.19" cy="0" r=".46"/>                           <!-- aerator -->
   </g>
-  <text class="lbl" x="7.2" y="2.3">corner sink</text>
+  <text class="lbl" x="7.575" y="2.675">corner sink</text>
 
   <!-- ============ SINK MIRRORS ============
        A matched PAIR of fixed surface-mount mirrors, one on each wall, RUNNING
@@ -2064,14 +2070,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        tile. That is the whole point after the 5" deep cabinet was rejected for
        landing where your head goes. Labels sit in the wall band so the basin
        stays legible. -->
-  <!-- North pane: back face on y=0 runs to the corner, front face on y=0.5
-       stops at x=0.5 — the 45 degree miter closes the gap between them. -->
-  <path d="M0,0 L14.92,0 L14.92,.5 L.5,.5 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="7.46" y="-1.75" text-anchor="middle" font-size=".8">mirror</text>
+  <!-- North pane: back face now on y=0.375 (the real-depth tile's finished
+       face, not the rough wall at y=0) runs to the corner, front face 0.5"
+       proud at y=0.875, stopping at x=0.875 — the 45 degree miter closes the
+       gap between them. Shifted +0.375" with the sink below it, which the
+       mirror's width is dimensioned to match. -->
+  <path d="M0.375,0.375 L15.295,0.375 L15.295,.875 L.875,.875 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <text class="teal" x="7.835" y="-1.375" text-anchor="middle" font-size=".8">mirror</text>
   <!-- West pane: the same shape reflected about y = x. -->
-  <path d="M0,0 L0,14.92 L.5,14.92 L.5,.5 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="-1.75" y="7.46" text-anchor="middle" font-size=".8"
-        transform="rotate(-90 -1.75 7.46)">mirror</text>
+  <path d="M0.375,0.375 L0.375,15.295 L.875,15.295 L.875,.875 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
+  <text class="teal" x="-1.375" y="7.835" text-anchor="middle" font-size=".8"
+        transform="rotate(-90 -1.375 7.835)">mirror</text>
   <text class="lbl-s on-dark" x="4.25" y="55" text-anchor="middle" transform="rotate(-90 4.25 55)">linear drain</text>
 
   <!-- ============ NORTH WALL FITTINGS ============
@@ -2119,9 +2128,13 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ============ SHOWER ============ -->
   <!-- 30" code circle: CPC requires a 30" dia. clear circle to fit inside the
        shower compartment. Drawn faint as a compliance check, concentric with the
-       rainhead. The wet section is 30.5" wide, so it clears by 1/4" a side. -->
-  <circle class="code" cx="15.25" cy="42.5" r="15"/>
-  <text class="code-t" x="15.25" y="29.4" text-anchor="middle" style="fill:#B9C4C7">30&quot;</text>
+       rainhead. Re-centred (was 15.25) and the glass moved (was x=30.5) to
+       clear the real-depth Lilah tile face at x=0.375 on the west: margins
+       are now 0.255" west (to the tile face) and 0.25" east (to the glass) —
+       restoring the original ~1/4"-a-side comfort instead of the 0.125"
+       shortfall the tile depth exposed. -->
+  <circle class="code" cx="15.63" cy="42.5" r="15"/>
+  <text class="code-t" x="15.63" y="29.4" text-anchor="middle" style="fill:#B9C4C7">30&quot;</text>
   <!-- valve, west wall -->
   <rect class="blk" x="-.6" y="30.08" width=".6" height="1.92"/>
   <text class="lbl-s" x="-2.2" y="31.6" text-anchor="middle" transform="rotate(-90 -2.2 31.6)">valve</text>
@@ -2138,43 +2151,64 @@ Without these the wall band simply runs out into the floor. Six caps:
        (15.62 + 25) / 2 = 20.31. -->
   <circle cx=".92" cy="20.31" r=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
   <!-- support bar -->
-  <line x1="0" y1="25" x2="30.5" y2="25" stroke="#C9C4B7" stroke-width=".133"/>
+  <line x1="0" y1="25" x2="30.88" y2="25" stroke="#C9C4B7" stroke-width=".133"/>
   <text class="lbl on-dark" x="14.7" y="23.7" text-anchor="middle">support bar</text>
-  <!-- ceiling rainhead, 12" dia, centred 18.5" off the south wall -->
-  <circle class="thin-lt" cx="15.29" cy="42.5" r="6"/>
-  <circle cx="15.29" cy="42.5" r=".29" fill="#F0EDE6"/>
-  <text class="lbl-s on-dark" x="15.29" y="40.9" text-anchor="middle">ceiling</text>
-  <text class="lbl-s on-dark" x="15.29" y="43.9" text-anchor="middle">rainhead</text>
-  <text x="15.29" y="59.3" text-anchor="middle" font-size="1.35" font-style="italic"
+  <!-- ceiling rainhead, 12" dia, centred 18.5" off the south wall. Re-centred
+       x (was 15.29) to sit concentric with the 30" code circle at its new
+       15.63 centre, per the circle note above. -->
+  <circle class="thin-lt" cx="15.63" cy="42.5" r="6"/>
+  <circle cx="15.63" cy="42.5" r=".29" fill="#F0EDE6"/>
+  <text class="lbl-s on-dark" x="15.63" y="40.9" text-anchor="middle">ceiling</text>
+  <text class="lbl-s on-dark" x="15.63" y="43.9" text-anchor="middle">rainhead</text>
+  <text x="15.63" y="59.3" text-anchor="middle" font-size="1.35" font-style="italic"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#8FCBE0">SHOWER</text>
 
-  <!-- ============ FIXED GLASS ON THE SECTION LINE ============ -->
-  <line x1="30.5" y1="24.08" x2="30.5" y2="61" stroke="#5FB2CC" stroke-width=".33"/>
-  <text class="teal" x="29.3" y="42.5" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
-        transform="rotate(-90 29.3 42.5)">37&quot; fixed glass</text>
-  <text class="teal" x="27.9" y="11.75" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
-        transform="rotate(-90 27.9 11.75)">24&quot; opening</text>
+  <!-- ============ FIXED GLASS ON THE SECTION LINE ============
+       Moved from x=30.5 (an even 30.5/30.5 split) to x=30.88, giving the
+       shower the room the real-depth Lilah tile costs it on the west wall
+       (see the 30" code circle note above) at the toilet section's expense:
+       that section narrows from 30.5" to 30.12", tightening the toilet's
+       own CPC 402.5 side clearance from a comfortable 1/2" margin to about
+       1/16" (still compliant — see the TOILET section below, shifted to
+       stay centred in the narrower section). -->
+  <line x1="30.88" y1="24.08" x2="30.88" y2="61" stroke="#5FB2CC" stroke-width=".33"/>
+  <text class="teal" x="29.68" y="42.5" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
+        transform="rotate(-90 29.68 42.5)">37&quot; fixed glass</text>
+  <text class="teal" x="28.28" y="11.75" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
+        transform="rotate(-90 28.28 11.75)">24&quot; opening</text>
 
   <!-- ============ TOILET ============
-       Bowl: rim is a true circle (centre 45.79,39.01  r 7.72") that flares open at
+       Bowl: rim is a true circle (centre 45.94,39.01  r 7.72") that flares open at
        the front, with straight sides tapering back and slightly outward to meet the
        tank. Tank: rounded rect with the lid joint line across it.
        Bowl is drawn first; the tank then overlays its foot so the sides terminate
-       cleanly on the tank's top edge. -->
-  <path class="fix" d="M36.75,54.5 L38.07,39.01 A7.72,7.72 0 0 1 53.51,39.01 L54.83,54.5 Z"/>
-  <rect class="fix" x="35.75" y="54" width="20.08" height="7" rx=".5"/>
-  <line x1="35.75" y1="55.71" x2="55.83" y2="55.71" stroke="#2A2A2A" stroke-width=".083"/>
-  <text x="45.79" y="44.8" text-anchor="middle" font-size="1.35"
+       cleanly on the tank's top edge.
+       SHIFTED +0.15" EAST (was centred 45.79) to stay centred in the toilet
+       section now that the fixed glass moved from x=30.5 to x=30.88 to give
+       the shower room for its real-depth tile — new section is x 30.88..61,
+       midpoint 45.94.
+       ALSO SHIFTED 0.375" NORTH: the tank backs onto the south wall, which
+       is now real-depth Lilah tile (finished face at y=60.625, not the rough
+       wall at y=61). The tank mounts against the FINISHED wall, so the whole
+       fixture — and its 53" front-to-back clearance check, which measures
+       from that same wall — moves north as one rigid unit; the 53" figure
+       itself doesn't change, only where it's measured from. Without this the
+       tank simply overlapped the tile face and hid it. -->
+  <path class="fix" d="M36.90,54.125 L38.22,38.635 A7.72,7.72 0 0 1 53.66,38.635 L54.98,54.125 Z"/>
+  <rect class="fix" x="35.90" y="53.625" width="20.08" height="7" rx=".5"/>
+  <line x1="35.90" y1="55.335" x2="55.98" y2="55.335" stroke="#2A2A2A" stroke-width=".083"/>
+  <text x="45.94" y="44.425" text-anchor="middle" font-size="1.35"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A">WC</text>
-  <!-- CPC front-to-back clearance. Measured from the SOUTH wall, which the tank
-       backs onto: 29" toilet + 24" required clear = 53", so the limit lands at
-       y = 61 - 53 = 8. The dimension runs the full 53" down to the south wall and
-       stops dead on the limit line (a T, not a cross). -->
-  <line class="red-lt" x1="33" y1="8" x2="58.5" y2="8"/>
-  <line class="red-lt" x1="45.79" y1="8" x2="45.79" y2="61"/>
-  <line class="tick" stroke="#8A3B2A" x1="45.34" y1="8.45"  x2="46.24" y2="7.55"/>
-  <line class="tick" stroke="#8A3B2A" x1="45.34" y1="61.45" x2="46.24" y2="60.55"/>
-  <text class="red-t" x="45.79" y="6.5" text-anchor="middle" style="fill:#D98D75">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
+  <!-- CPC front-to-back clearance. Measured from the SOUTH wall's finished
+       (tiled) face, y=60.625: 29" toilet + 24" required clear = 53", so the
+       limit lands at y = 60.625 - 53 = 7.625. The dimension runs the full
+       53" down to the finished south wall and stops dead on the limit line
+       (a T, not a cross). -->
+  <line class="red-lt" x1="33.15" y1="7.625" x2="58.65" y2="7.625"/>
+  <line class="red-lt" x1="45.94" y1="7.625" x2="45.94" y2="60.625"/>
+  <line class="tick" stroke="#8A3B2A" x1="45.49" y1="8.075"  x2="46.39" y2="7.175"/>
+  <line class="tick" stroke="#8A3B2A" x1="45.49" y1="61.075" x2="46.39" y2="60.175"/>
+  <text class="red-t" x="45.94" y="6.5" text-anchor="middle" style="fill:#D98D75">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
 
   <!-- ============ EAST WALL ============ -->
   <!-- TP holder: bar-style, roll axis parallel to the wall. Moved from
@@ -2200,19 +2234,20 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="wall-lbl" x="-2.4" y="24" text-anchor="middle" transform="rotate(-90 -2.4 24)">WEST WALL</text>
 
   <!-- ============ DIMENSIONS — TOP ============
-       Chain (30.5 + 30.5) nearest the plan, overall (61) outboard of it.
-       Extension lines break 0.8" clear of the wall face and overrun the last
-       dimension line by 0.7". Ticks are 45 degrees. -->
-  <line class="extline" x1="0"    y1="-5.3" x2="0"    y2="-12.7"/>
-  <line class="extline" x1="30.5" y1="-5.3" x2="30.5" y2="-9.2"/>
-  <line class="extline" x1="61"   y1="-5.3" x2="61"   y2="-12.7"/>
+       Chain (30.88 + 30.12) nearest the plan, overall (61) outboard of it —
+       the section line moved off the even 30.5/30.5 split; see the FIXED
+       GLASS note. Extension lines break 0.8" clear of the wall face and
+       overrun the last dimension line by 0.7". Ticks are 45 degrees. -->
+  <line class="extline" x1="0"     y1="-5.3" x2="0"     y2="-12.7"/>
+  <line class="extline" x1="30.88" y1="-5.3" x2="30.88" y2="-9.2"/>
+  <line class="extline" x1="61"    y1="-5.3" x2="61"    y2="-12.7"/>
 
   <line class="dimline" x1="0" y1="-8.5" x2="61" y2="-8.5"/>
   <line class="tick" x1="-.45"  y1="-8.05" x2=".45"   y2="-8.95"/>
-  <line class="tick" x1="30.05" y1="-8.05" x2="30.95" y2="-8.95"/>
+  <line class="tick" x1="30.43" y1="-8.05" x2="31.33" y2="-8.95"/>
   <line class="tick" x1="60.55" y1="-8.05" x2="61.45" y2="-8.95"/>
-  <text class="dim-t" x="15.25" y="-9.35" text-anchor="middle">30.5&quot;</text>
-  <text class="dim-t" x="45.75" y="-9.35" text-anchor="middle">30.5&quot;</text>
+  <text class="dim-t" x="15.44" y="-9.35" text-anchor="middle">30.88&quot;</text>
+  <text class="dim-t" x="45.94" y="-9.35" text-anchor="middle">30.12&quot;</text>
 
   <line class="dimline" x1="0" y1="-12" x2="61" y2="-12"/>
   <line class="tick" x1="-.45"  y1="-11.55" x2=".45"   y2="-12.45"/>
