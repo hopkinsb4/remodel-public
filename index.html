@@ -2301,18 +2301,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        here. -->
   <rect x="240.5" y="-113.5" width="4.5" height="73" fill="#C9C4B7"/>
   <rect x="240.5" y="-10.5" width="4.5" height="34" fill="#C9C4B7"/>
-  <!-- DAWSON THRESHOLD: the floor changes inside this opening, not out in
-       either room — same convention as the primary bedroom plan's hall
-       threshold. Dining's Leona checkerboard runs to x=242.75 (dining
-       side); Dawson (the hallway/closet/garage-entry floor, per the
-       downstairs-bath plan) picks up from there out to the wall's outer
-       face at x=240.5. Split isn't tied to a module line either way —
-       the 4.5" wall band is well under one tile of either material, so
-       there's no clean course to land on; a plain half-and-half split
-       just marks where the material actually changes. -->
-  <rect x="242.75" y="-40.5" width="2.25" height="30" fill="url(#mainfloor-check)"/>
-  <rect x="240.5" y="-40.5" width="2.25" height="30" fill="url(#mainfloor-dawson)"/>
-  <line class="thin" x1="242.75" y1="-40.5" x2="242.75" y2="-10.5"/>
+  <!-- DAWSON THRESHOLD: Dawson (the hallway/closet/garage-entry floor,
+       per the downstairs-bath plan) runs the full 4.5" opening, flush
+       with the dining room's own interior wall face at x=245 — the
+       Leona checkerboard picks up right there, in the dining room
+       proper, rather than trying to show a sliver of it inside the
+       jamb. A 2.25"-deep Leona fragment squeezed into this opening
+       (tried first) cut the diagonal tiles at sharp inside corners —
+       fine at a real tile scale, ugly at this narrow a strip. Full-
+       width Dawson avoids that; the dining room's own fill (below)
+       already starts the checkerboard cleanly at x=245. -->
+  <rect x="240.5" y="-40.5" width="4.5" height="30" fill="url(#mainfloor-dawson)"/>
   <line class="outline" x1="240.5" y1="-40.5" x2="245" y2="-40.5"/>
   <line class="outline" x1="240.5" y1="-10.5" x2="245" y2="-10.5"/>
   <!-- Dining north wall with the PATIO DOOR opening: the ERIS
