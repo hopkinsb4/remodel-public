@@ -1903,7 +1903,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
       <div style="margin: 16px 0 8px; width: 100%;">
         <svg xmlns="http://www.w3.org/2000/svg" id="mainfloor-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-44.5 -135 439 348.5" role="img"
-     aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch stairway at the west end starting flush with the entertainment center front: three treads climb north to a quarter landing with a single 45 degree winder turning east, a long run climbs east, then a second landing and one final step south onto the upper hall, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa drawn in its seated position, 161.5 by 52 inches, with rounded rear corners. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall, then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. The kitchen: entering through that archway, its west wall runs 38.5 inches north and 48 inches south of the opening, 136.5 inches wall to wall, and the room extends 124 inches east. The kitchen north wall is a 9 inch thick pillar-and-beam wall with a 93 inch cased opening, its jambs 5 inches from the west wall and 26 inches from the east wall. Through that opening, the dining room runs 71 plus 65, 136 inches total, north of the kitchen wall on the same 124 inch span. Kitchen and dining contents have not been drawn yet.">
+     aria-label="Main floor plan, living room — 171 by 169 inches. West wall: a 30 inch opening to the garage entry, downstairs bath and under-stairs closet hallway (detailed on the downstairs bath plan), its south jamb 34 inches north of the southwest pillar. North wall: a 40 inch stairway at the west end starting flush with the entertainment center front: three treads climb north to a quarter landing with a single 45 degree winder turning east, a long run climbs east, then a second landing and one final step south onto the upper hall, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa drawn in its seated position, 161.5 by 52 inches, with rounded rear corners. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall, then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. The kitchen: entering through that archway, its west wall runs 38.5 inches north and 48 inches south of the opening, 136.5 inches wall to wall, and the room extends 124 inches east. The kitchen north wall is a 9 inch thick pillar-and-beam wall with a 93 inch cased opening, its jambs 5 inches from the west wall and 26 inches from the east wall. Through that opening, the dining room runs 71 plus 65, 136 inches total, north of the kitchen wall on the same 124 inch span. Kitchen and dining contents have not been drawn yet.">
   <!--
     93 WATERMAN — MAIN FLOOR PLAN (KITCHEN / DINING ROOM / LIVING ROOM / ENTRYWAY / STAIRS)
     ========================================================================================
@@ -2014,8 +2014,25 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ============ SHELL — LIVING ROOM, 171" x 169" ============ -->
   <rect x="0" y="0" width="171" height="169" fill="url(#mainfloor-check)"/>  <!-- floor -->
 
-  <!-- West wall: solid, no known openings. -->
-  <rect x="-4.5" y="-4.5" width="4.5" height="178" fill="#C9C4B7"/>
+  <!-- West wall: one opening (measured 2026-08-30) — the passage to
+       the garage entry / downstairs bath / under-stairs closet
+       hallway, all detailed on the downstairs-bath plan. Its south
+       jamb is 34" north of the SW pillar (y=135) and it is 30" wide
+       (both field-measured) — so the opening spans y=105..135. -->
+  <rect x="-4.5" y="-4.5" width="4.5" height="109.5" fill="#C9C4B7"/>
+  <rect x="-4.5" y="135" width="4.5" height="38.5" fill="#C9C4B7"/>
+  <rect x="-4.5" y="105" width="4.5" height="30" fill="url(#mainfloor-check)"/>  <!-- passage floor toward the dsbath hallway -->
+  <line class="outline" x1="-4.5" y1="105" x2="0" y2="105"/>
+  <line class="outline" x1="-4.5" y1="135" x2="0" y2="135"/>
+  <line class="extline" x1="-4.5" y1="105" x2="-13" y2="105"/>
+  <line class="extline" x1="-4.5" y1="135" x2="-13" y2="135"/>
+  <line class="extline" x1="-4.5" y1="169" x2="-13" y2="169"/>
+  <line class="dimline" x1="-11" y1="105" x2="-11" y2="169"/>
+  <line class="tick" x1="-12.2" y1="103.8" x2="-9.8" y2="106.2"/>
+  <line class="tick" x1="-12.2" y1="133.8" x2="-9.8" y2="136.2"/>
+  <line class="tick" x1="-12.2" y1="167.8" x2="-9.8" y2="170.2"/>
+  <text class="dim-s" x="-14.5" y="120" text-anchor="middle" transform="rotate(-90 -14.5 120)">30&quot; opening</text>
+  <text class="dim-s" x="-14.5" y="152" text-anchor="middle" transform="rotate(-90 -14.5 152)">34&quot;</text>
   <!-- South wall: solid, 146" south of the built-in. -->
   <rect x="-4.5" y="169" width="180" height="4.5" fill="#C9C4B7"/>
 
