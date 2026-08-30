@@ -2592,16 +2592,26 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- DINING TABLE (budget section 8): Crate & Barrel Nero 36" Round,
        white marble top (pedestal not rendered; brand omitted from
-       the drawing, see budget) — RE-CENTERED (confirmed 2026-08-30)
-       for 36" clearance all around: x centered on the 72" patio door
-       opening as a whole (x=(265+337)/2=301), y aligned to the
-       midpoint between the two east-wall windows (y=((-73.5-56)/2 +
-       (-33.5-16)/2)/2 = -44.75). The tight side is east, against the
-       25.75"-deep granite counter (not the wall itself) — clearances:
-       38" west, 37.25" to the counter face east, 50.75" north; south
-       is open to the kitchen (no wall to measure against). -->
-  <circle cx="301" cy="-44.75" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
-  <text class="dim-s" x="301" y="-37.25" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
+       the drawing, see budget) — RE-CENTERED AGAIN (confirmed
+       2026-08-30), this time on the checkerboard tile grid rather than
+       the room's own openings: centered on the nearest whole diamond's
+       own center point (cx=312.88, cy=-44.24), computed by inverting
+       this pattern's own translate(7.4121,-27.2647) rotate(45)
+       transform for the closest dark-tile center to the room-centered
+       position below. That moves it 11.89" from the room-proportional
+       spot (see the superseded math just below), mostly east.
+       CLEARANCE TRADEOFF: west opens up to 49.88", but east — the
+       tight side already, against the 25.75"-deep granite counter, not
+       the wall itself — tightens from 37.25" to 25.37". Still walkable,
+       just no longer the "36" all around" the room-centered version had.
+       North barely moves (50.75" -> 51.26"); south is still open to the
+       kitchen.
+       SUPERSEDED MATH (room-centered, not tile-centered): x centered on
+       the 72" patio door opening as a whole (x=(265+337)/2=301), y
+       aligned to the midpoint between the two east-wall windows
+       (y=((-73.5-56)/2 + (-33.5-16)/2)/2 = -44.75). -->
+  <circle cx="312.88" cy="-44.24" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
+  <text class="dim-s" x="312.88" y="-36.74" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
 
   <!-- Kitchen north-wall chains, relocated above the dining room; the
        jamb extension lines run the full dining depth. -->
