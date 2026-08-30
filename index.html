@@ -2249,8 +2249,8 @@ Without these the wall band simply runs out into the floor. Six caps:
        south wall west to the pantry's east face (x=279.5). All
        counters at the kitchen's standard 25.75" depth; same
        black granite as the dining run. -->
-  <path d="M 356.25,70.5 L 382,70.5 L 382,88.5 L 356.25,88.5 Z" fill="#1E1D1B" stroke="#000000" stroke-width=".28"/>
-  <path d="M 356.25,118.5 L 382,118.5 L 382,169 L 279.5,169 L 279.5,143.25 L 356.25,143.25 Z" fill="#1E1D1B" stroke="#000000" stroke-width=".28"/>
+  <path d="M 356.25,70.5 L 382,70.5 L 382,88.5 L 356.25,88.5 Z" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
+  <path d="M 356.25,118.5 L 382,118.5 L 382,169 L 279.5,169 L 279.5,143.25 L 356.25,143.25 Z" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
   <rect x="352" y="32.5" width="30" height="38" fill="#B7BABC" stroke="#2A2A2A" stroke-width=".234"/>
   <text class="dim-s" x="365.5" y="51.5" text-anchor="middle" font-size="1.7" transform="rotate(-90 365.5 51.5)">fridge 38&quot;</text>
   <rect x="356.25" y="88.5" width="25.75" height="30" fill="#B7BABC" stroke="#2A2A2A" stroke-width=".234"/>
@@ -2262,6 +2262,14 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-onsofa" x="369.1" y="79.9" text-anchor="middle" font-size="1.5" transform="rotate(-90 369.1 79.9)">18&quot;</text>
   <text class="dim-onsofa" x="319" y="157.3" text-anchor="middle" font-size="1.7">counter</text>
 
+  <!-- FARMHOUSE SINK, south wall counter (measured 2026-08-30): west
+       edge 19" east of the pantry's east face (x=279.5+19=298.5),
+       17.5" deep N-S with the apron-front flush with the cabinet
+       face (y=143.25..160.75). Width not specified; assumed 33" (a
+       common single-bowl farmhouse size), x=298.5..331.5. -->
+  <rect class="fix" x="298.5" y="143.25" width="33" height="17.5" rx="1"/>
+  <text class="dim-s" x="315" y="153" text-anchor="middle" font-size="1.4">farmhouse sink 33&quot; x 17.5&quot;</text>
+
   <!-- KITCHEN ISLAND: rectangular granite island, 40" (E-W) x 65"
        (N-S, long axis matching the east counter run), placed 34" off
        the west wall and 36" off the south counter face (x=279..319,
@@ -2269,7 +2277,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        37.25" to the east counters, 33" to the fridge; the north end
        stands 9.75" south of the wall line, inside the 93" opening's
        span. Same black granite. -->
-  <rect x="279" y="42.25" width="40" height="65" fill="#1E1D1B" stroke="#000000" stroke-width=".28"/>
+  <rect x="279" y="42.25" width="40" height="65" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
   <text class="dim-onsofa" x="299" y="74.75" text-anchor="middle" transform="rotate(-90 299 74.75)" font-size="1.7">island 40&quot; x 65&quot;</text>
 
   <!-- Kitchen dimensions: 137" width (chained above the dining room);
@@ -2359,7 +2367,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        well past the 15" needed at 36" counter height. Dashed line =
        cabinet face, broken at the gaps; dashed boxes = the open knee
        spaces under the slab. -->
-  <rect x="356.25" y="-113.5" width="25.75" height="137" fill="#1E1D1B" stroke="#000000" stroke-width=".28"/>
+  <rect x="356.25" y="-113.5" width="25.75" height="137" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
   <g stroke="#8F8B83" stroke-width=".2" stroke-dasharray="1.6 1.2" fill="none">
     <line x1="358" y1="-112.5" x2="358" y2="-82.5"/>
     <line x1="358" y1="-58.5" x2="358" y2="-31.5"/>
@@ -2383,6 +2391,31 @@ Without these the wall band simply runs out into the floor. Six caps:
   </g>
   <text x="368" y="-19.5" text-anchor="middle" transform="rotate(-90 368 -19.5)" style="font:1.2px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">34&quot; ultrawide monitor</text>
   <text x="368" y="-70.5" text-anchor="middle" transform="rotate(-90 368 -70.5)" style="font:1.2px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">34&quot; ultrawide monitor</text>
+
+  <!-- 5 duplex outlets along the east wall backsplash: one at each of
+       the 3 solid cabinet runs (y=-97.5, -45, 7.5) and one at each
+       knee-space station (y=-70.5, -19.5), offset slightly off the
+       wall centerline (x=384.25) so the symbol doesn't sit on top of
+       the window glazing line. Simple circle-and-cross duplex
+       symbol. -->
+  <g fill="none" stroke="#8F8B83" stroke-width=".18">
+    <circle cx="383.1" cy="-97.5" r="0.85"/>
+    <line x1="382.25" y1="-97.5" x2="383.95" y2="-97.5"/>
+    <line x1="383.1" y1="-98.35" x2="383.1" y2="-96.65"/>
+    <circle cx="383.1" cy="-70.5" r="0.85"/>
+    <line x1="382.25" y1="-70.5" x2="383.95" y2="-70.5"/>
+    <line x1="383.1" y1="-71.35" x2="383.1" y2="-69.65"/>
+    <circle cx="383.1" cy="-45" r="0.85"/>
+    <line x1="382.25" y1="-45" x2="383.95" y2="-45"/>
+    <line x1="383.1" y1="-45.85" x2="383.1" y2="-44.15"/>
+    <circle cx="383.1" cy="-19.5" r="0.85"/>
+    <line x1="382.25" y1="-19.5" x2="383.95" y2="-19.5"/>
+    <line x1="383.1" y1="-20.35" x2="383.1" y2="-18.65"/>
+    <circle cx="383.1" cy="7.5" r="0.85"/>
+    <line x1="382.25" y1="7.5" x2="383.95" y2="7.5"/>
+    <line x1="383.1" y1="6.65" x2="383.1" y2="8.35"/>
+  </g>
+  <text x="372" y="-45" text-anchor="middle" transform="rotate(-90 372 -45)" style="font:1.1px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">outlet, typ. of 5</text>
 
   <!-- DINING TABLE (budget section 8): Crate & Barrel Nero 36" Round,
        white marble top (pedestal not rendered; brand omitted from
