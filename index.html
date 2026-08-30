@@ -1977,9 +1977,13 @@ Without these the wall band simply runs out into the floor. Six caps:
          risers both go dark; the Calacatta riser TILE is unaffected
          (tile doesn't take stain) and now reads as the light
          contrast against the black wood, echoing the black-
-         stringer/black-rail look from the reference photo. */
-      #mainfloor-plan .tread   { fill:#211D19; stroke:#0F0C0A; stroke-width:.234; }
-      #mainfloor-plan .riser   { fill:none; stroke:#0F0C0A; stroke-width:.166; }
+         stringer/black-rail look from the reference photo. Outline
+         color switched from near-black to the Calacatta tile's own
+         tone (#F1EEE7, matching the checkerboard floor's light
+         square) so each tread/riser edge stays legible in plan view
+         instead of the run reading as one solid black block. */
+      #mainfloor-plan .tread   { fill:#211D19; stroke:#F1EEE7; stroke-width:.234; }
+      #mainfloor-plan .riser   { fill:none; stroke:#F1EEE7; stroke-width:.166; }
       #mainfloor-plan .lbl     { font:4.4px 'Helvetica Neue',Arial,sans-serif; fill:#3A3A3A; }
       #mainfloor-plan .lbl-s   { font:4.1px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
       #mainfloor-plan .wall-lbl{ font:4.6px 'Helvetica Neue',Arial,sans-serif; fill:#8F8F8F; }
