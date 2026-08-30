@@ -851,17 +851,20 @@
        NOTE ALSO: the north closet doorway's west jamb at x -64 lands half an
        inch off the bath-end return at x -64.5. Half an inch is not a
        tolerance, it is a coincidence - measure both before framing. -->
-  <rect x="-72.385" y="75" width="3.385" height="34" fill="url(#pbed-check)"/>
-  <!-- THRESHOLD. The floor changes inside the door opening, not out in the
-       room: the checkerboard runs west until the west point of its last full
-       black tile, which lands at x -76.37 (the diagonal 12" module puts a
-       black diamond point there), and the bath's 2" straight-set Dawson picks
-       up from that point out to the outer face of the 4.5" wall at x -78. That
-       1-5/8" strip, held inside the 41" hall opening, is the whole of the bath
-       shown. Its west edge falls on a 2" module line, so one full course of
-       Dawson reads before the sliver. -->
-  <rect x="-73.5" y="75" width="1.115" height="34" fill="url(#pbed-dawson)"/>
-  <line class="thin" x1="-72.385" y1="75" x2="-72.385" y2="109"/>
+  <!-- THRESHOLD, REDONE FOR THE 24" MODULE (2026-08-30): the old split
+       here (checkerboard to x=-72.385, a 1.115" Dawson sliver west of
+       it) was hand-fit to the 12" module's own diagonal spacing —
+       stale once the whole house switched to 24" tile, and at this
+       scale (4.5" of open floor between the bath wall's inner face
+       and the hall's own checkerboard block) there's no room for a
+       clean partial course of a 24" diagonal tile either way. Same
+       fix as the dining-to-hallway threshold on the main floor plan:
+       Dawson (the bath's own floor, already running right up to the
+       wall's outer face at x=-78) fills this whole gap too, flush
+       with the hall block's checkerboard start at x=-69 — no sliver,
+       no sharp inside corners, and no diagonal-tile phase to chase in
+       a 4.5" strip. -->
+  <rect x="-73.5" y="75" width="4.5" height="34" fill="url(#pbed-dawson)"/>
 
   <!-- BATH DOORS (split barn) are drawn AFTER the bath group below, not here -
        the bath's own background rect paints over this x range and was
