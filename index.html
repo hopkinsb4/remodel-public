@@ -2648,24 +2648,16 @@ Without these the wall band simply runs out into the floor. Six caps:
       #dsbath-plan .red-lt  { fill:none; stroke:#C97B63; stroke-width:.083; stroke-dasharray:.55 .45; }
       #dsbath-plan .thin-lt { fill:none; stroke:#D8D3C8; stroke-width:.083; }
     </style>
-    <!-- Leona checkerboard, Calacatta + Nero Marquina, on the diagonal —
-         the same whole-house floor and pattern module as the primary
-         bedroom plan, reused here for the hallway pocket and the closet
-         (both are whole-house flooring, not bathroom mosaic). SWITCHED
-         12" -> 24" module (confirmed 2026-08-30, same day as the other
-         two plans): same tile family/colors, larger format, dramatically
-         cheaper per sf ($6.08 vs $9.25, edwardmartin.com SKU 11868 vs
-         11795). -->
-    <pattern id="dsbath-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="rotate(45)">
-      <rect width="48" height="48" fill="#F1EEE7"/>
-      <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
-      <rect x="24" y="24" width="24" height="24" fill="#262322"/>
-    </pattern>
-    <!-- Edward Martin Dawson 2x2 mosaic, charcoal — this bath's own floor,
-         same pattern/module as the primary bedroom plan's Dawson swatch.
-         Straight-set, not on the diagonal, so the doorway cutover reads
-         as a real material change against the diagonal checkerboard. -->
+    <!-- Edward Martin Dawson 2x2 mosaic, charcoal — this bath's own floor.
+         EXTENDED (confirmed 2026-08-30) to the hallway pocket, the
+         under-stairs closet, and the garage-entry hallway out to the
+         dining room threshold: that whole utility/transition run is now
+         one continuous Dawson floor rather than a few feet of Leona
+         checkerboard sandwiched between two Dawson runs — the small
+         mosaic format hides dirt and grips better at a garage entry, and
+         the whole-house checkerboard still flows unbroken everywhere
+         else (living areas, both bedrooms). The straight-set module
+         (not on the diagonal) is unchanged. -->
     <pattern id="dsbath-dawson" width="2" height="2" patternUnits="userSpaceOnUse">
       <rect width="2" height="2" fill="#333130"/>
       <rect x=".09" y=".09" width="1.82" height="1.82" fill="#4A4644"/>
@@ -2698,16 +2690,14 @@ Without these the wall band simply runs out into the floor. Six caps:
          y 31..61  30" cavity wall the slab pockets into (it slides south)
        Those three runs are exactly the 3"/28"/30" dimensions on the right.
 
-       TILE CUTOVER, AT THE DOOR SLIDER'S CENTERLINE: the floor material
-       actually changes here, not at either wall face — Dawson mosaic
-       (the bath's own floor) on the room side, whole-house checkerboard
-       (the hallway's floor, below) on the hallway side. Split at
-       x=63.29, the centre of the door slab's own drawn position
-       (x 62.58..64.0, below) rather than at x=61 or x=65.5, since
-       that's where the slider itself actually sits in the wall. -->
-  <rect x="61" y="3" width="2.29" height="28" fill="url(#dsbath-dawson)"/>
-  <rect x="63.29" y="3" width="2.21" height="28" fill="url(#dsbath-check)"/>
-  <line x1="63.29" y1="3" x2="63.29" y2="31" stroke="#2A2A2A" stroke-width=".1"/>
+       NO TILE CUTOVER HERE ANY MORE: the hallway floor was switched
+       from whole-house checkerboard to the bath's own Dawson mosaic
+       (2026-08-30, extended out through the closet and garage-entry
+       hallway), so the room side and the hallway side are now the same
+       material straight through the door slider — drawn as one
+       uninterrupted Dawson fill instead of a split at the slider's
+       centerline. -->
+  <rect x="61" y="3" width="4.5" height="28" fill="url(#dsbath-dawson)"/>
 
   <!-- ============ NOOKS ============
        Two, both 12" long x 3.5" deep, recessed into the wall band so nothing
@@ -3064,12 +3054,12 @@ Without these the wall band simply runs out into the floor. Six caps:
        east wall (already drawn, x=65.5); its east wall carries straight
        down from the closet's own east wall (x=105.5..110) — the two
        spaces read as one continuous run rather than a guessed width.
-       South, the checkerboard is drawn down to y=65.5, level with the
+       South, the Dawson floor is drawn down to y=65.5, level with the
        bath's south wall — a real, known reference line, even though no
        wall is known to actually sit there. That south edge is left
        dashed rather than solid: the hallway almost certainly keeps
        going into the rest of the house past that point, just undrawn. -->
-  <rect x="65.5" y="-10" width="40" height="75.5" fill="url(#dsbath-check)"/>
+  <rect x="65.5" y="-10" width="40" height="75.5" fill="url(#dsbath-dawson)"/>
   <!-- east wall band, split around the garage entry door opening
        (y=-1.5..28.5) — this rect used to run solid the full 75.5"
        depth, which was the actual bug: the garage door's own wall
@@ -3183,7 +3173,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, east stub -->
 
   <!-- interior floor + outline (door opening left as a break, x 71.5..99.5) -->
-  <rect x="65.5" y="-97" width="40" height="87" fill="url(#dsbath-check)"/>
+  <rect x="65.5" y="-97" width="40" height="87" fill="url(#dsbath-dawson)"/>
   <path class="outline" d="M71.5,-10 H65.5 V-97 H105.5 V-10 H99.5"/>
 
   <!-- door: hinge at the east jamb, on the OUTSIDE (hallway) face of
