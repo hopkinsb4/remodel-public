@@ -2045,12 +2045,38 @@ Without these the wall band simply runs out into the floor. Six caps:
          tradeoff, on purpose: the south wall under the sofa drops from
          a perfect cut to merely marginal — a wasted "perfect" cut
          hidden under furniture doesn't help anyone; a good cut where
-         you actually step into the room does. -->
+         you actually step into the room does.
+         SUPERSEDED FOR THE LIVING ROOM ONLY, see mainfloor-check-lr
+         below — kitchen and dining still use this 24.000" module and
+         this stairs-landing phase. -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
              patternTransform="translate(0,6.0294) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
+    </pattern>
+    <!-- LIVING ROOM ONLY (confirmed 2026-08-30): grout width nudged so
+         tile points land exactly on the W, N, AND E walls at once —
+         all three, simultaneously, which the room's own 171" width
+         makes possible: 171"/10 = 17.1" of vertex-to-vertex spacing,
+         giving a 24.1831" tile module (was 24.000" — +0.183", a
+         perfectly normal grout-width adjustment, not a different
+         tile). Anchored at the room's own NW corner (no translate
+         needed) since 0 and 171 are both exact multiples of that
+         spacing. South wall (y=169, under the sofa, so not requested)
+         comes out close behind at 0.117 phase — not exact, but not
+         chased either.
+         TRADEOFF: this reopens the stairs-landing threshold (y=23)
+         back to a marginal cut (0.345 phase) — the fix above doesn't
+         apply once the module itself changes. Traded on instruction:
+         all three visible walls, not the stairs sightline, is the
+         priority for this room now. Kitchen and dining are on a
+         separate pattern (above) and are NOT affected by this. -->
+    <pattern id="mainfloor-check-lr" width="48.3661" height="48.3661" patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <rect width="48.3661" height="48.3661" fill="#F1EEE7"/>
+      <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#262322"/>
+      <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#262322"/>
     </pattern>
     <!-- Edward Martin Dawson 2x2 mosaic, charcoal — same pattern/module
          as the downstairs-bath plan's Dawson swatch. Only used at the
@@ -2063,7 +2089,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   </defs>
 
   <!-- ============ SHELL — LIVING ROOM, 171" x 169" ============ -->
-  <rect x="0" y="0" width="171" height="169" fill="url(#mainfloor-check)"/>  <!-- floor -->
+  <rect x="0" y="0" width="171" height="169" fill="url(#mainfloor-check-lr)"/>  <!-- floor, living-room-only tile module — see mainfloor-check-lr note above -->
 
   <!-- West wall: solid, no known openings. (An opening first placed
        here on 2026-08-30 was the wrong wall — it belongs on the
