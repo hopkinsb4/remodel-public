@@ -681,31 +681,36 @@
          the floor is a white-filled fixture and reads on its own. The play
          floor south of the beds carries no label — with the finish drawn it is
          obvious, and the caption was only restating it. -->
-    <!-- ANCHOR (confirmed 2026-08-30, superseding the two shifts this
-         same day): RE-ANCHORED on the bath-hall threshold opening
-         itself. A 24" tile's full diagonal (tip to tip) is
-         24*sqrt(2) = 33.94" — a near-exact match for the 34" opening
-         through the wall at y 75..109 (see HALL THRESHOLDS above).
-         Centered a Calacatta (white) tile at (-71.25,92) — the
-         opening's own center point — so its tips land at y=75.03 and
-         108.97, framing the opening jamb-to-jamb with one clean
-         diamond instead of an arbitrary partial cut or a flat Dawson
-         fill. See the threshold rect below, switched back from Dawson
-         to checkerboard to show it.
+    <!-- ANCHOR (confirmed 2026-08-30, superseding the center-on-opening
+         version from earlier today): a VERTEX (tile corner, not a
+         tile's own center) now lands exactly at (-69,92) — the west
+         closet block's inner wall face (x=-69, the hall-side face
+         Dawson does NOT cross), at the bath-hall opening's own
+         vertical center (y=92, midway between the 34" opening's jambs
+         at y=75/109). Two things fall out of that single point:
+         (1) the ENTIRE wall face x=-69 is now wall-phase-perfect
+         (clean half-diamond cuts along its whole length, not just at
+         this one y), and (2) the opening's jambs (y=75/109) sit almost
+         exactly 17" from the vertex — within a third of an inch of
+         the tile's own 16.97" half-diagonal — so the diamonds meeting
+         at that corner are already at very close to full width by the
+         time they reach both jambs, reading as a near-complete framed
+         "bowtie" rather than a bare point. Dawson is restored on the
+         wall's own thickness and everything west of it (see the
+         threshold rect below, switched back from checkerboard) — the
+         checkerboard doesn't cross x=-69 into the wall/bath at all
+         now, it just touches that face cleanly, point-first.
 
-         TRADEOFF, confirmed by the numbers, not guessed: this anchor
-         is mathematically incompatible with the two fixes it
-         replaces — centering here and keeping the organizer notch
-         chamfer grout-aligned can't both be exact (they're ~17" out
-         of phase with each other, provably, not just unlucky). Both
-         organizer pinch corners also move off-center (north 10.1",
-         south 14.3" — the south one is getting close to the 16.97"
-         tile radius, worth a look once this is built). The threshold
-         framing was the explicit priority here; the notch chamfer's
-         skewed sliver is back until/unless that's worth revisiting
-         too. -->
+         TRADEOFF, unchanged from before: this is still mathematically
+         incompatible with keeping the organizer notch chamfer
+         grout-aligned (confirmed, not guessed — see that section).
+         The notch's skewed sliver stays until/unless that's worth a
+         separate pass. Both organizer pinch corners, as a side
+         benefit of this specific point (rather than the center-on-
+         opening version), land closer to true than before: north
+         7.2" off a tile center, south 2.9" off (was 10.1"/14.3"). -->
     <pattern id="pbed-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(-54.2794,92) rotate(45)">
+             patternTransform="translate(-69,92) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
@@ -874,16 +879,15 @@
        NOTE ALSO: the north closet doorway's west jamb at x -64 lands half an
        inch off the bath-end return at x -64.5. Half an inch is not a
        tolerance, it is a coincidence - measure both before framing. -->
-  <!-- THRESHOLD, RE-DONE AGAIN (2026-08-30): switched back from the
-       flush-Dawson fill to checkerboard. A 24" tile's diagonal
-       (33.94") nearly exactly matches this 34" opening's height —
-       see the pattern's ANCHOR comment above — so instead of hiding
-       the awkward math with solid Dawson, the pattern is now phased
-       to center a whole Calacatta tile on this opening (-71.25,92),
-       framing it jamb-to-jamb with one clean diamond. Only this
-       narrow 4.5" strip shows checkerboard; Dawson still covers the
-       bath's own floor on the other side of the wall (x <= -78). -->
-  <rect x="-73.5" y="75" width="4.5" height="34" fill="url(#pbed-check)"/>
+  <!-- THRESHOLD, RESTORED TO DAWSON (2026-08-30): the wall's own
+       thickness (x -73.5..-69) is Dawson again, matching the bath's
+       floor on the other side of the wall (x <= -78) — the
+       checkerboard doesn't cross the wall's inner (hall-side) face at
+       x=-69 at all now. See the pattern's ANCHOR comment above: a
+       tile VERTEX lands exactly at (-69,92) instead, so the diamonds
+       touch that wall face point-first rather than the pattern
+       bleeding through the opening. -->
+  <rect x="-73.5" y="75" width="4.5" height="34" fill="url(#pbed-dawson)"/>
 
   <!-- BATH DOORS (split barn) are drawn AFTER the bath group below, not here -
        the bath's own background rect paints over this x range and was
