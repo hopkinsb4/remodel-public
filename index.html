@@ -2870,13 +2870,15 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s on-dark" x="42.7" y="4.8" text-anchor="middle">towel bar</text>
 
   <!-- ============ ELECTRICAL ============
-       Switch bank + outlet on the north wall, east of the cabinet — i.e. by the
-       pocket door, where you reach on entering.
+       Single switch on the north wall, east of the cabinet — i.e. by the
+       pocket door, where you reach on entering. No outlet here unless
+       code requires one; the paired outlet this box used to carry is
+       cut, single-gang plate now.
        The second outlet this room used to carry on the south wall, for a
        possible future smart toilet, is cut — not needed. -->
-  <rect class="blk" x="56.4" y="-.7" width="2.6" height=".7"/>
+  <rect class="blk" x="57" y="-.7" width="1.4" height=".7"/>
   <text class="lbl-s on-dark" x="57.7" y="3.4" text-anchor="middle"
-        transform="rotate(-90 57.7 3.4)">sw + outlet</text>
+        transform="rotate(-90 57.7 3.4)">sw</text>
 
   <!-- ============ SHOWER ============ -->
   <!-- 30" code circle: CPC requires a 30" dia. clear circle to fit inside the
@@ -3338,6 +3340,15 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s" x="107.1" y="-11.93" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -11.93)" style="fill:#C79436">vanity light</text>
   <rect x="105" y="-33.28" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
   <text class="lbl-s" x="107.1" y="-32.28" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -32.28)" style="fill:#C79436">vanity light</text>
+
+  <!-- switch + outlet gang, east wall, just north of the north vanity
+       light (which ends at y=-33.28) — same "sw + outlet" gang-plate
+       convention used in the bathroom, sized/oriented for this
+       vertical wall run. Centred at d=27.9 (y=-37.9), a 2.62" gap
+       north of the vanity light, well inside the counter's north edge
+       (d=60, y=-70). -->
+  <rect x="104.85" y="-39.2" width=".7" height="2.6" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
+  <text class="lbl-s" x="107.1" y="-37.9" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -37.9)" style="fill:#C79436">sw + outlet</text>
 
   <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
   <path d="M99.5,-10 L93.5,-16 V-40" fill="none" stroke="#EDE8DD" stroke-width=".16" stroke-dasharray=".75 .5"/>
