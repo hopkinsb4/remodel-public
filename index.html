@@ -574,7 +574,7 @@
       <p>Alcove tub/shower with a curved rod, matte black drain. Sea-glass ceramic wraps the tub and runs floor-to-ceiling down the vanity/toilet wall. Ceiling-mount rain head plus a matching handheld wand, same pairing as the other two baths. Single 36&quot; Blonde vanity, dark bronze hardware. Charcoal mosaic floor, gray walls, matte black fixtures, medicine cabinet.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-186 -160 226 347" role="img"
+      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-230 -160 270 347" role="img"
      aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 2 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall centered in the 2 inch gap between the bed's own frame and its own side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets and the primary bathroom to the top of the room, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet flanked by a pair of vanity lights, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
@@ -786,6 +786,29 @@
        route it protected still exists — left door to the two WICs and the
        primary bath — and the reasoning is kept in the header comment above. -->
   <text class="lbl-s" x="18" y="164.5" text-anchor="middle" transform="rotate(180 18 164.5)">TO HALL (bedroom door)</text>
+
+  <!-- ============ LANDING, OUTSIDE THE BEDROOM DOOR ============
+       New addition (confirmed 2026-08-30): the upstairs landing outside
+       the bedroom's own door, walked by the owner starting at the door's
+       lower jamb (screen position, at the wall's outer face) and going
+       9" down, 59" left, 43" up, 9" right, then 33" up (screen
+       directions, matching how the sheet is currently rendered).
+
+       Drawn here in the file's PRE-ROTATION local coordinates so it
+       comes out right on screen through the rotate(90) wrapper above —
+       the 5 segments above are, in local terms, B->C->D->E->F below.
+
+       CLOSURE: the owner's 5 segments trace the landing's far wall only.
+       The near side is not a new wall at all — it closes flush against
+       geometry that already exists: back along this same exterior wall
+       face (B to the door jamb, A) on one end, and against the WIC's own
+       exterior wall face (H to I to J, the same y=178.5 / x=0 faces used
+       in the WALK-IN CLOSET section below) on the other. The two rooms
+       share that corner rather than each getting their own wall there. -->
+  <path fill="#C9C4B7" d="M41,160.5 V219.5 H-2 V210.5 H-35 V178.5 H-39.5 V215 H-6.5 V224 H45.5 V160.5 Z"/>
+  <path fill="url(#pbed-check)" d="M32,160.5 H41 V219.5 H-2 V210.5 H-35 V178.5 H0 V160.5 Z"/>
+  <path class="outline" d="M41,160.5 V219.5 H-2 V210.5 H-35 V178.5"/>
+  <text class="lbl-s" x="20" y="190" text-anchor="middle" transform="rotate(-90 20 190)">LANDING</text>
 
   <!-- ============ WALK-IN CLOSET, TOP OF THE BEDROOM ============
        TWO CLOSETS AND A PASSAGE, AGAIN, AND THE CHAIN NOW CLOSES ON THE
