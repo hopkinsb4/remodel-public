@@ -681,39 +681,31 @@
          the floor is a white-filled fixture and reads on its own. The play
          floor south of the beds carries no label — with the finish drawn it is
          obvious, and the caption was only restating it. -->
-    <!-- ANCHOR (confirmed 2026-08-30, twice — see the two shifts below):
-         x is shifted so a full Calacatta (white) tile CENTERS on the
-         closet organizers' pinch corner at (-69,0) — where the north
-         organizer's angled edge (see its path below) tapers to meet
-         the west wall exactly at the corner, and the wedge of exposed
-         checkerboard between them narrows to nothing. Before this
-         shift, a tile VERTEX (not its center) landed there instead:
-         two sharp points colliding (the wedge's own taper and a
-         tile's corner) read as a miniscule stray white triangle.
-         Centering a tile there instead means the wedge's taper —
-         however sharp — cuts across the middle of one uninterrupted
-         tile, so it just reads as a clean solid color, no competing
-         point.
+    <!-- ANCHOR (confirmed 2026-08-30, superseding the two shifts this
+         same day): RE-ANCHORED on the bath-hall threshold opening
+         itself. A 24" tile's full diagonal (tip to tip) is
+         24*sqrt(2) = 33.94" — a near-exact match for the 34" opening
+         through the wall at y 75..109 (see HALL THRESHOLDS above).
+         Centered a Calacatta (white) tile at (-71.25,92) — the
+         opening's own center point — so its tips land at y=75.03 and
+         108.97, framing the opening jamb-to-jamb with one clean
+         diamond instead of an arbitrary partial cut or a flat Dawson
+         fill. See the threshold rect below, switched back from Dawson
+         to checkerboard to show it.
 
-         y is shifted (up, -28.853) to fix a SECOND, separate defect
-         found after the x fix: the north organizer's inside-notch
-         chamfer — the short 8"x8" diagonal edge from (-37,24) to
-         (-45,32) — runs exactly PARALLEL to one family of the tile's
-         own 45° grout lines (same slope), but was landing 3.6" off of
-         an actual grout line. A cut parallel to the grid but not on
-         it doesn't read as a normal tile cut; it reads as a
-         constant-width sliver running the whole length of the notch —
-         an odd, "skewed" stripe that doesn't belong to the diamond
-         pattern at all, distinct from (and worse than) an ordinary
-         partial-tile cut. Shifting y until that chamfer edge lands
-         exactly on a grout line (u ≡ 0 mod 24 in pattern space)
-         removes the stripe entirely — the cut just follows the tile
-         edge, as expected. This move also keeps both organizer pinch
-         corners clean: the north one is now 5.1" off a tile center
-         (was 0", still well inside the 16.97" tile radius) and the
-         south one actually improves to 0.8" off (was 4.3"). -->
+         TRADEOFF, confirmed by the numbers, not guessed: this anchor
+         is mathematically incompatible with the two fixes it
+         replaces — centering here and keeping the organizer notch
+         chamfer grout-aligned can't both be exact (they're ~17" out
+         of phase with each other, provably, not just unlucky). Both
+         organizer pinch corners also move off-center (north 10.1",
+         south 14.3" — the south one is getting close to the 16.97"
+         tile radius, worth a look once this is built). The threshold
+         framing was the explicit priority here; the notch chamfer's
+         skewed sliver is back until/unless that's worth revisiting
+         too. -->
     <pattern id="pbed-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(-52.0294,-28.853) rotate(45)">
+             patternTransform="translate(-54.2794,92) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
@@ -882,20 +874,16 @@
        NOTE ALSO: the north closet doorway's west jamb at x -64 lands half an
        inch off the bath-end return at x -64.5. Half an inch is not a
        tolerance, it is a coincidence - measure both before framing. -->
-  <!-- THRESHOLD, REDONE FOR THE 24" MODULE (2026-08-30): the old split
-       here (checkerboard to x=-72.385, a 1.115" Dawson sliver west of
-       it) was hand-fit to the 12" module's own diagonal spacing —
-       stale once the whole house switched to 24" tile, and at this
-       scale (4.5" of open floor between the bath wall's inner face
-       and the hall's own checkerboard block) there's no room for a
-       clean partial course of a 24" diagonal tile either way. Same
-       fix as the dining-to-hallway threshold on the main floor plan:
-       Dawson (the bath's own floor, already running right up to the
-       wall's outer face at x=-78) fills this whole gap too, flush
-       with the hall block's checkerboard start at x=-69 — no sliver,
-       no sharp inside corners, and no diagonal-tile phase to chase in
-       a 4.5" strip. -->
-  <rect x="-73.5" y="75" width="4.5" height="34" fill="url(#pbed-dawson)"/>
+  <!-- THRESHOLD, RE-DONE AGAIN (2026-08-30): switched back from the
+       flush-Dawson fill to checkerboard. A 24" tile's diagonal
+       (33.94") nearly exactly matches this 34" opening's height —
+       see the pattern's ANCHOR comment above — so instead of hiding
+       the awkward math with solid Dawson, the pattern is now phased
+       to center a whole Calacatta tile on this opening (-71.25,92),
+       framing it jamb-to-jamb with one clean diamond. Only this
+       narrow 4.5" strip shows checkerboard; Dawson still covers the
+       bath's own floor on the other side of the wall (x <= -78). -->
+  <rect x="-73.5" y="75" width="4.5" height="34" fill="url(#pbed-check)"/>
 
   <!-- BATH DOORS (split barn) are drawn AFTER the bath group below, not here -
        the bath's own background rect paints over this x range and was
