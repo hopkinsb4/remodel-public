@@ -2207,6 +2207,14 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="240.5" y="-40.5" width="4.5" height="30" fill="url(#mainfloor-check)"/>  <!-- passage floor toward the garage/dsbath hallway -->
   <line class="outline" x1="240.5" y1="-40.5" x2="245" y2="-40.5"/>
   <line class="outline" x1="240.5" y1="-10.5" x2="245" y2="-10.5"/>
+  <!-- A couple of whole black tiles trailing off through the opening
+       toward the garage/downstairs hallway — that area is detailed on
+       the downstairs-bath plan, so rather than draw it, the
+       checkerboard just dissolves west. Both diamonds are computed on
+       the same 45°-rotated 12" pattern grid as the floor fill (same
+       phase, same #262322), corner-touching like real courses. -->
+  <path fill="#262322" d="M 229.1,-25.46 L 220.62,-16.97 L 212.13,-25.46 L 220.62,-33.94 Z"/>
+  <path fill="#262322" d="M 212.13,-25.46 L 203.65,-16.97 L 195.16,-25.46 L 203.65,-33.94 Z"/>
   <line class="extline" x1="240.5" y1="-40.5" x2="232" y2="-40.5"/>
   <line class="extline" x1="240.5" y1="-10.5" x2="232" y2="-10.5"/>
   <line class="extline" x1="240.5" y1="23.5" x2="232" y2="23.5"/>
