@@ -681,25 +681,39 @@
          the floor is a white-filled fixture and reads on its own. The play
          floor south of the beds carries no label — with the finish drawn it is
          obvious, and the caption was only restating it. -->
-    <!-- ANCHOR (confirmed 2026-08-30): shifted so a full Calacatta
-         (white) tile CENTERS on the closet organizers' pinch corner at
-         (-69,0) — where the north organizer's angled edge (see its
-         path below) tapers to meet the west wall exactly at the
-         corner, and the wedge of exposed checkerboard between them
-         narrows to nothing. Before this shift, a tile VERTEX (not its
-         center) landed there instead: two sharp points colliding
-         (the wedge's own taper and a tile's corner) read as a
-         miniscule stray white triangle. Centering a tile there instead
-         means the wedge's taper — however sharp — cuts across the
-         middle of one uninterrupted tile, so it just reads as a clean
-         solid color, no competing point. The mirrored south organizer
-         pinch (-69,174) isn't perfectly centered by this same shift
-         but lands well inside the tile's body (4.3" off-center, tile
-         radius 16.97"), so it's clean there too. Only x is shifted —
-         y is untouched, so the bedroom's north/south wall phases
-         (already fine) don't move. -->
+    <!-- ANCHOR (confirmed 2026-08-30, twice — see the two shifts below):
+         x is shifted so a full Calacatta (white) tile CENTERS on the
+         closet organizers' pinch corner at (-69,0) — where the north
+         organizer's angled edge (see its path below) tapers to meet
+         the west wall exactly at the corner, and the wedge of exposed
+         checkerboard between them narrows to nothing. Before this
+         shift, a tile VERTEX (not its center) landed there instead:
+         two sharp points colliding (the wedge's own taper and a
+         tile's corner) read as a miniscule stray white triangle.
+         Centering a tile there instead means the wedge's taper —
+         however sharp — cuts across the middle of one uninterrupted
+         tile, so it just reads as a clean solid color, no competing
+         point.
+
+         y is shifted (up, -28.853) to fix a SECOND, separate defect
+         found after the x fix: the north organizer's inside-notch
+         chamfer — the short 8"x8" diagonal edge from (-37,24) to
+         (-45,32) — runs exactly PARALLEL to one family of the tile's
+         own 45° grout lines (same slope), but was landing 3.6" off of
+         an actual grout line. A cut parallel to the grid but not on
+         it doesn't read as a normal tile cut; it reads as a
+         constant-width sliver running the whole length of the notch —
+         an odd, "skewed" stripe that doesn't belong to the diamond
+         pattern at all, distinct from (and worse than) an ordinary
+         partial-tile cut. Shifting y until that chamfer edge lands
+         exactly on a grout line (u ≡ 0 mod 24 in pattern space)
+         removes the stripe entirely — the cut just follows the tile
+         edge, as expected. This move also keeps both organizer pinch
+         corners clean: the north one is now 5.1" off a tile center
+         (was 0", still well inside the 16.97" tile radius) and the
+         south one actually improves to 0.8" off (was 4.3"). -->
     <pattern id="pbed-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(-52.0294,0) rotate(45)">
+             patternTransform="translate(-52.0294,-28.853) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
