@@ -2033,24 +2033,35 @@ Without these the wall band simply runs out into the floor. Six caps:
          ($6.08 vs $9.25, edwardmartin.com SKU 11868 vs 11795) — see the
          tile-size-comparison section in the design book for the two
          sizes side by side and the budget line for the cost delta. -->
-    <!-- ANCHOR (confirmed 2026-08-30): phased on the STAIRS LANDING
-         VIEW, not the room's own corners — the sofa runs the south
-         wall (y=169) and the entertainment center/stairs cover the
-         north wall (y=0), so neither wall is actually seen. What IS
-         seen is the threshold where the stairs' pony wall meets the
-         open floor (y=23) — that's the sightline stepping off the
-         stairs into the room, and it's phased to a clean half-tile cut
-         there (translate y=24/sqrt(2) mod 23 in inches). West/east
-         walls (x=0/171) were already perfect and are untouched. The
-         tradeoff, on purpose: the south wall under the sofa drops from
-         a perfect cut to merely marginal — a wasted "perfect" cut
-         hidden under furniture doesn't help anyone; a good cut where
-         you actually step into the room does.
-         SUPERSEDED FOR THE LIVING ROOM ONLY, see mainfloor-check-lr
-         below — kitchen and dining still use this 24.000" module and
-         this stairs-landing phase. -->
+    <!-- ANCHOR, RE-PHASED (confirmed 2026-08-30): originally phased on
+         the stairs-landing threshold (translate y=24/sqrt(2) mod 23),
+         back when this pattern still covered the living room too. Now
+         that the living room has its own pattern (mainfloor-check-lr,
+         above — no longer touched by this one), this pattern covers
+         the KITCHEN and DINING ROOM (the entryway stays Dawson — not
+         reverted), re-anchored for that scope:
+         - The kitchen/dining threshold (the 106" cased opening between
+           them, y 23.5-32.5, centered y=28): re-phased so the cut is
+           the "half-tile" type (a whole row of diamond centers sits on
+           the line, same terminology as the original stairs-landing
+           cut) — and specifically a BLACK row, not white — dy = 28 -
+           3*S.
+         - Kitchen west wall (x=245, shared with the entryway/kitchen
+           archway): re-phased to the "vertex" type (tile points touch
+           the wall, alternating white/black) rather than a half-tile
+           cut — dx = 245 - 14*S. Kitchen east wall (x=382, 137" away)
+           falls out phase-good too (0.073) as a bonus, same for
+           dining's matching east wall.
+         - N/S alignment with the living room: the two rooms use
+           slightly different tile modules (this one's still the
+           nominal 24.000", the living room nudged to 24.1831" for its
+           own width) so they can't share an exact infinite phase: dy
+           was chosen as the closest odd-row (black-threshold) solution
+           to the living room's dy (-28.3) — 5.39" off, the closest
+           this module allows.
+         S = 24/sqrt(2) = 16.9706". -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(0,6.0294) rotate(45)">
+             patternTransform="translate(7.4121,-22.9117) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
@@ -2277,6 +2288,12 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="240.5" y="32.5" width="4.5" height="38.5" fill="#C9C4B7"/>  <!-- trimmed to the dining-wall line: the SE jog into the bath space is cut -->
   <rect x="236" y="64.5" width="4.5" height="6.5" fill="#C9C4B7"/>  <!-- corner fill where the entryway north wall meets the trimmed wall -->
   <rect x="236" y="121" width="9" height="48" fill="#C9C4B7"/>
+  <!-- KITCHEN/DINING THRESHOLD (confirmed 2026-08-30): kitchen and
+       dining are one continuous Leona run straight through the 106"
+       cased opening between them — no break, same tile, same phase.
+       The mainfloor-check phase (see ANCHOR note above) centers a
+       black "half-tile" row on this opening, so it reads as a clean
+       solid band crossing the threshold rather than a jagged seam. -->
   <rect x="250" y="23.5" width="106" height="9" fill="url(#mainfloor-check)"/>  <!-- opening passage floor, continuous north -->
   <rect x="240.5" y="23.5" width="9.5" height="9" fill="#C9C4B7"/>
   <rect x="356" y="23.5" width="30.5" height="9" fill="#C9C4B7"/>
