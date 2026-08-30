@@ -2038,42 +2038,31 @@ Without these the wall band simply runs out into the floor. Six caps:
          back when this pattern still covered the living room too. Now
          that the living room has its own pattern (mainfloor-check-lr,
          above — no longer touched by this one), this pattern covers
-         the DINING ROOM and the kitchen/dining threshold opening (the
-         entryway stays Dawson — not reverted). The KITCHEN ROOM itself
-         was split off onto its own pattern, mainfloor-check-kitchen,
-         below — see that note for why. This pattern keeps the
-         threshold anchor:
-         - The kitchen/dining threshold (the 106" cased opening between
-           them, y 23.5-32.5, centered y=28): phased so the cut is the
-           "half-tile" type (a whole row of diamond centers sits on the
-           line, same terminology as the original stairs-landing cut)
-           — and specifically a BLACK row, not white — dy = 28 - 3*S.
+         the KITCHEN and DINING ROOM as one continuous run (the
+         entryway stays Dawson — not reverted). Re-anchored twice the
+         same day:
+         - First pass: dy = 28 - 3*S, centering a BLACK "half-tile" row
+           on the kitchen/dining threshold (the 106" cased opening
+           between them, y 23.5-32.5) — the same "half-tile" cut
+           terminology as the original stairs-landing anchor.
+         - Second pass (this one): kitchen and dining were briefly
+           split onto separate patterns so the kitchen alone could
+           shift and align its E-W tile-point rows with the living
+           room — but the ask was actually for kitchen AND dining
+           together, so they're back on one pattern, both carrying the
+           shift: dy nudged by -4.353" (to -27.2647) so the vertex row
+           nearest the kitchen's own vertical middle lands within a
+           thousandth of an inch of the living room's vertex row at
+           the same height (the two rooms' tile modules are close but
+           not identical — this one's nominal 24.000", the living
+           room's nudged to 24.1831" — so only one row can be made
+           exact). Kitchen west wall (x=245) stays exact — dx=7.4121
+           doesn't move. The kitchen/dining threshold is no longer
+           perfectly centered on this new dy (about 4.35" off), but
+           it's still one continuous run — no seam between kitchen and
+           dining, since both share this same anchor.
          S = 24/sqrt(2) = 16.9706". -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(7.4121,-22.9117) rotate(45)">
-      <rect width="48" height="48" fill="#F1EEE7"/>
-      <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
-      <rect x="24" y="24" width="24" height="24" fill="#262322"/>
-    </pattern>
-    <!-- KITCHEN ONLY (confirmed 2026-08-30): split off from
-         mainfloor-check (which still covers dining + the threshold
-         opening, above) so the kitchen's tile could shift north a few
-         inches without moving dining. The ask: the E-W lines running
-         through the tile points (the vertex rows, spaced 2*S apart)
-         should line up from the living room into the kitchen. The two
-         rooms' tile modules are close but not identical (this one's
-         nominal 24.000", the living room's nudged to 24.1831"), so an
-         exact match can only be made at one row at a time — picked the
-         row nearest the kitchen's own vertical middle (living room's
-         y=108.5 vertex row, kitchen's y=112.85) and shifted dy by
-         -4.353" to land them within a thousandth of an inch of each
-         other. Kept dx unchanged (7.4121, still exact on the west wall
-         at x=245 — dx doesn't affect this shift). Tradeoff, on
-         purpose: this reopens the kitchen/dining threshold (still
-         mostly black, just no longer perfectly centered — about
-         4.35" off the mainfloor-check anchor above) in exchange for
-         the living-room-to-kitchen alignment now being exact. -->
-    <pattern id="mainfloor-check-kitchen" width="48" height="48" patternUnits="userSpaceOnUse"
              patternTransform="translate(7.4121,-27.2647) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
@@ -2297,16 +2286,16 @@ Without these the wall band simply runs out into the floor. Six caps:
        still drawn at the standard 4.5" (assumed, not measured);
        kitchen contents (cabinets, island, appliances) not drawn
        yet. -->
-  <rect x="245" y="32.5" width="137" height="136.5" fill="url(#mainfloor-check-kitchen)"/>
+  <rect x="245" y="32.5" width="137" height="136.5" fill="url(#mainfloor-check)"/>
   <rect x="240.5" y="32.5" width="4.5" height="38.5" fill="#C9C4B7"/>  <!-- trimmed to the dining-wall line: the SE jog into the bath space is cut -->
   <rect x="236" y="64.5" width="4.5" height="6.5" fill="#C9C4B7"/>  <!-- corner fill where the entryway north wall meets the trimmed wall -->
   <rect x="236" y="121" width="9" height="48" fill="#C9C4B7"/>
   <!-- KITCHEN/DINING THRESHOLD (confirmed 2026-08-30): kitchen and
        dining are one continuous Leona run straight through the 106"
-       cased opening between them — no break, same tile, same phase.
-       The mainfloor-check phase (see ANCHOR note above) centers a
-       black "half-tile" row on this opening, so it reads as a clean
-       solid band crossing the threshold rather than a jagged seam. -->
+       cased opening between them — no break, same tile, same phase
+       (see the ANCHOR note above — its dy since shifted ~4.35" to
+       align with the living room, so this opening is mostly black but
+       no longer perfectly centered on it). -->
   <rect x="250" y="23.5" width="106" height="9" fill="url(#mainfloor-check)"/>  <!-- opening passage floor, continuous north -->
   <rect x="240.5" y="23.5" width="9.5" height="9" fill="#C9C4B7"/>
   <rect x="356" y="23.5" width="30.5" height="9" fill="#C9C4B7"/>
