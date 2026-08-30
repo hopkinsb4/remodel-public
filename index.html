@@ -575,23 +575,23 @@
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-186 -160 226 347" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the east wall, flanking the 41 inch east window, one flush to the north wall clearing the window's north jamb by 4 inches, one flush to the south wall clearing the window's south jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 2 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running east-west, 36 inches long, against the east wall centered in the 2 inch gap between the bed's own frame and its own side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the north wall now fully clear of both beds, two walk-in closets and the primary bathroom west of the room, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet flanked by a pair of vanity lights, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 2 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall centered in the 2 inch gap between the bed's own frame and its own side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets and the primary bathroom to the top of the room, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet flanked by a pair of vanity lights, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
     EDITABLE SOURCE. All coordinates are in INCHES.
-    Origin (0,0) = the NORTHWEST interior corner.
-    +x runs EAST, +y runs SOUTH.
-    Room is 144" (12'-0") W-E  x  156" (13'-0") N-S.
+    Origin (0,0) = the TOP-RIGHT interior corner.
+    +x runs toward the BOTTOM, +y runs LEFT.
+    Room is 144" (12'-0") TOP-TO-BOTTOM  x  156" (13'-0") RIGHT-TO-LEFT.
 
     ROTATED 90° CLOCKWISE FOR DISPLAY (confirmed 2026-08-30), to put the
     street side at the bottom of the sheet, matching the other floorplans
     going forward. Done as a single <g transform="rotate(90)"> wrapped
     around everything below </defs> — the underlying geometry (every
     rect/path/line coordinate, and this whole comment's compass words:
-    NORTH/EAST/SOUTH/WEST, +x/+y) still describes the PRE-ROTATION
-    layout, not what's now on screen. What was NORTH is now EAST, EAST
-    is now SOUTH, SOUTH is now WEST, WEST is now NORTH. Every <text>
+    RIGHT/BOTTOM/LEFT/TOP, +x/+y) still describes the PRE-ROTATION
+    layout, not what's now on screen. What was RIGHT is now BOTTOM, BOTTOM
+    is now LEFT, LEFT is now TOP, TOP is now RIGHT. Every <text>
     that had no rotation got transform="rotate(180 x y)" added (so its
     net on-screen rotation becomes -90°, matching this file's existing
     bottom-to-top convention for vertical text); text that already had
@@ -599,20 +599,20 @@
     horizontal) — both fall out of composing with the outer +90.
     viewBox updated to "-186 -160 226 347" (was "-160 -40 347 226") to
     fit the rotated bounding box.
-    NOT done: rewriting the hundreds of NORTH/SOUTH/EAST/WEST references
+    NOT done: rewriting the hundreds of RIGHT/LEFT/BOTTOM/TOP references
     in the prose comments throughout this file to match the new
     orientation. That's a documentation-only cleanup, separate from
     this visual change — read them as describing the room BEFORE this
     rotation.
     Wall band is 4.5" thick THROUGHOUT. The two walls flanking the WIC were
     drawn 9" earlier; that was an apparent/furred thickness, not a real one.
-    Removing it holds the overall 78" from the bedroom's west face (x 0) to
+    Removing it holds the overall 78" from the bedroom's top face (x 0) to
     the far side of the closet block (x -78) and grows the WIC's interior
-    from 60" to 69" E-W. Nothing in the bedroom moves.
+    from 60" to 69" BOTTOM-TO-TOP. Nothing in the bedroom moves.
 
     THE RESERVED STRIP IS SUITE CIRCULATION, NOT A HALL-TO-HALL SHORTCUT.
     It was described that way earlier and drawn that way; it is not. The
-    SOUTH opening is the bedroom's own door off the hall. The WEST opening
+    LEFT opening is the bedroom's own door off the hall. The TOP opening
     leads to the suite's private zone — TWO walk-in closets and the primary
     bathroom. So the strip is the route from the bedroom door to the closets
     and bath, which is why it has to stay clear: it is used every morning,
@@ -631,40 +631,40 @@
     because every alternative on that list can still be introduced later
     without undoing a thing.
 
-    TWO BEDS, PARALLEL, BOTH ON THE EAST WALL (confirmed 2026-08-30).
-    This supersedes the north-wall pairing, which itself superseded the
+    TWO BEDS, PARALLEL, BOTH ON THE BOTTOM WALL (confirmed 2026-08-30).
+    This supersedes the right-wall pairing, which itself superseded the
     perpendicular-corners scheme, which itself superseded an earlier
-    east-wall pairing — back on the east wall again, but flanking the
+    bottom-wall pairing — back on the bottom wall again, but flanking the
     window this time rather than sitting on either side of a gap.
 
-    NORTH BED: y 0..44, headboard flush to the east wall, flush to the
-    north wall too — only 4" clear of the window's north jamb (y 48).
+    RIGHT BED: y 0..44, headboard flush to the bottom wall, flush to the
+    right wall too — only 4" clear of the window's right jamb (y 48).
 
-    SOUTH BED: y 112..156, headboard flush to the east wall and to the
-    south wall — 23" clear of the window's south jamb (y 89).
+    LEFT BED: y 112..156, headboard flush to the bottom wall and to the
+    left wall — 23" clear of the window's left jamb (y 89).
 
     EACH BED'S THUMA PEDESTAL SIDE TABLE sits between its headboard and
     the window, pulled back 2" off the bed frame (confirmed 2026-08-30 —
-    was flush): north bed's at y 46..61.75 (overlapping the window's own
+    was flush): right bed's at y 46..61.75 (overlapping the window's own
     y-range by 13.75" — accepted, a table sitting below part of a window
-    is normal), south bed's at y 94.25..110 (5.25" clear of the window's
-    south jamb).
+    is normal), left bed's at y 94.25..110 (5.25" clear of the window's
+    left jamb).
 
-    TWO CEILING-HUNG CURTAINS, canopy-bed styled, one per bed, run E-W
-    instead of N-S: each mounted against the east wall (x 144), 36" long
+    TWO CEILING-HUNG CURTAINS, canopy-bed styled, one per bed, run BOTTOM-TO-TOP
+    instead of RIGHT-TO-LEFT: each mounted against the bottom wall (x 144), 36" long
     to x 108, centered in the 2" gap between that bed's own frame and
-    its own side table (y=45 for the north bed, y=111 for the south) —
+    its own side table (y=45 for the right bed, y=111 for the left) —
     not a single shared curtain
     between the two pedestals.
 
-    THE OPEN FLOOR is now everything west of the beds and their side
+    THE OPEN FLOOR is now everything to the top of the beds and their side
     tables (x 0..125.25) across the room's full 156" depth, plus the
     68..125.25 strip beyond the beds' own footprint — no closet, no
     desk, nothing else budgeted there.
 
-    NORTH WINDOW (28", x 6..34): fully clear now that both beds moved
-    off the north wall — this is a strict improvement over the prior
-    scheme, where the west bed sat 2" from it.
+    RIGHT WINDOW (28", x 6..34): fully clear now that both beds moved
+    off the right wall — this is a strict improvement over the prior
+    scheme, where the top bed sat 2" from it.
 
     NO ACCENT TILE IN THIS ROOM. All four walls are the whole-house paint
     finish. Headboards sit flush on the raw wall.
@@ -710,11 +710,11 @@
          contrast any floor-level label stops being readable over the dark
          squares, so the few that remain sit on soft plates; everything else on
          the floor is a white-filled fixture and reads on its own. The play
-         floor south of the beds carries no label — with the finish drawn it is
+         floor to the left of the beds carries no label — with the finish drawn it is
          obvious, and the caption was only restating it. -->
     <!-- ANCHOR (confirmed 2026-08-30, superseding the center-on-opening
          version from earlier today): a VERTEX (tile corner, not a
-         tile's own center) landed exactly at (-69,92) — the west
+         tile's own center) landed exactly at (-69,92) — the top
          closet block's inner wall face (x=-69, the hall-side face
          Dawson does NOT cross), at the bath-hall opening's own
          vertical center (y=92, midway between the 34" opening's jambs
@@ -763,78 +763,78 @@
 
 
   <!-- ============ SHELL ============ -->
-  <rect x="-73.5" y="-4.5" width="73.5" height="183" fill="#C9C4B7"/>   <!-- closet block + west wall -->
+  <rect x="-73.5" y="-4.5" width="73.5" height="183" fill="#C9C4B7"/>   <!-- closet block + top wall -->
   <rect x="0" y="-4.5" width="148.5" height="165" fill="#C9C4B7"/>  <!-- bedroom -->
   <rect x="0" y="0" width="144" height="156" fill="url(#pbed-check)"/>
 
   <!-- ============ DOORWAYS ============
        Only the two DOORWAYS carry the floor through the 4.5" wall thickness —
-       south to the hall, west to the WICs and bath — and only their stretches
+       left to the hall, top to the WICs and bath — and only their stretches
        are omitted from the wall faces below. The windows are NOT openings you
        pass through: the wall runs continuous behind them and they get a window
        symbol instead, further down. -->
   <!-- ENTRY DOOR, the main way in from downstairs. A 28" opening with a 4"
        STUB WALL on the left as you come in - x 0..4 - so the hinge jamb has
        something to land on instead of dying into the corner. Opening x 4..32,
-       wall from 32 east. Handle on the right coming in, so the leaf hinges
-       LEFT at x 4 and swings into the bedroom, standing off the west wall. -->
+       wall from 32 toward the bottom. Handle on the right coming in, so the leaf hinges
+       LEFT at x 4 and swings into the bedroom, standing off the top wall. -->
   <rect x="4" y="156" width="28" height="4.5" fill="url(#pbed-check)"/>
   <rect x="-9" y="75" width="9" height="34" fill="url(#pbed-check)"/>
 
   <!-- The two openings keep their callouts; the reserved-walkway graphic that
        drove this layout has been removed now that the layout is settled. The
-       route it protected still exists — south door to the two WICs and the
+       route it protected still exists — left door to the two WICs and the
        primary bath — and the reasoning is kept in the header comment above. -->
   <text class="lbl-s" x="18" y="164.5" text-anchor="middle" transform="rotate(180 18 164.5)">TO HALL (bedroom door)</text>
 
-  <!-- ============ WALK-IN CLOSET, WEST OF THE BEDROOM ============
+  <!-- ============ WALK-IN CLOSET, TOP OF THE BEDROOM ============
        TWO CLOSETS AND A PASSAGE, AGAIN, AND THE CHAIN NOW CLOSES ON THE
        MEASURED NUMBERS. Told to trust the 67" and 57" depths, the 41"
        walkway and 4.5" walls, this reads 67 + 4.5 + 41 + 4.5 + 57 = 174"
        inside to inside. THE 168" OVERALL IS SUPERSEDED - it was 6" short of
        what the parts add to, and the parts are the ones that were measured
-       twice. The closet now juts 18" south past the bedroom rather than 12". The 4.5" walls come out
+       twice. The closet now juts 18" left past the bedroom rather than 12". The 4.5" walls come out
        of the CLOSETS, not the hall, so the 41" passage is untouched and its
        faces land exactly on the jambs of both openings - bedroom, hall and
-       bath all on one axis. Its north wall is aligned with
+       bath all on one axis. Its right wall is aligned with
        the bedroom's, so the whole 12" of difference against the bedroom's
-       156" falls at the SOUTH end — the closet juts 12" past the bedroom,
+       156" falls at the LEFT end — the closet juts 12" past the bedroom,
        measured either interior face to interior face or outer to outer.
 
-       SE CORNER, which is what that overrun creates: the 4.5" wall between
-       closet and bedroom carries on south past the bedroom to meet the
-       closet's own south wall at y 172.5. From y 160.5 down its east face is
+       BOTTOM-LEFT CORNER, which is what that overrun creates: the 4.5" wall between
+       closet and bedroom carries on left past the bedroom to meet the
+       closet's own left wall at y 172.5. From y 160.5 down its bottom face is
        an outside face against the hall rather than a shared wall — so the
-       bedroom's south wall stops at x 0 and does not run west across it.
+       bedroom's left wall stops at x 0 and does not run toward the top across it.
 
-       WIDTH IS 60" EAST-WEST (x -69..-9), and the wall on its EAST side -
-       the bedroom's west wall, labelled WEST WALL on the sheet - is 9"
+       WIDTH IS 60" BOTTOM-TOP (x -69..-9), and the wall on its BOTTOM side -
+       the bedroom's top wall, labelled TOP WALL on the sheet - is 9"
        THICK THROUGH ITS FULL LENGTH. That is the fact that
-       finally makes every measurement land at once. The WIC west wall stays
+       finally makes every measurement land at once. The WIC top wall stays
        nominal 4.5" (x -73.5..-69); the whole closet-and-bath block sits
-       4.5" further west of the bedroom than when that wall was drawn 4.5.
+       4.5" further to the top of the bedroom than when that wall was drawn 4.5.
 
        THE PILLARS, resolved. At the BEDROOM end the hall's 34" threshold
        simply passes through the 9" wall - the "pillar" is the wall itself
        in section, no returns, no blades. At the BATH end the 9" is the 4.5"
-       WIC west wall plus a 4.5" blade into the hall, and the blade is
-       BACKED by the 4.5" partition stub west of the door - solid, not a
+       WIC top wall plus a 4.5" blade into the hall, and the blade is
+       BACKED by the 4.5" partition stub to the top of the door - solid, not a
        fin. Past both, the hall opens to its full 41".
 
-       THE DOORWAYS SIT HARD AGAINST THE WEST PILLAR, x -64.5..-36.5. The
-       owner's field chain, east to west, and how it maps to the drawing:
+       THE DOORWAYS SIT HARD AGAINST THE TOP PILLAR, x -64.5..-36.5. The
+       owner's field chain, bottom to top, and how it maps to the drawing:
          9" pillar      the bedroom wall itself                   9 drawn
-         28" wall       door east jamb to that wall               27.5 drawn
+         28" wall       door bottom jamb to that wall               27.5 drawn
          28" door       the opening                               28 drawn
          3" stub        the STRUCTURAL core of the return         within the
                         4.5" finished assembly
-         9" fake pillar 4.5" WIC west wall + 4.5" FURRING          9 drawn
+         9" fake pillar 4.5" WIC top wall + 4.5" FURRING          9 drawn
        Every plane already drawn matches a field number; the half-inch on
        the wall segment is the chain's usual slop. The 3-vs-4.5 at the stub
        is finish build-up, invisible at plan poche and recorded here.
 
-       REAL VS FAKE MATTERS FOR DEMO: the EAST pillar is the 9" wall
-       itself, not decorative. The WEST pillar is furring on a 4.5" wall
+       REAL VS FAKE MATTERS FOR DEMO: the BOTTOM pillar is the 9" wall
+       itself, not decorative. The TOP pillar is furring on a 4.5" wall
        and a 3" stub - decorative, and could be reworked if a future
        scope ever wanted to. Nothing stands in front of any part of the
        opening either way: the full 28" is clear straight through.
@@ -854,8 +854,8 @@
        openings moved with it to y 75..109 and the walkway centreline went
        from 87.5 to 92. The vanity is centred on that line, so it moved too.
        And the bath, which is keyed to the same openings, RESTRETCHED: its
-       north wall stays pinned at y 0, but the run from the toilet-room wall
-       down to the hall jamb goes 26.5 -> 34.5 and the south wall goes
+       right wall stays pinned at y 0, but the run from the toilet-room wall
+       down to the hall jamb goes 26.5 -> 34.5 and the left wall goes
        158.5 -> 159.5, because the 50.5" to it was measured off a jamb that
        moved. THE BATH'S OWN "27" IS THE CASUALTY: 36 + 4.5 + 27 puts that
        jamb at 67.5, and the closet chain puts it at 75. Seven and a half
@@ -873,32 +873,32 @@
        is what made them look wrong. 13.5" against the 9" described is the
        one loose end, and it is loose in the safe direction.
 
-       The 4.5" wall at the far west
+       The 4.5" wall at the far top
        (x -78..-73.5) carries the opening to the primary bathroom, and the
-       4.5" wall at the east end carries the opening to the bedroom. BOTH are
+       4.5" wall at the bottom end carries the opening to the bedroom. BOTH are
        drawn at the 41" hall width, y 67..108, so their jambs line up and
        the cross-route reads as one straight 41" corridor. Each closet now
-       takes its own 28" doorway off that corridor, pushed WEST - east jamb
-       36" off the bedroom face of the west bedroom wall, so x -64..-36,
-       leaving 31.5" of partition east of the door and 9.5" west. The bedroom end had
+       takes its own 28" doorway off that corridor, pushed toward the top - bottom jamb
+       36" off the bedroom face of the top bedroom wall, so x -64..-36,
+       leaving 31.5" of partition to the bottom of the door and 9.5" to the top. The bedroom end had
        been drawn 36" to match the bedroom door, but that was an assumption,
        not a given, and it left the two caps out of line. 41" is the one width
        actually established here. The bath end was also described as
-       "narrowed" at this point, so confirm it. North and south walls drawn 4.5" —
+       "narrowed" at this point, so confirm it. Right and left walls drawn 4.5" —
        their thickness was not given either. -->
   <rect x="-69" y="0" width="60" height="174" fill="url(#pbed-check)"/>
-  <!-- PARTITIONS RESTORED. The two E-W walls that make this two closets and
+  <!-- PARTITIONS RESTORED. The two BOTTOM-TO-TOP walls that make this two closets and
        a passage go back in, faces landing exactly on the 41" hall jambs at
        y 67 and y 108 so all three openings line up on one axis. 4.5" thick,
        so they eat into the closets, not the hall:
-         north closet   y 0..62.5     62.5" deep
+         right closet   y 0..62.5     62.5" deep
          partition      y 62.5..67
          passage        y 67..108     the 41" hall, unchanged
          partition      y 108..112.5
-         south closet   y 112.5..168  55.5" deep
-       DOORWAYS 28", both pushed WEST: east jamb 36" off the bedroom face of
-       the west bedroom wall, so x -64..-36. That leaves 31.5" of partition
-       east of the door and 9.5" west. Floor carries through each opening,
+         left closet   y 112.5..168  55.5" deep
+       DOORWAYS 28", both pushed toward the top: bottom jamb 36" off the bedroom face of
+       the top bedroom wall, so x -64..-36. That leaves 31.5" of partition
+       to the bottom of the door and 9.5" to the top. Floor carries through each opening,
        same as every other doorway on this sheet. -->
   <!-- HALL THRESHOLDS. The walkway is 41" between the partitions but only
        34" where it passes through a wall: each room threshold is a 34"
@@ -911,7 +911,7 @@
        centreline the vanity is set on, so that at least stays true. If the
        narrowing is actually all on one side, this is wrong by 3.5" and the
        vanity moves with it - worth one look on site.
-       NOTE ALSO: the north closet doorway's west jamb at x -64 lands half an
+       NOTE ALSO: the right closet doorway's top jamb at x -64 lands half an
        inch off the bath-end return at x -64.5. Half an inch is not a
        tolerance, it is a coincidence - measure both before framing. -->
   <!-- THRESHOLD, RESTORED TO DAWSON (2026-08-30): the wall's own
@@ -940,16 +940,16 @@
   <path class="outline" d="M0,75 H-9 M0,109 H-9"/>
 
   <!-- ============ PRIMARY BATH ============
-       Tagged onto the same sheet, same origin, same scale. The bath's east
-       wall IS the closet's west wall, so it needs no new reference: interior
+       Tagged onto the same sheet, same origin, same scale. The bath's bottom
+       wall IS the closet's top wall, so it needs no new reference: interior
        face at x -78, with the 41" opening at y 67..108 already drawn.
 
        MEASURED FROM THE DOORWAY, and read off the JAMBS, not the centreline:
-         62" west          -> west interior face at x -140
-         50½" to the left  -> from the south jamb (y 108) to the DRYWALL at
+         62" top          -> top interior face at x -140
+         50½" to the left  -> from the left jamb (y 108) to the DRYWALL at
                               y 158.5. The 50" first given was to the face of
                               the fiberglass, which stands ½" proud of it.
-         27" to the right  -> from the north jamb (y 67) to the wall with the
+         27" to the right  -> from the right jamb (y 67) to the wall with the
                               toilet-room door. Drawn 26½ (y 40.5), see the
                               dimension note below.
        That makes the open bath 62" x 117½". If you meant those measured from
@@ -957,12 +957,12 @@
        instead and this is wrong by a lot - the 27 / 41 / 50 chain on the left
        is there so it can be checked at a glance.
 
-       TOILET ROOM 62 x 36, north of the door wall: interior y 0..36, the
-       full 62" width, its north wall flush with the closet's and the
+       TOILET ROOM 62 x 36, to the right of the door wall: interior y 0..36, the
+       full 62" width, its right wall flush with the closet's and the
        bedroom's.
 
        TUB ALCOVE, the lower part OF the room, not beyond it. Now y
-       127.7..158.5, full 62" width: the 50½" from the south jamb breaks
+       127.7..158.5, full 62" width: the 50½" from the left jamb breaks
        19¾" of clear floor then 30¾" of tub.
 
        DROPPED IN: the KOHLER UNDERSCORE 60 x 30, K-20201-RA-0, replacing
@@ -971,30 +971,30 @@
        It beds tight to all three tiled faces.
 
 NOTHING FRAMES THE ALCOVE. The three walls the tub beds against are
-       the room's own west, south and east walls, all of which stay. The old
+       the room's own top, left and bottom walls, all of which stay. The old
        36" was never a framed opening; it was the depth of the fiberglass
        unit, and it leaves with the unit. Nothing is built across the fourth
        side - the alcove is open to the room. So the depth of the alcove is
        simply whatever tub goes in it.
 
-       WHY 30 AND NOT 42. 60" between the tiled west and east faces (62
+       WHY 30 AND NOT 42. 60" between the tiled top and bottom faces (62
        framed, less 0.8 of tile each side = 60.4 clear) is the constraint on
        LENGTH, and every one of these tubs meets it. Depth is the free
        variable, and it comes straight out of the room:
          Avec 42          clear floor to the doorway   7¾"   tiled 75.2"
          Underscore 30    clear floor to the doorway   19¾"  tiled 87.2"
-       12" back, and the vanity gains all of it - the gap between its south
+       12" back, and the vanity gains all of it - the gap between its left
        end and the tub apron goes 10.2" -> 22.2". That is room to kneel at
        the apron and bathe a child, which is what the 42 was quietly taking.
        The Underscore is also the DEEPER SOAK of the two: 15-1/2" of water
        against the Avec's 13-1/4".
 
 LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
-       the tub's front face. West wall: all the way north to the room's NW
-       corner at y 40.5, so the vanity sits against tile. East wall: north to
+       the tub's front face. Top wall: all the way right to the room's top-right
+       corner at y 40.5, so the vanity sits against tile. Bottom wall: right to
        the door jamb at y 108. That kills both mid-wall outside corners and
        the metal profiles they needed, and it is why the wall-tile figure
-       jumps - see the budget. One profile is left, at the east wall's edge
+       jumps - see the budget. One profile is left, at the bottom wall's edge
        against the 41" opening.
 
        WHAT DOES GET BUILT: nothing structural. Standard alcove prep only -
@@ -1005,17 +1005,17 @@ LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
        square walls, so measure all three faces top and bottom before
        ordering. A cast tub will not forgive what a fiberglass one hid.
 
-       That closes the footprint: 0 to 158.5, 158½" north to south.
+       That closes the footprint: 0 to 158.5, 158½" right to left.
 
-       ITS NORTH WALL IS FLUSH with the bedroom's and the closet's, drawn
-       dead on y 0. This whole west block lines up with the north wall of the
+       ITS RIGHT WALL IS FLUSH with the bedroom's and the closet's, drawn
+       dead on y 0. This whole top block lines up with the right wall of the
        house on this side.
 
        THE 36" DECIDES WHICH WAY THE TOILET FACES, and only one way works. A
        water closet needs a 30" clear band across its axis, and 24" clear in
        front of a bowl that is itself 29" deep (CPC 402.5, IRC R307.1).
-         facing SOUTH        29 + 24 = 53" against the room's 36  - FAILS
-         facing EAST or WEST 30" band across the 36               - PASSES
+         facing LEFT        29 + 24 = 53" against the room's 36  - FAILS
+         facing BOTTOM or TOP 30" band across the 36               - PASSES
                              and the 53" runs along the 62"       - PASSES
        So the bowl sits against one of the 36" end walls, looking down the
        length of the room. At the 26" first given, nothing fitted in any
@@ -1026,27 +1026,27 @@ LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
        the toilet together. The toilet is in its own room here, so those wall
        runs will need recomputing once the layout settles. Not repriced yet.
 
-       TOILET-ROOM DOOR 28", set 4" off the east wall: x -110..-82, so the
+       TOILET-ROOM DOOR 28", set 4" off the bottom wall: x -110..-82, so the
        wall reads 4 / 28 / 30 across its 62".
 
-       THAT PUSHES THE BOWL TO THE WEST WALL. The door lands at the east end,
-       so a toilet against the east wall would be in the doorway. Against the
-       WEST wall facing east it works: bowl x -140..-110.29, then 32.3" of clear
+       THAT PUSHES THE BOWL TO THE TOP WALL. The door lands at the bottom end,
+       so a toilet against the bottom wall would be in the doorway. Against the
+       TOP wall facing bottom it works: bowl x -140..-110.29, then 32.3" of clear
        floor in front of it against the 24" required, and the door opening
        sits directly in that clear space, which is what you want.
 
 SWING SETTLED, and it only works one way. Handle on the left going
-       in, so the leaf hinges RIGHT at x -82 and opens back against the east
+       in, so the leaf hinges RIGHT at x -82 and opens back against the bottom
        wall - away from the bowl. Hinged the other way it would sweep the
        whole room and hit the toilet. Even this way the closed edge at x -110
        clears the bowl front at -110.29 by 0.29", so check the bowl's real
        projection before hanging the door.
 
        Walls drawn 4.5" throughout. -->
-  <!-- ============ THE WHOLE BATH, SHIFTED 9" EAST ============
-       The WIC's west wall goes back to a nominal 4.5" (x -69..-64.5)
-       instead of the 13.5" it briefly carried, and the bath moves east to
-       suit: its east interior face -78 -> -69, its outer face -144.5 ->
+  <!-- ============ THE WHOLE BATH, SHIFTED 9" TOWARD THE BOTTOM ============
+       The WIC's top wall goes back to a nominal 4.5" (x -69..-64.5)
+       instead of the 13.5" it briefly carried, and the bath moves toward the bottom to
+       suit: its bottom interior face -78 -> -69, its outer face -144.5 ->
        -135.5. Nothing INSIDE the bath changes - it is 62" wide and 158.5"
        deep either way, and every fixture holds its position relative to
        the room. Done as one translate so nothing can drift. -->
@@ -1060,7 +1060,7 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <path class="outline" d="M-78,-4.5 H-144.5 V164 H-78"/>
   <path class="outline" d="M-110,40.5 V36 M-82,36 V40.5"/>
   <!-- TOILET ROOM DOOR, 28", handle on the left going in, so it hinges RIGHT
-       at x -82 and swings into the toilet room, opening back to the east
+       at x -82 and swings into the toilet room, opening back to the bottom
        wall - away from the bowl. The leaf's closed edge at x -110 clears the
        bowl front at -110.29 by 0.29", so the swing is free of it. Barely, and
        on paper: check the bowl's real projection before hanging the door. -->
@@ -1085,8 +1085,8 @@ SWING SETTLED, and it only works one way. Handle on the left going
          drain            2-1/4" hole, 9" in from the drain end and 14" back
                           from the apron face
        Drawn about the tub centre (-108.8, 142.7) and rotated 180 degrees:
-       RIGHT DRAIN read facing the tub from the room means, facing south,
-       the WEST end. Drain, overflow and valve wall are all the west end.
+       RIGHT DRAIN read facing the tub from the room means, facing left,
+       the TOP end. Drain, overflow and valve wall are all the top end.
 
        INTEGRAL FLANGE is the real install difference from the Avec. It
        tucks behind the Lilah on all three walls, so the tile laps the tub
@@ -1129,20 +1129,20 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <text class="lbl-s on-dark" x="-109" y="125.2" text-anchor="middle" font-size="1.7" transform="rotate(180 -109 125.2)">mounted rod + liner</text>
 
   <!-- ============ TOWEL HOOKS ============
-       Three on the WEST wall, on the strip of tile just outside the tub -
+       Three on the TOP wall, on the strip of tile just outside the tub -
        same treatment as the downstairs bath, which uses hooks rather than a
-       bar. Between the vanity's south end (y 105.5) and the tub apron
+       bar. Between the vanity's left end (y 105.5) and the tub apron
        (y 127.7): 22.2" of wall, hooks at y 111.6 / 116.6 / 121.6, centred,
        5" apart. Face of tile is x -139.2. NEEDS SOLID BLOCKING behind the
        backer, added during framing before waterproofing, same visit as the
        tub ledger - a hook loaded with a wet towel pulls out of tile and
        thinset on its own.
 
-       BACK ON THE EAST WALL, opposite the west set - the pair used to sit
+       BACK ON THE BOTTOM WALL, opposite the top set - the pair used to sit
        on the door itself but that moved with the barn door edits and left
-       this wall bare. Between the threshold's south corner (y 109) and the
+       this wall bare. Between the threshold's left corner (y 109) and the
        tub apron (y 127.7): the 18.7" exposed run already dimensioned above,
-       centred, 5" apart, same as the west three. Face of tile is x -78.8;
+       centred, 5" apart, same as the top three. Face of tile is x -78.8;
        same blocking requirement. -->
   <g fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16">
     <circle cx="-138.3" cy="114.35" r=".8"/>
@@ -1161,12 +1161,12 @@ SWING SETTLED, and it only works one way. Handle on the left going
        FITINDEX 28WBL, WHITE tempered glass, 10.2 x 10.2 x 0.9 - the one on
        the product page is black, but ours is the white one. Already owned,
        so it is on the plan but NOT in the budget.
-       It goes in the 29" of west wall between the toilet-room wall at
-       y 40.5 and the vanity's north end at y 69.5 - the one stretch of this
+       It goes in the 29" of top wall between the toilet-room wall at
+       y 40.5 and the vanity's right end at y 69.5 - the one stretch of this
        room with nothing on it. Centred in that gap, tight to the tile:
        x -139.2..-129.0, y 49.9..60.1, leaving 9.4" clear above and below.
        Drawn with its electrode cross and its corner readout, ROTATED 90
-       DEGREES COUNTER-CLOCKWISE so the readout sits at the north-west
+       DEGREES COUNTER-CLOCKWISE so the readout sits at the top-right
        corner. The square footprint is unchanged by that; only the readout
        moves. White glass on a charcoal mosaic floor needs no help to read,
        but the cross and the display are what make it a scale and not a tile
@@ -1187,25 +1187,25 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <text class="lbl-s on-dark" x="-121" y="57.85" text-anchor="middle" font-size="1.7"  transform="rotate(180 -121 57.85)">scale</text>
 
   <!-- ============ VANITY — WEST ELM ELLINGTON 36" SINGLE ============
-       West wall, CENTRED ON THE WALKWAY OPENING rather than on the wall
+       Top wall, CENTRED ON THE WALKWAY OPENING rather than on the wall
        itself. The 41" opening is y 67..108, so its centreline is y 87.5 and
        the 36" cabinet sits y 69.5..105.5, dead ahead as you come through.
        The centreline is drawn.
-         clear to the north wall (y 40.5)   29"
+         clear to the right wall (y 40.5)   29"
          clear to the tub apron (y 127.7)   22.2"
        THE 10.2" PROBLEM IS GONE. When this was centred on the walkway
        against the 42"-deep Avec it left a 10.2" pocket at the tub, and the
-       west end of that pocket is exactly where you kneel to reach the valve.
+       top end of that pocket is exactly where you kneel to reach the valve.
        Going back to a 30" tub gives all 12" of that back: 22.2" now, on an
        alignment that is still dead on the opening centreline. That is what
        the tub change bought.
-       Nothing else in the room takes a 36" run: the east wall is cut by the
-       41" opening, and the north wall is cut by the toilet-room door.
+       Nothing else in the room takes a 36" run: the bottom wall is cut by the
+       41" opening, and the right wall is cut by the toilet-room door.
        DIMENSIONS CONFIRMED, replacing the 22" this was drawn at on
        assumption: 36"w x 22.5"d x 34"h overall. Sink basin 18.6 x 15.5 x
        7.75, drilled faucet holes 1.4" diameter, drawers extend 11.5", legs
        6.75", 157 lbs. The extra half inch of depth leaves 39.5" of clear
-       floor between the cabinet front and the east wall.
+       floor between the cabinet front and the bottom wall.
        WHITE TOP on the blonde body, so the plan symbol is white - it is the
        counter you see from above, not the cabinet. Basin drawn as the true
        oval, set 4" back from the wall face with the faucet hole behind it.
@@ -1230,14 +1230,14 @@ SWING SETTLED, and it only works one way. Handle on the left going
        spec throughout the house. Symbol is the downstairs geometry verbatim
        (bowl rim a true 7.72" circle flaring open at the front, straight
        tapering sides, tank a rounded rect with the lid joint across it),
-       rotated 90 degrees so the tank backs onto the WEST wall and the bowl
-       looks east down the length of the room.
+       rotated 90 degrees so the tank backs onto the TOP wall and the bowl
+       looks bottom down the length of the room.
 
        Tank back at x -140, bowl front at x -110.29 - 29.71" overall.
        Centred on y 18, the middle of the 36" room.
          30" clear band across the axis:  36" available   - PASSES
          24" clear in front of the bowl:  32.3" available - PASSES
-       The bowl front stops 0.29" shy of the door's west jamb at x -110, so
+       The bowl front stops 0.29" shy of the door's top jamb at x -110, so
        the 28" leaf's swing arc runs clear of it - but only just, and only
        on paper. See the swing note above. -->
   <g transform="translate(-140,18) rotate(90) translate(-45.79,-61)">
@@ -1255,15 +1255,15 @@ SWING SETTLED, and it only works one way. Handle on the left going
        on it rather than a real bar-style holder's post reach (same fix on
        both bath plans).
 
-       NORTH WALL, centred on x -100.3. That is 10" forward of the bowl front
+       RIGHT WALL, centred on x -100.3. That is 10" forward of the bowl front
        at x -110.29, in the middle of the 8-12" the fixture wants. It cannot
-       go anywhere else: the west wall is behind the tank, and on the south
+       go anywhere else: the top wall is behind the tank, and on the left
        wall the same 10"-forward position lands inside the 28" door opening.
 
-       THE REACH IS THE WEAK PART. The bowl is centred on y 18, so the north
+       THE REACH IS THE WEAK PART. The bowl is centred on y 18, so the right
        wall is 18" away - the far end of comfortable, where 15" is the number
        you want. Nothing closer exists: the room is 36" and the bowl sits in
-       the middle of it. If it matters, the fix is to shift the WC north to
+       the middle of it. If it matters, the fix is to shift the WC right to
        y 15.5, which still clears the 15" minimum from centreline to wall on
        both sides (15.5 / 20.5) and brings the holder to a 15.5" reach. Not
        drawn that way - the bowl is centred, and moving it is a call, not a
@@ -1277,26 +1277,26 @@ SWING SETTLED, and it only works one way. Handle on the left going
        they were taken rather than on a chain in the margin. Text sits in a
        light box so it reads over the charcoal mosaic and over the tub.
 
-       ALL THREE RUN AGAINST THE EAST WALL, in one column: the 34½ and the
+       ALL THREE RUN AGAINST THE BOTTOM WALL, in one column: the 34½ and the
        50½ both on x -82, the toilet room's 36 on x -80 - because the door
        leaf parks at x -83.4..-82 and the dimension would have run straight
-       down it. The 50½ comes down the tub's east deck, which is the tidiest
+       down it. The 50½ comes down the tub's bottom deck, which is the tidiest
        line it could take across a fixture.
 
-       TOILET ROOM 36", north to south.
+       TOILET ROOM 36", right to left.
 
        FROM THE HALLWAY THRESHOLD CORNERS, which is how the room was paced
        out standing in the doorway:
-         north corner (y 75) back to the toilet-room wall   34½"
+         right corner (y 75) back to the toilet-room wall   34½"
        THE 34½ IS NOT THE MEASURED NUMBER - it was measured at 27, and it
        moved when the closet chain was trusted over the 168" overall and
-       the hall shifted 4.5" south. Drawn as the geometry now stands; if
+       the hall shifted 4.5" left. Drawn as the geometry now stands; if
        the room does not feel right on site, this is the one to put a
        tape on.
 
-       SOUTH OF THE THRESHOLD, the old 50½" ran all the way to the back
+       LEFT OF THE THRESHOLD, the old 50½" ran all the way to the back
        wall - straight down the tub, not a wall dimension at all. Replaced
-       with the EXPOSED wall it actually measures: threshold south corner
+       with the EXPOSED wall it actually measures: threshold left corner
        (y 109) to the tub apron (y 127.7), where the tub takes over the
        wall face. 18.7", same style as the 34½" above it. -->
   <line class="dimline" x1="-84.5" y1="0" x2="-84.5" y2="36"/>
@@ -1337,9 +1337,9 @@ SWING SETTLED, and it only works one way. Handle on the left going
        baths, matching all three now. Same "valve" symbol as before;
        only the spec behind it changed.
 
-       VALVE WALL is the tub's WEST end (drain, overflow and valve are
-       all noted as the west end above) — which is the room's own west
-       wall, x -139.625 (tile face). Stacked north to south along it,
+       VALVE WALL is the tub's TOP end (drain, overflow and valve are
+       all noted as the top end above) — which is the room's own top
+       wall, x -139.625 (tile face). Stacked right to left along it,
        centred on the DRAIN's own y (144.7 — local (21,-1) in the
        tub's rotate(180) group works out to world (-129.8, 144.7), see
        the tub note above): valve at y=135.7, the handshower holder at
@@ -1391,11 +1391,11 @@ SWING SETTLED, and it only works one way. Handle on the left going
 
   <!-- ============ BATH DOOR, SINGLE BARN PANEL, AT THE THRESHOLD ============
        SIMPLIFIED from the L&R split (two 17" panels) to one 34" slab -
-       same 34" coverage, one panel instead of two. Slides NORTH: closed
+       same 34" coverage, one panel instead of two. Slides RIGHT: closed
        it spans the opening exactly (y 75..109); fully open it parks
        y 41..75, onto the toilet-room wall (34.5" available against the
-       panel's 34" - a half-inch margin, not the 50.5" the south wall
-       would have given, but north is the way it opens).
+       panel's 34" - a half-inch margin, not the 50.5" the left wall
+       would have given, but right is the way it opens).
        SHOWN FULLY OPEN, parked at that resting position, not the
        half-open convention used for the downstairs bath's pocket door -
        drawn wider than true 1-3/8" door thickness (2.4" instead of 1.2")
@@ -1414,13 +1414,13 @@ SWING SETTLED, and it only works one way. Handle on the left going
        Not a single curtain at the bedroom doorway - that only ever screened
        the 34" jamb, not the closet itself. Each end of the closet ("each
        WIC") gets its own curtain across its full 60" (5') mouth.
-       ROD SET BACK 4" FROM THE DOOR THRESHOLD (y 75 north, y 109 south),
+       ROD SET BACK 4" FROM THE DOOR THRESHOLD (y 75 right, y 109 left),
        not the full 8" out to the organizer's own edge (y 67/117) - so the
        rod sits forward of the cabinet face, with a 4" reveal between it and
        the leg's chamfered corner, rather than mounted flush on the cabinet
-       itself. North rod at y 71, south rod at y 113. Track runs the full
-       width, x -69..-9, clear of the cabinet corners on the west and the
-       open jamb on the east; pulled open, the panel stacks to the west end.
+       itself. Right rod at y 71, left rod at y 113. Track runs the full
+       width, x -69..-9, clear of the cabinet corners on the top and the
+       open jamb on the bottom; pulled open, the panel stacks to the top end.
        Light white styled fabric, not a door - this is what closes off each
        WIC for changing, while the 42" corridor between the two rods (y
        71..113) stays the through-route to the bath. Black-bordered now so
@@ -1440,7 +1440,7 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <text class="lbl-s" x="-16" y="117.5" text-anchor="middle" font-size="1.7" transform="rotate(180 -16 117.5)">curtain, white</text>
 
   <!-- ============ CLOSET FIT-OUT — ONE OPEN ROOM ============
-       Rods and cubbies wrapping the north end wall + west wall, on the
+       Rods and cubbies wrapping the right end wall + top wall, on the
        settled shell (60 wide, 174 long), per the corner-wraparound
        inspiration photo.
 
@@ -1454,20 +1454,20 @@ SWING SETTLED, and it only works one way. Handle on the left going
        corridor - the two points that actually stick into open floor
        rather than sitting against a wall.
 
-       NORTH L: end band (x -69..-9, y 0..24) + west leg (x -69..-45,
+       RIGHT L: end band (x -69..-9, y 0..24) + top leg (x -69..-45,
        y 24..67), chamfered at (-45,24) [notch] and (-45,67) [corridor
-       end - set back 8" from the corridor's north edge, y 75]. Occupies
+       end - set back 8" from the corridor's right edge, y 75]. Occupies
        y 0..67 overall, exactly the trusted 67" depth. 60 + 43 = 103" of
        run.
 
-       SOUTH L: end band (x -69..-9, y 150..174) + west leg (x -69..-45,
+       LEFT L: end band (x -69..-9, y 150..174) + top leg (x -69..-45,
        y 117..150), chamfered at (-45,150) [notch] and (-45,117) [corridor
-       end - set back 8" from the corridor's south edge, y 109]. Occupies
+       end - set back 8" from the corridor's left edge, y 109]. Occupies
        y 117..174 overall, exactly the trusted 57" depth. 60 + 33 = 93" of
        run.
 
-       The SE-corner chase (x -33..-9, y 158..174) falls entirely inside the
-       south end band, so the cabinets swallow it: the run is boxed out
+       The bottom-left-corner chase (x -33..-9, y 158..174) falls entirely inside the
+       left end band, so the cabinets swallow it: the run is boxed out
        around it and nothing about it shows on the floor. Drawn dashed to
        record where it is.
 
@@ -1488,8 +1488,8 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <text class="lbl-s" x="-21" y="165" text-anchor="middle" font-size="1.6" transform="rotate(180 -21 165)">chase, 24 x 16</text>
   <text class="lbl-s" x="-21" y="168.4" text-anchor="middle" font-size="1.6" transform="rotate(180 -21 168.4)">boxed in behind</text>
 
-  <!-- ============ ZONE DEPTHS, ON THE WEST WALL ============
-       The room is open, but 67" north and 57" south are the measured field
+  <!-- ============ ZONE DEPTHS, ON THE TOP WALL ============
+       The room is open, but 67" right and 57" left are the measured field
        dimensions each organizer L is now built to exactly - marked here
        rather than out on the stacked chains. Drawn after the fit-out so
        the dimension reads over the cabinets. -->
@@ -1526,13 +1526,13 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path class="thin" fill="none" d="M32,156 A28,28 0 0 0 4,128"/>
 
   <!-- glazing line, standard plan symbol -->
-  <!-- EAST WINDOW, y 48..89. Standard plan symbol: jamb lines across the wall
+  <!-- BOTTOM WINDOW, y 48..89. Standard plan symbol: jamb lines across the wall
        thickness at each end, glazing down the centre. The wall face runs
        through, because a window is not a passage. -->
   <line class="thin" x1="144" y1="48" x2="148.5" y2="48"/>
   <line class="thin" x1="144" y1="89" x2="148.5" y2="89"/>
   <line x1="146.25" y1="48" x2="146.25" y2="89" stroke="#2F7D94" stroke-width=".3"/>
-  <!-- NORTH WINDOW, x 6..34, crank-out casement. -->
+  <!-- RIGHT WINDOW, x 6..34, crank-out casement. -->
   <line class="thin" x1="6" y1="-4.5" x2="6" y2="0"/>
   <line class="thin" x1="34" y1="-4.5" x2="34" y2="0"/>
   <line x1="6" y1="-2.25" x2="34" y2="-2.25" stroke="#2F7D94" stroke-width=".3"/>
@@ -1540,23 +1540,23 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="teal" x="151.5" y="68.5" text-anchor="middle" font-size="2.2"
         transform="rotate(-90 151.5 68.5)">WINDOW 41"</text>
 
-  <!-- ============ TWIN BEDS, PARALLEL ON THE EAST WALL ============
+  <!-- ============ TWIN BEDS, PARALLEL ON THE BOTTOM WALL ============
        Thuma Essential Bed + Headboard, Oak, Twin. Frame 44" x 80" overall.
        RE-ORIENTED (confirmed 2026-08-30): both beds turned a quarter turn
-       so both headboards sit on the EAST wall instead of the north wall,
-       flanking the 41" east window (y 48..89) rather than clearing the
-       28" north window. Depth (80") now runs W-E off the east wall
-       (x 64..144) instead of N-S off the north wall.
+       so both headboards sit on the BOTTOM wall instead of the right wall,
+       flanking the 41" bottom window (y 48..89) rather than clearing the
+       28" right window. Depth (80") now runs TOP-TO-BOTTOM off the bottom wall
+       (x 64..144) instead of RIGHT-TO-LEFT off the right wall.
 
-       NORTH BED: flush to the north wall, y 0..44. That leaves only 4"
-       to the window's north jamb (y 48) — not enough room for its own
+       RIGHT BED: flush to the right wall, y 0..44. That leaves only 4"
+       to the window's right jamb (y 48) — not enough room for its own
        side table there without the table's footprint running into the
        window's own y-range (see nightstands below; this is accepted,
        not hidden — a table sitting in front of the lower part of a
        window is normal, the window itself is well above it).
 
-       SOUTH BED: flush to the south wall, y 112..156. A clean 23" to
-       the window's south jamb (y 89), plenty for its side table.
+       LEFT BED: flush to the left wall, y 112..156. A clean 23" to
+       the window's left jamb (y 89), plenty for its side table.
 
        HEADBOARD FILL #B6986D — unchanged, the same Thuma Oak tone used
        throughout the plan. -->
@@ -1576,18 +1576,18 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- ============ NIGHTSTANDS, ONE PER BED, TOWARD THE WINDOW ============
        Thuma Pedestal Side Table, Oak — floor-standing, 15.75" square x
-       17.5" H. Sits between each bed's headboard and the east window:
+       17.5" H. Sits between each bed's headboard and the bottom window:
        flush to each frame at the wall end (x 125.25..141, same
        depth-from-wall as before), and on the window side of each bed's
        width footprint.
        2" GAP TO THE BED (confirmed 2026-08-30): no longer flush to the
        bed frame — each table pulled back 2" to show a gap, with the
        new curtain centered in it (see below).
-       NORTH BED's table: y 46..61.75 (2" off the frame at y 44) —
+       RIGHT BED's table: y 46..61.75 (2" off the frame at y 44) —
        overlaps the window's own y-range (48..89) by 13.75", which is
        fine (see note above) but is the tightest fit in the room.
-       SOUTH BED's table: y 94.25..110 (2" off the frame at y 112),
-       5.25" clear of the window's south jamb (y 89).
+       LEFT BED's table: y 94.25..110 (2" off the frame at y 112),
+       5.25" clear of the window's left jamb (y 89).
        FILL #B6986D / STROKE #624E40 — unchanged Thuma Oak tone. -->
   <rect fill="#B6986D" stroke="#624E40" stroke-width=".29" x="125.25" y="46" width="15.75" height="15.75" rx="3"/>
   <text class="lbl-s" x="133.125" y="52.5" text-anchor="middle" font-size="1.9" transform="rotate(180 133.125 52.5)">pedestal</text>
@@ -1597,18 +1597,18 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s" x="133.125" y="100.5" text-anchor="middle" font-size="1.9" transform="rotate(180 133.125 100.5)">pedestal</text>
   <text class="lbl-s" x="133.125" y="104" text-anchor="middle" font-size="1.9" transform="rotate(180 133.125 104)">15¾ x 15¾</text>
 
-  <!-- ============ CEILING CURTAINS, ONE PER BED, AGAINST THE EAST WALL ============
+  <!-- ============ CEILING CURTAINS, ONE PER BED, AGAINST THE BOTTOM WALL ============
        One curtain per bed, each centered in the 2" gap between that
        bed's own frame and its own side table (see gap note above),
        instead of a single curtain shared between the two pedestals.
        SHORTENED to 36" from the wall (confirmed 2026-08-30, was 40").
-       Each runs E-W, mounted to the ceiling against the east wall
+       Each runs BOTTOM-TO-TOP, mounted to the ceiling against the bottom wall
        (x 144) to x 108. Same wavy-fabric plan symbol, same double-stroke
        (black under white/cream) convention as before and as the WIC
        curtains.
-       NORTH curtain: y=45, centered between the north bed's frame
+       RIGHT curtain: y=45, centered between the right bed's frame
        (ends y 44) and its side table (starts y 46).
-       SOUTH curtain: y=111, centered between the south bed's side
+       LEFT curtain: y=111, centered between the left bed's side
        table (ends y 110) and its frame (starts y 112). -->
   <line x1="144" y1="45" x2="108" y2="45" stroke="#6E6A62" stroke-width=".22"/>
   <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M144,45 Q142.00,46.50 140,45 Q138.00,43.50 136,45 Q134.00,46.50 132,45 Q130.00,43.50 128,45 Q126.00,46.50 124,45 Q122.00,43.50 120,45 Q118.00,46.50 116,45 Q114.00,43.50 112,45 Q110.00,46.50 108,45"/>
@@ -1622,15 +1622,15 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="104.25" y="103" width="3.5" height="16" rx="1.5" fill="#FBFAF7"/>
   <text class="lbl-s" x="106" y="111" text-anchor="middle" font-size="1.7" transform="rotate(-90 106 111)">curtain, white</text>
 
-  <!-- ============ DIMENSIONS — TOP (W-E) ============
-       Two chains now: the north window, then the overall outboard. The
-       bed-width chain that used to sit closest to the plan (44" WEST
-       BED / 20" / 44" EAST BED) is gone — the beds moved off the north
-       wall entirely (see the RIGHT (N-S) chain for their new layout). -->
+  <!-- ============ DIMENSIONS — TOP (TOP-TO-BOTTOM) ============
+       Two chains now: the right window, then the overall outboard. The
+       bed-width chain that used to sit closest to the plan (44" TOP
+       BED / 20" / 44" BOTTOM BED) is gone — the beds moved off the right
+       wall entirely (see the RIGHT (RIGHT-TO-LEFT) chain for their new layout). -->
   <line class="extline" x1="0"   y1="-6.5" x2="0"   y2="-34"/>
   <line class="extline" x1="6"   y1="-6.5" x2="6"   y2="-24"/>
   <line class="extline" x1="34"  y1="-6.5" x2="34"  y2="-24"/>
-  <!-- north window -->
+  <!-- right window -->
   <line class="dimline" x1="0" y1="-22" x2="144" y2="-22"/>
   <g class="tick">
     <line x1="-1.1" y1="-20.9" x2="1.1" y2="-23.1"/>
@@ -1649,7 +1649,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   </g>
   <text class="dim-big" x="72" y="-34.6" text-anchor="middle" transform="rotate(180 72 -34.6)">144" (12'-0")</text>
 
-  <!-- ============ DIMENSIONS — CLOSET, TOP (W-E) ============ -->
+  <!-- ============ DIMENSIONS — CLOSET, TOP (TOP-TO-BOTTOM) ============ -->
   <line class="extline" x1="-73.5" y1="-6.5" x2="-73.5" y2="-24"/>
   <line class="extline" x1="-69" y1="-6.5" x2="-69" y2="-14"/>
   <line class="extline" x1="-9" y1="-6.5" x2="-9" y2="-14"/>
@@ -1670,12 +1670,12 @@ Without these the wall band simply runs out into the floor. Six caps:
   </g>
   <text class="dim-big" x="-36.75" y="-24.6" text-anchor="middle" transform="rotate(180 -36.75 -24.6)">73½"</text>
 
-  <!-- ============ DIMENSIONS — WEST (N-S) ============
+  <!-- ============ DIMENSIONS — TOP (RIGHT-TO-LEFT) ============
        Two chains now, not four. The stacked 36 / 4½ / 34½ / 34 / 19¾ / 30¾
-       breakdown and the 75 / 34 / 65 west-wall chain are removed - they were
+       breakdown and the 75 / 34 / 65 top-wall chain are removed - they were
        four columns of rotated type down the side of the sheet saying things
        the plan already shows, and the numbers that matter are dimensioned in
-       the rooms they belong to: the WIC depths against the west wall, the
+       the rooms they belong to: the WIC depths against the top wall, the
        bath's 62" across the bottom. ONE CHAIN IS LEFT, the bath's 159½"
        overall, pulled in to where the stack used to start so it does not
        float. The closet's 174" overall came off too - between the two WIC
@@ -1697,10 +1697,10 @@ Without these the wall band simply runs out into the floor. Six caps:
   </g>
   <text class="dim-big" x="-150.1" y="79.75" text-anchor="middle" transform="rotate(-90 -150.1 79.75)">159½" bath</text>
 
-  <!-- ============ DIMENSIONS — BEDROOM, BOTTOM (W-E) ============
+  <!-- ============ DIMENSIONS — BEDROOM, BOTTOM (TOP-TO-BOTTOM) ============
        Not the whole 144" wall (that's already dimensioned up top,
-       against the north wall) - just the bare run of south wall east
-       of the door opening, jamb to the SE corner: x 32..144 = 112". -->
+       against the right wall) - just the bare run of left wall to the bottom
+       of the door opening, jamb to the bottom-left corner: x 32..144 = 112". -->
   <line class="extline" x1="32"  y1="161" x2="32"  y2="174"/>
   <line class="extline" x1="144" y1="161" x2="144" y2="174"/>
   <line class="dimline" x1="32" y1="170" x2="144" y2="170"/>
@@ -1710,7 +1710,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   </g>
   <text class="dim-big" x="88" y="168.4" text-anchor="middle" transform="rotate(180 88 168.4)">112"</text>
 
-  <!-- ============ DIMENSIONS — BATH, BOTTOM (W-E) ============ -->
+  <!-- ============ DIMENSIONS — BATH, BOTTOM (TOP-TO-BOTTOM) ============ -->
   <line class="extline" x1="-135.5" y1="165" x2="-135.5" y2="178"/>
   <line class="extline" x1="-73.5"  y1="165" x2="-73.5"  y2="178"/>
   <line class="dimline" x1="-135.5" y1="174" x2="-73.5" y2="174"/>
@@ -1720,7 +1720,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   </g>
   <text class="dim-t" x="-104.5" y="172.4" text-anchor="middle" transform="rotate(180 -104.5 172.4)">62"</text>
 
-  <!-- ============ DIMENSIONS — RIGHT (N-S) ============
+  <!-- ============ DIMENSIONS — RIGHT (RIGHT-TO-LEFT) ============
        Two chains: the window (48"/41"/67"), then the overall 156".
        The bed/pedestal/curtain breakdown chain that used to sit
        between them is gone — it duplicated what the pedestal labels
@@ -2724,21 +2724,21 @@ Without these the wall band simply runs out into the floor. Six caps:
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-112 -117 180 130" role="img"
-     aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a ceiling rainhead with a handshower on a wall-mount holder by the valve, and a shower nook on the south wall; a small hallway pocket where the bathroom's east-facing pocket door and the closet's north-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a field-measured dead end at 87 inches deep and 31 inches high, fitted with a matte black clothes rod at 42 inches and an oak shelf bank capped by a granite counter just inside the door on the east wall, a medicine cabinet near the door end of that same east leg, and keeping a 28 inch clear aisle, drawn in plan view">
+     aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a ceiling rainhead with a handshower on a wall-mount holder by the valve, and a shower nook on the right wall; a small hallway pocket where the bathroom's top-facing pocket door and the closet's left-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a field-measured dead end at 87 inches deep and 31 inches high, fitted with a matte black clothes rod at 42 inches and an oak shelf bank capped by a granite counter just inside the door on the top wall, a medicine cabinet near the door end of that same top leg, and keeping a 28 inch clear aisle, drawn in plan view">
   <!--
     93 WATERMAN — DOWNSTAIRS BATHROOM + UNDER-STAIRS CLOSET FLOOR PLAN
     ====================================================================
     EDITABLE SOURCE. All coordinates are in INCHES.
-    Origin (0,0) = the NORTHWEST interior corner of the BATHROOM.
-    +x runs EAST, +y runs SOUTH, for BOTH rooms — one shared frame.
-    Bathroom: room is 67" x 61" (widened from 61" x 61"). West wall
-      shifted 6" west, x=0 to x=-6 — see the WEST WALL MOVE note near
+    Origin (0,0) = the BOTTOM-LEFT interior corner of the BATHROOM.
+    +x runs toward the TOP, +y runs RIGHT, for BOTH rooms — one shared frame.
+    Bathroom: room is 67" x 61" (widened from 61" x 61"). Bottom wall
+      shifted 6" toward the bottom, x=0 to x=-6 — see the BOTTOM WALL MOVE note near
       the shell below. Wall band is 4.5" thick, so it spans -10.5 .. 65.5 in x and
       -4.5 .. 65.5 in y. Shower (wet) = x -6..29, toilet (dry) section
       = x 29..61 — toilet narrowed to 32" (was the even 33.5"/33.5"
       split), giving the shower the other 3" (35" wide) as room to
       spare on top of what the wall move already gave it.
-    Hallway + closet: added below (negative y = north of the bathroom).
+    Hallway + closet: added below (negative y = to the left of the bathroom).
       See the "HALLWAY CONNECTOR" and "UNDER-STAIRS WALK-IN CLOSET"
       sections further down for their own geometry notes.
     To move a fixture, just change its x/y. No re-rendering step needed.
@@ -2748,9 +2748,9 @@ Without these the wall band simply runs out into the floor. Six caps:
     at the bottom of the sheet. A single <g transform="rotate(-90)">
     wraps everything below </defs> — the underlying geometry (every
     rect/path/line coordinate, and this whole comment's compass words:
-    NORTH/EAST/SOUTH/WEST, +x/+y) still describes the PRE-ROTATION
-    layout. Counterclockwise flips what was north to WEST, west to
-    SOUTH, south to EAST, east to NORTH (the mirror image of the
+    LEFT/TOP/RIGHT/BOTTOM, +x/+y) still describes the PRE-ROTATION
+    layout. Counterclockwise flips what was left to BOTTOM, bottom to
+    RIGHT, right to TOP, top to LEFT (the mirror image of the
     bedroom's clockwise mapping).
     Every <text> that already had rotate(-90 ...) got flipped to
     rotate(90 ...), same pivot (net becomes 0°, plain horizontal); text
@@ -2759,7 +2759,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     the opposite pairing from the bedroom's clockwise rotation, because
     the group angle's sign flipped.
     viewBox updated to "-112 -117 180 130" (was "-13 -112 130 180").
-    NOT done: rewriting the prose comments' NORTH/SOUTH/EAST/WEST
+    NOT done: rewriting the prose comments' LEFT/RIGHT/TOP/BOTTOM
     language to match — same caveat as the bedroom suite, read them as
     describing the room BEFORE this rotation.
   -->
@@ -2818,7 +2818,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
 
   <!-- ============ SHELL ============
-       WEST WALL MOVE: shifted 6" west (x=0 -> x=-6) so the room can
+       BOTTOM WALL MOVE: shifted 6" toward the bottom (x=0 -> x=-6) so the room can
        grow into the space beyond it. Split the gain 3"/3" between the
        two zones and
        went back to an even shower/toilet split (was uneven, borrowing
@@ -2834,13 +2834,13 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="29" y="0" width="32" height="61" fill="url(#dsbath-dawson)"/><!-- toilet (dry) -->
 
   <!-- ============ DOOR OPENING ============
-       The 28" pocket-door opening is a real break in the east wall, not just a
+       The 28" pocket-door opening is a real break in the top wall, not just a
        gap in a line: the floor finish runs the full 4.5" wall thickness so the
        passage reads as open, and the room outline below omits this stretch.
-       East wall, north -> south:
-         y  0..3   3" stub at the north corner
+       Top wall, left -> right:
+         y  0..3   3" stub at the left corner
          y  3..31  28" OPENING  <- the door swings/slides through here
-         y 31..61  30" cavity wall the slab pockets into (it slides south)
+         y 31..61  30" cavity wall the slab pockets into (it slides right)
        Those three runs are exactly the 3"/28"/30" dimensions on the right.
 
        NO TILE CUTOVER HERE ANY MORE: the hallway floor was switched
@@ -2856,71 +2856,71 @@ Without these the wall band simply runs out into the floor. Six caps:
        Two, both 12" long x 3.5" deep, recessed into the wall band so nothing
        projects into the room:
 
-       SINK NOOK — NORTH wall, centred over the wet-room hooks (x 19.04 / 22.38 /
+       SINK NOOK — LEFT wall, centred over the wet-room hooks (x 19.04 / 22.38 /
          25.71, centre 22.375), so the nook and the hooks read as one group.
          It used to sit in the corner on the sink-leg mid-point; the corner is
          now given over to the mirror pair, and moving the nook out also clears
          the corner-framing conflict that placement had.
 
-       SHOWER NOOK — MOVED to the SOUTH wall, centred under the rainhead
-         (x=11.69), to free up the west wall around the valve for the
+       SHOWER NOOK — MOVED to the RIGHT wall, centred under the rainhead
+         (x=11.69), to free up the bottom wall around the valve for the
          handshower holder + wand (see the SHOWER section below).
   -->
-  <!-- sink nook — centred between the corner sink's north-wall edge
+  <!-- sink nook — centred between the corner sink's left-wall edge
        (x=9.295) and the 35" tick at x=29: centre 19.15. Hooks below
        shift with it, same group as always. -->
   <rect x="13.15" y="-3.5" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="19.15" y="-1.75" text-anchor="middle">nook</text>
-  <!-- shower nook, south wall — centred under the rainhead/code-circle
-       (x=11.69), recessed into the south wall band (y 61..64.5, same
-       1" backing as the north nook). MOVED off the west wall, which
+  <!-- shower nook, right wall — centred under the rainhead/code-circle
+       (x=11.69), recessed into the right wall band (y 61..64.5, same
+       1" backing as the left nook). MOVED off the bottom wall, which
        needed the room for the handshower holder near the valve. -->
   <rect x="5.69" y="61" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="11.69" y="62.75" text-anchor="middle">nook</text>
 
   <!-- ============ ROOM OUTLINE ============
-       Broken on the east wall for the door opening (y 3..31). West edge
+       Broken on the top wall for the door opening (y 3..31). Bottom edge
        moved to x=-6 with the wall. -->
   <path class="outline" d="M-6,0 H61 V3 M61,31 V61 H-6 V0"/>
   <rect class="outline" x="-10.5" y="-4.5" width="76" height="70"/>   <!-- outer wall face -->
 
-  <!-- ============ LILAH TILE FACE, NORTH/WEST/SOUTH WALLS ============
+  <!-- ============ LILAH TILE FACE, LEFT/BOTTOM/RIGHT WALLS ============
        Opal color tile runs floor-to-ceiling on three walls; only the
-       east wall (pocket door) stays paint.
+       top wall (pocket door) stays paint.
        DRAWN AT REAL DEPTH, 0.375" (3/8"), the thickness of a 6"x6"
        glazed ceramic tile like Lilah plus thinset over backer board —
        not a zero-depth callout line. x=-6/y=0/y=61 is the ROUGH wall
-       face (the framed 4.5" band — west face moved to -6 with the
+       face (the framed 4.5" band — bottom face moved to -6 with the
        wall), and the tile sits proud of it into the room, same as it
        would on site.
        HISTORY: drawing this at real depth first exposed a genuine
        shortfall against the shower's 30" CPC clear circle (0.125" short
-       on the west side), fixed by narrowing the toilet section to give
-       the shower room. That trade-off is now moot — the west wall
-       moved out 6", so both zones have slack again; see the WEST WALL
+       on the bottom side), fixed by narrowing the toilet section to give
+       the shower room. That trade-off is now moot — the bottom wall
+       moved out 6", so both zones have slack again; see the BOTTOM WALL
        MOVE note near the shell and the FIXED GLASS / TOILET sections
        below for the current numbers. -->
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="0" width="67" height=".375"/>    <!-- north -->
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="0" width=".375" height="61"/>    <!-- west -->
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="60.625" width="67" height=".375"/> <!-- south -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="0" width="67" height=".375"/>    <!-- left -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="0" width=".375" height="61"/>    <!-- bottom -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="60.625" width="67" height=".375"/> <!-- right -->
 
   <!-- ============ SHOWER FLOOR: LINEAR DRAIN ============
-       Drawn before the sink, which sits on top of it in the NW corner.
-       Shifted 6" west with the wall it runs alongside. -->
+       Drawn before the sink, which sits on top of it in the bottom-left corner.
+       Shifted 6" toward the bottom with the wall it runs alongside. -->
   <rect class="thin-lt" x="-5.33" y="0" width="2.25" height="60.4"/>
   <line x1="-4.21" y1="0" x2="-4.21" y2="60.4" stroke="#C9C4B7" stroke-width=".083" stroke-dasharray=".9 .7"/>
 
-  <!-- ============ CORNER SINK (NW) ============
-       Corner basin: backs into the NW corner, straight splashback along the north
-       and west walls, angled front face on the line x + y = 17.33.
+  <!-- ============ CORNER SINK (bottom-left) ============
+       Corner basin: backs into the bottom-left corner, straight splashback along the left
+       and bottom walls, angled front face on the line x + y = 17.33.
        Both ends of the angled face are eased with a ~1" fillet (quadratic, control
        point at the sharp corner) — that softening is what reads as a basin rather
        than a plain triangle.
-       SHIFTED +0.375" SOUTH AND EAST off the rough corner: it's a
-       corner-mount fixture bearing on BOTH the north and west walls,
+       SHIFTED +0.375" RIGHT AND TOWARD THE TOP off the rough corner: it's a
+       corner-mount fixture bearing on BOTH the left and bottom walls,
        which are real-depth Lilah tile, so it mounts against the
-       finished faces, not the rough ones. ALSO SHIFTED 6" WEST with the
-       west wall it's tucked into (was at the old x=0 corner, now at
+       finished faces, not the rough ones. ALSO SHIFTED 6" TOWARD THE BOTTOM with the
+       bottom wall it's tucked into (was at the old x=0 corner, now at
        x=-6) — the whole fixture group (bowl, faucet, label, and the two
        mirrors below) moves as one unit to stay in the corner the wall
        actually moved to. Net position combines both shifts. -->
@@ -2977,19 +2977,19 @@ Without these the wall band simply runs out into the floor. Six caps:
        tile. That is the whole point after the 5" deep cabinet was rejected for
        landing where your head goes. Labels sit in the wall band so the basin
        stays legible. -->
-  <!-- North pane: back face on the real-depth tile's finished face, front
+  <!-- Left pane: back face on the real-depth tile's finished face, front
        face 0.5" proud — the 45 degree miter closes the gap between them.
-       Shifted +0.375" with the tile depth, then 6" west with the sink and
+       Shifted +0.375" with the tile depth, then 6" toward the bottom with the sink and
        the wall it's tucked into. -->
   <path d="M-5.625,0.375 L9.295,0.375 L9.295,.875 L-5.125,.875 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
   <text class="teal" x="1.835" y="-1.375" text-anchor="middle" font-size=".8">mirror</text>
-  <!-- West pane: the same shape reflected about y = x. -->
+  <!-- Bottom pane: the same shape reflected about y = x. -->
   <path d="M-5.625,0.375 L-5.625,15.295 L-5.125,15.295 L-5.125,.875 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
   <text class="teal" x="-7.375" y="7.835" text-anchor="middle" font-size=".8"
         transform="rotate(90 -7.375 7.835)">mirror</text>
   <text class="lbl-s on-dark" x="-1.75" y="55" text-anchor="middle" transform="rotate(90 -1.75 55)">linear drain</text>
 
-  <!-- ============ NORTH WALL FITTINGS ============
+  <!-- ============ LEFT WALL FITTINGS ============
        WET SIDE — three hooks, grouped with the sink nook above (both
        centred at x=19.15, between the sink and the split line).
        DRY SIDE — the recessed medicine cabinet is gone from this wall;
@@ -3007,11 +3007,11 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s on-dark" x="42.7" y="4.8" text-anchor="middle">towel bar</text>
 
   <!-- ============ ELECTRICAL ============
-       Single switch on the north wall, east of the cabinet — i.e. by the
+       Single switch on the left wall, to the top of the cabinet — i.e. by the
        pocket door, where you reach on entering. No outlet here unless
        code requires one; the paired outlet this box used to carry is
        cut, single-gang plate now.
-       The second outlet this room used to carry on the south wall, for a
+       The second outlet this room used to carry on the right wall, for a
        possible future smart toilet, is cut — not needed. -->
   <rect class="blk" x="57" y="-.7" width="1.4" height=".7"/>
   <text class="lbl-s on-dark" x="57.7" y="3.4" text-anchor="middle"
@@ -3020,7 +3020,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ============ SHOWER ============ -->
   <!-- 30" code circle: CPC requires a 30" dia. clear circle to fit inside the
        shower compartment. Drawn faint as a compliance check, concentric with the
-       rainhead. Re-centred again now that the west wall moved 6" west and the
+       rainhead. Re-centred again now that the bottom wall shifted 6" further out and the
        shower/toilet split moved to x=29 (toilet narrowed to 32", giving
        the shower the extra 1.5"): available width between the real-depth
        tile face (x=-5.625) and the glass (29) is 34.625", a full 4.625"
@@ -3030,7 +3030,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        section below. -->
   <circle class="code" cx="11.69" cy="42.5" r="15"/>
   <text class="code-t" x="11.69" y="29.4" text-anchor="middle" style="fill:#B9C4C7">30&quot;</text>
-  <!-- valve, west wall. Shifted 6" west with the wall. Kohler Purist
+  <!-- valve, bottom wall. Shifted 6" toward the bottom with the wall. Kohler Purist
        Rite-Temp diverter trim, matte black — a single handle does
        on/off, volume AND temperature together (pressure-balancing),
        plus an integrated diverter knob to switch rainhead <-> hand-
@@ -3040,12 +3040,12 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect class="blk" x="-6.6" y="30.08" width=".6" height="1.92"/>
   <text class="lbl-s" x="-8.2" y="31.6" text-anchor="middle" transform="rotate(90 -8.2 31.6)">valve</text>
   <!-- HANDSHOWER + HOLDER — Kohler Statement wall-mount wand holder
-       (K-26304-BL). Aligned N-S with the rainhead's own centreline
+       (K-26304-BL). Aligned LEFT-TO-RIGHT with the rainhead's own centreline
        (y=42.5, same as the 30" code circle) rather than parked right
        under the valve — you want the wand within reach of where you
        actually stand under the head, not just close to the valve.
        Took the spot the shower nook used to hold; the nook moved to
-       the south wall to make room. Holder drawn like the valve (a
+       the right wall to make room. Holder drawn like the valve (a
        small blk rect); the wand itself is the white capsule parked in
        it, projecting into the room the way a handshower head actually
        does when cradled. A longer hose curve now runs the extra
@@ -3054,7 +3054,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path d="M-6.3,32 Q-5.4,36.9 -6.3,41.75" fill="none" stroke="#2A2A2A" stroke-width=".06"/>
   <rect x="-6.6" y="42.1" width="1.3" height=".8" rx=".4" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
   <text class="lbl-s" x="-8.2" y="42.5" text-anchor="middle" transform="rotate(90 -8.2 42.5)">wand</text>
-  <!-- West wall hook: was three, mirrored off the north three about the
+  <!-- Bottom wall hook: was three, mirrored off the left three about the
        sink's own corner bisector - but the two southernmost (22.38, 25.71)
        crashed into the support bar/curtain line at y 25, one nearly on top
        of it. Dropped both. The remaining hook is re-centred in the clear
@@ -3064,13 +3064,13 @@ Without these the wall band simply runs out into the floor. Six caps:
        bulges out past that point, so the sink's actual corner - the end of
        its straight diagonal front face, at (1.71, 15.62) - reads as where
        it really stops. Support bar is at y 25, so the midpoint is
-       (15.62 + 25) / 2 = 20.31. Shifted 6" west with the sink/wall group. -->
+       (15.62 + 25) / 2 = 20.31. Shifted 6" toward the bottom with the sink/wall group. -->
   <circle cx="-5.08" cy="20.31" r=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
-  <!-- support bar: west end at the wall (x=-6), east end to the split
+  <!-- support bar: bottom end at the wall (x=-6), top end to the split
        line, now x=29 (was the even 27.5). -->
   <line x1="-6" y1="25" x2="29" y2="25" stroke="#C9C4B7" stroke-width=".133"/>
   <text class="lbl on-dark" x="11.5" y="23.7" text-anchor="middle">support bar</text>
-  <!-- ceiling rainhead, 12" dia, centred 18.5" off the south wall. Re-centred
+  <!-- ceiling rainhead, 12" dia, centred 18.5" off the right wall. Re-centred
        x to sit concentric with the 30" code circle at its new 11.69 centre,
        per the circle note above. -->
   <circle class="thin-lt" cx="11.69" cy="42.5" r="6"/>
@@ -3101,21 +3101,21 @@ Without these the wall band simply runs out into the floor. Six caps:
        (narrowed to 32" wide, was the even 33.5"/33.5" split at 44.25).
        CPC 402.5 side clearance is 16" each side of centreline (32/2),
        still well past the 15" minimum.
-       STILL 0.375" NORTH of the rough wall: the tank backs onto the south
+       STILL 0.375" to the LEFT of the rough wall: the tank backs onto the right
        wall, which is real-depth Lilah tile (finished face at y=60.625).
        The tank mounts against the finished wall, so the whole fixture —
        and its 53" front-to-back clearance check, measured from that same
-       wall — stays shifted north as one rigid unit; the 53" figure itself
+       wall — stays shifted left as one rigid unit; the 53" figure itself
        doesn't change, only where it's measured from. -->
   <path class="fix" d="M35.96,54.125 L37.28,38.635 A7.72,7.72 0 0 1 52.72,38.635 L54.04,54.125 Z"/>
   <rect class="fix" x="34.96" y="53.625" width="20.08" height="7" rx=".5"/>
   <line x1="34.96" y1="55.335" x2="55.04" y2="55.335" stroke="#2A2A2A" stroke-width=".083"/>
   <text x="45" y="44.425" text-anchor="middle" font-size="1.35"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A">WC</text>
-  <!-- CPC front-to-back clearance. Measured from the SOUTH wall's finished
+  <!-- CPC front-to-back clearance. Measured from the RIGHT wall's finished
        (tiled) face, y=60.625: 29" toilet + 24" required clear = 53", so the
        limit lands at y = 60.625 - 53 = 7.625. The dimension runs the full
-       53" down to the finished south wall and stops dead on the limit line
+       53" down to the finished right wall and stops dead on the limit line
        (a T, not a cross). -->
   <line class="red-lt" x1="32.21" y1="7.625" x2="57.71" y2="7.625"/>
   <line class="red-lt" x1="45" y1="7.625" x2="45" y2="60.625"/>
@@ -3123,7 +3123,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" stroke="#8A3B2A" x1="44.55" y1="61.075" x2="45.45" y2="60.175"/>
   <text class="red-t" x="45" y="6.5" text-anchor="middle" style="fill:#D98D75">53&quot; CPC front-to-back (29&quot; + 24&quot; clear)</text>
 
-  <!-- ============ EAST WALL ============ -->
+  <!-- ============ TOP WALL ============ -->
   <!-- TP holder: bar-style, roll axis parallel to the wall. Moved from
        ~1" off the wall face (x=61) to ~3", the same fix and the same
        reasoning as the primary bath's holder — 1" read as sitting right
@@ -3138,7 +3138,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="62.58" y="31" width="1.42" height="30" fill="none" stroke="#6E6A62" stroke-width=".08" stroke-dasharray=".6 .5"/>
   <rect x="62.58" y="17.08" width="1.42" height="27.92" fill="#fff" stroke="#2A2A2A" stroke-width=".1"/> <!-- pocket door, white slab per spec -->
   <text class="lbl-s on-dark" x="58.9" y="12.5" text-anchor="middle" transform="rotate(90 58.9 12.5)">28&quot;</text>
-  <text class="lbl-s on-dark" x="60.2" y="21" text-anchor="middle" transform="rotate(90 60.2 21)">pocket door, slides south</text>
+  <text class="lbl-s on-dark" x="60.2" y="21" text-anchor="middle" transform="rotate(90 60.2 21)">pocket door, slides right</text>
   <text class="lbl-s on-dark" x="61.5" y="21" text-anchor="middle" transform="rotate(90 61.5 21)">shown half-open</text>
 
   <!-- ============ DIMENSIONS — TOP ============
@@ -3165,7 +3165,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-big" x="27.5" y="-13.2" text-anchor="middle">67&quot;</text>
 
   <!-- ============ DIMENSIONS — RIGHT ============
-       Chain 3 + 28 + 30 breaks down the east wall: stub, door opening, cavity. -->
+       Chain 3 + 28 + 30 breaks down the top wall: stub, door opening, cavity. -->
   <line class="extline" x1="66.3" y1="0"  x2="73.4" y2="0"/>
   <line class="extline" x1="66.3" y1="3"  x2="69.9" y2="3"/>
   <line class="extline" x1="66.3" y1="31" x2="69.9" y2="31"/>
@@ -3190,22 +3190,22 @@ Without these the wall band simply runs out into the floor. Six caps:
        ================================================================
        The bath and the under-stairs closet meet at a small hallway
        pocket, at 90 degrees to each other: the bath's pocket door opens
-       EAST into it (see the 28" opening on the east wall, above); the
-       closet's door opens NORTH out of it. Two numbers came straight
-       from the field: 13" from the bath door's north edge (y=3) to the
-       turn (y=-10), and the 6"/28"/6" run along the closet's south
+       TOP into it (see the 28" opening on the top wall, above); the
+       closet's door opens LEFT out of it. Two numbers came straight
+       from the field: 13" from the bath door's left edge (y=3) to the
+       turn (y=-10), and the 6"/28"/6" run along the closet's right
        (door) wall, below.
-       WIDTH + SOUTH EXTENT: the hallway's west wall is the bath's own
-       east wall (already drawn, x=65.5); its east wall carries straight
-       down from the closet's own east wall (x=105.5..110) — the two
+       WIDTH + RIGHT EXTENT: the hallway's bottom wall is the bath's own
+       top wall (already drawn, x=65.5); its top wall carries straight
+       down from the closet's own top wall (x=105.5..110) — the two
        spaces read as one continuous run rather than a guessed width.
-       South, the Dawson floor is drawn down to y=65.5, level with the
-       bath's south wall — a real, known reference line, even though no
-       wall is known to actually sit there. That south edge is left
+       Right, the Dawson floor is drawn down to y=65.5, level with the
+       bath's right wall — a real, known reference line, even though no
+       wall is known to actually sit there. That right edge is left
        dashed rather than solid: the hallway almost certainly keeps
        going into the rest of the house past that point, just undrawn. -->
   <rect x="65.5" y="-10" width="40" height="75.5" fill="url(#dsbath-dawson)"/>
-  <!-- east wall band, split around the garage entry door opening
+  <!-- top wall band, split around the garage entry door opening
        (y=-1.5..28.5) — this rect used to run solid the full 75.5"
        depth, which was the actual bug: the garage door's own wall
        stubs further down were drawn on TOP of this continuous band,
@@ -3217,9 +3217,9 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- soft plate behind the label — same fix the primary bedroom plan
        uses for any text that has to sit on the checkerboard itself. -->
   <rect x="70" y="49" width="31" height="2" rx="1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="85.5" y="50" text-anchor="middle" fill="#8B979A" font-size=".8">hallway — width carries the closet's walls; open south</text>
+  <text class="lbl-s" x="85.5" y="50" text-anchor="middle" fill="#8B979A" font-size=".8">hallway — width carries the closet's walls; open right</text>
 
-  <!-- 13" jog, west side -->
+  <!-- 13" jog, bottom side -->
   <line class="extline" x1="65.5" y1="3"   x2="56"  y2="3"/>
   <line class="extline" x1="65.5" y1="-10" x2="56"  y2="-10"/>
   <line class="dimline" x1="58" y1="3" x2="58" y2="-10"/>
@@ -3230,9 +3230,9 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- ================================================================
        UNDER-STAIRS WALK-IN CLOSET (WIC) — budget section 13
        ================================================================
-       DOOR WALL (south wall, at y=-10): 6" stub + 28" out-swing door +
+       DOOR WALL (right wall, at y=-10): 6" stub + 28" out-swing door +
        6" stub = 40", as given, measured at the hallway face. Anchored
-       to the bath's east wall line (x=65.5) at the hallway corner.
+       to the bath's top wall line (x=65.5) at the hallway corner.
        A separately recalled "38" interior width" doesn't quite nest
        with that 40" at plain wall thickness — used the 40" run as
        drawn (it's the more granular, three-part measurement, anchored
@@ -3265,16 +3265,16 @@ Without these the wall band simply runs out into the floor. Six caps:
        tapers, shown here as headroom contour lines rather than as a
        tapered floor outline. -->
   <!-- wall band -->
-  <!-- west wall runs down to y=-4.5, not just to y=-10 at the hallway
+  <!-- bottom wall runs down to y=-4.5, not just to y=-10 at the hallway
        corner — it overlaps the top of the bath's own wall band there,
        closing what was otherwise a thin undrawn gap between the two
        (the bath's wall band starts at y=-4.5; this wall used to stop at
        y=-10, 5.5" short of it). -->
-  <rect x="61"   y="-101.5" width="4.5" height="97" fill="#C9C4B7"/>  <!-- west wall -->
-  <rect x="105.5" y="-101.5" width="4.5" height="91.5" fill="#C9C4B7"/> <!-- east wall -->
+  <rect x="61"   y="-101.5" width="4.5" height="97" fill="#C9C4B7"/>  <!-- bottom wall -->
+  <rect x="105.5" y="-101.5" width="4.5" height="91.5" fill="#C9C4B7"/> <!-- top wall -->
 
   <!-- GARAGE ENTRY DOOR — new field info: a 30"-wide door with its
-       hinge 4" south of the closet door's own hinge. The closet door's
+       hinge 4" to the right of the closet door's own hinge. The closet door's
        hinge is now at y=-5.5 (the wall's outside/hallway face — see
        the door note below), so the garage door's hinge lands at
        y=-5.5+4 = -1.5, not the y=-6 this line used when the closet
@@ -3282,9 +3282,9 @@ Without these the wall band simply runs out into the floor. Six caps:
        close together" read as both being on this same wall (x=105.5),
        the nearest real wall already in this drawing — FLAG THIS
        ASSUMPTION: if the real wall is elsewhere, move it; nothing
-       south of here is otherwise documented, so the wall run past the
+       to the right of here is otherwise documented, so the wall run past the
        door is schematic, not a measured length.
-       Hinge (north jamb) sits flush with the interior/hallway-facing
+       Hinge (left jamb) sits flush with the interior/hallway-facing
        wall surface at x=105.5, not centered in the 4.5" wall — same
        convention as the closet door, whose hinge is drawn on the face
        it swings toward. Shown swung OPEN 45&#176;. Drawn as a true
@@ -3313,20 +3313,20 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path d="M106.49,-0.51 L85.28,20.70 L84.29,19.71 L105.5,-1.5 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
   <rect x="86" y="24.5" width="19" height="2.2" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="95.5" y="25.6" text-anchor="middle" font-size=".85">garage entry door, 30&quot;, open 45&#176;</text>
-  <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- north wall (real dead-end wall) -->
-  <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, west stub -->
-  <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- south wall, east stub -->
+  <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- left wall (real dead-end wall) -->
+  <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- right wall, bottom stub -->
+  <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- right wall, top stub -->
 
   <!-- interior floor + outline (door opening left as a break, x 71.5..99.5) -->
   <rect x="65.5" y="-97" width="40" height="87" fill="url(#dsbath-dawson)"/>
   <path class="outline" d="M71.5,-10 H65.5 V-97 H105.5 V-10 H99.5"/>
 
-  <!-- door: hinge at the east jamb, on the OUTSIDE (hallway) face of
-       the wall — y=-5.5, the wall's south face, not y=-10 (the
+  <!-- door: hinge at the top jamb, on the OUTSIDE (hallway) face of
+       the wall — y=-5.5, the wall's right face, not y=-10 (the
        closet-interior face) where it was first drawn. An out-swing
        door hinges on the face it swings toward, so the hinge belongs
        on the hallway side of the jamb, not the closet side.
-       Handle on the west, out-swing (opens south, into the hallway).
+       Handle on the bottom, out-swing (opens right, into the hallway).
        Swing arc dashed (the reference envelope, not a real edge). The
        leaf itself is a true point-to-point rectangle, not a thick
        stroke on a centerline: the near-hinge corner sits exactly on
@@ -3346,7 +3346,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        standard) — drawn as white with a black border, same night-
        legibility convention as the pocket door slab, so it doesn't
        read as a wall or vanish against the dark checkerboard squares.
-       One east-west rod, full 40" width, side-mounted wall to wall.
+       One top-bottom rod, full 40" width, side-mounted wall to wall.
        PLANE: 46" into the closet (y=-56) — the "halfway in" mark of the
        usable zone. HEIGHT: 42" AFF — dropped 1" from the prior 43" now
        that the rod-to-clothes-bottom drop is field-measured at 36" (was
@@ -3357,7 +3357,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        still estimated, not separately measured).
        CEILING CHECK, RECOMPUTED against the field-measured 62/87 slope
        (see the depth note above — shallower than the old assumed 8/9):
-       on an E-W rod the hangers point north into the slope, so the far
+       on a TOP-TO-BOTTOM rod the hangers point left into the slope, so the far
        shoulder of each garment rides ~10" deeper than the rod — max rod
        height at rod-plane depth d is 86 - (62/87)d. At d=46 that's
        53.2", so 42" clears with ~11" to spare (was a tight ~2" under
@@ -3366,13 +3366,13 @@ Without these the wall band simply runs out into the floor. Six caps:
        drawn per the same overhead-dashed convention as elsewhere. -->
   <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#6E6A62" stroke-width=".09" stroke-dasharray=".75 .5"/>
 
-  <!-- ============ CLOSET FIT-OUT: EAST-WALL SHELF BANK ============
+  <!-- ============ CLOSET FIT-OUT: TOP-WALL SHELF BANK ============
        Open oak shelving just inside the door, after the under-stairs
        reference photo (shanty-2-chic) restyled to the house mood: the
        same Thuma Oak tone (#B6986D) as the bedroom organizers, matte
        black accents implied by the house hardware standard.
-       12" deep on the east wall, running from the door wall (y=-10)
-       north to y=-46, where the rod's hanger sweep begins - flush to
+       12" deep on the top wall, running from the door wall (y=-10)
+       left to y=-46, where the rod's hanger sweep begins - flush to
        it, no collision. WALKWAY: 40" - 12" leaves a 28" clear aisle,
        above the 24" industry minimum for a closet passage.
        Heights live in the section view: a counter-height unit now —
@@ -3381,26 +3381,26 @@ Without these the wall band simply runs out into the floor. Six caps:
        original to-the-ceiling stepped bank was cut down when the
        counter was added.
        CHAMFERED ENTRY CORNER: the bank's face sits 6" proud of the
-       door's east jamb (x=99.5), so its south corner would be the
+       door's top jamb (x=99.5), so its right corner would be the
        first thing a shoulder clips stepping in. A 6"x6" 45-degree
        chamfer — same treatment as the bedroom organizers' free
        corners — runs the face from (93.5,-16) down to exactly the
        jamb line at (99.5,-10): entering, the cabinet meets you as a
        taper, not a corner. -->
   <path d="M93.5,-46 H105.5 V-10 H99.5 L93.5,-16 Z" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
-  <!-- counter outlet gangs — moved off the east leg entirely and onto
-       the north-most L of the counter (the full-width run over the
+  <!-- counter outlet gangs — moved off the top leg entirely and onto
+       the left-most L of the counter (the full-width run over the
        rod, d 36..60), d 43/53, clear of the mirror and its new
-       flanking vanity lights on the east leg below. -->
+       flanking vanity lights on the top leg below. -->
   <rect class="blk" x="105.5" y="-53" width=".7" height="2.6"/>
   <rect class="blk" x="105.5" y="-63" width=".7" height="2.6"/>
   <text class="lbl-s" x="107.6" y="-56.7" text-anchor="middle" font-size=".7" transform="rotate(90 107.6 -56.7)">outlets</text>
 
-  <!-- light switch, west wall just inside the door -->
+  <!-- light switch, bottom wall just inside the door -->
   <rect class="blk" x="64.8" y="-15.5" width=".7" height="2.6"/>
   <text class="lbl-s" x="63.7" y="-14.2" text-anchor="middle" font-size=".7" transform="rotate(90 63.7 -14.2)">sw</text>
 
-  <!-- aisle clearance check, west wall to shelf face -->
+  <!-- aisle clearance check, bottom wall to shelf face -->
   <line class="dimline" x1="65.5" y1="-28" x2="93.5" y2="-28"/>
   <line class="tick" x1="65.05" y1="-28.45" x2="65.95" y2="-27.55"/>
   <line class="tick" x1="93.05" y1="-28.45" x2="93.95" y2="-27.55"/>
@@ -3416,7 +3416,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        floor clearance from a measured 7" down to the intended 6"). The
        rod drops with it, still hung 2.5" below the counter's underside
        on under-counter brackets — the textbook rod-under-shelf spec.
-       NORTH EDGE, EXTENDED: front edge (at the door, y=-10) is
+       LEFT EDGE, EXTENDED: front edge (at the door, y=-10) is
        unchanged. The rear edge now runs to d=60 (y=-70), 7" further
        than the old d=53 (y=-63) — the 1" height drop bought room to
        push it: with the field-measured 62/87 slope, the underside
@@ -3433,21 +3433,21 @@ Without these the wall band simply runs out into the floor. Six caps:
        (87.5,-46). The gusset overhangs the aisle at counter height
        only, tapering the 28" clear to 22" for that 6" run; floor-level
        passage is unchanged.
-       NO BACK STOP: no granite upstand caps the counter's north end.
+       NO BACK STOP: no granite upstand caps the counter's left end.
        With the corrected slope the ceiling above the slab's new rear
        edge (d=60) is a healthy 50" — plenty to stand under — so it's
        simply left open above the counter, no cabinetry or cap needed.
        LIGHTING: the under-counter LED strip is hidden under the
-       counter's SOUTH edge (d=36, y=-46 — the front of the wide,
+       counter's RIGHT edge (d=36, y=-46 — the front of the wide,
        rod-covering section, not centered over the rod itself) and
-       aimed down and south, washing the FRONT faces of the hanging
+       aimed down and right, washing the FRONT faces of the hanging
        clothes — what you actually see opening the door — rather than
        lighting them from directly overhead.
        DRAFTING: the counter is the top surface, so it draws solid;
        the bank below it and the rod below it re-draw dashed (hidden)
        on top of the slab. -->
   <path d="M99.5,-10 L93.5,-16 V-40 L87.5,-46 H65.5 V-70 H105.5 V-10 Z" fill="#1E1D1B" stroke="#EDE8DD" stroke-width=".35"/>
-  <!-- medicine cabinet — EAST wall, over the counter: the house-standard
+  <!-- medicine cabinet — TOP wall, over the counter: the house-standard
        West Elm Seamless, matte black, 16.5"x27.5" (replaces the generic
        vanity mirror; same fixture used in the upstairs baths). Mounted
        50"-77.5" AFF — 4" above the 46" counter, not the old mirror's 8",
@@ -3464,23 +3464,23 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- vanity lights — flanking the cabinet symmetrically, not just
        dropped in the middle of whatever clear zone each side has (the
-       south zone is only 3.85" since the cabinet sits toward the
-       door, the north zone is 15.65" — centering independently in
+       right zone is only 3.85" since the cabinet sits toward the
+       door, the left zone is 15.65" — centering independently in
        each would put them off-center from the cabinet). Both sit
-       1.93" off the cabinet's near edge instead: south at d=1.93
-       (y=-11.93), north at d=22.28 (y=-32.28) — symmetric about the
-       cabinet's own centre, d=12.1. The north zone has slack left over
+       1.93" off the cabinet's near edge instead: right at d=1.93
+       (y=-11.93), left at d=22.28 (y=-32.28) — symmetric about the
+       cabinet's own centre, d=12.1. The left zone has slack left over
        past its fixture; that's fine, it's not required to fill it. -->
   <rect x="105" y="-12.93" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
   <text class="lbl-s" x="107.1" y="-11.93" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -11.93)" style="fill:#C79436">vanity light</text>
   <rect x="105" y="-33.28" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
   <text class="lbl-s" x="107.1" y="-32.28" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -32.28)" style="fill:#C79436">vanity light</text>
 
-  <!-- switch + outlet gang, east wall, just north of the north vanity
+  <!-- switch + outlet gang, top wall, just to the left of the left vanity
        light (which ends at y=-33.28) — same "sw + outlet" gang-plate
        convention used in the bathroom, sized/oriented for this
        vertical wall run. Centred at d=27.9 (y=-37.9), a 2.62" gap
-       north of the vanity light, well inside the counter's north edge
+       to the left of the vanity light, well inside the counter's left edge
        (d=60, y=-70). -->
   <rect class="blk" x="104.85" y="-39.2" width=".7" height="2.6"/>
   <text class="lbl-s" x="107.1" y="-37.9" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -37.9)" style="fill:#C79436">sw + outlet</text>
@@ -3488,7 +3488,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
   <path d="M99.5,-10 L93.5,-16 V-40" fill="none" stroke="#EDE8DD" stroke-width=".16" stroke-dasharray=".75 .5"/>
   <line x1="65.5" y1="-56.25" x2="105.5" y2="-56.25" stroke="#F6F3ED" stroke-width=".18" stroke-dasharray=".75 .5"/>
-  <!-- under-counter LED strip, hidden under the counter's south edge
+  <!-- under-counter LED strip, hidden under the counter's right edge
        (d=36), aiming down at the front of the hanging clothes -->
   <line x1="66.5" y1="-46.5" x2="104.5" y2="-46.5" stroke="#E8C97A" stroke-width=".3" stroke-dasharray=".9 .6"/>
   <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#A9A49B" stroke-width=".09" stroke-dasharray=".75 .5"/>
@@ -3500,7 +3500,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- headroom contour lines, dashed, at four key depths rather than
        arbitrary round numbers — each tied to an actual feature. Labels
-       sit on the WEST side and share one format,
+       sit on the BOTTOM side and share one format,
        "X" @ Y" in — description", the dead-end included. (The door's
        own 80" standard height is called out with the "closet door"
        label near the door itself, not here — it's a fixed door-slab
@@ -3511,14 +3511,14 @@ Without these the wall band simply runs out into the floor. Six caps:
           1.0" ceiling clearance above the cabinet's 77.5" top (see the
           cabinet note above).
        2) STANDING LIMIT, MOVED to d=36 (y=-46) — the next counter edge
-          north of the original d=29.5 (72"-headroom) point: the south
+          to the left of the original d=29.5 (72"-headroom) point: the right
           edge of the wide, rod-covering run, where the LED sits.
           H(36) = 93 - (62/87)x36 = 67.34", rounded to 67&#8540;".
           Past this point the counter's own footprint starts at full
           width, so it doubles as "how much headroom is left where you
           actually stand at the wide part of the counter."
        3) BACK OF COUNTERTOP, d=60 (the slab's rear edge): H(60) =
-          50.24" = 50&#188;" — coincides with the counter's own north
+          50.24" = 50&#188;" — coincides with the counter's own left
           edge line.
        4) FULL DEPTH, d=87: the field-measured dead end at 31" — a real
           measurement, not a calculated contour, called out as such. -->
@@ -3541,7 +3541,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text x="85.5" y="-20" text-anchor="middle" font-size="2" font-style="italic"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#6B5B47">UNDER-STAIRS CLOSET</text>
 
-  <!-- dimensions: door-wall breakdown (6/28/6), south of the wall, in the
+  <!-- dimensions: door-wall breakdown (6/28/6), to the right of the wall, in the
        hallway. (Previously drawn inside the wall band itself — but a
        dimline spanning the full wall face read as a black border boxing
        in the wall rather than the wall looking continuous. Soft plates
@@ -3563,7 +3563,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="dim-s" x="85.5" y="-4.75" text-anchor="middle">28&quot;</text>
   <text class="dim-s" x="102.5" y="-4.75" text-anchor="middle">6&quot;</text>
 
-  <!-- dimension: overall width, north of the wall (shifted in from the
+  <!-- dimension: overall width, to the left of the wall (shifted in from the
        old -118/-124.5 positions now that the back wall moved from
        -119.125 to -101.5 with the measured 87" depth) -->
   <line class="extline" x1="65.5"  y1="-100.5" x2="65.5"  y2="-107"/>
@@ -3573,7 +3573,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="105.05" y1="-106.45" x2="105.95" y2="-105.55"/>
   <text class="dim-big" x="85.5" y="-109" text-anchor="middle">40&quot;</text>
 
-  <!-- dimension: overall depth, east side — 87" measured, replacing
+  <!-- dimension: overall depth, top side — 87" measured, replacing
        the old 104⅝" calculated figure -->
   <line class="extline" x1="106.3" y1="-10" x2="113.4" y2="-10"/>
   <line class="extline" x1="106.3" y1="-97" x2="113.4" y2="-97"/>
