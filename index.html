@@ -2007,8 +2007,21 @@ Without these the wall band simply runs out into the floor. Six caps:
          ($6.08 vs $9.25, edwardmartin.com SKU 11868 vs 11795) — see the
          tile-size-comparison section in the design book for the two
          sizes side by side and the budget line for the cost delta. -->
+    <!-- ANCHOR (confirmed 2026-08-30): phased on the STAIRS LANDING
+         VIEW, not the room's own corners — the sofa runs the south
+         wall (y=169) and the entertainment center/stairs cover the
+         north wall (y=0), so neither wall is actually seen. What IS
+         seen is the threshold where the stairs' pony wall meets the
+         open floor (y=23) — that's the sightline stepping off the
+         stairs into the room, and it's phased to a clean half-tile cut
+         there (translate y=24/sqrt(2) mod 23 in inches). West/east
+         walls (x=0/171) were already perfect and are untouched. The
+         tradeoff, on purpose: the south wall under the sofa drops from
+         a perfect cut to merely marginal — a wasted "perfect" cut
+         hidden under furniture doesn't help anyone; a good cut where
+         you actually step into the room does. -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="rotate(45)">
+             patternTransform="translate(0,6.0294) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
