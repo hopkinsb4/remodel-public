@@ -2013,6 +2013,14 @@ Without these the wall band simply runs out into the floor. Six caps:
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
     </pattern>
+    <!-- Edward Martin Dawson 2x2 mosaic, charcoal — same pattern/module
+         as the downstairs-bath plan's Dawson swatch. Only used at the
+         dining-to-hallway threshold below; the bath/closet/hallway
+         floor itself is drawn on its own plan. -->
+    <pattern id="mainfloor-dawson" width="2" height="2" patternUnits="userSpaceOnUse">
+      <rect width="2" height="2" fill="#333130"/>
+      <rect x=".09" y=".09" width="1.82" height="1.82" fill="#4A4644"/>
+    </pattern>
   </defs>
 
   <!-- ============ SHELL — LIVING ROOM, 171" x 169" ============ -->
@@ -2272,7 +2280,18 @@ Without these the wall band simply runs out into the floor. Six caps:
        here. -->
   <rect x="240.5" y="-113.5" width="4.5" height="73" fill="#C9C4B7"/>
   <rect x="240.5" y="-10.5" width="4.5" height="34" fill="#C9C4B7"/>
-  <rect x="240.5" y="-40.5" width="4.5" height="30" fill="url(#mainfloor-check)"/>  <!-- passage floor toward the garage/dsbath hallway -->
+  <!-- DAWSON THRESHOLD: the floor changes inside this opening, not out in
+       either room — same convention as the primary bedroom plan's hall
+       threshold. Dining's Leona checkerboard runs to x=242.75 (dining
+       side); Dawson (the hallway/closet/garage-entry floor, per the
+       downstairs-bath plan) picks up from there out to the wall's outer
+       face at x=240.5. Split isn't tied to a module line either way —
+       the 4.5" wall band is well under one tile of either material, so
+       there's no clean course to land on; a plain half-and-half split
+       just marks where the material actually changes. -->
+  <rect x="242.75" y="-40.5" width="2.25" height="30" fill="url(#mainfloor-check)"/>
+  <rect x="240.5" y="-40.5" width="2.25" height="30" fill="url(#mainfloor-dawson)"/>
+  <line class="thin" x1="242.75" y1="-40.5" x2="242.75" y2="-10.5"/>
   <line class="outline" x1="240.5" y1="-40.5" x2="245" y2="-40.5"/>
   <line class="outline" x1="240.5" y1="-10.5" x2="245" y2="-10.5"/>
   <!-- Dining north wall with the PATIO DOOR opening: the ERIS
