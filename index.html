@@ -575,7 +575,7 @@
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-252 -160 292 347" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 2 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall centered in the 2 inch gap between the bed's own frame and its own side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets and the primary bathroom to the top of the room, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet flanked by a pair of vanity lights, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 2 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall centered in the 2 inch gap between the bed's own frame and its own side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets floored in the same Dawson mosaic as the primary bathroom to the top of the room, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet flanked by a pair of vanity lights, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -783,7 +783,7 @@
        wall from 32 toward the bottom. Handle on the right coming in, so the leaf hinges
        LEFT at x 4 and swings into the bedroom, standing off the top wall. -->
   <rect x="4" y="156" width="28" height="4.5" fill="url(#pbed-check)"/>
-  <rect x="-9" y="75" width="9" height="34" fill="url(#pbed-check)"/>
+  <rect x="-9" y="75" width="9" height="34" fill="url(#pbed-dawson)"/>  <!-- WIC now Dawson (2026-08-30) — this threshold matches it, not the bedroom checkerboard behind it -->
 
   <!-- The two openings keep their callouts; the reserved-walkway graphic that
        drove this layout has been removed now that the layout is settled. The
@@ -945,7 +945,19 @@
        actually established here. The bath end was also described as
        "narrowed" at this point, so confirm it. Right and left walls drawn 4.5" —
        their thickness was not given either. -->
-  <rect x="-69" y="0" width="60" height="174" fill="url(#pbed-check)"/>
+  <!-- WIC FLOOR SWITCHED TO DAWSON (2026-08-30): was the bedroom's own
+       checkerboard, now the same straight-set Dawson mosaic as the
+       primary bath, extended through both closets and the passage
+       between them — one continuous hard-tile run from the bath
+       through the WICs, with the checkerboard stopping at the
+       bedroom's own wall face (x=0) instead of carrying into the
+       closets. Both doorway thresholds (the bedroom-side floor-through
+       above, and the bath-side sliver below) already matched Dawson or
+       now do, so nothing else needed to move for this to read as one
+       continuous floor. Straight-set 2x2, not rotated, so there's no
+       phase/grout-alignment math the way the diagonal checkerboard
+       needed — it just tiles cleanly from the pattern's own origin. -->
+  <rect x="-69" y="0" width="60" height="174" fill="url(#pbed-dawson)"/>
   <!-- PARTITIONS RESTORED. The two BOTTOM-TO-TOP walls that make this two closets and
        a passage go back in, faces landing exactly on the 41" hall jambs at
        y 67 and y 108 so all three openings line up on one axis. 4.5" thick,
