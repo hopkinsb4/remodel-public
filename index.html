@@ -2055,25 +2055,32 @@ Without these the wall band simply runs out into the floor. Six caps:
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
     </pattern>
-    <!-- LIVING ROOM ONLY (confirmed 2026-08-30): grout width nudged so
-         tile points land exactly on the W, N, AND E walls at once —
-         all three, simultaneously, which the room's own 171" width
-         makes possible: 171"/10 = 17.1" of vertex-to-vertex spacing,
-         giving a 24.1831" tile module (was 24.000" — +0.183", a
-         perfectly normal grout-width adjustment, not a different
-         tile). Anchored at the room's own NW corner (no translate
-         needed) since 0 and 171 are both exact multiples of that
-         spacing. South wall (y=169, under the sofa, so not requested)
-         comes out close behind at 0.117 phase — not exact, but not
-         chased either.
-         TRADEOFF: this reopens the stairs-landing threshold (y=23)
-         back to a marginal cut (0.345 phase) — the fix above doesn't
-         apply once the module itself changes. Traded on instruction:
-         all three visible walls, not the stairs sightline, is the
-         priority for this room now. Kitchen and dining are on a
-         separate pattern (above) and are NOT affected by this. -->
+    <!-- LIVING ROOM ONLY (confirmed 2026-08-30, re-anchored the same
+         day — see correction below): grout width nudged so the west
+         and east walls (x=0/171) get exact tile points — the room's
+         own 171" width divides evenly by a 24.1831" tile module
+         (171/10 = 17.1" of vertex-to-vertex spacing, was 24.000" —
+         +0.183", a normal grout-width adjustment, not a different
+         tile).
+
+         CORRECTION, same day: the first pass anchored this at y=0,
+         the room's true NW corner — but that corner is hidden behind
+         the entertainment center (built-in, 23" deep), so its "clean"
+         phase was wasted, and it accidentally knocked the front face
+         of that built-in (y=23, the real visible north edge, where
+         the stairs' pony wall lines up too) OFF its points. Moved the
+         anchor from y=0 to y=-11.2 instead (still x=0, untouched, so
+         west/east stay exact): now a VERTEX sits exactly at (0,23) —
+         the corner where the west wall meets that front-face line, by
+         the stairs — with a BLACK quarter-tile point-to-point right
+         at it, confirmed by checking which tile quadrant actually
+         occupies that corner, not just that some tile edge is nearby.
+         The room's true NW corner (y=0) and the south wall (under the
+         sofa) both land at ordinary marginal phases now — neither is
+         actually seen, so neither is worth chasing. Kitchen and
+         dining are on a separate pattern (above), not affected. -->
     <pattern id="mainfloor-check-lr" width="48.3661" height="48.3661" patternUnits="userSpaceOnUse"
-             patternTransform="rotate(45)">
+             patternTransform="translate(0,-11.2) rotate(45)">
       <rect width="48.3661" height="48.3661" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#262322"/>
       <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#262322"/>
