@@ -2055,26 +2055,23 @@ Without these the wall band simply runs out into the floor. Six caps:
        blond Thuma Oak tone used for the rest of the house's oak
        furniture.
 
-       ABBREVIATED per standard architectural convention: the long
-       east run's riser lines are only drawn for the first 2 treads
-       (establishing the tread pitch), then a conventional double
-       break-line (zigzag) symbol crosses the run, after which no
-       further riser ticks are drawn — the run is understood to
-       continue at the same pitch to the landing. Saves 8 near-
-       duplicate riser lines without losing the tread spacing cue. -->
+       ABBREVIATED per standard architectural convention (matching a
+       reference plan the owner supplied): the long east run is drawn
+       with its real tread comb for the first 3 treads, then a single
+       clean diagonal cut line closes the shape off — the plan cut
+       plane passes above the stair at that point, so nothing further
+       along the run (no more treads, no far landing) is drawn. The
+       walk-line/UP arrow is unaffected by the cut and continues to
+       trace the full path, per convention. -->
   <rect class="tread" x="0" y="13" width="40" height="10"/>
   <rect class="tread" x="0" y="3" width="40" height="10"/>
   <rect class="tread" x="0" y="-6" width="40" height="9"/>
   <rect class="tread" x="0" y="-44" width="40" height="38"/>
   <line class="riser" x1="0" y1="-44" x2="40" y2="-6"/>
-  <rect class="tread" x="40" y="-44" width="110" height="38"/>
+  <path class="tread" d="M40,-44 L76,-44 L92,-6 L40,-6 Z"/>
   <line class="riser" x1="50" y1="-44" x2="50" y2="-6"/>
   <line class="riser" x1="60" y1="-44" x2="60" y2="-6"/>
-  <!-- Break-line symbol (two parallel zigzags), standard convention
-       for "run continues, treads omitted for clarity" -->
-  <path class="riser" d="M64,-44 L67,-38 L61,-32 L67,-26 L61,-20 L67,-14 L64,-6" fill="none"/>
-  <path class="riser" d="M69,-44 L72,-38 L66,-32 L72,-26 L66,-20 L72,-14 L69,-6" fill="none"/>
-  <rect class="tread" x="150" y="-44" width="40" height="38"/>
+  <line class="riser" x1="70" y1="-44" x2="70" y2="-6"/>
   <path class="thin" d="M20,30 L20,-22 Q20,-27 25,-27 L162,-27 Q168,-27 168,-22 L168,-11" fill="none"/>
   <path d="M168,-4.5 L165.6,-11 L170.4,-11 Z" fill="#2A2A2A"/>
   <text class="dim-s" x="25.5" y="9">UP</text>
