@@ -694,15 +694,17 @@
          the vertex), with the meaningless vertex-split tucked into
          the open doorway's middle where no wall meets it.
 
-         SHIFTED UP ~S (confirmed 2026-08-30): moved the whole layout
-         up one tile spacing (S = 24/sqrt(2) = 16.9706", dy 92 ->
-         75.0294) — this trades that "bowtie" for the opposite: the
-         near-solid corners that were at the jambs (y=75/109) move to
-         the open doorway's middle (y=92, where it doesn't matter
-         either way), and the vertex-split lands on both jambs instead
-         (still wall-phase-perfect along the whole x=-69 face, just a
-         split point rather than a solid corner at each jamb). Flagged
-         before applying; kept on explicit instruction.
+         SHIFTED UP ~S, INTENTIONAL (confirmed 2026-08-30): moved the
+         whole layout up one tile spacing (S = 24/sqrt(2) = 16.9706",
+         dy 92 -> 75.0294) specifically to put the near-solid BLACK
+         tile fill on the bath-to-hall threshold itself (y=92, the
+         middle of the 34" opening you actually walk through) rather
+         than on the jambs — matching the black-anchor treatment used
+         at other key corners in the house (e.g. the living room's
+         stairs-landing corner). The jambs (y=75/109) take the
+         vertex-split instead, which is fine — they're the edges of
+         the opening, not the threshold you step on. Wall face x=-69
+         stays wall-phase-perfect along its whole length either way.
 
          TRADEOFF, unchanged from before: this is still mathematically
          incompatible with keeping the organizer notch chamfer
