@@ -2070,17 +2070,27 @@ Without these the wall band simply runs out into the floor. Six caps:
          of that built-in (y=23, the real visible north edge, where
          the stairs' pony wall lines up too) OFF its points. Moved the
          anchor from y=0 to y=-11.2 instead (still x=0, untouched, so
-         west/east stay exact): now a VERTEX sits exactly at (0,23) —
-         the corner where the west wall meets that front-face line, by
-         the stairs — with a BLACK quarter-tile point-to-point right
-         at it, confirmed by checking which tile quadrant actually
-         occupies that corner, not just that some tile edge is nearby.
-         The room's true NW corner (y=0) and the south wall (under the
-         sofa) both land at ordinary marginal phases now — neither is
-         actually seen, so neither is worth chasing. Kitchen and
-         dining are on a separate pattern (above), not affected. -->
+         west/east stay exact): a VERTEX sat exactly at (0,23) — but a
+         vertex is where 4 diamonds meet, and an axis-aligned room
+         corner always bisects two of them, so it read as a 50/50
+         black/white split, not a solid corner.
+
+         SECOND CORRECTION, same day: shifted north again, by one more
+         tile spacing (S = 24.1831/sqrt(2) = 17.10", not the nominal
+         24"/sqrt(2) = 16.97" — this room's module is the +0.183"
+         grout-width variant above), from y=-11.2 to y=-28.3. That
+         moves (0,23) from a vertex to a tile CENTER: i=j=1 in the
+         center lattice puts a solid BLACK tile's middle right at the
+         corner, so the visible wedge (east along the stairs-front
+         line, south along the west wall) reads as one clean black
+         corner instead of a split point. West/east (x=0/171) are
+         still untouched and exact. The room's true NW corner (y=0)
+         and the south wall (under the sofa) land at ordinary marginal
+         phases — neither is actually seen, so neither is worth
+         chasing. Kitchen and dining are on a separate pattern (above),
+         not affected. -->
     <pattern id="mainfloor-check-lr" width="48.3661" height="48.3661" patternUnits="userSpaceOnUse"
-             patternTransform="translate(0,-11.2) rotate(45)">
+             patternTransform="translate(0,-28.3) rotate(45)">
       <rect width="48.3661" height="48.3661" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#262322"/>
       <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#262322"/>
