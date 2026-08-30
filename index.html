@@ -574,7 +574,7 @@
       <p>Alcove tub/shower with a curved rod, matte black drain. Sea-glass ceramic wraps the tub and runs floor-to-ceiling down the vanity/toilet wall. Ceiling-mount rain head plus a matching handheld wand, same pairing as the other two baths. Single 36&quot; Blonde vanity, dark bronze hardware. Charcoal mosaic floor, gray walls, matte black fixtures, medicine cabinet.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-230 -160 270 347" role="img"
+      <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-290 -160 330 347" role="img"
      aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 2 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall centered in the 2 inch gap between the bed's own frame and its own side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets and the primary bathroom to the top of the room, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet flanked by a pair of vanity lights, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
@@ -698,6 +698,10 @@
          dark. Tried at .75 and .22; both were worse than none. */
       #pbed-plan .on-dark { fill:#F6F3ED; }
       #pbed-plan text     { dominant-baseline:middle; }
+      /* Stair treads/landings, matching the main-floor plan's own
+         black-stain convention (see that file's .tread/.riser note). */
+      #pbed-plan .tread   { fill:#211D19; stroke:#F1EEE7; stroke-width:.5; }
+      #pbed-plan .riser   { fill:none; stroke:#F1EEE7; stroke-width:.4; }
     </style>
     <!-- Leona checkerboard, Calacatta + Nero Marquina, set ON THE DIAGONAL —
          the same floor that runs through the whole house. SWITCHED 12" ->
@@ -805,10 +809,44 @@
        exterior wall face (H to I to J, the same y=178.5 / x=0 faces used
        in the WALK-IN CLOSET section below) on the other. The two rooms
        share that corner rather than each getting their own wall there. -->
-  <path fill="#C9C4B7" d="M41,160.5 V219.5 H-2 V210.5 H-35 V178.5 H-39.5 V215 H-6.5 V224 H45.5 V160.5 Z"/>
+  <path fill="#C9C4B7" d="M41,160.5 V219.5 H-2 V210.5 H-35 V215 H-6.5 V224 H45.5 V160.5 Z"/>
   <path fill="url(#pbed-check)" d="M32,160.5 H41 V219.5 H-2 V210.5 H-35 V178.5 H0 V160.5 Z"/>
-  <path class="outline" d="M41,160.5 V219.5 H-2 V210.5 H-35 V178.5"/>
+  <path class="outline" d="M41,160.5 V219.5 H-2 V210.5 H-35"/>
   <text class="lbl-s" x="20" y="190" text-anchor="middle" transform="rotate(-90 20 190)">LANDING</text>
+
+  <!-- ============ STAIRS DOWN, OFF THE LANDING (confirmed 2026-08-30)
+       ============
+       The former top wall of the landing (the F-H run above) is gone —
+       replaced with a second, lower landing one step down, reached by
+       continuing straight through where that wall was. Owner's chain,
+       screen directions, from F (the wall's left end, screen(-210.5,-35)):
+       40" up, then 39" left. That doesn't land back on the OLD wall's own
+       width (32", F to H) — it's wider — so it's drawn closing against H
+       instead (same logic as the landing above: snap to the existing
+       fixed corner rather than invent a new one), giving a 71"-wide x
+       40"-deep second landing. The extra width beyond the original F-H
+       opening (the H-to-249.5 span, in local y) gets its own new wall,
+       since nothing continues through it.
+
+       Off the FAR side of that second landing (continuing the same
+       "left" direction), 3 stair treads head down, then a diagonal cut
+       closes the shape — same abbreviation convention as the main
+       floor's own up-stairs (see that file's STAIRS comment): the wall
+       keeps running straight past the cut, only the tread comb is
+       abbreviated. Open (no wall) on the near/bedroom-facing side, same
+       as the main floor's stairs are open toward the living room. -->
+  <rect x="-35" y="210.5" width="4.5" height="39" fill="#C9C4B7"/>  <!-- closes the excess width beyond the old F-H opening -->
+  <rect x="-79.5" y="174" width="4.5" height="105.5" fill="#C9C4B7"/>  <!-- far wall, continuous through 2nd landing + stairs -->
+  <rect x="-79.5" y="174" width="44.5" height="4.5" fill="#C9C4B7"/>  <!-- 2nd landing's near/top wall -->
+  <path class="outline" d="M-35,210.5 V249.5"/>
+  <path class="outline" d="M-35,178.5 H-75 V279.5"/>
+  <rect class="tread" x="-75" y="178.5" width="40" height="71"/>
+  <rect class="tread" x="-75" y="249.5" width="40" height="10"/>
+  <rect class="tread" x="-75" y="259.5" width="40" height="10"/>
+  <path class="tread" d="M-75,269.5 L-75,275 L-35,279.5 L-35,269.5 Z"/>
+  <path d="M0,195 L-60,195 Q-65,195 -65,200 L-65,260" fill="none" stroke="#fff" stroke-width=".38"/>
+  <path d="M-65,266 L-68.5,259.5 L-61.5,259.5 Z" fill="#fff"/>
+  <text class="lbl" style="fill:#fff" x="-45" y="205" text-anchor="middle" transform="rotate(-90 -45 205)">DN</text>
 
   <!-- ============ WALK-IN CLOSET, TOP OF THE BEDROOM ============
        TWO CLOSETS AND A PASSAGE, AGAIN, AND THE CHAIN NOW CLOSES ON THE
