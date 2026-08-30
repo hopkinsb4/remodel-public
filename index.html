@@ -2723,7 +2723,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <p>Next door: a wedge-shaped closet under the stair stringer, headroom tapering from 93" at the door to 31" at the back. Oak shelving and a granite counter along the east wall, a 42" clothes rod, a medicine cabinet with flanking sconces, and a 28" clear aisle down the middle. Checkerboard floor, matte black hardware.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
-      <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-13 -112 130 180" role="img"
+      <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-112 -117 180 130" role="img"
      aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a ceiling rainhead with a handshower on a wall-mount holder by the valve, and a shower nook on the south wall; a small hallway pocket where the bathroom's east-facing pocket door and the closet's north-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a field-measured dead end at 87 inches deep and 31 inches high, fitted with a matte black clothes rod at 42 inches and an oak shelf bank capped by a granite counter just inside the door on the east wall, a medicine cabinet near the door end of that same east leg, and keeping a 28 inch clear aisle, drawn in plan view">
   <!--
     93 WATERMAN — DOWNSTAIRS BATHROOM + UNDER-STAIRS CLOSET FLOOR PLAN
@@ -2742,6 +2742,26 @@ Without these the wall band simply runs out into the floor. Six caps:
       See the "HALLWAY CONNECTOR" and "UNDER-STAIRS WALK-IN CLOSET"
       sections further down for their own geometry notes.
     To move a fixture, just change its x/y. No re-rendering step needed.
+
+    ROTATED 90° COUNTERCLOCKWISE FOR DISPLAY (confirmed 2026-08-30),
+    same strategy as the primary bedroom suite, to put the street side
+    at the bottom of the sheet. A single <g transform="rotate(-90)">
+    wraps everything below </defs> — the underlying geometry (every
+    rect/path/line coordinate, and this whole comment's compass words:
+    NORTH/EAST/SOUTH/WEST, +x/+y) still describes the PRE-ROTATION
+    layout. Counterclockwise flips what was north to WEST, west to
+    SOUTH, south to EAST, east to NORTH (the mirror image of the
+    bedroom's clockwise mapping).
+    Every <text> that already had rotate(-90 ...) got flipped to
+    rotate(90 ...), same pivot (net becomes 0°, plain horizontal); text
+    with no rotation was left alone (net becomes -90° automatically,
+    matching this file's bottom-to-top convention for vertical text) —
+    the opposite pairing from the bedroom's clockwise rotation, because
+    the group angle's sign flipped.
+    viewBox updated to "-112 -117 180 130" (was "-13 -112 130 180").
+    NOT done: rewriting the prose comments' NORTH/SOUTH/EAST/WEST
+    language to match — same caveat as the bedroom suite, read them as
+    describing the room BEFORE this rotation.
   -->
   <defs>
     <style>
@@ -2794,6 +2814,8 @@ Without these the wall band simply runs out into the floor. Six caps:
       <rect x=".09" y=".09" width="1.82" height="1.82" fill="#4A4644"/>
     </pattern>
   </defs>
+  <g transform="rotate(-90)">
+
 
   <!-- ============ SHELL ============
        WEST WALL MOVE: shifted 6" west (x=0 -> x=-6) so the room can
@@ -2964,8 +2986,8 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- West pane: the same shape reflected about y = x. -->
   <path d="M-5.625,0.375 L-5.625,15.295 L-5.125,15.295 L-5.125,.875 Z" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
   <text class="teal" x="-7.375" y="7.835" text-anchor="middle" font-size=".8"
-        transform="rotate(-90 -7.375 7.835)">mirror</text>
-  <text class="lbl-s on-dark" x="-1.75" y="55" text-anchor="middle" transform="rotate(-90 -1.75 55)">linear drain</text>
+        transform="rotate(90 -7.375 7.835)">mirror</text>
+  <text class="lbl-s on-dark" x="-1.75" y="55" text-anchor="middle" transform="rotate(90 -1.75 55)">linear drain</text>
 
   <!-- ============ NORTH WALL FITTINGS ============
        WET SIDE — three hooks, grouped with the sink nook above (both
@@ -2993,7 +3015,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        possible future smart toilet, is cut — not needed. -->
   <rect class="blk" x="57" y="-.7" width="1.4" height=".7"/>
   <text class="lbl-s on-dark" x="57.7" y="3.4" text-anchor="middle"
-        transform="rotate(-90 57.7 3.4)">sw</text>
+        transform="rotate(90 57.7 3.4)">sw</text>
 
   <!-- ============ SHOWER ============ -->
   <!-- 30" code circle: CPC requires a 30" dia. clear circle to fit inside the
@@ -3016,7 +3038,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        setup (separate MasterShower temp-control trim + transfer
        valve trim there). -->
   <rect class="blk" x="-6.6" y="30.08" width=".6" height="1.92"/>
-  <text class="lbl-s" x="-8.2" y="31.6" text-anchor="middle" transform="rotate(-90 -8.2 31.6)">valve</text>
+  <text class="lbl-s" x="-8.2" y="31.6" text-anchor="middle" transform="rotate(90 -8.2 31.6)">valve</text>
   <!-- HANDSHOWER + HOLDER — Kohler Statement wall-mount wand holder
        (K-26304-BL). Aligned N-S with the rainhead's own centreline
        (y=42.5, same as the 30" code circle) rather than parked right
@@ -3031,7 +3053,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect class="blk" x="-6.6" y="41.75" width=".6" height="1.5"/>
   <path d="M-6.3,32 Q-5.4,36.9 -6.3,41.75" fill="none" stroke="#2A2A2A" stroke-width=".06"/>
   <rect x="-6.6" y="42.1" width="1.3" height=".8" rx=".4" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
-  <text class="lbl-s" x="-8.2" y="42.5" text-anchor="middle" transform="rotate(-90 -8.2 42.5)">wand</text>
+  <text class="lbl-s" x="-8.2" y="42.5" text-anchor="middle" transform="rotate(90 -8.2 42.5)">wand</text>
   <!-- West wall hook: was three, mirrored off the north three about the
        sink's own corner bisector - but the two southernmost (22.38, 25.71)
        crashed into the support bar/curtain line at y 25, one nearly on top
@@ -3065,9 +3087,9 @@ Without these the wall band simply runs out into the floor. Six caps:
        and the TOILET section below. -->
   <line x1="29" y1="24.08" x2="29" y2="61" stroke="#5FB2CC" stroke-width=".33"/>
   <text class="teal" x="27.8" y="42.5" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
-        transform="rotate(-90 27.8 42.5)">37&quot; fixed glass</text>
+        transform="rotate(90 27.8 42.5)">37&quot; fixed glass</text>
   <text class="teal" x="26.4" y="11.75" text-anchor="middle" font-size=".85" style="fill:#8FCBE0"
-        transform="rotate(-90 26.4 11.75)">24&quot; opening</text>
+        transform="rotate(90 26.4 11.75)">24&quot; opening</text>
 
   <!-- ============ TOILET ============
        Bowl: rim is a true circle (centre 45,39.01  r 7.72") that flares open at
@@ -3107,7 +3129,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        reasoning as the primary bath's holder — 1" read as sitting right
        on the wall rather than a real bar-style holder's post reach. -->
   <rect x="57.84" y="35.08" width=".33" height="5.92" fill="#fff" stroke="#2A2A2A" stroke-width=".07"/>               <!-- TP holder -->
-  <text class="lbl-s on-dark" x="56.69" y="38" text-anchor="middle" transform="rotate(-90 56.69 38)">TP holder</text>
+  <text class="lbl-s on-dark" x="56.69" y="38" text-anchor="middle" transform="rotate(90 56.69 38)">TP holder</text>
   <!-- the pocket itself — the full 30" cavity the slab retracts into — drawn
        dashed at full depth, independent of wherever the leaf below happens
        to be illustrated. Without this, showing the leaf "half-open" reads
@@ -3115,9 +3137,9 @@ Without these the wall band simply runs out into the floor. Six caps:
        a door that slides the full cavity. -->
   <rect x="62.58" y="31" width="1.42" height="30" fill="none" stroke="#6E6A62" stroke-width=".08" stroke-dasharray=".6 .5"/>
   <rect x="62.58" y="17.08" width="1.42" height="27.92" fill="#fff" stroke="#2A2A2A" stroke-width=".1"/> <!-- pocket door, white slab per spec -->
-  <text class="lbl-s on-dark" x="58.9" y="12.5" text-anchor="middle" transform="rotate(-90 58.9 12.5)">28&quot;</text>
-  <text class="lbl-s on-dark" x="60.2" y="21" text-anchor="middle" transform="rotate(-90 60.2 21)">pocket door, slides south</text>
-  <text class="lbl-s on-dark" x="61.5" y="21" text-anchor="middle" transform="rotate(-90 61.5 21)">shown half-open</text>
+  <text class="lbl-s on-dark" x="58.9" y="12.5" text-anchor="middle" transform="rotate(90 58.9 12.5)">28&quot;</text>
+  <text class="lbl-s on-dark" x="60.2" y="21" text-anchor="middle" transform="rotate(90 60.2 21)">pocket door, slides south</text>
+  <text class="lbl-s on-dark" x="61.5" y="21" text-anchor="middle" transform="rotate(90 61.5 21)">shown half-open</text>
 
   <!-- ============ WALL LABELS ============
        SOUTH WALL tracks the toilet section's centreline (45, was 44.25
@@ -3125,7 +3147,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        sits clear of the fixtures on that wall — so it's untouched. -->
   <text class="wall-lbl" x="30" y="-2.1" text-anchor="middle">NORTH WALL</text>
   <text class="wall-lbl" x="45" y="63.4" text-anchor="middle">SOUTH WALL</text>
-  <text class="wall-lbl" x="-8.4" y="24" text-anchor="middle" transform="rotate(-90 -8.4 24)">WEST WALL</text>
+  <text class="wall-lbl" x="-8.4" y="24" text-anchor="middle" transform="rotate(90 -8.4 24)">WEST WALL</text>
 
   <!-- ============ DIMENSIONS — TOP ============
        Chain (35 + 32) nearest the plan, overall (67") outboard of it —
@@ -3162,14 +3184,14 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="68.55" y1="3.45"  x2="69.45" y2="2.55"/>
   <line class="tick" x1="68.55" y1="31.45" x2="69.45" y2="30.55"/>
   <line class="tick" x1="68.55" y1="61.45" x2="69.45" y2="60.55"/>
-  <text class="dim-s" x="68.3" y="1.5"  text-anchor="middle" transform="rotate(-90 68.3 1.5)">3&quot;</text>
-  <text class="dim-s" x="68.3" y="17"   text-anchor="middle" transform="rotate(-90 68.3 17)">28&quot;</text>
-  <text class="dim-s" x="68.3" y="46"   text-anchor="middle" transform="rotate(-90 68.3 46)">30&quot;</text>
+  <text class="dim-s" x="68.3" y="1.5"  text-anchor="middle" transform="rotate(90 68.3 1.5)">3&quot;</text>
+  <text class="dim-s" x="68.3" y="17"   text-anchor="middle" transform="rotate(90 68.3 17)">28&quot;</text>
+  <text class="dim-s" x="68.3" y="46"   text-anchor="middle" transform="rotate(90 68.3 46)">30&quot;</text>
 
   <line class="dimline" x1="72.5" y1="0" x2="72.5" y2="61"/>
   <line class="tick" x1="72.05" y1=".45"   x2="72.95" y2="-.45"/>
   <line class="tick" x1="72.05" y1="61.45" x2="72.95" y2="60.55"/>
-  <text class="dim-big" x="71.5" y="30.5" text-anchor="middle" transform="rotate(-90 71.5 30.5)">61&quot;</text>
+  <text class="dim-big" x="71.5" y="30.5" text-anchor="middle" transform="rotate(90 71.5 30.5)">61&quot;</text>
 
   <!-- ================================================================
        HALLWAY CONNECTOR
@@ -3211,7 +3233,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="dimline" x1="58" y1="3" x2="58" y2="-10"/>
   <line class="tick" x1="57.55" y1="2.55"   x2="58.45" y2="3.45"/>
   <line class="tick" x1="57.55" y1="-10.45" x2="58.45" y2="-9.55"/>
-  <text class="dim-t" x="56.4" y="-3.5" text-anchor="middle" transform="rotate(-90 56.4 -3.5)">13&quot;</text>
+  <text class="dim-t" x="56.4" y="-3.5" text-anchor="middle" transform="rotate(90 56.4 -3.5)">13&quot;</text>
 
   <!-- ================================================================
        UNDER-STAIRS WALK-IN CLOSET (WIC) — budget section 13
@@ -3380,11 +3402,11 @@ Without these the wall band simply runs out into the floor. Six caps:
        flanking vanity lights on the east leg below. -->
   <rect class="blk" x="105.5" y="-53" width=".7" height="2.6"/>
   <rect class="blk" x="105.5" y="-63" width=".7" height="2.6"/>
-  <text class="lbl-s" x="107.6" y="-56.7" text-anchor="middle" font-size=".7" transform="rotate(-90 107.6 -56.7)">outlets</text>
+  <text class="lbl-s" x="107.6" y="-56.7" text-anchor="middle" font-size=".7" transform="rotate(90 107.6 -56.7)">outlets</text>
 
   <!-- light switch, west wall just inside the door -->
   <rect class="blk" x="64.8" y="-15.5" width=".7" height="2.6"/>
-  <text class="lbl-s" x="63.7" y="-14.2" text-anchor="middle" font-size=".7" transform="rotate(-90 63.7 -14.2)">sw</text>
+  <text class="lbl-s" x="63.7" y="-14.2" text-anchor="middle" font-size=".7" transform="rotate(90 63.7 -14.2)">sw</text>
 
   <!-- aisle clearance check, west wall to shelf face -->
   <line class="dimline" x1="65.5" y1="-28" x2="93.5" y2="-28"/>
@@ -3446,7 +3468,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        Surface mount, 0.5" proud, same teal-glass convention as elsewhere.
        Drawn after the counter fill so it renders on top in plan. -->
   <rect x="105" y="-30.35" width=".5" height="16.5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="107.1" y="-22.1" text-anchor="middle" font-size=".8" transform="rotate(-90 107.1 -22.1)">medicine cabinet</text>
+  <text class="teal" x="107.1" y="-22.1" text-anchor="middle" font-size=".8" transform="rotate(90 107.1 -22.1)">medicine cabinet</text>
 
   <!-- vanity lights — flanking the cabinet symmetrically, not just
        dropped in the middle of whatever clear zone each side has (the
@@ -3458,9 +3480,9 @@ Without these the wall band simply runs out into the floor. Six caps:
        cabinet's own centre, d=12.1. The north zone has slack left over
        past its fixture; that's fine, it's not required to fill it. -->
   <rect x="105" y="-12.93" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s" x="107.1" y="-11.93" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -11.93)" style="fill:#C79436">vanity light</text>
+  <text class="lbl-s" x="107.1" y="-11.93" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -11.93)" style="fill:#C79436">vanity light</text>
   <rect x="105" y="-33.28" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s" x="107.1" y="-32.28" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -32.28)" style="fill:#C79436">vanity light</text>
+  <text class="lbl-s" x="107.1" y="-32.28" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -32.28)" style="fill:#C79436">vanity light</text>
 
   <!-- switch + outlet gang, east wall, just north of the north vanity
        light (which ends at y=-33.28) — same "sw + outlet" gang-plate
@@ -3469,7 +3491,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        north of the vanity light, well inside the counter's north edge
        (d=60, y=-70). -->
   <rect class="blk" x="104.85" y="-39.2" width=".7" height="2.6"/>
-  <text class="lbl-s" x="107.1" y="-37.9" text-anchor="middle" font-size=".7" transform="rotate(-90 107.1 -37.9)" style="fill:#C79436">sw + outlet</text>
+  <text class="lbl-s" x="107.1" y="-37.9" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -37.9)" style="fill:#C79436">sw + outlet</text>
 
   <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
   <path d="M99.5,-10 L93.5,-16 V-40" fill="none" stroke="#EDE8DD" stroke-width=".16" stroke-dasharray=".75 .5"/>
@@ -3478,8 +3500,8 @@ Without these the wall band simply runs out into the floor. Six caps:
        (d=36), aiming down at the front of the hanging clothes -->
   <line x1="66.5" y1="-46.5" x2="104.5" y2="-46.5" stroke="#E8C97A" stroke-width=".3" stroke-dasharray=".9 .6"/>
   <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#A9A49B" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <text class="lbl-s" x="98.2" y="-34" text-anchor="middle" font-size="1.05" style="fill:#F6F3ED" transform="rotate(-90 98.2 -34)">OAK SHELVES</text>
-  <text class="lbl-s" x="101.4" y="-34" text-anchor="middle" font-size=".85" style="fill:#EDE8DD" transform="rotate(-90 101.4 -34)">12&quot; deep, below counter</text>
+  <text class="lbl-s" x="98.2" y="-34" text-anchor="middle" font-size="1.05" style="fill:#F6F3ED" transform="rotate(90 98.2 -34)">OAK SHELVES</text>
+  <text class="lbl-s" x="101.4" y="-34" text-anchor="middle" font-size=".85" style="fill:#EDE8DD" transform="rotate(90 101.4 -34)">12&quot; deep, below counter</text>
   <rect x="70.5" y="-53.4" width="30" height="5.2" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="85.5" y="-52" text-anchor="middle" font-size=".85">granite counter @ 46&quot; &#8212; wraps the bank, 6&quot; inside chamfer</text>
   <text class="lbl-s" x="85.5" y="-50.4" text-anchor="middle" font-size=".75" fill="#8B979A">rod @ 42&quot; below + under-counter LED &#8212; tees 6&quot; off floor</text>
@@ -3566,7 +3588,9 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="dimline" x1="112" y1="-10" x2="112" y2="-97"/>
   <line class="tick" x1="111.55" y1="-10.45" x2="112.45" y2="-9.55"/>
   <line class="tick" x1="111.55" y1="-97.45" x2="112.45" y2="-96.55"/>
-  <text class="dim-big" x="114" y="-53.5" text-anchor="middle" transform="rotate(-90 114 -53.5)">87&quot;</text>
+  <text class="dim-big" x="114" y="-53.5" text-anchor="middle" transform="rotate(90 114 -53.5)">87&quot;</text>
+
+  </g>
 </svg>
       <p style="font-size: 12px; color: #777; max-width: 320px; margin-top: 8px;">Proposed floor plan to fit a full bath in place of the existing 1/2 bath. Room is 61" x 61", so the west wall bumps 6" into the entry beyond it to make 67" x 61".</p>
     </div>
