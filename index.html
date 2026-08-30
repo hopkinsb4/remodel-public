@@ -683,34 +683,34 @@
          obvious, and the caption was only restating it. -->
     <!-- ANCHOR (confirmed 2026-08-30, superseding the center-on-opening
          version from earlier today): a VERTEX (tile corner, not a
-         tile's own center) now lands exactly at (-69,92) — the west
+         tile's own center) landed exactly at (-69,92) — the west
          closet block's inner wall face (x=-69, the hall-side face
          Dawson does NOT cross), at the bath-hall opening's own
          vertical center (y=92, midway between the 34" opening's jambs
-         at y=75/109). Two things fall out of that single point:
-         (1) the ENTIRE wall face x=-69 is now wall-phase-perfect
-         (clean half-diamond cuts along its whole length, not just at
-         this one y), and (2) the opening's jambs (y=75/109) sit almost
-         exactly 17" from the vertex — within a third of an inch of
-         the tile's own 16.97" half-diagonal — so the diamonds meeting
-         at that corner are already at very close to full width by the
-         time they reach both jambs, reading as a near-complete framed
-         "bowtie" rather than a bare point. Dawson is restored on the
-         wall's own thickness and everything west of it (see the
-         threshold rect below, switched back from checkerboard) — the
-         checkerboard doesn't cross x=-69 into the wall/bath at all
-         now, it just touches that face cleanly, point-first.
+         at y=75/109). That gave the ENTIRE wall face x=-69
+         wall-phase-perfect half-diamond cuts, and put near-complete
+         solid-tile "bowtie" corners at both jambs (y=75/109 sit
+         within a third of an inch of a tile CENTER — S=16.97" from
+         the vertex), with the meaningless vertex-split tucked into
+         the open doorway's middle where no wall meets it.
+
+         SHIFTED UP ~S (confirmed 2026-08-30): moved the whole layout
+         up one tile spacing (S = 24/sqrt(2) = 16.9706", dy 92 ->
+         75.0294) — this trades that "bowtie" for the opposite: the
+         near-solid corners that were at the jambs (y=75/109) move to
+         the open doorway's middle (y=92, where it doesn't matter
+         either way), and the vertex-split lands on both jambs instead
+         (still wall-phase-perfect along the whole x=-69 face, just a
+         split point rather than a solid corner at each jamb). Flagged
+         before applying; kept on explicit instruction.
 
          TRADEOFF, unchanged from before: this is still mathematically
          incompatible with keeping the organizer notch chamfer
          grout-aligned (confirmed, not guessed — see that section).
          The notch's skewed sliver stays until/unless that's worth a
-         separate pass. Both organizer pinch corners, as a side
-         benefit of this specific point (rather than the center-on-
-         opening version), land closer to true than before: north
-         7.2" off a tile center, south 2.9" off (was 10.1"/14.3"). -->
+         separate pass. -->
     <pattern id="pbed-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(-69,92) rotate(45)">
+             patternTransform="translate(-69,75.0294) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
