@@ -1978,26 +1978,26 @@ Without these the wall band simply runs out into the floor. Six caps:
       /* Dimension text placed over the sofa's own dark fill needs a
          light color to stay legible, same idea as the bath plans'
          on-dark label variant. */
-      #mainfloor-plan .dim-onsofa { font:2.4px 'Helvetica Neue',Arial,sans-serif; fill:#EDE9DD; }
+      #mainfloor-plan .dim-onsofa { font:4.4px 'Helvetica Neue',Arial,sans-serif; fill:#EDE9DD; }
       #mainfloor-plan .blk     { fill:#2A2A2A; }
       /* Stair treads/landings — blond oak, the same Thuma Oak tone
          (#B6986D / #624E40) used across the other plans. */
       #mainfloor-plan .tread   { fill:#B6986D; stroke:#624E40; stroke-width:.234; }
       #mainfloor-plan .riser   { fill:none; stroke:#624E40; stroke-width:.166; }
-      #mainfloor-plan .lbl     { font:2.4px 'Helvetica Neue',Arial,sans-serif; fill:#3A3A3A; }
-      #mainfloor-plan .lbl-s   { font:2.1px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
-      #mainfloor-plan .wall-lbl{ font:2.6px 'Helvetica Neue',Arial,sans-serif; fill:#8F8F8F; }
+      #mainfloor-plan .lbl     { font:4.4px 'Helvetica Neue',Arial,sans-serif; fill:#3A3A3A; }
+      #mainfloor-plan .lbl-s   { font:4.1px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
+      #mainfloor-plan .wall-lbl{ font:4.6px 'Helvetica Neue',Arial,sans-serif; fill:#8F8F8F; }
       #mainfloor-plan text     { dominant-baseline:middle; }
       /* Dimensioning, same architectural convention as the other plans. */
       #mainfloor-plan .extline { fill:none; stroke:#6E6A62; stroke-width:.11; }
       #mainfloor-plan .dimline { fill:none; stroke:#2A2A2A; stroke-width:.13; }
       #mainfloor-plan .tick    { stroke:#2A2A2A; stroke-width:.19; stroke-linecap:round; }
-      #mainfloor-plan .dim-big { font:3.2px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; font-weight:700; }
-      #mainfloor-plan .dim-s   { font:2.4px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
+      #mainfloor-plan .dim-big { font:5.2px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; font-weight:700; }
+      #mainfloor-plan .dim-s   { font:4.4px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
       /* Estimated-length geometry (pony wall projection only, at this
          point) — amber dashed, distinct enough to flag as unresolved. */
       #mainfloor-plan .tbd    { fill:none; stroke:#9B7B2E; stroke-width:.19; stroke-dasharray:1.4 1.1; }
-      #mainfloor-plan .tbd-t  { font:2.1px 'Helvetica Neue',Arial,sans-serif; fill:#8A6A24; font-style:italic; }
+      #mainfloor-plan .tbd-t  { font:4.1px 'Helvetica Neue',Arial,sans-serif; fill:#8A6A24; font-style:italic; }
       /* Soft plate behind labels that sit over the busy checkerboard floor. */
       #mainfloor-plan .plate  { fill:#FBFAF7; opacity:.88; }
     </style>
@@ -2177,9 +2177,9 @@ Without these the wall band simply runs out into the floor. Six caps:
        dining-wall line, and a wall runs along the top on the garage
        opening's south-jamb line (y=-10.5). -->
   <rect x="175.5" y="-6" width="65" height="70.5" fill="url(#mainfloor-dawson)" stroke="#2A2A2A" stroke-width=".266"/>
-  <text x="208" y="26" text-anchor="middle" style="font:2px 'Helvetica Neue',Arial,sans-serif; fill:#EDE9DD;">BATH</text>
-  <text x="208" y="30.5" text-anchor="middle" style="font:1.5px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">see Downstairs</text>
-  <text x="208" y="33.5" text-anchor="middle" style="font:1.5px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">Bathroom Detail</text>
+  <text x="208" y="26" text-anchor="middle" style="font:4px 'Helvetica Neue',Arial,sans-serif; fill:#EDE9DD;">BATH</text>
+  <text x="208" y="30.5" text-anchor="middle" style="font:3.5px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">see Downstairs</text>
+  <text x="208" y="33.5" text-anchor="middle" style="font:3.5px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">Bathroom Detail</text>
   <!-- THE LONG WALL: the north wall behind the entertainment center
        extends in one straight line all the way across the bathroom to
        the dining wall (x=40..245, y=-6..0, drawn over the bath
@@ -2236,7 +2236,6 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="dimline" x1="245" y1="179" x2="279.5" y2="179"/>
   <line class="tick" x1="243.8" y1="177.8" x2="246.2" y2="180.2"/>
   <line class="tick" x1="278.3" y1="177.8" x2="280.7" y2="180.2"/>
-  <text class="dim-s" x="262.25" y="184" text-anchor="middle" font-size="2.2">pantry 34.5&quot;x26&quot;</text>
 
   <!-- KITCHEN E/S WALL RUN (measured 2026-08-30), north to south from
        the NE pillar: 38" fridge opening (y=32.5..70.5, fridge drawn
@@ -2252,15 +2251,11 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path d="M 356.25,70.5 L 382,70.5 L 382,88.5 L 356.25,88.5 Z" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
   <path d="M 356.25,118.5 L 382,118.5 L 382,169 L 279.5,169 L 279.5,143.25 L 356.25,143.25 Z" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
   <rect x="352" y="32.5" width="30" height="38" fill="#B7BABC" stroke="#2A2A2A" stroke-width=".234"/>
-  <text class="dim-s" x="365.5" y="51.5" text-anchor="middle" font-size="2.2" transform="rotate(-90 365.5 51.5)">fridge 38&quot;</text>
   <rect x="356.25" y="88.5" width="25.75" height="30" fill="#B7BABC" stroke="#2A2A2A" stroke-width=".234"/>
   <circle class="thin" cx="363.5" cy="95.5" r="3.2"/>
   <circle class="thin" cx="374.75" cy="95.5" r="3.2"/>
   <circle class="thin" cx="363.5" cy="111.5" r="3.2"/>
   <circle class="thin" cx="374.75" cy="111.5" r="3.2"/>
-  <text class="dim-s" x="359.4" y="103.5" text-anchor="middle" font-size="2.2" transform="rotate(-90 359.4 103.5)">range 30&quot;</text>
-  <text class="dim-onsofa" x="369.1" y="79.9" text-anchor="middle" font-size="2.0" transform="rotate(-90 369.1 79.9)">18&quot;</text>
-  <text class="dim-onsofa" x="343" y="157.3" text-anchor="middle" font-size="2.2">counter</text>
 
   <!-- FARMHOUSE SINK, south wall counter (restored 2026-08-30 to the
        owner-given size): white apron-front sink, 28.5" (E-W) x 17.5"
@@ -2269,7 +2264,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        (x=279.5+19=298.5..327), apron-front flush with the cabinet
        face (y=143.25..160.75). -->
   <rect class="fix" x="298.5" y="143.25" width="28.5" height="17.5" rx="1"/>
-  <text class="dim-s" x="312.75" y="152" text-anchor="middle" font-size="1.9">sink 28.5&quot;x17.5&quot;</text>
+  <text class="dim-s" x="312.75" y="152" text-anchor="middle" style="font-size:2.1px">sink 28.5&quot;x17.5&quot;</text>
 
   <!-- KITCHEN ISLAND: rectangular granite island, 40" (E-W) x 65"
        (N-S, long axis matching the east counter run), placed 34" off
@@ -2279,7 +2274,6 @@ Without these the wall band simply runs out into the floor. Six caps:
        stands 9.75" south of the wall line, inside the 93" opening's
        span. Same black granite. -->
   <rect x="279" y="42.25" width="40" height="65" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
-  <text class="dim-onsofa" x="299" y="74.75" text-anchor="middle" transform="rotate(-90 299 74.75)" font-size="2.2">island 40&quot;x65&quot;</text>
 
   <!-- Kitchen dimensions: 137" width (chained above the dining room);
        the west wall's 38.5/50/48 breakdown in the margin west of the
@@ -2325,7 +2319,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="232.8" y1="-41.7" x2="235.2" y2="-39.3"/>
   <line class="tick" x1="232.8" y1="-11.7" x2="235.2" y2="-9.3"/>
   <line class="tick" x1="232.8" y1="22.3" x2="235.2" y2="24.7"/>
-  <text class="dim-s" x="230.5" y="-15" text-anchor="middle" transform="rotate(-90 230.5 -15)" font-size="2.2">30&quot; opening</text>
+  <text class="dim-s" x="230.5" y="-15" text-anchor="middle" transform="rotate(-90 230.5 -15)" style="font-size:4.2px">30&quot; opening</text>
   <text class="dim-s" x="230.5" y="6.5" text-anchor="middle" transform="rotate(-90 230.5 6.5)" style="fill:#D8D4CA">34&quot;</text>
   <!-- Dining north wall with the PATIO DOOR opening: the ERIS
        72"x80" 3-panel bi-fold (budget section 8), its west jamb 20"
@@ -2351,8 +2345,8 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="thin" x1="382" y1="-56" x2="386.5" y2="-56"/>
   <line class="thin" x1="382" y1="-73.5" x2="386.5" y2="-73.5"/>
   <line x1="384.25" y1="-73.5" x2="384.25" y2="-56" stroke="#2F7D94" stroke-width=".6"/>
-  <text x="389.5" y="-24.75" text-anchor="middle" transform="rotate(-90 389.5 -24.75)" style="font:2.2px 'Helvetica Neue',Arial,sans-serif; fill:#2F7D94;">17.5&quot;</text>
-  <text x="389.5" y="-64.75" text-anchor="middle" transform="rotate(-90 389.5 -64.75)" style="font:2.2px 'Helvetica Neue',Arial,sans-serif; fill:#2F7D94;">17.5&quot;</text>
+  <text x="389.5" y="-24.75" text-anchor="middle" transform="rotate(-90 389.5 -24.75)" style="font:4.2px 'Helvetica Neue',Arial,sans-serif; fill:#2F7D94;">17.5&quot;</text>
+  <text x="389.5" y="-64.75" text-anchor="middle" transform="rotate(-90 389.5 -64.75)" style="font:4.2px 'Helvetica Neue',Arial,sans-serif; fill:#2F7D94;">17.5&quot;</text>
 
   <!-- DINING EAST CABINET/COUNTER RUN (budget section 8): lower
        cabinets with the black granite (Absolute Black) counter,
@@ -2376,9 +2370,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <rect x="358" y="-82.5" width="24" height="24"/>
     <rect x="358" y="-31.5" width="24" height="24"/>
   </g>
-  <text x="363" y="-70.5" text-anchor="middle" transform="rotate(-90 363 -70.5)" style="font:2.0px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">24&quot; gap</text>
-  <text x="363" y="-19.5" text-anchor="middle" transform="rotate(-90 363 -19.5)" style="font:2.0px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">24&quot; gap</text>
-  <text class="dim-onsofa" x="367" y="4" text-anchor="middle" transform="rotate(-90 367 4)" font-size="2.2">counter 137&quot;x25.75&quot;</text>
+  <text class="dim-onsofa" x="367" y="-45" text-anchor="middle" transform="rotate(-90 367 -45)" style="font-size:2.8px">cabinets beneath 2 desk stations</text>
 
   <!-- Desk-station monitors: 34" ultrawide (21:9, screen ~31.4"
        wide) at each knee bay, centered on the bay (y=-19.5 and
@@ -2390,8 +2382,6 @@ Without these the wall band simply runs out into the floor. Six caps:
     <path d="M 376.5,-35.2 Q 380.5,-19.5 376.5,-3.8 L 375.3,-3.8 Q 379.3,-19.5 375.3,-35.2 Z"/>
     <path d="M 376.5,-86.2 Q 380.5,-70.5 376.5,-54.8 L 375.3,-54.8 Q 379.3,-70.5 375.3,-86.2 Z"/>
   </g>
-  <text x="368" y="-19.5" text-anchor="middle" transform="rotate(-90 368 -19.5)" style="font:2.2px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">34&quot; monitor</text>
-  <text x="368" y="-70.5" text-anchor="middle" transform="rotate(-90 368 -70.5)" style="font:2.2px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">34&quot; monitor</text>
 
   <!-- 5 duplex outlets along the east wall backsplash: one at each of
        the 3 solid cabinet runs (y=-97.5, -45, 7.5) and one at each
@@ -2416,7 +2406,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <line x1="382.25" y1="7.5" x2="383.95" y2="7.5"/>
     <line x1="383.1" y1="6.65" x2="383.1" y2="8.35"/>
   </g>
-  <text x="372" y="-45" text-anchor="middle" transform="rotate(-90 372 -45)" style="font:2.0px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">outlets (5)</text>
+  <text x="372" y="-45" text-anchor="middle" transform="rotate(-90 372 -45)" style="font:4px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">outlets (5)</text>
 
   <!-- Espresso machine, NE corner of the dining counter (added
        2026-08-30): Nespresso Essenza Mini (Pure White) — owner
@@ -2432,7 +2422,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <circle cx="379" cy="-109.45" r="1.8" fill="#1E1D1B"/>
     <circle cx="369.5" cy="-109.45" r="0.7" fill="#1E1D1B"/>
   </g>
-  <text x="364" y="-97" text-anchor="middle" transform="rotate(-90 364 -97)" style="font:2.0px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">espresso machine</text>
+  <text x="364" y="-97" text-anchor="middle" transform="rotate(-90 364 -97)" style="font:2.4px 'Helvetica Neue',Arial,sans-serif; fill:#C9C4B7;">espresso machine</text>
 
   <!-- DINING TABLE (budget section 8): Crate & Barrel Nero 36" Round,
        white marble top (pedestal not rendered; brand omitted from
@@ -2443,7 +2433,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        the north wall, well clear of the outswing door and the
        garage opening. -->
   <circle class="fix" cx="289" cy="-77" r="18"/>
-  <text class="dim-s" x="289" y="-69.5" text-anchor="middle" font-size="2.2">36&quot; round table</text>
+  <text class="dim-s" x="289" y="-69.5" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
 
   <!-- Kitchen north-wall chains, relocated above the dining room; the
        jamb extension lines run the full dining depth. -->
@@ -2456,9 +2446,9 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="263.8" y1="-122.7" x2="266.2" y2="-120.3"/>
   <line class="tick" x1="335.8" y1="-122.7" x2="338.2" y2="-120.3"/>
   <line class="tick" x1="380.8" y1="-122.7" x2="383.2" y2="-120.3"/>
-  <text class="dim-s" x="255" y="-124" text-anchor="middle" font-size="1.7">20&quot;</text>
-  <text class="dim-s" x="301" y="-124" text-anchor="middle">72&quot; patio door</text>
-  <text class="dim-s" x="359.5" y="-124" text-anchor="middle" font-size="1.7">45&quot;</text>
+  <text class="dim-s" x="255" y="-124" text-anchor="middle" style="font-size:3.7px">20&quot;</text>
+  <text class="dim-s" x="301" y="-124" text-anchor="middle">72&quot; outswing bifold door</text>
+  <text class="dim-s" x="359.5" y="-124" text-anchor="middle" style="font-size:3.7px">45&quot;</text>
   <line class="extline" x1="250" y1="23.5" x2="250" y2="-129.5"/>
   <line class="extline" x1="356" y1="23.5" x2="356" y2="-129.5"/>
   <line class="dimline" x1="245" y1="-127.5" x2="382" y2="-127.5"/>
@@ -2466,9 +2456,9 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="248.8" y1="-128.7" x2="251.2" y2="-126.3"/>
   <line class="tick" x1="354.8" y1="-128.7" x2="357.2" y2="-126.3"/>
   <line class="tick" x1="380.8" y1="-128.7" x2="383.2" y2="-126.3"/>
-  <text class="dim-s" x="247.5" y="-130" text-anchor="middle" font-size="1.7">5&quot;</text>
+  <text class="dim-s" x="247.5" y="-130" text-anchor="middle" style="font-size:3.7px">5&quot;</text>
   <text class="dim-s" x="303" y="-130" text-anchor="middle">106&quot; kitchen opening</text>
-  <text class="dim-s" x="369" y="-130" text-anchor="middle" font-size="1.7">26&quot;</text>
+  <text class="dim-s" x="369" y="-130" text-anchor="middle" style="font-size:3.7px">26&quot;</text>
   <line class="dimline" x1="245" y1="-133.5" x2="382" y2="-133.5"/>
   <line class="tick" x1="243.8" y1="-134.7" x2="246.2" y2="-132.3"/>
   <line class="tick" x1="380.8" y1="-134.7" x2="383.2" y2="-132.3"/>
@@ -2563,7 +2553,7 @@ Without these the wall band simply runs out into the floor. Six caps:
     <line x1="85.5" y1="90" x2="85.5" y2="117"/>
     <line x1="119.5" y1="90" x2="119.5" y2="117"/>
   </g>
-  <text class="dim-onsofa" x="85.5" y="131" text-anchor="middle" font-size="2.2">sofa extends 32&quot;&#8594;59&quot;</text>
+  <text class="dim-onsofa" x="85.5" y="131" text-anchor="middle" style="font-size:4.2px">sofa extends 32&quot;&#8594;59&quot;</text>
   <line class="extline" x1="4.75" y1="113" x2="4.75" y2="110"/>
   <line class="extline" x1="166.25" y1="113" x2="166.25" y2="110"/>
   <line class="dimline" x1="4.75" y1="112" x2="166.25" y2="112"/>
@@ -2595,9 +2585,9 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line class="tick" x1="234.8" y1="-55.2" x2="237.2" y2="-52.8"/>
   <line class="tick" x1="243.8" y1="-55.2" x2="246.2" y2="-52.8"/>
   <text class="dim-big" x="85.5" y="-57.5" text-anchor="middle">171&quot;</text>
-  <text class="dim-s" x="175.5" y="-57.5" text-anchor="middle" font-size="1.9">9&quot;</text>
+  <text class="dim-s" x="175.5" y="-57.5" text-anchor="middle" style="font-size:3.9px">9&quot;</text>
   <text class="dim-s" x="208" y="-57.5" text-anchor="middle">56&quot; entryway</text>
-  <text class="dim-s" x="240.5" y="-57.5" text-anchor="middle" font-size="1.9">9&quot;</text>
+  <text class="dim-s" x="240.5" y="-57.5" text-anchor="middle" style="font-size:3.9px">9&quot;</text>
 
   <!-- Depth, 146", from the south face of the entertainment center
        (y=23) to the south wall's INTERIOR face (y=169, wall-to-wall
