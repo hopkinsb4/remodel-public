@@ -2038,30 +2038,43 @@ Without these the wall band simply runs out into the floor. Six caps:
          back when this pattern still covered the living room too. Now
          that the living room has its own pattern (mainfloor-check-lr,
          above — no longer touched by this one), this pattern covers
-         the KITCHEN and DINING ROOM (the entryway stays Dawson — not
-         reverted), re-anchored for that scope:
+         the DINING ROOM and the kitchen/dining threshold opening (the
+         entryway stays Dawson — not reverted). The KITCHEN ROOM itself
+         was split off onto its own pattern, mainfloor-check-kitchen,
+         below — see that note for why. This pattern keeps the
+         threshold anchor:
          - The kitchen/dining threshold (the 106" cased opening between
-           them, y 23.5-32.5, centered y=28): re-phased so the cut is
-           the "half-tile" type (a whole row of diamond centers sits on
-           the line, same terminology as the original stairs-landing
-           cut) — and specifically a BLACK row, not white — dy = 28 -
-           3*S.
-         - Kitchen west wall (x=245, shared with the entryway/kitchen
-           archway): re-phased to the "vertex" type (tile points touch
-           the wall, alternating white/black) rather than a half-tile
-           cut — dx = 245 - 14*S. Kitchen east wall (x=382, 137" away)
-           falls out phase-good too (0.073) as a bonus, same for
-           dining's matching east wall.
-         - N/S alignment with the living room: the two rooms use
-           slightly different tile modules (this one's still the
-           nominal 24.000", the living room nudged to 24.1831" for its
-           own width) so they can't share an exact infinite phase: dy
-           was chosen as the closest odd-row (black-threshold) solution
-           to the living room's dy (-28.3) — 5.39" off, the closest
-           this module allows.
+           them, y 23.5-32.5, centered y=28): phased so the cut is the
+           "half-tile" type (a whole row of diamond centers sits on the
+           line, same terminology as the original stairs-landing cut)
+           — and specifically a BLACK row, not white — dy = 28 - 3*S.
          S = 24/sqrt(2) = 16.9706". -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
              patternTransform="translate(7.4121,-22.9117) rotate(45)">
+      <rect width="48" height="48" fill="#F1EEE7"/>
+      <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
+      <rect x="24" y="24" width="24" height="24" fill="#262322"/>
+    </pattern>
+    <!-- KITCHEN ONLY (confirmed 2026-08-30): split off from
+         mainfloor-check (which still covers dining + the threshold
+         opening, above) so the kitchen's tile could shift north a few
+         inches without moving dining. The ask: the E-W lines running
+         through the tile points (the vertex rows, spaced 2*S apart)
+         should line up from the living room into the kitchen. The two
+         rooms' tile modules are close but not identical (this one's
+         nominal 24.000", the living room's nudged to 24.1831"), so an
+         exact match can only be made at one row at a time — picked the
+         row nearest the kitchen's own vertical middle (living room's
+         y=108.5 vertex row, kitchen's y=112.85) and shifted dy by
+         -4.353" to land them within a thousandth of an inch of each
+         other. Kept dx unchanged (7.4121, still exact on the west wall
+         at x=245 — dx doesn't affect this shift). Tradeoff, on
+         purpose: this reopens the kitchen/dining threshold (still
+         mostly black, just no longer perfectly centered — about
+         4.35" off the mainfloor-check anchor above) in exchange for
+         the living-room-to-kitchen alignment now being exact. -->
+    <pattern id="mainfloor-check-kitchen" width="48" height="48" patternUnits="userSpaceOnUse"
+             patternTransform="translate(7.4121,-27.2647) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
@@ -2284,7 +2297,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        still drawn at the standard 4.5" (assumed, not measured);
        kitchen contents (cabinets, island, appliances) not drawn
        yet. -->
-  <rect x="245" y="32.5" width="137" height="136.5" fill="url(#mainfloor-check)"/>
+  <rect x="245" y="32.5" width="137" height="136.5" fill="url(#mainfloor-check-kitchen)"/>
   <rect x="240.5" y="32.5" width="4.5" height="38.5" fill="#C9C4B7"/>  <!-- trimmed to the dining-wall line: the SE jog into the bath space is cut -->
   <rect x="236" y="64.5" width="4.5" height="6.5" fill="#C9C4B7"/>  <!-- corner fill where the entryway north wall meets the trimmed wall -->
   <rect x="236" y="121" width="9" height="48" fill="#C9C4B7"/>
