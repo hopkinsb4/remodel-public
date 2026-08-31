@@ -2659,32 +2659,6 @@ Without these the wall band simply runs out into the floor. Six caps:
        carries the 30" opening to the garage/downstairs hallway.
        Contents (built-in desk run, table) not drawn yet. -->
   <rect x="245" y="-113.5" width="137" height="137" fill="url(#mainfloor-check)"/>
-  <!-- PATIO-DOOR WALL SLIVER FILL (confirmed 2026-08-31): the
-       checkerboard's phase leaves 4 flat-topped white triangles
-       cut into the black field right at this wall (base 4.3824"
-       at the wall, apex 2.1912" into the room — a true vertex the
-       wall just barely clips short of) — the same defect described
-       in the pattern's own ANCHOR comment above, left unfixed there
-       on purpose (fixing it needs either a real tile-size change or
-       moving the dining table off its room anchor). Rather than
-       touch the tile phase, each triangle is painted over in the
-       checkerboard's own black (#262322): since the wall clips the
-       white diamond just short of its natural point, painting
-       exactly that clipped tip black is indistinguishable from the
-       diamond having reached its point — the surrounding field is
-       already this same black, so the patch is invisible as a
-       patch. Centers measured directly off the pattern at
-       261.9706 / 295.9118 / 329.8529 / 363.7940 (spacing 33.9411",
-       i.e. 24*sqrt(2) — one per diamond repeat across the 137"
-       wall); the second one lands exactly under the dining table's
-       own x=295.91. Local triangle: base at y=0 (the wall) spanning
-       x -2.1912..2.1912, apex at (0, 2.1912) toward the room. -->
-  <g fill="#262322">
-    <path d="M -2.1912,0 L 2.1912,0 L 0,2.1912 Z" transform="translate(261.9706,-113.5)"/>
-    <path d="M -2.1912,0 L 2.1912,0 L 0,2.1912 Z" transform="translate(295.9118,-113.5)"/>
-    <path d="M -2.1912,0 L 2.1912,0 L 0,2.1912 Z" transform="translate(329.8529,-113.5)"/>
-    <path d="M -2.1912,0 L 2.1912,0 L 0,2.1912 Z" transform="translate(363.7940,-113.5)"/>
-  </g>
   <!-- Dining west wall, with the opening to the garage entry /
        downstairs bath / under-stairs closet hallway (detailed on the
        downstairs-bath plan): 30" wide, its south jamb 34" north of
