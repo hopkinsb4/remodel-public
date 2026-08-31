@@ -2251,9 +2251,31 @@ Without these the wall band simply runs out into the floor. Six caps:
            perfectly centered on this new dy (about 4.35" off), but
            it's still one continuous run — no seam between kitchen and
            dining, since both share this same anchor.
-         S = 24/sqrt(2) = 16.9706". -->
+         S = 24/sqrt(2) = 16.9706".
+
+         THIRD PASS (confirmed 2026-08-31): dy nudged again, from
+         -27.2647 to -26.456 (+0.8087"), to close the black-triangle
+         slivers cut into the checkerboard at the sink/counter edge
+         (y=143.25, the granite counter's front face) — those slivers
+         were a flat-topped 1.62" instead of a true point. This dy is
+         a pure Y-phase shift, module still 24" (no tile-size or grout-
+         width change, and no dx change), chosen from the full range
+         of dy that keeps the table on a light tile and all 4 dining
+         chairs + both counter stools + both barstools on their
+         existing colors (verified: none of them flip) — so this is
+         free with respect to every locked seating/table position.
+         It does NOT fix the OTHER sliver, at the patio-door wall
+         (y=-113.5, "up" wall) — that one was a flat-topped 2.76" and
+         is now closer to 4.38" wide, worse than before. Fixing both
+         walls at once needs either a real tile-size change (module
+         ~24.21", ~0.86% bigger, confirmed via direct simulation to
+         drop both to a true point) or moving the dining table off its
+         room-anchored position by ~22" to reach a matching tile under
+         that bigger module — both rejected as too large a change for
+         what was asked; this dy-only nudge fixes only the sink side,
+         on purpose. -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(7.4121,-27.2647) rotate(45)">
+             patternTransform="translate(7.4121,-26.456) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
