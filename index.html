@@ -1378,29 +1378,49 @@ SWING SETTLED, and it only works one way. Handle on the left going
        with the EXPOSED wall it actually measures: threshold left corner
        (y 109) to the tub apron (y 127.7), where the tub takes over the
        wall face. 18.7", same style as the 34½" above it. -->
+  <!-- 36", 34½" and 18.7" TEXT MOVED INTO THE WALL SPACE (confirmed
+       2026-09-01): the dimension lines/ticks stay exactly where they
+       measure (unchanged below); only the text + its light background
+       pill move off the tile and into the wall block beyond this
+       room's own far wall face (local x=-78, the separate "closet
+       block + top wall" rect starting at outer x=-73.5) — the same
+       move-the-label-not-the-geometry treatment used for the mirror
+       and dimmer labels elsewhere in this project. Kept rotate(-90)
+       (unlike the dimmer fix): this wall is thin in screen-y/wide in
+       screen-x, same orientation as before the move, so the existing
+       horizontal-on-screen reading still fits.
+       All three land at x=-75.75 (centered in the clear 4.5" wall
+       band, local -78..-73.5), y unchanged — including 34½", despite
+       the sliding barn door's own mechanism/label sitting in that
+       same x band at this y-range (x -77.9..-75.5, y 41..75): the
+       door's label reads along the wall (y-direction) while this one
+       sits right below the door's own text block rather than beside
+       it, so the two don't actually collide once rendered. (A first
+       pass pushed 34½" to x=-73, deeper into the wall, to dodge a
+       collision that turned out not to be real — reverted.) -->
   <line class="dimline" x1="-84.5" y1="0" x2="-84.5" y2="36"/>
   <g class="tick">
     <line x1="-85.6" y1="-1.1" x2="-83.4" y2="1.1"/>
     <line x1="-85.6" y1="34.9" x2="-83.4" y2="37.1"/>
   </g>
-  <rect x="-86.3" y="14" width="3.6" height="8" rx="1" fill="#FBFAF7"/>
-  <text class="dim-t" x="-84.5" y="18" text-anchor="middle" transform="rotate(-90 -84.5 18)">36"</text>
+  <rect x="-77.55" y="14" width="3.6" height="8" rx="1" fill="#FBFAF7"/>
+  <text class="dim-t" x="-75.75" y="18" text-anchor="middle" transform="rotate(-90 -75.75 18)">36"</text>
 
   <line class="dimline" x1="-86.5" y1="40.5" x2="-86.5" y2="75"/>
   <g class="tick">
     <line x1="-87.6" y1="39.4" x2="-85.4" y2="41.6"/>
     <line x1="-87.6" y1="73.9" x2="-85.4" y2="76.1"/>
   </g>
-  <rect x="-88.3" y="52.25" width="3.6" height="11" rx="1" fill="#FBFAF7"/>
-  <text class="dim-t" x="-86.5" y="57.75" text-anchor="middle" transform="rotate(-90 -86.5 57.75)">34½"</text>
+  <rect x="-77.55" y="52.25" width="3.6" height="11" rx="1" fill="#FBFAF7"/>
+  <text class="dim-t" x="-75.75" y="57.75" text-anchor="middle" transform="rotate(-90 -75.75 57.75)">34½"</text>
 
   <line class="dimline" x1="-86.5" y1="109" x2="-86.5" y2="127.7"/>
   <g class="tick">
     <line x1="-87.6" y1="107.9" x2="-85.4" y2="110.1"/>
     <line x1="-87.6" y1="126.6" x2="-85.4" y2="128.8"/>
   </g>
-  <rect x="-88.3" y="111.35" width="3.6" height="14" rx="1" fill="#FBFAF7"/>
-  <text class="dim-t" x="-86.5" y="118.35" text-anchor="middle" transform="rotate(-90 -86.5 118.35)">18.7"</text>
+  <rect x="-77.55" y="111.35" width="3.6" height="14" rx="1" fill="#FBFAF7"/>
+  <text class="dim-t" x="-75.75" y="118.35" text-anchor="middle" transform="rotate(-90 -75.75 118.35)">18.7"</text>
 
   <!-- ============ SHOWER/TUB FIXTURES ============
        Everything the budget priced for this room but that was never
