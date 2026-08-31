@@ -2676,28 +2676,40 @@ Without these the wall band simply runs out into the floor. Six caps:
        (y=-40.5), flush with the hallway opening's jamb, same anchor
        point used for the West Elm layout this replaces.
 
-       The corner piece's own return leg (the short square nub that
-       actually turns the corner, ~21.5" long per the request) runs
-       east from that corner: x=266.75..288.25, y=-40.5..-18.75 — the
-       seam at x=288.25 marks where the corner unit's own return ends
-       and the separate 34" ARMLESS piece begins, butted flush on to
-       extend the same run to x=322.25 (21.5+34=55.5" total on this
-       leg, matching the request's "56.75 x (21.5+34)"). Seat/front
-       edge at y=-40.5, backrest at y=-18.75, facing north into the
-       table (folks seated here look north/"up" the plan toward it) —
-       2.79" clear of the table's own south edge (y=-43.21).
+       DRAWN AS A TRUE OVERLAPPING L, EDGE TO EDGE (corrected
+       2026-08-31 — the first pass drew the two legs kitty-corner,
+       touching at a single point (266.75,-40.5), per user feedback
+       against a reference sketch): the south leg's rect starts back
+       at x=245 (the SAME wall-face x as the west leg), not at the
+       west leg's own front face — so the two rects share a full
+       21.75"-long edge along y=-40.5 (x=245..266.75), the way a real
+       one-piece corner unit's own square corner nub is shared between
+       both legs, not two separate boxes meeting at a corner point.
+       The seam at x=266.75 (exactly the west leg's own front face)
+       marks where that shared corner nub ends and the separate 34"
+       ARMLESS piece begins, extending the run on to x=300.75 — total
+       south-leg length 21.75+34=55.75" (matching the request's
+       "56.75 x (21.5+34)"; the corner nub is ~21.75" here vs the
+       request's "21.5", the same minor rounding as the west leg's own
+       depth). Seat/front edge at y=-40.5, backrest at y=-18.75, facing
+       north into the table (folks seated here look north/"up" the
+       plan toward it) — 2.79" clear of the table's own south edge
+       (y=-43.21).
 
        Neither leg was fit to the table's exact position (the table
        was centered on the checkerboard tile grid before any banquette
        was conceived): the west leg sits 11.16" proud of the table's
-       west edge (x=277.91) — a wider knee gap than a snug banquette
-       nook would ideally have, flagged here rather than moving the
-       table off its tile-aligned spot without being asked. -->
+       west edge (x=277.91), and the corrected (shorter) south leg now
+       falls 13.16" short of the table's east edge (x=313.91) instead
+       of the first pass's 8.34" past it — a wider gap on both counts
+       than a snug banquette nook would ideally have, flagged here
+       rather than moving the table off its tile-aligned spot without
+       being asked. -->
   <rect x="245" y="-97.25" width="21.75" height="56.75" class="banquette"/>
-  <rect x="266.75" y="-40.5" width="55.5" height="21.75" class="banquette"/>
-  <line class="banquette-seam" x1="288.25" y1="-40.5" x2="288.25" y2="-18.75"/>
+  <rect x="245" y="-40.5" width="55.75" height="21.75" class="banquette"/>
+  <line class="banquette-seam" x1="266.75" y1="-40.5" x2="266.75" y2="-18.75"/>
   <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="255.875" y="-68.875" transform="rotate(-90 255.875 -68.875)">Rosin left corner</text>
-  <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="305.25" y="-28.375">+ 34&quot; armless</text>
+  <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="283.75" y="-28.375">+ 34&quot; armless</text>
 
   <!-- Kitchen north-wall chains, relocated above the dining room; the
        jamb extension lines run the full dining depth. -->
