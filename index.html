@@ -2096,6 +2096,11 @@ Without these the wall band simply runs out into the floor. Six caps:
          black, with a white border so the seat reads clearly against
          the dark tiles it sits on. */
       #mainfloor-plan .chair-seat { fill:#211D19; stroke:#FFFFFF; stroke-width:.4; }
+      /* Back-hoop arch drawn twice, wider white stroke first then the
+         dark stroke on top, giving the same white-outlined look as
+         the seat instead of a plain dark line — same white/dark
+         sandwich technique as the sofa's sleep-position outline. */
+      #mainfloor-plan .chair-arch-bg { fill:none; stroke:#FFFFFF; stroke-width:.85; stroke-linecap:round; }
       #mainfloor-plan .chair-arch { fill:none; stroke:#211D19; stroke-width:.55; stroke-linecap:round; }
       /* Dimension text placed over the sofa's own dark fill needs a
          light color to stay legible, same idea as the bath plans'
@@ -2481,15 +2486,6 @@ Without these the wall band simply runs out into the floor. Six caps:
     <circle cx="7.75" cy="0" r=".7"/>
   </g>
 
-  <!-- KITCHEN ISLAND: rectangular granite island, 40" (E-W) x 65"
-       (N-S, long axis matching the east counter run), placed 34" off
-       the west wall and 36" off the south counter face (x=279..319,
-       y=42.25..107.25). Aisles: 34" west (given), 36" south (given),
-       37.25" to the east counters, 33" to the fridge; the north end
-       stands 9.75" south of the wall line, inside the 93" opening's
-       span. Same black granite. -->
-  <rect x="279" y="42.25" width="40" height="65" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
-
   <!-- BARSTOOLS (2) — budget section 7, Crate & Barrel Juni, Black Ash,
        same symbol as the dining chairs. On the island's WEST side per
        instruction, splitting its 65" length into thirds (63.92 and
@@ -2498,15 +2494,31 @@ Without these the wall band simply runs out into the floor. Six caps:
        edge flush with the island's own west face (x=279), seat
        centered 11.125" further west at x=267.875. Rotated -90° so the
        front points +x — east, toward the island, same convention as
-       the desk-station stools. -->
+       the desk-station stools.
+       Drawn BEFORE the island itself (painted first, underneath) so
+       the island's own edge renders on top where they meet, instead
+       of the stool's seat corner sitting on top of the counter —
+       same z-order convention applied to the dining table/chairs and
+       the desk counters/stools. -->
   <g transform="translate(267.875,63.92) rotate(-90)">
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
     <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
   </g>
   <g transform="translate(267.875,85.58) rotate(-90)">
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
     <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
   </g>
+
+  <!-- KITCHEN ISLAND: rectangular granite island, 40" (E-W) x 65"
+       (N-S, long axis matching the east counter run), placed 34" off
+       the west wall and 36" off the south counter face (x=279..319,
+       y=42.25..107.25). Aisles: 34" west (given), 36" south (given),
+       37.25" to the east counters, 33" to the fridge; the north end
+       stands 9.75" south of the wall line, inside the 93" opening's
+       span. Same black granite. -->
+  <rect x="279" y="42.25" width="40" height="65" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
 
   <!-- Kitchen dimensions: 137" width (chained above the dining room);
        the west wall's 38.5/50/48 breakdown in the margin west of the
@@ -2573,6 +2585,31 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text x="389.5" y="-24.75" text-anchor="middle" transform="rotate(-90 389.5 -24.75)" style="font:4.2px 'Helvetica Neue',Arial,sans-serif; fill:#2F7D94;">17.5&quot;</text>
   <text x="389.5" y="-64.75" text-anchor="middle" transform="rotate(-90 389.5 -64.75)" style="font:4.2px 'Helvetica Neue',Arial,sans-serif; fill:#2F7D94;">17.5&quot;</text>
 
+  <!-- COUNTER STOOLS (2) — budget section 8, Crate & Barrel Juni, Black
+       Ash, same symbol as the dining chairs (juni-chair-standalone.svg:
+       seat + back-hoop arch). One at each desk station, per instruction
+       — tucked into the room at the cabinet run's own face (x=356.25),
+       not inside the knee-space cutout itself (that 24"-deep gap under
+       the counter, x=358..382, is where the knees go, not the stool).
+       Front edge flush with x=356.25, seat centered 11.125" west of it
+       at x=345.125; y matches each knee bay's own center (-70.5 and
+       -19.5). Rotated -90° so the front (locally +y before rotation)
+       points +x — east, toward the counter/monitor, the same
+       direction as the desk stations themselves.
+       Drawn BEFORE the cabinet run itself (painted first, underneath)
+       so the counter's own edge renders on top where they meet —
+       same z-order convention applied throughout. -->
+  <g transform="translate(345.125,-70.5) rotate(-90)">
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+  </g>
+  <g transform="translate(345.125,-19.5) rotate(-90)">
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+  </g>
+
   <!-- DINING EAST CABINET/COUNTER RUN (budget section 8): lower
        cabinets with the black granite (Absolute Black) counter,
        spanning the full 137" east wall at the standard 25.75" depth
@@ -2605,26 +2642,6 @@ Without these the wall band simply runs out into the floor. Six caps:
   <g fill="#B7BABC" stroke="#2A2A2A" stroke-width=".2">
     <rect x="375.3" y="-35.2" width="1.2" height="31.4"/>
     <rect x="375.3" y="-86.2" width="1.2" height="31.4"/>
-  </g>
-
-  <!-- COUNTER STOOLS (2) — budget section 8, Crate & Barrel Juni, Black
-       Ash, same symbol as the dining chairs (juni-chair-standalone.svg:
-       seat + back-hoop arch). One at each desk station, per instruction
-       — tucked into the room at the cabinet run's own face (x=356.25),
-       not inside the knee-space cutout itself (that 24"-deep gap under
-       the counter, x=358..382, is where the knees go, not the stool).
-       Front edge flush with x=356.25, seat centered 11.125" west of it
-       at x=345.125; y matches each knee bay's own center (-70.5 and
-       -19.5). Rotated -90° so the front (locally +y before rotation)
-       points +x — east, toward the counter/monitor, the same
-       direction as the desk stations themselves. -->
-  <g transform="translate(345.125,-70.5) rotate(-90)">
-    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-  </g>
-  <g transform="translate(345.125,-19.5) rotate(-90)">
-    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
   </g>
 
   <!-- 5 duplex outlets along the east wall backsplash: one at each of
@@ -2666,6 +2683,59 @@ Without these the wall band simply runs out into the floor. Six caps:
     <circle cx="369.5" cy="-109.45" r="0.7" fill="#1E1D1B"/>
   </g>
 
+  <!-- DINING CHAIRS (4) — budget section 8, Crate & Barrel Juni, Black
+       Ash (confirmed 2026-08-31): styled after the standalone
+       juni-chair-standalone.svg symbol (seat + back-hoop arch only,
+       no spindle/leg dots), originally placed "around the table on
+       the black tiles at 45 degree angles" — each chair centered on
+       one of the table's 4 edge-adjacent dark-tile centers (24" away
+       in each diagonal direction, NE/SE/SW/NW, a direct consequence
+       of the checkerboard's own 45°-rotated pattern) and rotated so
+       its front faces back toward the table: 45, 135, -45, -135°.
+
+       SCOOTED IN (confirmed 2026-08-31): pulled 3" closer along each
+       diagonal, from the exact 24" tile-center spacing down to 21"
+       (offset 14.8492" per axis instead of 16.9706", i.e.
+       21/sqrt(2)), off the tile centers now rather than sitting
+       exactly on them. Front edge now lands about 5.4" inside the
+       table's 18"-radius edge (21" spacing minus the seat's own
+       8.375" center-to-front-edge distance = 12.625" from the table
+       center; 18-12.625=5.375") — more overlap than the original 2.4"
+       at 24", by design, the plan-view read of chairs pulled in
+       snugger to the table.
+
+       DRAWN BEFORE THE TABLE (confirmed 2026-08-31): moved above the
+       DINING TABLE block so the table's own circle paints on top of
+       the chairs where they overlap, instead of a chair corner
+       sitting on top of the tabletop — the same z-order convention
+       applied to the counter stools/counters and island/barstools
+       below.
+       The chair symbol's local origin is its own footprint center
+       (9.25,11.125 in the standalone file's coordinates), with its
+       front pointing toward local +y before rotation — so each
+       instance below is a plain translate(chair center) rotate(angle)
+       with the same unrotated shape inside. -->
+  <g transform="translate(310.76,-76.06) rotate(45)">    <!-- NE chair -->
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+  </g>
+  <g transform="translate(310.76,-46.36) rotate(135)">   <!-- SE chair -->
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+  </g>
+  <g transform="translate(281.06,-46.36) rotate(-135)">  <!-- SW chair -->
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+  </g>
+  <g transform="translate(281.06,-76.06) rotate(-45)">   <!-- NW chair -->
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+  </g>
+
   <!-- DINING TABLE (budget section 8): Crate & Barrel Nero 36" Round,
        white marble top (pedestal not rendered; brand omitted from
        the drawing, see budget) — RE-CENTERED A SIXTH TIME (confirmed
@@ -2700,48 +2770,6 @@ Without these the wall band simply runs out into the floor. Six caps:
        (y=((-73.5-56)/2 + (-33.5-16)/2)/2 = -44.75). -->
   <circle cx="295.91" cy="-61.21" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
   <text class="dim-s" x="295.91" y="-53.71" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
-
-  <!-- DINING CHAIRS (4) — budget section 8, Crate & Barrel Juni, Black
-       Ash (confirmed 2026-08-31): styled after the standalone
-       juni-chair-standalone.svg symbol (seat + back-hoop arch only,
-       no spindle/leg dots), placed "around the table on the black
-       tiles at 45 degree angles."
-       The table (cx=295.91,cy=-61.21) sits on a light tile whose 4
-       edge-adjacent dark tiles are each exactly 24" away, one in each
-       diagonal direction (NE/SE/SW/NW) — a direct consequence of the
-       checkerboard's own 45°-rotated pattern, where every tile's
-       4 neighbors are the opposite color. Each chair is centered on
-       one of those 4 dark-tile centers and rotated so its own front
-       (the seat's leading edge) faces back toward the table center —
-       the four rotation angles that do this are exactly 45, 135, -45,
-       and -135°, which is where "45 degree angles" comes from as much
-       as the diagonal tile positions do.
-       The chair symbol's local origin is its own footprint center
-       (9.25,11.125 in the standalone file's coordinates), with its
-       front pointing toward local +y before rotation — so each
-       instance below is a plain translate(tile center) rotate(angle)
-       with the same unrotated shape inside.
-       CLEARANCE NOTE: the seat's own front edge lands about 2.4"
-       inside the table's 18"-radius edge at this spacing (24" center-
-       to-center minus the seat's ~15.6" own half-depth to its front
-       edge) — a modest, intentional overlap, the plan-view equivalent
-       of a chair pulled snugly up to the table, not a drafting error. -->
-  <g transform="translate(312.88,-78.18) rotate(45)">    <!-- NE chair -->
-    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-  </g>
-  <g transform="translate(312.88,-44.24) rotate(135)">   <!-- SE chair -->
-    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-  </g>
-  <g transform="translate(278.94,-44.24) rotate(-135)">  <!-- SW chair -->
-    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-  </g>
-  <g transform="translate(278.94,-78.18) rotate(-45)">   <!-- NW chair -->
-    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-  </g>
 
   <!-- DINING BANQUETTE — REMOVED 2026-08-31, reverting to dining chairs
        instead (a Crate & Barrel Juni Black Ash chair, styled after a
