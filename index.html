@@ -2676,19 +2676,21 @@ Without these the wall band simply runs out into the floor. Six caps:
        (y=-40.5), flush with the hallway opening's jamb, same anchor
        point used for the West Elm layout this replaces.
 
-       DRAWN AS A TRUE OVERLAPPING L, EDGE TO EDGE (corrected
-       2026-08-31 — the first pass drew the two legs kitty-corner,
-       touching at a single point (266.75,-40.5), per user feedback
-       against a reference sketch): the south leg's rect starts back
-       at x=245 (the SAME wall-face x as the west leg), not at the
-       west leg's own front face — so the two rects share a full
-       21.75"-long edge along y=-40.5 (x=245..266.75), the way a real
-       one-piece corner unit's own square corner nub is shared between
-       both legs, not two separate boxes meeting at a corner point.
-       The seam at x=266.75 (exactly the west leg's own front face)
-       marks where that shared corner nub ends and the separate 34"
-       ARMLESS piece begins, extending the run on to x=300.75 — total
-       south-leg length 21.75+34=55.75" (matching the request's
+       DRAWN AS ONE UNIFIED L, A SINGLE PATH (corrected 2026-08-31
+       twice — first pass drew the two legs kitty-corner, touching at
+       a single point; second pass fixed that by overlapping two
+       separate <rect>s, but each rect's own full stroke outline drew
+       a visible extra square where they met, per user feedback
+       against a reference sketch marking that square with an X):
+       the whole L is now one <path>, the west leg (x=245..266.75,
+       y=-97.25..-40.5) and the south leg (x=245..300.75,
+       y=-40.5..-18.75) sharing the same wall-face x=245, so there is
+       exactly one outline around the actual L silhouette and no
+       interior seam-square. A thin .banquette-seam line at x=266.75
+       (the west leg's own front face) still marks where the corner
+       unit's own square nub ends and the separate 34" ARMLESS piece
+       begins, extending the run on to x=300.75 — total south-leg
+       length 21.75+34=55.75" (matching the request's
        "56.75 x (21.5+34)"; the corner nub is ~21.75" here vs the
        request's "21.5", the same minor rounding as the west leg's own
        depth). Seat/front edge at y=-40.5, backrest at y=-18.75, facing
@@ -2705,8 +2707,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        than a snug banquette nook would ideally have, flagged here
        rather than moving the table off its tile-aligned spot without
        being asked. -->
-  <rect x="245" y="-97.25" width="21.75" height="56.75" class="banquette"/>
-  <rect x="245" y="-40.5" width="55.75" height="21.75" class="banquette"/>
+  <path class="banquette" d="M 245,-97.25 L 266.75,-97.25 L 266.75,-40.5 L 300.75,-40.5 L 300.75,-18.75 L 245,-18.75 Z"/>
   <line class="banquette-seam" x1="266.75" y1="-40.5" x2="266.75" y2="-18.75"/>
   <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="255.875" y="-68.875" transform="rotate(-90 255.875 -68.875)">Rosin left corner</text>
   <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="283.75" y="-28.375">+ 34&quot; armless</text>
