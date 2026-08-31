@@ -2863,26 +2863,19 @@ Without these the wall band simply runs out into the floor. Six caps:
        and 2 island barstools using this same chair symbol). Don't
        rework without explicit instruction. -->
 
-  <!-- TEST (2026-08-31): table+chairs shifted one tile up-left (-16.9706,
-       -16.9706 — the true diagonal tile-center step, M/sqrt(2), NOT the
-       24" module itself) so the table centers on a DARK tile and all 4
-       chairs land on LIGHT tiles instead — the exact opposite of the
-       locked arrangement. Positions below are the shifted set; see the
-       DINING TABLE comment for the un-shifted (locked) coordinates this
-       supersedes for the test. -->
-  <g transform="translate(293.789,-93.031) rotate(45)">    <!-- NE chair (TEST) -->
+  <g transform="translate(310.76,-76.06) rotate(45)">    <!-- NE chair -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
     <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
-  <g transform="translate(293.789,-63.331) rotate(135)">   <!-- SE chair (TEST) -->
+  <g transform="translate(310.76,-46.36) rotate(135)">   <!-- SE chair -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
     <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
-  <g transform="translate(264.089,-63.331) rotate(-135)">  <!-- SW chair (TEST) -->
+  <g transform="translate(281.06,-46.36) rotate(-135)">  <!-- SW chair -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
     <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
-  <g transform="translate(264.089,-93.031) rotate(-45)">   <!-- NW chair (TEST) -->
+  <g transform="translate(281.06,-76.06) rotate(-45)">   <!-- NW chair -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
     <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
@@ -2919,15 +2912,8 @@ Without these the wall band simply runs out into the floor. Six caps:
        the 72" patio door opening as a whole (x=(265+337)/2=301), y
        aligned to the midpoint between the two east-wall windows
        (y=((-73.5-56)/2 + (-33.5-16)/2)/2 = -44.75). -->
-  <!-- TEST (2026-08-31): moved one tile up-left, cx/cy shifted by
-       -16.9706 each (M/sqrt(2), the true diagonal tile-center step)
-       from the locked spot (295.91,-61.21), to try the table on a
-       DARK tile with the 4 chairs on light ones instead — the
-       opposite of the locked arrangement above. Not yet confirmed;
-       revert to (295.91,-61.21) with the chairs' locked coordinates
-       (see above) if this isn't kept. -->
-  <circle cx="278.939" cy="-78.181" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
-  <text class="dim-s" x="278.939" y="-70.681" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
+  <circle cx="295.91" cy="-61.21" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
+  <text class="dim-s" x="295.91" y="-53.71" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
 
   <!-- DINING BANQUETTE — REMOVED 2026-08-31, reverting to dining chairs
        instead (a Crate & Barrel Juni Black Ash chair, styled after a
