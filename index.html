@@ -2096,12 +2096,10 @@ Without these the wall band simply runs out into the floor. Six caps:
          black, with a white border so the seat reads clearly against
          the dark tiles it sits on. */
       #mainfloor-plan .chair-seat { fill:#211D19; stroke:#FFFFFF; stroke-width:.4; }
-      /* Back-hoop arch drawn twice, wider white stroke first then the
-         dark stroke on top, giving the same white-outlined look as
-         the seat instead of a plain dark line — same white/dark
-         sandwich technique as the sofa's sleep-position outline. */
-      #mainfloor-plan .chair-arch-bg { fill:none; stroke:#FFFFFF; stroke-width:.85; stroke-linecap:round; }
-      #mainfloor-plan .chair-arch { fill:none; stroke:#211D19; stroke-width:.55; stroke-linecap:round; }
+      /* Back-hoop rail, drawn as a filled band (not a thin stroked
+         line) so it reads as an actual structural back, same fill +
+         white border as the seat. */
+      #mainfloor-plan .chair-back { fill:#211D19; stroke:#FFFFFF; stroke-width:.35; }
       /* Dimension text placed over the sofa's own dark fill needs a
          light color to stay legible, same idea as the bath plans'
          on-dark label variant. */
@@ -2490,25 +2488,26 @@ Without these the wall band simply runs out into the floor. Six caps:
        same symbol as the dining chairs. On the island's WEST side per
        instruction, splitting its 65" length into thirds (63.92 and
        85.58, each 21.67" from the nearer end and from each other) —
-       simplest even spacing without an arbitrary gap number. Front
-       edge flush with the island's own west face (x=279), seat
-       centered 11.125" further west at x=267.875. Rotated -90° so the
-       front points +x — east, toward the island, same convention as
-       the desk-station stools.
+       simplest even spacing without an arbitrary gap number. Rotated
+       -90° so the front points +x — east, toward the island, same
+       convention as the desk-station stools.
+       SCOOTED IN 4" (confirmed 2026-08-31, "until they tuck under the
+       counters"): seat center moved from x=267.875 (front edge flush
+       with the island's own west face, x=279) to x=271.875, tucking
+       the seat's front edge 4" under the island's own overhang —
+       same treatment as the dining chairs pulled in on the table.
        Drawn BEFORE the island itself (painted first, underneath) so
        the island's own edge renders on top where they meet, instead
        of the stool's seat corner sitting on top of the counter —
        same z-order convention applied to the dining table/chairs and
        the desk counters/stools. -->
-  <g transform="translate(267.875,63.92) rotate(-90)">
+  <g transform="translate(271.875,63.92) rotate(-90)">
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
-  <g transform="translate(267.875,85.58) rotate(-90)">
+  <g transform="translate(271.875,85.58) rotate(-90)">
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
 
   <!-- KITCHEN ISLAND: rectangular granite island, 40" (E-W) x 65"
@@ -2587,27 +2586,29 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- COUNTER STOOLS (2) — budget section 8, Crate & Barrel Juni, Black
        Ash, same symbol as the dining chairs (juni-chair-standalone.svg:
-       seat + back-hoop arch). One at each desk station, per instruction
-       — tucked into the room at the cabinet run's own face (x=356.25),
-       not inside the knee-space cutout itself (that 24"-deep gap under
-       the counter, x=358..382, is where the knees go, not the stool).
-       Front edge flush with x=356.25, seat centered 11.125" west of it
-       at x=345.125; y matches each knee bay's own center (-70.5 and
-       -19.5). Rotated -90° so the front (locally +y before rotation)
-       points +x — east, toward the counter/monitor, the same
-       direction as the desk stations themselves.
+       seat + back-hoop band). One at each desk station, per instruction
+       — tucked into the room near the cabinet run's own face
+       (x=356.25), not inside the knee-space cutout itself (that
+       24"-deep gap under the counter, x=358..382, is where the knees
+       go, not the stool's own seat). y matches each knee bay's own
+       center (-70.5 and -19.5). Rotated -90° so the front (locally +y
+       before rotation) points +x — east, toward the counter/monitor,
+       the same direction as the desk stations themselves.
+       SCOOTED IN 4" (confirmed 2026-08-31, "until they tuck under the
+       counters"): seat center moved from x=345.125 (front edge flush
+       with x=356.25) to x=349.125, tucking the seat's front edge 4"
+       into the knee-space gap — same treatment as the dining chairs
+       pulled in on the table and the island barstools above.
        Drawn BEFORE the cabinet run itself (painted first, underneath)
        so the counter's own edge renders on top where they meet —
        same z-order convention applied throughout. -->
-  <g transform="translate(345.125,-70.5) rotate(-90)">
+  <g transform="translate(349.125,-70.5) rotate(-90)">
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
-  <g transform="translate(345.125,-19.5) rotate(-90)">
+  <g transform="translate(349.125,-19.5) rotate(-90)">
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
 
   <!-- DINING EAST CABINET/COUNTER RUN (budget section 8): lower
@@ -2685,7 +2686,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- DINING CHAIRS (4) — budget section 8, Crate & Barrel Juni, Black
        Ash (confirmed 2026-08-31): styled after the standalone
-       juni-chair-standalone.svg symbol (seat + back-hoop arch only,
+       juni-chair-standalone.svg symbol (seat + back-hoop band only,
        no spindle/leg dots), originally placed "around the table on
        the black tiles at 45 degree angles" — each chair centered on
        one of the table's 4 edge-adjacent dark-tile centers (24" away
@@ -2714,26 +2715,33 @@ Without these the wall band simply runs out into the floor. Six caps:
        (9.25,11.125 in the standalone file's coordinates), with its
        front pointing toward local +y before rotation — so each
        instance below is a plain translate(chair center) rotate(angle)
-       with the same unrotated shape inside. -->
+       with the same unrotated shape inside.
+
+       BACK MADE 3-4x THICKER, EXTENDING REARWARD (confirmed
+       2026-08-31): the back-hoop was a thin stroked arc (.55-.85
+       wide); it's now a filled band, .chair-back, built by shifting a
+       copy of that same arc 2" further rearward (more negative local
+       y — away from the seat, not toward it) and closing the two
+       curves into one shape. 2" against the original ~.55 stroke is
+       about 3.6x thicker, in the specified direction only — a
+       symmetric thicker STROKE would have bulged both toward the
+       seat and away from it instead. -->
+
   <g transform="translate(310.76,-76.06) rotate(45)">    <!-- NE chair -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
   <g transform="translate(310.76,-46.36) rotate(135)">   <!-- SE chair -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
   <g transform="translate(281.06,-46.36) rotate(-135)">  <!-- SW chair -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
   <g transform="translate(281.06,-76.06) rotate(-45)">   <!-- NW chair -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
-    <path class="chair-arch-bg" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
-    <path class="chair-arch" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
 
   <!-- DINING TABLE (budget section 8): Crate & Barrel Nero 36" Round,
