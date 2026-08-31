@@ -577,7 +577,7 @@
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-252 -160 292 347" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 2 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall centered in the 2 inch gap between the bed's own frame and its own side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets floored in the same Dawson mosaic as the primary bathroom to the top of the room, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet flanked by a pair of vanity lights, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 4 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall, 2 inches off the bed's own frame and 2 inches short of its side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets floored in the same Dawson mosaic as the primary bathroom to the top of the room, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet flanked by a pair of vanity lights, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -646,17 +646,18 @@
     left wall — 23" clear of the window's left jamb (y 89).
 
     EACH BED'S THUMA PEDESTAL SIDE TABLE sits between its headboard and
-    the window, pulled back 2" off the bed frame (confirmed 2026-08-30 —
-    was flush): right bed's at y 46..61.75 (overlapping the window's own
-    y-range by 13.75" — accepted, a table sitting below part of a window
-    is normal), left bed's at y 94.25..110 (5.25" clear of the window's
-    left jamb).
+    the window, pulled back 4" off the bed frame (confirmed 2026-09-01 —
+    was 2", pulled back 2" further): right bed's at y 48..63.75
+    (overlapping the window's own y-range fully, 15.75" — accepted, a
+    table sitting below part of a window is normal, just the tightest
+    fit in the room), left bed's at y 92.25..108 (3.25" clear of the
+    window's left jamb).
 
     TWO CEILING-HUNG CURTAINS, canopy-bed styled, one per bed, run BOTTOM-TO-TOP
     instead of RIGHT-TO-LEFT: each mounted against the bottom wall (x 144), 36" long
-    to x 108, centered in the 2" gap between that bed's own frame and
-    its own side table (y=45 for the right bed, y=111 for the left) —
-    not a single shared curtain
+    to x 108. Moved 1" further from the bed (confirmed 2026-09-01, off
+    center in the now-4" gap rather than re-centered): y=46 for the
+    right bed, y=110 for the left — not a single shared curtain
     between the two pedestals.
 
     THE OPEN FLOOR is now everything to the top of the beds and their side
@@ -1661,14 +1662,23 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="145.75" y="29.5" width=".5" height="1" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".2"/>
   <text class="lbl-s" x="140" y="30" text-anchor="middle" font-size="1.8" transform="rotate(-90 140 30)" style="fill:#C79436">reading light</text>
   <rect fill="#2A2A2A" x="134.7" y="0" width="2.6" height=".7"/>
-  <text class="lbl-s" x="136" y="3" text-anchor="middle" font-size="1.6" transform="rotate(-90 136 3)">dimmer</text>
+  <!-- "dimmer" label rotated 90° from its old rotate(-90) — i.e. back
+       to unrotated — and moved into the wall band itself (y=-4.5..0)
+       instead of sitting in the room below the device (confirmed
+       2026-09-01). Unrotated reads along local x, which fits the
+       wall's own thin (4.5") dimension in y; the old rotate(-90)
+       reading ran along y and needed room the wall band doesn't have. -->
+  <text class="lbl-s" x="136" y="-1.7" text-anchor="middle" font-size="1.6">dimmer</text>
 
   <rect x="145.75" y="125.5" width=".5" height="1" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".2"/>
   <text class="lbl-s" x="140" y="126" text-anchor="middle" font-size="1.8" transform="rotate(-90 140 126)" style="fill:#C79436">reading light</text>
   <rect x="145.75" y="141.5" width=".5" height="1" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".2"/>
   <text class="lbl-s" x="140" y="142" text-anchor="middle" font-size="1.8" transform="rotate(-90 140 142)" style="fill:#C79436">reading light</text>
   <rect fill="#2A2A2A" x="134.7" y="155.3" width="2.6" height=".7"/>
-  <text class="lbl-s" x="136" y="153" text-anchor="middle" font-size="1.6" transform="rotate(-90 136 153)">dimmer</text>
+  <!-- Same rotate-90-and-move-into-the-wall treatment as the right
+       bed's dimmer label above, in this bed's own wall band
+       (y=156..160.5). -->
+  <text class="lbl-s" x="136" y="158.8" text-anchor="middle" font-size="1.6">dimmer</text>
 
   <!-- ============ NIGHTSTANDS, ONE PER BED, TOWARD THE WINDOW ============
        Thuma Pedestal Side Table, Oak — floor-standing, 15.75" square x
@@ -1676,47 +1686,57 @@ Without these the wall band simply runs out into the floor. Six caps:
        flush to each frame at the wall end (x 125.25..141, same
        depth-from-wall as before), and on the window side of each bed's
        width footprint.
-       2" GAP TO THE BED (confirmed 2026-08-30): no longer flush to the
-       bed frame — each table pulled back 2" to show a gap, with the
-       new curtain centered in it (see below).
-       RIGHT BED's table: y 46..61.75 (2" off the frame at y 44) —
-       overlaps the window's own y-range (48..89) by 13.75", which is
-       fine (see note above) but is the tightest fit in the room.
-       LEFT BED's table: y 94.25..110 (2" off the frame at y 112),
-       5.25" clear of the window's left jamb (y 89).
+       4" GAP TO THE BED (confirmed 2026-09-01, "move the pedestals
+       another 2 inches away from the beds" — was 2", pulled back 2"
+       more): each table now sits a further 2" from its bed frame, on
+       top of the original 2" gap.
+       RIGHT BED's table: y 48..63.75 (4" off the frame at y 44) — now
+       flush with the window's own y-range start (48..89), the full
+       15.75" of the table's own depth overlapping the window (was
+       13.75" overlap at the old 2" gap) — the tightest fit in the
+       room, flagged rather than left unmentioned, but still just an
+       in-plan overlap with the window opening, not a real collision.
+       LEFT BED's table: y 92.25..108 (4" off the frame at y 112),
+       3.25" clear of the window's left jamb (y 89) — down from 5.25"
+       at the old 2" gap, still clear.
        FILL #B6986D / STROKE #624E40 — unchanged Thuma Oak tone. -->
-  <rect fill="#B6986D" stroke="#624E40" stroke-width=".29" x="125.25" y="46" width="15.75" height="15.75" rx="3"/>
-  <text class="lbl-s" x="131.375" y="54.25" text-anchor="middle" font-size="2.3" transform="rotate(-90 131.375 54.25)">pedestal</text>
-  <text class="lbl-s" x="134.875" y="54.25" text-anchor="middle" font-size="2.3" transform="rotate(-90 134.875 54.25)">15¾ x 15¾</text>
+  <rect fill="#B6986D" stroke="#624E40" stroke-width=".29" x="125.25" y="48" width="15.75" height="15.75" rx="3"/>
+  <text class="lbl-s" x="131.375" y="56.25" text-anchor="middle" font-size="2.3" transform="rotate(-90 131.375 56.25)">pedestal</text>
+  <text class="lbl-s" x="134.875" y="56.25" text-anchor="middle" font-size="2.3" transform="rotate(-90 134.875 56.25)">15¾ x 15¾</text>
 
-  <rect fill="#B6986D" stroke="#624E40" stroke-width=".29" x="125.25" y="94.25" width="15.75" height="15.75" rx="3"/>
-  <text class="lbl-s" x="131.375" y="102.25" text-anchor="middle" font-size="2.3" transform="rotate(-90 131.375 102.25)">pedestal</text>
-  <text class="lbl-s" x="134.875" y="102.25" text-anchor="middle" font-size="2.3" transform="rotate(-90 134.875 102.25)">15¾ x 15¾</text>
+  <rect fill="#B6986D" stroke="#624E40" stroke-width=".29" x="125.25" y="92.25" width="15.75" height="15.75" rx="3"/>
+  <text class="lbl-s" x="131.375" y="100.25" text-anchor="middle" font-size="2.3" transform="rotate(-90 131.375 100.25)">pedestal</text>
+  <text class="lbl-s" x="134.875" y="100.25" text-anchor="middle" font-size="2.3" transform="rotate(-90 134.875 100.25)">15¾ x 15¾</text>
 
   <!-- ============ CEILING CURTAINS, ONE PER BED, AGAINST THE BOTTOM WALL ============
-       One curtain per bed, each centered in the 2" gap between that
-       bed's own frame and its own side table (see gap note above),
-       instead of a single curtain shared between the two pedestals.
+       One curtain per bed, in the gap between that bed's own frame and
+       its own side table, instead of a single curtain shared between
+       the two pedestals.
        SHORTENED to 36" from the wall (confirmed 2026-08-30, was 40").
        Each runs BOTTOM-TO-TOP, mounted to the ceiling against the bottom wall
        (x 144) to x 108. Same wavy-fabric plan symbol, same double-stroke
        (black under white/cream) convention as before and as the WIC
        curtains.
-       RIGHT curtain: y=45, centered between the right bed's frame
-       (ends y 44) and its side table (starts y 46).
-       LEFT curtain: y=111, centered between the left bed's side
-       table (ends y 110) and its frame (starts y 112). -->
-  <line x1="144" y1="45" x2="108" y2="45" stroke="#6E6A62" stroke-width=".22"/>
-  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M144,45 Q142.00,46.50 140,45 Q138.00,43.50 136,45 Q134.00,46.50 132,45 Q130.00,43.50 128,45 Q126.00,46.50 124,45 Q122.00,43.50 120,45 Q118.00,46.50 116,45 Q114.00,43.50 112,45 Q110.00,46.50 108,45"/>
-  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M144,45 Q142.00,46.50 140,45 Q138.00,43.50 136,45 Q134.00,46.50 132,45 Q130.00,43.50 128,45 Q126.00,46.50 124,45 Q122.00,43.50 120,45 Q118.00,46.50 116,45 Q114.00,43.50 112,45 Q110.00,46.50 108,45"/>
-  <rect x="104.25" y="37" width="3.5" height="16" rx="1.5" fill="#FBFAF7"/>
-  <text class="lbl-s" x="106" y="45" text-anchor="middle" font-size="2.0" transform="rotate(-90 106 45)">curtain, white</text>
+       MOVED 1" FURTHER FROM THE BED (confirmed 2026-09-01, "the
+       curtains 1 more inch away from the beds" — independent of the
+       pedestal move above, not re-centered in the new 4" gap): each
+       curtain shifts 1" further from its bed frame, off its old
+       centered position.
+       RIGHT curtain: y=46 (was 45) — 2" off the right bed's frame
+       (ends y 44), 2" short of its side table (now starts y 48).
+       LEFT curtain: y=110 (was 111) — 2" off the left bed's side
+       table (now ends y 108), 2" short of its frame (starts y 112). -->
+  <line x1="144" y1="46" x2="108" y2="46" stroke="#6E6A62" stroke-width=".22"/>
+  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M144,46 Q142.00,47.50 140,46 Q138.00,44.50 136,46 Q134.00,47.50 132,46 Q130.00,44.50 128,46 Q126.00,47.50 124,46 Q122.00,44.50 120,46 Q118.00,47.50 116,46 Q114.00,44.50 112,46 Q110.00,47.50 108,46"/>
+  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M144,46 Q142.00,47.50 140,46 Q138.00,44.50 136,46 Q134.00,47.50 132,46 Q130.00,44.50 128,46 Q126.00,47.50 124,46 Q122.00,44.50 120,46 Q118.00,47.50 116,46 Q114.00,44.50 112,46 Q110.00,47.50 108,46"/>
+  <rect x="104.25" y="38" width="3.5" height="16" rx="1.5" fill="#FBFAF7"/>
+  <text class="lbl-s" x="106" y="46" text-anchor="middle" font-size="2.0" transform="rotate(-90 106 46)">curtain, white</text>
 
-  <line x1="144" y1="111" x2="108" y2="111" stroke="#6E6A62" stroke-width=".22"/>
-  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M144,111 Q142.00,112.50 140,111 Q138.00,109.50 136,111 Q134.00,112.50 132,111 Q130.00,109.50 128,111 Q126.00,112.50 124,111 Q122.00,109.50 120,111 Q118.00,112.50 116,111 Q114.00,109.50 112,111 Q110.00,112.50 108,111"/>
-  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M144,111 Q142.00,112.50 140,111 Q138.00,109.50 136,111 Q134.00,112.50 132,111 Q130.00,109.50 128,111 Q126.00,112.50 124,111 Q122.00,109.50 120,111 Q118.00,112.50 116,111 Q114.00,109.50 112,111 Q110.00,112.50 108,111"/>
-  <rect x="104.25" y="103" width="3.5" height="16" rx="1.5" fill="#FBFAF7"/>
-  <text class="lbl-s" x="106" y="111" text-anchor="middle" font-size="2.0" transform="rotate(-90 106 111)">curtain, white</text>
+  <line x1="144" y1="110" x2="108" y2="110" stroke="#6E6A62" stroke-width=".22"/>
+  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M144,110 Q142.00,111.50 140,110 Q138.00,108.50 136,110 Q134.00,111.50 132,110 Q130.00,108.50 128,110 Q126.00,111.50 124,110 Q122.00,108.50 120,110 Q118.00,111.50 116,110 Q114.00,108.50 112,110 Q110.00,111.50 108,110"/>
+  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M144,110 Q142.00,111.50 140,110 Q138.00,108.50 136,110 Q134.00,111.50 132,110 Q130.00,108.50 128,110 Q126.00,111.50 124,110 Q122.00,108.50 120,110 Q118.00,111.50 116,110 Q114.00,108.50 112,110 Q110.00,111.50 108,110"/>
+  <rect x="104.25" y="102" width="3.5" height="16" rx="1.5" fill="#FBFAF7"/>
+  <text class="lbl-s" x="106" y="110" text-anchor="middle" font-size="2.0" transform="rotate(-90 106 110)">curtain, white</text>
 
   <!-- ============ DIMENSIONS — TOP (TOP-TO-BOTTOM) ============
        Two chains now: the right window, then the overall outboard. The
