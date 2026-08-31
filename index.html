@@ -2624,34 +2624,28 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- DINING TABLE (budget section 8): Crate & Barrel Nero 36" Round,
        white marble top (pedestal not rendered; brand omitted from
-       the drawing, see budget) — RE-CENTERED A FIFTH TIME (confirmed
-       2026-08-31, "move the table left and up so the circle is
-       tangent to the front edge of both banquette seats inside the
-       L"): the west leg's front face (x=266.75) and the armless
-       piece's front edge (y=-62.25) are perpendicular lines meeting at
-       the L's inside corner (266.75,-62.25). A circle of r=18 tangent
-       to BOTH simultaneously sits with its center exactly r from each
-       line: cx=266.75+18=284.75, cy=-62.25-18=-80.25. Tangent points
-       land on the actual seat edges (284.75 is within the armless
-       piece's x-range 266.75..300.75; -80.25 is within the west leg's
-       y-range -97.25..-40.5), and the corner point itself is 18*sqrt2
-       = 25.46" from this center — comfortably past r, so the circle
-       touches each straight edge at one point without cutting the
-       corner or overlapping either leg.
-       This breaks the checkerboard tile-centering the last several
-       positions preserved (tangency to two perpendicular lines is an
-       exact geometric constraint that doesn't generally land on a
-       diamond center) — flagged rather than silently dropped, since
-       tile-alignment was explicitly called out as approved/locked-in
-       elsewhere in this project.
-       CLEARANCES from this spot: 0" west (tangent, touching) and 0"
-       north (tangent, touching) to the banquette; 53.5" east to the
-       granite counter face; south is still open to the kitchen.
+       the drawing, see budget) — RE-CENTERED A SIXTH TIME (confirmed
+       2026-08-31, marked on a render: "move the table to this point
+       on the white square tile"), back to the same spot as the 3rd
+       position below (cx=295.91,cy=-61.21) — with the banquette gone,
+       there's no tangency constraint driving it elsewhere anymore,
+       and the marked point landed almost exactly on this already-
+       vetted, comfortably-clear tile center (verified via the
+       pattern's own inverse: u,v mod 48 = (36,12), one of the two
+       LIGHT-quadrant residues).
+       CLEARANCES from this spot: 32.91" west, 42.34" east to the
+       granite counter face, 34.29" north; south is still open to the
+       kitchen.
+       SUPERSEDED MATH (5th spot, cx=284.75,cy=-80.25, confirmed
+       2026-08-31): tangent to both banquette front edges, snugged
+       into the L's inside corner — no longer relevant once the
+       banquette was removed.
        SUPERSEDED MATH (4th spot, cx=312.88,cy=-78.18, confirmed
        2026-08-31): nearest dark-tile center clearing both banquette
        pieces with 2.02" to spare, before the tangency ask above.
        SUPERSEDED MATH (3rd spot, cx=295.91,cy=-61.21, confirmed
-       2026-08-30): one tile diagonally up-left of the spot below.
+       2026-08-30): one tile diagonally up-left of the spot below —
+       this is also the 6th/current spot, above.
        SUPERSEDED MATH (2nd/first tile-centered spot, cx=312.88,
        cy=-44.24): nearest whole diamond center to the room-centered
        position below, via the pattern's own
@@ -2660,8 +2654,8 @@ Without these the wall band simply runs out into the floor. Six caps:
        the 72" patio door opening as a whole (x=(265+337)/2=301), y
        aligned to the midpoint between the two east-wall windows
        (y=((-73.5-56)/2 + (-33.5-16)/2)/2 = -44.75). -->
-  <circle cx="284.75" cy="-80.25" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
-  <text class="dim-s" x="284.75" y="-72.75" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
+  <circle cx="295.91" cy="-61.21" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
+  <text class="dim-s" x="295.91" y="-53.71" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
 
   <!-- DINING BANQUETTE — REMOVED 2026-08-31, reverting to dining chairs
        instead (a Crate & Barrel Juni Black Ash chair, styled after a
@@ -2670,12 +2664,10 @@ Without these the wall band simply runs out into the floor. Six caps:
        banquette (Article Rosin corner unit) had been approved/locked-in
        earlier the same day — that approval and its geometry are removed
        here rather than left stale; see git history for the full design
-       if it's ever wanted back.
-       The table's tangent-to-banquette position (cx=284.75,cy=-80.25,
-       see the DINING TABLE comment above) has NOT been re-centered for
-       this — it was placed specifically to snug into the banquette's
-       inside corner, which no longer exists, and is left as-is pending
-       the chair layout. -->
+       if it's ever wanted back. The table has since been re-centered
+       back onto its old tile-centered spot (see the DINING TABLE
+       comment above) now that nothing constrains it to the banquette's
+       old inside corner. -->
 
   <!-- Kitchen north-wall chains, relocated above the dining room; the
        jamb extension lines run the full dining depth. -->
