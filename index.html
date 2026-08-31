@@ -2629,29 +2629,39 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- DINING TABLE (budget section 8): Crate & Barrel Nero 36" Round,
        white marble top (pedestal not rendered; brand omitted from
-       the drawing, see budget) — RE-CENTERED A THIRD TIME (confirmed
-       2026-08-30): one tile diagonally up-left of the previous
-       tile-centered spot (cx=295.91, cy=-61.21) — decrementing this
-       pattern's own u coordinate by one tile width (24") moves both
-       screen x and y up-left simultaneously by S=16.9706" each, since
-       u and v run diagonally once rotate(45) is applied. Still exactly
-       on a diamond's own center (the pattern repeats every 48 units in
-       u,v, so shifting by 24 lands on the OTHER color's center, not a
-       vertex) — verified against the pattern's actual rendered colors,
-       not just the transform math, since the table's own light fill
-       was masking the tile underneath it in earlier screenshots.
-       CLEARANCES from this spot: 32.91" west, 42.34" east to the
-       granite counter face, 34.29" north; south is still open to the
-       kitchen.
-       SUPERSEDED MATH (first tile-centered spot, cx=312.88,cy=-44.24):
-       nearest whole diamond center to the room-centered position below,
-       via this pattern's translate(7.4121,-27.2647) rotate(45) inverse.
+       the drawing, see budget) — RE-CENTERED A FOURTH TIME (confirmed
+       2026-08-31, "move the table up"): once the banquette's armless
+       piece was drawn as a clean rectangle sharing the west leg's own
+       bottom edge (see the DINING BANQUETTE comment below), it landed
+       almost directly under the table at the old spot (cx=295.91,
+       cy=-61.21) — the table CENTER sat inside the armless piece's
+       own footprint, way past a normal tabletop overhang. Moved to
+       the nearest dark-tile center sharing the SAME x (312.88) two
+       diamonds further north in the pattern's own v coordinate — still
+       exactly on a diamond center (verified via the pattern's own
+       translate(7.4121,-27.2647) rotate(45) inverse: u,v mod 48 both
+       land on 36, one of the two dark-quadrant residues), and this
+       spot clears BOTH banquette pieces entirely (closest approach to
+       the armless piece is 2.02" of open air, not a touch or overlap).
+       CLEARANCES from this spot: 46.13" to the west leg, 25.37" east
+       to the granite counter face, 17.32" north to the patio-door
+       wall; south is still open to the kitchen. This is a bigger gap
+       to the banquette than a snug nook would ideally have (zero
+       overhang rather than the few inches that's normal for banquette
+       seating) — flagged here since closing it further would need
+       either the table or the bench redrawn again, and the immediate
+       ask was just to clear the collision.
+       SUPERSEDED MATH (3rd spot, cx=295.91,cy=-61.21, confirmed
+       2026-08-30): one tile diagonally up-left of the spot below.
+       SUPERSEDED MATH (2nd/first tile-centered spot, cx=312.88,
+       cy=-44.24): nearest whole diamond center to the room-centered
+       position below, via the same pattern inverse.
        SUPERSEDED MATH (room-centered, not tile-centered): x centered on
        the 72" patio door opening as a whole (x=(265+337)/2=301), y
        aligned to the midpoint between the two east-wall windows
        (y=((-73.5-56)/2 + (-33.5-16)/2)/2 = -44.75). -->
-  <circle cx="295.91" cy="-61.21" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
-  <text class="dim-s" x="295.91" y="-53.71" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
+  <circle cx="312.88" cy="-78.18" r="18" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
+  <text class="dim-s" x="312.88" y="-70.68" text-anchor="middle" style="font-size:4.2px">36&quot; table</text>
 
   <!-- DINING BANQUETTE (budget section 8, replaced 2026-08-31 — swapped
        from the West Elm Hargrove modular pieces to Article's Rosin
@@ -2676,41 +2686,37 @@ Without these the wall band simply runs out into the floor. Six caps:
        (y=-40.5), flush with the hallway opening's jamb, same anchor
        point used for the West Elm layout this replaces.
 
-       DRAWN AS ONE UNIFIED L, A SINGLE PATH (corrected 2026-08-31
-       twice — first pass drew the two legs kitty-corner, touching at
-       a single point; second pass fixed that by overlapping two
-       separate <rect>s, but each rect's own full stroke outline drew
-       a visible extra square where they met, per user feedback
-       against a reference sketch marking that square with an X):
-       the whole L is now one <path>, the west leg (x=245..266.75,
-       y=-97.25..-40.5) and the south leg (x=245..300.75,
-       y=-40.5..-18.75) sharing the same wall-face x=245, so there is
-       exactly one outline around the actual L silhouette and no
-       interior seam-square. A thin .banquette-seam line at x=266.75
-       (the west leg's own front face) still marks where the corner
-       unit's own square nub ends and the separate 34" ARMLESS piece
-       begins, extending the run on to x=300.75 — total south-leg
-       length 21.75+34=55.75" (matching the request's
-       "56.75 x (21.5+34)"; the corner nub is ~21.75" here vs the
-       request's "21.5", the same minor rounding as the west leg's own
-       depth). Seat/front edge at y=-40.5, backrest at y=-18.75, facing
-       north into the table (folks seated here look north/"up" the
-       plan toward it) — 2.79" clear of the table's own south edge
-       (y=-43.21).
+       DRAWN AS A CLEAN 6-POINT L, NO INTERNAL SQUARE (corrected
+       2026-08-31 a 4th time, per the user's own reference sketch with
+       exact numbers: a 21.5x56.75 vertical rectangle and a 34x21.5
+       horizontal one, sharing the vertical piece's right edge as the
+       horizontal piece's left edge, BOTH BOTTOM EDGES FLUSH — no
+       separate corner-nub square, no seam line). Earlier passes tried
+       kitty-corner rects (single point), overlapping rects sharing
+       the wall-face x=245 (stretched the left edge to 78.5"), and a
+       bowtie-jointed path with a subdivided "corner nub" square that
+       the user marked with an X. This is just two rectangles, adjacent
+       left-right, both anchored to the same bottom line y=-40.5: the
+       west leg (x=245..266.75, y=-97.25..-40.5, unchanged, its own
+       left edge is exactly 56.75" since nothing else touches x=245)
+       and the 34" armless piece (x=266.75..300.75, y=-62.25..-40.5,
+       sitting in the same y-band as the west leg's own southern
+       21.75" — the two pieces share that real 21.75"-long edge at
+       x=266.75, not a single point). The whole thing is one simple
+       6-point path, no bowtie, no internal seam.
 
-       Neither leg was fit to the table's exact position (the table
-       was centered on the checkerboard tile grid before any banquette
-       was conceived): the west leg sits 11.16" proud of the table's
-       west edge (x=277.91), and the corrected (shorter) south leg now
-       falls 13.16" short of the table's east edge (x=313.91) instead
-       of the first pass's 8.34" past it — a wider gap on both counts
-       than a snug banquette nook would ideally have, flagged here
-       rather than moving the table off its tile-aligned spot without
-       being asked. -->
-  <path class="banquette" d="M 245,-97.25 L 266.75,-97.25 L 266.75,-40.5 L 300.75,-40.5 L 300.75,-18.75 L 245,-18.75 Z"/>
-  <line class="banquette-seam" x1="266.75" y1="-40.5" x2="266.75" y2="-18.75"/>
+       This L was drawn before the table's 4th re-centering (see the
+       DINING TABLE comment above) — at the table's old spot
+       (cx=295.91,cy=-61.21), the table CENTER sat inside this armless
+       piece's own footprint, way past a normal tabletop overhang.
+       The table has since moved to clear both legs entirely (2.02"
+       to spare against the armless piece); the west leg still sits
+       46.13" off the table's west edge, a much wider gap than a snug
+       banquette nook would ideally have, flagged here rather than
+       redrawing the bench a 5th time to chase the table. -->
+  <path class="banquette" d="M 245,-97.25 L 266.75,-97.25 L 266.75,-62.25 L 300.75,-62.25 L 300.75,-40.5 L 245,-40.5 Z"/>
   <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="255.875" y="-68.875" transform="rotate(-90 255.875 -68.875)">Rosin left corner</text>
-  <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="283.75" y="-28.375">+ 34&quot; armless</text>
+  <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="283.75" y="-50.5">+ 34&quot; armless</text>
 
   <!-- Kitchen north-wall chains, relocated above the dining room; the
        jamb extension lines run the full dining depth. -->
