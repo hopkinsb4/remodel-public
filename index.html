@@ -2715,8 +2715,22 @@ Without these the wall band simply runs out into the floor. Six caps:
        (cx=295.91,cy=-61.21), the table CENTER sat inside this armless
        piece's own footprint. The table now sits tangent to both this
        leg's front edge (y=-62.25) and the west leg's front edge
-       (x=266.75), snugged right into the L's inside corner. -->
-  <path class="banquette" d="M 245,-97.25 L 266.75,-97.25 L 266.75,-62.25 L 300.75,-62.25 L 300.75,-40.5 L 245,-40.5 Z"/>
+       (x=266.75), snugged right into the L's inside corner.
+
+       8" RADIUS ON ALL 6 CORNERS (confirmed 2026-08-31, per a marked-
+       up reference image): each of the hexagon's 6 vertices — the 5
+       convex outer corners AND the one reflex/concave corner where
+       the two legs meet (266.75,-62.25) — gets an 8"-radius arc
+       instead of a sharp point. Built by insetting 8" along each
+       incident edge from every vertex (all 6 edges are well over 16"
+       long, so the insets never cross) and connecting the insets with
+       an SVG arc: sweep-flag=1 for the 5 convex corners, flipped to
+       sweep-flag=0 for the one reflex corner so its fillet curves the
+       other way (concave, into the notch) rather than bulging out
+       through it — verified via the cross-product of each vertex's
+       incoming/outgoing edge directions (+1 for the 5 convex corners,
+       -1 for the reflex one). -->
+  <path class="banquette" d="M 245,-48.5 L 245,-89.25 A 8,8 0 0 1 253,-97.25 L 258.75,-97.25 A 8,8 0 0 1 266.75,-89.25 L 266.75,-70.25 A 8,8 0 0 0 274.75,-62.25 L 292.75,-62.25 A 8,8 0 0 1 300.75,-54.25 L 300.75,-48.5 A 8,8 0 0 1 292.75,-40.5 L 253,-40.5 A 8,8 0 0 1 245,-48.5 Z"/>
   <text class="dim-onsofa" text-anchor="middle" style="font-size:2.6px" x="255.875" y="-68.875" transform="rotate(-90 255.875 -68.875)">56.75&quot; Left corner banquette</text>
   <text class="dim-onsofa" text-anchor="middle" style="font-size:2.3px" x="283.75" y="-50.5">+ 34&quot; armless banquette</text>
 
