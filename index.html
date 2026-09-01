@@ -3171,7 +3171,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag" style="background: #3f6e6b; color: white;">Downstairs Bathroom</span> <span class="app-tag white">Under-Stairs Closet</span>
     <p>Half bath converted to a full bath: a curbless wet room, shower west of a fixed glass panel, toilet dry to the east. Opal tile floor-to-ceiling, black grout. Ceiling rain head paired with a matching handheld wand, corner sink with matching corner mirrors, the same Kingston toilet used elsewhere, and a 28" pocket door.</p>
-    <p>Next door: a wedge-shaped closet under the stair stringer, headroom tapering from 93" at the door to 31" at the back. Oak shelving and a granite counter along the east wall, a clothes rod, a medicine cabinet, electrical outlets, and flanking sconces, with 6'6" of standing headroom over a 28"x21" floor space near the door. Checkerboard floor, matte black hardware.</p>
+    <p>Next door: a wedge-shaped closet under the stair stringer, headroom tapering from 93" at the door to 31" at the back. Oak shelving and a granite counter along the east wall, a clothes rod, a medicine cabinet, electrical outlets, and an over-mirror vanity light, with 6'6" of standing headroom over a 28"x21" floor space near the door. Checkerboard floor, matte black hardware.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-112 -117 180 130" role="img"
@@ -3841,8 +3841,8 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path d="M93.5,-46 H105.5 V-10 H99.5 L93.5,-16 Z" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
   <!-- counter outlet gangs — moved off the top leg entirely and onto
        the left-most L of the counter (the full-width run over the
-       rod, d 36..60), d 43/53, clear of the mirror and its new
-       flanking vanity lights on the top leg below. -->
+       rod, d 36..60), d 43/53, clear of the mirror and its vanity
+       light bar on the top leg below. -->
   <rect class="blk" x="105.5" y="-53" width=".7" height="2.6"/>
   <rect class="blk" x="105.5" y="-63" width=".7" height="2.6"/>
   <text class="lbl-s" x="107.6" y="-56.7" text-anchor="middle" font-size=".7" transform="rotate(90 107.6 -56.7)">outlets</text>
@@ -3913,25 +3913,30 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="105" y="-30.35" width=".5" height="16.5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
   <text class="teal" x="107.1" y="-22.1" text-anchor="middle" font-size=".8" transform="rotate(90 107.1 -22.1)">medicine cabinet</text>
 
-  <!-- vanity lights — flanking the cabinet symmetrically, not just
-       dropped in the middle of whatever clear zone each side has (the
-       right zone is only 3.85" since the cabinet sits toward the
-       door, the left zone is 15.65" — centering independently in
-       each would put them off-center from the cabinet). Both sit
-       1.93" off the cabinet's near edge instead: right at d=1.93
-       (y=-11.93), left at d=22.28 (y=-32.28) — symmetric about the
-       cabinet's own centre, d=12.1. The left zone has slack left over
-       past its fixture; that's fine, it's not required to fill it. -->
-  <rect x="105" y="-12.93" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s" x="107.1" y="-11.93" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -11.93)" style="fill:#C79436">vanity light</text>
-  <rect x="105" y="-33.28" width=".5" height="2" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s" x="107.1" y="-32.28" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -32.28)" style="fill:#C79436">vanity light</text>
+  <!-- vanity light — OVER THE MIRROR, ONE FIXTURE (confirmed
+       2026-09-01; was 2 flanking sconces). WAC Lighting Spectre,
+       Black (WS-93120-BK), 20" LED vanity bar, $183-229 confirmed at
+       multiple retailers — pure matte black (no mixed finish),
+       selectable 2700K/3000K/3500K, dimmable, 739 lumens. 5.88"
+       extension off the wall, which would have been too deep to
+       flank the cabinet in the old 2-sconce layout, but doesn't
+       matter mounted above it — nothing to bump into up there.
+       Centered on the cabinet's own centreline (d=12.1, y=-22.1),
+       spanning d 2.1..22.1 — a 1.75" overhang past each of the
+       cabinet's edges (d 3.85 and d 20.35). Fits both flanking zones
+       easily (the tight one only needed 1.75" of its 3.85", the
+       loose one 1.75" of its 15.65") since this is no longer two
+       fixtures competing for that space, just one bar spanning
+       across it. -->
+  <rect x="105" y="-32.1" width=".5" height="20" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
+  <text class="lbl-s" x="107.1" y="-22.1" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -22.1)" style="fill:#C79436">vanity light</text>
 
-  <!-- switch + outlet gang, top wall, just to the left of the left vanity
-       light (which ends at y=-33.28) — same "sw + outlet" gang-plate
-       convention used in the bathroom, sized/oriented for this
-       vertical wall run. Centred at d=27.9 (y=-37.9), a 2.62" gap
-       to the left of the vanity light, well inside the counter's left edge
+  <!-- switch + outlet gang, top wall, past the vanity light bar's deep
+       edge (now y=-32.1, since the light became one 20" bar over the
+       cabinet rather than two flanking sconces) — same "sw + outlet"
+       gang-plate convention used in the bathroom, sized/oriented for
+       this vertical wall run. Centred at d=27.9 (y=-37.9), a 4.5" gap
+       past the bar's edge, well inside the counter's left edge
        (d=60, y=-70). -->
   <rect class="blk" x="104.85" y="-39.2" width=".7" height="2.6"/>
   <text class="lbl-s" x="107.1" y="-37.9" text-anchor="middle" font-size=".7" transform="rotate(90 107.1 -37.9)" style="fill:#C79436">sw + outlet</text>
