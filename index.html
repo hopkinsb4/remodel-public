@@ -3229,7 +3229,7 @@ Without these the wall band simply runs out into the floor. Six caps:
       #dsbath-plan .over    { fill:none; stroke:#2A2A2A; stroke-width:.09; stroke-dasharray:.75 .5; }
       /* Faint code-compliance geometry (clear-circle tests etc). */
       #dsbath-plan .code    { fill:none; stroke:#9BA6A9; stroke-width:.07; stroke-dasharray:1.2 .9; }
-      #dsbath-plan .code-t  { font:1.8px 'Helvetica Neue',Arial,sans-serif; fill:#8B979A; }
+      #dsbath-plan .code-t  { font:1.8px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
       #dsbath-plan .red     { fill:none; stroke:#8A3B2A; stroke-width:.083; stroke-dasharray:.55 .45; }
       #dsbath-plan .red-t   { font:1.44px 'Helvetica Neue',Arial,sans-serif; fill:#8A3B2A; }
       /* Dimensioning, architectural convention: extension lines stand off the
@@ -3520,7 +3520,7 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- support bar: bottom end at the wall (x=-6), top end to the split
        line, now x=29 (was the even 27.5). -->
   <line x1="-6" y1="25" x2="29" y2="25" stroke="#C9C4B7" stroke-width=".133"/>
-  <text class="teal" x="26" y="23" text-anchor="middle" font-size="1.44" style="fill:#8FCBE0" transform="rotate(90 26 23)">support bar</text>
+  <text class="teal" x="26" y="23" text-anchor="middle" font-size="1.44" style="fill:#8FCBE0">support bar</text>
   <!-- ceiling rainhead, 12" dia, centred 18.5" off the right wall. Re-centred
        x to sit concentric with the 30" code circle at its new 11.69 centre,
        per the circle note above. -->
@@ -3528,8 +3528,8 @@ Without these the wall band simply runs out into the floor. Six caps:
   <circle cx="11.69" cy="42.5" r=".29" fill="#F0EDE6"/>
   <text class="lbl-s on-dark" x="13.3" y="42.4" text-anchor="middle" transform="rotate(90 13.3 42.4)">ceiling</text>
   <text class="lbl-s on-dark" x="10.3" y="42.4" text-anchor="middle" transform="rotate(90 10.3 42.4)">rainhead</text>
-  <text x="11.69" y="52" text-anchor="middle" font-size="2.29" font-style="italic"
-        font-family="'Helvetica Neue',Arial,sans-serif" fill="#8FCBE0" transform="rotate(90 11.69 52)">SHOWER</text>
+  <text x="24" y="42.5" text-anchor="middle" font-size="2.29" font-style="italic"
+        font-family="'Helvetica Neue',Arial,sans-serif" fill="#8FCBE0" transform="rotate(90 24 42.5)">SHOWER</text>
 
   <!-- ============ FIXED GLASS ON THE SECTION LINE ============
        Moved to x=29 — the toilet section narrowed to 32" (was the even
@@ -3754,9 +3754,13 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path d="M106.49,-0.51 L85.28,20.70 L84.29,19.71 L105.5,-1.5 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
   <!-- "garage entry" callout, same plain-word/muted-pill convention as
        the "hallway" label above — general-area naming, not a
-       dimensioned fixture callout. -->
-  <rect x="88" y="11.7" width="15" height="2.6" transform="rotate(90 95.5 13)" rx="1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="95.5" y="13" text-anchor="middle" fill="#8B979A" font-size="1.36" transform="rotate(90 95.5 13)">garage entry</text>
+       dimensioned fixture callout. MOVED across the door's own
+       threshold (confirmed 2026-09-01): centered on the jamb line
+       itself (x=105.5) rather than inset into the room, straddling
+       the opening at its own y-midpoint (13.5, halfway across the
+       30" door width, -1.5..28.5). -->
+  <rect x="97.5" y="12.2" width="15" height="2.6" transform="rotate(90 105 13.5)" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="105" y="13.5" text-anchor="middle" fill="#8B979A" font-size="1.36" transform="rotate(90 105 13.5)">garage entry</text>
   <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- left wall (real dead-end wall) -->
   <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- right wall, bottom stub -->
   <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- right wall, top stub -->
