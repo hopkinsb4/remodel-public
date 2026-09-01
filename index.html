@@ -1449,11 +1449,20 @@ SWING SETTLED, and it only works one way. Handle on the left going
        75..109 position, to 92..126 — half still across the opening,
        half retracted into the pocket, same convention as the
        downstairs bath's pocket door.
-       Same wall opening thickness as the old barn door (x -77.9..-75.5,
-       2.4"), and same white-panel-on-dark-finish reasoning: matte
-       black hardware would disappear against the hall/closet finish. -->
-  <rect x="-77.9" y="109" width="2.4" height="36" fill="none" stroke="#6E6A62" stroke-width=".13" stroke-dasharray="1 .8"/>
-  <rect x="-77.9" y="92" width="2.4" height="34" fill="#fff" stroke="#2A2A2A" stroke-width=".16"/>
+       INSIDE THE WALL, not proud on its face like the old barn door
+       (confirmed 2026-09-01 — first pass reused the barn door's own
+       exaggerated x -77.9..-75.5, 2.4" panel, which actually sat out
+       in the room in front of the wall, not embedded in it). The real
+       wall band here is x -73.5 (bath-facing face, per the "closet
+       block + top wall" fill) to -69 (closet-facing face, per the WIC
+       curtain track's own x -69..-9 span) — 4.5" thick, same as the
+       downstairs bath's wall. Slab/cavity centered in it at true 1.42"
+       door-slab thickness (x -71.96..-70.54), same real thickness the
+       downstairs bath's pocket door uses, not a fudged-wide panel.
+       Same white-panel-on-dark-finish reasoning: matte black hardware
+       would disappear against the hall/closet finish. -->
+  <rect x="-71.96" y="109" width="1.42" height="36" fill="none" stroke="#6E6A62" stroke-width=".13" stroke-dasharray="1 .8"/>
+  <rect x="-71.96" y="92" width="1.42" height="34" fill="#fff" stroke="#2A2A2A" stroke-width=".16"/>
   <text class="lbl-s on-dark" x="-74" y="109" text-anchor="middle" font-size="1.9" transform="rotate(-90 -74 109)">pocket door, half-open</text>
 
   <!-- ============ WIC CURTAINS, ONE ACROSS EACH ZONE'S OPENING ============
@@ -3408,7 +3417,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        The second outlet this room used to carry on the right wall, for a
        possible future smart toilet, is cut — not needed. -->
   <rect class="blk" x="57" y="-.7" width="1.4" height=".7"/>
-  <text class="lbl-s on-dark" x="57.7" y="3.4" text-anchor="middle"
+  <text class="lbl-s" x="57.7" y="3.4" text-anchor="middle" style="fill:#C79436"
         transform="rotate(90 57.7 3.4)">sw</text>
 
   <!-- ============ SHOWER ============ -->
@@ -3601,13 +3610,6 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="80.5" y="48.8" width="10" height="2.4" transform="rotate(90 85.5 50)" rx="1" fill="#FBFAF7"/>
   <text class="lbl-s" x="85.5" y="50" text-anchor="middle" fill="#8B979A" font-size="1.36" transform="rotate(90 85.5 50)">hallway</text>
 
-  <!-- 13" jog, bottom side -->
-  <line class="extline" x1="65.5" y1="3"   x2="56"  y2="3"/>
-  <line class="extline" x1="65.5" y1="-10" x2="56"  y2="-10"/>
-  <line class="dimline" x1="58" y1="3" x2="58" y2="-10"/>
-  <line class="tick" x1="57.55" y1="2.55"   x2="58.45" y2="3.45"/>
-  <line class="tick" x1="57.55" y1="-10.45" x2="58.45" y2="-9.55"/>
-  <text class="dim-t" x="56.4" y="-3.5" text-anchor="middle" transform="rotate(90 56.4 -3.5)">13&quot;</text>
 
   <!-- ================================================================
        UNDER-STAIRS WALK-IN CLOSET (WIC) — budget section 13
@@ -3787,7 +3789,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <!-- light switch, bottom wall just inside the door -->
   <rect class="blk" x="64.8" y="-15.5" width=".7" height="2.6"/>
-  <text class="lbl-s" x="63.7" y="-14.2" text-anchor="middle" font-size="1.19" transform="rotate(90 63.7 -14.2)">sw</text>
+  <text class="lbl-s" x="63.7" y="-14.2" text-anchor="middle" font-size="1.19" style="fill:#C79436" transform="rotate(90 63.7 -14.2)">sw</text>
 
   <!-- aisle clearance check, bottom wall to shelf face -->
   <line class="dimline" x1="65.5" y1="-28" x2="93.5" y2="-28"/>
