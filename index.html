@@ -3171,11 +3171,11 @@ Without these the wall band simply runs out into the floor. Six caps:
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag" style="background: #3f6e6b; color: white;">Downstairs Bathroom</span> <span class="app-tag white">Under-Stairs Closet</span>
     <p>Half bath converted to a full bath: a curbless wet room, shower west of a fixed glass panel, toilet dry to the east. Opal tile floor-to-ceiling, black grout. Ceiling rain head paired with a matching handheld wand, corner sink with matching corner mirrors, the same Kingston toilet used elsewhere, and a 28" pocket door.</p>
-    <p>Next door: a wedge-shaped closet under the stair stringer, headroom tapering from 93" at the door to 31" at the back. Oak shelving and a granite counter along the east wall, a clothes rod, a medicine cabinet, electrical outlets, and an over-mirror vanity light, with 6'6" of standing headroom over a 28"x21" floor space near the door. Checkerboard floor, matte black hardware.</p>
+    <p>Next door: a wedge-shaped closet under the stair stringer, headroom tapering from 93" at the opening to 31" at the back. Oak shelving and a granite counter along the east wall, a clothes rod, a medicine cabinet, electrical outlets, and an over-mirror vanity light, with 6'6" of standing headroom over a 28"x21" floor space near the opening. A ceiling-mount curtain closes the 28" opening. Checkerboard floor, matte black hardware.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="dsbath-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-112 -117 180 130" role="img"
-     aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a ceiling rainhead with a handshower on a wall-mount holder by the valve, and a shower nook on the right wall; a small hallway pocket where the bathroom's top-facing pocket door and the closet's left-facing out-swing door meet at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a field-measured dead end at 87 inches deep and 31 inches high, fitted with a matte black clothes rod at 42 inches and an oak shelf bank capped by a granite counter just inside the door on the top wall, a medicine cabinet near the door end of that same top leg, and keeping a 28 inch clear aisle, drawn in plan view">
+     aria-label="Downstairs bathroom and under-stairs walk-in closet floorplan, drawn to scale — the bathroom's corner sink with a surface-mount mirror, a ceiling rainhead with a handshower on a wall-mount holder by the valve, and a shower nook on the right wall; a small hallway pocket where the bathroom's top-facing pocket door meets the closet's ceiling-mount curtain opening at 90 degrees; and the closet itself, a wedge-shaped space under the stair stringer that tapers from 93 inches of headroom at the door to a field-measured dead end at 87 inches deep and 31 inches high, fitted with a matte black clothes rod at 42 inches and an oak shelf bank capped by a granite counter just inside the door on the top wall, a medicine cabinet near the door end of that same top leg, and keeping a 28 inch clear aisle, drawn in plan view">
   <!--
     93 WATERMAN — DOWNSTAIRS BATHROOM + UNDER-STAIRS CLOSET FLOOR PLAN
     ====================================================================
@@ -3725,9 +3725,11 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="105.5" y="-101.5" width="4.5" height="91.5" fill="#C9C4B7"/> <!-- top wall -->
 
   <!-- GARAGE ENTRY DOOR — new field info: a 30"-wide door with its
-       hinge 4" to the right of the closet door's own hinge. The closet door's
-       hinge is now at y=-5.5 (the wall's outside/hallway face — see
-       the door note below), so the garage door's hinge lands at
+       hinge 4" to the right of where the closet door's hinge used to be
+       (that door is since removed in favor of a curtain — see below —
+       but the coordinate reference still holds). That point is at
+       y=-5.5 (the wall's outside/hallway face), so the garage door's
+       hinge lands at
        y=-5.5+4 = -1.5, not the y=-6 this line used when the closet
        hinge was still (wrongly) drawn at the inside face. "Hinges
        close together" read as both being on this same wall (x=105.5),
@@ -3772,25 +3774,26 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect x="65.5" y="-97" width="40" height="87" fill="url(#dsbath-dawson)"/>
   <path class="outline" d="M71.5,-10 H65.5 V-97 H105.5 V-10 H99.5"/>
 
-  <!-- door: hinge at the top jamb, on the OUTSIDE (hallway) face of
-       the wall — y=-5.5, the wall's right face, not y=-10 (the
-       closet-interior face) where it was first drawn. An out-swing
-       door hinges on the face it swings toward, so the hinge belongs
-       on the hallway side of the jamb, not the closet side.
-       Handle on the bottom, out-swing (opens right, into the hallway).
-       Swing arc dashed (the reference envelope, not a real edge). The
-       leaf itself is a true point-to-point rectangle, not a thick
-       stroke on a centerline: the near-hinge corner sits exactly on
-       the jamb point (99.5,-5.5), the far corner traces the swing
-       radius (door width = 28") to (79.70,14.30), and the leaf's
-       1.4" thickness is carried perpendicular to the leaf
-       (thickness-axis angle = leaf-axis angle + 90&#176;, rotating
-       rigidly with the leaf) rather than via stroke width — same
-       convention now used for the garage door. -->
-  <path d="M71.5,-5.5 A28,28 0 0,0 99.5,22.5" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.2 .9"/>
-  <path d="M99.5,-5.5 L79.70,14.30 L78.71,13.31 L98.51,-6.49 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
-  <rect x="77.5" y="-3.6" width="18" height="2.2" rx="1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="86.5" y="-2.5" text-anchor="middle" font-size=".85">closet door, 28&quot;x80&quot;, out-swing</text>
+  <!-- door REMOVED (confirmed 2026-09-01), replaced with a ceiling-
+       mount curtain — the same canopy-style track + fabric panel
+       solution used at the primary-bedroom WICs (see that file's
+       "WIC CURTAINS" section for the shared convention: a track line
+       plus a wavy fabric panel, double-stroked dark-under-light so it
+       reads against light and dark tile alike).
+       Track spans the same 28" opening the door used to (x 71.5..99.5
+       at y=-10, the door wall) — full width, clear of both 6" stubs.
+       Ceiling-mounted, no floor track and no swing clearance to keep
+       clear on the hallway side (the out-swing door needed the
+       78.71,13.31 / 79.70,14.30 arc kept clear; the curtain needs
+       nothing on either side of the opening). Light white fabric,
+       same as the bedroom WICs, open floor-to-ceiling here rather
+       than the 60" panel width used there since this opening is
+       narrower (28"). -->
+  <line x1="71.5" y1="-10" x2="99.5" y2="-10" stroke="#6E6A62" stroke-width=".22"/>
+  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M71.5,-10 Q73.5,-8.3 75.5,-10 Q77.5,-11.7 79.5,-10 Q81.5,-8.3 83.5,-10 Q85.5,-11.7 87.5,-10 Q89.5,-8.3 91.5,-10 Q93.5,-11.7 95.5,-10 Q97.5,-8.3 99.5,-10"/>
+  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M71.5,-10 Q73.5,-8.3 75.5,-10 Q77.5,-11.7 79.5,-10 Q81.5,-8.3 83.5,-10 Q85.5,-11.7 87.5,-10 Q89.5,-8.3 91.5,-10 Q93.5,-11.7 95.5,-10 Q97.5,-8.3 99.5,-10"/>
+  <rect x="87.4" y="-3.6" width="18" height="2.2" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="96.4" y="-2.5" text-anchor="middle" font-size=".85">curtain, white — ceiling mount, 28&quot; opening</text>
 
   <!-- ============ CLOSET FIT-OUT: CLOTHES ROD ============
        Matte black hardware in the real spec (the house hardware
@@ -3957,10 +3960,11 @@ Without these the wall band simply runs out into the floor. Six caps:
   <!-- headroom contour lines, dashed, at four key depths rather than
        arbitrary round numbers — each tied to an actual feature. Labels
        sit on the BOTTOM side and share one format,
-       "X" @ Y" in — description", the dead-end included. (The door's
-       own 80" standard height is called out with the "closet door"
-       label near the door itself, not here — it's a fixed door-slab
-       spec, not a computed ceiling headroom figure like these four.)
+       "X" @ Y" in — description", the dead-end included. (There's no
+       door slab anymore — the opening is a ceiling-mount curtain, see
+       the "curtain, white" label near the opening itself — so there's
+       no fixed door-height figure to call out here alongside these
+       four computed ceiling headroom depths.)
        Heights all computed against the field-measured 62/87 slope:
        H(d) = 93 - (62/87)d.
        1) MEDICINE CABINET, deep edge d=20.35: H(20.35) = 78.5", the
@@ -4002,7 +4006,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        dimline spanning the full wall face read as a black border boxing
        in the wall rather than the wall looking continuous. Soft plates
        behind the numbers keep them legible over the checkerboard here,
-       same fix used for the "closet door" label just below.) -->
+       same fix used for the "curtain, white" label just below.) -->
   <rect x="67"   y="-5.3" width="3"   height="1.1" rx=".4" fill="#FBFAF7"/>
   <rect x="83.3" y="-5.3" width="4.4" height="1.1" rx=".4" fill="#FBFAF7"/>
   <rect x="101"  y="-5.3" width="3"   height="1.1" rx=".4" fill="#FBFAF7"/>
