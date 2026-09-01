@@ -3563,16 +3563,6 @@ Without these the wall band simply runs out into the floor. Six caps:
   <line x1="34.96" y1="55.335" x2="55.04" y2="55.335" stroke="#2A2A2A" stroke-width=".083"/>
   <text x="45" y="44.425" text-anchor="middle" font-size="2.29"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A" transform="rotate(90 45 44.425)">WC</text>
-  <!-- CPC front-to-back clearance. Measured from the RIGHT wall's finished
-       (tiled) face, y=60.625: 29" toilet + 24" required clear = 53", so the
-       limit lands at y = 60.625 - 53 = 7.625. The dimension runs the full
-       53" down to the finished right wall and stops dead on the limit line
-       (a T, not a cross). -->
-  <line class="red-lt" x1="32.21" y1="7.625" x2="57.71" y2="7.625"/>
-  <line class="red-lt" x1="45" y1="7.625" x2="45" y2="60.625"/>
-  <line class="tick" stroke="#8A3B2A" x1="44.55" y1="8.075"  x2="45.45" y2="7.175"/>
-  <line class="tick" stroke="#8A3B2A" x1="44.55" y1="61.075" x2="45.45" y2="60.175"/>
-  <text class="red-t" x="45" y="6.5" text-anchor="middle" style="fill:#D98D75" transform="rotate(90 45 6.5)">53&quot; front-to-back clear</text>
 
   <!-- ============ TOP WALL ============ -->
   <!-- TP holder: bar-style, roll axis parallel to the wall. Moved from
@@ -3763,6 +3753,11 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path class="outline" d="M105.5,28.5 V65.5"/>
   <path d="M105.5,28.5 A30,30 0 0,1 75.5,-1.5" fill="none" stroke="#9BA6A9" stroke-width=".1" stroke-dasharray="1.2 .9"/>
   <path d="M106.49,-0.51 L85.28,20.70 L84.29,19.71 L105.5,-1.5 Z" fill="#fff" stroke="#2A2A2A" stroke-width=".15"/>
+  <!-- "garage entry" callout, same plain-word/muted-pill convention as
+       the "hallway" label above — general-area naming, not a
+       dimensioned fixture callout. -->
+  <rect x="88" y="11.7" width="15" height="2.6" transform="rotate(90 95.5 13)" rx="1" fill="#FBFAF7"/>
+  <text class="lbl-s" x="95.5" y="13" text-anchor="middle" fill="#8B979A" font-size="1.36" transform="rotate(90 95.5 13)">garage entry</text>
   <rect x="61" y="-101.5" width="49" height="4.5" fill="#C9C4B7"/>        <!-- left wall (real dead-end wall) -->
   <rect x="65.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- right wall, bottom stub -->
   <rect x="99.5" y="-10" width="6" height="4.5" fill="#C9C4B7"/>            <!-- right wall, top stub -->
@@ -3775,18 +3770,19 @@ Without these the wall band simply runs out into the floor. Six caps:
        style track + wavy fabric panel (same convention as the
        primary-bedroom WICs). MOVED JUST RIGHT OF THE CLOSET JAMB
        (confirmed 2026-09-01, superseding the same-day y=29.5 version,
-       which put it too far out): the wall's hallway face is y=-5.5;
-       the track sits at y=-1.8, close in past that face but clear of
-       the dimension block right at the wall (ticks bottom out at
-       y=-3.8) and clear of the garage door's swing, which doesn't
-       start until y=-1.5. Full 40" width (x 65.5..105.5, the hallway's
+       which put it too far out), THEN NUDGED 1" FURTHER (confirmed
+       2026-09-01) away from the garage entry door's hinge point
+       (105.5,-1.5) for clearer separation: the wall's hallway face is
+       y=-5.5; the track sits at y=-2.8, close in past that face and
+       with a full 1.3" of clearance before the garage door's swing
+       starts at y=-1.5. Full 40" width (x 65.5..105.5, the hallway's
        own width) rather than the old 28" door width, since past the
        wall there's no jamb left to match — one curtain screens the
        whole pocket (closet threshold + garage-door swing zone) from
        the main hallway. -->
-  <line x1="65.5" y1="-1.8" x2="105.5" y2="-1.8" stroke="#6E6A62" stroke-width=".22"/>
-  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M65.5,-1.8 Q67.5,-0.1 69.5,-1.8 Q71.5,-3.5 73.5,-1.8 Q75.5,-0.1 77.5,-1.8 Q79.5,-3.5 81.5,-1.8 Q83.5,-0.1 85.5,-1.8 Q87.5,-3.5 89.5,-1.8 Q91.5,-0.1 93.5,-1.8 Q95.5,-3.5 97.5,-1.8 Q99.5,-0.1 101.5,-1.8 Q103.5,-3.5 105.5,-1.8"/>
-  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M65.5,-1.8 Q67.5,-0.1 69.5,-1.8 Q71.5,-3.5 73.5,-1.8 Q75.5,-0.1 77.5,-1.8 Q79.5,-3.5 81.5,-1.8 Q83.5,-0.1 85.5,-1.8 Q87.5,-3.5 89.5,-1.8 Q91.5,-0.1 93.5,-1.8 Q95.5,-3.5 97.5,-1.8 Q99.5,-0.1 101.5,-1.8 Q103.5,-3.5 105.5,-1.8"/>
+  <line x1="65.5" y1="-2.8" x2="105.5" y2="-2.8" stroke="#6E6A62" stroke-width=".22"/>
+  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M65.5,-2.8 Q67.5,-1.1 69.5,-2.8 Q71.5,-4.5 73.5,-2.8 Q75.5,-1.1 77.5,-2.8 Q79.5,-4.5 81.5,-2.8 Q83.5,-1.1 85.5,-2.8 Q87.5,-4.5 89.5,-2.8 Q91.5,-1.1 93.5,-2.8 Q95.5,-4.5 97.5,-2.8 Q99.5,-1.1 101.5,-2.8 Q103.5,-4.5 105.5,-2.8"/>
+  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M65.5,-2.8 Q67.5,-1.1 69.5,-2.8 Q71.5,-4.5 73.5,-2.8 Q75.5,-1.1 77.5,-2.8 Q79.5,-4.5 81.5,-2.8 Q83.5,-1.1 85.5,-2.8 Q87.5,-4.5 89.5,-2.8 Q91.5,-1.1 93.5,-2.8 Q95.5,-4.5 97.5,-2.8 Q99.5,-1.1 101.5,-2.8 Q103.5,-4.5 105.5,-2.8"/>
 
   <!-- ============ CLOSET FIT-OUT: CLOTHES ROD ============
        Matte black hardware in the real spec (the house hardware
@@ -3905,7 +3901,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        Surface mount, 0.5" proud, same teal-glass convention as elsewhere.
        Drawn after the counter fill so it renders on top in plan. -->
   <rect x="105" y="-30.35" width=".5" height="16.5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="105.6" y="-22.1" text-anchor="middle" font-size="1.36" transform="rotate(90 105.6 -22.1)">medicine cabinet</text>
+  <text class="teal" x="107.5" y="-22.1" text-anchor="middle" font-size="1.36" transform="rotate(90 107.5 -22.1)">medicine cabinet</text>
 
   <!-- vanity light — OVER THE MIRROR, ONE FIXTURE (confirmed
        2026-09-01; was 2 flanking sconces). WAC Lighting Spectre,
@@ -3923,7 +3919,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        fixtures competing for that space, just one bar spanning
        across it. -->
   <rect x="105" y="-32.1" width=".5" height="20" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s" x="108.7" y="-22.1" text-anchor="middle" font-size="1.19" transform="rotate(90 108.7 -22.1)" style="fill:#C79436">vanity light</text>
+  <text class="lbl-s" x="110.5" y="-22.1" text-anchor="middle" font-size="1.19" transform="rotate(90 110.5 -22.1)" style="fill:#C79436">vanity light</text>
 
   <!-- switch + outlet gang, top wall, past the vanity light bar's deep
        edge (now y=-32.1, since the light became one 20" bar over the
@@ -3942,13 +3938,14 @@ Without these the wall band simply runs out into the floor. Six caps:
        (d=36), aiming down at the front of the hanging clothes -->
   <line x1="66.5" y1="-46.5" x2="104.5" y2="-46.5" stroke="#E8C97A" stroke-width=".3" stroke-dasharray=".9 .6"/>
   <rect x="65.5" y="-66" width="40" height="20" fill="none" stroke="#A9A49B" stroke-width=".09" stroke-dasharray=".75 .5"/>
-  <text class="lbl-s" x="98.2" y="-34" text-anchor="middle" font-size="1.78" style="fill:#F6F3ED" transform="rotate(90 98.2 -34)">OAK SHELVES</text>
+  <text class="lbl-s" x="98.2" y="-34" text-anchor="middle" font-size="1.78" style="fill:#F6F3ED" transform="rotate(90 98.2 -34)">granite counter over oak shelves</text>
   <text class="lbl-s" x="101.4" y="-34" text-anchor="middle" font-size="1.44" style="fill:#EDE8DD" transform="rotate(90 101.4 -34)">12&quot; deep</text>
 
   <!-- headroom contour lines, dashed, at four key depths rather than
        arbitrary round numbers — each tied to an actual feature. Labels
-       sit on the BOTTOM side and share one short format, "X" — tag",
-       the dead-end included. (There's no door slab anymore — the
+       sit on the BOTTOM side and share one short format, "X" headroom"
+       (simplified 2026-09-01, dropping the per-line feature tag), the
+       dead-end included. (There's no door slab anymore — the
        opening is screened by a ceiling-mount curtain out in the
        hallway (unlabeled on the plan) — so there's no fixed door-
        height figure to call out here alongside these four computed
@@ -3971,41 +3968,21 @@ Without these the wall band simply runs out into the floor. Six caps:
        4) FULL DEPTH, d=87: the field-measured dead end at 31" — a real
           measurement, not a calculated contour, called out as such. -->
   <line class="code" x1="65.5" y1="-30.35" x2="105.5" y2="-30.35"/>
-  <text class="code-t" x="56.5" y="-30.35" text-anchor="end" transform="rotate(90 56.5 -30.35)">78.5&quot; &#8212; cabinet edge</text>
+  <text class="code-t" x="56.5" y="-30.35" text-anchor="end" transform="rotate(90 56.5 -30.35)">78.5&quot; headroom</text>
 
   <line class="code" x1="65.5" y1="-46" x2="105.5" y2="-46"/>
-  <text class="code-t" x="60.5" y="-46" text-anchor="end" transform="rotate(90 60.5 -46)">67&#8540;&quot; &#8212; stand limit</text>
+  <text class="code-t" x="60.5" y="-46" text-anchor="end" transform="rotate(90 60.5 -46)">67&#8540;&quot; headroom</text>
 
   <line class="code" x1="65.5" y1="-70" x2="105.5" y2="-70"/>
-  <text class="code-t" x="60.5" y="-70" text-anchor="end" transform="rotate(90 60.5 -70)">50&#188;&quot; &#8212; counter back</text>
+  <text class="code-t" x="60.5" y="-70" text-anchor="end" transform="rotate(90 60.5 -70)">50&#188;&quot; headroom</text>
 
   <!-- FULL DEPTH — the field-measured dead end, same label format as
        the calculated checkpoints above (was a standalone soft-plate
        callout; now a "code" line + code-t label like the others). -->
   <line class="code" x1="65.5" y1="-96.5" x2="105.5" y2="-96.5"/>
-  <text class="code-t" x="60.5" y="-96.5" text-anchor="end" transform="rotate(90 60.5 -96.5)">31&quot; &#8212; full depth</text>
+  <text class="code-t" x="60.5" y="-96.5" text-anchor="end" transform="rotate(90 60.5 -96.5)">31&quot; headroom</text>
 
 
-  <!-- dimensions: door-wall breakdown (6/28/6), to the right of the wall, in the
-       hallway. (Previously drawn inside the wall band itself — but a
-       dimline spanning the full wall face read as a black border boxing
-       in the wall rather than the wall looking continuous. Soft plates
-       behind the numbers keep them legible over the checkerboard here.) -->
-  <rect x="65.95" y="-5.7" width="5.1" height="1.9" transform="rotate(90 68.5 -4.75)" rx=".4" fill="#FBFAF7"/>
-  <rect x="81.75" y="-5.7" width="7.5" height="1.9" transform="rotate(90 85.5 -4.75)" rx=".4" fill="#FBFAF7"/>
-  <rect x="99.95" y="-5.7" width="5.1" height="1.9" transform="rotate(90 102.5 -4.75)" rx=".4" fill="#FBFAF7"/>
-  <line class="extline" x1="65.5"  y1="-5.5" x2="65.5"  y2="-4.5"/>
-  <line class="extline" x1="71.5"  y1="-5.5" x2="71.5"  y2="-4.5"/>
-  <line class="extline" x1="99.5"  y1="-5.5" x2="99.5"  y2="-4.5"/>
-  <line class="extline" x1="105.5" y1="-5.5" x2="105.5" y2="-4.5"/>
-  <line class="dimline" x1="65.5" y1="-4.15" x2="105.5" y2="-4.15"/>
-  <line class="tick" x1="65.05"  y1="-4.5" x2="65.95"  y2="-3.8"/>
-  <line class="tick" x1="71.05"  y1="-4.5" x2="71.95"  y2="-3.8"/>
-  <line class="tick" x1="99.05"  y1="-4.5" x2="99.95"  y2="-3.8"/>
-  <line class="tick" x1="105.05" y1="-4.5" x2="105.95" y2="-3.8"/>
-  <text class="dim-s" x="68.5" y="-4.75" text-anchor="middle" transform="rotate(90 68.5 -4.75)">6&quot;</text>
-  <text class="dim-s" x="85.5" y="-4.75" text-anchor="middle" transform="rotate(90 85.5 -4.75)">28&quot;</text>
-  <text class="dim-s" x="102.5" y="-4.75" text-anchor="middle" transform="rotate(90 102.5 -4.75)">6&quot;</text>
 
   <!-- dimension: overall width, to the left of the wall (shifted in from the
        old -118/-124.5 positions now that the back wall moved from
