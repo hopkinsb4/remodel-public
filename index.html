@@ -1082,12 +1082,26 @@ LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
        floor in front of it against the 24" required, and the door opening
        sits directly in that clear space, which is what you want.
 
-SWING SETTLED, and it only works one way. Handle on the left going
-       in, so the leaf hinges RIGHT at x -82 and opens back against the bottom
-       wall - away from the bowl. Hinged the other way it would sweep the
-       whole room and hit the toilet. Even this way the closed edge at x -110
-       clears the bowl front at -110.29 by 0.29", so check the bowl's real
-       projection before hanging the door.
+       POCKET DOOR, sliding top to bottom on the page (confirmed 2026-09-01,
+       swapped from the hinged swing leaf this room carried before). This
+       wall runs along local x, and the sheet's rotate(90) wrapper maps
+       local x to the DISPLAY's vertical axis — so a slab that retracts
+       along x here reads as sliding top to bottom on the printed plan,
+       the same convention as the downstairs bath's pocket door, just
+       turned 90 degrees to fit this wall's own orientation.
+       It pockets into the 30" side of the wall (x -140..-110, toward the
+       tank-back wall), not the 4" side (x -82..-78, toward the closet
+       party wall) — the ONLY side with room for it. 30" for a 28" slab is
+       a tight fit, not a generous one: the same bare 2" margin the
+       downstairs bath's own 28" pocket door uses, so it's a proven
+       clearance, not a new risk.
+       This also drops the old swing's worst problem for free: the leaf's
+       closed edge at x -110 cleared the bowl front at -110.29 by a bare
+       0.29" — a pocket door has no arc into the room, so that margin no
+       longer matters at all.
+       Assumes the wall cavity is clear of plumbing/electrical (the
+       bowl's own supply/drain run to the opposite, tank-back wall, not
+       this one), pending verification.
 
        Walls drawn 4.5" throughout. -->
   <!-- ============ THE WHOLE BATH, SHIFTED 9" TOWARD THE BOTTOM ============
@@ -1106,13 +1120,16 @@ SWING SETTLED, and it only works one way. Handle on the left going
   <path class="outline" d="M-140,0 H-78 V36 H-82 M-110,36 H-140 V0"/>
   <path class="outline" d="M-78,-4.5 H-144.5 V164 H-78"/>
   <path class="outline" d="M-110,40.5 V36 M-82,36 V40.5"/>
-  <!-- TOILET ROOM DOOR, 28", handle on the left going in, so it hinges RIGHT
-       at x -82 and swings into the toilet room, opening back to the bottom
-       wall - away from the bowl. The leaf's closed edge at x -110 clears the
-       bowl front at -110.29 by 0.29", so the swing is free of it. Barely, and
-       on paper: check the bowl's real projection before hanging the door. -->
-  <rect class="fix" x="-83.4" y="8" width="1.4" height="28"/>
-  <path class="thin" fill="none" d="M-110,36 A28,28 0 0 1 -82,8"/>
+  <!-- TOILET ROOM DOOR, 28" pocket door — the full 30" cavity the slab
+       retracts into, drawn dashed at full extent independent of wherever
+       the leaf below happens to be illustrated (same convention as the
+       downstairs bath's own pocket door: a snapshot of a door that slides
+       the full cavity, not a door whose travel stops where the leaf is
+       drawn). Cavity x -140..-110, centered in the 4.5" wall (y 36..40.5)
+       at y 37.54..38.96. -->
+  <rect x="-140" y="37.54" width="30" height="1.42" fill="none" stroke="#6E6A62" stroke-width=".08" stroke-dasharray=".6 .5"/>
+  <rect x="-124" y="37.54" width="27.92" height="1.42" fill="#fff" stroke="#2A2A2A" stroke-width=".1"/> <!-- pocket door, white slab per spec -->
+  <text class="lbl-s on-dark" x="-85" y="52" text-anchor="middle" transform="rotate(-90 -85 52)">pocket door, half-open</text>
   <!-- ============ TUB ALCOVE — KOHLER UNDERSCORE 60 x 30 ============
        K-20201-RA-0, acrylic, integral apron, INTEGRAL FLANGE, right drain,
        White. Back to the Underscore from the Avec 60x42: 30" deep instead of
@@ -1293,9 +1310,10 @@ SWING SETTLED, and it only works one way. Handle on the left going
        Centred on y 18, the middle of the 36" room.
          30" clear band across the axis:  36" available   - PASSES
          24" clear in front of the bowl:  32.3" available - PASSES
-       The bowl front stops 0.29" shy of the door's top jamb at x -110, so
-       the 28" leaf's swing arc runs clear of it - but only just, and only
-       on paper. See the swing note above. -->
+       The bowl front stops 0.29" shy of the door's top jamb at x -110 -
+       a moot margin now that the door is a pocket door with no arc into
+       the room (was a bare-clearance concern back when it swung; see the
+       pocket-door note above). -->
   <g transform="translate(-140,18) rotate(90) translate(-45.79,-61)">
     <path class="fix" d="M36.75,54.5 L38.07,39.01 A7.72,7.72 0 0 1 53.51,39.01 L54.83,54.5 Z"/>
     <rect class="fix" x="35.75" y="54" width="20.08" height="7" rx=".5"/>
