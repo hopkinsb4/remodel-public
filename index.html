@@ -1732,8 +1732,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        fixture projecting 5⅞" off the wall, not the flush in-wall
        mark the old fixture-less allowance used — surface-mounted on
        a standard box, no recessed wall cavity needed. -->
-  <rect fill="#E8C97A" stroke="#2A2A2A" stroke-width=".2" x="134.7" y="1.6" width="2.6" height=".7"/>
-  <text class="lbl-s" x="136" y="3.4" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
+  <!-- Swing-arm symbol, replacing the old flat rect (confirmed 2026-09-02):
+       a small round backplate flush on the wall, a thin arm projecting the
+       fixture's own reach into the room, and a shade/head circle at the
+       end — reads as an actual wall lamp in plan view instead of a
+       generic mark. Same dark-fill/white-stroke convention as the other
+       black fixtures on this plan (chairs, WIC pendants). Kept below the
+       dimmer symbol (y 0..0.7), same gap the old flat rect used. -->
+  <circle cx="136" cy="2.15" r=".55" fill="#211D19" stroke="#FFFFFF" stroke-width=".15"/>
+  <line x1="136" y1="2.15" x2="136" y2="5.65" stroke="#211D19" stroke-width=".3"/>
+  <circle cx="136" cy="5.65" r=".9" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="136" y="7.4" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
   <rect fill="#2A2A2A" x="134.7" y="0" width="2.6" height=".7"/>
   <!-- "dimmer" label rotated 90° from its old rotate(-90) — i.e. back
        to unrotated — and moved into the wall band itself (y=-4.5..0)
@@ -1743,8 +1752,13 @@ Without these the wall band simply runs out into the floor. Six caps:
        reading ran along y and needed room the wall band doesn't have. -->
   <text class="lbl-s" x="136" y="-1.7" text-anchor="middle" font-size="1.6">dimmer</text>
 
-  <rect fill="#E8C97A" stroke="#2A2A2A" stroke-width=".2" x="134.7" y="153.7" width="2.6" height=".7"/>
-  <text class="lbl-s" x="136" y="153.1" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
+  <!-- Same swing-arm symbol as the right bed's, mirrored: the dimmer sits
+       below this one (y 155.3..156), so the arm projects upward instead,
+       keeping the same gap. -->
+  <circle cx="136" cy="153.85" r=".55" fill="#211D19" stroke="#FFFFFF" stroke-width=".15"/>
+  <line x1="136" y1="153.85" x2="136" y2="150.35" stroke="#211D19" stroke-width=".3"/>
+  <circle cx="136" cy="150.35" r=".9" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="136" y="148.6" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
   <rect fill="#2A2A2A" x="134.7" y="155.3" width="2.6" height=".7"/>
   <!-- Same rotate-90-and-move-into-the-wall treatment as the right
        bed's dimmer label above, in this bed's own wall band
