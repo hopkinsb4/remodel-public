@@ -1739,16 +1739,19 @@ Without these the wall band simply runs out into the floor. Six caps:
        convention as the other black fixtures on this plan (chairs, WIC
        pendants). Kept below the dimmer symbol (y 0..0.7), same gap the old
        flat rect used.
-       AIMED AT THE READING SPOT (confirmed 2026-09-02): the pillow (the
-       white rounded rect above, x 133..141, y 6..38) sits just off this
-       wall — the shade angles slightly toward the bed's center (-x, away
-       from the headboard wall at x=144) as it reaches into the room,
-       instead of pointing straight out, so it reads as aimed at the
-       pillow/book rather than just poking into open floor. -->
+       AIMED AT THE READING SPOT (confirmed 2026-09-02, corrected same day —
+       this is a single-pivot arm, not a dual-pivot one, so the fixed-length
+       arm ROTATES about the wall-mounted backplate rather than stretching;
+       the shade stays the same 3.5" reach from the pivot, just at an angle
+       instead of straight out): the pillow (the white rounded rect above,
+       x 133..141, y 6..38) sits just off this wall — the shade swings
+       toward the bed's center (-x, away from the headboard wall at x=144)
+       as it reaches into the room, so it reads as aimed at the pillow/book
+       rather than just poking into open floor. -->
   <circle cx="136" cy="2.15" r=".55" fill="#211D19" stroke="#FFFFFF" stroke-width=".15"/>
-  <line x1="136" y1="2.15" x2="133.5" y2="6.15" stroke="#211D19" stroke-width=".3"/>
-  <circle cx="133.5" cy="6.15" r=".9" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
-  <text class="lbl-s" x="133.5" y="7.9" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
+  <line x1="136" y1="2.15" x2="134.15" y2="5.12" stroke="#211D19" stroke-width=".3"/>
+  <circle cx="134.15" cy="5.12" r=".9" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="134.15" y="6.87" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
   <rect fill="#2A2A2A" x="134.7" y="0" width="2.6" height=".7"/>
   <!-- "dimmer" label rotated 90° from its old rotate(-90) — i.e. back
        to unrotated — and moved into the wall band itself (y=-4.5..0)
@@ -1758,15 +1761,16 @@ Without these the wall band simply runs out into the floor. Six caps:
        reading ran along y and needed room the wall band doesn't have. -->
   <text class="lbl-s" x="136" y="-1.7" text-anchor="middle" font-size="1.6">dimmer</text>
 
-  <!-- Same swing-arm symbol as the right bed's, mirrored: the dimmer sits
-       below this one (y 155.3..156), so the arm projects upward instead,
-       keeping the same gap. Aimed the same way, toward the pillow (x
-       133..141, y 118..150) and the bed's center (-x, away from the
-       headboard wall at x=144). -->
+  <!-- Same single-pivot swing-arm symbol as the right bed's, mirrored: the
+       dimmer sits below this one (y 155.3..156), so the fixed 3.5" arm
+       rotates upward instead, keeping the same gap. Aimed the same way,
+       toward the pillow (x 133..141, y 118..150) and the bed's center (-x,
+       away from the headboard wall at x=144) — same rotate-in-place fix as
+       the right bed's, not a stretched reach. -->
   <circle cx="136" cy="153.85" r=".55" fill="#211D19" stroke="#FFFFFF" stroke-width=".15"/>
-  <line x1="136" y1="153.85" x2="133.5" y2="149.85" stroke="#211D19" stroke-width=".3"/>
-  <circle cx="133.5" cy="149.85" r=".9" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
-  <text class="lbl-s" x="133.5" y="148.1" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
+  <line x1="136" y1="153.85" x2="134.15" y2="150.88" stroke="#211D19" stroke-width=".3"/>
+  <circle cx="134.15" cy="150.88" r=".9" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="134.15" y="149.13" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
   <rect fill="#2A2A2A" x="134.7" y="155.3" width="2.6" height=".7"/>
   <!-- Same rotate-90-and-move-into-the-wall treatment as the right
        bed's dimmer label above, in this bed's own wall band
