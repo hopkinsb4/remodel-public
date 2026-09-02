@@ -1715,67 +1715,39 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl" x="101.6" y="135.5" text-anchor="middle" transform="rotate(-90 101.6 135.5)">TWIN</text>
   <text class="lbl-s" x="96.6" y="135.5" text-anchor="middle" transform="rotate(-90 96.6 135.5)">44 x 80</text>
 
-  <!-- ============ READING LIGHTS, SURFACE-MOUNT, ONE PER BED
-       (relocated + product confirmed 2026-09-01; was 2/bed, in-wall,
-       confirmed 2026-08-30) ============
-       WAC Lighting Kepler swing-arm reading light (BL-21205-BK),
-       $127 each confirmed at fergusonhome.com — ELV/TRIAC dimmer
-       compatible (runs off the same dimmer below), swing arm rotates
-       330°, shade tilts 90° for aiming, integrated LED w/ USB
-       charging port on the backplate.
-       MOUNTED DIRECTLY ABOVE EACH BED'S DIMMER SWITCH — same wall,
-       same x 134.7-137.3 span, same ~7" setback from the headboard
-       corner; the height difference (light up near pillow height,
-       dimmer at standard switch height) doesn't show in this plan
-       view, so the two marks sit stacked at the same x here.
-       ONE PER BED NOW, not two: the Kepler is a real swing-arm
-       fixture projecting 5⅞" off the wall, not the flush in-wall
-       mark the old fixture-less allowance used — surface-mounted on
-       a standard box, no recessed wall cavity needed. -->
-  <!-- Swing-arm symbol, replacing the old flat rect (confirmed 2026-09-02):
-       a small round backplate flush on the wall, a thin arm, and a
-       shade/head circle at the end — reads as an actual wall lamp in plan
-       view instead of a generic mark. Same dark-fill/white-stroke
-       convention as the other black fixtures on this plan (chairs, WIC
-       pendants). Kept below the dimmer symbol (y 0..0.7), same gap the old
-       flat rect used.
-       AIMED AT THE READING SPOT (confirmed 2026-09-02, corrected same day —
-       this is a single-pivot arm, not a dual-pivot one, so the fixed-length
-       arm ROTATES about the wall-mounted backplate rather than stretching;
-       the shade stays the same 3.5" reach from the pivot, just at an angle
-       instead of straight out): the pillow (the white rounded rect above,
-       x 133..141, y 6..38) sits just off this wall — the shade swings
-       toward the bed's center (-x, away from the headboard wall at x=144)
-       as it reaches into the room, so it reads as aimed at the pillow/book
-       rather than just poking into open floor. -->
-  <circle cx="136" cy="2.15" r=".55" fill="#211D19" stroke="#FFFFFF" stroke-width=".15"/>
-  <line x1="136" y1="2.15" x2="134.15" y2="5.12" stroke="#211D19" stroke-width=".3"/>
-  <circle cx="134.15" cy="5.12" r=".9" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
-  <text class="lbl-s" x="134.15" y="6.87" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
-  <rect fill="#2A2A2A" x="134.7" y="0" width="2.6" height=".7"/>
-  <!-- "dimmer" label rotated 90° from its old rotate(-90) — i.e. back
-       to unrotated — and moved into the wall band itself (y=-4.5..0)
-       instead of sitting in the room below the device (confirmed
-       2026-09-01). Unrotated reads along local x, which fits the
-       wall's own thin (4.5") dimension in y; the old rotate(-90)
-       reading ran along y and needed room the wall band doesn't have. -->
-  <text class="lbl-s" x="136" y="-1.7" text-anchor="middle" font-size="1.6">dimmer</text>
+  <!-- ============ READING LIGHTS, IN-WALL PUCKS, PAIR PER BED
+       (BACK TO the 2026-08-30 headboard-wall layout, confirmed 2026-09-02
+       — was briefly 1/bed surface-mount swing-arm on the side wall,
+       2026-09-01 through 2026-09-02) ============
+       WAC Lighting Flip swing-arm reading light, Black — one
+       BL-1021L-BK (left-handed) and one BL-1021R-BK (right-handed) per
+       bed, $224.78-353.95 each depending on retailer, confirmed real
+       prices from amazon.com/homedepot.com/lightology.com. Fingertip
+       touch dimmer BUILT INTO THE FIXTURE HEAD ITSELF, so still no
+       separate wall dimmer switch needed even at 2 fixtures per bed —
+       each one dims independently at its own head.
+       MOUNTED ON THE HEADBOARD WALL (x=144), flanking each bed's own
+       pillow centerline (y=22 right, y=134 left) by 8" each way — right
+       bed at y=14/y=30, left bed at y=126/y=142. Same wall the headboard
+       itself is against.
+       DRAWN AS SIMPLE FLUSH PUCKS, not the swing-arm-with-shade symbol
+       used briefly for the 1-per-bed layout: a small flush circle at the
+       wall face is the plan convention for this fixture family (matches
+       the pre-2026-09-02 in-wall mark), even though the physical Flip
+       fixture is surface-mounted and its arm folds out from the wall
+       when extended — the plan symbol favors legibility with two per bed
+       over drawing each one's swing-arm reach. -->
+  <circle cx="143.5" cy="14" r=".7" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="140.5" y="14" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 14)" style="fill:#C79436">reading light</text>
+  <circle cx="143.5" cy="30" r=".7" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="140.5" y="30" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 30)" style="fill:#C79436">reading light</text>
 
-  <!-- Same single-pivot swing-arm symbol as the right bed's, mirrored: the
-       dimmer sits below this one (y 155.3..156), so the fixed 3.5" arm
-       rotates upward instead, keeping the same gap. Aimed the same way,
-       toward the pillow (x 133..141, y 118..150) and the bed's center (-x,
-       away from the headboard wall at x=144) — same rotate-in-place fix as
-       the right bed's, not a stretched reach. -->
-  <circle cx="136" cy="153.85" r=".55" fill="#211D19" stroke="#FFFFFF" stroke-width=".15"/>
-  <line x1="136" y1="153.85" x2="134.15" y2="150.88" stroke="#211D19" stroke-width=".3"/>
-  <circle cx="134.15" cy="150.88" r=".9" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
-  <text class="lbl-s" x="134.15" y="149.13" text-anchor="middle" font-size="1.6" style="fill:#C79436">reading light</text>
-  <rect fill="#2A2A2A" x="134.7" y="155.3" width="2.6" height=".7"/>
-  <!-- Same rotate-90-and-move-into-the-wall treatment as the right
-       bed's dimmer label above, in this bed's own wall band
-       (y=156..160.5). -->
-  <text class="lbl-s" x="136" y="158.8" text-anchor="middle" font-size="1.6">dimmer</text>
+  <!-- Same in-wall puck pair as the right bed's, mirrored about the left
+       bed's own pillow centerline (y=134). -->
+  <circle cx="143.5" cy="126" r=".7" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="140.5" y="126" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 126)" style="fill:#C79436">reading light</text>
+  <circle cx="143.5" cy="142" r=".7" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="140.5" y="142" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 142)" style="fill:#C79436">reading light</text>
 
   <!-- ============ NIGHTSTANDS, ONE PER BED, TOWARD THE WINDOW ============
        Thuma Pedestal Side Table, Oak — floor-standing, 15.75" square x
