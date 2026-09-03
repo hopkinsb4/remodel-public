@@ -2343,11 +2343,17 @@ Without these the wall band simply runs out into the floor. Six caps:
          Same balancing technique as the primary bedroom: this pattern
          has full 4-way mirror symmetry about any of its own grid
          vertices, so anchoring pattern-space (0,0) — a grid vertex —
-         at the field's own center (inset 12" all round from the 171"
-         x 169" room: local (12,12) to (159,157), center (85.5,84.5))
-         mirrors the field left-right and top-bottom for free. As with
-         the bedroom, rotate(45) of the origin is still the origin, so
-         dx=85.5, dy=84.5 exactly — no irrational offset needed.
+         at the field's own center mirrors the field left-right and
+         top-bottom for free. As with the bedroom, rotate(45) of the
+         origin is still the origin, so dx/dy are just the field's own
+         center point — no irrational offset needed.
+
+         RE-CENTERED AGAIN 2026-09-03 (same day, after the border's own
+         north edge moved — see the floor rect's CORRECTED comment
+         below): the field is no longer 12,12 to 159,157 — its north
+         edge moved to 36 to clear the entertainment center/stairs
+         built-ins, so the field is now 12,36 to 159,157 and its center
+         moved from (85.5,84.5) to (85.5,96.5). dx=85.5, dy=96.5.
 
          ORIGINAL HISTORY (2026-08-30, no longer the active anchor):
          grout width nudged so the west and east walls (x=0/171) got
@@ -2364,10 +2370,19 @@ Without these the wall band simply runs out into the floor. Six caps:
          of that was about phases at the room's own walls — superseded
          now that the border, not the wall, is what the field meets. -->
     <pattern id="mainfloor-check-lr" width="48.3661" height="48.3661" patternUnits="userSpaceOnUse"
-             patternTransform="translate(85.5,84.5) rotate(45)">
-      <rect width="48.3661" height="48.3661" fill="#F1EEE7"/>
-      <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#262322"/>
-      <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#262322"/>
+             patternTransform="translate(85.5,96.5) rotate(45)">
+      <!-- COLORS SWAPPED 2026-09-03: with this centered anchor, the
+           narrower cut along the field's left/right border edges
+           landed on the WHITE tile (10-10.5" runs vs. black's
+           21.5-24" runs) — a thin white sliver sitting right against
+           the black border, contrasting instead of blending. Swapping
+           which quadrants are dark/light (background now dark, the
+           two quadrant squares now light) puts BLACK on that narrow
+           cut instead, so it reads as part of the border rather than
+           a stray white edge. -->
+      <rect width="48.3661" height="48.3661" fill="#262322"/>
+      <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#F1EEE7"/>
+      <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#F1EEE7"/>
     </pattern>
     <!-- Edward Martin Dawson 2x2 mosaic, charcoal — same pattern/module
          as the downstairs-bath plan's Dawson swatch. Only used at the
@@ -2384,16 +2399,32 @@ Without these the wall band simply runs out into the floor. Six caps:
        primary bedroom): frames the diagonal checkerboard field on all
        four sides instead of the pattern running straight to the
        walls. Outer rect (full room) painted solid first, inner field
-       rect (inset 12" all round: 12,12 to 159,157) painted on top —
-       simple two-rect z-order. The east archway to the entryway
-       (y=71-121, now solid Nero — see the entryway section) is
-       bordered the same as the rest of the wall rather than notched
-       open, since checkerboard meeting that archway flush is exactly
-       what used to leave small triangle cuts at the entryway's door
-       jambs (see the entryway's own FLOOR SWITCHED TO DAWSON comment,
-       below) — the border keeps the field well clear of it. -->
+       rect painted on top — simple two-rect z-order. The east archway
+       to the entryway (y=71-121, now solid Nero — see the entryway
+       section) is bordered the same as the rest of the wall rather
+       than notched open, since checkerboard meeting that archway
+       flush is exactly what used to leave small triangle cuts at the
+       entryway's door jambs (see the entryway's own FLOOR SWITCHED TO
+       DAWSON comment, below) — the border keeps the field well clear
+       of it.
+       CORRECTED 2026-09-03 (same-day fix, same bug as the kitchen and
+       dining borders): the north edge was first measured 12" in from
+       the wall (y=0), same as the other three sides — but the whole
+       north wall is covered by permanent built-ins for its full 23"
+       depth (the stair treads over x=0..40, the pony wall over
+       x=40..47 to y=24, and the entertainment center over x=47..171
+       to y=23), all deeper than the 12" border, so it was hidden
+       completely, same invisible-border bug as the kitchen/dining
+       cabinets. Fixed the same way: measured from that built-in face
+       instead (y=24, the deepest of the three — the pony wall's, 1"
+       past the other two — used uniformly across the full width for
+       one clean straight line) rather than the wall, so the field's
+       north edge is now 36 (24+12), not 12. South/west/east are
+       unchanged — the sofa on the south wall is movable furniture,
+       not a permanent built-in, so tile still runs to the actual wall
+       there like it does everywhere without a fixed cabinet. -->
   <rect x="0" y="0" width="171" height="169" fill="#262322"/>
-  <rect x="12" y="12" width="147" height="145" fill="url(#mainfloor-check-lr)"/>
+  <rect x="12" y="36" width="147" height="121" fill="url(#mainfloor-check-lr)"/>
 
   <!-- West wall: solid, no known openings. (An opening first placed
        here on 2026-08-30 was the wrong wall — it belongs on the
