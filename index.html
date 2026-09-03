@@ -247,7 +247,7 @@
 
   <div class="app" style="margin-bottom: 48px;">
     <span class="app-tag white">Whole House</span>
-    <p>The materials used across the whole house, outside the bathrooms: Leona for the checkerboard floor and honed Absolute Black granite for the stairs, risers, and upstairs landing. Documented here for reference, the same as the bathroom wall tile comparison below.</p>
+    <p>The materials used across the whole house, outside the bathrooms: Leona for the checkerboard floor, the same Leona tile laid square instead of diagonal for the bedrooms/landing/upstairs closets, and honed Absolute Black granite for the stair treads and risers themselves. Documented here for reference, the same as the bathroom wall tile comparison below.</p>
 
     <div style="background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px 28px 20px; margin: 20px 0 24px;">
       <p style="font-weight: 600; font-size: 14px; margin: 0 0 4px;">Reflectance, side by side</p>
@@ -564,12 +564,12 @@
 
       <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Primary Bedroom</span> <span class="app-tag" style="background: #3f6e6b; color: white;">Primary Bathroom</span>
-      <p>Two twin beds on the north wall, each with a Thuma Pedestal Side Table and a canopy curtain divider between them. Checkerboard floor, glossy gray walls, matte black hardware. West of the room: an open walk-in closet, then the primary bath beyond a pocket door.</p>
+      <p>Two twin beds on the north wall, each with a Thuma Pedestal Side Table and a canopy curtain divider between them. Solid black Nero tile floor (same Leona tile as the checkerboard elsewhere in the house, laid square instead of diagonal), glossy gray walls, matte black hardware. West of the room: an open walk-in closet, floored in the same tile, then the primary bath beyond a pocket door.</p>
       <p>Alcove tub/shower with a curved rod, matte black drain. Sea-glass ceramic wraps the tub and runs floor-to-ceiling down the vanity/toilet wall. Ceiling-mount rain head plus a matching handheld wand, same pairing as the other two baths. Single 36&quot; Blonde vanity, matte black hardware. Charcoal mosaic floor, gray walls, matte black fixtures, medicine cabinet.</p>
 
     <div style="margin: 16px 0 8px; width: 100%;">
       <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-252 -160 292 347" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 4 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall, 2 inches off the bed's own frame and 2 inches short of its side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets floored in the same Dawson mosaic as the primary bathroom to the top of the room, each with a wall-hung mirror on the wall it shares with the bedroom and a black ceiling pendant light centered in its own open floor area, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet and a single black vanity light bar centered above it, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
+     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Pedestal Side Table between its headboard and the window, pulled back 4 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall, 2 inches off the bed's own frame and 2 inches short of its side table, plain painted walls throughout, open floor across the rest of the room, a solid black square-set tile floor, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets floored in the same solid black tile as the bedroom to the top of the room, each with a wall-hung mirror on the wall it shares with the bedroom and a black ceiling pendant light centered in its own open floor area, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet and a single black vanity light bar centered above it, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
   <!--
     93 WATERMAN — PRIMARY BEDROOM (KIDS' ROOM) FLOOR PLAN
     =====================================================
@@ -698,51 +698,21 @@
       #pbed-plan .tread   { fill:#211D19; stroke:#F1EEE7; stroke-width:.5; }
       #pbed-plan .riser   { fill:none; stroke:#F1EEE7; stroke-width:.4; }
     </style>
-    <!-- Leona checkerboard, Calacatta + Nero Marquina, set ON THE DIAGONAL —
-         the same floor that runs through the whole house. SWITCHED 12" ->
-         24" module (confirmed 2026-08-30, same day as the main floor):
-         same tile family/colors, larger format, dramatically cheaper per
-         sf ($6.08 vs $9.25, edwardmartin.com SKU 11868 vs 11795) — set
-         the diagonal's start point on site before anything is cut.
-         REAL COLOURS. Calacatta warm white against Nero Marquina near-black,
-         the ~85%/~16% reflectance pair recorded in the design book. At this
-         contrast any floor-level label stops being readable over the dark
-         squares, so the few that remain sit on soft plates; everything else on
-         the floor is a white-filled fixture and reads on its own. The play
-         floor to the left of the beds carries no label — with the finish drawn it is
-         obvious, and the caption was only restating it. -->
-    <!-- ANCHOR, RE-DERIVED 2026-08-30 for the bedroom's own top-left
-         corner (this pattern is no longer shared with the WIC/bath
-         hallway — that's Dawson now, so the old bath-threshold anchor
-         below has nothing left to serve).
-
-         REQUIREMENT: a WHOLE WHITE tile at the bedroom's top-left
-         corner (screen), its top vertex on the top wall (local x=0)
-         and its left vertex on the wood threshold (local y=156) —
-         not a half-diamond cut at either edge.
-
-         A diamond's vertices sit S = 24/sqrt(2) = 16.9706" out from
-         its own center along the room's own x/y axes. So the two
-         constraints (top vertex at x=0, left vertex at y=156) pin the
-         white tile's center at local (S, 156-S) = (16.9706, 139.0294).
-         Solving patternTransform="translate(dx,dy) rotate(45)" for
-         that world point landing on a LIGHT quadrant center (pattern
-         space (36,12), one of the two light centers in the 48x48
-         repeat) gives dx=0 exactly and dy = 156 - 36*sqrt(2) =
-         105.0883. Verified: with this transform, pattern-space (u,v)
-         at world (16.9706,139.0294) comes back (36,12) — a light
-         center, not a vertex or a dark one.
-
-         SUPERSEDES the earlier bath-threshold anchor (vertex at
-         (-69,75.0294), tuned for the WIC hallway's Dawson-adjacent
-         alignment before the WIC switched to Dawson everywhere) —
-         that constraint no longer applies to this pattern at all. -->
-    <pattern id="pbed-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(0,105.0883) rotate(45)">
-      <rect width="48" height="48" fill="#F1EEE7"/>
-      <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
-      <rect x="24" y="24" width="24" height="24" fill="#262322"/>
-    </pattern>
+    <!-- BEDROOM FLOOR SWITCHED, DIAGONAL CHECKERBOARD -> SOLID NERO SQUARE-SET
+         (2026-09-03): the diagonal Leona Calacatta + Nero Marquina checkerboard
+         that ran through this room (and the whole house) is gone from here —
+         this bedroom now gets a straight (90°), solid-black tile instead, for two
+         reasons: (1) a busy high-contrast diagonal pattern is a lot for a room
+         meant for sleep, especially with a rug layered on top of it (a solid
+         field takes a rug pattern far more easily than a checkerboard does),
+         and (2) it keeps the room quieter next to the black-stained (now
+         granite) stairs and landing just outside the door. Same Leona/Nero
+         Marquina family and tile (SKU 11868, $6.08/sf) as the checkerboard —
+         same #262322 near-black fill carried over unchanged below — just laid
+         square instead of diagonal and one color instead of two. No pattern
+         needed for a solid field, so the old diagonal `pbed-check` pattern
+         (with its whole-white-tile-at-the-corner anchor math) is gone along
+         with it; the fill below is a plain flat rect. -->
     <!-- Edward Martin Dawson 2x2 mosaic, charcoal — the primary bath floor.
          Straight-set, NOT on the diagonal: the checkerboard turns 45 degrees
          and this does not, so the threshold reads as a real change of floor
@@ -760,7 +730,7 @@
   <!-- ============ SHELL ============ -->
   <rect x="-73.5" y="-4.5" width="73.5" height="183" fill="#C9C4B7"/>   <!-- closet block + top wall -->
   <rect x="0" y="-4.5" width="148.5" height="165" fill="#C9C4B7"/>  <!-- bedroom -->
-  <rect x="0" y="0" width="144" height="156" fill="url(#pbed-check)"/>
+  <rect x="0" y="0" width="144" height="156" fill="#262322"/>  <!-- solid Nero Marquina, square-set (switched from diagonal checkerboard 2026-09-03) -->
 
   <!-- ============ DOORWAYS ============
        Only the two DOORWAYS carry the floor through the 4.5" wall thickness —
@@ -773,8 +743,8 @@
        something to land on instead of dying into the corner. Opening x 4..32,
        wall from 32 toward the bottom. Handle on the right coming in, so the leaf hinges
        LEFT at x 4 and swings into the bedroom, standing off the top wall. -->
-  <rect x="4" y="156" width="28" height="4.5" fill="#211D19"/>  <!-- threshold now granite (switched from hardwood 2026-09-03, matching the landing's floor through the door instead of the bedroom checkerboard behind it) -->
-  <rect x="-9" y="75" width="9" height="34" fill="url(#pbed-dawson)"/>  <!-- WIC now Dawson (2026-08-30) — this threshold matches it, not the bedroom checkerboard behind it -->
+  <rect x="4" y="156" width="28" height="4.5" fill="#262322"/>  <!-- threshold now solid Nero tile (switched from granite 2026-09-03, matching the landing's floor through the door instead of the bedroom's own square-set floor on this side) -->
+  <rect x="-9" y="75" width="9" height="34" fill="#262322"/>  <!-- WIC now solid Nero tile (switched from Dawson 2026-09-03) — this threshold matches it; also now the same fill as the bedroom floor behind it, so the doorway reads as one continuous floor -->
 
   <!-- The two openings keep their callouts; the reserved-walkway graphic that
        drove this layout has been removed now that the layout is settled. The
@@ -801,7 +771,7 @@
        in the WALK-IN CLOSET section below) on the other. The two rooms
        share that corner rather than each getting their own wall there. -->
   <path fill="#C9C4B7" d="M41,160.5 V219.5 H-2 V210.5 H-35 V215 H-6.5 V224 H45.5 V160.5 Z"/>
-  <path fill="#211D19" d="M32,160.5 H41 V219.5 H-2 V210.5 H-35 V178.5 H0 V160.5 Z"/>  <!-- honed + etched/blasted matte Absolute Black granite (switched from black-stain hardwood 2026-09-03), matching the stairs' own material below -->
+  <path fill="#262322" d="M32,160.5 H41 V219.5 H-2 V210.5 H-35 V178.5 H0 V160.5 Z"/>  <!-- solid Nero Marquina tile, square-set (switched from granite 2026-09-03: granite reads fine on the stair treads themselves but not as a flat-floor slab in a room-like space, so it stops at the top stair nose) — same tile/color as the bedroom floor and WIC below -->
   <path class="outline" d="M41,160.5 V219.5 H-2 V210.5 H-35"/>
   <text class="lbl-s on-dark" x="20" y="190" text-anchor="middle" transform="rotate(-90 20 190)">LANDING</text>
 
@@ -936,19 +906,15 @@
        actually established here. The bath end was also described as
        "narrowed" at this point, so confirm it. Right and left walls drawn 4.5" —
        their thickness was not given either. -->
-  <!-- WIC FLOOR SWITCHED TO DAWSON (2026-08-30): was the bedroom's own
-       checkerboard, now the same straight-set Dawson mosaic as the
-       primary bath, extended through both closets and the passage
-       between them — one continuous hard-tile run from the bath
-       through the WICs, with the checkerboard stopping at the
-       bedroom's own wall face (x=0) instead of carrying into the
-       closets. Both doorway thresholds (the bedroom-side floor-through
-       above, and the bath-side sliver below) already matched Dawson or
-       now do, so nothing else needed to move for this to read as one
-       continuous floor. Straight-set 2x2, not rotated, so there's no
-       phase/grout-alignment math the way the diagonal checkerboard
-       needed — it just tiles cleanly from the pattern's own origin. -->
-  <rect x="-69" y="0" width="60" height="174" fill="url(#pbed-dawson)"/>
+  <!-- WIC FLOOR SWITCHED AGAIN, DAWSON -> SOLID NERO SQUARE-SET (2026-09-03):
+       was Dawson mosaic matching the primary bath (2026-08-30 switch, itself
+       replacing the bedroom's diagonal checkerboard before that). Moving to
+       the same solid Nero tile now used for the bedroom floor and the
+       landing is a real cost cut, not just a consistency choice — Dawson
+       mosaic runs $26.45/sf vs $6.08/sf for the same Leona tile everywhere
+       else in the house. Straight-set (not diagonal), same #262322 fill as
+       the bedroom floor and landing. -->
+  <rect x="-69" y="0" width="60" height="174" fill="#262322"/>
   <!-- PARTITIONS RESTORED. The two BOTTOM-TO-TOP walls that make this two closets and
        a passage go back in, faces landing exactly on the 41" hall jambs at
        y 67 and y 108 so all three openings line up on one axis. 4.5" thick,
@@ -976,14 +942,10 @@
        NOTE ALSO: the right closet doorway's top jamb at x -64 lands half an
        inch off the bath-end return at x -64.5. Half an inch is not a
        tolerance, it is a coincidence - measure both before framing. -->
-  <!-- THRESHOLD, RESTORED TO DAWSON (2026-08-30): the wall's own
-       thickness (x -73.5..-69) is Dawson again, matching the bath's
-       floor on the other side of the wall (x <= -78) — the
-       checkerboard doesn't cross the wall's inner (hall-side) face at
-       x=-69 at all now. See the pattern's ANCHOR comment above: a
-       tile VERTEX lands exactly at (-69,92) instead, so the diamonds
-       touch that wall face point-first rather than the pattern
-       bleeding through the opening. -->
+  <!-- THRESHOLD, STAYS DAWSON: the wall's own thickness (x -73.5..-69)
+       matches the bath's floor on the other side of the wall (x <= -78),
+       which is still Dawson mosaic — only the WIC's own floor and the
+       bedroom switched to solid Nero tile (2026-09-03), not the bath. -->
   <rect x="-73.5" y="75" width="4.5" height="34" fill="url(#pbed-dawson)"/>
 
   <!-- BATH DOORS (split barn) are drawn AFTER the bath group below, not here -
@@ -2034,7 +1996,7 @@ Without these the wall band simply runs out into the floor. Six caps:
 
   <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Secondary Bedroom</span> <span class="app-tag" style="background: #3f6e6b; color: white;">Secondary Bathroom</span>
-      <p>Checkerboard floor, glossy gray walls throughout, for easy wipe-down. Standalone furniture — platform bed, desk, and side table, all in oak finish. A reach-in closet with matte black hardware.</p>
+      <p>Solid black Nero tile floor (same Leona tile as the checkerboard elsewhere in the house, laid square instead of diagonal), glossy gray walls throughout, for easy wipe-down. Standalone furniture — platform bed, desk, and side table, all in oak finish. A reach-in closet with matte black hardware.</p>
     <p>Shower-only, no tub — the whole room takes the same small-format charcoal mosaic floor with black grout as downstairs and the primary bath, with a linear drain in the shower matching downstairs. Paired with the same blue-green glossy ceramic on the walls, set in the same straight 6" grid with black grout, wrapping the shower and continuing along the full wall that holds the vanity and toilet, floor to ceiling. A frameless sliding glass door, matte black, closes the full 60" opening. Single 30" vanity, Blonde finish, matte black hardware. Gray walls, matte black faucet, medicine cabinet, toilet, and a ceiling-mount rain head paired with a matching handheld wand.</p>
       
       
@@ -2241,9 +2203,15 @@ Without these the wall band simply runs out into the floor. Six caps:
          black-stained material and reads exactly as well as honed
          black granite, so nothing about the drawing itself needed to
          move, only this note and the budget. Landing floor (drawn in
-         the primary-bedroom-floorplan.svg, not here) switched the same
-         way, for the same reason: it sits at the top of this exact
-         stair run. */
+         the primary-bedroom-floorplan.svg, not here) was briefly moved
+         to the same granite the same day, then reversed the same day:
+         granite reads fine on a stair tread but not as a flat-floor
+         slab in a room-like space, so the granite stops at the top
+         stair nose. The landing instead got the same solid Nero
+         square-set tile now used for the bedrooms and WIC — still
+         non-porous (keeps the cat-urine resistance that motivated
+         moving the stairs off wood in the first place), just not
+         stone. */
       #mainfloor-plan .tread   { fill:#211D19; stroke:#F1EEE7; stroke-width:.5; }
       #mainfloor-plan .riser   { fill:none; stroke:#F1EEE7; stroke-width:.4; }
       #mainfloor-plan .lbl     { font:4.4px 'Helvetica Neue',Arial,sans-serif; fill:#3A3A3A; }
