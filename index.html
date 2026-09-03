@@ -1719,12 +1719,34 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl" x="101.6" y="135.5" text-anchor="middle" transform="rotate(-90 101.6 135.5)">TWIN</text>
   <text class="lbl-s" x="96.6" y="135.5" text-anchor="middle" transform="rotate(-90 96.6 135.5)">44 x 80</text>
 
-  <!-- ============ READING LIGHTS — DESCOPED ENTIRELY 2026-09-03 ============
-       Fully removed (budget) — was 1 per bed (WAC Lighting Flipside,
-       Black, BL-13505-BK) after an earlier same-day descope from 2/bed;
-       now 0. No in-wall pucks on the headboard wall (x=144) at either
-       bed's pillow centerline. If reading light is wanted again later,
-       see git history for the fixture spec/positions. -->
+  <!-- ============ READING LIGHTS, IN-WALL PUCKS, ONE PER BED ============
+       RESTORED 2026-09-03 (was fully descoped earlier the same day, now
+       brought back at 1 per bed — same nightstand-side position each
+       bed had before removal). WAC Lighting Flipside task light, Black
+       (BL-13505-BK) — ONE UNIVERSAL SKU, not a Left/Right pair. Flipside
+       is a compact 4.88"x4.88" disc with only a 3.06" extension — small
+       enough that this plan's flush-puck symbol is a close read of the
+       actual fixture. Mounts and rotates in ANY orientation (330°
+       horizontal, 110° vertical), so the identical BL-13505-BK goes in
+       both positions with no handing to track. Fingertip touch dimmer
+       built into the canopy itself, plus a USB/USB-C charging port at
+       the base. Confirmed real prices across retailers: $196.00-$231.00
+       each, $392.00-$462.00 for both.
+       MOUNTED ON THE HEADBOARD WALL (x=144), on the nightstand side of
+       each bed's pillow centerline (the one you'd actually reach for
+       while reading, right by the pedestal side table): right bed at
+       y=30 (toward the nightstand at y 48..63.75), left bed at y=126
+       (toward the nightstand at y 92.25..108).
+       RECTANGLES, NOT CIRCLES (confirmed 2026-09-02, matching the
+       original 2026-08-30 in-wall mark) — more visible against the wall
+       line at this small size than a circle. -->
+  <rect x="143.2" y="29.4" width=".6" height="1.2" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="140.5" y="30" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 30)" style="fill:#C79436">reading light</text>
+
+  <!-- Same in-wall puck as the right bed's, mirrored about the left
+       bed's own pillow centerline (y=134), kept on its nightstand side. -->
+  <rect x="143.2" y="125.4" width=".6" height="1.2" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
+  <text class="lbl-s" x="140.5" y="126" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 126)" style="fill:#C79436">reading light</text>
 
   <!-- ============ NIGHTSTANDS, ONE PER BED, TOWARD THE WINDOW ============
        Thuma Pedestal Side Table, Oak — floor-standing, 15.75" square x
