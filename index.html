@@ -3341,8 +3341,9 @@ Without these the wall band simply runs out into the floor. Six caps:
        Two, both 12" long x 3.5" deep, recessed into the wall band so nothing
        projects into the room:
 
-       SINK NOOK — LEFT wall, centred over the wet-room hooks (x 19.04 / 22.38 /
-         25.71, centre 22.375), so the nook and the hooks read as one group.
+       SINK NOOK — LEFT wall, centred at x=19.15. Used to be centred over a
+         pair of wet-room hooks grouped with it (removed 2026-09-03, budget
+         descope) — the nook now stands alone as a shelf, no hooks here.
          It used to sit in the corner on the sink-leg mid-point; the corner is
          now given over to the mirror pair, and moving the nook out also clears
          the corner-framing conflict that placement had.
@@ -3352,8 +3353,7 @@ Without these the wall band simply runs out into the floor. Six caps:
          handshower holder + wand (see the SHOWER section below).
   -->
   <!-- sink nook — centred between the corner sink's left-wall edge
-       (x=9.295) and the 35" tick at x=29: centre 19.15. Hooks below
-       shift with it, same group as always. -->
+       (x=9.295) and the 35" tick at x=29: centre 19.15. -->
   <rect x="13.15" y="-3.5" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
   <text class="lbl-s" x="19.15" y="-2.6" text-anchor="middle">nook</text>
   <!-- shower nook, right wall — centred under the rainhead/code-circle
@@ -3475,35 +3475,26 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s on-dark" x="-1.75" y="55" text-anchor="middle" transform="rotate(90 -1.75 55)">linear drain</text>
 
   <!-- ============ LEFT WALL FITTINGS ============
-       WET SIDE — DIALED BACK 2026-09-03 from 3 hooks to 2 (budget descope),
-       dropping the middle hook and keeping the outer pair so the group's
-       centreline stays at x=19.15, grouped with the sink nook above.
-       DRY SIDE — the recessed medicine cabinet is gone from this wall;
-       it moved to the under-stairs closet, in place of the generic
-       vanity mirror originally there — then swapped back to a mirror
-       itself (confirmed 2026-09-01, a smaller IKEA LINDBYN, matching
-       the primary bedroom's WIC mirror family; a style choice, not a
-       fit problem — the cabinet cleared the sloped ceiling fine).
-       DRY-SIDE HOOKS, not a bar (confirmed 2026-09-02): the 12" towel bar
-       that used to sit here is dropped in favor of the same hooks used
-       everywhere else in the house — hooks work fine for hand towels too,
-       so nothing is lost. DIALED BACK 2026-09-03 from 3 hooks to 2, same
-       reasoning as the wet side — centreline stays at x=42.7. SPEC
-       SWITCHED 2026-09-03 (same day) from Kohler Purist to Moen Genta LX
-       Single Robe Hook, Matte Black (BH3803BL) — real Ferguson price
-       ~$22.13 each, far cheaper than the Purist hook.
-       ICON SIZE CORRECTED 2026-09-02: briefly matched to the primary
-       bath's raw radius (r=.8), but this room's viewBox is much smaller
-       (180x130 vs. primary's 292x347 units), so the same radius rendered
-       proportionally larger on screen here — an overshoot caught and
-       fixed by shrinking 25% to r=.6 (stroke-width .12), which reads at
-       the correct relative size for this room's own scale. -->
-  <circle cx="15.82" cy=".92" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
-  <circle cx="22.49" cy=".92" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s on-dark" x="19.15" y="4.2" text-anchor="middle">towel hooks</text>
-  <circle cx="39.36" cy=".92" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
-  <circle cx="46.04" cy=".92" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s on-dark" x="42.7" y="4.2" text-anchor="middle">towel hooks</text>
+       WET-SIDE NOOK HOOKS — REMOVED 2026-09-03: the 2 hooks grouped with
+       the sink nook (former centreline x=19.15) are dropped entirely,
+       decluttering that zone back to just the nook shelf itself. No
+       replacement here — the solo west-wall hook (below) still covers the
+       "dry off stepping out of the shower" function.
+
+       WC-SPACE TOWEL BAR — the dry-side hooks that used to sit here
+       (former centreline x=42.7) are REPLACED 2026-09-03 with a single
+       Moen Genta LX 18" Towel Bar, Matte Black (BH3818BL) — real Ferguson
+       price ~$39.59, product/summary/1247710, same collection/sequential
+       listing as the hook (1247708) and TP holder (1247709) already spec'd
+       elsewhere in this house. Centred at the same x=42.7, spanning
+       x=33.7..51.7 (18" nominal + 3.25" projection into the room, per the
+       confirmed spec) — comfortably inside the 29..57 run between the
+       shower/toilet split and the switch box, with ~4.7" clear on the
+       split side and ~5.3" clear of the switch. This is the run the WC
+       (toilet) section itself occupies (x 29..61), so the bar sits inside
+       the WC space rather than the wet zone. -->
+  <rect x="33.7" y="0" width="18" height="3.25" rx=".4" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
+  <text class="lbl-s on-dark" x="42.7" y="4.9" text-anchor="middle">towel bar</text>
 
   <!-- ============ ELECTRICAL ============
        Single switch on the left wall, to the top of the cabinet — i.e. by the
@@ -3557,19 +3548,19 @@ Without these the wall band simply runs out into the floor. Six caps:
        briefly dropped for a clean 3+3 grouping): this one earns its keep on
        function, not symmetry — it's the hook you reach on stepping out of
        the shower, right at the sink, so you can hang the towel and dry off
-       before walking anywhere else in the room. Without it here, water gets
-       tracked across the floor to whichever hook is nearest (the north-wall
-       groups), both a reach away. Kept through the 2026-09-03 budget
-       dial-back (wet/dry groups cut from 3 to 2 each) specifically because
-       of that function — 5 hooks total now (2 wet + 1 solo + 2 dry), not 7
-       — re-centred between the sink and the
+       before walking anywhere else in the room.
+       NOW THE ONLY HOOK IN THE ROOM (2026-09-03): the north-wall nook hooks
+       are removed and the north-wall WC hooks are replaced by a towel bar
+       (see the LEFT WALL FITTINGS comment above) — this solo hook is kept
+       specifically because nothing else covers its function. Same Moen
+       Genta LX Single Robe Hook, Matte Black (BH3803BL) spec as before.
+       Re-centred between the sink and the
        support bar at cx=-5.08, cy=20.31, same reasoning as before (not the
        old mirrored position, not the basin's wall-tangent rounding
        artifact at 14.92 — the sink's actual corner at (1.71, 15.62) is what
        matters, and the support bar is at y=25, so midpoint (15.62+25)/2 =
        20.31). Sized at r=.6 to match the corrected hook icon size used
-       elsewhere in this room (see the wet/dry groups' own comment for the
-       viewBox-scale reasoning). -->
+       elsewhere in this room. -->
   <circle cx="-5.08" cy="20.31" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
   <!-- support bar: bottom end at the wall (x=-6), top end to the split
        line, now x=29 (was the even 27.5). -->
