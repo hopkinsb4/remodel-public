@@ -2384,9 +2384,12 @@ Without these the wall band simply runs out into the floor. Six caps:
          repositioned, not by re-deriving the anchor again. -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
              patternTransform="translate(300.625,14.875) rotate(45)">
-      <rect width="48" height="48" fill="#F1EEE7"/>
-      <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
-      <rect x="24" y="24" width="24" height="24" fill="#262322"/>
+      <!-- COLORS SWAPPED 2026-09-03 (explicit instruction, no re-analysis
+           done against furniture/sliver positions): background and the
+           two quadrant squares traded fills. -->
+      <rect width="48" height="48" fill="#262322"/>
+      <rect x="0"  y="0"  width="24" height="24" fill="#F1EEE7"/>
+      <rect x="24" y="24" width="24" height="24" fill="#F1EEE7"/>
     </pattern>
     <!-- LIVING ROOM ONLY — RE-ANCHORED 2026-09-03 to BALANCE the field
          within its new 12" border (see the border comment at the floor
