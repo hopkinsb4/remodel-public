@@ -3487,13 +3487,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        price ~$39.59, product/summary/1247710, same collection/sequential
        listing as the hook (1247708) and TP holder (1247709) already spec'd
        elsewhere in this house. Centred at the same x=42.7, spanning
-       x=33.7..51.7 (18" nominal + 3.25" projection into the room, per the
-       confirmed spec) — comfortably inside the 29..57 run between the
-       shower/toilet split and the switch box, with ~4.7" clear on the
-       split side and ~5.3" clear of the switch. This is the run the WC
-       (toilet) section itself occupies (x 29..61), so the bar sits inside
-       the WC space rather than the wet zone. -->
-  <rect x="33.7" y="0" width="18" height="3.25" rx=".4" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
+       x=33.7..51.7 (18" nominal) — comfortably inside the 29..57 run
+       between the shower/toilet split and the switch box, with ~4.7"
+       clear on the split side and ~5.3" clear of the switch. This is the
+       run the WC (toilet) section itself occupies (x 29..61), so the bar
+       sits inside the WC space rather than the wet zone.
+       SYMBOL RESTYLED 2026-09-03: drawn as a simple thin rod, same
+       "bar-style fixture" convention as the TP holder elsewhere in this
+       room (thin rod floating ~3" off the wall face, standing for the
+       roll/bar axis on its end posts) instead of the earlier solid-block
+       icon — same fill/stroke/thickness as that TP holder symbol. -->
+  <rect x="33.7" y="2.84" width="18" height=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".07"/>
   <text class="lbl-s on-dark" x="42.7" y="4.9" text-anchor="middle">towel bar</text>
 
   <!-- ============ ELECTRICAL ============
@@ -3872,15 +3876,20 @@ Without these the wall band simply runs out into the floor. Six caps:
        jamb line at (99.5,-10): entering, the cabinet meets you as a
        taper, not a corner. -->
   <path d="M93.5,-46 H105.5 V-10 H99.5 L93.5,-16 Z" fill="#B6986D" stroke="#624E40" stroke-width=".29"/>
-  <!-- counter outlet gangs — moved off the top leg entirely and onto
-       the left-most L of the counter (the full-width run over the
-       rod, d 36..60), d 43/53, clear of the mirror and its vanity
-       light bar on the top leg below. -->
+  <!-- counter outlet gang — DROPPED BACK 2026-09-03 from 2 gangs to 1
+       (budget descope): kept the nearer one (d=43, closer to the door/
+       shorter wire run), dropped the far one (was d=53). Sits on the
+       left-most L of the counter (the full-width run over the rod,
+       d 36..60), clear of the mirror and its vanity light bar on the
+       top leg below. -->
   <rect class="blk" x="105.5" y="-53" width=".7" height="2.6"/>
-  <rect class="blk" x="105.5" y="-63" width=".7" height="2.6"/>
-  <text class="lbl-s" x="107.6" y="-56.7" text-anchor="middle" font-size="1.19" transform="rotate(90 107.6 -56.7)">outlets</text>
+  <text class="lbl-s" x="107.6" y="-52.5" text-anchor="middle" font-size="1.19" transform="rotate(90 107.6 -52.5)">outlet</text>
 
-  <!-- light switch, bottom wall just inside the door -->
+  <!-- light switch, bottom wall just inside the door — WIRED 2026-09-03
+       to control BOTH the vanity light and the under-counter LED strip
+       (the separate switch+outlet gang that used to sit by the mirror,
+       below, is removed the same day — one switch at the door instead
+       of two switches). -->
   <rect class="blk" x="64.8" y="-15.5" width=".7" height="2.6"/>
   <text class="lbl-s" x="63.7" y="-14.2" text-anchor="middle" font-size="1.19" style="fill:#C79436" transform="rotate(90 63.7 -14.2)">sw</text>
 
@@ -3984,15 +3993,14 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl-s" x="110.5" y="-22.1" text-anchor="middle" font-size="1.19" transform="rotate(90 110.5 -22.1)" style="fill:#C79436">vanity light</text>
 
   <!-- switch + outlet gang, top wall, past the vanity light bar's deep
-       edge (y=-31.1, since the light is now the shorter 18" bar
-       — confirmed 2026-09-02, was the 20" Spectre bar at y=-32.1)
-       — same "sw + outlet" gang-plate convention used in the
-       bathroom, sized/oriented for this vertical wall run. Centred at
-       d=27.9 (y=-37.9), a 5.5" gap past the bar's edge (up from 4.5"
-       with the shorter bar), well inside the counter's left edge
-       (d=60, y=-70). -->
-  <rect class="blk" x="104.85" y="-39.2" width=".7" height="2.6"/>
-  <text class="lbl-s" x="107.1" y="-37.9" text-anchor="middle" font-size="1.19" transform="rotate(90 107.1 -37.9)" style="fill:#C79436">sw + outlet</text>
+       edge — REMOVED 2026-09-03 (budget descope): this gang used to give
+       the vanity light its own local switch here, but that's redundant
+       now that the door switch (see the LEFT WALL FITTINGS section) is
+       wired to control both the vanity light and the under-counter LED
+       strip. One switch instead of two, at the more useful location
+       (flip on entering, not fumble to the mirror first). No outlet
+       replaces it either — the one remaining counter outlet gang (also
+       dropped back this session) covers this wall's needs. -->
 
   <!-- hidden below the counter: the bank's aisle face + chamfer, and the rod -->
   <path d="M99.5,-10 L93.5,-16 V-40" fill="none" stroke="#EDE8DD" stroke-width=".16" stroke-dasharray=".75 .5"/>
