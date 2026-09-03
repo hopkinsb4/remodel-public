@@ -3192,19 +3192,19 @@ Without these the wall band simply runs out into the floor. Six caps:
        center. Desk-station low chairs and island barstools were NOT
        part of this move — only the table and its own 4 chairs. -->
 
-  <g transform="translate(319.717,-55.1287) rotate(45)">    <!-- NE chair — moved with the table's 7th reposition (dx=+4.715,dy=+25.1733); sits on a WHITE tile -->
+  <g transform="translate(319.717,-89.0698) rotate(45)">    <!-- NE chair — moved with the table's 8th reposition (dy=-33.9411, one square up) -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
     <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
-  <g transform="translate(319.717,-16.9447) rotate(135)">   <!-- SE chair — moved with the table's 7th reposition (dx=+4.715,dy=+25.1733); sits on a WHITE tile -->
+  <g transform="translate(319.717,-50.8858) rotate(135)">   <!-- SE chair — moved with the table's 8th reposition (dy=-33.9411, one square up) -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
     <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
-  <g transform="translate(281.533,-16.9447) rotate(-135)">  <!-- SW chair — moved with the table's 7th reposition (dx=+4.715,dy=+25.1733); sits on a WHITE tile (was DARK before the move) -->
+  <g transform="translate(281.533,-50.8858) rotate(-135)">  <!-- SW chair — moved with the table's 8th reposition (dy=-33.9411, one square up) -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
     <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
-  <g transform="translate(281.533,-55.1287) rotate(-45)">   <!-- NW chair — moved with the table's 7th reposition (dx=+4.715,dy=+25.1733); sits on a WHITE tile -->
+  <g transform="translate(281.533,-89.0698) rotate(-45)">   <!-- NW chair — moved with the table's 8th reposition (dy=-33.9411, one square up) -->
     <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
     <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
   </g>
@@ -3217,6 +3217,20 @@ Without these the wall band simply runs out into the floor. Six caps:
        comment) rather than owning 6 dedicated dining chairs.
        Pedestal not rendered; brand omitted from the drawing, see
        budget.
+       RE-CENTERED AN EIGHTH TIME, 2026-09-03 (explicit instruction,
+       after the same-day checkerboard color swap — see the pattern's
+       own COLORS SWAPPED comment): moved the table+chairs one square
+       up to land on a new white tile, dy=-33.9411 (=24*sqrt(2), the
+       color-preserving lattice step — a pure vertical shift in world
+       space maps white to the adjacent white square, same math family
+       as every other tile-centered move here). cx unchanged at
+       300.625; cy moves from -36.0367 to -69.9778. All 4 chairs move
+       the same dy, arrangement otherwise unchanged.
+       CLEARANCE NOTE: this is tighter than the 7th spot — table's
+       north edge is now 7.5" clear of the dining field's own north
+       border inset (was 41.5" clear before this move), and roughly
+       19.5" clear of the true north wall. Still clear, not
+       overlapping, just less margin than the prior spot had.
        RE-CENTERED A SEVENTH TIME, 2026-09-03 (same day as the anchor
        rebalance, explicit instruction: shift the table+chairs down and
        right onto the nearest black tile center): the 6th spot
@@ -3268,7 +3282,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        the 72" patio door opening as a whole (x=(265+337)/2=301), y
        aligned to the midpoint between the two east-wall windows
        (y=((-73.5-56)/2 + (-33.5-16)/2)/2 = -44.75). -->
-  <circle cx="300.625" cy="-36.0367" r="24" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
+  <circle cx="300.625" cy="-69.9778" r="24" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  <!-- white marble top, same warm-white tone as the Leona checkerboard's white tile, not flat FFFFFF -->
   <text class="dim-s" x="295.91" y="-53.71" text-anchor="middle" style="font-size:4.2px">48&quot; table</text>
 
   <!-- DINING BANQUETTE — REMOVED 2026-08-31, reverting to dining chairs
