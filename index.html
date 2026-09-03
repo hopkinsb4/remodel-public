@@ -2668,15 +2668,27 @@ Without these the wall band simply runs out into the floor. Six caps:
        is then TWO rects on top: a core rect inset from the west wall
        and from the two cabinet faces (south/east) plus a notch that
        carries the core's north edge back out to the true wall line
-       (y=32.5) for the width of the opening (x=257..356 — clipped to
-       start at 257, not the opening's true 250" jamb, so the field
-       stays clear of the very corner where the kitchen's own
-       west-wall border already applies independently; that corner
-       reads as one clean black bracket instead of a sliver of
-       checkerboard squeezed against it). The 26"-wide pier east of
-       the opening (x=356..382) gets no notch — it's real wall, same
-       as the 5"-wide pier at x=245..250 (already covered by the
-       west-wall border, needing no separate notch logic of its own).
+       (y=32.5) for the width of the opening, clipped to start at 257,
+       not the opening's true 250" jamb, so the field stays clear of
+       the very corner where the kitchen's own west-wall border already
+       applies independently; that corner reads as one clean black
+       bracket instead of a sliver of checkerboard squeezed against
+       it). The 26"-wide pier east of the opening (x=356..382) gets no
+       notch — it's real wall, same as the 5"-wide pier at x=245..250
+       (already covered by the west-wall border, needing no separate
+       notch logic of its own).
+       NOTCH EAST EDGE CORRECTED 2026-09-03 (same-day fix, caught in a
+       render): first clipped only at the opening's own jamb (356), an
+       inch short of the fridge's proud face (352) — leaving an 8"-wide
+       sliver of bare checkerboard (x=344.25..352, y=32.5..44.5) poking
+       out between the border and the fridge, not covered by anything.
+       Reclipped to 344.25 instead, matching the CORE rect's own east
+       edge exactly, so the border runs one continuous straight line
+       from the true north wall (y=32.5) all the way down — the same
+       way the west border already ran straight past the archway pier
+       with no interruption. Narrows the checkerboard-through-the-
+       opening width by another 11.75" (87.25" clear now, was 99")
+       to buy that continuous line.
        Anchor is UNCHANGED (mainfloor-check keeps its existing
        translate(7.4121,-26.456) — this pattern was NOT re-derived for
        symmetry the way the primary bedroom's and the living room's
@@ -2688,7 +2700,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        same net effect without touching the locked anchor. -->
   <rect x="245" y="32.5" width="137" height="136.5" fill="#262322"/>
   <rect x="257" y="44.5" width="87.25" height="86.75" fill="url(#mainfloor-check)"/>
-  <rect x="257" y="32.5" width="99" height="12" fill="url(#mainfloor-check)"/>
+  <rect x="257" y="32.5" width="87.25" height="12" fill="url(#mainfloor-check)"/>
   <rect x="240.5" y="32.5" width="4.5" height="38.5" fill="#C9C4B7"/>  <!-- trimmed to the dining-wall line: the SE jog into the bath space is cut -->
   <rect x="236" y="64.5" width="4.5" height="6.5" fill="#C9C4B7"/>  <!-- corner fill where the entryway north wall meets the trimmed wall -->
   <rect x="236" y="121" width="9" height="48" fill="#C9C4B7"/>
@@ -2700,13 +2712,17 @@ Without these the wall band simply runs out into the floor. Six caps:
        no longer perfectly centered on it).
        SPLIT 2026-09-03 for the new border (see above): the opening's
        own west 7" (x=250..257) is now solid Nero, matching the corner
-       bracket the border makes on both the kitchen and dining sides;
-       the remaining 99" (x=257..356) stays checkerboard, continuous
-       with both rooms' own notches — still one unbroken run through
-       the opening, just 7" narrower than the full 106" structural
-       clear width. -->
+       bracket the border makes on both the kitchen and dining sides.
+       RE-SPLIT the same day when the notches' own east clip moved
+       from 356 to 344.25 (see the KITCHEN border comment's NOTCH EAST
+       EDGE CORRECTED note) — the passage's checkerboard run narrows
+       to match (257..344.25, 87.25" clear), and the opening's east
+       11.75" (344.25..356) becomes Nero too, so the border reads as
+       one continuous straight line across the opening instead of
+       stepping out wider than the notches on either side of it. -->
   <rect x="250" y="23.5" width="7" height="9" fill="#262322"/>  <!-- opening passage floor, west sliver — matches the border corner -->
-  <rect x="257" y="23.5" width="99" height="9" fill="url(#mainfloor-check)"/>  <!-- opening passage floor, continuous north -->
+  <rect x="257" y="23.5" width="87.25" height="9" fill="url(#mainfloor-check)"/>  <!-- opening passage floor, continuous north -->
+  <rect x="344.25" y="23.5" width="11.75" height="9" fill="#262322"/>  <!-- opening passage floor, east sliver — matches the border corner -->
   <rect x="240.5" y="23.5" width="9.5" height="9" fill="#C9C4B7"/>
   <rect x="356" y="23.5" width="30.5" height="9" fill="#C9C4B7"/>
   <line class="outline" x1="250" y1="23.5" x2="250" y2="32.5"/>
@@ -2868,13 +2884,22 @@ Without these the wall band simply runs out into the floor. Six caps:
        Outer rect (full dining extent) solid first; field is a core
        rect inset from the north/west walls and from the east cabinet
        face, plus a notch carrying the core's south edge out to the
-       true wall line (y=23.5) for x=257..356, mirroring the kitchen's
-       own notch at the shared opening. The west wall's own opening
-       (to the hallway, y=-40.5..-10.5, now solid Nero) gets no notch,
-       same reasoning as the kitchen's west archway to the entryway. -->
+       true wall line (y=23.5), mirroring the kitchen's own notch at
+       the shared opening. The west wall's own opening (to the
+       hallway, y=-40.5..-10.5, now solid Nero) gets no notch, same
+       reasoning as the kitchen's west archway to the entryway.
+       NOTCH EAST EDGE CORRECTED 2026-09-03 (same-day fix, same bug as
+       the kitchen's): first clipped at the opening's own jamb (356),
+       which left an 11.75"-wide sliver of bare checkerboard between
+       the border and the desk cabinet's own face (356.25) — nothing
+       covers x=344.25..356 at y=11.5..23.5, since the cabinet doesn't
+       start until 356.25. Reclipped to 344.25, matching the CORE
+       rect's own east edge (and the kitchen's identical fix), so the
+       border runs one continuous straight line down the whole east
+       side instead of stepping wider right at the opening. -->
   <rect x="245" y="-113.5" width="137" height="137" fill="#262322"/>
   <rect x="257" y="-101.5" width="87.25" height="113" fill="url(#mainfloor-check)"/>
-  <rect x="257" y="11.5" width="99" height="12" fill="url(#mainfloor-check)"/>
+  <rect x="257" y="11.5" width="87.25" height="12" fill="url(#mainfloor-check)"/>
   <!-- Dining west wall, with the opening to the garage entry /
        downstairs bath / under-stairs closet hallway (detailed on the
        downstairs-bath plan): 30" wide, its south jamb 34" north of
