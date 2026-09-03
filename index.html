@@ -1194,7 +1194,7 @@ LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
        glass. Drawn as the dashed line at the tub's front face, the standard
        plan symbol for a curtain.
        MOUNTED, NOT TENSION. The blocking is going into both end walls
-       anyway - the towel bar and hooks need it and it is a wall-opening job
+       anyway - the six towel hooks need it and it is a wall-opening job
        to retrofit - so once it is there the tension rod saves about $30 and
        gives up the only thing that matters. Glossy glazed tile, a 60.4"
        span and a wet liner is the case where tension rods creep and drop.
@@ -1215,30 +1215,27 @@ LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
        labels above. -->
   <text class="lbl-s" x="-108.8" y="131" text-anchor="middle" font-size="1.8" style="fill:#2A2A2A">rod + liner</text>
 
-  <!-- ============ TOWEL BAR + HOOKS ============
-       TOP WALL: SWAPPED 2026-09-03 (budget descope — hooks were "crazy
-       high" per-unit vs. a bar covering the same run) from 3 hooks to a
-       single 18" Kohler Purist towel bar, Matte Black — same collection
-       as the hooks/TP holder it replaces. Between the vanity's left end
-       (y 105.5) and the tub apron (y 127.7): 22.2" of wall available;
-       centred at the zone's own midpoint y=116.6, the 18" nominal bar
-       (~19.5" overall with mounting posts, same +1.5" hardware allowance
-       used elsewhere in this house's Purist bars) spans y 106.85..126.35,
-       clearing both ends (0.85" top, 1.35" bottom) — NOT the tight
-       107.6/109.35 margin an end-to-end fit would give, deliberately
-       centred instead of aligned to the old hook run. Face of tile is
-       x -139.2, bar projects 2.5" into the room (typical Purist bar
-       standoff). NEEDS SOLID BLOCKING behind the backer, added during
-       framing before waterproofing, same as the removed hooks required.
-
-       BOTTOM WALL: KEPT AS 3 HOOKS, not swapped — the exposed run here
-       (threshold's left corner y=109 to the tub apron y=127.7) is only
-       18.7", too tight for the same 18"-nominal/~19.5"-overall bar (would
-       overrun by ~0.8" past the threshold or the apron with no clearance
-       either way). Hooks only need their existing 10" span, so they stay.
-       Face of tile is x -78.8; same blocking requirement. -->
-  <rect x="-138.3" y="106.85" width="2.5" height="19.5" rx=".3" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16"/>
-  <text class="lbl-s on-dark" x="-134" y="116.6" text-anchor="middle" font-size="2.0" transform="rotate(-90 -134 116.6)">towel bar</text>
+  <!-- ============ TOWEL HOOKS ============
+       RESTORED 2026-09-03 to hooks on BOTH walls (the top wall's brief
+       2026-09-03 swap to a single 18" bar is reversed same day) — spec
+       switched from Kohler Purist to Moen Genta LX Single Robe Hook,
+       Matte Black (BH3803BL), confirmed real Ferguson price ~$22.13 each,
+       far cheaper per-unit than the Purist hook it replaces, which is why
+       hooks are viable again instead of needing a bar to control cost.
+       Three per wall, same positions/spacing as originally drawn.
+       Top wall: between the vanity's left end (y 105.5) and the tub apron
+       (y 127.7), hooks at y 114.35/119.35/124.35. Face of tile is x -139.2.
+       Bottom wall: between the threshold's left corner (y 109) and the tub
+       apron (y 127.7), hooks at y 113.35/118.35/123.35. Face of tile is
+       x -78.8. NEEDS SOLID BLOCKING behind the backer on both walls, added
+       during framing before waterproofing — a hook loaded with a wet towel
+       pulls out of tile and thinset on its own. -->
+  <g fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16">
+    <circle cx="-138.3" cy="114.35" r=".8"/>
+    <circle cx="-138.3" cy="119.35" r=".8"/>
+    <circle cx="-138.3" cy="124.35" r=".8"/>
+  </g>
+  <text class="lbl-s on-dark" x="-134" y="119.35" text-anchor="middle" font-size="2.0" transform="rotate(-90 -134 119.35)">towel hooks</text>
 
   <g fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16">
     <circle cx="-79.7" cy="113.35" r=".8"/>
@@ -1724,11 +1721,13 @@ Without these the wall band simply runs out into the floor. Six caps:
   <text class="lbl" x="101.6" y="135.5" text-anchor="middle" transform="rotate(-90 101.6 135.5)">TWIN</text>
   <text class="lbl-s" x="96.6" y="135.5" text-anchor="middle" transform="rotate(-90 96.6 135.5)">44 x 80</text>
 
-  <!-- ============ READING LIGHTS, IN-WALL PUCKS, PAIR PER BED
-       (BACK TO the 2026-08-30 headboard-wall layout, confirmed 2026-09-02
-       — was briefly 1/bed surface-mount swing-arm on the side wall,
-       2026-09-01 through 2026-09-02; product corrected same day, see
-       below) ============
+  <!-- ============ READING LIGHTS, IN-WALL PUCKS, ONE PER BED ============
+       DESCOPED 2026-09-03 (budget) from a pair per bed to a single one per
+       bed — kept the nightstand-side position on each bed (the one you'd
+       actually reach for while reading, right by the pedestal side table)
+       and dropped the far one. Right bed: kept y=30 (toward the nightstand
+       at y 48..63.75), dropped y=14. Left bed: kept y=126 (toward the
+       nightstand at y 92.25..108), dropped y=142.
        WAC Lighting Flipside task light, Black (BL-13505-BK) — ONE
        UNIVERSAL SKU, not a Left/Right pair (corrected 2026-09-02: this
        was briefly specified as the Flip swing-arm, BL-1021L/R-BK, until
@@ -1740,29 +1739,22 @@ Without these the wall band simply runs out into the floor. Six caps:
        close read of the actual fixture, not a simplification of a larger
        swing arm the way it was for Flip. Mounts and rotates in ANY
        orientation (330° horizontal, 110° vertical), so the identical
-       BL-13505-BK goes in all 4 positions with no handing to track.
-       Fingertip touch dimmer built into the canopy itself, same
-       no-separate-wall-dimmer benefit as Flip, plus a USB/USB-C charging
-       port at the base. Confirmed real prices across retailers:
-       $196.00-$231.00 each, $784.00-$924.00 for all four.
-       MOUNTED ON THE HEADBOARD WALL (x=144), flanking each bed's own
-       pillow centerline (y=22 right, y=134 left) by 8" each way — right
-       bed at y=14/y=30, left bed at y=126/y=142. Same wall the headboard
+       BL-13505-BK goes in both remaining positions with no handing to
+       track. Fingertip touch dimmer built into the canopy itself, plus a
+       USB/USB-C charging port at the base. Confirmed real prices across
+       retailers: $196.00-$231.00 each, $392.00-$462.00 for both.
+       MOUNTED ON THE HEADBOARD WALL (x=144). Same wall the headboard
        itself is against.
        RECTANGLES, NOT CIRCLES (confirmed 2026-09-02, matching the
        original 2026-08-30 in-wall mark) — more visible against the wall
        line at this small size than a circle. -->
-  <rect x="143.2" y="13.4" width=".6" height="1.2" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
-  <text class="lbl-s" x="140.5" y="14" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 14)" style="fill:#C79436">reading light</text>
   <rect x="143.2" y="29.4" width=".6" height="1.2" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
   <text class="lbl-s" x="140.5" y="30" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 30)" style="fill:#C79436">reading light</text>
 
-  <!-- Same in-wall puck pair as the right bed's, mirrored about the left
-       bed's own pillow centerline (y=134). -->
+  <!-- Same in-wall puck as the right bed's, mirrored about the left
+       bed's own pillow centerline (y=134), kept on its nightstand side. -->
   <rect x="143.2" y="125.4" width=".6" height="1.2" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
   <text class="lbl-s" x="140.5" y="126" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 126)" style="fill:#C79436">reading light</text>
-  <rect x="143.2" y="141.4" width=".6" height="1.2" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
-  <text class="lbl-s" x="140.5" y="142" text-anchor="middle" font-size="1.6" transform="rotate(-90 140.5 142)" style="fill:#C79436">reading light</text>
 
   <!-- ============ NIGHTSTANDS, ONE PER BED, TOWARD THE WINDOW ============
        Thuma Pedestal Side Table, Oak — floor-standing, 15.75" square x
@@ -3493,11 +3485,13 @@ Without these the wall band simply runs out into the floor. Six caps:
        the primary bedroom's WIC mirror family; a style choice, not a
        fit problem — the cabinet cleared the sloped ceiling fine).
        DRY-SIDE HOOKS, not a bar (confirmed 2026-09-02): the 12" towel bar
-       that used to sit here is dropped in favor of the same Kohler
-       Purist hooks used everywhere else in the house — hooks work fine
-       for hand towels too, so nothing is lost. DIALED BACK 2026-09-03
-       from 3 hooks to 2, same reasoning as the wet side — centreline
-       stays at x=42.7.
+       that used to sit here is dropped in favor of the same hooks used
+       everywhere else in the house — hooks work fine for hand towels too,
+       so nothing is lost. DIALED BACK 2026-09-03 from 3 hooks to 2, same
+       reasoning as the wet side — centreline stays at x=42.7. SPEC
+       SWITCHED 2026-09-03 (same day) from Kohler Purist to Moen Genta LX
+       Single Robe Hook, Matte Black (BH3803BL) — real Ferguson price
+       ~$22.13 each, far cheaper than the Purist hook.
        ICON SIZE CORRECTED 2026-09-02: briefly matched to the primary
        bath's raw radius (r=.8), but this room's viewBox is much smaller
        (180x130 vs. primary's 292x347 units), so the same radius rendered
