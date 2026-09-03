@@ -238,7 +238,7 @@
     made for it either — stripped of shiplap and open shelving, a plain
     apron-front basin is just a clean geometric shape, and it sits easily
     alongside the shaker doors and matte black hardware already there.</p>
-    <p class="sub">A black-and-white checkerboard floor, set on the diagonal, runs through the main living spaces of the home — bedrooms, living room, kitchen, dining room — at one consistent size throughout, each now framed by its own 12" solid Nero Marquina border (the primary bedroom's border added 2026-09-03; the living room's own border, and a single border framing the kitchen and dining room together as one continuous space, added the same day). The checkerboard stops at those borders, at the stairs (reclaimed wood treads), and at the wet/utility areas, which take a solid-black or small-format charcoal mosaic floor instead: Nero Marquina throughout the primary bedroom's WICs, the primary bath, the front entry and its connecting archways, and the downstairs hallway/closet/toilet-side bath floor; small-format charcoal mosaic in the secondary and downstairs baths' floors and the downstairs shower, paired with sea-glass-look tiled walls and matte black hardware. Walk-in closets throughout get built-in cabinetry and organizer systems. The downstairs half bath is converted into a full bath laid out as a curbless wet room.</p>
+    <p class="sub">A black-and-white checkerboard floor, set on the diagonal, runs through the main living spaces of the home — bedrooms, living room, kitchen, dining room — at one consistent size throughout, each now framed by its own 12" solid Nero Marquina border (the primary bedroom's border added 2026-09-03; the living room's own border, and a single border framing the kitchen and dining room together as one continuous space, added the same day). The checkerboard stops at those borders, at the stairs (reclaimed wood treads), and at the wet/utility areas, which take a solid-black or small-format charcoal mosaic floor instead: Nero Marquina throughout the primary bedroom's WICs, the primary bath, the front entry and its connecting archways, and the downstairs hallway/closet; small-format charcoal mosaic in the secondary bathroom's floor and throughout the downstairs bathroom (a curbless wet room, floored the same everywhere rather than split by wet/dry zone), paired with sea-glass-look tiled walls and matte black hardware. Walk-in closets throughout get built-in cabinetry and organizer systems. The downstairs half bath is converted into a full bath laid out as a curbless wet room.</p>
   </div>
 
   <div style="margin: 0 0 44px; padding: 14px 18px; background: #f0ebe5; border-radius: 6px; font-size: 12.5px; color: #666; line-height: 1.6;">
@@ -505,7 +505,7 @@
         </div>
         <div style="padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
           <div><b style="font-size: 14.5px;">Leona</b> <span style="color: #bbb; font-size: 13px;">&harr;</span> <b style="font-size: 14.5px;">Dawson</b></div>
-          <div style="font-size: 11.5px; color: #666; line-height: 1.45;">Whole-house checkerboard meets the bathroom floor at each of the three bathroom thresholds.</div>
+          <div style="font-size: 11.5px; color: #666; line-height: 1.45;">Whole-house checkerboard meets the bathroom floor at the secondary and downstairs bathroom thresholds (the primary bath threshold is solid Nero on both sides instead).</div>
         </div>
       </div>
       <div style="background: #fff; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
@@ -3523,23 +3523,22 @@ Without these the wall band simply runs out into the floor. Six caps:
        depth tile — no longer needed once both zones have slack). Wall
        band is no longer square: 76" wide x 70" deep (was 70x70). -->
   <rect x="-10.5" y="-4.5" width="76" height="70" fill="#C9C4B7"/>   <!-- wall band -->
-  <!-- FLOOR SPLIT, NEW 2026-09-03: the wet/dry split used to be purely
-       visual (same Dawson mosaic both sides, read only from the glass
-       line/drain/labels) — now it's a real material split too. The
-       shower (wet) KEEPS Dawson mosaic: small-format, non-diagonal,
-       genuinely better grip/drainage in a curbless wet zone, plus it's
-       inside the KERDI-membraned wet column so re-tiling it alone
-       later would mean redoing the waterproofing anyway. The toilet
-       (dry) side switches to solid Nero Marquina, matching the
-       hallway/closet run it opens onto (see the HALLWAY CONNECTOR and
-       UNDER-STAIRS WALK-IN CLOSET sections below) — same real cost
-       cut as the primary bath/WIC switch upstairs ($6.08/sf vs
-       $26.45/sf for the same Leona tile family, SKU 11868). Labels and
-       linework that sit on either floor use the .on-dark / .red-lt /
-       .thin-lt variants so they stay legible — both fills are dark
-       enough that nothing here needed to change for that. -->
-  <rect x="-6"  y="0" width="35" height="61" fill="url(#dsbath-dawson)"/>  <!-- shower (wet) — stays Dawson -->
-  <rect x="29" y="0" width="32" height="61" fill="#262322"/>  <!-- toilet (dry) — switched Dawson -> solid Nero -->
+  <!-- FLOOR SPLIT HISTORY, 2026-09-03: briefly given a real wet/dry
+       material split (was purely visual before that — same Dawson
+       mosaic both sides, read only from the glass line/drain/labels).
+       The toilet (dry) side was switched to solid Nero Marquina the
+       same day, matching the hallway/closet run it opens onto — but
+       REVERTED the same day (corrected instruction: this whole room
+       is a curbless WET ROOM, waterproofed as one unit with no curb
+       between the two halves — "full wet" was the actual ask, not
+       just the doorway). Both halves are Dawson again, same as before
+       any of this day's changes; only the hallway/closet outside this
+       room's own footprint stayed on the Nero switch (see the HALLWAY
+       CONNECTOR and UNDER-STAIRS WALK-IN CLOSET sections below).
+       Labels and linework that sit on the floor use the .on-dark /
+       .red-lt / .thin-lt variants so they stay legible against it. -->
+  <rect x="-6"  y="0" width="35" height="61" fill="url(#dsbath-dawson)"/>  <!-- shower (wet) -->
+  <rect x="29" y="0" width="32" height="61" fill="url(#dsbath-dawson)"/>  <!-- toilet — reverted to Dawson, same-day correction: the whole room is "full wet" -->
 
   <!-- ============ DOOR OPENING ============
        The 28" pocket-door opening is a real break in the top wall, not just a
@@ -3551,19 +3550,12 @@ Without these the wall band simply runs out into the floor. Six caps:
          y 31..61  30" cavity wall the slab pockets into (it slides right)
        Those three runs are exactly the 3"/28"/30" dimensions on the right.
 
-       THRESHOLD KEPT DAWSON, 2026-09-03 (revised the same day as the
-       floor split above): this is the only spot where the toilet/dry
-       side's Nero switch doesn't reach all the way to the door — the
-       room is a curbless WET ROOM overall (no curb between the
-       "wet"/"dry" halves, waterproofed as one unit), so the doorway
-       itself still sees wet feet/splash even though it sits on the
-       toilet side's own footprint. Kept the small-format Dawson mosaic
-       here for the same grip/practicality reason it stays in the
-       shower, rather than carrying the toilet side's Nero all the way
-       to the threshold. This does reintroduce two short seams (Nero
-       toilet floor -> Dawson threshold -> Nero hallway) where there
-       used to be one continuous fill straight through the slider —
-       accepted as the right tradeoff for a wet-room doorway. -->
+       THRESHOLD STAYS DAWSON, matching the toilet room's own floor on
+       the room side (both reverted together, see the FLOOR SPLIT
+       HISTORY comment above) — Nero on the hallway side only, so
+       there's one seam here (Dawson bath -> Nero hallway) rather than
+       the continuous single-material run this doorway had before any
+       of this day's changes. -->
   <rect x="61" y="3" width="4.5" height="28" fill="url(#dsbath-dawson)"/>
 
   <!-- ============ NOOKS ============
