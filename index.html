@@ -715,34 +715,41 @@
          the floor is a white-filled fixture and reads on its own. The play
          floor to the left of the beds carries no label — with the finish drawn it is
          obvious, and the caption was only restating it. -->
-    <!-- ANCHOR, RE-DERIVED 2026-08-30 for the bedroom's own top-left
-         corner (this pattern is no longer shared with the WIC/bath
-         hallway — that's Dawson now, so the old bath-threshold anchor
-         below has nothing left to serve).
+    <!-- ANCHOR, RE-DERIVED 2026-09-03 to BALANCE the field within the new
+         12" border (see the border comment below) rather than to hit a
+         wall/threshold — since the border now separates this field from
+         every wall, the old doorway-alignment constraints no longer apply
+         to it at all (superseded the 2026-08-30 top-left-corner anchor,
+         which itself superseded an even earlier bath-threshold anchor;
+         same reasoning chain, new requirement).
 
-         REQUIREMENT: a WHOLE WHITE tile at the bedroom's top-left
-         corner (screen), its top vertex on the top wall (local x=0)
-         and its left vertex on the wood threshold (local y=156) —
-         not a half-diamond cut at either edge.
+         REQUIREMENT: the field (inset 12" all round: local 12,12 to
+         132,144, so its own center sits at local (72,78) — exactly the
+         room's own center too, since the border is equal-width on all
+         sides) reads as a MIRROR IMAGE left-to-right and top-to-bottom —
+         same tile fraction at all four edges/corners, not an arbitrary
+         cut favoring one side.
 
-         A diamond's vertices sit S = 24/sqrt(2) = 16.9706" out from
-         its own center along the room's own x/y axes. So the two
-         constraints (top vertex at x=0, left vertex at y=156) pin the
-         white tile's center at local (S, 156-S) = (16.9706, 139.0294).
+         This pattern (a standard 24" checkerboard before the 45° spin)
+         has full 4-way mirror symmetry about any of its own grid
+         vertices or square centers — points (12a,12b) for any integers
+         a,b in pattern space. Anchoring pattern-space (0,0) — a grid
+         vertex, where two black and two white 24" squares meet — at
+         world (72,78) puts a symmetry point exactly on the field's own
+         center, which mirror-balances the whole field for free.
+
          Solving patternTransform="translate(dx,dy) rotate(45)" for
-         that world point landing on a LIGHT quadrant center (pattern
-         space (36,12), one of the two light centers in the 48x48
-         repeat) gives dx=0 exactly and dy = 156 - 36*sqrt(2) =
-         105.0883. Verified: with this transform, pattern-space (u,v)
-         at world (16.9706,139.0294) comes back (36,12) — a light
-         center, not a vertex or a dark one.
-
-         SUPERSEDES the earlier bath-threshold anchor (vertex at
-         (-69,75.0294), tuned for the WIC hallway's Dawson-adjacent
-         alignment before the WIC switched to Dawson everywhere) —
-         that constraint no longer applies to this pattern at all. -->
+         world (72,78) at pattern (0,0) is trivial: rotate(45) of the
+         origin is still the origin, so dx=72, dy=78 exactly — no
+         irrational offset needed. Verified (assets/sync-floorplan.py
+         doesn't run this, checked by hand + a scratch script): all four
+         field corners land on the SAME tile-fragment size, mirrored
+         pair for pair — (12,12)<->(132,144) at 6.905"/4.243" from the
+         nearest tile edge, (132,12)<->(12,144) at 4.243"/6.905" — and
+         the center point itself is the vertex crossing (2 black + 2
+         white diamond corners meeting at the room's exact middle). -->
     <pattern id="pbed-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(0,105.0883) rotate(45)">
+             patternTransform="translate(72,78) rotate(45)">
       <rect width="48" height="48" fill="#F1EEE7"/>
       <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
       <rect x="24" y="24" width="24" height="24" fill="#262322"/>
@@ -765,14 +772,14 @@
        field rect (inset 12" all round: 12,12 to 132,144) painted on top in
        the checkerboard pattern — simple two-rect z-order rather than a
        compound cutout path.
-       NOTE: the field's original diagonal anchor (see the pattern's own
-       definition above) was tuned for a whole white tile at the FULL
-       room's top-left corner (world 0,0). That guarantee does NOT carry
-       over to this inset field's own corner (12,12) — the pattern simply
-       continues from its existing world-space anchor, so whatever tile
-       fraction lands at the new inset edge is what it is. Flagged as a
-       real on-site detail (dry-lay and confirm the border-to-field cut
-       line balances visually) rather than re-derived here. -->
+       BALANCED 2026-09-03: the pattern's own anchor (see its definition
+       above) is now re-derived specifically for this inset field, so the
+       diagonal reads as a left-right/top-bottom mirror image within the
+       border on all four sides — see the pattern's own ANCHOR comment
+       for the math. (An earlier version of this comment flagged the
+       balance as an unresolved on-site detail, from when the border was
+       first added and the pattern still used its older, wall-oriented
+       anchor; that gap is closed now.) -->
   <rect x="0" y="0" width="144" height="156" fill="#262322"/>
   <rect x="12" y="12" width="120" height="132" fill="url(#pbed-check)"/>
 
