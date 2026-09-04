@@ -4106,11 +4106,13 @@ Without these the wall band simply runs out into the floor. Six caps:
        clear of the garage door's swing (hinge 105.5,-1.5, radius 30,
        clear only for local x=65.5..75.5 or local y>28.5) — but that put
        it at the dead end of the hallway, nowhere near either doorway.
-       This rug instead sits right where you actually step in, shifted
-       (per instruction) as far toward the hallway's screening curtain
-       (y=-2.8) as it can go while keeping a 2" gap from it: y=-0.8..44.2
-       — closer to both the garage door and the bath's pocket door at
-       y=3 than the original y=5..50 placement. CENTERED across the
+       This rug instead sits right where you actually step in: shifted
+       first to y=-0.8..44.2 (2" clear of the hallway's screening
+       curtain at y=-2.8), then nudged 1" further right, to y=0.2..45.2,
+       to balance that curtain-side gap (now 3") against the remaining
+       clear run past the rug's far edge toward the garage entry —
+       closer to both the garage door and the bath's pocket door at y=3
+       than the original y=5..50 placement. CENTERED across the
        hallway's 40" width per instruction — x=72..99 (6.5" margin each
        side) — rather than flush against the closet-side wall. Both the
        centering and the further-left shift pull more of the rug into
@@ -4120,7 +4122,7 @@ Without these the wall band simply runs out into the floor. Six caps:
        wool weave rather than a thick rubber-backed commercial mat, the
        same tradeoff most houses make wherever a rug sits by a swinging
        door. -->
-  <rect x="72" y="-0.8" width="27" height="45" rx="1" fill="#918A6F" stroke="#6E6852" stroke-width=".3"/>
+  <rect x="72" y="0.2" width="27" height="45" rx="1" fill="#918A6F" stroke="#6E6852" stroke-width=".3"/>
   <!-- top wall band, split around the garage entry door opening
        (y=-1.5..28.5) — this rect used to run solid the full 75.5"
        depth, which was the actual bug: the garage door's own wall
