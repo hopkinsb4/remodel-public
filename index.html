@@ -2420,48 +2420,46 @@ Without these the wall band simply runs out into the floor. Six caps:
       <rect x="0"  y="0"  width="24" height="24" fill="#F1EEE7"/>
       <rect x="24" y="24" width="24" height="24" fill="#F1EEE7"/>
     </pattern>
-    <!-- LIVING ROOM ONLY — RE-ANCHORED 2026-09-03 to BALANCE the field
-         within its new 12" border (see the border comment at the floor
-         rect below), superseding all of the wall/corner-oriented
-         history below (kept for the record, no longer the active
-         reasoning): the room's own two corner-alignment concerns
-         (west/east tile points at x=0/171, and a clean black corner at
-         the visible (0,23) wedge) both lived right at the walls this
-         border now sits between the field and — so both are moot the
-         same way the primary bedroom's old doorway-alignment anchor
-         became moot once ITS border went in.
+    <!-- LIVING ROOM ONLY — RE-ANCHORED AGAIN 2026-09-04, per instruction,
+         now that the border is gone (see the floor rect below) and the
+         field meets the built-ins directly at y=24: shifted dy from
+         96.5 (the old bordered field's center) to 24 (the built-ins'
+         own face) so the pattern's grid-vertex row lands EXACTLY on
+         that line. The practical effect: the entire y=24 edge comes out
+         one solid dark color, checked continuously across the full
+         171" width (no white intrusion at all, not even a thin sliver)
+         — a clean, unbroken diagonal-tile edge running straight against
+         the entertainment center/stairs/pony-wall, instead of the mixed
+         black-and-white cut the old centered anchor gave that edge.
+         Moving away from y=24 into the room, white tiles appear and
+         grow exactly as expected for a diagonal grid touching a wall at
+         a vertex row (white_frac 0% at y=24, ~12% at y=26, ~35% at
+         y=30, etc.) — the classic clean look of black diamond points
+         touching a wall.
+         The south wall (y=169) is NOT symmetric under this anchor
+         (dy is no longer centered), so it isn't a clean solid edge —
+         but the sleeper sofa sits directly against that whole wall, so
+         it's fully hidden regardless. Checked anyway: still a healthy
+         8.9" minimum real sliver there, nothing fragile.
+         West/east walls (x=0/171) actually improved as a side effect:
+         17.1" minimum real sliver (a few single points where a grid
+         vertex just grazes the wall — a tile corner touching it, not a
+         fragile strip — same non-issue as the kitchen/dining and
+         primary-bedroom anchors), up from 8.2" under the old centered
+         anchor.
+         dx unchanged at 85.5 (the field's own x-center, for left-right
+         symmetry) — only dy moved.
 
-         Same balancing technique as the primary bedroom: this pattern
-         has full 4-way mirror symmetry about any of its own grid
-         vertices, so anchoring pattern-space (0,0) — a grid vertex —
-         at the field's own center mirrors the field left-right and
-         top-bottom for free. As with the bedroom, rotate(45) of the
-         origin is still the origin, so dx/dy are just the field's own
-         center point — no irrational offset needed.
-
-         RE-CENTERED AGAIN 2026-09-03 (same day, after the border's own
-         north edge moved — see the floor rect's CORRECTED comment
-         below): the field is no longer 12,12 to 159,157 — its north
-         edge moved to 36 to clear the entertainment center/stairs
-         built-ins, so the field is now 12,36 to 159,157 and its center
-         moved from (85.5,84.5) to (85.5,96.5). dx=85.5, dy=96.5.
-
-         ORIGINAL HISTORY (2026-08-30, no longer the active anchor):
-         grout width nudged so the west and east walls (x=0/171) got
-         exact tile points — the room's own 171" width divides evenly
-         by a 24.1831" tile module (171/10 = 17.1" of vertex-to-vertex
-         spacing, was 24.000" — +0.183", a normal grout-width
-         adjustment, not a different tile). First anchored at y=0 (the
-         room's true NW corner, hidden behind the 23"-deep built-in,
-         which knocked the built-in's own visible front face at y=23
-         off its points); moved to y=-11.2 (put a VERTEX at (0,23), but
-         a vertex is where 4 diamonds meet, so it read as a 50/50
-         split, not a solid corner); moved again to y=-28.3 (put a
-         tile CENTER at (0,23) instead, one clean black corner). All
-         of that was about phases at the room's own walls — superseded
-         now that the border, not the wall, is what the field meets. -->
+         HISTORY (no longer the active reasoning, kept for the record):
+         previously re-anchored 2026-09-03 to center the field inside
+         its (now-removed) 12" border, first at (85.5,84.5), then
+         (85.5,96.5) once the border's own north edge moved to clear the
+         built-ins. Before that, on 2026-08-30, the anchor chased
+         wall-corner alignment directly (y=0, then -11.2, then -28.3)
+         — all superseded first by the border, now by this vertex-row-
+         on-the-built-ins-face approach. -->
     <pattern id="mainfloor-check-lr" width="48.3661" height="48.3661" patternUnits="userSpaceOnUse"
-             patternTransform="translate(85.5,96.5) rotate(45)">
+             patternTransform="translate(85.5,24) rotate(45)">
       <!-- COLORS SWAPPED 2026-09-03: with this centered anchor, the
            narrower cut along the field's left/right border edges
            landed on the WHITE tile (10-10.5" runs vs. black's
