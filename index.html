@@ -2410,9 +2410,42 @@ Without these the wall band simply runs out into the floor. Six caps:
          their current world positions; whatever tile color this new
          phase gives them is not re-verified in each piece's own inline
          comment below (those are now stale) — revisit if/when the
-         furniture itself is repositioned. -->
+         furniture itself is repositioned.
+
+         RE-ANCHORED A THIRD TIME 2026-09-04 (same day), per instruction,
+         to give the two EXPOSED walls (the ones with no cabinets in
+         front of them — dining's north/patio-door wall, and the shared
+         kitchen+dining west wall) the same clean all-dark edge the
+         living room got against its entertainment center. The south and
+         east walls stay cabinet-covered and are left alone, same logic
+         as the living room's sofa-covered south wall.
+         The two axes are NOT symmetric for this pattern (rotate(45),
+         sin45=cos45): a HORIZONTAL wall at Y=dy is provably 100% one
+         solid color for ANY dx (at Y=dy, pattern coords reduce to
+         v=-u, which is always the dark condition here) — so dy=-113.5
+         (the dining north wall) gives a fully clean dark edge with no
+         dependency on dx at all. But a VERTICAL wall at X=dx reduces
+         instead to u=v, which is always the *light* condition — so
+         dx=245 (the west wall) would be perfectly clean too, but white,
+         the opposite of what a "black edge like the living room" needs.
+         There is no dx that makes a vertical wall exactly 100% dark in
+         this pattern; only the vertex phase (dx=X0 itself) is exactly
+         clean, and it's the wrong color. Scanned dx numerically instead
+         (real wall segments only, dy held at -113.5): the practical
+         optimum lands at another tile-center phase, dx=245-12√2=
+         228.0294 — 99.98%+ dark on every real segment of the west wall
+         (dining above and below the hallway opening, kitchen above and
+         below its own archway), with only sub-0.06" vertex-touch points
+         left over (a tile corner grazing the wall, not a real sliver —
+         same non-issue called out on the living room/kitchen anchors
+         above) and a genuine 2.19" minimum real dark fragment, nowhere
+         near fragile. Visually indistinguishable from the living room's
+         fully-clean edge.
+         dy=-113.5 (was -2.0956); dx=228.0294 (was 300.625). Furniture
+         again not repositioned or re-checked for tile color — same
+         standing rule as both corrections above. -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(300.625,-2.0956) rotate(45)">
+             patternTransform="translate(228.0294,-113.5) rotate(45)">
       <!-- COLORS SWAPPED 2026-09-03 (explicit instruction, no re-analysis
            done against furniture/sliver positions): background and the
            two quadrant squares traded fills. -->
