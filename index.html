@@ -2499,12 +2499,13 @@ Without these the wall band simply runs out into the floor. Six caps:
          repositioned or re-checked for tile color. -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
              patternTransform="translate(228.05,96) rotate(45)">
-      <!-- COLORS SWAPPED 2026-09-03 (explicit instruction, no re-analysis
-           done against furniture/sliver positions): background and the
-           two quadrant squares traded fills. -->
-      <rect width="48" height="48" fill="#262322"/>
-      <rect x="0"  y="0"  width="24" height="24" fill="#F1EEE7"/>
-      <rect x="24" y="24" width="24" height="24" fill="#F1EEE7"/>
+      <!-- COLORS SWAPPED AGAIN 2026-09-04, per instruction, no re-analysis
+           against furniture/sliver positions — background and the two
+           quadrant squares traded fills again (back to the pre-2026-09-03
+           arrangement). -->
+      <rect width="48" height="48" fill="#F1EEE7"/>
+      <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
+      <rect x="24" y="24" width="24" height="24" fill="#262322"/>
     </pattern>
     <!-- LIVING ROOM ONLY — RE-ANCHORED AGAIN 2026-09-04, per instruction,
          now that the border is gone (see the floor rect below) and the
@@ -2583,10 +2584,13 @@ Without these the wall band simply runs out into the floor. Six caps:
            which quadrants are dark/light (background now dark, the
            two quadrant squares now light) puts BLACK on that narrow
            cut instead, so it reads as part of the border rather than
-           a stray white edge. -->
-      <rect width="48.3661" height="48.3661" fill="#262322"/>
-      <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#F1EEE7"/>
-      <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#F1EEE7"/>
+           a stray white edge.
+           SWAPPED BACK 2026-09-04, per instruction, no re-analysis
+           against furniture/sliver positions — background and the two
+           quadrant squares traded fills again. -->
+      <rect width="48.3661" height="48.3661" fill="#F1EEE7"/>
+      <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#262322"/>
+      <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#262322"/>
     </pattern>
     <!-- Edward Martin Dawson 2x2 mosaic, charcoal — same pattern/module
          as the downstairs-bath plan's Dawson swatch. Only used at the
