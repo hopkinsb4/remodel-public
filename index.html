@@ -4101,28 +4101,28 @@ Without these the wall band simply runs out into the floor. Six caps:
        from the WaterHog mat this replaces, which put its long 35" side
        on local x (a doormat spanning the corridor's width instead).
 
-       PLACEMENT — "first step in from the entry and bath": the WaterHog
-       was deliberately placed at y=35.5..58.5, past BOTH doors, to stay
-       clear of the garage door's swing (hinge 105.5,-1.5, radius 30,
-       clear only for local x=65.5..75.5 or local y>28.5) — but that put
-       it at the dead end of the hallway, nowhere near either doorway.
-       This rug instead sits right where you actually step in: shifted
-       first to y=-0.8..44.2 (2" clear of the hallway's screening
-       curtain at y=-2.8), then nudged 1" further right, to y=0.2..45.2,
-       to balance that curtain-side gap (now 3") against the remaining
-       clear run past the rug's far edge toward the garage entry —
-       closer to both the garage door and the bath's pocket door at y=3
-       than the original y=5..50 placement. CENTERED across the
-       hallway's 40" width per instruction — x=72..99 (6.5" margin each
-       side) — rather than flush against the closet-side wall. Both the
-       centering and the further-left shift pull more of the rug into
-       the garage door's theoretical swing envelope than the original
-       flush-left, further-right placement would — accepted per
-       instruction, and still reasonable for a low-profile hand-tufted
-       wool weave rather than a thick rubber-backed commercial mat, the
-       same tradeoff most houses make wherever a rug sits by a swinging
-       door. -->
-  <rect x="72" y="0.2" width="27" height="45" rx="1" fill="#918A6F" stroke="#6E6852" stroke-width=".3"/>
+       PLACEMENT: went through a few iterations before landing here.
+       The WaterHog this rug replaces was deliberately placed at
+       y=35.5..58.5, past both doors, to stay clear of the garage door's
+       swing (hinge 105.5,-1.5, radius 30, clear only for local
+       x=65.5..75.5 or local y>28.5) — but that put it at the dead end
+       of the hallway, nowhere near either doorway. This rug was then
+       shifted toward the entry instead (y=-0.8..44.2, then nudged to
+       y=0.2..45.2) to catch the first step in from the garage door and
+       the bath's pocket door at y=3. FINAL, per instruction: CENTERED
+       along the full 75.5" hallway length instead (local y, the
+       corridor's long axis, which is what reads as left-right in plan
+       view) — y=5.25..50.25, splitting the leftover run evenly between
+       the hallway's screening curtain (y=-2.8) and its far/dead end
+       (y=65.5). Still CENTERED across the hallway's 40" width too
+       (local x, which reads as up-down in plan view) — x=72..99, 6.5"
+       margin each side — rather than flush against the closet-side
+       wall. Centering both ways pulls part of the rug into the garage
+       door's theoretical swing envelope — accepted per instruction, and
+       reasonable for a low-profile hand-tufted wool weave rather than a
+       thick rubber-backed commercial mat, the same tradeoff most houses
+       make wherever a rug sits by a swinging door. -->
+  <rect x="72" y="5.25" width="27" height="45" rx="1" fill="#918A6F" stroke="#6E6852" stroke-width=".3"/>
   <!-- top wall band, split around the garage entry door opening
        (y=-1.5..28.5) — this rect used to run solid the full 75.5"
        depth, which was the actual bug: the garage door's own wall
