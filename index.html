@@ -1268,30 +1268,42 @@ LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
        each end) rather than hooks bunched in the middle with dead wall
        on either side. Moen Genta LX Single Robe Hook, Matte Black
        (BH3803BL), confirmed real Ferguson price ~$22.13 each.
-       RECENTERED same day: both walls now share one set of positions,
+       RECENTERED 2026-09-03: both walls now share one set of positions,
        derived from the real tub-to-vanity zone — the vanity's left end
-       (y 105.5) to the tub apron (y 127.7), 22.2" — instead of each wall
-       having its own opening definition. Even thirds of that zone put
-       hooks at y 112.9/120.3 (7.4" margins, 7.4" between). The bottom
-       wall's hooks move off their old threshold-based positions
-       (y 115.23/121.47, measured from the threshold's left corner at
-       y 109 rather than the vanity) to land on the exact same y as the
-       top wall's — both walls' hooks now align straight across the tub.
+       to the tub apron (y 127.7) — instead of each wall having its own
+       opening definition. The bottom wall's hooks move off their old
+       threshold-based positions (y 115.23/121.47, measured from the
+       threshold's left corner at y 109 rather than the vanity) to land
+       on the same y as the top wall's — both walls' hooks align
+       straight across the tub.
+
+       CORRECTED 2026-09-04 (not 3-way centered, caught by inspection):
+       that recentering used the vanity's OLD left edge, y 105.5 — stale
+       even at the time, since the hall-move rework above (see the
+       "WHAT THE 174 COST" comment) had already shifted the vanity's
+       walkway-centered position from y 69.5..105.5 to y 74..110 without
+       this comment or the hook math being updated to match. Against the
+       real current vanity edge (110), the 105.5-based hooks were
+       centered on a 22.2" zone that no longer exists — the real zone is
+       only 17.7" (110 to 127.7) — so they land 4.5" too far toward the
+       vanity, off-center against the actual gap.
+       Recomputed on the true 17.7" zone, even thirds (5.9" margins,
+       5.9" between): y 115.9/121.8.
        Face of tile: x -139.2 (top wall), x -78.8 (bottom wall). NEEDS
        SOLID BLOCKING behind the backer on both walls, added during
        framing before waterproofing — a hook loaded with a wet towel
        pulls out of tile and thinset on its own. -->
   <g fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16">
-    <circle cx="-138.3" cy="112.9" r=".8"/>
-    <circle cx="-138.3" cy="120.3" r=".8"/>
+    <circle cx="-138.3" cy="115.9" r=".8"/>
+    <circle cx="-138.3" cy="121.8" r=".8"/>
   </g>
-  <text class="lbl-s on-dark" x="-134" y="116.6" text-anchor="middle" font-size="2.0" transform="rotate(-90 -134 116.6)">towel hooks</text>
+  <text class="lbl-s on-dark" x="-134" y="118.85" text-anchor="middle" font-size="2.0" transform="rotate(-90 -134 118.85)">towel hooks</text>
 
   <g fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16">
-    <circle cx="-79.7" cy="112.9" r=".8"/>
-    <circle cx="-79.7" cy="120.3" r=".8"/>
+    <circle cx="-79.7" cy="115.9" r=".8"/>
+    <circle cx="-79.7" cy="121.8" r=".8"/>
   </g>
-  <text class="lbl-s on-dark" x="-75.4" y="116.6" text-anchor="middle" font-size="2.0" transform="rotate(-90 -75.4 116.6)">towel hooks</text>
+  <text class="lbl-s on-dark" x="-75.4" y="118.85" text-anchor="middle" font-size="2.0" transform="rotate(-90 -75.4 118.85)">towel hooks</text>
 
   <!-- ============ BATHROOM SCALE ============
        FITINDEX 28WBL, WHITE tempered glass, 10.2 x 10.2 x 0.9 - the one on
@@ -1324,15 +1336,21 @@ LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
 
   <!-- ============ VANITY — WEST ELM ELLINGTON 36" SINGLE ============
        Top wall, CENTRED ON THE WALKWAY OPENING rather than on the wall
-       itself. The 41" opening is y 67..108, so its centreline is y 87.5 and
-       the 36" cabinet sits y 69.5..105.5, dead ahead as you come through.
-       The centreline is drawn.
-         clear to the right wall (y 40.5)   29"
-         clear to the tub apron (y 127.7)   22.2"
+       itself. CORRECTED 2026-09-04 (this block was stale): the 41"
+       opening is y 71.5..112.5 (moved from 67..108 by the hall-move
+       rework — see the "WHAT THE 174 COST" comment above), so its
+       centreline is y 92 and the 36" cabinet sits y 74..110, dead ahead
+       as you come through. The cabinet/basin/centreline were already
+       correctly redrawn at the time of that rework; only this prose and
+       the two "clear to" distances below (and, separately, the towel
+       hooks' own zone — see that comment) hadn't been updated to match
+       until now. The centreline is drawn.
+         clear to the right wall (y 40.5)   33.5"
+         clear to the tub apron (y 127.7)   17.7"
        THE 10.2" PROBLEM IS GONE. When this was centred on the walkway
        against the 42"-deep Avec it left a 10.2" pocket at the tub, and the
        top end of that pocket is exactly where you kneel to reach the valve.
-       Going back to a 30" tub gives all 12" of that back: 22.2" now, on an
+       Going back to a 30" tub gives room back at the tub end, on an
        alignment that is still dead on the opening centreline. That is what
        the tub change bought.
        Nothing else in the room takes a 36" run: the bottom wall is cut by the
