@@ -4074,19 +4074,52 @@ Without these the wall band simply runs out into the floor. Six caps:
        switches this same day. The shower stays Dawson; everything
        else in this utility/transition run is now Nero. -->
   <rect x="65.5" y="-10" width="40" height="75.5" fill="#262322"/>
-  <!-- GARAGE-ENTRY HALLWAY MAT (budget section 11), added 2026-09-04:
-       WaterHog Squares, Charcoal, 23"x35" (Bungalow Flooring, Made in
-       USA, $44.95) — absorbent (rubber-backed PET fiber, raised
-       "Water Dam" border), for wetter/dirtier shoes than the front
-       entry sees. The garage door's swing (hinge at 105.5,-1.5,
-       radius 30, opening y=-1.5..28.5) occupies a bounding box of
-       roughly x=75.5..105.5, y=-1.5..28.5 — clear of x=65.5..75.5 the
-       whole way down, and clear of the full 40" width once past
-       y=28.5. Placed in that clear run, 35" across the hallway's 40"
-       width (x=67.5..102.5, 2.5" margin each side) and 23" deep within
-       the clear 28.5..65.5 run (y=35.5..58.5, 7" margin top and
-       bottom, comfortably past the swing's own bounding box). -->
-  <rect x="67.5" y="35.5" width="35" height="23" rx="1" fill="#3A3632" stroke="#57524C" stroke-width=".3"/>
+  <!-- GARAGE-ENTRY HALLWAY RUG (budget section 11), updated 2026-09-04:
+       Chris Loves Julia x Loloi Bradley, Sage/Olive, 2'3"x3'9" (27"x45"),
+       hand-tufted 100% wool, GoodWeave-certified (Home Depot marketplace,
+       $83.53) — replaces the WaterHog Squares Charcoal mat. Swapped to an
+       olive/sage tone instead of duplicating the front entry's Chloe &
+       Olivia Overdyed Gray: this is a "furniture"-category soft good the
+       owner can swap out every couple of years, so it doesn't need to
+       match the entry, and olive ties to the living room sofa's own
+       accent color. Verified by product photo before adding (see the
+       front entry's own rug note for why: this seller's overdyed
+       "Green" line runs bright emerald/teal, not true olive, in every
+       SKU checked — Bradley is a different, tonal-stripe collection with
+       a genuine muted sage/olive colorway). Wool for real absorbency,
+       matching the front entry's material choice.
+
+       ORIENTED AS AN ACTUAL HALL RUNNER — rotated 90° from how the same
+       shape reads at the front entry: this whole file is wrapped in a
+       single <g transform="rotate(-90)"> (see the file-level comment),
+       under which local +x displays as screen-UP and local +y displays
+       as screen-RIGHT, so the hallway's 75.5"-long axis (local y) is
+       what renders horizontally and its 40"-wide axis (local x) renders
+       vertically — confirmed empirically by test-rendering marker dots
+       at the hallway's four corners rather than trusting the rotation
+       math alone. So the rug's LONG 45" dimension is placed along local
+       y (running along the corridor, the way a hall runner should) and
+       its SHORT 27" dimension along local x — the opposite assignment
+       from the WaterHog mat this replaces, which put its long 35" side
+       on local x (a doormat spanning the corridor's width instead).
+
+       PLACEMENT — "first step in from the entry and bath": the WaterHog
+       was deliberately placed at y=35.5..58.5, past BOTH doors, to stay
+       clear of the garage door's swing (hinge 105.5,-1.5, radius 30,
+       clear only for local x=65.5..75.5 or local y>28.5) — but that put
+       it at the dead end of the hallway, nowhere near either doorway.
+       This rug instead sits right where you actually step in: x=65.5..
+       92.5 (flush against the closet-side wall, using the always-clear
+       10" strip plus a bit more) and y=5..50 (starting just past the
+       hallway's screening curtain at y=-2.8, immediately by both the
+       garage door and the bath's pocket door at y=3). Its near corner
+       does sit inside the garage door's theoretical swing envelope
+       (~18% of the rug's area, concentrated in that one corner) — judged
+       acceptable here where it wasn't for the WaterHog, because this is
+       a low-profile hand-tufted wool weave rather than a thick
+       rubber-backed commercial mat, the same tradeoff most houses make
+       wherever a rug sits by a swinging door. -->
+  <rect x="65.5" y="5" width="27" height="45" rx="1" fill="#918A6F" stroke="#6E6852" stroke-width=".3"/>
   <!-- top wall band, split around the garage entry door opening
        (y=-1.5..28.5) — this rect used to run solid the full 75.5"
        depth, which was the actual bug: the garage door's own wall
