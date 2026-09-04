@@ -2471,9 +2471,34 @@ Without these the wall band simply runs out into the floor. Six caps:
          just visibly less clean than the fully-solid edges the prior
          anchor gave them.
          dy=24 (was -113.5); dx=227.48 (was 228.0294). Furniture again
-         not repositioned or re-checked for tile color. -->
+         not repositioned or re-checked for tile color.
+
+         RE-ANCHORED A FIFTH TIME 2026-09-04 (same day), per instruction,
+         for symmetry across the two front-entry archways (living room
+         <-> entryway and entryway <-> kitchen, both the same 50"-wide
+         cased opening at y=71..121, jambs at x=171/180 and x=236/245).
+         Proved this pattern is exactly mirror-symmetric about the
+         horizontal line Y=dy, for any dx (verified numerically: 0
+         mismatches across 2000 random (X,t) probes comparing
+         color(X,dy+t) to color(X,dy-t)) — so setting dy to the
+         archway's own Y-midpoint, 96, makes the checkerboard a true
+         mirror image above vs. below the archway's centerline, on both
+         the kitchen and dining side of it. This is the same "align with
+         the living room" idea one step further: both patterns now share
+         dy=96 (was 24), so they stay mutually aligned too.
+         Re-scanned dx for wall quality under the new dy=96 (same real
+         wall segments as before): dx=228.05 — west wall 99.9%+ dark
+         across all four real segments (worst real fragment 12.35",
+         better than any prior anchor), patio-door wall 55.6%/100% dark
+         across its two segments (worst real fragment 8.9" — healthy,
+         though the west-of-door segment is closer to a genuine 50/50
+         mix than a mostly-dark edge; that segment's darkness ceiling
+         under dy=96 tops out around there no matter which dx is
+         chosen, checked across the pattern's full dx period).
+         dy=96 (was 24); dx=228.05 (was 227.48). Furniture again not
+         repositioned or re-checked for tile color. -->
     <pattern id="mainfloor-check" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(227.48,24) rotate(45)">
+             patternTransform="translate(228.05,96) rotate(45)">
       <!-- COLORS SWAPPED 2026-09-03 (explicit instruction, no re-analysis
            done against furniture/sliver positions): background and the
            two quadrant squares traded fills. -->
@@ -2511,6 +2536,35 @@ Without these the wall band simply runs out into the floor. Six caps:
          dx unchanged at 85.5 (the field's own x-center, for left-right
          symmetry) — only dy moved.
 
+         RE-ANCHORED AGAIN 2026-09-04 (same day), per instruction, for
+         symmetry across the two front-entry archways this room shares
+         with the entryway/kitchen beyond it (see the kitchen/dining
+         pattern's own matching comment for the archway geometry and
+         the mirror-symmetry proof: this pattern is exactly symmetric
+         about the horizontal line Y=dy, for any dx). Moved dy to 96,
+         the archway's own Y-midpoint, so the checkerboard mirrors
+         itself above vs. below the archway centerline, and so both
+         this pattern and the kitchen/dining one share the same dy
+         (keeping the two rooms' rows aligned too, per the previous
+         correction above).
+         This alone would have wrecked the clean y=24 entertainment-
+         center edge just established above (checked: dx=85.5 unchanged
+         gives only 40% dark there, worst real fragment 0.32" — badly
+         mixed, not the vertex-row trick anymore, since y=24 is no
+         longer the anchor's own y). Re-scanned dx instead of keeping
+         the field's own x-center: dx=6.9 restores that edge almost
+         completely — 99.99% dark at y=24, worst real fragment 78.9"
+         (effectively the whole wall, one clean run) — while keeping
+         west/east walls healthy (10.5" worst, 63.6% dark) and the
+         sofa-hidden south wall fine (2.3" worst). This gives up the
+         field's own left-right symmetry about the room's centerline
+         (85.5) — the pattern's phase is no longer centered on the
+         room — but that was only ever a tidiness choice, not something
+         asked for by name, and every wall comes out healthier under
+         6.9 than under 85.5 once dy=96 is fixed.
+         dy=96 (was 24); dx=6.9 (was 85.5). Furniture again not
+         repositioned or re-checked for tile color.
+
          HISTORY (no longer the active reasoning, kept for the record):
          previously re-anchored 2026-09-03 to center the field inside
          its (now-removed) 12" border, first at (85.5,84.5), then
@@ -2520,7 +2574,7 @@ Without these the wall band simply runs out into the floor. Six caps:
          — all superseded first by the border, now by this vertex-row-
          on-the-built-ins-face approach. -->
     <pattern id="mainfloor-check-lr" width="48.3661" height="48.3661" patternUnits="userSpaceOnUse"
-             patternTransform="translate(85.5,24) rotate(45)">
+             patternTransform="translate(6.9,96) rotate(45)">
       <!-- COLORS SWAPPED 2026-09-03: with this centered anchor, the
            narrower cut along the field's left/right border edges
            landed on the WHITE tile (10-10.5" runs vs. black's
