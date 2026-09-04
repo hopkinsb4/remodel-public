@@ -4109,20 +4109,27 @@ Without these the wall band simply runs out into the floor. Six caps:
        of the hallway, nowhere near either doorway. This rug was then
        shifted toward the entry instead (y=-0.8..44.2, then nudged to
        y=0.2..45.2) to catch the first step in from the garage door and
-       the bath's pocket door at y=3. FINAL, per instruction: CENTERED
-       along the full 75.5" hallway length instead (local y, the
-       corridor's long axis, which is what reads as left-right in plan
-       view) — y=5.25..50.25, splitting the leftover run evenly between
-       the hallway's screening curtain (y=-2.8) and its far/dead end
-       (y=65.5). Still CENTERED across the hallway's 40" width too
-       (local x, which reads as up-down in plan view) — x=72..99, 6.5"
-       margin each side — rather than flush against the closet-side
-       wall. Centering both ways pulls part of the rug into the garage
-       door's theoretical swing envelope — accepted per instruction, and
-       reasonable for a low-profile hand-tufted wool weave rather than a
-       thick rubber-backed commercial mat, the same tradeoff most houses
-       make wherever a rug sits by a swinging door. -->
-  <rect x="72" y="5.25" width="27" height="45" rx="1" fill="#918A6F" stroke="#6E6852" stroke-width=".3"/>
+       the bath's pocket door at y=3. Centered next across the full
+       75.5" drawn floor rect (y=5.25..50.25) — but that read off-center
+       in plan view, because 7.2" of that rect (y=-10..-2.8) sits BEHIND
+       the screening curtain, on the main-hallway side, not actually
+       part of the visible pocket. FINAL, per instruction ("curtain to
+       threshold"): centered instead on the pocket's own true visible
+       span — from the curtain (y=-2.8) to the dashed line at y=65.5
+       (the file's own marked threshold into the continuing main
+       hallway, per the HALLWAY CONNECTOR comment above: "the hallway
+       almost certainly keeps going... just undrawn" past that dashed
+       line). That's a 68.3" span; centering a 45" rug in it gives
+       11.65" margin each side: y=8.85..53.85. Still CENTERED across the
+       hallway's 40" width too (local x, which reads as up-down in plan
+       view) — x=72..99, 6.5" margin each side — rather than flush
+       against the closet-side wall. Centering both ways pulls part of
+       the rug into the garage door's theoretical swing envelope —
+       accepted per instruction, and reasonable for a low-profile
+       hand-tufted wool weave rather than a thick rubber-backed
+       commercial mat, the same tradeoff most houses make wherever a
+       rug sits by a swinging door. -->
+  <rect x="72" y="8.85" width="27" height="45" rx="1" fill="#918A6F" stroke="#6E6852" stroke-width=".3"/>
   <!-- top wall band, split around the garage entry door opening
        (y=-1.5..28.5) — this rect used to run solid the full 75.5"
        depth, which was the actual bug: the garage door's own wall
