@@ -3427,31 +3427,42 @@ Without these the wall band simply runs out into the floor. Six caps:
   </g>
   <text class="dim-onsofa" x="85.5" y="131" text-anchor="middle" style="font-size:4.2px">sofa extends 32&quot;&#8594;59&quot;</text>
 
-  <!-- SIDE TABLES (2), one flanking each sofa arm — Povison "Modern
-       C-Shaped Side Table with Wheels," Black, 14.96"x14.96"x24.02"H,
-       sold as a matching pair ($499/pair, same ST8135 model family as
-       the Mila sofa — same brand). Solves the "kid eats on the couch"
-       problem raised for this sofa: a cantilevered Z-profile top on a
-       small wheeled base, so it rolls in from the OPEN FLOOR in front
-       of the sofa (no side clearance needed — the sofa already fills
-       the room's width, only 4.75" clear at each end) and tucks away
-       again before the seat's power recline extends the footrest
-       32"->59" (27" of forward throw, to y=90 — see the striped
-       extension outline above). Positioned here just past that
-       throw zone with a comfortable 7.5" buffer, centered in front of
-       each arm (west arm x=4.75..17.5, east arm x=153.5..166.25) —
-       their default "parked" spot, not a fixed installation, since
-       they're meant to be rolled to whichever seat is actually being
-       used. Black finish chosen over this model's natural-oak and
-       walnut/cherry options to match the matte-black hardware that's
-       the house's actual through-line, per the design book's own
-       style statement — keeping the olive sofa as the one deliberate
-       color accent rather than introducing a second wood tone next to
-       it. -->
-  <rect fill="#211D19" stroke="#FFFFFF" stroke-width=".3" x="3.63" y="67.5" width="14.96" height="14.96" rx="2"/>
-  <text class="lbl-s" x="11.11" y="75" text-anchor="middle" font-size="2" fill="#EDE8DD">side table</text>
-  <rect fill="#211D19" stroke="#FFFFFF" stroke-width=".3" x="152.38" y="67.5" width="14.96" height="14.96" rx="2"/>
-  <text class="lbl-s" x="159.86" y="75" text-anchor="middle" font-size="2" fill="#EDE8DD">side table</text>
+  <!-- SIDE TABLES (2) — Povison "Modern C-Shaped Side Table with
+       Wheels," Black, 14.96"x14.96"x24.02"H, sold as a matching pair
+       ($499/pair, same ST8135 model family as the Mila sofa — same
+       brand). Solves the "kid eats on the couch" problem raised for
+       this sofa: a cantilevered Z-profile top on a small wheeled base,
+       so it rolls in from the OPEN FLOOR in front of the sofa (no side
+       clearance needed — the sofa already fills the room's width, only
+       4.75" clear at each end). Black finish chosen over this model's
+       natural-oak and walnut/cherry options to match the matte-black
+       hardware that's the house's actual through-line, per the design
+       book's own style statement — keeping the olive sofa as the one
+       deliberate color accent rather than introducing a second wood
+       tone next to it.
+
+       DRAWN HERE IN ACTIVE USE rather than a generic parked position,
+       to actually demonstrate the mechanism (confirmed via test render
+       2026-09-04):
+       - Seat 1 (leftmost cushion, x=17.5..51.5) shown power-reclined,
+         its footrest extended the full 32"->59" throw (front edge to
+         y=90 — see the striped extension outline above). Its table
+         straddles the seat-1/arm seam at x=17.5, centered top-to-bottom
+         on the extension zone (y=90..117, center y=103.5) — a 50%
+         left-right overlap onto the extended cushion, tabletop
+         cantilevering over the footrest while its base stays clear.
+       - Seat 3 (x=85.5..119.5), NOT reclined, shows the second table
+         rolled over from its own arm to demonstrate it works at a
+         middle seat too — centered left-right on the seat (x=102.5)
+         and straddling the seat's own (non-extended) front edge at
+         y=117, a 50% front-back overlap.
+       Both are wheeled and mobile, not fixed installations — this is
+       one illustrative snapshot of use, not the only valid position. -->
+  <path d="M 17.5,90 L 51.5,90 L 51.5,117 L 17.5,117 Z" fill="#5F5D3C" stroke="#3A3924" stroke-width=".28"/>
+  <line x1="17.5" y1="90" x2="17.5" y2="117" stroke="#3A3924" stroke-width=".22"/>
+  <line x1="51.5" y1="90" x2="51.5" y2="117" stroke="#3A3924" stroke-width=".22"/>
+  <rect fill="#211D19" stroke="#FFFFFF" stroke-width=".3" x="10.02" y="96.02" width="14.96" height="14.96" rx="2"/>
+  <rect fill="#211D19" stroke="#FFFFFF" stroke-width=".3" x="95.02" y="109.52" width="14.96" height="14.96" rx="2"/>
   <line class="extline" x1="4.75" y1="113" x2="4.75" y2="110"/>
   <line class="extline" x1="166.25" y1="113" x2="166.25" y2="110"/>
   <line class="dimline" x1="4.75" y1="112" x2="166.25" y2="112"/>
