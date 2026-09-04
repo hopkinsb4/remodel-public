@@ -2547,22 +2547,22 @@ Without these the wall band simply runs out into the floor. Six caps:
          this pattern and the kitchen/dining one share the same dy
          (keeping the two rooms' rows aligned too, per the previous
          correction above).
-         This alone would have wrecked the clean y=24 entertainment-
-         center edge just established above (checked: dx=85.5 unchanged
-         gives only 40% dark there, worst real fragment 0.32" — badly
-         mixed, not the vertex-row trick anymore, since y=24 is no
-         longer the anchor's own y). Re-scanned dx instead of keeping
-         the field's own x-center: dx=6.9 restores that edge almost
-         completely — 99.99% dark at y=24, worst real fragment 78.9"
-         (effectively the whole wall, one clean run) — while keeping
-         west/east walls healthy (10.5" worst, 63.6% dark) and the
-         sofa-hidden south wall fine (2.3" worst). This gives up the
-         field's own left-right symmetry about the room's centerline
-         (85.5) — the pattern's phase is no longer centered on the
-         room — but that was only ever a tidiness choice, not something
-         asked for by name, and every wall comes out healthier under
-         6.9 than under 85.5 once dy=96 is fixed.
-         dy=96 (was 24); dx=6.9 (was 85.5). Furniture again not
+         CORRECTED 2026-09-04 (same day, right after the above): the
+         first pass here re-derived dx away from 85.5 to "6.9", to
+         chase the y=24 edge — but that dx=6.9 pick came from a bugged
+         check (a wall-sampling helper that had the fixed/varying axes
+         swapped for this room's horizontal walls, so it was actually
+         reading a vertical line at X=24 and mislabeling it "north
+         wall"). Introduced an unwanted, unasked-for left-right shift
+         of the whole field for no real benefit — caught when it
+         visibly moved the grid relative to the room. Re-checked with
+         the axis bug fixed: dx=85.5 (unchanged, the field's own
+         x-center) was never actually bad under dy=96 — north wall
+         (y=24) 78.9% dark, worst real fragment 7.2"; south wall
+         (sofa-hidden regardless) 73.1% dark, worst 9.2"; west/east
+         walls 99.99%+ dark, worst 20.7" — healthier on every wall than
+         the erroneous dx=6.9 pick, AND with no left-right shift.
+         dy=96 (was 24); dx unchanged at 85.5. Furniture again not
          repositioned or re-checked for tile color.
 
          HISTORY (no longer the active reasoning, kept for the record):
@@ -2574,7 +2574,7 @@ Without these the wall band simply runs out into the floor. Six caps:
          — all superseded first by the border, now by this vertex-row-
          on-the-built-ins-face approach. -->
     <pattern id="mainfloor-check-lr" width="48.3661" height="48.3661" patternUnits="userSpaceOnUse"
-             patternTransform="translate(6.9,96) rotate(45)">
+             patternTransform="translate(85.5,96) rotate(45)">
       <!-- COLORS SWAPPED 2026-09-03: with this centered anchor, the
            narrower cut along the field's left/right border edges
            landed on the WHITE tile (10-10.5" runs vs. black's
