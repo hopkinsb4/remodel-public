@@ -3663,12 +3663,15 @@ Without these the wall band simply runs out into the floor. Six caps:
   <path class="outline" d="M-6,0 H61 V3 M61,31 V61 H-6 V0"/>
   <rect class="outline" x="-10.5" y="-4.5" width="76" height="70"/>   <!-- outer wall face -->
 
-  <!-- ============ LILAH TILE FACE, LEFT/BOTTOM/RIGHT WALLS ============
-       Opal color tile runs floor-to-ceiling on three walls; only the
-       top wall (pocket door) stays paint.
+  <!-- ============ LILAH TILE FACE, ALL FOUR WALLS ============
+       EXTENDED 2026-09-04 to the 4th wall (the pocket-door wall, x=61) —
+       this is now a fully wet room, tile floor-to-ceiling on every wall,
+       no painted wall left. That wall's solid run (61" total minus the
+       28" door opening, y 3..31) is drawn in two pieces flanking the
+       door, same 0.375" real depth as the other three.
        DRAWN AT REAL DEPTH, 0.375" (3/8"), the thickness of a 6"x6"
        glazed ceramic tile like Lilah plus thinset over backer board —
-       not a zero-depth callout line. x=-6/y=0/y=61 is the ROUGH wall
+       not a zero-depth callout line. x=-6/y=0/y=61/x=61 is the ROUGH wall
        face (the framed 4.5" band — bottom face moved to -6 with the
        wall), and the tile sits proud of it into the room, same as it
        would on site.
@@ -3682,6 +3685,8 @@ Without these the wall band simply runs out into the floor. Six caps:
   <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="0" width="67" height=".375"/>    <!-- left -->
   <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="0" width=".375" height="61"/>    <!-- bottom -->
   <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-6" y="60.625" width="67" height=".375"/> <!-- right -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="60.625" y="0" width=".375" height="3"/>     <!-- door wall, below door -->
+  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="60.625" y="31" width=".375" height="30"/>   <!-- door wall, above door -->
 
   <!-- ============ SHOWER FLOOR: LINEAR DRAIN ============
        MOVED 2026-09-04 (budget savings — see fullremodel.json section 10 notes)
