@@ -978,12 +978,18 @@
        Went solid Nero briefly (2026-09-03, same day) when the WIC and
        primary bath both switched — then the bath switched BACK to
        Dawson the same day (explicit instruction: bathroom and WC only,
-       WIC stays Nero), so this threshold is Dawson again too, matching
-       the bath side (x<=-78). It now has a real seam at its own far
-       side (x=-69, the WIC's own face) instead of matching both sides
-       — accepted, same as the downstairs bath's pocket-door threshold
-       taking a seam at its hallway side for the same reason. -->
-  <rect x="-73.5" y="75" width="4.5" height="34" fill="url(#pbed-dawson)"/>
+       WIC stays Nero), so this threshold was Dawson again too, matching
+       the bath side (x<=-78), with a real seam at its own far side
+       (x=-69, the WIC's own face) — accepted at the time, same as the
+       downstairs bath's pocket-door threshold taking a seam at its
+       hallway side for the same reason.
+       SWITCHED BACK TO NERO 2026-09-05, per instruction: Leona (this
+       house's straight-black Nero Marquina, not the checkerboard) should
+       never directly meet Dawson at a tile transition. The seam moves to
+       the bath's own doorway face (x=-78) instead — Dawson now recedes
+       to stay strictly inside the bath's own footprint, matching the
+       WIC side (x=-69) and reading as one continuous dark threshold. -->
+  <rect x="-73.5" y="75" width="4.5" height="34" fill="#262322"/>
 
   <!-- BATH DOORS (split barn) are drawn AFTER the bath group below, not here -
        the bath's own background rect paints over this x range and was
@@ -2461,14 +2467,14 @@ Without these the wall band simply runs out into the floor. Six caps:
       <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#F1EEE7"/>
       <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#F1EEE7"/>
     </pattern>
-    <!-- Edward Martin Dawson 2x2 mosaic, charcoal — same pattern/module
-         as the downstairs-bath plan's Dawson swatch. Only used at the
-         dining-to-hallway threshold below; the bath/closet/hallway
-         floor itself is drawn on its own plan. -->
-    <pattern id="mainfloor-dawson" width="2" height="2" patternUnits="userSpaceOnUse">
-      <rect width="2" height="2" fill="#333130"/>
-      <rect x=".09" y=".09" width="1.82" height="1.82" fill="#4A4644"/>
-    </pattern>
+    <!-- mainfloor-dawson pattern REMOVED 2026-09-05: its only remaining
+         use (the pantry floor, below) switched to solid Nero — Leona
+         should never directly meet Dawson at a tile transition, and the
+         pantry's kitchen-side doorway had no threshold strip at all, tile
+         meeting tile right at the door. Nero sidesteps the diagonal
+         checkerboard's corner-cut problem exactly as Dawson did, so the
+         original reason for this pattern still holds, just with the
+         house's other straight-set material instead. -->
   </defs>
 
   <!-- ============ SHELL — LIVING ROOM, 171" x 169" ============ -->
@@ -2839,8 +2845,16 @@ Without these the wall band simply runs out into the floor. Six caps:
        checkerboard was leaving an awkward sliver cut in this corner
        (SW room corner, against both the west and south walls at
        once) — straight-set Dawson sidesteps it, same as the entryway
-       and the various narrow thresholds elsewhere. -->
-  <rect x="245" y="143" width="34.5" height="26" fill="url(#mainfloor-dawson)" stroke="#2A2A2A" stroke-width=".234"/>  <!-- pantry floor — Dawson -->
+       and the various narrow thresholds elsewhere.
+       SWITCHED TO NERO 2026-09-05, per instruction: Leona should never
+       directly meet Dawson at a tile transition, and this closet's own
+       doorway had no threshold strip at all — the kitchen's Nero-bordered
+       field meets this floor right at the door. Solid Nero still
+       sidesteps the diagonal checkerboard's corner-cut problem the same
+       way Dawson did, just with the house's other straight-set material,
+       so the kitchen field now runs straight through into the pantry
+       with no seam at all. -->
+  <rect x="245" y="143" width="34.5" height="26" fill="#262322" stroke="#2A2A2A" stroke-width=".234"/>  <!-- pantry floor — solid Nero -->
   <rect x="276.5" y="143" width="3" height="26" fill="#C9C4B7"/>
   <rect x="245" y="143" width="5" height="3" fill="#C9C4B7"/>
   <rect x="274" y="143" width="5.5" height="3" fill="#C9C4B7"/>
@@ -3693,13 +3707,19 @@ Without these the wall band simply runs out into the floor. Six caps:
          y 31..61  30" cavity wall the slab pockets into (it slides right)
        Those three runs are exactly the 3"/28"/30" dimensions on the right.
 
-       THRESHOLD STAYS DAWSON, matching the toilet room's own floor on
-       the room side (both reverted together, see the FLOOR SPLIT
-       HISTORY comment above) — Nero on the hallway side only, so
-       there's one seam here (Dawson bath -> Nero hallway) rather than
-       the continuous single-material run this doorway had before any
-       of this day's changes. -->
-  <rect x="61" y="3" width="4.5" height="28" fill="url(#dsbath-dawson)"/>
+       THRESHOLD WAS DAWSON, matching the toilet room's own floor on the
+       room side (both reverted together, see the FLOOR SPLIT HISTORY
+       comment above) — Nero on the hallway side only, so there was one
+       seam here (Dawson bath -> Nero hallway) rather than the continuous
+       single-material run this doorway had before any of this day's
+       changes.
+       SWITCHED TO NERO 2026-09-05, per instruction: Leona (this house's
+       straight-black Nero Marquina) should never directly meet Dawson at
+       a tile transition. The seam moves to the bath's own doorway face
+       (x=61) instead — Dawson now recedes to stay strictly inside the
+       bath's own footprint (shower + toilet zones), matching the hallway
+       rect at x=65.5 and reading as one continuous dark passage. -->
+  <rect x="61" y="3" width="4.5" height="28" fill="#262322"/>
 
   <!-- ============ NOOKS ============
        Two, both 12" long x 3.5" deep, recessed into the wall band so nothing
