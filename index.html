@@ -1378,18 +1378,30 @@ LILAH RUNS TO THE NEXT CORNER at both ends, rather than stopping at
        overall used
        above), just 1.33" shorter, so the 30"/24" clearance checks above
        (which passed with 6"/8.3" of margin against that longer 29.71"
-       figure) pass with an even wider margin now. The bowl/tank icon
-       remains the generic "one WC spec throughout the house" stylized
-       symbol, not drawn to any of the three toilets' exact footprint.
+       figure) pass with an even wider margin now.
        TRIED 2026-09-05, SAME DAY, REVERTED: swapped the bowl outline to
        a smooth bezier oval matching a real top-down product photo — read
        badly at this icon's small scale, so reverted straight back to the
        original straight-sided-taper + semicircle-cap symbol below. Don't
-       redo this without explicit instruction. -->
+       redo this without explicit instruction.
+       RESCALED 2026-09-06, same symbol/style kept (straight-sided taper +
+       semicircle-style nose + rectangular tank, unchanged from the design
+       above) — only the numbers changed, to match this SKU's confirmed
+       28.38" overall length x 16.88" tank width instead of the old
+       Kohler Kingston-era 29.71" x 18.08"/20.08" the icon had been left
+       at through three toilet swaps (see the downstairs bath's matching
+       comment for the full scale-factor derivation, reused unchanged
+       here). Back of tank stays anchored to this local group's own wall
+       edge (y=61, unchanged) and the local centerline stays at x=45.79
+       (unchanged, set by the group's own translate(-45.79,-61)); only the
+       icon's own extent scales in from there (depth x0.9552, width
+       x0.8406). The nose arc is now a true ellipse (rx 6.49 x ry 7.374,
+       vs. the old true-circle 7.72 radius) rather than a reshaped curve,
+       so this is a rescale of the same approved shape, not a redraw. -->
   <g transform="translate(-140,18) rotate(90) translate(-45.79,-61)">
-    <path class="fix" d="M36.75,54.5 L38.07,39.01 A7.72,7.72 0 0 1 53.51,39.01 L54.83,54.5 Z"/>
-    <rect class="fix" x="35.75" y="54" width="20.08" height="7" rx=".5"/>
-    <line x1="35.75" y1="55.71" x2="55.83" y2="55.71" stroke="#2A2A2A" stroke-width=".2"/>
+    <path class="fix" d="M38.191,54.791 L39.3,39.994 A6.49,7.374 0 0 1 52.28,39.994 L53.389,54.791 Z"/>
+    <rect class="fix" x="37.35" y="54.313" width="16.88" height="6.687" rx=".5"/>
+    <line x1="37.35" y1="55.947" x2="54.23" y2="55.947" stroke="#2A2A2A" stroke-width=".2"/>
   </g>
   <text x="-119" y="18.9" text-anchor="middle" font-size="2.6"
         font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A" transform="rotate(-90 -119 18.9)">WC</text>
@@ -4019,19 +4031,28 @@ Without these the wall band simply runs out into the floor. Six caps:
        intermediate 17.13" width reading. Clearance check: 28.38"+24" =
        52.38", ~0.6" less than the original Kingston figure (53") and
        ~1.4" more than the Remi's (51"), still a comfortable fit.
-       Bowl/tank icon below is a generic stylized symbol, not drawn to
-       any of the three toilets' exact footprint, so no shape change was
-       needed for this swap either.
        TRIED 2026-09-05, SAME DAY, REVERTED: swapped the bowl outline to
        a smooth bezier oval matching a real top-down product photo — read
        badly at this icon's small scale, so reverted straight back to the
        original straight-sided-taper + semicircle-cap symbol below. Don't
-       redo this without explicit instruction. -->
-  <path class="fix" d="M35.96,54.125 L37.28,38.635 A7.72,7.72 0 0 1 52.72,38.635 L54.04,54.125 Z"/>
-  <rect class="fix" x="34.96" y="53.625" width="20.08" height="7" rx=".5"/>
-  <line x1="34.96" y1="55.335" x2="55.04" y2="55.335" stroke="#2A2A2A" stroke-width=".083"/>
-  <text x="45" y="44.425" text-anchor="middle" font-size="2.29"
-        font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A" transform="rotate(90 45 44.425)">WC</text>
+       redo this without explicit instruction.
+       RESCALED 2026-09-06, same symbol/style kept (straight-sided taper +
+       semicircle-style nose + rectangular tank, unchanged from the design
+       above) — only the numbers changed, to match this SKU's confirmed
+       28.38" overall length x 16.88" tank width instead of the old
+       Kohler Kingston-era 29.71" x 18.08"/20.08" the icon had been left
+       at through three toilet swaps. Back of tank stays anchored to the
+       real wall (y=60.625, unchanged) and the section centerline stays at
+       x=45 (unchanged); only the icon's own extent scales in from there
+       (depth x0.9552, width x0.8406). The nose arc is now a true ellipse
+       (rx 6.49 x ry 7.374, vs. the old true-circle 7.72 radius) rather
+       than a reshaped curve, so this is a rescale of the same approved
+       shape, not a redraw. -->
+  <path class="fix" d="M37.401,54.416 L38.51,39.619 A6.49,7.374 0 0 1 51.49,39.619 L52.599,54.416 Z"/>
+  <rect class="fix" x="36.56" y="53.938" width="16.88" height="6.687" rx=".5"/>
+  <line x1="36.56" y1="55.572" x2="53.44" y2="55.572" stroke="#2A2A2A" stroke-width=".083"/>
+  <text x="45" y="45.15" text-anchor="middle" font-size="2.29"
+        font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A" transform="rotate(90 45 45.15)">WC</text>
 
   <!-- ============ TOP WALL ============ -->
   <!-- TP holder: bar-style, roll axis parallel to the wall. Moved from
