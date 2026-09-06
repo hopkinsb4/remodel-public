@@ -1126,7 +1126,458 @@
     <p>Reclaimed hardwood stairway leads to the upstairs bedroom suites.</p>
     <div style="display: flex; gap: 16px; flex-wrap: wrap;">
       <div style="margin: 16px 0 8px; width: 100%;">
-        <svg xmlns="http://www.w3.org/2000/svg" id="mainfloor-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-44.5 -145 456 358.5" role="img"
+<div class="floorplan-tabs" style="width:100%;">
+        <div style="display:flex; gap:8px; margin:16px 0 8px;">
+          <button type="button" class="fp-tab-btn" data-fp-target="mainfloor-tab-w2w" style="padding:6px 14px; font-size:12px; border-radius:4px; border:1px solid var(--border); background:#2A2A2A; color:#fff; cursor:pointer;">Wall-to-Wall (concept)</button>
+          <button type="button" class="fp-tab-btn" data-fp-target="mainfloor-tab-bordered" style="padding:6px 14px; font-size:12px; border-radius:4px; border:1px solid var(--border); background:#fff; color:#2A2A2A; cursor:pointer;">Bordered (current)</button>
+        </div>
+        <div id="mainfloor-tab-w2w" class="fp-tab-panel">
+                <svg xmlns="http://www.w3.org/2000/svg" id="mainfloor-plan-w2w" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-44.5 -145 456 358.5" role="img"
+     aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch stairway at the west end starting flush with the entertainment center front: three treads climb north to a quarter landing with a single 45 degree winder turning east, a long run climbs east, then a second landing and one final step south onto the upper hall, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa drawn in its seated position, 161.5 by 52 inches, with rounded rear corners. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall and a 24 by 32 inch arched iron-frame mirror centered on its north wall, facing the door, and a black ceiling pendant light centered on that same north-south axis between them — north of it, the downstairs bath / under-stairs closet / garage entry space is left open, fully detailed on its own plan, with the kitchen wall jog cut back to the dining-wall line — then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. The kitchen: entering through that archway, its west wall runs 38.5 inches north and 48 inches south of the opening, 136.5 inches wall to wall, and the room extends 137 inches east. The kitchen north wall is a 9 inch thick pillar-and-beam wall with a 106 inch cased opening, its jambs 5 inches from the west wall and 26 inches from the east wall. Through that opening, the dining room runs 137 inches north of the kitchen wall on the same 137 inch span, and a 25.75 inch deep run of lower cabinets under a granite counter lines its full east wall, with two 24 inch knee-space gaps in table-height drawer-stack cabinets, centered under the windows, each with a Windsor-style low chair and a 34 inch ultrawide monitor; the round 48 inch marble dining table, seating six, centers on the patio door's one-third point and the west wall run's half point, with four Windsor-style dining chairs at the diagonal, all four on white tiles, facing the table on its black tile. The dining room north wall holds the 72 inch three panel bi-fold patio door, its west jamb 20 inches from the west corner; the dining room west wall has a 30 inch opening to the garage entry, downstairs bath and under-stairs closet hallway, its south jamb 34 inches north of the southwest pillar. The dining room east wall has two small 17.5 inch windows, their south jambs 39.5 and 79.5 inches north of the southeast pillar. The kitchen southwest corner holds a 34.5 by 26 inch pantry box with a 24 inch swing door, its west hinge 5 inches from the corner. Along the kitchen east wall, south of the northeast pillar: a 38 inch fridge opening, 18 inches of granite counter, a 30 inch stove opening, then granite counter running the rest of the east wall and wrapping the south wall to the pantry. A 40 by 65 inch rectangular granite island sits in the kitchen, 34 inches from the west wall and 36 inches from the south counters, with a 37.25 inch aisle to the east counters and two Windsor-style barstools on its west side. Remaining kitchen contents have not been drawn yet.">
+  
+  <defs>
+    <style>
+      /* All selectors are scoped to #mainfloor-plan-w2w so nothing leaks into the page. */
+      #mainfloor-plan-w2w .outline { fill:none; stroke:#2A2A2A; stroke-width:.266; }
+      #mainfloor-plan-w2w .thin    { fill:none; stroke:#2A2A2A; stroke-width:.166; }
+      #mainfloor-plan-w2w .fix     { fill:#fff; stroke:#2A2A2A; stroke-width:.234; }
+      #mainfloor-plan-w2w .cab     { fill:#EAE6DC; stroke:#2A2A2A; stroke-width:.234; }
+      /* Sleeper sofa — dark gray tweed chenille (Povison Mila),
+         SWITCHED BACK TO DARK GRAY 2026-09-06 per instruction, sampled
+         from the actual Dark Gray Tweed Chenille product photo. */
+      #mainfloor-plan-w2w .sofa    { fill:#605A58; stroke:#3E3A39; stroke-width:.28; }
+      #mainfloor-plan-w2w .sofa-seam { fill:none; stroke:#3E3A39; stroke-width:.22; }
+      /* Dining chairs — Crate and Barrel Juni, Black Ash: dark stain,
+         same near-black tone as the .tread class rather than flat
+         black, with a white border so the seat reads clearly against
+         the dark tiles it sits on. */
+      #mainfloor-plan-w2w .chair-seat { fill:#211D19; stroke:#FFFFFF; stroke-width:.4; }
+      /* Back-hoop rail, drawn as a filled band (not a thin stroked
+         line) so it reads as an actual structural back, same fill +
+         white border as the seat. */
+      #mainfloor-plan-w2w .chair-back { fill:#211D19; stroke:#FFFFFF; stroke-width:.35; }
+      /* Dimension text placed over the sofa's own dark fill needs a
+         light color to stay legible, same idea as the bath plans'
+         on-dark label variant. */
+      #mainfloor-plan-w2w .dim-onsofa { font:4.4px 'Helvetica Neue',Arial,sans-serif; fill:#EDE9DD; }
+      #mainfloor-plan-w2w .blk     { fill:#2A2A2A; }
+      /* Stair treads/landings — switched to black stain + multi-coat
+         polyurethane (matte black hardware standard, corrected
+         2026-08-30): the owner has this same finish in another house
+         and wants it here instead of the Thuma Oak tone. Treads and
+         risers both go dark.
+         RISERS SWITCHED FROM TILE TO HARDWOOD (confirmed 2026-08-30):
+         the Calacatta riser tile is gone — risers are now the same
+         reclaimed hardwood as the treads, black-stained to match, so
+         the run reads as a single continuous black-wood stair rather
+         than wood treads over a light tile riser. That drops the
+         light/dark contrast the tile used to give against the
+         black-stringer/black-rail look from the reference photo — worth
+         knowing if that contrast is missed once it's built. The
+         #F1EEE7 outline stroke on .tread/.riser stays regardless —
+         it was never a literal tile color in this plan-view drawing,
+         just a legibility choice so each tread/riser edge still reads
+         against the black fill instead of the run looking like one
+         solid block. */
+      #mainfloor-plan-w2w .tread   { fill:#211D19; stroke:#F1EEE7; stroke-width:.5; }
+      #mainfloor-plan-w2w .riser   { fill:none; stroke:#F1EEE7; stroke-width:.4; }
+      #mainfloor-plan-w2w .lbl     { font:4.4px 'Helvetica Neue',Arial,sans-serif; fill:#3A3A3A; }
+      #mainfloor-plan-w2w .lbl-s   { font:4.1px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
+      #mainfloor-plan-w2w .wall-lbl{ font:4.6px 'Helvetica Neue',Arial,sans-serif; fill:#8F8F8F; }
+      #mainfloor-plan-w2w text     { dominant-baseline:middle; }
+      /* Dimensioning, same architectural convention as the other plans. */
+      #mainfloor-plan-w2w .extline { fill:none; stroke:#6E6A62; stroke-width:.11; }
+      #mainfloor-plan-w2w .dimline { fill:none; stroke:#2A2A2A; stroke-width:.13; }
+      #mainfloor-plan-w2w .tick    { stroke:#2A2A2A; stroke-width:.19; stroke-linecap:round; }
+      #mainfloor-plan-w2w .dim-big { font:5.2px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; font-weight:700; }
+      #mainfloor-plan-w2w .dim-s   { font:4.4px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
+      /* Estimated-length geometry (pony wall projection only, at this
+         point) — amber dashed, distinct enough to flag as unresolved. */
+      #mainfloor-plan-w2w .tbd    { fill:none; stroke:#9B7B2E; stroke-width:.19; stroke-dasharray:1.4 1.1; }
+      #mainfloor-plan-w2w .tbd-t  { font:4.1px 'Helvetica Neue',Arial,sans-serif; fill:#8A6A24; font-style:italic; }
+      /* Soft plate behind labels that sit over the busy checkerboard floor. */
+      #mainfloor-plan-w2w .plate  { fill:#FBFAF7; opacity:.88; }
+    </style>
+    
+    
+    <pattern id="mainfloor-check-w2w" width="48" height="48" patternUnits="userSpaceOnUse"
+             patternTransform="translate(300.625,14.875) rotate(45)">
+      
+      <rect width="48" height="48" fill="#262322"/>
+      <rect x="0"  y="0"  width="24" height="24" fill="#F1EEE7"/>
+      <rect x="24" y="24" width="24" height="24" fill="#F1EEE7"/>
+    </pattern>
+    
+    <pattern id="mainfloor-check-lr-w2w" width="48.3661" height="48.3661" patternUnits="userSpaceOnUse"
+             patternTransform="translate(85.5,96.5) rotate(45)">
+      
+      <rect width="48.3661" height="48.3661" fill="#262322"/>
+      <rect x="0"  y="0"  width="24.1831" height="24.1831" fill="#F1EEE7"/>
+      <rect x="24.1831" y="24.1831" width="24.1831" height="24.1831" fill="#F1EEE7"/>
+    </pattern>
+    
+    <pattern id="mainfloor-dawson-w2w" width="2" height="2" patternUnits="userSpaceOnUse">
+      <rect width="2" height="2" fill="#333130"/>
+      <rect x=".09" y=".09" width="1.82" height="1.82" fill="#4A4644"/>
+    </pattern>
+  </defs>
+
+  
+  
+  <rect x="0" y="0" width="171" height="169" fill="url(#mainfloor-check-lr-w2w)"/>
+  <rect x="12" y="36" width="147" height="121" fill="url(#mainfloor-check-lr-w2w)"/>
+
+  
+  <rect x="-4.5" y="-4.5" width="4.5" height="178" fill="#C9C4B7"/>
+  
+  <rect x="-4.5" y="169" width="180" height="4.5" fill="#C9C4B7"/>
+
+  
+  <rect x="-4.5" y="-4.5" width="4.5" height="4.5" fill="#C9C4B7"/>  
+  <rect x="47" y="-4.5" width="128.5" height="4.5" fill="#C9C4B7"/>
+  <line class="outline" x1="0" y1="-4.5" x2="0" y2="0"/>
+  <line class="outline" x1="40" y1="-4.5" x2="40" y2="0"/>
+  
+  <rect x="40" y="-4.5" width="7" height="28.5" fill="#C9C4B7"/>
+  <rect x="40" y="-6" width="140" height="1.5" fill="#C9C4B7"/>  
+  <line class="outline" x1="40" y1="24" x2="47" y2="24"/>
+
+
+  
+  <rect class="tread" x="0" y="13" width="40" height="10"/>
+  <rect class="tread" x="0" y="3" width="40" height="10"/>
+  <rect class="tread" x="0" y="-6" width="40" height="9"/>
+  <rect class="tread" x="0" y="-44" width="40" height="38"/>
+  <line class="riser" x1="0" y1="-44" x2="40" y2="-6"/>
+  <path class="tread" d="M40,-44 L76,-44 L92,-6 L40,-6 Z"/>
+  <line class="riser" x1="50" y1="-44" x2="50" y2="-6"/>
+  <line class="riser" x1="60" y1="-44" x2="60" y2="-6"/>
+  <line class="riser" x1="70" y1="-44" x2="70" y2="-6"/>
+  <path d="M20,20 L20,-22 Q20,-27 25,-27 L78,-27" fill="none" stroke="#fff" stroke-width=".38"/>
+  <path d="M82,-27 L75.5,-30.5 L75.5,-23.5 Z" fill="#fff"/>
+  <text class="dim-s" style="fill:#fff" x="25.5" y="9">UP</text>
+
+  
+  <rect x="171" y="-4.5" width="4.5" height="75.5" fill="#C9C4B7"/>  
+  <rect x="175.5" y="64.5" width="4.5" height="6.5" fill="#C9C4B7"/>  
+  <rect x="171" y="121" width="9" height="52.5" fill="#C9C4B7"/>
+  <rect x="171" y="71" width="9" height="50" fill="#262322"/>  
+  <line class="outline" x1="171" y1="71" x2="180" y2="71"/>
+  <line class="outline" x1="171" y1="121" x2="180" y2="121"/>
+
+
+  
+  
+  <rect x="180" y="69" width="56" height="59" fill="#262322"/>
+
+  <rect x="180" y="64.5" width="56" height="4.5" fill="#C9C4B7"/>
+
+  
+  <rect x="196" y="69" width="24" height="1.3" fill="#D9E6E8" stroke="#211D19" stroke-width=".3"/>
+  <text class="dim-s" x="208" y="67.5" text-anchor="middle" style="font-size:3px">24x32 mirror</text>
+
+  
+  <circle cx="208" cy="85" r="3" fill="#211D19" stroke="#FFFFFF" stroke-width=".4"/>
+  <line class="thin" x1="205" y1="85" x2="211" y2="85" stroke="#FFFFFF" stroke-width=".3"/>
+  <line class="thin" x1="208" y1="82" x2="208" y2="88" stroke="#FFFFFF" stroke-width=".3"/>
+
+  
+  <line class="outline" x1="180" y1="69" x2="184.5" y2="69"/>
+  <line class="outline" x1="180" y1="128" x2="184.5" y2="128"/>
+
+  
+  <rect x="180" y="128" width="12" height="4.5" fill="#C9C4B7"/>
+  <rect x="224" y="128" width="12" height="4.5" fill="#C9C4B7"/>
+  <line class="outline" x1="192" y1="128" x2="192" y2="132.5"/>
+  <line class="outline" x1="224" y1="128" x2="224" y2="132.5"/>
+  
+  <rect class="fix" x="223.25" y="96" width="1.5" height="32"/>
+  <path class="thin" d="M224,96 A32,32 0 0 0 192,128" fill="none"/>
+
+  
+  <rect x="236" y="71" width="9" height="50" fill="#262322"/>  
+  <line class="outline" x1="236" y1="71" x2="245" y2="71"/>
+  <line class="outline" x1="236" y1="121" x2="245" y2="121"/>
+
+  
+  
+  <rect x="40" y="-6" width="135.5" height="6" fill="#C9C4B7"/>
+  <rect x="236" y="-10.5" width="4.5" height="4.5" fill="#C9C4B7"/>  
+
+  
+  
+  <rect x="245" y="32.5" width="137" height="136.5" fill="url(#mainfloor-check-w2w)"/>
+  <rect x="257" y="44.5" width="87.25" height="86.75" fill="url(#mainfloor-check-w2w)"/>
+  <rect x="257" y="32.5" width="87.25" height="12" fill="url(#mainfloor-check-w2w)"/>
+  <rect x="240.5" y="32.5" width="4.5" height="38.5" fill="#C9C4B7"/>  
+  <rect x="236" y="64.5" width="4.5" height="6.5" fill="#C9C4B7"/>  
+  <rect x="236" y="121" width="9" height="48" fill="#C9C4B7"/>
+  
+  <rect x="250" y="23.5" width="7" height="9" fill="#262322"/>  
+  <rect x="257" y="23.5" width="87.25" height="9" fill="url(#mainfloor-check-w2w)"/>  
+  <rect x="344.25" y="23.5" width="11.75" height="9" fill="#262322"/>  
+  <rect x="240.5" y="23.5" width="9.5" height="9" fill="#C9C4B7"/>
+  <rect x="356" y="23.5" width="30.5" height="9" fill="#C9C4B7"/>
+  <line class="outline" x1="250" y1="23.5" x2="250" y2="32.5"/>
+  <line class="outline" x1="356" y1="23.5" x2="356" y2="32.5"/>
+  <rect x="382" y="-118" width="4.5" height="291.5" fill="#C9C4B7"/>
+  <rect x="236" y="169" width="150.5" height="4.5" fill="#C9C4B7"/>
+  
+  <rect x="245" y="143" width="34.5" height="26" fill="url(#mainfloor-dawson-w2w)" stroke="#2A2A2A" stroke-width=".234"/>  
+  <rect x="276.5" y="143" width="3" height="26" fill="#C9C4B7"/>
+  <rect x="245" y="143" width="5" height="3" fill="#C9C4B7"/>
+  <rect x="274" y="143" width="5.5" height="3" fill="#C9C4B7"/>
+  <rect class="fix" x="249.25" y="119" width="1.5" height="24"/>
+  <path class="thin" d="M250,119 A24,24 0 0 1 274,143" fill="none"/>
+
+  
+  <path d="M 356.25,70.5 L 382,70.5 L 382,88.5 L 356.25,88.5 Z" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
+  <path d="M 356.25,118.5 L 382,118.5 L 382,169 L 279.5,169 L 279.5,143.25 L 356.25,143.25 Z" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
+  <rect x="352" y="32.5" width="30" height="38" fill="#B7BABC" stroke="#2A2A2A" stroke-width=".234"/>
+  <rect x="356.25" y="88.5" width="25.75" height="30" fill="#B7BABC" stroke="#2A2A2A" stroke-width=".234"/>
+  <circle class="thin" cx="363.5" cy="95.5" r="3.2"/>
+  <circle class="thin" cx="374.75" cy="95.5" r="3.2"/>
+  <circle class="thin" cx="363.5" cy="111.5" r="3.2"/>
+  <circle class="thin" cx="374.75" cy="111.5" r="3.2"/>
+
+  
+  <g stroke="#2A2A2A" stroke-width=".18">
+    <rect x="368.2" y="77.45" width="12.8" height="4.1" rx="0.8" fill="#F5F3ED"/>
+    <circle cx="379" cy="79.5" r="1.8" fill="#1E1D1B"/>
+    <circle cx="369.5" cy="79.5" r="0.7" fill="#1E1D1B"/>
+  </g>
+
+  
+  <rect class="fix" x="298.5" y="143.25" width="28.5" height="17.5" rx="1"/>
+  <circle class="thin" cx="312.75" cy="152" r="1.6"/>
+  <g fill="#B7BABC" stroke="#2A2A2A" stroke-width=".234" transform="translate(312.75,164) rotate(-90)">
+    <circle cx="0" cy="0" r="1.3"/>
+    <path d="M0,-.8 L7.75,-.6 L7.75,.6 L0,.8 Z"/>
+    <circle cx="7.75" cy="0" r=".7"/>
+  </g>
+
+  
+  <g transform="translate(279.875,63.92) rotate(-90)">  
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
+  </g>
+  <g transform="translate(279.875,85.58) rotate(-90)">  
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
+  </g>
+
+  
+  <rect x="279" y="42.25" width="40" height="65" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
+
+  
+
+  
+  
+  <rect x="245" y="-113.5" width="137" height="137" fill="url(#mainfloor-check-w2w)"/>
+  <rect x="257" y="-101.5" width="87.25" height="113" fill="url(#mainfloor-check-w2w)"/>
+  <rect x="257" y="11.5" width="87.25" height="12" fill="url(#mainfloor-check-w2w)"/>
+  
+  <rect x="240.5" y="-113.5" width="4.5" height="73" fill="#C9C4B7"/>
+  <rect x="240.5" y="-10.5" width="4.5" height="34" fill="#C9C4B7"/>
+  
+  <rect x="240.5" y="-40.5" width="4.5" height="30" fill="#262322"/>
+  <line class="outline" x1="240.5" y1="-40.5" x2="245" y2="-40.5"/>
+  <line class="outline" x1="240.5" y1="-10.5" x2="245" y2="-10.5"/>
+  
+  <rect x="240.5" y="-118" width="24.5" height="4.5" fill="#C9C4B7"/>
+  <rect x="337" y="-118" width="49.5" height="4.5" fill="#C9C4B7"/>
+  <line class="outline" x1="265" y1="-118" x2="265" y2="-113.5"/>
+  <line class="outline" x1="337" y1="-118" x2="337" y2="-113.5"/>
+  <rect class="fix" x="265" y="-116.45" width="72" height="1.4"/>
+  <line class="thin" x1="289" y1="-116.45" x2="289" y2="-115.05"/>
+  <line class="thin" x1="313" y1="-116.45" x2="313" y2="-115.05"/>
+
+  
+  <line class="thin" x1="382" y1="-16" x2="386.5" y2="-16"/>
+  <line class="thin" x1="382" y1="-33.5" x2="386.5" y2="-33.5"/>
+  <line x1="384.25" y1="-33.5" x2="384.25" y2="-16" stroke="#2F7D94" stroke-width=".6"/>
+  <line class="thin" x1="382" y1="-56" x2="386.5" y2="-56"/>
+  <line class="thin" x1="382" y1="-73.5" x2="386.5" y2="-73.5"/>
+  <line x1="384.25" y1="-73.5" x2="384.25" y2="-56" stroke="#2F7D94" stroke-width=".6"/>
+  <text x="389.5" y="-24.75" text-anchor="middle" transform="rotate(-90 389.5 -24.75)" style="font:4.2px 'Helvetica Neue',Arial,sans-serif; fill:#2F7D94;">17.5&quot;</text>
+  <text x="389.5" y="-64.75" text-anchor="middle" transform="rotate(-90 389.5 -64.75)" style="font:4.2px 'Helvetica Neue',Arial,sans-serif; fill:#2F7D94;">17.5&quot;</text>
+
+  
+  <g transform="translate(357.125,-70.5) rotate(-90)">  
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
+  </g>
+  <g transform="translate(357.125,-19.5) rotate(-90)">  
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
+  </g>
+
+  
+  <rect x="356.25" y="-113.5" width="25.75" height="137" fill="#1E1D1B" stroke="#FFFFFF" stroke-width=".28"/>
+  <g stroke="#8F8B83" stroke-width=".2" stroke-dasharray="1.6 1.2" fill="none">
+    <line x1="358" y1="-112.5" x2="358" y2="-82.5"/>
+    <line x1="358" y1="-58.5" x2="358" y2="-31.5"/>
+    <line x1="358" y1="-7.5" x2="358" y2="22.5"/>
+    <rect x="358" y="-82.5" width="24" height="24"/>
+    <rect x="358" y="-31.5" width="24" height="24"/>
+  </g>
+  <text class="dim-onsofa" x="367" y="-45" text-anchor="middle" transform="rotate(-90 367 -45)" style="font-size:2.8px">counter over cabinets</text>
+
+  
+  <g fill="#B7BABC" stroke="#2A2A2A" stroke-width=".2">
+    <rect x="375.3" y="-35.2" width="1.2" height="31.4"/>
+    <rect x="375.3" y="-86.2" width="1.2" height="31.4"/>
+  </g>
+
+  
+  <g fill="none" stroke="#8F8B83" stroke-width=".18">
+    <circle cx="383.1" cy="-97.5" r="0.85"/>
+    <line x1="382.25" y1="-97.5" x2="383.95" y2="-97.5"/>
+    <line x1="383.1" y1="-98.35" x2="383.1" y2="-96.65"/>
+    <circle cx="383.1" cy="-70.5" r="0.85"/>
+    <line x1="382.25" y1="-70.5" x2="383.95" y2="-70.5"/>
+    <line x1="383.1" y1="-71.35" x2="383.1" y2="-69.65"/>
+    <circle cx="383.1" cy="-45" r="0.85"/>
+    <line x1="382.25" y1="-45" x2="383.95" y2="-45"/>
+    <line x1="383.1" y1="-45.85" x2="383.1" y2="-44.15"/>
+    <circle cx="383.1" cy="-19.5" r="0.85"/>
+    <line x1="382.25" y1="-19.5" x2="383.95" y2="-19.5"/>
+    <line x1="383.1" y1="-20.35" x2="383.1" y2="-18.65"/>
+    <circle cx="383.1" cy="7.5" r="0.85"/>
+    <line x1="382.25" y1="7.5" x2="383.95" y2="7.5"/>
+    <line x1="383.1" y1="6.65" x2="383.1" y2="8.35"/>
+  </g>
+
+  
+
+  <g transform="translate(319.717,-89.0698) rotate(45)">    
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
+  </g>
+  <g transform="translate(319.717,-50.8858) rotate(135)">   
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
+  </g>
+  <g transform="translate(281.533,-50.8858) rotate(-135)">  
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
+  </g>
+  <g transform="translate(281.533,-89.0698) rotate(-45)">   
+    <rect class="chair-seat" x="-7.75" y="-7.125" width="15.5" height="15.5" rx="5" ry="4"/>
+    <path class="chair-back" d="M -6.25,-6.825 Q 0,-10.525 6.25,-6.825 L 6.25,-8.825 Q 0,-12.525 -6.25,-8.825 Z"/>
+  </g>
+
+  
+  <circle cx="300.625" cy="-69.9778" r="24" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".234"/>  
+  <text class="dim-s" x="295.91" y="-53.71" text-anchor="middle" style="font-size:4.2px">48&quot; table</text>
+
+  
+
+  
+  <line class="extline" x1="245" y1="-118" x2="245" y2="-137.5"/>
+  <line class="extline" x1="382" y1="-118" x2="382" y2="-137.5"/>
+  <line class="extline" x1="265" y1="-118" x2="265" y2="-123.5"/>
+  <line class="extline" x1="337" y1="-118" x2="337" y2="-123.5"/>
+  <line class="dimline" x1="245" y1="-121.5" x2="382" y2="-121.5"/>
+  <line class="tick" x1="243.8" y1="-122.7" x2="246.2" y2="-120.3"/>
+  <line class="tick" x1="263.8" y1="-122.7" x2="266.2" y2="-120.3"/>
+  <line class="tick" x1="335.8" y1="-122.7" x2="338.2" y2="-120.3"/>
+  <line class="tick" x1="380.8" y1="-122.7" x2="383.2" y2="-120.3"/>
+  <text class="dim-s" x="255" y="-124" text-anchor="middle" style="font-size:3.7px">20&quot;</text>
+  <text class="dim-s" x="301" y="-124" text-anchor="middle">72&quot; outswing bifold door</text>
+  <text class="dim-s" x="359.5" y="-124" text-anchor="middle" style="font-size:3.7px">45&quot;</text>
+  <line class="extline" x1="356" y1="23.5" x2="356" y2="-129.5"/>
+  <line class="dimline" x1="245" y1="-127.5" x2="382" y2="-127.5"/>
+  <line class="tick" x1="243.8" y1="-128.7" x2="246.2" y2="-126.3"/>
+  <line class="tick" x1="354.8" y1="-128.7" x2="357.2" y2="-126.3"/>
+  <line class="tick" x1="380.8" y1="-128.7" x2="383.2" y2="-126.3"/>
+  <text class="dim-s" x="300.5" y="-130" text-anchor="middle">111&quot; dining room</text>
+  <text class="dim-s" x="369" y="-130" text-anchor="middle">26&quot; counter</text>
+  <line class="dimline" x1="245" y1="-133.5" x2="382" y2="-133.5"/>
+  <line class="tick" x1="243.8" y1="-134.7" x2="246.2" y2="-132.3"/>
+  <line class="tick" x1="380.8" y1="-134.7" x2="383.2" y2="-132.3"/>
+  <text class="dim-s" x="313.5" y="-136" text-anchor="middle">137&quot;</text>
+
+  
+  <line class="extline" x1="386.5" y1="-113.5" x2="403" y2="-113.5"/>
+  <line class="extline" x1="386.5" y1="23.5" x2="403" y2="23.5"/>
+  <line class="dimline" x1="401.5" y1="-113.5" x2="401.5" y2="23.5"/>
+  <line class="tick" x1="400.3" y1="-114.7" x2="402.7" y2="-112.3"/>
+  <line class="tick" x1="400.3" y1="22.3" x2="402.7" y2="24.7"/>
+  <text class="dim-s" x="406" y="-45" text-anchor="middle" transform="rotate(-90 406 -45)">137&quot;</text>
+  <line class="extline" x1="386.5" y1="32.5" x2="394" y2="32.5"/>
+  <line class="extline" x1="386.5" y1="169" x2="394" y2="169"/>
+  <line class="dimline" x1="392" y1="32.5" x2="392" y2="169"/>
+  <line class="tick" x1="390.8" y1="31.3" x2="393.2" y2="33.7"/>
+  <line class="tick" x1="390.8" y1="167.8" x2="393.2" y2="170.2"/>
+  <text class="dim-s" x="396.5" y="100.75" text-anchor="middle" transform="rotate(-90 396.5 100.75)">136.5&quot;</text>
+
+  
+  <rect class="cab" x="47" y="0" width="124" height="23"/>
+  <rect class="blk" x="76.5" y="1.5" width="65" height="2.4"/>
+
+  
+  <path class="sofa" d="M 12.75,117 L 158.25,117 A 8,8 0 0 1 166.25,125 L 166.25,149 A 20,20 0 0 1 146.25,169 L 24.75,169 A 20,20 0 0 1 4.75,149 L 4.75,125 A 8,8 0 0 1 12.75,117 Z"/>
+  <line class="sofa-seam" x1="9.75" y1="149" x2="161.25" y2="149"/>
+  <line class="sofa-seam" x1="17.5" y1="117" x2="17.5" y2="149"/>
+  <line class="sofa-seam" x1="153.5" y1="117" x2="153.5" y2="149"/>
+  <line class="sofa-seam" x1="51.5" y1="117" x2="51.5" y2="149"/>
+  <line class="sofa-seam" x1="85.5" y1="117" x2="85.5" y2="149"/>
+  <line class="sofa-seam" x1="119.5" y1="117" x2="119.5" y2="149"/>
+  <g stroke="#FFFFFF" stroke-width="1" fill="none" stroke-linecap="butt">
+    <path d="M 17.5,117 L 17.5,90 L 153.5,90 L 153.5,117"/>
+    <line x1="51.5" y1="90" x2="51.5" y2="117"/>
+    <line x1="85.5" y1="90" x2="85.5" y2="117"/>
+    <line x1="119.5" y1="90" x2="119.5" y2="117"/>
+  </g>
+  <g stroke="#000000" stroke-width=".34" fill="none" stroke-linecap="butt">
+    <path d="M 17.5,117 L 17.5,90 L 153.5,90 L 153.5,117"/>
+    <line x1="51.5" y1="90" x2="51.5" y2="117"/>
+    <line x1="85.5" y1="90" x2="85.5" y2="117"/>
+    <line x1="119.5" y1="90" x2="119.5" y2="117"/>
+  </g>
+  <text class="dim-onsofa" x="136.5" y="131" text-anchor="middle" style="font-size:4.2px">extends 32&quot;&#8594;59&quot;</text>
+
+  
+  <path d="M 17.5,90 L 51.5,90 L 51.5,117 L 17.5,117 Z" fill="#605A58" stroke="#3E3A39" stroke-width=".28"/>
+  <line x1="17.5" y1="90" x2="17.5" y2="117" stroke="#3E3A39" stroke-width=".22"/>
+  <line x1="51.5" y1="90" x2="51.5" y2="117" stroke="#3E3A39" stroke-width=".22"/>
+  <rect fill="#211D19" stroke="#FFFFFF" stroke-width=".3" x="10.02" y="96.02" width="14.96" height="14.96" rx="2"/>
+  <rect fill="#211D19" stroke="#FFFFFF" stroke-width=".3" x="78.02" y="109.52" width="14.96" height="14.96" rx="2"/>
+  <line class="extline" x1="4.75" y1="113" x2="4.75" y2="110"/>
+  <line class="extline" x1="166.25" y1="113" x2="166.25" y2="110"/>
+  <line class="dimline" x1="4.75" y1="112" x2="166.25" y2="112"/>
+  <line class="tick" x1="3.55" y1="110.8" x2="5.95" y2="113.2"/>
+  <line class="tick" x1="165.05" y1="110.8" x2="167.45" y2="113.2"/>
+  <text class="dim-onsofa" x="85.5" y="159" text-anchor="middle">161.5&quot;</text>
+  <line class="extline" x1="4" y1="117" x2="0.8" y2="117"/>
+  <line class="extline" x1="4" y1="169" x2="0.8" y2="169"/>
+  <line class="dimline" x1="2.3" y1="117" x2="2.3" y2="169"/>
+  <line class="tick" x1="1.1" y1="115.8" x2="3.5" y2="118.2"/>
+  <line class="tick" x1="1.1" y1="167.8" x2="3.5" y2="170.2"/>
+  <text class="dim-onsofa" x="11" y="140" text-anchor="middle" transform="rotate(-90 11 140)">52&quot;</text>
+
+  
+  
+  <line class="extline" x1="0" y1="-4.5" x2="0" y2="-56"/>
+  <line class="extline" x1="171" y1="-4.5" x2="171" y2="-56"/>
+  <line class="dimline" x1="0" y1="-54" x2="171" y2="-54"/>
+  <line class="tick" x1="-1.2" y1="-55.2" x2="1.2" y2="-52.8"/>
+  <line class="tick" x1="169.8" y1="-55.2" x2="172.2" y2="-52.8"/>
+  <text class="dim-big" x="85.5" y="-57.5" text-anchor="middle">171&quot;</text>
+
+  
+  <line class="extline" x1="-4.5" y1="23" x2="-24" y2="23"/>
+  <line class="extline" x1="-4.5" y1="169" x2="-24" y2="169"/>
+  <line class="dimline" x1="-20" y1="23" x2="-20" y2="169"/>
+  <line class="tick" x1="-21.2" y1="21.8" x2="-18.8" y2="24.2"/>
+  <line class="tick" x1="-21.2" y1="167.8" x2="-18.8" y2="170.2"/>
+  <text class="dim-big" x="-23.5" y="96" text-anchor="middle" transform="rotate(-90 -23.5 96)">146&quot;</text>
+
+</svg>
+        </div>
+        <div id="mainfloor-tab-bordered" class="fp-tab-panel" style="display:none;">
+                <svg xmlns="http://www.w3.org/2000/svg" id="mainfloor-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-44.5 -145 456 358.5" role="img"
      aria-label="Main floor plan, living room — 171 by 169 inches. North wall: a 40 inch stairway at the west end starting flush with the entertainment center front: three treads climb north to a quarter landing with a single 45 degree winder turning east, a long run climbs east, then a second landing and one final step south onto the upper hall, a 7 inch pony wall extending 1 inch south of the entertainment center, then a built-in entertainment center covering the rest of the wall, 23 inches deep. South of that built-in the clear floor runs another 146 inches to the south wall, holding a sleeper sofa drawn in its seated position, 161.5 by 52 inches, with rounded rear corners. East wall, 9 inches thick, north to south: the built-in's own 23 inch depth, a 48 inch wall segment, a 50 inch archway to an entryway, then another 48 inch wall segment. Beyond that archway, a 56 inch wide entryway with a 32 inch entry door on its south wall and a 24 by 32 inch arched iron-frame mirror centered on its north wall, facing the door, and a black ceiling pendant light centered on that same north-south axis between them — north of it, the downstairs bath / under-stairs closet / garage entry space is left open, fully detailed on its own plan, with the kitchen wall jog cut back to the dining-wall line — then another 9 inch thick wall with a second 50 inch archway leading to the kitchen. The kitchen: entering through that archway, its west wall runs 38.5 inches north and 48 inches south of the opening, 136.5 inches wall to wall, and the room extends 137 inches east. The kitchen north wall is a 9 inch thick pillar-and-beam wall with a 106 inch cased opening, its jambs 5 inches from the west wall and 26 inches from the east wall. Through that opening, the dining room runs 137 inches north of the kitchen wall on the same 137 inch span, and a 25.75 inch deep run of lower cabinets under a granite counter lines its full east wall, with two 24 inch knee-space gaps in table-height drawer-stack cabinets, centered under the windows, each with a Windsor-style low chair and a 34 inch ultrawide monitor; the round 48 inch marble dining table, seating six, centers on the patio door's one-third point and the west wall run's half point, with four Windsor-style dining chairs at the diagonal, all four on white tiles, facing the table on its black tile. The dining room north wall holds the 72 inch three panel bi-fold patio door, its west jamb 20 inches from the west corner; the dining room west wall has a 30 inch opening to the garage entry, downstairs bath and under-stairs closet hallway, its south jamb 34 inches north of the southwest pillar. The dining room east wall has two small 17.5 inch windows, their south jambs 39.5 and 79.5 inches north of the southeast pillar. The kitchen southwest corner holds a 34.5 by 26 inch pantry box with a 24 inch swing door, its west hinge 5 inches from the corner. Along the kitchen east wall, south of the northeast pillar: a 38 inch fridge opening, 18 inches of granite counter, a 30 inch stove opening, then granite counter running the rest of the east wall and wrapping the south wall to the pantry. A 40 by 65 inch rectangular granite island sits in the kitchen, 34 inches from the west wall and 36 inches from the south counters, with a 37.25 inch aisle to the east counters and two Windsor-style barstools on its west side. Remaining kitchen contents have not been drawn yet.">
   
   <defs>
@@ -1569,6 +2020,24 @@
   <text class="dim-big" x="-23.5" y="96" text-anchor="middle" transform="rotate(-90 -23.5 96)">146&quot;</text>
 
 </svg>
+        </div>
+        <script>
+          (function() {
+            var btns = document.querySelectorAll('.fp-tab-btn');
+            btns.forEach(function(btn) {
+              btn.addEventListener('click', function() {
+                var target = btn.getAttribute('data-fp-target');
+                document.querySelectorAll('.fp-tab-panel').forEach(function(p) { p.style.display = (p.id === target) ? '' : 'none'; });
+                btns.forEach(function(b) {
+                  var active = (b === btn);
+                  b.style.background = active ? '#2A2A2A' : '#fff';
+                  b.style.color = active ? '#fff' : '#2A2A2A';
+                });
+              });
+            });
+          })();
+        </script>
+      </div>
 
 
 
