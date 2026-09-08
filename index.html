@@ -373,546 +373,6 @@
       
 
     <div style="margin: 16px 0 8px; width: 100%;">
-<div class="floorplan-tabs" style="width:100%;">
-        <div style="display:flex; gap:8px; margin:16px 0 8px;">
-          <button type="button" class="fp-tab-btn" data-fp-target="pbed-tab-bordered" style="padding:6px 14px; font-size:12px; border-radius:4px; border:1px solid var(--border); background:#2A2A2A; color:#fff; cursor:pointer;">Bordered</button>
-          <button type="button" class="fp-tab-btn" data-fp-target="pbed-tab-w2w" style="padding:6px 14px; font-size:12px; border-radius:4px; border:1px solid var(--border); background:#fff; color:#2A2A2A; cursor:pointer;">Wall-to-Wall</button>
-        </div>
-        <div id="pbed-tab-w2w" class="fp-tab-panel" style="display:none;">
-                <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan-w2w" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-378 -160 418 347" role="img"
-     aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Essential Nightstand between its headboard and the window, pulled back 4 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall, 2 inches off the bed's own frame and 2 inches short of its side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor running straight to all four walls, no border, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets floored in the same solid black tile used in the bedroom's own checkerboard, to the top of the room, each with a wall-hung mirror on the wall it shares with the bedroom and a black ceiling pendant light centered in its own open floor area, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet and a single black vanity light bar centered above it, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
-  
-  <defs>
-    <style>
-      /* All selectors scoped to #pbed-plan-w2w so nothing leaks into the page. */
-      #pbed-plan-w2w .outline { fill:none; stroke:#2A2A2A; stroke-width:.33; }
-      #pbed-plan-w2w .thin    { fill:none; stroke:#2A2A2A; stroke-width:.21; }
-      #pbed-plan-w2w .fix     { fill:#fff;  stroke:#2A2A2A; stroke-width:.29; }
-      #pbed-plan-w2w .lbl     { font:2.9px 'Helvetica Neue',Arial,sans-serif; fill:#3A3A3A; }
-      #pbed-plan-w2w .lbl-s   { font:2.5px 'Helvetica Neue',Arial,sans-serif; fill:#555; }
-      #pbed-plan-w2w .wall-lbl{ font:3.5px 'Helvetica Neue',Arial,sans-serif; fill:#8F8F8F; }
-      #pbed-plan-w2w .teal    { fill:#2F7D94; }
-      #pbed-plan-w2w .red     { fill:none; stroke:#8A3B2A; stroke-width:.21; stroke-dasharray:1.6 1.2; }
-      #pbed-plan-w2w .red-t   { font:2.5px 'Helvetica Neue',Arial,sans-serif; fill:#8A3B2A; }
-      /* Dimensioning, architectural convention: extension lines stand off the
-         object and overrun the outermost dimension line; dimension lines are
-         unbroken with 45-degree ticks; text sits on the line. */
-      #pbed-plan-w2w .extline { fill:none; stroke:#6E6A62; stroke-width:.14; }
-      #pbed-plan-w2w .dimline { fill:none; stroke:#2A2A2A; stroke-width:.16; }
-      #pbed-plan-w2w .tick    { stroke:#2A2A2A; stroke-width:.24; stroke-linecap:round; }
-      #pbed-plan-w2w .dim-t   { font:3.1px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; }
-      #pbed-plan-w2w .dim-big { font:4.3px 'Helvetica Neue',Arial,sans-serif; fill:#2A2A2A; font-weight:700; }
-      /* Labels that sit ON the bath/WIC floor. The WIC is solid Nero
-         (#262322); the bath is back on Dawson mosaic (#333130/#4A4644,
-         reverted 2026-09-03 the same day it briefly switched to Nero) —
-         both dark either way, so the old #C7C1B6 grey on them was
-         unreadable at 2px regardless of which material.
-         Near-white instead: 8:1+ against the tile.
-         NO HALO. A paint-order stroke is the usual fix for text on a busy
-         ground, but the stem of a 2px face is about .2 wide, so any stroke
-         big enough to see eats the letter from both sides and the text goes
-         dark. Tried at .75 and .22; both were worse than none. */
-      #pbed-plan-w2w .on-dark { fill:#F6F3ED; }
-      #pbed-plan-w2w text     { dominant-baseline:middle; }
-      /* Stair treads/landings, matching the main-floor plan's own
-         Special Walnut stain convention (see that file's
-         .tread/.riser note — switched 2026-09-07 from an earlier
-         black-stain fill). */
-      #pbed-plan-w2w .tread   { fill:#7D5A3E; stroke:#F1EEE7; stroke-width:.5; }
-      #pbed-plan-w2w .riser   { fill:none; stroke:#F1EEE7; stroke-width:.4; }
-    </style>
-    
-    
-    <pattern id="pbed-check-w2w" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(0,75.029) rotate(45)">
-      <rect width="48" height="48" fill="#262322"/>
-      <rect x="0"  y="0"  width="24" height="24" fill="#F1EEE7"/>
-      <rect x="24" y="24" width="24" height="24" fill="#F1EEE7"/>
-    </pattern>
-
-    <pattern id="secbed-check-w2w" width="48" height="48" patternUnits="userSpaceOnUse"
-             patternTransform="translate(72,276.029) rotate(45)">
-      <rect width="48" height="48" fill="#F1EEE7"/>
-      <rect x="0"  y="0"  width="24" height="24" fill="#262322"/>
-      <rect x="24" y="24" width="24" height="24" fill="#262322"/>
-    </pattern>
-
-    <pattern id="pbed-dawson-lg-w2w" width="24" height="12" patternUnits="userSpaceOnUse">
-      <rect width="24" height="12" fill="#333130"/>
-    </pattern>
-
-    <pattern id="secbath-dawson-mosaic-w2w" width="2" height="2" patternUnits="userSpaceOnUse">
-      <rect width="2" height="2" fill="#242220"/>
-      <rect x=".09" y=".09" width="1.82" height="1.82" fill="#333130"/>
-    </pattern>
-  </defs>
-  <g transform="rotate(90)">
-
-
-  
-  <rect x="-73.5" y="-4.5" width="73.5" height="183" fill="#C9C4B7"/>   
-  <rect x="0" y="-4.5" width="148.5" height="165" fill="#C9C4B7"/>  
-  
-  <rect x="0" y="0" width="144" height="156" fill="url(#pbed-check-w2w)"/>
-  <rect x="12" y="12" width="120" height="132" fill="url(#pbed-check-w2w)"/>
-
-  
-  
-  <rect x="4" y="156" width="28" height="4.5" fill="#262322"/>
-  <rect x="-9" y="75" width="9" height="34" fill="#262322"/>  
-
-  
-  <text class="lbl-s" x="18" y="164.5" text-anchor="middle" transform="rotate(180 18 164.5)">TO HALL (bedroom door)</text>
-
-  
-  <path fill="#C9C4B7" d="M41,160.5 V219.5 H0 V210.5 H-35 V224 H45.5 V160.5 Z"/>
-  <rect x="0" y="160.5" width="41" height="59" fill="#262322"/>
-  <rect x="-35" y="178.5" width="35" height="32" fill="#7D5A3E"/>
-  <path class="outline" d="M41,160.5 V219.5 H32 M4,219.5 H0 V210.5 H-35"/>
-  <rect x="4" y="219.5" width="28" height="4.5" fill="#262322"/>
-  <line class="thin" x1="4" y1="219.5" x2="4" y2="224"/>
-  <line class="thin" x1="32" y1="219.5" x2="32" y2="224"/>
-  <rect x="41" y="219.5" width="107.5" height="4.5" fill="#C9C4B7"/>
-  <rect x="144" y="160.5" width="4.5" height="206" fill="#C9C4B7"/>
-  <rect x="-29" y="362" width="177.5" height="4.5" fill="#C9C4B7"/>
-  <rect x="-29" y="224" width="173" height="138" fill="#262322"/>
-  <rect x="12" y="236" width="120" height="114" fill="url(#secbed-check-w2w)"/>
-  <path class="outline" d="M32,224 H112 M140,224 H144 V362 H0 V338 M0,268 V224 H4"/>
-  <rect class="fix" x="4" y="224" width="1.4" height="28"/>
-  <path class="thin" fill="none" d="M32,224 A28,28 0 0 1 4,252"/>
-
-
-  <rect x="-35" y="224" width="6" height="142.5" fill="#C9C4B7"/>
-
-  <rect x="-29" y="263.5" width="3" height="59" fill="#825B3E"/>
-  <rect fill="#825B3E" stroke="#2A2A2A" stroke-width=".29" x="-29" y="263.5" width="77" height="59"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="-29" y="266" width="75" height="54" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="-29" y="269" width="8" height="48" rx="2"/>
-  <text class="lbl" x="12.5" y="293" text-anchor="middle" transform="rotate(-90 12.5 293)">FULL</text>
-  <text class="lbl-s" x="7.5" y="293" text-anchor="middle" transform="rotate(-90 7.5 293)">59 x 80</text>
-  <rect x="-29" y="224" width="29" height="27.5" fill="#7D5A3E" stroke="#463222" stroke-width=".29"/>
-  <text class="lbl-s" x="-14.5" y="237.75" text-anchor="middle" transform="rotate(-90 -14.5 237.75)" style="fill:#F0EDE6">ORGANIZERS</text>
-  <rect x="-29" y="334.5" width="29" height="27.5" fill="#7D5A3E" stroke="#463222" stroke-width=".29"/>
-  <text class="lbl-s" x="-14.5" y="348.25" text-anchor="middle" transform="rotate(-90 -14.5 348.25)" style="fill:#F0EDE6">ORGANIZERS</text>
-
-  <rect x="41" y="160.5" width="8" height="59" fill="#C9C4B7"/>
-  <path class="outline" d="M49,160.5 H144 V219.5 H140 M112,219.5 H49 V160.5"/>
-
-  <rect x="49" y="160.5" width="31" height="59" fill="url(#secbath-dawson-mosaic-w2w)"/>
-  <rect x="80" y="160.5" width="64" height="59" fill="url(#pbed-dawson-lg-w2w)"/>
-
-  <rect x="112" y="219.5" width="28" height="4.5" fill="#262322"/>
-  <line class="thin" x1="112" y1="219.5" x2="112" y2="224"/>
-  <line class="thin" x1="140" y1="219.5" x2="140" y2="224"/>
-  <rect class="fix" x="140" y="191.5" width="1.4" height="28"/>
-  <path class="thin" fill="none" d="M112,219.5 A28,28 0 0 1 140,191.5"/>
-
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="49" y="160.5" width="95" height=".375"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="143.625" y="160.5" width=".375" height="59"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="49" y="219.125" width="63" height=".375"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="140" y="219.125" width="4" height=".375"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="49" y="160.5" width=".375" height="59"/>
-
-  <rect fill="none" stroke="#D8D3C8" stroke-width=".083" x="50.5" y="160.5" width="28" height="2.25"/>
-  <line x1="50.5" y1="161.625" x2="78.5" y2="161.625" stroke="#C9C4B7" stroke-width=".083" stroke-dasharray=".9 .7"/>
-  <text class="lbl-s on-dark" x="64.5" y="164" text-anchor="middle" font-size="1.8">linear drain</text>
-  <line x1="80" y1="160.5" x2="80" y2="195.5" stroke="#5FB2CC" stroke-width=".33"/>
-  <text class="teal" x="78.8" y="178" text-anchor="middle" font-size="1.6" transform="rotate(-90 78.8 178)" style="fill:#8FCBE0">34.9&quot; fixed glass</text>
-  <line x1="49" y1="194.5" x2="80" y2="194.5" stroke="#C9C4B7" stroke-width=".133"/>
-  <text class="teal" x="64.5" y="193.1" text-anchor="middle" font-size="1.44" style="fill:#8FCBE0">support bar</text>
-  <line x1="80" y1="195.5" x2="80" y2="219.5" stroke="#6E6A62" stroke-width=".26" stroke-dasharray="2 1.4"/>
-  <rect x="58.5" y="157" width="12" height="3.5" fill="#FBFAF7" stroke="#2A2A2A" stroke-width=".117"/>
-  <text class="lbl-s" x="64.5" y="158.75" text-anchor="middle" font-size="1.8">nook</text>
-  <circle fill="none" stroke="#5FB2CC" stroke-width=".07" stroke-dasharray="1.2 .9" cx="64.5" cy="178" r="15"/>
-  <text x="64.5" y="164.7" text-anchor="middle" font-size="2" style="fill:#5FB2CC">30&quot;</text>
-  <circle fill="none" stroke="#F0EDE6" stroke-width=".21" stroke-dasharray="1.2 .9" cx="64.5" cy="178" r="6"/>
-  <circle cx="64.5" cy="178" r=".29" fill="#F0EDE6"/>
-  <text class="lbl-s on-dark" x="63" y="178" text-anchor="middle" font-size="1.8" transform="rotate(-90 63 178)">ceiling</text>
-  <text class="lbl-s on-dark" x="66" y="178" text-anchor="middle" font-size="1.8" transform="rotate(-90 66 178)">rainhead</text>
-  <rect x="48.4" y="189.04" width=".6" height="1.92" fill="#2A2A2A"/>
-  <text class="lbl-s" x="46.8" y="190" text-anchor="middle" font-size="1.8" transform="rotate(-90 46.8 190)">valve</text>
-  <rect x="48.4" y="177.25" width=".6" height="1.5" fill="#2A2A2A"/>
-  <path d="M48.7,190 Q47.8,183.8 48.7,177.6" fill="none" stroke="#2A2A2A" stroke-width=".06"/>
-  <rect x="47.4" y="177.6" width="1.3" height=".8" rx=".4" fill="#fff" stroke="#2A2A2A" stroke-width=".08"/>
-  <text class="lbl-s" x="46.8" y="178" text-anchor="middle" font-size="1.8" transform="rotate(-90 46.8 178)">wand</text>
-
-  <path fill="#fff" stroke="#2A2A2A" stroke-width=".29" d="M88.901,166.709 L90.01,181.506 A6.49,7.374 0 0 0 102.99,181.506 L104.099,166.709 Z"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".29" rx=".5" x="88.06" y="160.5" width="16.88" height="6.687"/>
-  <line x1="88.06" y1="165.553" x2="104.94" y2="165.553" stroke="#2A2A2A" stroke-width=".083"/>
-  <text x="96.5" y="175.975" text-anchor="middle" font-size="2.29" font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A" transform="rotate(-90 96.5 175.975)">WC</text>
-
-  <circle cx="92" cy="218.58" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
-  <circle cx="96.5" cy="218.58" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
-  <circle cx="101" cy="218.58" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
-  <text class="lbl-s" x="96.5" y="216.3" text-anchor="middle" font-size="1.8">towel hooks</text>
-  <circle cx="48.4" cy="200" r=".6" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".12"/>
-  <rect x="106.5" y="160.5" width="6" height=".33" fill="#fff" stroke="#2A2A2A" stroke-width=".07"/>
-  <text class="lbl-s" x="109.5" y="163.5" text-anchor="middle" font-size="1.6">TP holder</text>
-
-  <rect x="114" y="161.25" width="24" height="22" fill="#fff" stroke="#2A2A2A" stroke-width=".29"/>
-  <ellipse cx="126" cy="172.25" rx="7" ry="5" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".21"/>
-  <circle fill="#2A2A2A" cx="126" cy="163.25" r=".7"/>
-  <text class="lbl-s on-dark" x="20" y="190" text-anchor="middle" transform="rotate(-90 20 190)">LANDING</text>
-
-  
-  <rect x="-35" y="210.5" width="4.5" height="7" fill="#C9C4B7"/>  
-  <rect x="-79.5" y="174" width="4.5" height="73.5" fill="#C9C4B7"/>  
-  <rect x="-79.5" y="174" width="44.5" height="4.5" fill="#C9C4B7"/>  
-  <path class="outline" d="M-35,210.5 V217.5"/>
-  <path class="outline" d="M-35,178.5 H-75 V247.5"/>
-  <rect class="tread" x="-75" y="178.5" width="40" height="39"/>
-  <rect class="tread" x="-75" y="217.5" width="40" height="10"/>
-  <rect class="tread" x="-75" y="227.5" width="40" height="10"/>
-  <path class="tread" d="M-75,237.5 L-75,242 L-35,247.5 L-35,237.5 Z"/>
-  <path d="M0,195 L-60,195 Q-65,195 -65,200 L-65,228" fill="none" stroke="#fff" stroke-width=".38"/>
-  <path d="M-65,234 L-68.5,227.5 L-61.5,227.5 Z" fill="#fff"/>
-  <text class="lbl" style="fill:#fff" x="-45" y="200" text-anchor="middle" transform="rotate(-90 -45 200)">DN</text>
-
-  
-  
-  <rect x="-69" y="0" width="60" height="174" fill="#262322"/>
-  
-  
-  
-  <rect x="-73.5" y="75" width="4.5" height="34" fill="#262322"/>
-
-  
-  
-  <path class="outline" d="M-69,0 H-9 V75 M-9,109 V174 H-69 V109 M-69,75 V0"/>
-  <path class="outline" d="M0,75 H-9 M0,109 H-9"/>
-
-  
-  
-  <g transform="translate(4.5,0)">
-  <rect x="-144.5" y="-4.5" width="66.5" height="168.5" fill="#C9C4B7"/>
-  
-  <rect x="-140" y="40.5" width="62" height="88.2" fill="url(#pbed-dawson-lg-w2w)"/>
-  <rect x="-110" y="36" width="28" height="4.5" fill="url(#pbed-dawson-lg-w2w)"/>
-  <path class="outline" d="M-78,40.5 H-140 V159.5 H-78 M-78,159.5 V109 M-78,75 V40.5"/>
-  <rect x="-140" y="0" width="62" height="36" fill="url(#pbed-dawson-lg-w2w)"/>
-  <path class="outline" d="M-140,0 H-78 V36 H-82 M-110,36 H-140 V0"/>
-  <path class="outline" d="M-78,-4.5 H-144.5 V164 H-78"/>
-  <path class="outline" d="M-110,40.5 V36 M-82,36 V40.5"/>
-  
-  <rect class="fix" x="-83.4" y="8" width="1.4" height="28"/>
-  <path class="thin" fill="none" d="M-110,36 A28,28 0 0 1 -82,8"/>
-  
-  
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-140" y="159.125" width="62" height=".375"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-140" y="40.5" width=".375" height="119"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-78.375" y="109" width=".375" height="50.5"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-78.375" y="40.5" width=".375" height="34.5"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-140" y="40.5" width="30" height=".375"/>
-  <rect fill="#9FBDB6" stroke="#6E8A84" stroke-width=".08" x="-82" y="40.5" width="4" height=".375"/>
-  <g transform="translate(-108.8,143.7) rotate(180)" fill="none" stroke="#2A2A2A">
-    <rect fill="#F3F0EA" stroke-width=".29" x="-30" y="-15" width="60" height="30" rx="1"/>
-    <rect stroke-width=".26" x="-26" y="-13" width="52" height="24" rx="3"/>
-    <rect stroke-width=".21" x="-22" y="-12" width="46.25" height="22" rx="6"/>
-    <rect fill="#2A2A2A" stroke="none" x="25.1" y="-5.5" width="0.9" height="9" rx=".45"/>
-    <circle stroke-width=".21" cx="21" cy="-1" r="1.125"/>
-  </g>
-
-  
-  <line x1="-139.2" y1="129.2" x2="-78.8" y2="129.2" stroke="#6E6A62" stroke-width=".26" stroke-dasharray="2 1.4"/>
-  
-  <text class="lbl-s" x="-108.8" y="131" text-anchor="middle" font-size="1.8" style="fill:#2A2A2A">rod + liner</text>
-
-  
-  <g fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16">
-    <circle cx="-138.3" cy="115.9" r=".8"/>
-    <circle cx="-138.3" cy="121.8" r=".8"/>
-  </g>
-  <text class="lbl-s on-dark" x="-134" y="118.85" text-anchor="middle" font-size="2.0" transform="rotate(-90 -134 118.85)">towel hooks</text>
-
-  <g fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16">
-    <circle cx="-79.7" cy="115.9" r=".8"/>
-    <circle cx="-79.7" cy="121.8" r=".8"/>
-  </g>
-  <text class="lbl-s on-dark" x="-75.4" y="118.85" text-anchor="middle" font-size="2.0" transform="rotate(-90 -75.4 118.85)">towel hooks</text>
-
-  
-  <g transform="rotate(-90 -134.1 57.25)">
-    <rect x="-139.2" y="52.15" width="10.2" height="10.2" rx=".6" fill="#F7F6F3" stroke="#2A2A2A" stroke-width=".21"/>
-    <g stroke="#CFCBC3" stroke-width=".55">
-      <line x1="-134.1" y1="52.15" x2="-134.1" y2="62.35"/>
-      <line x1="-139.2" y1="57.25" x2="-129" y2="57.25"/>
-    </g>
-    <circle cx="-134.1" cy="57.25" r=".9" fill="none" stroke="#A8A29A" stroke-width=".16"/>
-    <rect x="-132" y="53.45" width="2.4" height="1.2" rx=".25" fill="#2A2A2A"/>
-  </g>
-  <text class="lbl-s on-dark" x="-121" y="57.85" text-anchor="middle" font-size="2.0"  transform="rotate(-90 -121 57.85)">scale</text>
-
-  
-  <line x1="-116.7" y1="92" x2="-73.5" y2="92" stroke="#8A8375" stroke-width=".16" stroke-dasharray="4 1.6 1 1.6"/>
-  <rect x="-139.2" y="76.25" width="22" height="31.5" fill="#fff" stroke="#2A2A2A" stroke-width=".29"/>
-  <ellipse cx="-128.2" cy="92" rx="5" ry="7" fill="#F1EEE7" stroke="#2A2A2A" stroke-width=".21"/>
-  <circle fill="#2A2A2A" cx="-137.2" cy="92" r=".7"/>
-  
-  <g transform="translate(-140,18) rotate(90) translate(-45.79,-61)">
-    <path class="fix" d="M38.191,54.791 L39.3,39.994 A6.49,7.374 0 0 1 52.28,39.994 L53.389,54.791 Z"/>
-    <rect class="fix" x="37.35" y="54.313" width="16.88" height="6.687" rx=".5"/>
-    <line x1="37.35" y1="55.947" x2="54.23" y2="55.947" stroke="#2A2A2A" stroke-width=".2"/>
-  </g>
-  <text x="-119" y="18.9" text-anchor="middle" font-size="2.6"
-        font-family="'Helvetica Neue',Arial,sans-serif" fill="#2A2A2A" transform="rotate(-90 -119 18.9)">WC</text>
-
-  
-  <rect x="-103.3" y="2.7" width="6" height="0.6" rx=".3" fill="#EDEAE3" stroke="#2A2A2A" stroke-width=".16"/>
-  
-  <text class="lbl-s" x="-100.3" y="-1.9" text-anchor="middle" style="font-size:2.8px">TP holder</text>
-  <text class="lbl-s on-dark" x="-96" y="44.5" text-anchor="middle" font-size="2.0"  transform="rotate(180 -96 44.5)">door 28"</text>
-
-  
-
-  
-  <rect fill="#2A2A2A" x="-139.625" y="134.2" width="1" height="3"/>
-  <text class="lbl-s" x="-142" y="135.7" text-anchor="middle" font-size="2.0" transform="rotate(-90 -142 135.7)">valve</text>
-
-  
-  <path d="M-139.625,137.2 Q-137,140.95 -139.625,143.6" fill="none" stroke="#2A2A2A" stroke-width=".18"/>
-  <rect fill="#2A2A2A" x="-139.625" y="143.6" width="1" height="2.2"/>
-  <rect x="-139.625" y="143.95" width="2.4" height="1.5" rx=".75" fill="#fff" stroke="#2A2A2A" stroke-width=".2"/>
-  <text class="lbl-s" x="-142" y="144.7" text-anchor="middle" font-size="2.0" transform="rotate(-90 -142 144.7)">wand</text>
-
-  
-  <g fill="#2A2A2A" transform="translate(-139.625,153.7)">
-    <circle cx="0" cy="0" r="1.3"/>
-    <path d="M0,-.8 L7.75,-.6 L7.75,.6 L0,.8 Z"/>
-    <circle cx="7.75" cy="0" r=".7"/>
-  </g>
-  <text class="lbl-s" x="-142" y="153.7" text-anchor="middle" font-size="2.0" transform="rotate(-90 -142 153.7)">tub spout</text>
-
-  
-  <rect x="-139.2" y="83.75" width=".5" height="16.5" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".29"/>
-  <text class="teal" x="-142" y="92" text-anchor="middle" font-size="2.0" transform="rotate(-90 -142 92)">medicine cabinet</text>
-  <rect x="-139.2" y="80" width=".5" height="24" fill="#E8C97A" stroke="#2A2A2A" stroke-width=".2"/>
-  <text class="lbl-s" x="-142" y="92" text-anchor="middle" font-size="1.8" transform="rotate(-90 -142 92)" style="fill:#C79436">vanity light</text>
-  </g>
-
-  
-  <rect x="-71.96" y="109" width="1.42" height="36" fill="none" stroke="#6E6A62" stroke-width=".13" stroke-dasharray="1 .8"/>
-  <rect x="-71.96" y="92" width="1.42" height="34" fill="#fff" stroke="#2A2A2A" stroke-width=".16"/>
-  <text class="lbl-s on-dark" x="-75.3" y="92" text-anchor="middle" font-size="1.9" transform="rotate(-90 -75.3 92)">pocket door, half-open</text>
-
-  
-  <line x1="-69" y1="71" x2="-9" y2="71" stroke="#6E6A62" stroke-width=".22"/>
-  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M-68,71 Q-66.0,72.7 -64,71 Q-62.0,69.3 -60,71 Q-58.0,72.7 -56,71 Q-54.0,69.3 -52,71 Q-50.0,72.7 -48,71 Q-46.0,69.3 -44,71 Q-42.0,72.7 -40,71 Q-38.0,69.3 -36,71 Q-34.0,72.7 -32,71 Q-30.0,69.3 -28,71 Q-26.0,72.7 -24,71 Q-22.0,69.3 -20,71 Q-18.0,72.7 -16,71 Q-14.0,69.3 -12,71 Q-11.0,72.7 -10,71"/>
-  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M-68,71 Q-66.0,72.7 -64,71 Q-62.0,69.3 -60,71 Q-58.0,72.7 -56,71 Q-54.0,69.3 -52,71 Q-50.0,72.7 -48,71 Q-46.0,69.3 -44,71 Q-42.0,72.7 -40,71 Q-38.0,69.3 -36,71 Q-34.0,72.7 -32,71 Q-30.0,69.3 -28,71 Q-26.0,72.7 -24,71 Q-22.0,69.3 -20,71 Q-18.0,72.7 -16,71 Q-14.0,69.3 -12,71 Q-11.0,72.7 -10,71"/>
-  <rect x="-18.1" y="58" width="4.2" height="19" rx="2.1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="-16" y="67.5" text-anchor="middle" font-size="2.0" transform="rotate(-90 -16 67.5)">curtain</text>
-
-  <line x1="-69" y1="113" x2="-9" y2="113" stroke="#6E6A62" stroke-width=".22"/>
-  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M-68,113 Q-66.0,114.7 -64,113 Q-62.0,111.3 -60,113 Q-58.0,114.7 -56,113 Q-54.0,111.3 -52,113 Q-50.0,114.7 -48,113 Q-46.0,111.3 -44,113 Q-42.0,114.7 -40,113 Q-38.0,111.3 -36,113 Q-34.0,114.7 -32,113 Q-30.0,111.3 -28,113 Q-26.0,114.7 -24,113 Q-22.0,111.3 -20,113 Q-18.0,114.7 -16,113 Q-14.0,111.3 -12,113 Q-11.0,114.7 -10,113"/>
-  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M-68,113 Q-66.0,114.7 -64,113 Q-62.0,111.3 -60,113 Q-58.0,114.7 -56,113 Q-54.0,111.3 -52,113 Q-50.0,114.7 -48,113 Q-46.0,111.3 -44,113 Q-42.0,114.7 -40,113 Q-38.0,111.3 -36,113 Q-34.0,114.7 -32,113 Q-30.0,111.3 -28,113 Q-26.0,114.7 -24,113 Q-22.0,111.3 -20,113 Q-18.0,114.7 -16,113 Q-14.0,111.3 -12,113 Q-11.0,114.7 -10,113"/>
-  <rect x="-18.1" y="108" width="4.2" height="19" rx="2.1" fill="#FBFAF7"/>
-  <text class="lbl-s" x="-16" y="117.5" text-anchor="middle" font-size="2.0" transform="rotate(-90 -16 117.5)">curtain</text>
-
-  
-  <path fill="#7D5A3E" stroke="#463222" stroke-width=".29" d="M-69,0 H-9 V24 H-37 L-45,32 V59 L-53,67 H-69 Z"/>
-  <text class="lbl-s" x="-51" y="10.75" text-anchor="middle" transform="rotate(-90 -51 10.75)">ORGANIZERS</text>
-
-  <path fill="#7D5A3E" stroke="#463222" stroke-width=".29" d="M-69,174 H-9 V150 H-37 L-45,142 V125 L-53,117 H-69 Z"/>
-  <text class="lbl-s" x="-51" y="163.25" text-anchor="middle" transform="rotate(-90 -51 163.25)">ORGANIZERS</text>
-  <rect x="-33" y="158" width="24" height="16" fill="none" stroke="#463222" stroke-width=".16" stroke-dasharray="1.4 1.1"/>
-  <text class="lbl-s" x="-22.1" y="166.7" text-anchor="middle" font-size="1.9" transform="rotate(-90 -22.1 166.7)">chase,</text>
-  <text class="lbl-s" x="-19.9" y="166.7" text-anchor="middle" font-size="1.9" transform="rotate(-90 -19.9 166.7)">24 x 16</text>
-
-  
-  <rect x="-9.5" y="33.5" width="0.5" height="24" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="-4.5" y="45.5" text-anchor="middle" font-size="2.0" transform="rotate(-90 -4.5 45.5)">mirror</text>
-  <rect x="-9.5" y="121.5" width="0.5" height="24" fill="#EAF1F3" stroke="#2F7D94" stroke-width=".14"/>
-  <text class="teal" x="-4.5" y="133.5" text-anchor="middle" font-size="2.0" transform="rotate(-90 -4.5 133.5)">mirror</text>
-
-  
-  <circle cx="-27" cy="45.5" r="3" fill="#211D19" stroke="#FFFFFF" stroke-width=".4"/>
-  <line class="thin" x1="-30" y1="45.5" x2="-24" y2="45.5" stroke="#FFFFFF" stroke-width=".3"/>
-  <line class="thin" x1="-27" y1="42.5" x2="-27" y2="48.5" stroke="#FFFFFF" stroke-width=".3"/>
-  <circle cx="-27" cy="133.5" r="3" fill="#211D19" stroke="#FFFFFF" stroke-width=".4"/>
-  <line class="thin" x1="-30" y1="133.5" x2="-24" y2="133.5" stroke="#FFFFFF" stroke-width=".3"/>
-  <line class="thin" x1="-27" y1="130.5" x2="-27" y2="136.5" stroke="#FFFFFF" stroke-width=".3"/>
-
-  
-  <line class="dimline" x1="-66.5" y1="0" x2="-66.5" y2="67"/>
-  <g class="tick">
-    <line x1="-67.6" y1="-1.1" x2="-65.4" y2="1.1"/>
-    <line x1="-67.6" y1="65.9" x2="-65.4" y2="68.1"/>
-  </g>
-  <rect x="-68.3" y="29" width="3.6" height="9" rx="1" fill="#FBFAF7"/>
-  <text class="dim-t" x="-66.5" y="33.5" text-anchor="middle" transform="rotate(-90 -66.5 33.5)">67"</text>
-  <line class="dimline" x1="-66.5" y1="117" x2="-66.5" y2="174"/>
-  <g class="tick">
-    <line x1="-67.6" y1="115.9" x2="-65.4" y2="118.1"/>
-    <line x1="-67.6" y1="172.9" x2="-65.4" y2="175.1"/>
-  </g>
-  <rect x="-68.3" y="141" width="3.6" height="9" rx="1" fill="#FBFAF7"/>
-  <text class="dim-t" x="-66.5" y="145.5" text-anchor="middle" transform="rotate(-90 -66.5 145.5)">57"</text>
-
-  
-
-
-  
-
-  
-  <path class="outline" d="M4,160.5 V156 H0 V109"/>
-  <path class="outline" d="M0,75 V0 H144 V156 H32 V160.5"/>
-  <path class="outline" d="M-73.5,-4.5 H148.5 V160.5 H32 M4,160.5 H0 V178.5 H-73.5 V109 M-73.5,75 V-4.5"/>
-  
-  <rect class="fix" x="4" y="128" width="1.4" height="28"/>
-  <path class="thin" fill="none" d="M32,156 A28,28 0 0 0 4,128"/>
-
-  
-  
-  <line class="thin" x1="144" y1="48" x2="148.5" y2="48"/>
-  <line class="thin" x1="144" y1="89" x2="148.5" y2="89"/>
-  <line x1="146.25" y1="48" x2="146.25" y2="89" stroke="#2F7D94" stroke-width=".3"/>
-  
-  <line class="thin" x1="6" y1="-4.5" x2="6" y2="0"/>
-  <line class="thin" x1="34" y1="-4.5" x2="34" y2="0"/>
-  <line x1="6" y1="-2.25" x2="34" y2="-2.25" stroke="#2F7D94" stroke-width=".3"/>
-  <text class="teal" x="20" y="-6.2" text-anchor="middle" font-size="2.6" transform="rotate(180 20 -6.2)">WINDOW 28"</text>
-  <text class="teal" x="151.5" y="68.5" text-anchor="middle" font-size="2.6"
-        transform="rotate(-90 151.5 68.5)">WINDOW 41"</text>
-
-  
-  <rect x="141" y="0" width="3" height="44" fill="#825B3E"/>
-  <rect fill="#825B3E" stroke="#2A2A2A" stroke-width=".29" x="64" y="0" width="77" height="44"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="66" y="3" width="75" height="38" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="133" y="6" width="8" height="32" rx="2"/>
-  <text class="lbl" x="101.6" y="23.5" text-anchor="middle" transform="rotate(-90 101.6 23.5)">TWIN</text>
-  <text class="lbl-s" x="96.6" y="23.5" text-anchor="middle" transform="rotate(-90 96.6 23.5)">44 x 80</text>
-
-  <rect x="141" y="112" width="3" height="44" fill="#825B3E"/>
-  <rect fill="#825B3E" stroke="#2A2A2A" stroke-width=".29" x="64" y="112" width="77" height="44"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="66" y="115" width="75" height="38" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="133" y="118" width="8" height="32" rx="2"/>
-  <text class="lbl" x="101.6" y="135.5" text-anchor="middle" transform="rotate(-90 101.6 135.5)">TWIN</text>
-  <text class="lbl-s" x="96.6" y="135.5" text-anchor="middle" transform="rotate(-90 96.6 135.5)">44 x 80</text>
-
-  
-  <rect x="143.2" y="27.56" width="4.88" height="4.88" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
-  <text class="lbl-s" x="146.25" y="18.5" text-anchor="middle" font-size="1.6" transform="rotate(-90 146.25 18.5)" style="fill:#000">reading light</text>
-
-  
-  <rect x="143.2" y="123.56" width="4.88" height="4.88" fill="#211D19" stroke="#FFFFFF" stroke-width=".2"/>
-  <text class="lbl-s" x="146.25" y="137.5" text-anchor="middle" font-size="1.6" transform="rotate(-90 146.25 137.5)" style="fill:#000">reading light</text>
-
-  
-  <rect fill="#825B3E" stroke="#493323" stroke-width=".29" x="123" y="48" width="18" height="24" rx="3"/>
-
-  <rect fill="#825B3E" stroke="#493323" stroke-width=".29" x="123" y="84" width="18" height="24" rx="3"/>
-
-  
-  <line x1="144" y1="46" x2="108" y2="46" stroke="#6E6A62" stroke-width=".22"/>
-  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M144,46 Q142.00,47.50 140,46 Q138.00,44.50 136,46 Q134.00,47.50 132,46 Q130.00,44.50 128,46 Q126.00,47.50 124,46 Q122.00,44.50 120,46 Q118.00,47.50 116,46 Q114.00,44.50 112,46 Q110.00,47.50 108,46"/>
-  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M144,46 Q142.00,47.50 140,46 Q138.00,44.50 136,46 Q134.00,47.50 132,46 Q130.00,44.50 128,46 Q126.00,47.50 124,46 Q122.00,44.50 120,46 Q118.00,47.50 116,46 Q114.00,44.50 112,46 Q110.00,47.50 108,46"/>
-  <rect x="104.25" y="38" width="3.5" height="16" rx="1.5" fill="#FBFAF7"/>
-  <text class="lbl-s" x="106" y="46" text-anchor="middle" font-size="2.0" transform="rotate(-90 106 46)">curtain</text>
-
-  <line x1="144" y1="110" x2="108" y2="110" stroke="#6E6A62" stroke-width=".22"/>
-  <path fill="none" stroke="#2A2A2A" stroke-width=".7" d="M144,110 Q142.00,111.50 140,110 Q138.00,108.50 136,110 Q134.00,111.50 132,110 Q130.00,108.50 128,110 Q126.00,111.50 124,110 Q122.00,108.50 120,110 Q118.00,111.50 116,110 Q114.00,108.50 112,110 Q110.00,111.50 108,110"/>
-  <path fill="none" stroke="#EDE8DD" stroke-width=".4" d="M144,110 Q142.00,111.50 140,110 Q138.00,108.50 136,110 Q134.00,111.50 132,110 Q130.00,108.50 128,110 Q126.00,111.50 124,110 Q122.00,108.50 120,110 Q118.00,111.50 116,110 Q114.00,108.50 112,110 Q110.00,111.50 108,110"/>
-  <rect x="104.25" y="102" width="3.5" height="16" rx="1.5" fill="#FBFAF7"/>
-  <text class="lbl-s" x="106" y="110" text-anchor="middle" font-size="2.0" transform="rotate(-90 106 110)">curtain</text>
-
-  
-  <line class="extline" x1="0"   y1="-6.5" x2="0"   y2="-34"/>
-  <line class="extline" x1="6"   y1="-6.5" x2="6"   y2="-24"/>
-  <line class="extline" x1="34"  y1="-6.5" x2="34"  y2="-24"/>
-  
-  <line class="dimline" x1="0" y1="-22" x2="144" y2="-22"/>
-  <g class="tick">
-    <line x1="-1.1" y1="-20.9" x2="1.1" y2="-23.1"/>
-    <line x1="4.9" y1="-20.9" x2="7.1" y2="-23.1"/>
-    <line x1="32.9" y1="-20.9" x2="35.1" y2="-23.1"/>
-    <line x1="142.9" y1="-20.9" x2="145.1" y2="-23.1"/>
-  </g>
-  <text class="dim-t" x="3" y="-23.6" text-anchor="middle" transform="rotate(180 3 -23.6)">6"</text>
-  <text class="dim-t" x="20" y="-23.6" text-anchor="middle" transform="rotate(180 20 -23.6)">28"</text>
-  <text class="dim-t" x="89" y="-23.6" text-anchor="middle" transform="rotate(180 89 -23.6)">110"</text>
-  
-  <line class="dimline" x1="0" y1="-32" x2="144" y2="-32"/>
-  <g class="tick">
-    <line x1="-1.1" y1="-30.9" x2="1.1" y2="-33.1"/>
-    <line x1="142.9" y1="-30.9" x2="145.1" y2="-33.1"/>
-  </g>
-  <text class="dim-big" x="72" y="-34.6" text-anchor="middle" transform="rotate(180 72 -34.6)">144" (12'-0")</text>
-
-  
-  <line class="extline" x1="-73.5" y1="-6.5" x2="-73.5" y2="-24"/>
-  <line class="extline" x1="-69" y1="-6.5" x2="-69" y2="-14"/>
-  <line class="extline" x1="-9" y1="-6.5" x2="-9" y2="-14"/>
-  <line class="dimline" x1="-73.5" y1="-12" x2="0" y2="-12"/>
-  <g class="tick">
-    <line x1="-74.6" y1="-10.9" x2="-72.4" y2="-13.1"/>
-    <line x1="-70.1" y1="-10.9" x2="-67.9" y2="-13.1"/>
-    <line x1="-10.1" y1="-10.9" x2="-7.9" y2="-13.1"/>
-    <line x1="-1.1" y1="-10.9" x2="1.1" y2="-13.1"/>
-  </g>
-  <text class="dim-t" x="-71.25" y="-13.6" text-anchor="middle" font-size="2.6" transform="rotate(180 -71.25 -13.6)">4½"</text>
-  <text class="dim-t" x="-39" y="-13.6" text-anchor="middle" transform="rotate(180 -39 -13.6)">60"</text>
-  <text class="dim-t" x="-4.5" y="-13.6" text-anchor="middle" font-size="2.6" transform="rotate(180 -4.5 -13.6)">9"</text>
-  <line class="dimline" x1="-73.5" y1="-22" x2="0" y2="-22"/>
-  <g class="tick">
-    <line x1="-74.6" y1="-20.9" x2="-72.4" y2="-23.1"/>
-    <line x1="-1.1" y1="-20.9" x2="1.1" y2="-23.1"/>
-  </g>
-  <text class="dim-big" x="-36.75" y="-24.6" text-anchor="middle" transform="rotate(180 -36.75 -24.6)">73½"</text>
-
-  
-  <line class="extline" x1="-143.5" y1="0" x2="-151.5" y2="0"/>
-  <line class="extline" x1="-143.5" y1="159.5" x2="-151.5" y2="159.5"/>
-
-  <line class="dimline" x1="-147.5" y1="0" x2="-147.5" y2="159.5"/>
-  <g class="tick">
-    <line x1="-148.6" y1="-1.1" x2="-146.4" y2="1.1"/>
-    <line x1="-148.6" y1="158.4" x2="-146.4" y2="160.6"/>
-  </g>
-  <text class="dim-big" x="-150.1" y="79.75" text-anchor="middle" transform="rotate(-90 -150.1 79.75)">159½" bath</text>
-
-  
-
-  
-  <line class="extline" x1="-135.5" y1="165" x2="-135.5" y2="178"/>
-  <line class="extline" x1="-73.5"  y1="165" x2="-73.5"  y2="178"/>
-  <line class="dimline" x1="-135.5" y1="174" x2="-73.5" y2="174"/>
-  <g class="tick">
-    <line x1="-136.6" y1="172.9" x2="-134.4" y2="175.1"/>
-    <line x1="-74.6" y1="172.9" x2="-72.4" y2="175.1"/>
-  </g>
-  <text class="dim-t" x="-104.5" y="172.4" text-anchor="middle" transform="rotate(180 -104.5 172.4)">62"</text>
-
-  
-  <line class="extline" x1="154.5" y1="0"   x2="180" y2="0"/>
-  <line class="extline" x1="154.5" y1="48"  x2="160" y2="48"/>
-  <line class="extline" x1="154.5" y1="89"  x2="160" y2="89"/>
-  <line class="extline" x1="154.5" y1="156" x2="180" y2="156"/>
-  
-  <line class="dimline" x1="158" y1="0" x2="158" y2="156"/>
-  <g class="tick">
-    <line x1="156.9" y1="-1.1" x2="159.1" y2="1.1"/>
-    <line x1="156.9" y1="46.9" x2="159.1" y2="49.1"/>
-    <line x1="156.9" y1="87.9" x2="159.1" y2="90.1"/>
-    <line x1="156.9" y1="154.9" x2="159.1" y2="157.1"/>
-  </g>
-  <rect x="157.8" y="19.5" width="3.6" height="9" rx="1" fill="#FBFAF7"/>
-  <text class="dim-t" x="159.6" y="24" text-anchor="middle" transform="rotate(-90 159.6 24)">48"</text>
-  <rect x="157.8" y="64" width="3.6" height="9" rx="1" fill="#FBFAF7"/>
-  <text class="dim-t" x="159.6" y="68.5" text-anchor="middle" transform="rotate(-90 159.6 68.5)">41"</text>
-  <rect x="157.8" y="118" width="3.6" height="9" rx="1" fill="#FBFAF7"/>
-  <text class="dim-t" x="159.6" y="122.5" text-anchor="middle" transform="rotate(-90 159.6 122.5)">67"</text>
-  <line class="dimline" x1="168" y1="0" x2="168" y2="156"/>
-  <g class="tick">
-    <line x1="166.9" y1="-1.1" x2="169.1" y2="1.1"/>
-    <line x1="166.9" y1="154.9" x2="169.1" y2="157.1"/>
-  </g>
-  <text class="dim-big" x="170.6" y="78" text-anchor="middle" transform="rotate(-90 170.6 78)">156" (13'-0")</text>
-
-
-
-  </g>
-</svg>
-        </div>
-        <div id="pbed-tab-bordered" class="fp-tab-panel">
                 <svg xmlns="http://www.w3.org/2000/svg" id="pbed-plan" style="display:block; width:100%; height:auto; border-radius:4px; border:1px solid var(--border); background:#fff;" viewBox="-378 -160 418 347" role="img"
      aria-label="Primary bedroom floorplan, drawn to scale — two twin beds parallel on the bottom wall, flanking the 41 inch bottom window, one flush to the right wall clearing the window's right jamb by 4 inches, one flush to the left wall clearing the window's left jamb by 23 inches, each with a Thuma Essential Nightstand between its headboard and the window, pulled back 4 inches from the bed frame, and each bed with its own ceiling-hung canopy-style curtain divider running bottom-top, 36 inches long, against the bottom wall, 2 inches off the bed's own frame and 2 inches short of its side table, plain painted walls throughout, open floor across the rest of the room, a diagonal checkerboard floor framed by a 12 inch solid black border, a 28 inch window on the right wall now fully clear of both beds, two walk-in closets floored in the same solid black tile as the bedroom border to the top of the room, each with a wall-hung mirror on the wall it shares with the bedroom and a black ceiling pendant light centered in its own open floor area, and in that bathroom a toilet room, a single-sink vanity with a medicine cabinet and a single black vanity light bar centered above it, and an alcove tub with a wall-mount tub spout and valve, and a matching handshower on a wall holder">
   
@@ -1019,15 +479,21 @@
   <rect x="-35" y="224" width="6" height="142.5" fill="#C9C4B7"/>
 
   <rect x="-29" y="263.5" width="3" height="59" fill="#825B3E"/>
-  <rect fill="#825B3E" stroke="#2A2A2A" stroke-width=".29" x="-29" y="263.5" width="77" height="59"/>
-  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="-29" y="266" width="75" height="54" rx="1.5"/>
-  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="-29" y="269" width="8" height="48" rx="2"/>
-  <text class="lbl" x="12.5" y="293" text-anchor="middle" transform="rotate(-90 12.5 293)">FULL</text>
-  <text class="lbl-s" x="7.5" y="293" text-anchor="middle" transform="rotate(-90 7.5 293)">59 x 80</text>
+  <rect fill="#825B3E" stroke="#2A2A2A" stroke-width=".29" x="-26" y="263.5" width="77" height="59"/>
+  <rect fill="#F3F0EA" stroke="#2A2A2A" stroke-width=".21" x="-26" y="266" width="75" height="54" rx="1.5"/>
+  <rect fill="#fff" stroke="#2A2A2A" stroke-width=".21" x="-26" y="269" width="8" height="48" rx="2"/>
+  <text class="lbl" x="15.5" y="293" text-anchor="middle" transform="rotate(-90 15.5 293)">FULL</text>
+  <text class="lbl-s" x="10.5" y="293" text-anchor="middle" transform="rotate(-90 10.5 293)">59 x 80</text>
+  <rect fill="#825B3E" stroke="#493323" stroke-width=".29" x="-26" y="253.7" width="15.75" height="11.8" rx="1"/>
+  <rect fill="#825B3E" stroke="#493323" stroke-width=".29" x="-26" y="320.5" width="15.75" height="11.8" rx="1"/>
   <rect x="-29" y="224" width="29" height="27.5" fill="#7D5A3E" stroke="#463222" stroke-width=".29"/>
   <text class="lbl-s" x="-14.5" y="237.75" text-anchor="middle" transform="rotate(-90 -14.5 237.75)" style="fill:#F0EDE6">ORGANIZERS</text>
   <rect x="-29" y="334.5" width="29" height="27.5" fill="#7D5A3E" stroke="#463222" stroke-width=".29"/>
   <text class="lbl-s" x="-14.5" y="348.25" text-anchor="middle" transform="rotate(-90 -14.5 348.25)" style="fill:#F0EDE6">ORGANIZERS</text>
+  <rect fill="#825B3E" stroke="#493323" stroke-width=".29" x="120" y="269" width="24" height="48"/>
+  <rect fill="#825B3E" stroke="#493323" stroke-width=".29" x="98.75" y="284" width="19.25" height="18" rx="2"/>
+  <text class="lbl-s" x="132" y="293" text-anchor="middle" transform="rotate(-90 132 293)" style="fill:#F0EDE6">DESK</text>
+  <text class="lbl-s" x="108.375" y="293" text-anchor="middle" transform="rotate(-90 108.375 293)" style="fill:#F0EDE6">CHAIR</text>
 
   <rect x="41" y="160.5" width="8" height="59" fill="#C9C4B7"/>
   <path class="outline" d="M49,160.5 H144 V219.5 H140 M112,219.5 H49 V160.5"/>
@@ -1445,8 +911,6 @@
 
   </g>
 </svg>
-        </div>
-</div>
       <p style="font-size: 12px; color: #999; margin: 6px 0 0;">Proposed floor plan</p>
     </div>
 
@@ -1472,8 +936,8 @@
         <p style="font-size: 12px; color: #999; margin: 6px 0 0;"><a href="https://www.thuma.co/products/classic-bed?variant=40242990776425" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Thuma Classic Bed + Headboard, Walnut</a></p>
       </div>
       <div style="width: 110px;">
-          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCADcANwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6zooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopQCTgAn6UAJRRRQAUUUUAFFFFABRRRQAUUUUAFFFLg4yAaAEooooAKKKKACiiigAooooAKKKKACiiigAooooAK8r/AGkbiSbwvZ6FBcSwvqM4Rmicq23gHkexavVK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" alt="Thuma Essential Nightstand, 24in, Walnut, 2 Drawer, actual product photo" style="width: 110px; height: 110px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); display: block;">
-          <p style="font-size: 12px; color: #999; margin: 6px 0 0;"><a href="https://www.thuma.co/products/essential-nightstand" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Thuma Essential Nightstand, Walnut</a></p>
+          <img src="data:image/jpeg;base64,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" alt="Thuma Floating Side Table, Walnut, actual product photo" style="width: 110px; height: 110px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); display: block;">
+          <p style="font-size: 12px; color: #999; margin: 6px 0 0;"><a href="https://www.thuma.co/products/floating-side-table" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Thuma Floating Side Table, Walnut</a></p>
         </div>
       <div style="width: 110px;">
         <img src="data:image/jpeg;base64,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" alt="IKEA LINDBYN mirror, black, oval, room reference photo" style="width: 110px; height: 110px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); display: block;">
@@ -1549,7 +1013,7 @@
 
   <div class="app" style="margin-bottom: 48px;">
       <span class="app-tag white">Secondary Bedroom</span> <span class="app-tag" style="background: #3f6e6b; color: white;">Secondary Bathroom</span>
-      <p>A standalone bedroom — platform bed centered on the wall, headboard flush to the closet's own back wall, no side table, flanked by matching floor-to-ceiling built-in organizers on both sides. The center gap is sized to fit a future king bed without moving the built-ins, even though a full is what's installed today. Its en-suite has a curbless tiled shower (fixed glass panel + curtain, ceiling rainhead, no threshold), a TOTO UltraMax WASHLET+ toilet, a 24" West Elm Mid-Century Open Storage vanity, Acorn, and Edward Martin Lilah, Opal tile on all four walls over a Dawson, Charcoal floor.</p>
+      <p>A standalone bedroom — platform bed centered on the wall, headboard flush to the closet's own back wall, a pair of Thuma Floating Side Tables saddling the frame rail on each side, flanked in turn by matching floor-to-ceiling built-in organizers. The center gap is sized to fit a future king bed without moving the built-ins, even though a full is what's installed today. Its en-suite has a curbless tiled shower (fixed glass panel + curtain, ceiling rainhead, no threshold), a TOTO UltraMax WASHLET+ toilet, a 24" West Elm Mid-Century Open Storage vanity, Acorn, and Edward Martin Lilah, Opal tile on all four walls over a Dawson, Charcoal floor.</p>
       
       
 
@@ -1572,8 +1036,8 @@
           <p style="font-size: 12px; color: #999; margin: 6px 0 0;"><a href="https://www.thuma.co/products/studio-desk" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Thuma Studio Desk + Chair, Walnut</a></p>
         </div>
         <div style="width: 110px;">
-          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCADcANwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6zooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopQCTgAn6UAJRRRQAUUUUAFFFFABRRRQAUUUUAFFFLg4yAaAEooooAKKKKACiiigAooooAKKKKACiiigAooooAK8r/AGkbiSbwvZ6FBcSwvqM4Rmicq23gHkexavVK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" alt="Thuma Essential Nightstand, 24in, Walnut, 2 Drawer, actual product photo" style="width: 110px; height: 110px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); display: block;">
-          <p style="font-size: 12px; color: #999; margin: 6px 0 0;"><a href="https://www.thuma.co/products/essential-nightstand" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Thuma Essential Nightstand, Walnut</a></p>
+          <img src="data:image/jpeg;base64,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" alt="Thuma Floating Side Table, Walnut, actual product photo" style="width: 110px; height: 110px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); display: block;">
+          <p style="font-size: 12px; color: #999; margin: 6px 0 0;"><a href="https://www.thuma.co/products/floating-side-table" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Thuma Floating Side Table, Walnut</a></p>
         </div>
       <div style="width: 110px;">
         <div class="refimg rf" style="width: 110px; height: 110px; aspect-ratio: unset; max-width: 110px; border-radius: 4px; border: 1px solid var(--border); background-size: cover; background-position: center;"></div>
